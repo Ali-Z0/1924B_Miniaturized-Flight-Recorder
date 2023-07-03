@@ -1,0 +1,100 @@
+\onecolumn
+
+\begin{figure}
+	\begin{minipage}{0.47\textwidth}
+		\centering
+		\includegraphics[width=.4\textwidth,left,]{./ETML-ES-LOGO.png}
+	\end{minipage}
+	
+	\hfill
+	\begin{minipage}{0.7\textwidth}
+		\raggedleft
+		\LARGE \textbf{Boîte noire miniaturisée\\ 2023, 1942B}
+	\end{minipage}
+\end{figure}
+
+\begin{figure}
+	
+	\hfill
+	
+	
+	\begin{minipage}{1\textwidth}
+		% ---- DESCRIPTION ----
+		\section{Cahier des charges}
+		
+		\subsection{Description}
+		L'objectif de ce projet est de stocker des données de mesures et de localisation d'un avion par une centrale inertielle et un GPS / GNSS, afin d'enregistrer des informations quant aux caractéristiques du vol et à sa trajectoire. Cela permettrai par exemple, en cas de crash, de déduire les éventuelles causes. 
+	\end{minipage} \vspace{+4mm}
+	
+	\begin{minipage}{1\textwidth}
+		
+		\subsection{Aperçu}
+		\begin{itemize}
+			\item	Sauvegarde d’un set de donnée chaque 10s.
+			\item	Résistance aux chocs.
+			\item	Autonomie de 2 jours.
+			\item	\gls{gps} / \gls{gnss}.
+			\item	Timestamp.
+			\item	\gls{centrale inertielle}, Sensing sur 9 axes :
+			\subitem Accéléromètre 3-axes. 
+			\subitem	Gyroscope 3-axes.
+			\subitem	Magnétomètre 3-axes. 
+			\subitem	Senseur de température
+			\item Traceur de G.
+			\item Charge de la batterie par connecteur USB.
+			\item Lecture des données par connecteur USB.
+			\item Lecture des données par radio-fréquence.
+		\end{itemize}
+		
+		
+	\end{minipage}
+	
+\end{figure}
+
+
+\clearpage
+
+% ---- TACHES ----
+\subsection{Tâches à réaliser}
+Développement et intégration d’un PCB avec capteurs et logging sur carte SD dans une lampe de plongée étanche.
+\begin{itemize}
+	\item[•] Développement schématique 
+	\subitem- Fonctionnement MCU.
+	\subitem-	Périphériques de mesures et de sauvegarde / Bus de communication.
+	\subitem-	Gestion batterie 
+	\item[•]	Routage pour intégration dans boitier de lampe de plongée 200x45mm.
+	\item[•]	Programmation mesure et sauvegarde chaque 100ms.
+	\subitem-	Configuration MCU.
+	\subitem-	Configuration des périphériques de mesure pour 9-DOF.
+	\subitem-	Configuration des périphériques de sauvegarde (Carte SD).
+	\subitem-	Configuration et communication avec l'interface.
+	\subitem-	Communication et traitement des données mesurées.
+\end{itemize}
+
+
+% ---- SChema de principe ----
+
+
+% ---- Description des blocs ----
+\subsection{Description des blocs}
+
+\clearpage
+
+% ---- JALONS ----
+\subsection{Jalons principaux}
+
+
+\subsection{Livrable}
+\begin{itemize}
+	\item[•] Les fichiers sources de CAO électronique des PCB réalisés
+	\item[•] Tout le nécessaire à fabriquer un exemplaire hardware de chaque :
+	\item[•] fichiers de fabrication (GERBER) / liste de pièces avec références pour commande / implantation
+	\item[•] Prototype fonctionnel
+	\item[•] Modifications / dessins mécaniques, etc
+	\item[•] Les fichiers sources de programmation microcontrôleur (.c  / .h)
+	\item[•] Tout le nécessaire pour programmer les microcontrôleurs (logiciel ou fichier .hex)
+	\item[•] Un calcul / estimation des coûts
+	\item[•] Un rapport contenant les calculs - dimensionnement de composants - structogramme, etc.
+\end{itemize}
+
+\clearpage

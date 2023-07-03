@@ -7,12 +7,9 @@
 \usepackage{mathptmx}
 \usepackage{pgf}
 \usepackage{pgfpages}
-\usepackage{parallel}
-\usepackage{siunitx}
 \usepackage{booktabs}
 \usepackage{fancyhdr}
 \usepackage{datetime}
-\usepackage{multicol}
 \usepackage{enumerate}
 \usepackage{pifont}
 \usepackage{amssymb}
@@ -32,6 +29,11 @@
 \usepackage{afterpage}
 
 \usepackage{textcomp}
+
+\usepackage[sort=none, abbreviations]{glossaries-extra}
+\input{pages/glossary.tex}
+
+
 
 \newcommand{\source}[1]{\vspace{-11pt} \caption*{\small \textit{Source: {#1}} }}
 
@@ -62,20 +64,25 @@
 \tableofcontents
 \clearpage
 
+\printunsrtglossary[type=abbreviations]
+\printunsrtglossary % default: style=list, type=main
 
-% ------------------- PRE-ETUDE ---------------------- ----
+% ---------- CAHIER DES CHARGES ---------------------------------\\
+\input{pages/0_CDC.tex}
+
+% ------------------- PRE-ETUDE ---------------------------------
 \input{pages/1_Pre-etude}
 
-% ---------- DÉVELOPPEMENT SCHÉMATIQUE --------------------
+% ---------- DÉVELOPPEMENT SCHÉMATIQUE --------------------------
 \input{pages/2_Dev-SCH}
 
-% ---------- DÉVELOPPEMENT PCB ----------------------------- 
+% ---------- DÉVELOPPEMENT PCB ----------------------------------
 \input{pages/3_Dev-PCB}
 
 % ---------- DÉVELOPPEMENT SOFTWARE ----------------------------- 
 \input{pages/4_Dev-SOFT}
 
-% ---------- MESURE PREUVE DE CONCEPT ----------------------------- 
+% ---------- MESURE PREUVE DE CONCEPT --------------------------- 
 \input{pages/5_Val-MES}
 
 % ---- Bibliographie ----
