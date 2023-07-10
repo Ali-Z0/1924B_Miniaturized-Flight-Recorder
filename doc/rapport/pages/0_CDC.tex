@@ -13,46 +13,33 @@
 	\end{minipage}
 \end{figure}
 
-\begin{figure}
-	
-	\hfill
-	
-	
-	\begin{minipage}{1\textwidth}
-		% ---- DESCRIPTION ----
-		\section{Cahier des charges}
-		
-		\subsection{Description}
-		L'objectif de ce projet est de stocker des données de mesures et de localisation d'un avion par une centrale inertielle et un GPS / GNSS, afin d'enregistrer des informations quant aux caractéristiques du vol et à sa trajectoire. Cela permettrai par exemple, en cas de crash, de déduire les éventuelles causes. 
-	\end{minipage} \vspace{+4mm}
-	
-	\begin{minipage}{1\textwidth}
-		
-		\subsection{Aperçu}
-		\begin{itemize}
-			\item	Sauvegarde d’un set de donnée chaque 10s.
-			\item	Résistance aux chocs.
-			\item	Autonomie de 2 jours.
-			\item	\gls{gps} / \gls{gnss}.
-			\item	\gls{timestamp}.
-			\item	\gls{centrale inertielle}, Sensing sur 9 axes :
-			\subitem Accéléromètre 3-axes. 
-			\subitem	Gyroscope 3-axes.
-			\subitem	Magnétomètre 3-axes. 
-			\subitem	Senseur de température
-			\item \gls{traceur de G}.
-			\item Charge de la batterie par connecteur USB.
-			\item Lecture des données par connecteur USB.
-			\item Lecture des données par radio-fréquence.
-		\end{itemize}
-		
-		
-	\end{minipage}
-	
-\end{figure}
 
-
-\clearpage
+% ---- DESCRIPTION ----
+\section{Cahier des charges}
+\noindent
+\begin{minipage}[t]{.5\textwidth} %
+	\subsection{Introduction}
+	Ce projet vise à stocker les données de mesures et de localisation d'un avion en utilisant une centrale inertielle et un GPS/GNSS. En combinant ces technologies avancées, nous pouvons enregistrer des informations précises sur les caractéristiques du vol et la trajectoire de l'avion. En cas d'accident, ces enregistrements jouent un rôle crucial pour déterminer les causes potentielles. En somme, ce système de collecte et de stockage de données fournit une compréhension approfondie des vols et des données essentielles.
+\end{minipage} %
+\begin{minipage}[t]{.5\textwidth} %
+	\raggedleft
+	\subsection{Aperçu}
+	\begin{itemize}
+		\item[•]	Sauvegarde de donnée chaque 10s.
+		\item[•]	Résistance aux chocs.
+		\item[•]	Autonomie de 2 jours.
+		\item[•]	\Gls{gps}
+		\item[•]	\Gls{gnss}.
+		\item[•]	\gls{timestamp}.
+		\item[•]	\gls{centrale inertielle}, Sensing sur 9 axes :
+		\subitem- Accéléromètre 3-axes. 
+		\subitem-	Gyroscope 3-axes.
+		\subitem-	Magnétomètre 3-axes. 
+		\subitem-	Senseur de température
+		\item[•] Charge et lecture par USB.
+		\item[•] Lecture des données par \gls{rf}.
+	\end{itemize}
+\end{minipage}
 
 % ---- TACHES ----
 \subsection{Tâches à réaliser}
@@ -62,17 +49,26 @@ Développement et intégration d’un PCB avec capteurs et logging sur carte SD 
 	\subitem- Fonctionnement MCU.
 	\subitem-	Périphériques de mesures et de sauvegarde / Bus de communication.
 	\subitem-	Gestion batterie 
-	\item[•]	Routage pour intégration dans boitier de lampe de plongée 200x45mm.
-	\item[•]	Programmation mesure et sauvegarde chaque 100ms.
+	\item[•]	Routage pour intégration dans boitier résistant aux chocs.
+	\item[•]	Programmation mesure et sauvegarde des données.
 	\subitem-	Configuration MCU.
-	\subitem-	Configuration des périphériques de mesure pour 9-DOF.
-	\subitem-	Configuration des périphériques de sauvegarde (Carte SD).
+	\subitem-	Configuration du périphérique de mesure pour \gls{imu}.
+	\subitem-	Configuration du périphérique de sauvegarde (Carte SD).
+	\subitem-	Configuration du périphérique de localisation \gls{gps}/\gls{gnss}.
+	\subitem-	Configuration du périphérique de communication \gls{rf}.
 	\subitem-	Configuration et communication avec l'interface.
 	\subitem-	Communication et traitement des données mesurées.
 \end{itemize}
 
-
+\subsection{Schéma bloc de principe}
 % ---- SChema de principe ----
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\textwidth]{../figures/cdc/blocs_grossiers}
+	\caption{Schéma de principe}
+	\label{fig:blocsgrossiers}
+	\source{Auteur}
+\end{figure}
 
 
 % ---- Description des blocs ----
