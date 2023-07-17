@@ -7,14 +7,18 @@
             <name>1924B_MiniBoiteNoire_Firmwarwe</name>
             <creation-uuid>e54023e9-3948-44ef-bf6f-29d8b223e555</creation-uuid>
             <make-project-type>0</make-project-type>
-            <c-extensions/>
+            <c-extensions>c</c-extensions>
             <cpp-extensions/>
-            <header-extensions/>
+            <header-extensions>h</header-extensions>
             <asminc-extensions/>
             <sourceEncoding>ISO-8859-1</sourceEncoding>
             <make-dep-projects/>
             <sourceRootList>
                 <sourceRootElem>../src</sourceRootElem>
+                <sourceRootElem>../../../..</sourceRootElem>
+                <sourceRootElem>..\src</sourceRootElem>
+                <sourceRootElem>..\src\default</sourceRootElem>
+                <sourceRootElem>..\src\system_config\default</sourceRootElem>
             </sourceRootList>
             <confList>
                 <confElem>
