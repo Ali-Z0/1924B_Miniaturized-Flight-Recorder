@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.12.8)  10 JUL 2023 20:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.12.8)  17 JUL 2023 14:20
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1326,7 +1326,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [4
 
 ]
-<./ETML-ES-LOGO.png, id=260, 200.75pt x 200.75pt>
+<./ETML-ES-LOGO.png, id=270, 200.75pt x 200.75pt>
 File: ./ETML-ES-LOGO.png Graphic file (type png)
 <use ./ETML-ES-LOGO.png>
 Package pdftex.def Info: ./ETML-ES-LOGO.png  used on input line 6.
@@ -1346,7 +1346,7 @@ Overfull \hbox (2.28003pt too wide) in paragraph at lines 19--43
 [] [] 
  []
 
-<../figures/cdc/blocs_grossiers.png, id=271, 11432.7125pt x 5731.4125pt>
+<../figures/cdc/blocs_grossiers.png, id=281, 11432.7125pt x 5731.4125pt>
 File: ../figures/cdc/blocs_grossiers.png Graphic file (type png)
 <use ../figures/cdc/blocs_grossiers.png>
 Package pdftex.def Info: ../figures/cdc/blocs_grossiers.png  used on input line
@@ -1398,9 +1398,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [8
 
 ]
-Overfull \vbox (12.34665pt too high) has occurred while \output is active []
-
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1451,13 +1448,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 ] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: F7B3E8C907156516F3C3379D58EDFF5B;6544.
+(rerunfilecheck)             Checksum: F31EDF6B76AEBC17FF7EC84D5182EB11;6871.
  ) 
 Here is how much of TeX's memory you used:
- 38008 strings out of 474968
- 710292 string characters out of 5780081
- 1150818 words of memory out of 5000000
- 58755 multiletter control sequences out of 15000+600000
+ 38014 strings out of 474968
+ 710406 string characters out of 5780081
+ 1150929 words of memory out of 5000000
+ 58759 multiletter control sequences out of 15000+600000
  538906 words of font info for 93 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  106i,11n,117p,2289b,702s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1465,10 +1462,10 @@ Here is how much of TeX's memory you used:
 f-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1
 /urw/times/utmr8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmri8a
 .pfb>
-Output written on main.pdf (14 pages, 1148288 bytes).
+Output written on main.pdf (14 pages, 1148759 bytes).
 PDF statistics:
- 362 PDF objects out of 1000 (max. 8388607)
- 332 compressed objects within 4 object streams
- 81 named destinations out of 1000 (max. 500000)
- 367 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 372 PDF objects out of 1000 (max. 8388607)
+ 342 compressed objects within 4 object streams
+ 83 named destinations out of 1000 (max. 500000)
+ 383 words of extra memory for PDF output out of 10000 (max. 10000000)
 
