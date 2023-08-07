@@ -1,0 +1,46 @@
+gantt
+    title Diagramme de Gantt
+    dateFormat DD-MM-YYYY 
+    axisFormat %Y-%d-%m
+    tickInterval 1day
+    section Pré-étude
+        Début                       :crit, milestone, 07-08-2023, 0d
+                Planification               :a1, 07-08-2023, 4h
+        Etude CDC                   :a2, after a1, 4h
+        Etude syst. / Blocs         :a3, after a2, 1d
+        Choix technologies          :a4, after a3, 1d
+        Choix composants            :a5, after a4, 1d
+        Concept firmware            :a6, after a5, 40h
+        Rédaction du rapport de pré-étude   :a0, 07-08-2023, 5d
+        Fin de la pré-étude         :milestone, 12-08-2023, Od
+    section Schéma
+        Commencer schéma            :crit, milestone, 14-08-2023, 0d
+        Dim. composants             : 14-08-2023, 1d
+        Construction schéma bloc    :b1, 15-08-2023, 4h
+        Schéma MCU                  :b2, after b1, 20h
+        Schéma puissance            :b3, after b1, 5h
+        Schéma périphèriques        :b4, after b1, 19h
+        Adaptation du schéma      :b5, after b4, 2d
+        Rédaction du rapport de design   :b0, 14-08-2023, 21d
+        Finir le schéma             :milestone, 17-08-2023, Od
+        Commande du PCB             :crit, milestone, 19-08-2023, Od
+    section PCB
+        Commencer le PCB            :milestone, 16-08-2023, 0d
+        Placement PCB               :b8, after b4, 1d
+        Routage PCB                 :after b8, 2d
+        Création de la BOM          :18-08-2023, 1d
+        Préparation fichiers prod.  :crit, 18-08-2023, 1d
+        Design mécanique            :c2, after c1, 6d
+        Fin du PCB                  :crit, milestone, 19-08-2023, 0d
+        Montage du PCB              :crit, 28-08-2023, 2d
+        Rédaction rapport design PCB    :18-08-2023, 4d
+    section Programmation
+        Début programmation      :milestone, 28-08-2023, 0d
+        Design code              :18-08-2023, 1d
+        Code sans debug          :21-08-2023, 5d
+        Réception PCB            :crit, milestone, 28-08-2023, 0d
+        Programmation et Tests   :28-08-2023, 5d
+    section Mesures et validations
+        Début validation design      :milestone, 04-09-2023, 0d
+        Tests et mesures             :04-09-2023, 5d
+        Rendu projet et doc             :crit, milestone, 11-09-2023, 0d
