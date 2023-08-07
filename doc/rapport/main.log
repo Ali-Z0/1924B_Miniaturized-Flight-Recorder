@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.8.7)  7 AUG 2023 15:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.8.7)  7 AUG 2023 16:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1325,7 +1325,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [4
 
 ]
-<./ETML-ES-LOGO.png, id=281, 200.75pt x 200.75pt>
+<./ETML-ES-LOGO.png, id=271, 200.75pt x 200.75pt>
 File: ./ETML-ES-LOGO.png Graphic file (type png)
 <use ./ETML-ES-LOGO.png>
 Package pdftex.def Info: ./ETML-ES-LOGO.png  used on input line 6.
@@ -1345,12 +1345,12 @@ Overfull \hbox (2.28003pt too wide) in paragraph at lines 19--42
 [] [] 
  []
 
-<../figures/cdc/blocs_grossiers_no_antenna.jpg, id=290, 4573.085pt x 2489.3pt>
-File: ../figures/cdc/blocs_grossiers_no_antenna.jpg Graphic file (type jpg)
-<use ../figures/cdc/blocs_grossiers_no_antenna.jpg>
-Package pdftex.def Info: ../figures/cdc/blocs_grossiers_no_antenna.jpg  used on
- input line 65.
-(pdftex.def)             Requested size: 452.9679pt x 246.55162pt.
+<../figures/cdc/schema_principe.jpg, id=280, 2137.9875pt x 2475.2475pt>
+File: ../figures/cdc/schema_principe.jpg Graphic file (type jpg)
+<use ../figures/cdc/schema_principe.jpg>
+Package pdftex.def Info: ../figures/cdc/schema_principe.jpg  used on input line
+ 65.
+(pdftex.def)             Requested size: 317.07614pt x 367.07872pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1370,25 +1370,25 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[6 <../figures/cdc/blocs_grossiers_no_antenna.jpg>]
-<../figures/cdc/planif.png, id=311, 3071.475pt x 1518.4228pt>
+[6 <../figures/cdc/schema_principe.jpg>]
+<../figures/cdc/planif.png, id=294, 3071.475pt x 1518.4228pt>
 File: ../figures/cdc/planif.png Graphic file (type png)
 <use ../figures/cdc/planif.png>
-Package pdftex.def Info: ../figures/cdc/planif.png  used on input line 99.
+Package pdftex.def Info: ../figures/cdc/planif.png  used on input line 80.
 (pdftex.def)             Requested size: 498.26744pt x 246.31215pt.
 
-Overfull \hbox (45.29955pt too wide) in paragraph at lines 99--100
+Overfull \hbox (45.29955pt too wide) in paragraph at lines 80--81
  [][] 
  []
 
-<../figures/cdc/planif_theorique.png, id=312, 1383.66937pt x 336.50719pt>
+<../figures/cdc/planif_theorique.png, id=295, 1383.66937pt x 336.50719pt>
 File: ../figures/cdc/planif_theorique.png Graphic file (type png)
 <use ../figures/cdc/planif_theorique.png>
 Package pdftex.def Info: ../figures/cdc/planif_theorique.png  used on input lin
-e 108.
+e 87.
 (pdftex.def)             Requested size: 498.26744pt x 121.17842pt.
 
-Overfull \hbox (45.29955pt too wide) in paragraph at lines 108--109
+Overfull \hbox (45.29955pt too wide) in paragraph at lines 87--88
  [][] 
  []
 
@@ -1402,20 +1402,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [7
 
- <../figures/cdc/planif.png> <../figures/cdc/planif_theorique.png>]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[8]) (./pages/1_Pre-etude.tex) (./pages/2_Dev-SCH.tex) (./pages/3_Dev-PCB.tex)
+ <../figures/cdc/planif.png> <../figures/cdc/planif_theorique.png>])
+(./pages/1_Pre-etude.tex
+<../figures/cdc/blocs_grossiers_no_antenna.jpg, id=304, 4573.085pt x 2489.3pt>
+File: ../figures/cdc/blocs_grossiers_no_antenna.jpg Graphic file (type jpg)
+<use ../figures/cdc/blocs_grossiers_no_antenna.jpg>
+Package pdftex.def Info: ../figures/cdc/blocs_grossiers_no_antenna.jpg  used on
+ input line 8.
+(pdftex.def)             Requested size: 452.9679pt x 246.55162pt.
+) (./pages/2_Dev-SCH.tex) (./pages/3_Dev-PCB.tex)
 (./pages/4_Dev-SOFT.tex) (./pages/5_Val-MES.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1424,18 +1420,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[9
+[8
 
-]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[10])
+ <../figures/cdc/blocs_grossiers_no_antenna.jpg>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1444,7 +1431,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[11]
+[9])
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1453,7 +1440,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[12
+[10]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[11
 
 ] (./Main.bbl)
 
@@ -1464,7 +1460,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[13]
+[12]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1473,38 +1469,31 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[14
+[13
 
 ] (./main.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-03>
  ***********
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: 5CD278DB1473C230045C0F6601C24159;7140
-(rerunfilecheck)             After:  CB0243B0729BA078DBA4812F44C25B8F;7074.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 4A882341931046C210ED2A4423FD65EA;6820.
  ) 
 Here is how much of TeX's memory you used:
- 37884 strings out of 475187
- 700667 string characters out of 5767784
+ 37894 strings out of 475187
+ 701135 string characters out of 5767784
  1934248 words of memory out of 5000000
- 58435 multiletter control sequences out of 15000+600000
+ 58447 multiletter control sequences out of 15000+600000
  627716 words of font info for 101 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 109i,12n,117p,2289b,722s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 109i,11n,117p,2289b,706s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2023
 /texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2023/texmf-dist/fonts/
 type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (15 pages, 868738 bytes).
+Output written on main.pdf (14 pages, 1135584 bytes).
 PDF statistics:
- 396 PDF objects out of 1000 (max. 8388607)
- 362 compressed objects within 4 object streams
- 90 named destinations out of 1000 (max. 500000)
- 409 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 384 PDF objects out of 1000 (max. 8388607)
+ 350 compressed objects within 4 object streams
+ 88 named destinations out of 1000 (max. 500000)
+ 398 words of extra memory for PDF output out of 10000 (max. 10000000)
 
