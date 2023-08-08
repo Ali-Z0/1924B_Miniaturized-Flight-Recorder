@@ -19,6 +19,7 @@
 \contentsline {subsubsection}{\numberline {2.4.4}Carte SD}{12}{subsubsection.2.4.4}%
 \contentsline {paragraph}{Estimation de la capacité}{12}{section*.18}%
 \contentsline {subsubsection}{\numberline {2.4.5}Batterie, charge et régulation}{13}{subsubsection.2.4.5}%
+\contentsline {paragraph}{Technologie}{13}{section*.19}%
 \contentsline {subsection}{\numberline {2.5}Systèmes d'économies d'énergie}{13}{subsection.2.5}%
 \contentsline {subsection}{\numberline {2.6}Estimation des coûts}{14}{subsection.2.6}%
 \contentsline {section}{\numberline {3}Développement de la schématique}{14}{section.3}%
@@ -40,14 +41,14 @@
 \contentsline {section}{\numberline {6}Validation du design}{14}{section.6}%
 \contentsline {subsection}{\numberline {6.1}Liste de matériel}{14}{subsection.6.1}%
 \contentsline {subsection}{\numberline {6.2}Contrôle des alimentations}{14}{subsection.6.2}%
-\contentsline {paragraph}{Méthode de mesure}{14}{section*.19}%
-\contentsline {paragraph}{Mesures}{14}{section*.20}%
+\contentsline {paragraph}{Méthode de mesure}{14}{section*.20}%
+\contentsline {paragraph}{Mesures}{14}{section*.21}%
 \contentsline {subsection}{\numberline {6.3}Communication UART}{14}{subsection.6.3}%
-\contentsline {paragraph}{Méthode de mesure}{14}{section*.21}%
-\contentsline {paragraph}{Mesures}{14}{section*.22}%
+\contentsline {paragraph}{Méthode de mesure}{14}{section*.22}%
+\contentsline {paragraph}{Mesures}{14}{section*.23}%
 \contentsline {subsection}{\numberline {6.4}Communication SPI, carte SD}{15}{subsection.6.4}%
-\contentsline {paragraph}{Méthode de mesure}{15}{section*.23}%
-\contentsline {paragraph}{Mesures}{15}{section*.24}%
+\contentsline {paragraph}{Méthode de mesure}{15}{section*.24}%
+\contentsline {paragraph}{Mesures}{15}{section*.25}%
 \contentsline {section}{\numberline {7}Caractéristiques du produit fini}{15}{section.7}%
 \contentsline {section}{\numberline {8}Conclusion}{16}{section.8}%
 \contentsline {section}{\numberline {9}Bibliographie}{17}{section.9}%
