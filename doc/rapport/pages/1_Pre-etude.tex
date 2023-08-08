@@ -111,7 +111,29 @@ Afin de simplifier l'implémentation de ce composant dans le projet, sachant qu'
 \clearpage
 
 \subsubsection{GPS / GNSS}
-Pour le \gls{GPS}/\gls{GNSS} différents critères entrent en jeux
+Pour le \gls{GPS}/\gls{GNSS} différents critères entrent en jeux dans le cadre de ce projet : Le prix, La facilité d'implémentation, la complexité (Par complexité, on entend le nombre de fonctionnalités), la consommation et la performance.
+
+Il existe de très nombreux récepteurs \gls{rf} pour la navigation. Parmi les plus utilisés dans l'industrie dont l'implémentation est la plus simple et la documentation la plus complète, il existe plusieurs gammes chez le fabricant \fbox{ublox}.
+Deux sont principalement entrés en considérations :
+Le \textbf{CAM-M8C-0} (BeiDou, GLONASS, GNSS, GPS, QZSS) avec antenne omnidirectionnelle interne au composant et différents mode de puissance. Ainsi que le \textbf{MAX-M10M-00B} (BeiDou, Galileo, GLONASS, GNSS, GPS) sans antenne interne mais plus faible consommation de base.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{../figures/pre_etude/img_gnss}
+	\caption{Illustration des deux GNSS}
+	\source{\href{https://www.digikey.ch/fr/products/detail/u-blox/CAM-M8C-0/6150647?s=N4IgTCBcDaIMIEECyBaJAOOKAMIC6AvkA}{Digikey}}
+	\label{fig:imggnss}
+\end{figure}
+
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{../figures/pre_etude/Comp_GNSS}
+	\caption{Comparaison GNSS}
+	\source{Auteur}
+	\label{fig:compgnss}
+\end{figure}
+
 
 \paragraph{Batterie, charge et régulation} 
 
