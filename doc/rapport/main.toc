@@ -10,15 +10,15 @@
 \contentsline {subsection}{\numberline {1.6}Livrable}{7}{subsection.1.6}%
 \contentsline {section}{\numberline {2}Pré-étude}{8}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Fonctionnement du système}{8}{subsection.2.1}%
-\contentsline {subsubsection}{\numberline {2.1.1}Schéma bloc}{8}{subsubsection.2.1.1}%
-\contentsline {subsection}{\numberline {2.2}Description des blocs}{8}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Choix des composants}{9}{subsection.2.3}%
-\contentsline {subsubsection}{\numberline {2.3.1}Microcontrôleur}{9}{subsubsection.2.3.1}%
-\contentsline {subsubsection}{\numberline {2.3.2}Centrale inertielle}{9}{subsubsection.2.3.2}%
-\contentsline {subsubsection}{\numberline {2.3.3}GPS / GNSS}{9}{subsubsection.2.3.3}%
-\contentsline {subsubsection}{\numberline {2.3.4}Transmetteur radio-fréquence}{9}{subsubsection.2.3.4}%
-\contentsline {subsubsection}{\numberline {2.3.5}Batterie, charge et régulation}{10}{subsubsection.2.3.5}%
-\contentsline {subsection}{\numberline {2.4}Estimation des coûts}{10}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.2}Schéma bloc}{8}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Description des blocs}{8}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Choix des composants et technologies}{9}{subsection.2.4}%
+\contentsline {paragraph}{Microcontrôleur}{9}{section*.12}%
+\contentsline {paragraph}{Centrale inertielle}{9}{section*.14}%
+\contentsline {paragraph}{GPS / GNSS}{9}{section*.15}%
+\contentsline {paragraph}{Batterie, charge et régulation}{9}{section*.16}%
+\contentsline {subsection}{\numberline {2.5}Systèmes d'économies d'énergie}{9}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}Estimation des coûts}{10}{subsection.2.6}%
 \contentsline {section}{\numberline {3}Développement de la schématique}{10}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Dimensionnements}{10}{subsection.3.1}%
 \contentsline {subsubsection}{\numberline {3.1.1}Autonomie du système}{10}{subsubsection.3.1.1}%
@@ -38,14 +38,14 @@
 \contentsline {section}{\numberline {6}Validation du design}{10}{section.6}%
 \contentsline {subsection}{\numberline {6.1}Liste de matériel}{10}{subsection.6.1}%
 \contentsline {subsection}{\numberline {6.2}Contrôle des alimentations}{10}{subsection.6.2}%
-\contentsline {paragraph}{Méthode de mesure}{10}{section*.12}%
-\contentsline {paragraph}{Mesures}{10}{section*.13}%
+\contentsline {paragraph}{Méthode de mesure}{10}{section*.17}%
+\contentsline {paragraph}{Mesures}{10}{section*.18}%
 \contentsline {subsection}{\numberline {6.3}Communication UART}{10}{subsection.6.3}%
-\contentsline {paragraph}{Méthode de mesure}{10}{section*.14}%
-\contentsline {paragraph}{Mesures}{10}{section*.15}%
+\contentsline {paragraph}{Méthode de mesure}{10}{section*.19}%
+\contentsline {paragraph}{Mesures}{10}{section*.20}%
 \contentsline {subsection}{\numberline {6.4}Communication SPI, carte SD}{11}{subsection.6.4}%
-\contentsline {paragraph}{Méthode de mesure}{11}{section*.16}%
-\contentsline {paragraph}{Mesures}{11}{section*.17}%
+\contentsline {paragraph}{Méthode de mesure}{11}{section*.21}%
+\contentsline {paragraph}{Mesures}{11}{section*.22}%
 \contentsline {section}{\numberline {7}Caractéristiques du produit fini}{11}{section.7}%
 \contentsline {section}{\numberline {8}Conclusion}{12}{section.8}%
 \contentsline {section}{\numberline {9}Bibliographie}{13}{section.9}%

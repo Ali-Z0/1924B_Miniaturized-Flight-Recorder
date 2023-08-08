@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.8.7)  8 AUG 2023 08:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.8.7)  8 AUG 2023 10:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1325,7 +1325,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [4
 
 ]
-<./ETML-ES-LOGO.png, id=271, 200.75pt x 200.75pt>
+<./ETML-ES-LOGO.png, id=251, 200.75pt x 200.75pt>
 File: ./ETML-ES-LOGO.png Graphic file (type png)
 <use ./ETML-ES-LOGO.png>
 Package pdftex.def Info: ./ETML-ES-LOGO.png  used on input line 6.
@@ -1345,7 +1345,7 @@ Overfull \hbox (2.28003pt too wide) in paragraph at lines 19--42
 [] [] 
  []
 
-<../figures/cdc/schema_principe.jpg, id=280, 2137.9875pt x 2475.2475pt>
+<../figures/cdc/schema_principe.jpg, id=260, 2137.9875pt x 2475.2475pt>
 File: ../figures/cdc/schema_principe.jpg Graphic file (type jpg)
 <use ../figures/cdc/schema_principe.jpg>
 Package pdftex.def Info: ../figures/cdc/schema_principe.jpg  used on input line
@@ -1371,7 +1371,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [6 <../figures/cdc/schema_principe.jpg>]
-<../figures/cdc/planif.png, id=294, 3071.475pt x 1518.4228pt>
+<../figures/cdc/planif.png, id=274, 3071.475pt x 1518.4228pt>
 File: ../figures/cdc/planif.png Graphic file (type png)
 <use ../figures/cdc/planif.png>
 Package pdftex.def Info: ../figures/cdc/planif.png  used on input line 80.
@@ -1381,7 +1381,7 @@ Overfull \hbox (45.29955pt too wide) in paragraph at lines 80--81
  [][] 
  []
 
-<../figures/cdc/planif_theorique.png, id=295, 1383.66937pt x 336.50719pt>
+<../figures/cdc/planif_theorique.png, id=275, 1383.66937pt x 336.50719pt>
 File: ../figures/cdc/planif_theorique.png Graphic file (type png)
 <use ../figures/cdc/planif_theorique.png>
 Package pdftex.def Info: ../figures/cdc/planif_theorique.png  used on input lin
@@ -1404,11 +1404,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
  <../figures/cdc/planif.png> <../figures/cdc/planif_theorique.png>])
 (./pages/1_Pre-etude.tex
-<../figures/cdc/blocs_grossiers_no_antenna.jpg, id=306, 4573.085pt x 2489.3pt>
+<../figures/cdc/blocs_grossiers_no_antenna.jpg, id=286, 4573.085pt x 2489.3pt>
 File: ../figures/cdc/blocs_grossiers_no_antenna.jpg Graphic file (type jpg)
 <use ../figures/cdc/blocs_grossiers_no_antenna.jpg>
 Package pdftex.def Info: ../figures/cdc/blocs_grossiers_no_antenna.jpg  used on
- input line 9.
+ input line 10.
 (pdftex.def)             Requested size: 452.9679pt x 246.55162pt.
 
 
@@ -1421,11 +1421,21 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [8
 
- <../figures/cdc/blocs_grossiers_no_antenna.jpg>]) (./pages/2_Dev-SCH.tex)
-(./pages/3_Dev-PCB.tex) (./pages/4_Dev-SOFT.tex) (./pages/5_Val-MES.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
+ <../figures/cdc/blocs_grossiers_no_antenna.jpg>]
+<../figures/pre_etude/familles_pic32.png, id=300, 1034.36438pt x 727.21687pt>
+File: ../figures/pre_etude/familles_pic32.png Graphic file (type png)
+<use ../figures/pre_etude/familles_pic32.png>
+Package pdftex.def Info: ../figures/pre_etude/familles_pic32.png  used on input
+ line 46.
+(pdftex.def)             Requested size: 317.07614pt x 222.916pt.
 
+Underfull \hbox (badness 10000) in paragraph at lines 49--49
+[]|\T1/ptm/m/it/10.95 Source: []https://www.microchip.com/en-us/products/microc
+ontrollers-and-microprocessors/32-bit-
+ []
 
+) (./pages/2_Dev-SCH.tex) (./pages/3_Dev-PCB.tex) (./pages/4_Dev-SOFT.tex)
+(./pages/5_Val-MES.tex
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1434,7 +1444,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[9]
+[9
+
+ <../figures/pre_etude/familles_pic32.png>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1489,23 +1501,23 @@ LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-03>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 4A882341931046C210ED2A4423FD65EA;6820.
+(rerunfilecheck)             Checksum: E455269045566C834C6E5CBF7816FC8A;6239.
  ) 
 Here is how much of TeX's memory you used:
- 37896 strings out of 475187
- 701158 string characters out of 5767784
- 1934248 words of memory out of 5000000
- 58448 multiletter control sequences out of 15000+600000
+ 37902 strings out of 475187
+ 701462 string characters out of 5767784
+ 1933248 words of memory out of 5000000
+ 58453 multiletter control sequences out of 15000+600000
  627716 words of font info for 101 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  109i,11n,117p,2289b,706s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2023
 /texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2023/texmf-dist/fonts/
 type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (15 pages, 1136593 bytes).
+Output written on main.pdf (15 pages, 1671637 bytes).
 PDF statistics:
- 390 PDF objects out of 1000 (max. 8388607)
- 355 compressed objects within 4 object streams
- 89 named destinations out of 1000 (max. 500000)
- 398 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 380 PDF objects out of 1000 (max. 8388607)
+ 343 compressed objects within 4 object streams
+ 90 named destinations out of 1000 (max. 500000)
+ 371 words of extra memory for PDF output out of 10000 (max. 10000000)
 
