@@ -156,7 +156,7 @@ Les pilotes de carte SD disponibles dans \gls{harmony} ne permettent pas une ges
 	$S_{SD}$ & $256$ & $[KB]$ \\
 	$S_{gyro}$ & $16$ & $[Bytes]$ \\
 	$S_{accel}$ & $16$ & $[Bytes]$ \\
-	$S_{gnss}$ & $\sim16$ & $[Bytes]$ \\
+	$S_{gnss}$ & $\sim100$ & $[Bytes]$ \\
 	$T_{inertiel}$ & $0.5$ & $[s]$ \\
 	$T_{gnss}$ & $5$ & $[s]$ \\
 	$T_{mesMin}$ & $900$ & $[s]$ \\
@@ -179,12 +179,32 @@ Nous pouvons déduire avec cette estimation qu'une carte SD de 256MB est largeme
 	T_{mesures} = \frac{S_{SD}*T_{gnss}}{S_{single}} = \frac{256'000*5}{420} = \sim508 \; Minutes = \sim8.5 \; Heures
 \end{equation*}
 
-Nous pouvons estimer que les 8.5 dernières heures de vols sont enregistrées dans la carte SD.
+Nous estimons donc, que les données de vol des 8.5 dernières heures sont enregistrées dans la carte SD.
 
 \clearpage
 
 \subsubsection{Batterie, charge et régulation} 
+Afin de dimensionner une batterie pour le projet, il faut considérer les différentes consommation :
 
+\begin{center}
+	\underline{Liste des consommations principales} \\
+	\begin{tabular}{lrll}
+		Microcontrôleur & 24 & [mA] & Typ. \\
+		Carte-SD & ~100 & [mA] & Max. \\
+		Carte-SD & ~60 & [mA] & Moyenne \\
+		\gls{imu} & 12.3 & [mA] & Typ. \\
+		\gls{GNSS} & 71 & [mA] & Max. \\
+		\gls{GNSS} & 29 & [mA] & Typ. \\
+		\hline
+		Totale max & \underline{207.3} & [mA] & Max. \\
+		Totale moyennes & \underline{125.3} & [mA] & Moyenne \\
+		\hline
+	\end{tabular}
+\end{center}
+
+
+
+En prenant les consommations 
 
 
 \subsection{Systèmes d'économies d'énergie} \label{ssec:Low-power}
