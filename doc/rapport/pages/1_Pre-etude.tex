@@ -111,15 +111,15 @@ Afin de simplifier l'implémentation de ce composant dans le projet, sachant qu'
 \clearpage
 
 \subsubsection{GPS / GNSS}
-Pour le \gls{GPS}/\gls{GNSS} différents critères entrent en jeux dans le cadre de ce projet : Le prix, La facilité d'implémentation, la complexité (Par complexité, on entend le nombre de fonctionnalités), la consommation et la performance.
+Pour le \gls{GPS}/\gls{GNSS}, différents critères entrent en jeu dans le cadre de ce projet : le prix, la facilité d'implémentation, la complexité (par complexité, nous entendons le nombre de fonctionnalités), la consommation et la performance.
 
-Il existe de très nombreux récepteurs \gls{rf} pour la navigation. Parmi les plus utilisés dans l'industrie dont l'implémentation est la plus simple et la documentation la plus complète, il existe plusieurs gammes chez le fabricant \fbox{ublox}.
-Deux sont principalement entrés en considérations :
-Le \textbf{CAM-M8C-0} (BeiDou, GLONASS, GNSS, GPS, QZSS) avec antenne omnidirectionnelle interne au composant et différents mode de puissance. Ainsi que le \textbf{MAX-M10M-00B} (BeiDou, Galileo, GLONASS, GNSS, GPS) sans antenne interne mais plus faible consommation de base.
+Il existe un très grand nombre de récepteurs \gls{rf} pour la navigation. Parmi les plus utilisés dans l'industrie, dont l'implémentation est la plus simple et la documentation la plus complète, il y a plusieurs gammes chez le fabricant \fbox{ublox}.
+Deux composants ont principalement été pris en considération :
+Le \textbf{CAM-M8C-0} (BeiDou, GLONASS, GNSS, GPS, QZSS) avec une antenne omnidirectionnelle interne au composant et différents modes de puissance, ainsi que le \textbf{MAX-M10M-00B} (BeiDou, Galileo, GLONASS, GNSS, GPS) sans antenne interne mais avec une consommation de base plus faible.
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.7\linewidth]{../figures/pre_etude/img_gnss}
+	\includegraphics[width=0.6\linewidth]{../figures/pre_etude/img_gnss}
 	\caption{Illustration des deux GNSS}
 	\source{\href{https://www.digikey.ch/fr/products/detail/u-blox/CAM-M8C-0/6150647?s=N4IgTCBcDaIMIEECyBaJAOOKAMIC6AvkA}{Digikey}}
 	\label{fig:imggnss}
@@ -128,14 +128,49 @@ Le \textbf{CAM-M8C-0} (BeiDou, GLONASS, GNSS, GPS, QZSS) avec antenne omnidirect
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.7\linewidth]{../figures/pre_etude/Comp_GNSS}
+	\includegraphics[width=0.65\linewidth]{../figures/pre_etude/Comp_GNSS}
 	\caption{Comparaison GNSS}
 	\source{Auteur}
 	\label{fig:compgnss}
 \end{figure}
 
+Malgré les différents avantages que présente le MAX-M10M-00B sur la figure \ref{fig:compgnss}, le choix s'est porté sur CAM-M8C-0 grâce à sa facilitée d'implémentation et à la garantie du fabricant sur son antenne omnidirectionnelle de qualité.
 
-\paragraph{Batterie, charge et régulation} 
+\clearpage
+
+\subsubsection{Carte SD} 
+Les pilotes de carte SD disponibles dans \gls{harmony} ne permettent pas une gestion des capacités de stockage trop importantes. Cela signifie, que nous ne pouvons pas avoir des cartes SD de trop grandes capacités, c'est pour cela que nous allons baser nos dimensionnements sur une carte de \textbf{256MB}. 
+
+\paragraph{Estimation de la capacité} Admettons les paramètres suivants où $S$ représente une taille de données et $T$ un temps :
+
+\begin{tabular}{lrl}
+	$S_{gyro}$ & $16$ & $[Bytes]$ \\
+	$S_{accel}$ & $16$ & $[Bytes]$ \\
+	$S_{gnss}$ & $\sim16$ & $[Bytes]$ \\
+	$T_{inertiel}$ & $0.5$ & $[s]$ \\
+	$T_{gnss}$ & $5$ & $[s]$ \\
+	$T_{mesMin}$ & $900$ & $[s]$ \\
+\end{tabular}
+
+Nous pouvons déduire la taille mémoire que prendra 5 secondes d'enregistrement avec les paramètres par défaut du système : 
+\begin{equation*}
+	S_{single} = \frac{T_{gnss}}{T_{inertiel}}(S_{gyro}+S_{accel}) + S_{gnss} = \frac{5}{0.5}(16+16) + 100 = 420 \; [Bytes]
+\end{equation*}
+
+Nous pouvons enfin calculer à partir de cela, la taille mémoire que prendra 15 minutes d'enregistrement : 
+
+\begin{equation*}
+	S_{mesures} = \frac{S_{single}}{T_{gnss}} * T_{mesMin} = \frac{420}{5} * 900 = 75'600 \; [Bytes] = 75.6 \; [KB]
+\end{equation*}
+
+Nous pouvons déduire avec cette estimation qu'une carte SD de 256MB est largement suffisante et permet de mesurer jusqu'à :
+
+\begin{equation*}
+	T_{mesures} = \frac{S_{single}}{T_{gnss}} * T_{mesMin} = \frac{420}{5} * 900 = 75'600 \; [Bytes] = 75.6 \; [KB]
+\end{equation*}
+
+
+\subsubsection{Batterie, charge et régulation} 
 
 \subsection{Systèmes d'économies d'énergie} \label{ssec:Low-power}
 Dans le but de maximiser le temps de logging, des mécanismes d'économies d'énergie doivent être mis en place. 
