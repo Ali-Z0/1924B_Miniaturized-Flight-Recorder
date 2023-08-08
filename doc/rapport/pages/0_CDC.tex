@@ -62,13 +62,13 @@ Développement et intégration d’un PCB avec capteurs et logging sur carte SD 
 % ---- SChema de principe ----
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.7\linewidth]{../figures/cdc/schema_principe}
+	\includegraphics[width=0.6\linewidth]{../figures/cdc/schema_principe}
 	\caption{Schéma de principe}
 	\source{Auteur}
 	\label{fig:schemaprincipe}
 \end{figure}
 
-Ce système électronique de mini boîte noire pour avion, serait capable d'enregistrer des informations récentes sur les données inertielle et la position dans une mémoire non volatile (carte microSD). Le dispositif, abrité dans un boîtier plastique pour assurer une réception optimale des données GPS et une installation discrète, fournirait des données via un port USB ou l'extraction de la carte microSD. Les mesures sur les trois axes d'accélération et de vitesse angulaire seraient recueillies par défaut toutes les 500 ms et les données de position GPS toutes les 5000 ms. Des intervalles d'enregistrement plus longs sont envisageables pour optimiser la durée de vie de la carte SD, selon la taille et l'organisation des données. Le dispositif sauvegarderait les données des 15 dernières minutes de vol (ou plus) dans un fichier CSV pour traitement ultérieur, selon le principe FIFO. L'objectif principal du prototype est de privilégier la compacité pour minimiser son encombrement à bord de l'avion.
+Ce système électronique de mini boîte noire pour avion, serait capable d'enregistrer des informations récentes sur les données inertielle et la position d'un vol, dans une mémoire non volatile (carte microSD). Le dispositif, abrité dans un boîtier plastique pour assurer une réception optimale des données GPS et une installation compact. Celui-ci fournirait des données via un port USB pour l'extraction des mesures sur la carte microSD ou pour configurer des paramètres tels que les intervalles de mesures. Les mesures sur les trois axes d'accélération et de vitesse angulaire seraient recueillies par défaut toutes les 500 ms et les données de position GPS toutes les 5000 ms. Des intervalles d'enregistrement plus longs sont envisageables pour optimiser la durée de vie de la carte SD, selon la taille et l'organisation des données. Le dispositif sauvegarderait les données des 15 dernières minutes de vol (ou plus) dans un fichier CSV pour traitement ultérieur, selon le principe FIFO. L'objectif principal du prototype est de privilégier la compacité pour minimiser son encombrement à bord de l'avion.
 
 
 \clearpage

@@ -1,6 +1,9 @@
 \section{Pré-étude} \label{sec:Pre-Etude}
 
 \subsection{Fonctionnement du système} \label{ssec:Fonctionnement}
+Le microcontrôleur interagît avec 4 périphériques principaux : Avec le \gls{GNSS}, il partage une communication qui lui permet d'obtenir les informations de localisation par le biais de plusieurs systèmes de satellites. Il y a ensuite, la centrale inertielle qui lui donne accès de une multitude de mesures sur 9 axes, or, ici les mesures gyroscopiques et d'accélération sont exploitées. La carte SD, permet quant-à-elle, de stocker toutes ces données pour avoir minimum les information des 15 dernières minutes de vol. Le dernier périphériques principale \gls{FTDI}, permet d'avoir une interface avec un ordinateur via connexion USB-C.
+
+Le \gls{MCU} 
 
 \subsubsection{Schéma bloc} \label{sssec:Schema-bloc}
 \begin{figure}[h]
