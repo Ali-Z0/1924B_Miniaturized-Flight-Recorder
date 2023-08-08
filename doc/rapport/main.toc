@@ -13,40 +13,40 @@
 \contentsline {subsection}{\numberline {2.2}Schéma bloc}{8}{subsection.2.2}%
 \contentsline {subsection}{\numberline {2.3}Description des blocs}{8}{subsection.2.3}%
 \contentsline {subsection}{\numberline {2.4}Choix des composants et technologies}{9}{subsection.2.4}%
-\contentsline {paragraph}{Microcontrôleur}{9}{section*.12}%
-\contentsline {paragraph}{Centrale inertielle}{9}{section*.14}%
-\contentsline {paragraph}{GPS / GNSS}{9}{section*.15}%
-\contentsline {paragraph}{Batterie, charge et régulation}{9}{section*.16}%
-\contentsline {subsection}{\numberline {2.5}Systèmes d'économies d'énergie}{9}{subsection.2.5}%
-\contentsline {subsection}{\numberline {2.6}Estimation des coûts}{10}{subsection.2.6}%
-\contentsline {section}{\numberline {3}Développement de la schématique}{10}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Dimensionnements}{10}{subsection.3.1}%
-\contentsline {subsubsection}{\numberline {3.1.1}Autonomie du système}{10}{subsubsection.3.1.1}%
-\contentsline {subsubsection}{\numberline {3.1.2}Adaptation mécanique}{10}{subsubsection.3.1.2}%
-\contentsline {subsubsection}{\numberline {3.1.3}Bus de communications}{10}{subsubsection.3.1.3}%
-\contentsline {subsubsection}{\numberline {3.1.4}Interface}{10}{subsubsection.3.1.4}%
-\contentsline {subsubsection}{\numberline {3.1.5}Périphériques}{10}{subsubsection.3.1.5}%
-\contentsline {subsubsection}{\numberline {3.1.6}Chargeur de batterie}{10}{subsubsection.3.1.6}%
-\contentsline {subsubsection}{\numberline {3.1.7}Synthèse et perspectives de l'étude}{10}{subsubsection.3.1.7}%
-\contentsline {section}{\numberline {4}Développement du PCB}{10}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Bill of materials}{10}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Mécanique du projet}{10}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Placement des composants}{10}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Mécanique du PCB}{10}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Routage}{10}{subsection.4.5}%
-\contentsline {section}{\numberline {5}Développement firmware}{10}{section.5}%
-\contentsline {section}{\numberline {6}Validation du design}{10}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Liste de matériel}{10}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Contrôle des alimentations}{10}{subsection.6.2}%
-\contentsline {paragraph}{Méthode de mesure}{10}{section*.17}%
-\contentsline {paragraph}{Mesures}{10}{section*.18}%
-\contentsline {subsection}{\numberline {6.3}Communication UART}{10}{subsection.6.3}%
-\contentsline {paragraph}{Méthode de mesure}{10}{section*.19}%
-\contentsline {paragraph}{Mesures}{10}{section*.20}%
-\contentsline {subsection}{\numberline {6.4}Communication SPI, carte SD}{11}{subsection.6.4}%
-\contentsline {paragraph}{Méthode de mesure}{11}{section*.21}%
-\contentsline {paragraph}{Mesures}{11}{section*.22}%
-\contentsline {section}{\numberline {7}Caractéristiques du produit fini}{11}{section.7}%
-\contentsline {section}{\numberline {8}Conclusion}{12}{section.8}%
-\contentsline {section}{\numberline {9}Bibliographie}{13}{section.9}%
-\contentsline {section}{\numberline {10}Annexes}{14}{section.10}%
+\contentsline {subsubsection}{\numberline {2.4.1}Microcontrôleur}{9}{subsubsection.2.4.1}%
+\contentsline {subsubsection}{\numberline {2.4.2}Centrale inertielle}{10}{subsubsection.2.4.2}%
+\contentsline {subsubsection}{\numberline {2.4.3}GPS / GNSS}{11}{subsubsection.2.4.3}%
+\contentsline {paragraph}{Batterie, charge et régulation}{11}{section*.15}%
+\contentsline {subsection}{\numberline {2.5}Systèmes d'économies d'énergie}{11}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}Estimation des coûts}{11}{subsection.2.6}%
+\contentsline {section}{\numberline {3}Développement de la schématique}{11}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Dimensionnements}{11}{subsection.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.1}Autonomie du système}{11}{subsubsection.3.1.1}%
+\contentsline {subsubsection}{\numberline {3.1.2}Adaptation mécanique}{11}{subsubsection.3.1.2}%
+\contentsline {subsubsection}{\numberline {3.1.3}Bus de communications}{11}{subsubsection.3.1.3}%
+\contentsline {subsubsection}{\numberline {3.1.4}Interface}{11}{subsubsection.3.1.4}%
+\contentsline {subsubsection}{\numberline {3.1.5}Périphériques}{11}{subsubsection.3.1.5}%
+\contentsline {subsubsection}{\numberline {3.1.6}Chargeur de batterie}{11}{subsubsection.3.1.6}%
+\contentsline {subsubsection}{\numberline {3.1.7}Synthèse et perspectives de l'étude}{11}{subsubsection.3.1.7}%
+\contentsline {section}{\numberline {4}Développement du PCB}{11}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Bill of materials}{11}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Mécanique du projet}{11}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Placement des composants}{11}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Mécanique du PCB}{11}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Routage}{11}{subsection.4.5}%
+\contentsline {section}{\numberline {5}Développement firmware}{11}{section.5}%
+\contentsline {section}{\numberline {6}Validation du design}{11}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Liste de matériel}{11}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Contrôle des alimentations}{11}{subsection.6.2}%
+\contentsline {paragraph}{Méthode de mesure}{11}{section*.16}%
+\contentsline {paragraph}{Mesures}{12}{section*.17}%
+\contentsline {subsection}{\numberline {6.3}Communication UART}{12}{subsection.6.3}%
+\contentsline {paragraph}{Méthode de mesure}{12}{section*.18}%
+\contentsline {paragraph}{Mesures}{12}{section*.19}%
+\contentsline {subsection}{\numberline {6.4}Communication SPI, carte SD}{12}{subsection.6.4}%
+\contentsline {paragraph}{Méthode de mesure}{12}{section*.20}%
+\contentsline {paragraph}{Mesures}{12}{section*.21}%
+\contentsline {section}{\numberline {7}Caractéristiques du produit fini}{12}{section.7}%
+\contentsline {section}{\numberline {8}Conclusion}{13}{section.8}%
+\contentsline {section}{\numberline {9}Bibliographie}{14}{section.9}%
+\contentsline {section}{\numberline {10}Annexes}{15}{section.10}%

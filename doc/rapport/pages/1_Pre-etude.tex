@@ -36,26 +36,82 @@ Le microcontrôleur interagît avec 4 périphériques principaux : Avec le \gls{
 \subsection{Choix des composants et technologies} \label{sssec:ComposantsTech}
 L'objectif de la pré-étude consiste en grande partie à sélectionner méthodiquement les technologies et les composants du projet. Cette partie du travail est essentielle et critique.
 
-\paragraph{Microcontrôleur}
+\subsubsection{Microcontrôleur}
 Le microcontrôleur nécessite au minimum les périphériques suivants : \\
 \fbox{2 UART} \fbox{1 SPI} \fbox{1 I2C} \\
 Il est préférable que le \gls{mcu} dispose de différentes configurations de gestion de puissance, notamment des modes d'économie d'énergie, afin d'avoir une maîtrise de la consommation et de permettre une meilleure autonomie. Enfin, le standard de l'école veut que les familles de microcontrôleurs PIC32 (Microchip) sont préférées.
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.7\linewidth]{../figures/pre_etude/familles_pic32}
+	\includegraphics[width=0.65\linewidth]{../figures/pre_etude/familles_pic32}
 	\caption{Familles PIC32}
 	\label{fig:famillespic32}
 	\source{\href{https://www.microchip.com/en-us/products/microcontrollers-and-microprocessors/32-bit-mcus/pic32-32-bit-mcus}{https://www.microchip.com/en-us/products/microcontrollers-and-microprocessors/32-bit-mcus/pic32-32-bit-mcus}}
 \end{figure}
 
-Sur la figure \ref{fig:famillespic32} le \gls{mcu} sélectionné appartient à la gamme 
+Sur la figure \ref{fig:famillespic32} le \gls{mcu} sélectionné appartient à la gamme MX (Baseline performance-mémoire) et à la famille XLP qui offre notamment la fonctionnalité "Ultra low power" qui est celle qui nous intéresse.
 
-\paragraph{Centrale inertielle} 
-AAAAAA
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{../figures/pre_etude/Carac_PIC32}
+	\caption{Caractéristiques du PIC32 choisi}
+	\source{Auteur}
+	\label{fig:caracpic32}
+\end{figure}
 
-\paragraph{GPS / GNSS}
-AAAAA
+\clearpage
+\subsubsection{Centrale inertielle} 
+Pour la centrale inertielle, il existe un composant avec lequel j'ai déjà acquis une certaine expérience et eu l'occasion d'utiliser et de créer des librairies pour le firmware en C. Celui-ci est performant et très utilisé dans l'industrie. Il est hautement configurable et a le grand avantage de calculer déjà une fusion de capteurs ainsi qu'une compensation de la dérive par les mesures de température. Cela permet notamment d'accéder à des données plus poussées, telles que les quaternions et les angles d'Euler. Il s'agit du \fbox{BNO055} de BOSCH.
+ 
+\begin{center}
+	\underline{Caractéristiques importantes :} \\
+	\begin{tabular}{l l l l}
+		Résolution gyroscope & : & 16 & [bits] \\
+		Résolution accéléromètre & : & 14 & [bits] \\
+		Résolution magnétomètre & : & $\sim$0.3 & [$\mu$T] \\
+		$I_{DD}$ & : & 12.3 & [mA] \\
+		Dérive de température & : & $\pm$ 0.03 & [\%/K] \\ 
+		Dérive accéléromètre & : & 0.2 & [\%/V] \\
+		Dérive gyroscope & : & <0.4 & [\%/V]
+	\end{tabular} \\
+\end{center}
+
+Afin de simplifier l'implémentation de ce composant dans le projet, sachant qu'il s'agit d'un boîtier de composant difficile à souder ou à mettre au four, il est possible d'utiliser la carte miniature d'Adafruit, cette carte comprend tous les composants passifs requis. Cela facilite ainsi son montage sur le PCB.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.45\linewidth]{../figures/pre_etude/BNO055_Adafruit}
+	\caption{Carte d'extension, centrale inertielle}
+	\source{\href{https://www.digikey.ch/en/products/detail/adafruit-industries-llc/4646/12609996?s=N4IgTCBcDaIEYDsD2AGArGgBAQwCbYDMAnAVwEsAXEAXQF8g}{Digikey, 4646}}
+	\label{fig:bno055adafruit}
+\end{figure}
+
+\underline{Données disponibles :}
+
+\begin{center}
+	\begin{tabular}{|ll|}
+		\hline
+		Température & \\
+		\hline
+		Vecteur gravité & XYZ \\
+		\hline
+		Orientation compensées, quaternion & WXYZ \\
+		\hline
+		Orientation compensée, angle de Euler & HPR \\
+		\hline
+		Données gyroscopiques & XYZ \\
+		\hline
+		 Intensité du champ magnétique & XYZ \\
+		\hline
+		Accélération & XYZ \\
+		\hline
+	\end{tabular}
+\end{center}
+
+\clearpage
+
+\subsubsection{GPS / GNSS}
+Pour le \gls{GPS}/\gls{GNSS} différents critères entrent en jeux
 
 \paragraph{Batterie, charge et régulation} 
 
