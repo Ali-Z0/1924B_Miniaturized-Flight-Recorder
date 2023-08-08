@@ -141,9 +141,19 @@ Malgré les différents avantages que présente le MAX-M10M-00B sur la figure \r
 \subsubsection{Carte SD} 
 Les pilotes de carte SD disponibles dans \gls{harmony} ne permettent pas une gestion des capacités de stockage trop importantes. Cela signifie, que nous ne pouvons pas avoir des cartes SD de trop grandes capacités, c'est pour cela que nous allons baser nos dimensionnements sur une carte de \textbf{256MB}. 
 
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.2\linewidth]{../figures/pre_etude/CarteSD_Illustration}
+	\caption{Illustration carte SD}
+	\source{\href{https://www.oempcworld.com/OEMPCworld-com/017045.html}{https://www.oempcworld.com/OEMPCworld-com/017045.html}}
+	\label{fig:cartesdillustration}
+\end{figure}
+
+
 \paragraph{Estimation de la capacité} Admettons les paramètres suivants où $S$ représente une taille de données et $T$ un temps :
 
 \begin{tabular}{lrl}
+	$S_{SD}$ & $256$ & $[KB]$ \\
 	$S_{gyro}$ & $16$ & $[Bytes]$ \\
 	$S_{accel}$ & $16$ & $[Bytes]$ \\
 	$S_{gnss}$ & $\sim16$ & $[Bytes]$ \\
@@ -163,14 +173,19 @@ Nous pouvons enfin calculer à partir de cela, la taille mémoire que prendra 15
 	S_{mesures} = \frac{S_{single}}{T_{gnss}} * T_{mesMin} = \frac{420}{5} * 900 = 75'600 \; [Bytes] = 75.6 \; [KB]
 \end{equation*}
 
-Nous pouvons déduire avec cette estimation qu'une carte SD de 256MB est largement suffisante et permet de mesurer jusqu'à :
+Nous pouvons déduire avec cette estimation qu'une carte SD de 256MB est largement suffisante et permet de mesurer jusqu'à un temps calculable de cette façon :
 
 \begin{equation*}
-	T_{mesures} = \frac{S_{single}}{T_{gnss}} * T_{mesMin} = \frac{420}{5} * 900 = 75'600 \; [Bytes] = 75.6 \; [KB]
+	T_{mesures} = \frac{S_{SD}*T_{gnss}}{S_{single}} = \frac{256'000*5}{420} = \sim508 \; [m] = \sim8.5 \; [H]
 \end{equation*}
 
+Nous pouvons estimer que les 8.5 dernières heures de vols sont enregistrées dans la carte SD.
+
+\clearpage
 
 \subsubsection{Batterie, charge et régulation} 
+
+
 
 \subsection{Systèmes d'économies d'énergie} \label{ssec:Low-power}
 Dans le but de maximiser le temps de logging, des mécanismes d'économies d'énergie doivent être mis en place. 

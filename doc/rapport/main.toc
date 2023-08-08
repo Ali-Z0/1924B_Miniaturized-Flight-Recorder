@@ -17,9 +17,9 @@
 \contentsline {subsubsection}{\numberline {2.4.2}Centrale inertielle}{10}{subsubsection.2.4.2}%
 \contentsline {subsubsection}{\numberline {2.4.3}GPS / GNSS}{11}{subsubsection.2.4.3}%
 \contentsline {subsubsection}{\numberline {2.4.4}Carte SD}{12}{subsubsection.2.4.4}%
-\contentsline {paragraph}{Estimation de la capacité}{12}{section*.17}%
-\contentsline {subsubsection}{\numberline {2.4.5}Batterie, charge et régulation}{12}{subsubsection.2.4.5}%
-\contentsline {subsection}{\numberline {2.5}Systèmes d'économies d'énergie}{12}{subsection.2.5}%
+\contentsline {paragraph}{Estimation de la capacité}{12}{section*.18}%
+\contentsline {subsubsection}{\numberline {2.4.5}Batterie, charge et régulation}{13}{subsubsection.2.4.5}%
+\contentsline {subsection}{\numberline {2.5}Systèmes d'économies d'énergie}{13}{subsection.2.5}%
 \contentsline {subsection}{\numberline {2.6}Estimation des coûts}{13}{subsection.2.6}%
 \contentsline {section}{\numberline {3}Développement de la schématique}{13}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Dimensionnements}{13}{subsection.3.1}%
@@ -40,14 +40,14 @@
 \contentsline {section}{\numberline {6}Validation du design}{13}{section.6}%
 \contentsline {subsection}{\numberline {6.1}Liste de matériel}{13}{subsection.6.1}%
 \contentsline {subsection}{\numberline {6.2}Contrôle des alimentations}{13}{subsection.6.2}%
-\contentsline {paragraph}{Méthode de mesure}{13}{section*.18}%
-\contentsline {paragraph}{Mesures}{13}{section*.19}%
-\contentsline {subsection}{\numberline {6.3}Communication UART}{13}{subsection.6.3}%
-\contentsline {paragraph}{Méthode de mesure}{13}{section*.20}%
-\contentsline {paragraph}{Mesures}{13}{section*.21}%
+\contentsline {paragraph}{Méthode de mesure}{13}{section*.19}%
+\contentsline {paragraph}{Mesures}{13}{section*.20}%
+\contentsline {subsection}{\numberline {6.3}Communication UART}{14}{subsection.6.3}%
+\contentsline {paragraph}{Méthode de mesure}{14}{section*.21}%
+\contentsline {paragraph}{Mesures}{14}{section*.22}%
 \contentsline {subsection}{\numberline {6.4}Communication SPI, carte SD}{14}{subsection.6.4}%
-\contentsline {paragraph}{Méthode de mesure}{14}{section*.22}%
-\contentsline {paragraph}{Mesures}{14}{section*.23}%
+\contentsline {paragraph}{Méthode de mesure}{14}{section*.23}%
+\contentsline {paragraph}{Mesures}{14}{section*.24}%
 \contentsline {section}{\numberline {7}Caractéristiques du produit fini}{14}{section.7}%
 \contentsline {section}{\numberline {8}Conclusion}{15}{section.8}%
 \contentsline {section}{\numberline {9}Bibliographie}{16}{section.9}%
