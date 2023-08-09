@@ -296,9 +296,11 @@ Sur la figure \ref{fig:diagrammeetatpreetude} les états de communication par le
 
 \subsection{Estimation des coûts} \label{ssec:Estimation-Couts}
 
+À partir des composants et des technologies définis lors de la pré-étude, nous pouvons estimer un coût pour le projet. Cette estimation est présentée dans le tableau \ref{tab:estimcouts}.
 
 \begin{center}
-	\underline{Estimation des coût}
+	\underline{Estimation des coût} 
+	\vspace{-4mm}
 	\begin{table}[h]
 		\centering
 		\begin{tabular}{lr}
@@ -306,19 +308,40 @@ Sur la figure \ref{fig:diagrammeetatpreetude} les états de communication par le
 			\hline
 			\gls{pcb} & 60.- \\
 			Batterie & 36.- \\
-			Boitier & 30.- \\
 			\gls{imu} & 26.- \\
 			\gls{GNSS} & 24.- \\
+			Boîtier & 20.- \\
 			Composants divers & 15.- \\
 			\gls{mcu} & 6.- \\
 			Régulateurs & 6.- \\
 			USB \& \gls{FTDI} & 3.- \\
 			\hline
-			Total & \underline{206.-} \\
+			Total & \underline{196.-} \\
 			\hline
 		\end{tabular}
 		\caption{}
-		\label{tb:estimcouts}
+		\label{tab:estimcouts}
 	\end{table}
-\end{center}
+\end{center} \vspace{-5mm}
 
+Cette estimation est relativement élevée. Il est à noter que le coût du \gls{pcb} pourrait être réduit en cas de commande groupée dans un panel\footnote{Regroupement de plusieurs circuits imprimés en un seul, pour diminuer le coût.}. Par ailleurs, les prix du boîtier et des composants semblent également être assez élevés.
+
+
+\section{Conclusion de la Pré-étude}
+
+\textbf{Fonctionnement du système:}
+La conception du système semble possible, le microcontrôleur s'interface avec quatre périphériques essentiels : un \gls{GNSS} pour la localisation, une centrale inertielle pour des mesures sur 9 axes (priorisant les mesures gyroscopiques et d'accélération), une carte SD pour le stockage (conservant au moins 15 minutes de données de vol), et un périphérique \gls{FTDI} pour l'interface avec un ordinateur via USB-C.
+
+\textbf{Choix des composants et technologies:}
+\begin{itemize}
+	\item \textit{Microcontrôleur}: Requiert au moins 2 UART, 1 SPI, et 1 I2C. Le PIC32MX274F256D est privilégié car il offre divers modes d'économie d'énergie.
+	\item \textit{Centrale inertielle}: Le BNO055 de BOSCH a été choisi, car il offre une variété de mesures avancées et une facilité d'implémentation grâce à la carte Adafruit.
+	\item \textit{GPS/GNSS}: Le CAM-M8C-0 d'ublox a été retenu pour sa facilité d'implémentation et son antenne interne omnidirectionnelle.
+	\item \textit{Carte SD}: Une capacité de 256MB a été choisie à cause des limites du pilote. Une telle carte permettrait d'enregistrer jusqu'à 8,5 heures de données de vol.
+	\item \textit{Batterie, charge, et régulation}: Une capacité de 1253 mAh est nécessaire pour atteindre l'autonomie souhaitée de 10 heures. Une batterie compact de 1300 mAh a été retenue.
+\end{itemize}
+
+\textbf{Estimation des coûts:}
+L'estimation totale pour le projet s'élève à environ 196 CHF. Néanmoins, il existe des possibilités d'économie, en particulier par une commande groupée du \gls{pcb}.
+
+En conclusion, cette pré-étude a décortiqué le projet de façon méthodique pour sélectionner les composants et technologies appropriés. Elle a également fourni des estimations de coûts et identifié des mécanismes d'économie d'énergie potentiels. La prochaine étape consistera à entamer la phase de conception en utilisant ces informations utiles.
