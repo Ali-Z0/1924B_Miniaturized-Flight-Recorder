@@ -18,19 +18,19 @@
 \contentsline {subsubsection}{\numberline {2.4.3}GPS / GNSS}{11}{subsubsection.2.4.3}%
 \contentsline {subsubsection}{\numberline {2.4.4}Carte SD}{12}{subsubsection.2.4.4}%
 \contentsline {paragraph}{Estimation de la capacité}{12}{section*.19}%
-\contentsline {subsubsection}{\numberline {2.4.5}Batterie, charge et régulation}{13}{subsubsection.2.4.5}%
+\contentsline {subsection}{\numberline {2.5}Batterie, autonomie, charge et régulation}{13}{subsection.2.5}%
 \contentsline {paragraph}{Technologies}{13}{section*.21}%
 \contentsline {paragraph}{Choix de la batterie}{14}{section*.23}%
 \contentsline {paragraph}{Régulateur de charge}{14}{section*.26}%
-\contentsline {subsubsection}{\numberline {2.4.6}Systèmes d'économie d'énergies}{15}{subsubsection.2.4.6}%
+\contentsline {subsection}{\numberline {2.6}Systèmes d'économie d'énergies}{15}{subsection.2.6}%
 \contentsline {paragraph}{$\bullet $ Modes de puissance du PIC32}{15}{section*.28}%
 \contentsline {paragraph}{$\bullet $ Modes de puissance du \gls {GNSS}}{15}{section*.29}%
 \contentsline {paragraph}{$\bullet $ Alimentation du \gls {GNSS}}{15}{section*.30}%
 \contentsline {paragraph}{$\bullet $ Modes de puissance \gls {imu}}{15}{section*.31}%
 \contentsline {paragraph}{$\circ $ Alimentation de la carte SD}{15}{section*.32}%
 \contentsline {paragraph}{$\bullet $ Mise en veille automatique du système}{15}{section*.33}%
-\contentsline {subsubsection}{\numberline {2.4.7}Diagramme états du système}{15}{subsubsection.2.4.7}%
-\contentsline {subsection}{\numberline {2.5}Estimation des coûts}{16}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.7}Diagramme des états du système}{15}{subsection.2.7}%
+\contentsline {subsection}{\numberline {2.8}Estimation des coûts}{16}{subsection.2.8}%
 \contentsline {section}{\numberline {3}Conclusion de la Pré-étude}{16}{section.3}%
 \contentsline {section}{\numberline {4}Développement de la schématique}{17}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Dimensionnements}{17}{subsection.4.1}%
