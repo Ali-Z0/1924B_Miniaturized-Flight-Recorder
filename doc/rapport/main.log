@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.8.7)  8 AUG 2023 17:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.8.7)  9 AUG 2023 10:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1462,7 +1462,7 @@ File: ../figures/pre_etude/BNO055_Adafruit.png Graphic file (type png)
 <use ../figures/pre_etude/BNO055_Adafruit.png>
 Package pdftex.def Info: ../figures/pre_etude/BNO055_Adafruit.png  used on inpu
 t line 83.
-(pdftex.def)             Requested size: 203.83417pt x 162.52783pt.
+(pdftex.def)             Requested size: 181.18439pt x 144.46645pt.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1475,17 +1475,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [10
 
  <../figures/pre_etude/BNO055_Adafruit.png>]
-<../figures/pre_etude/img_gnss.png, id=354, 1035.87pt x 472.01344pt>
+<../figures/pre_etude/img_gnss.png, id=355, 1035.87pt x 472.01344pt>
 File: ../figures/pre_etude/img_gnss.png Graphic file (type png)
 <use ../figures/pre_etude/img_gnss.png>
 Package pdftex.def Info: ../figures/pre_etude/img_gnss.png  used on input line 
-122.
+125.
 (pdftex.def)             Requested size: 271.7835pt x 123.84416pt.
-<../figures/pre_etude/Comp_GNSS.png, id=357, 685.8122pt x 547.2947pt>
+<../figures/pre_etude/Comp_GNSS.png, id=358, 685.8122pt x 547.2947pt>
 File: ../figures/pre_etude/Comp_GNSS.png Graphic file (type png)
 <use ../figures/pre_etude/Comp_GNSS.png>
 Package pdftex.def Info: ../figures/pre_etude/Comp_GNSS.png  used on input line
- 131.
+ 134.
 (pdftex.def)             Requested size: 294.42636pt x 234.96468pt.
 
 
@@ -1500,12 +1500,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
  <../figures/pre_etude/img_gnss.png> <../figures/pre_etude/Comp_GNSS.png (PNG c
 opy)>]
-<../figures/pre_etude/CarteSD_Illustration.png, id=367, 376.40625pt x 376.40625
+<../figures/pre_etude/CarteSD_Illustration.png, id=368, 376.40625pt x 376.40625
 pt>
 File: ../figures/pre_etude/CarteSD_Illustration.png Graphic file (type png)
 <use ../figures/pre_etude/CarteSD_Illustration.png>
 Package pdftex.def Info: ../figures/pre_etude/CarteSD_Illustration.png  used on
- input line 146.
+ input line 149.
 (pdftex.def)             Requested size: 90.5922pt x 90.59206pt.
 
 
@@ -1519,13 +1519,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [12
 
  <../figures/pre_etude/CarteSD_Illustration.png>]
-Overfull \hbox (11.80772pt too wide) in paragraph at lines 208--209
-[]\T1/ptm/m/n/12 https ://www.conrad.com/p/xcell-pda-rechargeable-battery-repla
-ces-original-battery-original-
- []
-
-) (./pages/2_Dev-SCH.tex) (./pages/3_Dev-PCB.tex) (./pages/4_Dev-SOFT.tex)
-(./pages/5_Val-MES.tex
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1537,6 +1530,24 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [13
 
 ]
+<../figures/pre_etude/batt.png, id=400, 481.8pt x 274.77657pt>
+File: ../figures/pre_etude/batt.png Graphic file (type png)
+<use ../figures/pre_etude/batt.png>
+Package pdftex.def Info: ../figures/pre_etude/batt.png  used on input line 240.
+
+(pdftex.def)             Requested size: 249.13371pt x 142.0838pt.
+<../figures/pre_etude/Carac_Batt.png, id=401, 743.77875pt x 289.08pt>
+File: ../figures/pre_etude/Carac_Batt.png Graphic file (type png)
+<use ../figures/pre_etude/Carac_Batt.png>
+Package pdftex.def Info: ../figures/pre_etude/Carac_Batt.png  used on input lin
+e 248.
+(pdftex.def)             Requested size: 317.07614pt x 123.23892pt.
+<../figures/pre_etude/MCP.png, id=402, 481.8pt x 481.8pt>
+File: ../figures/pre_etude/MCP.png Graphic file (type png)
+<use ../figures/pre_etude/MCP.png>
+Package pdftex.def Info: ../figures/pre_etude/MCP.png  used on input line 257.
+(pdftex.def)             Requested size: 90.5922pt x 90.58722pt.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1545,7 +1556,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[14])
+[14
+
+ <../figures/pre_etude/batt.png> <../figures/pre_etude/Carac_Batt.png (PNG copy
+)> <../figures/pre_etude/MCP.png>]) (./pages/2_Dev-SCH.tex)
+(./pages/3_Dev-PCB.tex) (./pages/4_Dev-SOFT.tex) (./pages/5_Val-MES.tex
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1554,7 +1569,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[15]
+[15
+
+])
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1563,7 +1580,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[16
+[16]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[17
 
 ] (./Main.bbl)
 
@@ -1574,7 +1600,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[17]
+[18]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1583,7 +1609,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[18
+[19
 
 ] (./main.aux)
  ***********
@@ -1594,11 +1620,11 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 5BD2B81CEE685B23750E708412AD75F0;7016.
  ) 
 Here is how much of TeX's memory you used:
- 38163 strings out of 475187
- 707432 string characters out of 5767784
+ 38217 strings out of 475187
+ 708921 string characters out of 5767784
  1934248 words of memory out of 5000000
- 58685 multiletter control sequences out of 15000+600000
- 632860 words of font info for 113 fonts, out of 8000000 for 9000
+ 58727 multiletter control sequences out of 15000+600000
+ 637226 words of font info for 116 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  109i,12n,117p,2289b,722s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/tex
@@ -1607,10 +1633,10 @@ texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2023/texmf-dis
 t/fonts/type1/urw/symbol/usyr.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/t
 imes/utmb8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c
 :/texlive/2023/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (19 pages, 2744058 bytes).
+Output written on main.pdf (20 pages, 3019770 bytes).
 PDF statistics:
- 475 PDF objects out of 1000 (max. 8388607)
- 413 compressed objects within 5 object streams
- 103 named destinations out of 1000 (max. 500000)
- 436 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 505 PDF objects out of 1000 (max. 8388607)
+ 437 compressed objects within 5 object streams
+ 114 named destinations out of 1000 (max. 500000)
+ 451 words of extra memory for PDF output out of 10000 (max. 10000000)
 

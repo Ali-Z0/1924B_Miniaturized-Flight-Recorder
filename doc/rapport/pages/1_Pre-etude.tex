@@ -80,16 +80,17 @@ Afin de simplifier l'implémentation de ce composant dans le projet, sachant qu'
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.45\linewidth]{../figures/pre_etude/BNO055_Adafruit}
+	\includegraphics[width=0.4\linewidth]{../figures/pre_etude/BNO055_Adafruit}
 	\caption{Carte d'extension, centrale inertielle}
 	\source{\href{https://www.digikey.ch/en/products/detail/adafruit-industries-llc/4646/12609996?s=N4IgTCBcDaIEYDsD2AGArGgBAQwCbYDMAnAVwEsAXEAXQF8g}{Digikey, 4646}}
 	\label{fig:bno055adafruit}
 \end{figure}
 
-\underline{Données disponibles :}
-
 \begin{center}
-	\begin{tabular}{|ll|}
+	\underline{Données disponibles :}
+	\begin{table}[h]
+		\centering
+		\begin{tabular}{|ll|}
 		\hline
 		Température & \\
 		\hline
@@ -106,6 +107,8 @@ Afin de simplifier l'implémentation de ce composant dans le projet, sachant qu'
 		Accélération & XYZ \\
 		\hline
 	\end{tabular}
+	\caption{Liste des données accessibles}
+	\end{table}
 \end{center}
 
 \clearpage
@@ -188,27 +191,77 @@ Afin de dimensionner une batterie pour le projet, il faut considérer les diffé
 
 \begin{center}
 	\underline{Liste des consommations principales} \\
-	\begin{tabular}{lrll}
-		Microcontrôleur & 24 & [mA] & Typ. \\
-		Carte-SD & ~100 & [mA] & Max. \\
-		Carte-SD & ~60 & [mA] & Moyenne \\
-		\gls{imu} & 12.3 & [mA] & Typ. \\
-		\gls{GNSS} & 71 & [mA] & Max. \\
-		\gls{GNSS} & 29 & [mA] & Typ. \\
-		\hline
-		Totale max & \underline{207.3} & [mA] & Max. \\
-		Totale moyennes & \underline{125.3} & [mA] & Moyenne \\
-		\hline
-	\end{tabular}
+	\begin{table}[h]
+		\centering
+		\begin{tabular}{lrll}
+			Microcontrôleur & 24 & [mA] & Typ. \\
+			Carte-SD & ~100 & [mA] & Max. \\
+			Carte-SD & ~60 & [mA] & Moyenne \\
+			\gls{imu} & 12.3 & [mA] & Typ. \\
+			\gls{GNSS} & 71 & [mA] & Max. \\
+			\gls{GNSS} & 29 & [mA] & Typ. \\
+			\hline
+			Totale max & \underline{207.3} & [mA] & Max. \\
+			Totale moyennes & \underline{125.3} & [mA] & Moyenne \\
+			\hline
+		\end{tabular}
+		\caption{Tableau des consommations de courant}
+		\label{tab:consommateur}
+	\end{table}
 \end{center}
 
-En prenant les consommations typiques et moyennes et si nous voulons par exemple une autonomie de \fbox{\textbf{10 heures}} il nous faudrait une batterie d'une capacité de \fbox{\textbf{1253 mAh}}.
+En examinant les consommations typiques et moyennes du tableau \ref{tab:consommateur} à régime constant, et en visant une autonomie de \fbox{\textbf{10 heures}}, nous aurions besoin d'une batterie d'une capacité de \fbox{\textbf{1253 mAh}}.
+
+\paragraph{Technologies} Concernant la technologie de la batterie, notre objectif, dans un souci d'ergonomie, est de permettre son chargement via un connecteur USB. La technologie offrant actuellement la meilleure densité d'énergie est le \fbox{Lithium Ion}\footnote{\href{https://www.epectec.com/batteries/cell-comparison.html}{https://www.epectec.com/batteries/cell-comparison.html}}. Elle présente cependant des inconvénients, énumérés dans le tableau \ref{tab:inconvlion}.
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{l|l}
+		Avantages &  Inconvénient\\
+		\hline
+		Haute densité d'énergie & Risque d'éclatement \\
+		Poids léger & Risque d'enflammement avec l'eau \\ 
+		Haute durée de vie & Sensible a la température \\
+		Charge rapide & Décharge complète altérante \\
+		\hline
+	\end{tabular}
+		\caption{Tableau avantages/inconvénient LI-ION}
+		\label{tab:inconvlion}
+\end{table}
+
+Les inconvénients listés dans le tableau \ref{tab:inconvlion} posent un risque pour l'intégrité des données de la carte-SD. C'est pourquoi il est essentiel de bien dimensionner le boîtier ainsi que l'intégration du circuit et de la batterie pour pallier ces dangers. Malgré les risques du Li-Ion, il s'agit d'une technologie très utilisée, y compris dans des domaines sensibles.
+
+\clearpage
+
+\paragraph{Choix de la batterie} La batterie doit avoir une capacité d'au moins \textbf{1260 mAh} et être suffisamment compacte pour être intégrée dans un boîtier de petite taille. Une batterie répond à ces critères : il s'agit de la \fbox{\textbf{PICPAL36}} de chez Farnell\footnote{Distributeur de composants électroniques.}. Les dimensions et caractéristiques de cette batterie sont visibles sur les figures \ref{fig:batt} et \ref{fig:caracbatt}.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.55\linewidth]{../figures/pre_etude/batt}
+	\caption{Dimension de la batterie}
+	\label{fig:batt}
+	\source{Auteur}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{../figures/pre_etude/Carac_Batt}
+	\caption{Caractèristiques de la batterie}
+	\label{fig:caracbatt}
+\end{figure}
+
+\paragraph{Régulateur de charge} Le choix du régulateur de charge s'est orienté vers un composant déjà utilisé par l'école, dont les caractéristiques et le montage sont bien connus. C'est un composant performant et fréquemment employé. De plus, il est disponible dans le stock de composants de l'école. Il s'agit du \fbox{\textbf{MCP73871T-2CCI/ML}}. Il est configurable et permet la charge des batteries Li-ion et Li-po.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.2\linewidth]{../figures/pre_etude/MCP}
+	\caption{MCP73871T-2CCI/ML}
+	\source{\href{https://www.digikey.ch/fr/products/detail/microchip-technology/MCP73871T-2CCI-ML/7065594}{Digikey MCP73871}}
+	\label{fig:mcp}
+\end{figure}
 
 
-https://www.conrad.com/p/xcell-pda-rechargeable-battery-replaces-original-battery-original-170-0737-b520003-37-v-1600-mah-251709
-
-\paragraph{Technologie}
-
+\clearpage
 
 \subsection{Systèmes d'économies d'énergie} \label{ssec:Low-power}
 Dans le but de maximiser le temps de logging, des mécanismes d'économies d'énergie doivent être mis en place. 
