@@ -46,7 +46,7 @@ Il est préférable que le \gls{mcu} dispose de différentes configurations de g
 	\includegraphics[width=0.65\linewidth]{../figures/pre_etude/familles_pic32}
 	\caption{Familles PIC32}
 	\label{fig:famillespic32}
-	\source{\href{https://www.microchip.com/en-us/products/microcontrollers-and-microprocessors/32-bit-mcus/pic32-32-bit-mcus}{https://www.microchip.com/en-us/products/microcontrollers-and-microprocessors/32-bit-mcus/pic32-32-bit-mcus}}
+	\source{\href{https://www.microchip.com/en-us/products/microcontrollers-and-microprocessors/32-bit-mcus/pic32-32-bit-mcus}{Microchip, familles}}
 \end{figure}
 
 Sur la figure \ref{fig:famillespic32} le \gls{mcu} sélectionné appartient à la gamme MX (Baseline performance-mémoire) et à la famille XLP qui offre notamment la fonctionnalité "Ultra low power" qui est celle qui nous intéresse.
@@ -246,7 +246,7 @@ Les inconvénients listés dans le tableau \ref{tab:inconvlion} posent un risque
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.7\linewidth]{../figures/pre_etude/Carac_Batt}
-	\caption{Caractèristiques de la batterie}
+	\caption{Caractéristiques de la batterie}
 	\label{fig:caracbatt}
 \end{figure}
 
@@ -256,14 +256,69 @@ Les inconvénients listés dans le tableau \ref{tab:inconvlion} posent un risque
 	\centering
 	\includegraphics[width=0.2\linewidth]{../figures/pre_etude/MCP}
 	\caption{MCP73871T-2CCI/ML}
-	\source{\href{https://www.digikey.ch/fr/products/detail/microchip-technology/MCP73871T-2CCI-ML/7065594}{Digikey MCP73871}}
+	\source{\href{https://www.digikey.ch/fr/products/detail/microchip-technology/MCP73871T-2CCI-ML/7065594}{Digikey IC BATT CHG LI-ION 1CELL 20QFN}}
 	\label{fig:mcp}
 \end{figure}
 
 
 \clearpage
 
-\subsection{Systèmes d'économies d'énergie} \label{ssec:Low-power}
-Dans le but de maximiser le temps de logging, des mécanismes d'économies d'énergie doivent être mis en place. 
+\subsubsection{Systèmes d'économie d'énergies} 
+
+Au-delà des 10 heures d'autonomie estimées, il est envisageable, pour maximiser le temps de logging, d'adopter des mécanismes d'économie d'énergie. Ces mécanismes pourraient être :
+
+\paragraph{$\bullet$ Modes de puissance du PIC32} Le microcontrôleur peut basculer entre différents modes de puissance où il réduit à la fois sa consommation et ses fonctionnalités. On pourrait envisager de passer en mode d'énergie restreinte entre les périodes d'enregistrement ou de limiter l'utilisation de certains périphériques.
+
+\paragraph{$\bullet$ Modes de puissance du \gls{GNSS}} À l'instar du \gls{mcu}, le composant de navigation dispose de plusieurs modes de fonctionnement qui permettent d'économiser de l'énergie. Un mode particulièrement utile permet de limiter sa cadence de données à 1Hz, étant donné qu'il n'est pas nécessaire qu'il fournisse des informations de localisation aussi fréquemment.
+
+\paragraph{$\bullet$ Alimentation du \gls{GNSS}} On pourrait également envisager de ne pas alimenter le \gls{GNSS} lorsqu'il n'est pas en service, afin de supprimer complètement sa consommation entre chaque mesure.
+
+\paragraph{$\bullet$ Modes de puissance \gls{imu}} La centrale inertielle dispose également de différents modes. Ces modes permettent, par exemple, de limiter les mesures à certains axes ou de la mettre en veille. Elle se met d'ailleurs automatiquement en veille après un certain temps entre les mesures. Ces modes peuvent être utilisés efficacement.
+
+\paragraph{$\circ$ Alimentation de la carte SD} Il est envisageable d'éteindre entièrement la carte SD entre les écritures. Cependant, étant donné que les écritures seront fréquentes, l'intérêt de cette démarche est limité.
+
+\paragraph{$\bullet$ Mise en veille automatique du système} Si aucun mouvement n'est détecté après un certain délai, il est envisageable que le système s'éteigne entièrement.
+
+\subsubsection{Diagramme états du système} 
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.8\linewidth]{../figures/pre_etude/Diagramme_Etat_Preetude}
+	\caption{Diagrammes des états (Sans USB)}
+	\source{Auteur}
+	\label{fig:diagrammeetatpreetude}
+\end{figure}
+
+Sur la figure \ref{fig:diagrammeetatpreetude} les états de communication par le port USB ne sont pas représentés, il s'agit des modes principaux.
+
+
+\clearpage
 
 \subsection{Estimation des coûts} \label{ssec:Estimation-Couts}
+
+
+\begin{center}
+	\underline{Estimation des coût}
+	\begin{table}[h]
+		\centering
+		\begin{tabular}{lr}
+			Élément & Prix estimé \\
+			\hline
+			\gls{pcb} & 60.- \\
+			Batterie & 36.- \\
+			Boitier & 30.- \\
+			\gls{imu} & 26.- \\
+			\gls{GNSS} & 24.- \\
+			Composants divers & 15.- \\
+			\gls{mcu} & 6.- \\
+			Régulateurs & 6.- \\
+			USB \& \gls{FTDI} & 3.- \\
+			\hline
+			Total & \underline{206.-} \\
+			\hline
+		\end{tabular}
+		\caption{}
+		\label{tb:estimcouts}
+	\end{table}
+\end{center}
+
