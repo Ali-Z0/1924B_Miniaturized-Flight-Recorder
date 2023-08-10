@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.8.7)  9 AUG 2023 15:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.8.7)  10 AUG 2023 14:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -671,6 +671,85 @@ Package: array 2022/09/04 v2.5g Tabular extension package (FMi)
 (c:/texlive/2023/texmf-dist/tex/latex/gensymb/gensymb.sty
 Package: gensymb 2022/10/17 v1.0.2 (KJH)
 )
+(c:/texlive/2023/texmf-dist/tex/latex/pdfpages/pdfpages.sty
+Package: pdfpages 2022/12/19 v0.5x Insert pages of external PDF documents (AM)
+
+(c:/texlive/2023/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+Package: eso-pic 2023/05/03 v3.0c eso-pic (RN)
+\ESO@tempdima=\dimen314
+\ESO@tempdimb=\dimen315
+)
+\AM@pagewidth=\dimen316
+\AM@pageheight=\dimen317
+\AM@fboxrule=\dimen318
+
+(c:/texlive/2023/texmf-dist/tex/latex/pdfpages/pppdftex.def
+File: pppdftex.def 2022/12/19 v0.5x Pdfpages driver for pdfTeX (AM)
+)
+\pdfpages@includegraphics@status=\count337
+\AM@pagebox=\box67
+\AM@global@opts=\toks40
+\AM@pagecnt=\count338
+\AM@toc@title=\toks41
+\AM@lof@heading=\toks42
+\c@AM@survey=\count339
+\AM@templatesizebox=\box68
+)
+(c:/texlive/2023/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
+Package caption Info: New subtype `subfigure' on input line 238.
+\c@subfigure=\count340
+Package caption Info: New subtype `subtable' on input line 238.
+\c@subtable=\count341
+)
+(c:/texlive/2023/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count342
+\lst@gtempboxa=\box69
+\lst@token=\toks43
+\lst@length=\count343
+\lst@currlwidth=\dimen319
+\lst@column=\count344
+\lst@pos=\count345
+\lst@lostspace=\dimen320
+\lst@width=\dimen321
+\lst@newlines=\count346
+\lst@lineno=\count347
+\lst@maxwidth=\dimen322
+
+(c:/texlive/2023/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
+\c@lstnumber=\count348
+\lst@skipnumbers=\count349
+\lst@framebox=\box70
+)
+(c:/texlive/2023/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2023/02/27 1.9 listings configuration
+))
+Package: listings 2023/02/27 1.9 (Carsten Heinz)
+
+(c:/texlive/2023/texmf-dist/tex/latex/tools/afterpage.sty
+Package: afterpage 2014/10/28 v1.08 After-Page Package (DPC)
+\AP@output=\toks44
+\AP@partial=\box71
+\AP@footins=\box72
+)
+(c:/texlive/2023/texmf-dist/tex/latex/footmisc/footmisc.sty
+Package: footmisc 2023/07/05 v6.0f a miscellany of footnote facilities
+\FN@temptoken=\toks45
+\footnotemargin=\dimen323
+\@outputbox@depth=\dimen324
+Package footmisc Info: Declaring symbol style bringhurst on input line 696.
+Package footmisc Info: Declaring symbol style chicago on input line 704.
+Package footmisc Info: Declaring symbol style wiley on input line 713.
+Package footmisc Info: Declaring symbol style lamport-robust on input line 724.
+
+Package footmisc Info: Declaring symbol style lamport* on input line 744.
+Package footmisc Info: Declaring symbol style lamport*-robust on input line 765
+.
+)
+(c:/texlive/2023/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
+)
 (c:/texlive/2023/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2023-07-08 v7.01b Hypertext links for LaTeX
 
@@ -718,11 +797,11 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 (c:/texlive/2023/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
-\c@section@level=\count337
+\c@section@level=\count350
 )
-\@linkdim=\dimen314
-\Hy@linkcounter=\count338
-\Hy@pagecounter=\count339
+\@linkdim=\dimen325
+\Hy@linkcounter=\count351
+\Hy@pagecounter=\count352
 
 (c:/texlive/2023/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2023-07-08 v7.01b Hyperref: PDFDocEncoding definition (HO)
@@ -732,7 +811,7 @@ Now handling font encoding PD1 ...
 (c:/texlive/2023/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count340
+\Hy@SavedSpaceFactor=\count353
 
 (c:/texlive/2023/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2023-07-08 v7.01b Hyperref: PDF Unicode definition (HO)
@@ -746,14 +825,14 @@ Package hyperref Info: Plain pages OFF on input line 4182.
 Package hyperref Info: Backreferencing OFF on input line 4187.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4434.
-\c@Hy@tempcnt=\count341
+\c@Hy@tempcnt=\count354
 
 (c:/texlive/2023/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip16
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4772.
-\XeTeXLinkMargin=\dimen315
+\XeTeXLinkMargin=\dimen326
 
 (c:/texlive/2023/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
@@ -762,9 +841,9 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count342
-\Field@Width=\dimen316
-\Fld@charsize=\dimen317
+\Fld@menulength=\count355
+\Field@Width=\dimen327
+\Fld@charsize=\dimen328
 Package hyperref Info: Hyper figures OFF on input line 6051.
 Package hyperref Info: Link nesting OFF on input line 6056.
 Package hyperref Info: Hyper index ON on input line 6059.
@@ -777,9 +856,9 @@ Package hyperref Info: PDF/A mode OFF on input line 6081.
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count343
-\c@Item=\count344
-\c@Hfootnote=\count345
+\Hy@abspage=\count356
+\c@Item=\count357
+\c@Hfootnote=\count358
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
@@ -791,8 +870,8 @@ Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
 kage
 with kernel methods
 )
-\Fld@listcount=\count346
-\c@bookmark@seq@number=\count347
+\Fld@listcount=\count359
+\c@bookmark@seq@number=\count360
 
 (c:/texlive/2023/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
@@ -805,85 +884,8 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip64
 )
-(c:/texlive/2023/texmf-dist/tex/latex/pdfpages/pdfpages.sty
-Package: pdfpages 2022/12/19 v0.5x Insert pages of external PDF documents (AM)
+Package hyperref Info: Option `colorlinks' set `true' on input line 42.
 
-(c:/texlive/2023/texmf-dist/tex/latex/eso-pic/eso-pic.sty
-Package: eso-pic 2023/05/03 v3.0c eso-pic (RN)
-\ESO@tempdima=\dimen318
-\ESO@tempdimb=\dimen319
-)
-\AM@pagewidth=\dimen320
-\AM@pageheight=\dimen321
-\AM@fboxrule=\dimen322
-
-(c:/texlive/2023/texmf-dist/tex/latex/pdfpages/pppdftex.def
-File: pppdftex.def 2022/12/19 v0.5x Pdfpages driver for pdfTeX (AM)
-)
-\pdfpages@includegraphics@status=\count348
-\AM@pagebox=\box67
-\AM@global@opts=\toks40
-\AM@pagecnt=\count349
-\AM@toc@title=\toks41
-\AM@lof@heading=\toks42
-\c@AM@survey=\count350
-\AM@templatesizebox=\box68
-)
-(c:/texlive/2023/texmf-dist/tex/latex/caption/subcaption.sty
-Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
-Package caption Info: New subtype `subfigure' on input line 238.
-\c@subfigure=\count351
-Package caption Info: New subtype `subtable' on input line 238.
-\c@subtable=\count352
-)
-(c:/texlive/2023/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count353
-\lst@gtempboxa=\box69
-\lst@token=\toks43
-\lst@length=\count354
-\lst@currlwidth=\dimen323
-\lst@column=\count355
-\lst@pos=\count356
-\lst@lostspace=\dimen324
-\lst@width=\dimen325
-\lst@newlines=\count357
-\lst@lineno=\count358
-\lst@maxwidth=\dimen326
-
-(c:/texlive/2023/texmf-dist/tex/latex/listings/lstmisc.sty
-File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
-\c@lstnumber=\count359
-\lst@skipnumbers=\count360
-\lst@framebox=\box70
-)
-(c:/texlive/2023/texmf-dist/tex/latex/listings/listings.cfg
-File: listings.cfg 2023/02/27 1.9 listings configuration
-))
-Package: listings 2023/02/27 1.9 (Carsten Heinz)
-
-(c:/texlive/2023/texmf-dist/tex/latex/tools/afterpage.sty
-Package: afterpage 2014/10/28 v1.08 After-Page Package (DPC)
-\AP@output=\toks44
-\AP@partial=\box71
-\AP@footins=\box72
-)
-(c:/texlive/2023/texmf-dist/tex/latex/footmisc/footmisc.sty
-Package: footmisc 2023/07/05 v6.0f a miscellany of footnote facilities
-\FN@temptoken=\toks45
-\footnotemargin=\dimen327
-\@outputbox@depth=\dimen328
-Package footmisc Info: Declaring symbol style bringhurst on input line 696.
-Package footmisc Info: Declaring symbol style chicago on input line 704.
-Package footmisc Info: Declaring symbol style wiley on input line 713.
-Package footmisc Info: Declaring symbol style lamport-robust on input line 724.
-
-Package footmisc Info: Declaring symbol style lamport* on input line 744.
-Package footmisc Info: Declaring symbol style lamport*-robust on input line 765
-.
-)
-(c:/texlive/2023/texmf-dist/tex/latex/base/textcomp.sty
-Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
-)
 (c:/texlive/2023/texmf-dist/tex/latex/glossaries-extra/glossaries-extra.sty
 Package: glossaries-extra 2023/06/28 v1.52 (NLCT)
 
@@ -1119,7 +1121,7 @@ Package: verbatim 2022-07-02 v1.5u LaTeX2e package for verbatim enhancements
 \verbatim@line=\toks62
 \verbatim@in@stream=\read4
 )
-LaTeX Font Info:    Trying to load font information for T1+ptm on input line 53
+LaTeX Font Info:    Trying to load font information for T1+ptm on input line 62
 .
 
 (c:/texlive/2023/texmf-dist/tex/latex/psnfss/t1ptm.fd
@@ -1133,24 +1135,24 @@ File: l3backend-pdftex.def 2023-04-19 L3 backend support: PDF output (pdfTeX)
 (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
  (c:/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count404
@@ -1207,11 +1209,11 @@ e
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \degres on input line 53.
+LaTeX Info: Redefining \degres on input line 62.
 Package french.ldf Info: Setting StandardEnumerateEnv=true for
 (french.ldf)             compatibility with enumerate package,
-(french.ldf)             reported on input line 53.
-LaTeX Info: Redefining \up on input line 53.
+(french.ldf)             reported on input line 62.
+LaTeX Info: Redefining \up on input line 62.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
@@ -1223,22 +1225,17 @@ Package caption Info: supertabular package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \symgns@font=\mathgroup8
 LaTeX Font Info:    Overwriting symbol font `gns@font' in version `bold'
-(Font)                  TS1/ptm/m/n --> TS1/ptm/b/n on input line 53.
-Package gensymb Info: Math companion symbols declared on input line 53.
-LaTeX Info: Redefining \degree on input line 53.
-LaTeX Info: Redefining \celsius on input line 53.
+(Font)                  TS1/ptm/m/n --> TS1/ptm/b/n on input line 62.
+Package gensymb Info: Math companion symbols declared on input line 62.
+LaTeX Info: Redefining \degree on input line 62.
+LaTeX Info: Redefining \celsius on input line 62.
 Package gensymb Info: Using text companion symbols for \degree, \celsius and \p
-erthousand on input line 53.
-LaTeX Info: Redefining \ohm on input line 53.
-Package gensymb Info: Using \textohm for \ohm on input line 53.
-Package gensymb Info: Using \textmu for \micro on input line 53.
-Package hyperref Info: Link coloring OFF on input line 53.
- (./main.out)
-(./main.out)
-\@outlinefile=\write4
-\openout4 = `main.out'.
+erthousand on input line 62.
+LaTeX Info: Redefining \ohm on input line 62.
+Package gensymb Info: Using \textohm for \ohm on input line 62.
+Package gensymb Info: Using \textmu for \micro on input line 62.
 
- (c:/texlive/2023/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+(c:/texlive/2023/texmf-dist/tex/latex/pdflscape/pdflscape.sty
 Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
 
 (c:/texlive/2023/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.sty
@@ -1251,8 +1248,13 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ))
 \c@lstlisting=\count410
+Package hyperref Info: Link coloring ON on input line 62.
+ (./main.out)
+(./main.out)
+\@outlinefile=\write4
+\openout4 = `main.out'.
 
-(./pages/titlepage.tex [1
+ (./pages/titlepage.tex [1
 
 {c:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2023/
 texmf-dist/fonts/enc/dvips/base/8r.enc}])
@@ -1260,7 +1262,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.63 \clearpage
+l.72 \clearpage
                 [1
 
 ] (./main.toc
@@ -1339,7 +1341,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [4
 
 ]
-<./ETML-ES-LOGO.png, id=288, 200.75pt x 200.75pt>
+<./ETML-ES-LOGO.png, id=303, 200.75pt x 200.75pt>
 File: ./ETML-ES-LOGO.png Graphic file (type png)
 <use ./ETML-ES-LOGO.png>
 Package pdftex.def Info: ./ETML-ES-LOGO.png  used on input line 6.
@@ -1351,7 +1353,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 28--29
 
 
 Underfull \hbox (badness 5563) in paragraph at lines 34--35
-[][]\T1/ptm/m/n/12 Global na-vi-ga-tion sa-tel-lite sys-tems.
+[][][]\T1/ptm/m/n/12 Global na-vi-ga-tion sa-tel-lite sys-tems.
  []
 
 
@@ -1359,7 +1361,7 @@ Overfull \hbox (2.28003pt too wide) in paragraph at lines 19--42
 [] [] 
  []
 
-<../figures/cdc/schema_principe.jpg, id=297, 2137.9875pt x 2475.2475pt>
+<../figures/cdc/schema_principe.jpg, id=312, 2137.9875pt x 2475.2475pt>
 File: ../figures/cdc/schema_principe.jpg Graphic file (type jpg)
 <use ../figures/cdc/schema_principe.jpg>
 Package pdftex.def Info: ../figures/cdc/schema_principe.jpg  used on input line
@@ -1385,12 +1387,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [6 <../figures/cdc/schema_principe.jpg>]
-<../figures/cdc/planif.png, id=312, 3012.0028pt x 1509.38907pt>
+<../figures/cdc/planif.png, id=327, 3012.0028pt x 1509.38907pt>
 File: ../figures/cdc/planif.png Graphic file (type png)
 <use ../figures/cdc/planif.png>
 Package pdftex.def Info: ../figures/cdc/planif.png  used on input line 80.
 (pdftex.def)             Requested size: 452.9679pt x 226.97438pt.
-<../figures/cdc/planif_theorique.png, id=313, 1383.66937pt x 336.50719pt>
+<../figures/cdc/planif_theorique.png, id=328, 1383.66937pt x 336.50719pt>
 File: ../figures/cdc/planif_theorique.png Graphic file (type png)
 <use ../figures/cdc/planif_theorique.png>
 Package pdftex.def Info: ../figures/cdc/planif_theorique.png  used on input lin
@@ -1409,7 +1411,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
  <../figures/cdc/planif.png> <../figures/cdc/planif_theorique.png>])
 (./pages/1_Pre-etude.tex
-<../figures/cdc/blocs_grossiers_no_antenna.jpg, id=324, 4573.085pt x 2489.3pt>
+<../figures/cdc/blocs_grossiers_no_antenna.jpg, id=339, 4573.085pt x 2489.3pt>
 File: ../figures/cdc/blocs_grossiers_no_antenna.jpg Graphic file (type jpg)
 <use ../figures/cdc/blocs_grossiers_no_antenna.jpg>
 Package pdftex.def Info: ../figures/cdc/blocs_grossiers_no_antenna.jpg  used on
@@ -1427,13 +1429,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [8
 
  <../figures/cdc/blocs_grossiers_no_antenna.jpg>]
-<../figures/pre_etude/familles_pic32.png, id=337, 1034.36438pt x 727.21687pt>
+<../figures/pre_etude/familles_pic32.png, id=352, 1034.36438pt x 727.21687pt>
 File: ../figures/pre_etude/familles_pic32.png Graphic file (type png)
 <use ../figures/pre_etude/familles_pic32.png>
 Package pdftex.def Info: ../figures/pre_etude/familles_pic32.png  used on input
  line 46.
 (pdftex.def)             Requested size: 294.42636pt x 206.99265pt.
-<../figures/pre_etude/Carac_PIC32.png, id=342, 661.72218pt x 271.0125pt>
+<../figures/pre_etude/Carac_PIC32.png, id=357, 661.72218pt x 271.0125pt>
 File: ../figures/pre_etude/Carac_PIC32.png Graphic file (type png)
 <use ../figures/pre_etude/Carac_PIC32.png>
 Package pdftex.def Info: ../figures/pre_etude/Carac_PIC32.png  used on input li
@@ -1452,7 +1454,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
  <../figures/pre_etude/familles_pic32.png> <../figures/pre_etude/Carac_PIC32.pn
 g>]
-<../figures/pre_etude/BNO055_Adafruit.png, id=350, 338.01282pt x 269.50688pt>
+<../figures/pre_etude/BNO055_Adafruit.png, id=365, 338.01282pt x 269.50688pt>
 File: ../figures/pre_etude/BNO055_Adafruit.png Graphic file (type png)
 <use ../figures/pre_etude/BNO055_Adafruit.png>
 Package pdftex.def Info: ../figures/pre_etude/BNO055_Adafruit.png  used on inpu
@@ -1470,13 +1472,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [10
 
  <../figures/pre_etude/BNO055_Adafruit.png>]
-<../figures/pre_etude/img_gnss.png, id=365, 1035.87pt x 472.01344pt>
+<../figures/pre_etude/img_gnss.png, id=380, 1035.87pt x 472.01344pt>
 File: ../figures/pre_etude/img_gnss.png Graphic file (type png)
 <use ../figures/pre_etude/img_gnss.png>
 Package pdftex.def Info: ../figures/pre_etude/img_gnss.png  used on input line 
 125.
 (pdftex.def)             Requested size: 271.7835pt x 123.84416pt.
-<../figures/pre_etude/Comp_GNSS.png, id=368, 685.8122pt x 547.2947pt>
+<../figures/pre_etude/Comp_GNSS.png, id=383, 685.8122pt x 547.2947pt>
 File: ../figures/pre_etude/Comp_GNSS.png Graphic file (type png)
 <use ../figures/pre_etude/Comp_GNSS.png>
 Package pdftex.def Info: ../figures/pre_etude/Comp_GNSS.png  used on input line
@@ -1495,7 +1497,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
  <../figures/pre_etude/img_gnss.png> <../figures/pre_etude/Comp_GNSS.png (PNG c
 opy)>]
-<../figures/pre_etude/CarteSD_Illustration.png, id=378, 376.40625pt x 376.40625
+<../figures/pre_etude/CarteSD_Illustration.png, id=393, 376.40625pt x 376.40625
 pt>
 File: ../figures/pre_etude/CarteSD_Illustration.png Graphic file (type png)
 <use ../figures/pre_etude/CarteSD_Illustration.png>
@@ -1525,19 +1527,19 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [13
 
 ]
-<../figures/pre_etude/batt.png, id=410, 481.8pt x 274.77657pt>
+<../figures/pre_etude/batt.png, id=425, 481.8pt x 274.77657pt>
 File: ../figures/pre_etude/batt.png Graphic file (type png)
 <use ../figures/pre_etude/batt.png>
 Package pdftex.def Info: ../figures/pre_etude/batt.png  used on input line 240.
 
 (pdftex.def)             Requested size: 249.13371pt x 142.0838pt.
-<../figures/pre_etude/Carac_Batt.png, id=411, 743.77875pt x 289.08pt>
+<../figures/pre_etude/Carac_Batt.png, id=426, 743.77875pt x 289.08pt>
 File: ../figures/pre_etude/Carac_Batt.png Graphic file (type png)
 <use ../figures/pre_etude/Carac_Batt.png>
 Package pdftex.def Info: ../figures/pre_etude/Carac_Batt.png  used on input lin
 e 248.
 (pdftex.def)             Requested size: 317.07614pt x 123.23892pt.
-<../figures/pre_etude/MCP.png, id=412, 481.8pt x 481.8pt>
+<../figures/pre_etude/MCP.png, id=427, 481.8pt x 481.8pt>
 File: ../figures/pre_etude/MCP.png Graphic file (type png)
 <use ../figures/pre_etude/MCP.png>
 Package pdftex.def Info: ../figures/pre_etude/MCP.png  used on input line 257.
@@ -1555,7 +1557,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
  <../figures/pre_etude/batt.png> <../figures/pre_etude/Carac_Batt.png (PNG copy
 )> <../figures/pre_etude/MCP.png>]
-<../figures/pre_etude/Diagramme_Etat_Preetude.jpg, id=431, 2715.14375pt x 943.5
+<../figures/pre_etude/Diagramme_Etat_Preetude.jpg, id=446, 2715.14375pt x 943.5
 25pt>
 File: ../figures/pre_etude/Diagramme_Etat_Preetude.jpg Graphic file (type jpg)
 <use ../figures/pre_etude/Diagramme_Etat_Preetude.jpg>
@@ -1573,8 +1575,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [15
 
- <../figures/pre_etude/Diagramme_Etat_Preetude.jpg>]) (./pages/2_Dev-SCH.tex) (
-./pages/3_Dev-PCB.tex) (./pages/4_Dev-SOFT.tex) (./pages/5_Val-MES.tex
+ <../figures/pre_etude/Diagramme_Etat_Preetude.jpg>]) (./pages/2_Dev-SCH.tex
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1594,7 +1595,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[17])
+[17]
+<../figures/etude/sch/MCU.jpg, id=487, 548.7028pt x 271.97984pt>
+File: ../figures/etude/sch/MCU.jpg Graphic file (type jpg)
+<use ../figures/etude/sch/MCU.jpg>
+Package pdftex.def Info: ../figures/etude/sch/MCU.jpg  used on input line 14.
+(pdftex.def)             Requested size: 452.9679pt x 224.53137pt.
+) (./pages/3_Dev-PCB.tex) (./pages/4_Dev-SOFT.tex) (./pages/5_Val-MES.tex
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1603,7 +1610,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[18]
+[18
+
+ <../figures/etude/sch/MCU.jpg>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1612,9 +1621,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[19
-
-] (./Main.bbl)
+[19])
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1634,39 +1641,52 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [21
 
+] (./Main.bbl)
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[22]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[23
+
 ] (./main.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-03>
  ***********
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: 80A614BCDDF824EAE09D5FD7B662F5C5;7457
-(rerunfilecheck)             After:  22D2AE2899B73AF220952D3F197BA93D;7480.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 88DF20B3A9A54C1796A7646D3C641C45;7808.
  ) 
 Here is how much of TeX's memory you used:
- 38283 strings out of 475187
- 710358 string characters out of 5767784
- 1933248 words of memory out of 5000000
- 58779 multiletter control sequences out of 15000+600000
+ 38311 strings out of 475187
+ 710999 string characters out of 5767784
+ 1935248 words of memory out of 5000000
+ 58802 multiletter control sequences out of 15000+600000
  637226 words of font info for 116 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 109i,12n,117p,2289b,722s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 109i,12n,117p,2289b,707s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/tex
 live/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2023/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2023/texmf-dis
 t/fonts/type1/urw/symbol/usyr.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/t
 imes/utmb8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c
 :/texlive/2023/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (22 pages, 3212226 bytes).
+Output written on main.pdf (24 pages, 4587463 bytes).
 PDF statistics:
- 553 PDF objects out of 1000 (max. 8388607)
- 482 compressed objects within 5 object streams
- 128 named destinations out of 1000 (max. 500000)
- 472 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 586 PDF objects out of 1000 (max. 8388607)
+ 511 compressed objects within 6 object streams
+ 134 named destinations out of 1000 (max. 500000)
+ 501 words of extra memory for PDF output out of 10000 (max. 10000000)
 

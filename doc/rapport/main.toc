@@ -33,33 +33,36 @@
 \contentsline {subsection}{\numberline {2.8}Estimation des coûts}{16}{subsection.2.8}%
 \contentsline {section}{\numberline {3}Conclusion de la Pré-étude}{16}{section.3}%
 \contentsline {section}{\numberline {4}Développement de la schématique}{17}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Dimensionnements}{17}{subsection.4.1}%
-\contentsline {subsubsection}{\numberline {4.1.1}Autonomie du système}{17}{subsubsection.4.1.1}%
-\contentsline {subsubsection}{\numberline {4.1.2}Adaptation mécanique}{17}{subsubsection.4.1.2}%
-\contentsline {subsubsection}{\numberline {4.1.3}Bus de communications}{17}{subsubsection.4.1.3}%
-\contentsline {subsubsection}{\numberline {4.1.4}Interface}{17}{subsubsection.4.1.4}%
-\contentsline {subsubsection}{\numberline {4.1.5}Périphériques}{17}{subsubsection.4.1.5}%
-\contentsline {subsubsection}{\numberline {4.1.6}Chargeur de batterie}{17}{subsubsection.4.1.6}%
-\contentsline {subsubsection}{\numberline {4.1.7}Synthèse et perspectives de l'étude}{17}{subsubsection.4.1.7}%
-\contentsline {section}{\numberline {5}Développement du PCB}{17}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Bill of materials}{17}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Mécanique du projet}{17}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Placement des composants}{17}{subsection.5.3}%
-\contentsline {subsection}{\numberline {5.4}Mécanique du PCB}{17}{subsection.5.4}%
-\contentsline {subsection}{\numberline {5.5}Routage}{17}{subsection.5.5}%
-\contentsline {section}{\numberline {6}Développement firmware}{17}{section.6}%
-\contentsline {section}{\numberline {7}Validation du design}{17}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Liste de matériel}{17}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Contrôle des alimentations}{17}{subsection.7.2}%
-\contentsline {paragraph}{Méthode de mesure}{17}{section*.36}%
-\contentsline {paragraph}{Mesures}{17}{section*.37}%
-\contentsline {subsection}{\numberline {7.3}Communication UART}{17}{subsection.7.3}%
-\contentsline {paragraph}{Méthode de mesure}{17}{section*.38}%
-\contentsline {paragraph}{Mesures}{17}{section*.39}%
-\contentsline {subsection}{\numberline {7.4}Communication SPI, carte SD}{17}{subsection.7.4}%
-\contentsline {paragraph}{Méthode de mesure}{17}{section*.40}%
-\contentsline {paragraph}{Mesures}{18}{section*.41}%
-\contentsline {section}{\numberline {8}Caractéristiques du produit fini}{18}{section.8}%
-\contentsline {section}{\numberline {9}Conclusion}{19}{section.9}%
-\contentsline {section}{\numberline {10}Bibliographie}{20}{section.10}%
-\contentsline {section}{\numberline {11}Annexes}{21}{section.11}%
+\contentsline {subsection}{\numberline {4.1}Blocs développés}{17}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Microcontrôleur}{17}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Périphériques}{19}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Puissance}{19}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Dimensionnements}{19}{subsection.4.5}%
+\contentsline {subsubsection}{\numberline {4.5.1}Bus de communications}{19}{subsubsection.4.5.1}%
+\contentsline {subsubsection}{\numberline {4.5.2}Interface}{19}{subsubsection.4.5.2}%
+\contentsline {subsubsection}{\numberline {4.5.3}Périphériques}{19}{subsubsection.4.5.3}%
+\contentsline {subsubsection}{\numberline {4.5.4}Chargeur de batterie}{19}{subsubsection.4.5.4}%
+\contentsline {subsubsection}{\numberline {4.5.5}Adaptation mécanique}{19}{subsubsection.4.5.5}%
+\contentsline {subsection}{\numberline {4.6}Synthèse et perspectives de l'étude}{19}{subsection.4.6}%
+\contentsline {section}{\numberline {5}Développement du PCB}{19}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Bill of materials}{19}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Mécanique du projet}{19}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Placement des composants}{19}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Mécanique du PCB}{19}{subsection.5.4}%
+\contentsline {subsection}{\numberline {5.5}Routage}{19}{subsection.5.5}%
+\contentsline {section}{\numberline {6}Développement firmware}{19}{section.6}%
+\contentsline {section}{\numberline {7}Validation du design}{19}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Liste de matériel}{19}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Contrôle des alimentations}{19}{subsection.7.2}%
+\contentsline {paragraph}{Méthode de mesure}{19}{section*.37}%
+\contentsline {paragraph}{Mesures}{19}{section*.38}%
+\contentsline {subsection}{\numberline {7.3}Communication UART}{19}{subsection.7.3}%
+\contentsline {paragraph}{Méthode de mesure}{19}{section*.39}%
+\contentsline {paragraph}{Mesures}{19}{section*.40}%
+\contentsline {subsection}{\numberline {7.4}Communication SPI, carte SD}{19}{subsection.7.4}%
+\contentsline {paragraph}{Méthode de mesure}{19}{section*.41}%
+\contentsline {paragraph}{Mesures}{20}{section*.42}%
+\contentsline {section}{\numberline {8}Caractéristiques du produit fini}{20}{section.8}%
+\contentsline {section}{\numberline {9}Conclusion}{21}{section.9}%
+\contentsline {section}{\numberline {10}Bibliographie}{22}{section.10}%
+\contentsline {section}{\numberline {11}Annexes}{23}{section.11}%
