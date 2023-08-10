@@ -65,7 +65,7 @@ Pour utiliser le microcontrôleur, il est nécessaire de définir ses entrées/s
 		\label{fig:mcu-harmony}
 	\end{subfigure}
 	\hfill
-	\caption{Configuration des PINs du microcontrôleur.}
+	\caption{Configuration des PINs du microcontrôleur}
 	\source{Auteur}
 	\label{fig:sch-connMcu}
 \end{figure}
@@ -73,7 +73,6 @@ Pour utiliser le microcontrôleur, il est nécessaire de définir ses entrées/s
 Pour valider les connexions de la figure \ref{fig:mcu}, une vérification a été effectuée avec le configurateur graphique \gls{harmony}, illustrée par la figure \ref{fig:mcu-harmony}. Cette démarche a confirmé la possibilité de dédier certaines fonctions à des PINs.
 
 \subsubsection{Programmateur et reset} 
-
 
 \begin{figure}[h]
 	\centering
@@ -83,7 +82,38 @@ Pour valider les connexions de la figure \ref{fig:mcu}, une vérification a ét�
 	\label{fig:prog-reset}
 \end{figure}
 
+Sur la figure \ref{fig:prog-reset}, nous pouvons observer le connecteur de programmation \textit{P3}. La connexion \textbf{MCLR} (Master Clear), qui permet de réinitialiser le \gls{mcu} lors de sa programmation, est suivie d'un circuit de protection du \gls{mcu} et d'un bouton pour permettre une réinitialisation manuelle.
+
+\clearpage
+
 \subsubsection{LED de vie} 
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=.8\linewidth]{../figures/etude/DIM-LED}
+	\caption{Données de la LED}
+	\source{\gls{datasheet} \href{https://docs.broadcom.com/doc/ASMB-KTF0-0A306-DS100}{ASMB-KTF0-0A306}}
+	\label{fig:dim-led}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.4\linewidth]{../figures/etude/sch/LED-Vie}
+	\caption{Schéma de la LED de vie}
+	\source{Auteur}
+	\label{fig:led-vie}
+\end{figure}
+
+Les résistances de la figure \ref{fig:led-vie} ont été dimensionnées en respectant les caractéristiques des LEDs pour chacune des couleurs (voir figure \ref{fig:dim-led}). Ces dernières éclairent à 80\% de leur luminosité nominale dans un souci d'économie d'énergie, leur utilité étant réduite à ce stade de prototypage.
+
+\begin{center}
+	\underline{Exemple dimensionnement résistance LED bleue}
+	\begin{equation*}
+		R_{blue} = \frac{(Vcc - V_{blue})}{I_b} = \frac{(3.3 - 2.85)}{12*10^-3} = 37.5 \Omega
+	\end{equation*}
+\end{center}
+
+\clearpage
 
 \subsection{Périphériques} \label{ssec:Dev-Devices}
 
