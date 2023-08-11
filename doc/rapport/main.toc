@@ -46,19 +46,18 @@
 \contentsline {subsection}{\numberline {4.4}Alimentations}{22}{subsection.4.4}%
 \contentsline {subsubsection}{\numberline {4.4.1}Chargeur de batterie}{22}{subsubsection.4.4.1}%
 \contentsline {subsubsection}{\numberline {4.4.2}Système d'enclenchement}{23}{subsubsection.4.4.2}%
-\contentsline {subsection}{\numberline {4.5}Adaptation mécanique}{23}{subsection.4.5}%
-\contentsline {subsection}{\numberline {4.6}Synthèse et perspectives de l'étude}{23}{subsection.4.6}%
-\contentsline {section}{\numberline {5}Développement du PCB}{23}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Bill of materials}{23}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Mécanique du projet}{23}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Placement des composants}{23}{subsection.5.3}%
-\contentsline {subsection}{\numberline {5.4}Mécanique du PCB}{23}{subsection.5.4}%
-\contentsline {subsection}{\numberline {5.5}Routage}{23}{subsection.5.5}%
-\contentsline {section}{\numberline {6}Développement firmware}{23}{section.6}%
-\contentsline {section}{\numberline {7}Validation du design}{23}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Liste de matériel}{23}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Contrôle des alimentations}{23}{subsection.7.2}%
-\contentsline {paragraph}{Méthode de mesure}{23}{section*.48}%
+\contentsline {subsection}{\numberline {4.5}Conclusion et perspectives de l'étude}{23}{subsection.4.5}%
+\contentsline {section}{\numberline {5}Développement du PCB}{24}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Bill of materials}{24}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Mécanique du projet}{24}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Placement des composants}{24}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Mécanique du PCB}{24}{subsection.5.4}%
+\contentsline {subsection}{\numberline {5.5}Routage}{24}{subsection.5.5}%
+\contentsline {section}{\numberline {6}Développement firmware}{24}{section.6}%
+\contentsline {section}{\numberline {7}Validation du design}{24}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Liste de matériel}{24}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Contrôle des alimentations}{24}{subsection.7.2}%
+\contentsline {paragraph}{Méthode de mesure}{24}{section*.48}%
 \contentsline {paragraph}{Mesures}{24}{section*.49}%
 \contentsline {subsection}{\numberline {7.3}Communication UART}{24}{subsection.7.3}%
 \contentsline {paragraph}{Méthode de mesure}{24}{section*.50}%
