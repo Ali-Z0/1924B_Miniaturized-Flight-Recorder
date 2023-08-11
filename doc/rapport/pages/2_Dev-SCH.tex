@@ -8,7 +8,7 @@ Nous pouvons sur la figure \ref{fig:blocs} observer les différentes interaction
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=1\linewidth]{../figures/etude/sch/BLOCS}
+	\includegraphics[width=.95\linewidth]{../figures/etude/sch/BLOCS}
 	\caption{Blocs du système}
 	\source{Auteur}
 	\label{fig:blocs}
@@ -33,6 +33,7 @@ Nous pouvons sur la figure \ref{fig:blocs} observer les différentes interaction
 				SDA2, SCL2 & Communication I2C optionnelle avec le \gls{GNSS}. \\
 				U1TX/RX... & Communication UART avec le \gls{FTDI} pour l'USB. \\
 				U2TX/RX & Communication UART avec le \gls{GNSS}. \\
+				RESET\_N & Permet de réinitialiser le \gls{GNSS}. \\
 				SCK, MOSI... & Communication SPI avec la carte SD. \\ 
 				R1,2,3,4 & Résistances de PULL-UP pour communication I2C. \\
 			\end{tabular}
@@ -51,14 +52,14 @@ Pour utiliser le microcontrôleur, il est nécessaire de définir ses entrées/s
 
 \begin{figure}[h]
 	\centering
-	\begin{subfigure}[b]{0.7\textwidth}
+	\begin{subfigure}[b]{0.6\textwidth}
 		\centering
 		\includegraphics[width=1\linewidth]{../figures/etude/sch/MCU}
 		\caption{Connexions du microcontrôleur}
 		\label{fig:mcu}
 	\end{subfigure}
 	\hfill
-	\begin{subfigure}[b]{0.25\textwidth}
+	\begin{subfigure}[b]{0.3\textwidth}
 		\centering
 		\includegraphics[width=1\linewidth]{../figures/etude/sch/MCU-HARMONY}
 		\caption{Config. \gls{harmony}.}
@@ -70,13 +71,14 @@ Pour utiliser le microcontrôleur, il est nécessaire de définir ses entrées/s
 	\label{fig:sch-connMcu}
 \end{figure}
 
-Pour valider les connexions de la figure \ref{fig:mcu}, une vérification a été effectuée avec le configurateur graphique \gls{harmony}, illustrée par la figure \ref{fig:mcu-harmony}. Cette démarche a confirmé la possibilité de dédier certaines fonctions à des PINs.
+Pour valider les connexions de la figure \ref{fig:mcu}, une vérification a été réalisée à l'aide du configurateur graphique \gls{harmony}, comme le montre la figure \ref{fig:mcu-harmony}. Cette étape a confirmé la possibilité d'attribuer certaines fonctions à des PINs spécifiques. Les PINs non utilisées du microcontrôleur sont redirigées vers un connecteur. Dans le contexte du prototype, cela permet de les exploiter ailleurs sur la carte.
+
 
 \subsubsection{Programmateur et reset} 
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.7\linewidth]{../figures/etude/sch/Prog-Reset}
+	\includegraphics[width=.9\linewidth]{../figures/etude/sch/Prog-Reset}
 	\caption{Schéma programmateur et reset}
 	\source{Auteur}
 	\label{fig:prog-reset}
@@ -90,7 +92,7 @@ Sur la figure \ref{fig:prog-reset}, nous pouvons observer le connecteur de progr
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=.8\linewidth]{../figures/etude/DIM-LED}
+	\includegraphics[width=.9\linewidth]{../figures/etude/DIM-LED}
 	\caption{Données de la LED}
 	\source{\gls{datasheet} \href{https://docs.broadcom.com/doc/ASMB-KTF0-0A306-DS100}{ASMB-KTF0-0A306}}
 	\label{fig:dim-led}
@@ -116,19 +118,63 @@ Les résistances de la figure \ref{fig:led-vie} ont été dimensionnées en resp
 \clearpage
 
 \subsection{Périphériques} \label{ssec:Dev-Devices}
+Dans cette section, nous allons décrire les schématiques des périphériques du système.
+ 
+\subsubsection{Carte SD}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.5\linewidth]{../figures/etude/sch/Carte-SD}
+	\caption{Branchement carte SD}
+	\source{Auteur}
+	\label{fig:carte-sd}
+\end{figure}
+
+La carte SD de la figure \ref{fig:carte-sd} est branchée en respectant la connectique pour une communication SPI simple. De plus, un condensateur est connecté entre \textbf{SCK} et \textbf{GND}. Toutefois, ce condensateur ne sera pas monté sauf si un filtrage sur la ligne de clock s'avère nécessaire.
+
+
+\subsubsection{Centrale inertielle}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.5\linewidth]{../figures/etude/sch/IMU}
+	\caption{Schéma centrale inertielle}
+	\source{Auteur}
+	\label{fig:imu}
+\end{figure}
+
+La centrale inertielle, étant déjà montée sur une carte d'extension, ne nécessite pas de composants passifs additionnels. Trois résistances de PULL-DOWN sont présentes, respectivement sur \textbf{ADR}, \textbf{PS0} et \textbf{PS1}. Elles permettent de configurer l'adresse et l'interface de communication de l'\gls{imu}. De plus, un jumper\footnote{Connecteur permettant de faire ou de rompre une connexion.} est présent sur les alimentations. Ceci permet de choisir si la centrale inertielle est alimentée indépendamment du reste du système (pour pouvoir l'allumer séparément) ou avec la même alimentation que le reste du système.
+
+
+\subsubsection{GNSS}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=.6\linewidth]{../figures/etude/sch/GNSS}
+	\caption{Schéma du \gls{GNSS}}
+	\source{Auteur}
+	\label{fig:gnss}
+\end{figure}
+
+Le \gls{GNSS} est connecté selon un schéma présenté dans son \href{https://www.u-blox.com/sites/default/files/CAM-M8-FW3_HIM_%28UBX-15030063%29.pdf}{Hardware Integration Manual}, à la section \textbf{2.2}. Ce schéma représente un design minimal pour recevoir des données via l'interface UART. Par rapport à la figure \ref{fig:gnss}, les différences sont les suivantes : l'interface I2C est également disponible, la PIN \textbf{RESET\_N} est connectée au \gls{mcu} et les PINS non-utilisées sont reliées à un connecteur afin de permettre leur utilisation éventuelle dans le cadre du prototype.
+
+\subsubsection{USB - FTDI}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=.8\linewidth]{../figures/etude/sch/USB-FTDI}
+	\caption{Schéma connecteur USB et FTDI}
+	\source{Auteur}
+	\label{fig:usb-ftdi}
+\end{figure}
+
+Le schéma du connecteur USB-C est conçu pour présenter une résistance aux interférences. Son signal 5V est filtré par une \textit{ferrite bead}. Les pistes différentielles de l'USB sont ensuite reliées au module \gls{FTDI}, qui est interfacé en UART et est alimenté par l'USB.
+
+\clearpage
 
 \subsection{Puissance} \label{ssec:Dev-Power}
 
-\subsection{Dimensionnements} \label{ssec:Dev-Dimensionnements}
-
-\subsubsection{Bus de communications} \label{sssec:Dev-BusComm}
-
-\subsubsection{Interface} \label{sssec:Interface}
-
-\subsubsection{Périphériques} \label{sssec:Peripheriques}
-
 \subsubsection{Chargeur de batterie} \label{sssec:Chargeur-bat}
 
-\subsubsection{Adaptation mécanique} \label{sssec:Adaptation-mech}
+\subsection{Adaptation mécanique} \label{sssec:Adaptation-mech}
 
 \subsection{Synthèse et perspectives de l'étude} \label{ssec:Synth-etude}
