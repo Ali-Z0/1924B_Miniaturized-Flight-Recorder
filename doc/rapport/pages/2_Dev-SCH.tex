@@ -2,7 +2,7 @@
 Dans cette section, nous décrirons la phase principale du développement ainsi que la démarche suivie pour élaborer le schéma électronique du projet.
 
 \subsection{Blocs développés} \label{ssec:Dev-blocs}
-Pour faciliter le développement et la lecture du schéma, il est judicieux de diviser le système en plusieurs blocs. Une structure a ainsi été définie, divisant le circuit en trois blocs principaux : \hyperref[ssec:Dev-MCU]{\textbf{Microcontrôleur \ref{ssec:Dev-MCU}}} (Intelligence du système, connexion du programmeur et LED de vie.), \hyperref[ssec:Dev-Devices]{\textbf{Périphériques \ref{ssec:Dev-Devices}}} (\gls{GNSS}, \gls{imu}, \gls{FTDI}, connecteur USB, Carte SD.) et \hyperref[ssec:Dev-Power]{\textbf{Puissance \ref{ssec:Dev-Power}}} (Connecteur batterie, gestion de charge, régulateurs de tension et système ON/OFF.).
+Pour faciliter le développement et la lecture du schéma, il est judicieux de diviser le système en plusieurs blocs. Une structure a ainsi été définie, divisant le circuit en trois blocs principaux : \hyperref[ssec:Dev-MCU]{\textbf{Microcontrôleur \ref{ssec:Dev-MCU}}} (Intelligence du système, connexion du programmeur et LED de vie.), \hyperref[ssec:Dev-Devices]{\textbf{Périphériques \ref{ssec:Dev-Devices}}} (\gls{GNSS}, \gls{imu}, \gls{FTDI}, connecteur USB, Carte SD.) et \hyperref[ssec:Dev-Alim]{\textbf{Alimentations \ref{ssec:Dev-Alim}}} (Connecteur batterie, gestion de charge, régulateurs de tension et système ON/OFF.).
 
 Nous pouvons sur la figure \ref{fig:blocs} observer les différentes interaction entre les blocs, elles sont par la suite décrites dans le tableau \ref{tab:descrConnexion}.
 
@@ -171,9 +171,25 @@ Le schéma du connecteur USB-C est conçu pour présenter une résistance aux in
 
 \clearpage
 
-\subsection{Puissance} \label{ssec:Dev-Power}
+\subsection{Alimentations} \label{ssec:Dev-Alim}
+Dans cette section, nous allons décrire les fonctionnement et dimensionnements principaux du bloc alimentation comprenant les différents régulateurs et la batterie.
 
 \subsubsection{Chargeur de batterie} \label{sssec:Chargeur-bat}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=.85\linewidth]{../figures/etude/sch/CHRG-BAT}
+	\caption{Schéma chargeur de batterie}
+	\source{Auteur}
+	\label{fig:chrg-bat}
+\end{figure}
+
+Le composant \textbf{MCP73871T-2CCI/ML} peut être configuré pour fournir un courant de charge programmable à la batterie. Ce courant est divisé en deux parties : la charge normale et la charge de terminaison, cette dernière intervenant lorsque la batterie est proche de sa pleine capacité.
+Afin de calculer ces courants, il faut se servir de la capacité de la batterie et des ratios quant à celle-ci.
+
+
+
+\subsubsection{Système d'enclenchement} \label{sssec:On-OFF}
 
 \subsection{Adaptation mécanique} \label{sssec:Adaptation-mech}
 
