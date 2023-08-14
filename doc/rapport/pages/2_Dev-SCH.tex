@@ -8,15 +8,13 @@ Nous pouvons sur la figure \ref{fig:blocs} observer les différentes interaction
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=.95\linewidth]{../figures/etude/sch/BLOCS}
+	\includegraphics[width=.85\linewidth]{../figures/etude/sch/BLOCS}
 	\caption{Blocs du système}
 	\source{Auteur}
 	\label{fig:blocs}
 \end{figure}
 
-\begin{center}
-	\underline{Tableau des interaction entre les blocs}
-	\begin{table}[h]
+\begin{table}[h]
 		\centering
 		\resizebox{\columnwidth}{!}{%
 			\begin{tabular}{l|l}
@@ -34,6 +32,8 @@ Nous pouvons sur la figure \ref{fig:blocs} observer les différentes interaction
 				U1TX/RX... & Communication UART avec le \gls{FTDI} pour l'USB. \\
 				U2TX/RX & Communication UART avec le \gls{GNSS}. \\
 				RESET\_N & Permet de réinitialiser le \gls{GNSS}. \\
+				TIMEPULSE & Permet de mesurer le temps par un signal pulsé. \\
+				EXTINT & Permet de gérer le mode d'alimentation du \gls{GNSS} \\
 				SCK, MOSI... & Communication SPI avec la carte SD. \\ 
 				R1,2,3,4 & Résistances de PULL-UP pour communication I2C. \\
 			\end{tabular}
@@ -41,7 +41,6 @@ Nous pouvons sur la figure \ref{fig:blocs} observer les différentes interaction
 		\caption{Description des connexions}
 		\label{tab:descrConnexion}
 	\end{table}
-\end{center}
 
 \clearpage
 
@@ -78,13 +77,13 @@ Pour valider les connexions de la figure \ref{fig:mcu}, une vérification a ét�
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=.9\linewidth]{../figures/etude/sch/Prog-Reset}
+	\includegraphics[width=.65\linewidth]{../figures/etude/sch/Prog-Reset}
 	\caption{Schéma programmateur et reset}
 	\source{Auteur}
 	\label{fig:prog-reset}
 \end{figure}
 
-Sur la figure \ref{fig:prog-reset}, nous pouvons observer le connecteur de programmation \textit{P3}. La connexion \textbf{MCLR} (Master Clear), qui permet de réinitialiser le \gls{mcu} lors de sa programmation, est suivie d'un circuit de protection du \gls{mcu} et d'un bouton pour permettre une réinitialisation manuelle.
+Sur la figure \ref{fig:prog-reset}, nous pouvons observer le connecteur de programmation \textit{P3}. La connexion \textbf{MCLR} (Master Clear), qui permet de réinitialiser le \gls{mcu} lors de sa programmation, est suivie d'un bouton pour permettre une réinitialisation manuelle.
 
 \clearpage
 
