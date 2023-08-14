@@ -1,0 +1,3 @@
+GNSS : Vérifier comment réveiller le module => EXTINT
+GNSS : Connecter EXTINT, comment est faite l'entrée ? PULL-UP, PULL-DOWN..
+GNSS : Connecter Timepulse
