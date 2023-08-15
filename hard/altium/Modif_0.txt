@@ -1,0 +1,4 @@
+Couper PCB pour passer les fils VVV
+Vérifier 3d hauteur VVV
+Serrer les Pistes TOP, éviter antennes sur plans de masse VVV
+Imprimer 1:1
