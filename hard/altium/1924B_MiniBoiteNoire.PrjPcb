@@ -33,7 +33,7 @@ FSMCodingStyle=eFMSDropDownList_OneProcess
 FSMEncodingStyle=eFMSDropDownList_OneHot
 IsProjectConflictPreventionWarningsEnabled=1
 IsVirtualBomDocumentRemoved=0
-OutputPath=
+OutputPath=Project Outputs for 1924B_MiniBoiteNoire
 LogFolderPath=
 ManagedProjectGUID=
 Template=K:\ES\APPLICATIONS\APPSLO\ALTIUM\ES_Templates\ES_Proj_6C_2L\ES_Proj_6C_2L_2019.PrjPCB
@@ -319,7 +319,11 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=BFLJVMRN
+
+[GeneratedDocument1]
+DocumentPath=Project Outputs for 1924B_MiniBoiteNoire\Design Rule Check - ES_Class6C_2L.html
+DItemRevisionGUID=
 
 [Configuration1]
 Name=Sources
@@ -368,7 +372,7 @@ SCH_HasExpandLogicalToPhysicalSheets=-1
 SaveSettingsToOutJob=-1
 
 [Generic_EDE]
-OutputDir=
+OutputDir=Project Outputs for 1924B_MiniBoiteNoire
 
 [OutputGroup1]
 Name=Netlist Outputs
