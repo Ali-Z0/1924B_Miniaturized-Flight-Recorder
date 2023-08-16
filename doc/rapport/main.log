@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.8.7)  16 AUG 2023 15:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.8.7)  16 AUG 2023 16:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -906,7 +906,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip64
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 47.
+Package hyperref Info: Option `colorlinks' set `true' on input line 41.
 
 (c:/texlive/2023/texmf-dist/tex/latex/glossaries-extra/glossaries-extra.sty
 Package: glossaries-extra 2023/06/28 v1.52 (NLCT)
@@ -1143,7 +1143,7 @@ Package: verbatim 2022-07-02 v1.5u LaTeX2e package for verbatim enhancements
 \verbatim@line=\toks62
 \verbatim@in@stream=\read4
 )
-LaTeX Font Info:    Trying to load font information for T1+ptm on input line 65
+LaTeX Font Info:    Trying to load font information for T1+ptm on input line 59
 .
 
 (c:/texlive/2023/texmf-dist/tex/latex/psnfss/t1ptm.fd
@@ -1151,24 +1151,24 @@ File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 ) (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
 
 (c:/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -1226,11 +1226,11 @@ e
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \degres on input line 65.
+LaTeX Info: Redefining \degres on input line 59.
 Package french.ldf Info: Setting StandardEnumerateEnv=true for
 (french.ldf)             compatibility with enumerate package,
-(french.ldf)             reported on input line 65.
-LaTeX Info: Redefining \up on input line 65.
+(french.ldf)             reported on input line 59.
+LaTeX Info: Redefining \up on input line 59.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
@@ -1242,15 +1242,15 @@ Package caption Info: supertabular package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \symgns@font=\mathgroup8
 LaTeX Font Info:    Overwriting symbol font `gns@font' in version `bold'
-(Font)                  TS1/ptm/m/n --> TS1/ptm/b/n on input line 65.
-Package gensymb Info: Math companion symbols declared on input line 65.
-LaTeX Info: Redefining \degree on input line 65.
-LaTeX Info: Redefining \celsius on input line 65.
+(Font)                  TS1/ptm/m/n --> TS1/ptm/b/n on input line 59.
+Package gensymb Info: Math companion symbols declared on input line 59.
+LaTeX Info: Redefining \degree on input line 59.
+LaTeX Info: Redefining \celsius on input line 59.
 Package gensymb Info: Using text companion symbols for \degree, \celsius and \p
-erthousand on input line 65.
-LaTeX Info: Redefining \ohm on input line 65.
-Package gensymb Info: Using \textohm for \ohm on input line 65.
-Package gensymb Info: Using \textmu for \micro on input line 65.
+erthousand on input line 59.
+LaTeX Info: Redefining \ohm on input line 59.
+Package gensymb Info: Using \textohm for \ohm on input line 59.
+Package gensymb Info: Using \textmu for \micro on input line 59.
 
 (c:/texlive/2023/texmf-dist/tex/latex/pdflscape/pdflscape.sty
 Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
@@ -1265,7 +1265,7 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ))
 \c@lstlisting=\count410
-Package hyperref Info: Link coloring ON on input line 65.
+Package hyperref Info: Link coloring ON on input line 59.
  (./main.out)
 (./main.out)
 \@outlinefile=\write4
@@ -1279,7 +1279,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.75 \clearpage
+l.69 \clearpage
                 [1
 
 ] (./main.toc
@@ -1844,7 +1844,7 @@ exmf-dist/fonts/type1/urw/symbol/usyr.pfb><c:/texlive/2023/texmf-dist/fonts/typ
 e1/urw/symbol/usyr.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/times/utmb8a
 .pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2
 023/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (30 pages, 11508921 bytes).
+Output written on main.pdf (30 pages, 11508932 bytes).
 PDF statistics:
  728 PDF objects out of 1000 (max. 8388607)
  627 compressed objects within 7 object streams
