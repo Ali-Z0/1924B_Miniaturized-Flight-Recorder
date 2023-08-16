@@ -1,0 +1,18 @@
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+\begin{table}[]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|llll|}
+\hline
+Composant                       & \multicolumn{1}{l|}{Fournisseur} & \multicolumn{1}{l|}{Réference}              & \multicolumn{1}{l|}{Quantité} & Prix [CHF] \\ \hline
+Régulateur linéaire 3.3V        & \multicolumn{1}{l|}{Digikey}     & \multicolumn{1}{l|}{MAX1793EUE33+-ND}       & \multicolumn{1}{l|}{1}        & 3.85       \\ \hline
+IC chargeur de batterie lithium & \multicolumn{1}{l|}{Digikey}     & \multicolumn{1}{l|}{MCP73871T-2CCI/MLCT-ND} & \multicolumn{1}{l|}{1}        & 2.1        \\ \hline
+Mosfet Canal N                       & \multicolumn{1}{l|}{Digikey} & \multicolumn{1}{l|}{BSS138LCT-ND}  & \multicolumn{1}{l|}{7} & 2.1  \\ \hline
+FTDI, USB-UART                       & \multicolumn{1}{l|}{Digikey} & \multicolumn{1}{l|}{768-1154-5-ND} & \multicolumn{1}{l|}{1} & 1.97 \\ \hline
+\multicolumn{1}{|c|}{\textbf{TOTAL}} & \multicolumn{4}{c|}{\textbf{10.02}}                                                               \\ \hline
+\end{tabular}%
+}
+\caption{Liste des composants en stock}
+\label{tab:BOM-Stock}
+\end{table}
