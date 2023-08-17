@@ -54,13 +54,21 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 // *****************************************************************************
 
 #include "app.h"
+#include "bno055.h"
+#include "bno055_support.h"
+#include "Mc32_I2cUtilCCS.h"
+#include "Mc32_serComm.h"
+#include "Mc32_sdFatGest.h"
+#include "Mc32Debounce.h"
+#include <stdio.h>
 
 // *****************************************************************************
 // *****************************************************************************
 // Section: Global Data Definitions
 // *****************************************************************************
 // *****************************************************************************
-
+/* Switch descriptor */
+S_SwitchDescriptor switchDescr;
 // *****************************************************************************
 /* Application Data
 
@@ -77,6 +85,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 */
 
 APP_DATA appData;
+TIMER_DATA timeData;
 
 // *****************************************************************************
 // *****************************************************************************
@@ -84,20 +93,40 @@ APP_DATA appData;
 // *****************************************************************************
 // *****************************************************************************
 
-/* TODO:  Add any necessary callback functions.
-*/
+void delayTimer_callback(){
+    /* Increment delay timer */
+    timeData.delayCnt ++;
+}
+
+void stateTimer_callback()
+{
+    /* Increment utility timers */
+    timeData.ledCnt ++;
+    timeData.measCnt[BNO055_idx] ++;
+    timeData.measCnt[GNSS_idx] ++;
+    timeData.tmrTickFlag = true;
+    /* If button is pressed, count pressed time */
+    if(timeData.flagCntBtnPressed){
+        timeData.cntBtnPressed++;
+    }
+     /* Do debounce every 10 ms */
+     DoDebounce(&switchDescr, ButtonMFStateGet());
+    /* Start a measure set each 100ms */        
+    if ( ( timeData.measCnt[BNO055_idx] % (timeData.measPeriod[BNO055_idx]/10) ) == 0)
+        timeData.measTodo[BNO055_idx] = true;
+     
+    /* Start a measure set each 100ms */        
+    if ( ( timeData.measCnt[GNSS_idx] % (timeData.measPeriod[GNSS_idx]/10) ) == 0)
+        timeData.measTodo[GNSS_idx] = true;
+}
 
 // *****************************************************************************
 // *****************************************************************************
 // Section: Application Local Functions
 // *****************************************************************************
 // *****************************************************************************
-
-
-/* TODO:  Add any necessary local functions.
-*/
-
-
+void btnTaskGest( void );
+void sys_shutdown( void );
 // *****************************************************************************
 // *****************************************************************************
 // Section: Application Initialization and State Machine Functions
@@ -114,13 +143,30 @@ APP_DATA appData;
 
 void APP_Initialize ( void )
 {
+    /* Keep the device ON */
+    PWR_HOLDOn();
+    
+    /* In ms */
+    timeData.measPeriod[BNO055_idx] = 500;
+    timeData.measPeriod[BNO055_idx] = 5000;
+    
+    /* Peripherals init */
+    DRV_TMR0_Start();
+    DRV_TMR1_Start();
+    
+    /* Init i2c bus */
+    i2c_init(1);
+    
+    /* Reset IMU */
+    RST_IMUOff();
+    BNO055_delay_msek(100);
+    RST_IMUOn();
+    BNO055_delay_msek(100);
+    
+        
     /* Place the App state machine in its initial state. */
     appData.state = APP_STATE_INIT;
-
     
-    /* TODO: Initialize your application's state machine and other
-     * parameters.
-     */
 }
 
 
@@ -134,6 +180,8 @@ void APP_Initialize ( void )
 
 void APP_Tasks ( void )
 {
+    /* Local bno055 data */
+    s_bno055_data bno055_local_data;  
 
     /* Check the application's current state. */
     switch ( appData.state )
@@ -141,25 +189,58 @@ void APP_Tasks ( void )
         /* Application's initial state. */
         case APP_STATE_INIT:
         {
-            bool appInitialized = true;
-       
-        
-            if (appInitialized)
+            // Init delay
+            BNO055_delay_msek(500);
+            // Init and Measure set
+            bno055_init_readout();
+            /* go to service task */
+            appData.state = APP_STATE_LOGGING;
+            /* Init ltime_BNO055 counter */
+            timeData.ltime[BNO055_idx] = 0;
+            break;
+        }
+        case APP_STATE_LOGGING:
+        {    
+            if((timeData.measTodo[BNO055_idx] == true )&&(sd_getState() == APP_IDLE))
             {
-            
-                appData.state = APP_STATE_SERVICE_TASKS;
+                /* BNO055 Read all important info routine */
+                bno055_local_data.comres = bno055_read_routine(&bno055_local_data);
+                /* Delta time */
+                bno055_local_data.d_time = timeData.measCnt[BNO055_idx] - timeData.ltime[BNO055_idx];
+                /* Pressure measure */
+                bno055_local_data.pressure = 0;
+                /* Write value to sdCard */
+                sd_BNO_scheduleWrite_BNO055(&bno055_local_data);
+                /* Reset measure flag */
+                timeData.measTodo[BNO055_idx] = false;
+                /* Update last time counter */
+                timeData.ltime[BNO055_idx] = timeData.measCnt[BNO055_idx];
             }
-            break;
+            else
+            {
+                /* No comm, so no error */
+                bno055_local_data.comres = 0;
+            }
+            
+            /* If error detected : error LED */
+            if((bno055_local_data.comres != 0)||(sd_getState() == APP_MOUNT_DISK))
+                LED_ROn();
+            else
+                LED_ROff();
+            
+            /* --- SD FAT routine --- */
+            sd_fat_task();
+            /* --- Button routine --- */
+            btnTaskGest();
+            
+           break;
         }
-
-        case APP_STATE_SERVICE_TASKS:
+        case APP_STATE_SHUTDOWN:
         {
-        
+            /* Save and shutdown system */
+            sys_shutdown();
             break;
         }
-
-        /* TODO: implement your application state machine.*/
-        
 
         /* The default state should never be executed. */
         default:
@@ -170,7 +251,55 @@ void APP_Tasks ( void )
     }
 }
 
- 
+void btnTaskGest( void ){
+    static bool Hold = false;
+    /* Button management : if rising edge detected */
+    if(((ButtonMFStateGet()))||(Hold == true))
+    {
+        /* Hold until falling edge */
+        Hold = true;
+        /* Start counting pressed time */
+        timeData.flagCntBtnPressed = true;
+        /* If falling edge detected */
+        if (ButtonMFStateGet() == 0)
+        {
+            /* Reset flag and switchdescr */
+            timeData.flagCntBtnPressed = false;
+            DebounceClearReleased(&switchDescr);
+            /* If pressed more time than power off */
+            if(timeData.cntBtnPressed >= TIME_POWER_OFF){
+                /* Power off the system */
+                appData.state = APP_STATE_SHUTDOWN;
+            }
+            timeData.cntBtnPressed = 0;
+            Hold = false;
+        }
+    }
+}
+
+void sys_shutdown( void ) {
+    /* Display shutting off mode */
+    LED_BOff();
+    LED_GOff();
+    LED_ROn();
+
+    /* If and SD card is mounted */
+    if(sd_getState() != APP_MOUNT_DISK){
+        /* Wait until SD availaible */
+        while(sd_getState() != APP_IDLE){
+            /* SD FAT routine */
+            sd_fat_task();
+        }
+        /* Unmount disk */
+        sd_setState(APP_UNMOUNT_DISK);
+        /* Wait until unmounted*/
+        while(sd_getState() != APP_IDLE){
+            sd_fat_task();
+        }
+    }
+    /* turn off the device */
+    PWR_HOLDOff();
+}
 
 /*******************************************************************************
  End of File

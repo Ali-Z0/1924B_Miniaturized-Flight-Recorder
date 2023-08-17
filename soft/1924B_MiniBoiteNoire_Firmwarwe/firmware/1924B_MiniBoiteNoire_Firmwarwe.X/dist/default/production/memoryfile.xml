@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<project>                                  
+  <executable name="dist/default/production/1924B_MiniBoiteNoire_Firmwarwe.X.production.elf">                 
+    <memory name="program">                 
+      <units>bytes</units>                 
+      <length>269824</length>                 
+      <used>144240</used>                     
+      <free>125584</free>                     
+    </memory>                              
+    <memory name="data">              
+      <units>bytes</units>                 
+      <length>65536</length>                 
+      <used>5672</used>                     
+      <free>59864</free>                     
+    </memory>                              
+  </executable>                            
+</project>                                 

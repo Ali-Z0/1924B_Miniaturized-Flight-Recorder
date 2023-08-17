@@ -118,10 +118,8 @@ const DRV_SDCARD_INIT drvSDCardInit =
     .spiIndex = 0,
     .sdcardSpeedHz = 20000000,
     .spiClk = CLK_BUS_PERIPHERAL_1,
-    .writeProtectPort = PORT_CHANNEL_A,
-    .writeProtectBitPosition = PORTS_BIT_POS_10,
     .chipSelectPort = PORT_CHANNEL_A,
-    .chipSelectBitPosition = PORTS_BIT_POS_1,
+    .chipSelectBitPosition = PORTS_BIT_POS_10,
 };
 // </editor-fold>
 // <editor-fold defaultstate="collapsed" desc="DRV_SPI Initialization Data"> 
@@ -149,18 +147,8 @@ const DRV_SDCARD_INIT drvSDCardInit =
     .jobQueueReserveSize = DRV_SPI_RESERVED_JOB_IDX0,
  };
 // </editor-fold>
-/*** TMR Driver Initialization Data ***/
-
-const DRV_TMR_INIT drvTmr0InitData =
-{
-    .moduleInit.sys.powerState = DRV_TMR_POWER_STATE_IDX0,
-    .tmrId = DRV_TMR_PERIPHERAL_ID_IDX0,
-    .clockSource = DRV_TMR_CLOCK_SOURCE_IDX0,
-    .prescale = DRV_TMR_PRESCALE_IDX0,
-    .mode = DRV_TMR_OPERATION_MODE_16_BIT,
-    .interruptSource = DRV_TMR_INTERRUPT_SOURCE_IDX0,
-    .asyncWriteEnable = false,
-};
+// <editor-fold defaultstate="collapsed" desc="DRV_USART Initialization Data">
+// </editor-fold>
 
 // *****************************************************************************
 // *****************************************************************************
@@ -243,15 +231,14 @@ void SYS_Initialize ( void* data )
     SYS_INT_VectorPrioritySet(DRV_SPI_INT_VECTOR_IDX0, DRV_SPI_INT_PRIORITY_IDX0);
     SYS_INT_VectorSubprioritySet(DRV_SPI_INT_VECTOR_IDX0, DRV_SPI_INT_SUB_PRIORITY_IDX0);
     sysObj.spiObjectIdx0 = DRV_SPI_Initialize(DRV_SPI_INDEX_0, (const SYS_MODULE_INIT  * const)&drvSpi0InitData);
-
-    sysObj.drvTmr0 = DRV_TMR_Initialize(DRV_TMR_INDEX_0, (SYS_MODULE_INIT *)&drvTmr0InitData);
-
-
-    SYS_INT_VectorPrioritySet(INT_VECTOR_T1, INT_PRIORITY_LEVEL1);
-    SYS_INT_VectorSubprioritySet(INT_VECTOR_T1, INT_SUBPRIORITY_LEVEL0);
+    /*Initialize TMR0 */
+    DRV_TMR0_Initialize();
+    /*Initialize TMR1 */
+    DRV_TMR1_Initialize();
  
- 
- 
+     sysObj.drvUsart0 = DRV_USART_Initialize(DRV_USART_INDEX_0, (SYS_MODULE_INIT *)NULL);
+    sysObj.drvUsart1 = DRV_USART_Initialize(DRV_USART_INDEX_1, (SYS_MODULE_INIT *)NULL);
+
     /* Initialize System Services */
     SYS_PORTS_Initialize();
 

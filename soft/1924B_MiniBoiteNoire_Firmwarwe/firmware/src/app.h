@@ -58,6 +58,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 #include <stdlib.h>
 #include "system_config.h"
 #include "system_definitions.h"
+#include "bno055.h"
 
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility
@@ -67,12 +68,30 @@ extern "C" {
 #endif
 // DOM-IGNORE-END 
 
+#define TIME_OUT            80000000U
+#define TIME_POWER_OFF      500
+#define NB_MEASURES         2
+    
 // *****************************************************************************
 // *****************************************************************************
 // Section: Type Definitions
 // *****************************************************************************
 // *****************************************************************************
-
+typedef struct {
+    s32 comres;
+    bool flagMeasReady;
+    uint8_t flagImportantMeas;
+    struct bno055_gravity_double_t gravity;
+    struct bno055_linear_accel_double_t linear_accel;
+    struct bno055_euler_double_t euler;
+    struct bno055_gyro_double_t gyro;
+    struct bno055_mag_double_t mag;
+    struct bno055_quaternion_t quaternion;
+    unsigned long time;
+    unsigned long l_time;
+    uint16_t d_time;
+    float pressure;
+}s_bno055_data;
 // *****************************************************************************
 /* Application states
 
@@ -88,8 +107,9 @@ typedef enum
 {
 	/* Application's state machine's initial state. */
 	APP_STATE_INIT=0,
-	APP_STATE_SERVICE_TASKS,
-
+    APP_STATE_LOGGING,
+    APP_STATE_FLAG_MEAS,
+	APP_STATE_SHUTDOWN
 	/* TODO: Define states used by the application state machine. */
 
 } APP_STATES;
@@ -117,6 +137,28 @@ typedef struct
 
 } APP_DATA;
 
+typedef struct
+{
+    /* DELAY DATA */
+    bool tmrTickFlag;
+    uint32_t delayCnt;
+        
+    /* MEASURES DATA */
+    unsigned long measCnt[NB_MEASURES];
+    unsigned long ltime[NB_MEASURES];
+    bool measTodo[NB_MEASURES];
+    unsigned long measPeriod[NB_MEASURES];
+    
+    /* DISPLAY DATA */
+    uint32_t ledCnt;
+    
+    /* BUTTON DATA */
+    bool flagCntBtnPressed;
+    uint32_t cntBtnPressed;
+}TIMER_DATA;
+
+/* Measures index */
+enum measure{BNO055_idx, GNSS_idx};
 
 // *****************************************************************************
 // *****************************************************************************
@@ -198,6 +240,9 @@ void APP_Initialize ( void );
 
 void APP_Tasks( void );
 
+// CALLBACKS
+void delayTimer_callback( void );
+void stateTimer_callback( void );
 
 #endif /* _APP_H */
 

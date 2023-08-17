@@ -18,20 +18,20 @@
         <Path dnOrder="1">Header&amp;#160;Files/framework/driver/tmr</Path>
       </File>
       <File dnOrder="1">
-        <Name dnOrder="0">drv_tmr_local.h</Name>
-        <Path dnOrder="1">Header&amp;#160;Files/framework/driver/tmr/src</Path>
-      </File>
-      <File dnOrder="2">
         <Name dnOrder="0">driver_common.h</Name>
         <Path dnOrder="1">Header&amp;#160;Files/framework/driver</Path>
       </File>
-      <File dnOrder="3">
+      <File dnOrder="2">
         <Name dnOrder="0">drv_spi.c</Name>
         <Path dnOrder="1">Source&amp;#160;Files/framework/driver/spi/src/dynamic</Path>
       </File>
-      <File dnOrder="4">
+      <File dnOrder="3">
         <Name dnOrder="0">sys_fs_local.h</Name>
         <Path dnOrder="1">Header&amp;#160;Files/framework/system/fs/src</Path>
+      </File>
+      <File dnOrder="4">
+        <Name dnOrder="0">sys_dma_definitions.h</Name>
+        <Path dnOrder="1">Header&amp;#160;Files/framework/system/dma</Path>
       </File>
       <File dnOrder="5">
         <Name dnOrder="0">sys_tmr.c</Name>
@@ -90,24 +90,24 @@
         <Path dnOrder="1">Header&amp;#160;Files/framework/system/ports</Path>
       </File>
       <File dnOrder="19">
-        <Name dnOrder="0">drv_tmr.c</Name>
-        <Path dnOrder="1">Source&amp;#160;Files/framework/driver/tmr/src/dynamic</Path>
-      </File>
-      <File dnOrder="20">
         <Name dnOrder="0">sys_int_private.h</Name>
         <Path dnOrder="1">Header&amp;#160;Files/framework/system/int/src</Path>
       </File>
-      <File dnOrder="21">
+      <File dnOrder="20">
         <Name dnOrder="0">drv_tmr_compatibility.h</Name>
         <Path dnOrder="1">Header&amp;#160;Files/framework/driver/tmr</Path>
       </File>
-      <File dnOrder="22">
+      <File dnOrder="21">
         <Name dnOrder="0">sys_tmr_local.h</Name>
         <Path dnOrder="1">Header&amp;#160;Files/framework/system/tmr/src</Path>
       </File>
-      <File dnOrder="23">
+      <File dnOrder="22">
         <Name dnOrder="0">system.h</Name>
         <Path dnOrder="1">Header&amp;#160;Files/framework/system</Path>
+      </File>
+      <File dnOrder="23">
+        <Name dnOrder="0">drv_usart.h</Name>
+        <Path dnOrder="1">Header&amp;#160;Files/framework/driver/usart</Path>
       </File>
       <File dnOrder="24">
         <Name dnOrder="0">ffconf.h</Name>
@@ -190,152 +190,201 @@
         <Path dnOrder="1">Header&amp;#160;Files/framework/driver/sdcard</Path>
       </File>
       <File dnOrder="44">
+        <Name dnOrder="0">drv_usart_definitions.h</Name>
+        <Path dnOrder="1">Header&amp;#160;Files/framework/driver/usart</Path>
+      </File>
+      <File dnOrder="45">
         <Name dnOrder="0">sys_clk_compatibility.h</Name>
         <Path dnOrder="1">Header&amp;#160;Files/framework/system/clk</Path>
       </File>
-      <File dnOrder="45">
+      <File dnOrder="46">
         <Name dnOrder="0">osal_impl_basic.h</Name>
         <Path dnOrder="1">Header&amp;#160;Files/framework/osal</Path>
       </File>
-      <File dnOrder="46">
+      <File dnOrder="47">
         <Name dnOrder="0">sys_clk_mapping.h</Name>
         <Path dnOrder="1">Header&amp;#160;Files/framework/system/clk</Path>
       </File>
-      <File dnOrder="47">
+      <File dnOrder="48">
         <Name dnOrder="0">sys_int_mapping.h</Name>
         <Path dnOrder="1">Header&amp;#160;Files/framework/system/int</Path>
       </File>
-      <File dnOrder="48">
+      <File dnOrder="49">
         <Name dnOrder="0">osal_definitions.h</Name>
         <Path dnOrder="1">Header&amp;#160;Files/framework/osal</Path>
       </File>
-      <File dnOrder="49">
+      <File dnOrder="50">
         <Name dnOrder="0">drv_spi_internal.h</Name>
         <Path dnOrder="1">Header&amp;#160;Files/framework/driver/spi/src/dynamic</Path>
       </File>
-      <File dnOrder="50">
+      <File dnOrder="51">
         <Name dnOrder="0">ff.c</Name>
         <Path dnOrder="1">Source&amp;#160;Files/framework/system/fs</Path>
       </File>
-      <File dnOrder="51">
+      <File dnOrder="52">
         <Name dnOrder="0">drv_sdcard_mapping.h</Name>
         <Path dnOrder="1">Header&amp;#160;Files/framework/driver/sdcard</Path>
       </File>
-      <File dnOrder="52">
+      <File dnOrder="53">
         <Name dnOrder="0">sys_debug.h</Name>
         <Path dnOrder="1">Header&amp;#160;Files/framework/system/debug</Path>
       </File>
-      <File dnOrder="53">
+      <File dnOrder="54">
+        <Name dnOrder="0">drv_usart_variant_mapping.h</Name>
+        <Path dnOrder="1">Header&amp;#160;Files/framework/driver/usart/src</Path>
+      </File>
+      <File dnOrder="55">
         <Name dnOrder="0">sys_module.h</Name>
         <Path dnOrder="1">Header&amp;#160;Files/framework/system/common</Path>
       </File>
-      <File dnOrder="54">
+      <File dnOrder="56">
         <Name dnOrder="0">diskio.c</Name>
         <Path dnOrder="1">Source&amp;#160;Files/framework/system/fs</Path>
       </File>
-      <File dnOrder="55">
+      <File dnOrder="57">
         <Name dnOrder="0">sys_fs_media_manager_local.h</Name>
         <Path dnOrder="1">Header&amp;#160;Files/framework/system/fs/src</Path>
       </File>
-      <File dnOrder="56">
+      <File dnOrder="58">
         <Name dnOrder="0">sys_queue.h</Name>
         <Path dnOrder="1">Header&amp;#160;Files/framework/system/common</Path>
       </File>
     </Files>
     <Templates dnOrder="1">
       <Template dnOrder="0">
-        <Name dnOrder="0">nvm_disk_images.h</Name>
-        <Path dnOrder="1">Header&amp;#160;Files/app/system_config/default/framework/system/fs</Path>
-        <Checksum dnOrder="2">B00B90E021F15FFD6B0B1B7F2D0650A5</Checksum>
-      </Template>
-      <Template dnOrder="1">
         <Name dnOrder="0">sys_ports_static.c</Name>
         <Path dnOrder="1">Source&amp;#160;Files/app/system_config/default/framework/system/ports/src</Path>
-        <Checksum dnOrder="2">CE9B4A6F6AB1A005585F4BD7996113E1</Checksum>
+        <Checksum dnOrder="2">54B6774313F006E66BF08FCE0B25E9AD</Checksum>
+      </Template>
+      <Template dnOrder="1">
+        <Name dnOrder="0">drv_tmr_static.h</Name>
+        <Path dnOrder="1">Header&amp;#160;Files/app/system_config/default/framework/driver/tmr</Path>
+        <Checksum dnOrder="2">1C7228F02C03792BAB187C996AEBCD0E</Checksum>
       </Template>
       <Template dnOrder="2">
-        <Name dnOrder="0">system_init.c</Name>
-        <Path dnOrder="1">Source&amp;#160;Files/app/system_config/default</Path>
-        <Checksum dnOrder="2">27ECC639DE398EBCA9ACB32048EC7341</Checksum>
+        <Name dnOrder="0">drv_tmr_mapping.c</Name>
+        <Path dnOrder="1">Source&amp;#160;Files/app/system_config/default/framework/driver/tmr/src</Path>
+        <Checksum dnOrder="2">DBE26CBCA22A445A54836CB11F19BC62</Checksum>
       </Template>
       <Template dnOrder="3">
-        <Name dnOrder="0">main.c</Name>
-        <Path dnOrder="1">Source&amp;#160;Files/app</Path>
+        <Name dnOrder="0">drv_usart_mapping.c</Name>
+        <Path dnOrder="1">Source&amp;#160;Files/app/system_config/default/framework/driver/usart/src</Path>
+        <Checksum dnOrder="2">64FB3C959ACBED05166C75B3E058355D</Checksum>
       </Template>
       <Template dnOrder="4">
-        <Name dnOrder="0">system_definitions.h</Name>
-        <Path dnOrder="1">Header&amp;#160;Files/app/system_config/default</Path>
-        <Checksum dnOrder="2">D9A8FEF7CBC2D142182E4BA8374F7DC1</Checksum>
-      </Template>
-      <Template dnOrder="5">
-        <Name dnOrder="0">system_exceptions.c</Name>
-        <Path dnOrder="1">Source&amp;#160;Files/app/system_config/default</Path>
-        <Checksum dnOrder="2">9836A04F3E98D3971DB91DF539160F34</Checksum>
-      </Template>
-      <Template dnOrder="6">
-        <Name dnOrder="0">sys_devcon.c</Name>
-        <Path dnOrder="1">Source&amp;#160;Files/app/system_config/default/framework/system/devcon/src</Path>
-        <Checksum dnOrder="2">54ADBD4A35BCA03C42C74182FCE41849</Checksum>
-      </Template>
-      <Template dnOrder="7">
-        <Name dnOrder="0">app.c</Name>
-        <Path dnOrder="1">Source&amp;#160;Files/app</Path>
-      </Template>
-      <Template dnOrder="8">
-        <Name dnOrder="0">sram_disk_images.h</Name>
-        <Path dnOrder="1">Header&amp;#160;Files/app/system_config/default/framework/system/fs</Path>
-        <Checksum dnOrder="2">A58BD5BF8E05EF7FF97B8F41007499C4</Checksum>
-      </Template>
-      <Template dnOrder="9">
         <Name dnOrder="0">sys_devcon_local.h</Name>
         <Path dnOrder="1">Header&amp;#160;Files/app/system_config/default/framework/system/devcon/src</Path>
         <Checksum dnOrder="2">B66F9B4DBD85DA7F9DE775E864E01395</Checksum>
       </Template>
-      <Template dnOrder="10">
+      <Template dnOrder="5">
         <Name dnOrder="0">drv_spi_tasks.c</Name>
         <Path dnOrder="1">Source&amp;#160;Files/app/system_config/default/framework/driver/spi/dynamic</Path>
         <Checksum dnOrder="2">B8D534FC99E9DAC9CE3CE2AFE17C3907</Checksum>
       </Template>
-      <Template dnOrder="11">
+      <Template dnOrder="6">
         <Name dnOrder="0">sys_devcon.h</Name>
         <Path dnOrder="1">Header&amp;#160;Files/app/system_config/default/framework/system/devcon</Path>
         <Checksum dnOrder="2">07580DCDEF89D9C79B062544109C5367</Checksum>
       </Template>
-      <Template dnOrder="12">
-        <Name dnOrder="0">system_tasks.c</Name>
-        <Path dnOrder="1">Source&amp;#160;Files/app/system_config/default</Path>
-        <Checksum dnOrder="2">4E9AD83CB2160CFD66817CDB1789A665</Checksum>
+      <Template dnOrder="7">
+        <Name dnOrder="0">drv_usart_static_byte_model.c</Name>
+        <Path dnOrder="1">Source&amp;#160;Files/app/system_config/default/framework/driver/usart/src</Path>
+        <Checksum dnOrder="2">53233B1AD06BF6C2B845B61A7D609432</Checksum>
       </Template>
-      <Template dnOrder="13">
-        <Name dnOrder="0">sys_devcon_pic32mx.c</Name>
-        <Path dnOrder="1">Source&amp;#160;Files/app/system_config/default/framework/system/devcon/src</Path>
-        <Checksum dnOrder="2">7939A9555363E85AFFB1AE7BF25593D3</Checksum>
-      </Template>
-      <Template dnOrder="14">
-        <Name dnOrder="0">system_config.h</Name>
-        <Path dnOrder="1">Header&amp;#160;Files/app/system_config/default</Path>
-        <Checksum dnOrder="2">FC00E35DD7EAEBCC86D7DA335E433B1D</Checksum>
-      </Template>
-      <Template dnOrder="15">
-        <Name dnOrder="0">app.h</Name>
-        <Path dnOrder="1">Header&amp;#160;Files/app</Path>
-      </Template>
-      <Template dnOrder="16">
+      <Template dnOrder="8">
         <Name dnOrder="0">system_interrupt.c</Name>
         <Path dnOrder="1">Source&amp;#160;Files/app/system_config/default</Path>
-        <Checksum dnOrder="2">DFA75E436548E18799ADDD4D3B913678</Checksum>
+        <Checksum dnOrder="2">1BABB2BABE42EF74955AFE2DE8EEDC93</Checksum>
+        <ProjectFileChecksum dnOrder="3">D397A0ED572FEDABDA4AD99D1E2412EE</ProjectFileChecksum>
       </Template>
-      <Template dnOrder="17">
-        <Name dnOrder="0">drv_spi_master_ebm_tasks.c</Name>
-        <Path dnOrder="1">Source&amp;#160;Files/app/system_config/default/framework/driver/spi/dynamic</Path>
-        <Checksum dnOrder="2">DF2E896C1FA81F4B5056E3B22DD340B6</Checksum>
-      </Template>
-      <Template dnOrder="18">
+      <Template dnOrder="9">
         <Name dnOrder="0">drv_spi_api.c</Name>
         <Path dnOrder="1">Source&amp;#160;Files/app/system_config/default/framework/driver/spi/dynamic</Path>
         <Checksum dnOrder="2">615D0B3998780D1680273302CCF44179</Checksum>
       </Template>
+      <Template dnOrder="10">
+        <Name dnOrder="0">nvm_disk_images.h</Name>
+        <Path dnOrder="1">Header&amp;#160;Files/app/system_config/default/framework/system/fs</Path>
+        <Checksum dnOrder="2">B00B90E021F15FFD6B0B1B7F2D0650A5</Checksum>
+      </Template>
+      <Template dnOrder="11">
+        <Name dnOrder="0">drv_usart_static.c</Name>
+        <Path dnOrder="1">Source&amp;#160;Files/app/system_config/default/framework/driver/usart/src</Path>
+        <Checksum dnOrder="2">3981CBB42BFB7D132BAD9012AD4F4964</Checksum>
+      </Template>
+      <Template dnOrder="12">
+        <Name dnOrder="0">system_init.c</Name>
+        <Path dnOrder="1">Source&amp;#160;Files/app/system_config/default</Path>
+        <Checksum dnOrder="2">E9D76C5F1CC1F2E52082B4585519F9CE</Checksum>
+      </Template>
+      <Template dnOrder="13">
+        <Name dnOrder="0">main.c</Name>
+        <Path dnOrder="1">Source&amp;#160;Files/app</Path>
+      </Template>
+      <Template dnOrder="14">
+        <Name dnOrder="0">system_definitions.h</Name>
+        <Path dnOrder="1">Header&amp;#160;Files/app/system_config/default</Path>
+        <Checksum dnOrder="2">8B90406F9C349302943B953D058014E7</Checksum>
+      </Template>
+      <Template dnOrder="15">
+        <Name dnOrder="0">system_exceptions.c</Name>
+        <Path dnOrder="1">Source&amp;#160;Files/app/system_config/default</Path>
+        <Checksum dnOrder="2">9836A04F3E98D3971DB91DF539160F34</Checksum>
+      </Template>
+      <Template dnOrder="16">
+        <Name dnOrder="0">sys_devcon.c</Name>
+        <Path dnOrder="1">Source&amp;#160;Files/app/system_config/default/framework/system/devcon/src</Path>
+        <Checksum dnOrder="2">54ADBD4A35BCA03C42C74182FCE41849</Checksum>
+      </Template>
+      <Template dnOrder="17">
+        <Name dnOrder="0">app.c</Name>
+        <Path dnOrder="1">Source&amp;#160;Files/app</Path>
+      </Template>
+      <Template dnOrder="18">
+        <Name dnOrder="0">sram_disk_images.h</Name>
+        <Path dnOrder="1">Header&amp;#160;Files/app/system_config/default/framework/system/fs</Path>
+        <Checksum dnOrder="2">A58BD5BF8E05EF7FF97B8F41007499C4</Checksum>
+      </Template>
       <Template dnOrder="19">
+        <Name dnOrder="0">drv_usart_static.h</Name>
+        <Path dnOrder="1">Header&amp;#160;Files/app/system_config/default/framework/driver/usart</Path>
+        <Checksum dnOrder="2">530CF20A9C9BAF69F2E99FE6C5784867</Checksum>
+      </Template>
+      <Template dnOrder="20">
+        <Name dnOrder="0">system_tasks.c</Name>
+        <Path dnOrder="1">Source&amp;#160;Files/app/system_config/default</Path>
+        <Checksum dnOrder="2">ADC6FC499112E905ECFF4DD82ACEAE00</Checksum>
+      </Template>
+      <Template dnOrder="21">
+        <Name dnOrder="0">sys_devcon_pic32mx.c</Name>
+        <Path dnOrder="1">Source&amp;#160;Files/app/system_config/default/framework/system/devcon/src</Path>
+        <Checksum dnOrder="2">7939A9555363E85AFFB1AE7BF25593D3</Checksum>
+      </Template>
+      <Template dnOrder="22">
+        <Name dnOrder="0">system_config.h</Name>
+        <Path dnOrder="1">Header&amp;#160;Files/app/system_config/default</Path>
+        <Checksum dnOrder="2">EF0EE3F75D7AD684440F44D96DE31284</Checksum>
+      </Template>
+      <Template dnOrder="23">
+        <Name dnOrder="0">app.h</Name>
+        <Path dnOrder="1">Header&amp;#160;Files/app</Path>
+      </Template>
+      <Template dnOrder="24">
+        <Name dnOrder="0">drv_tmr_static.c</Name>
+        <Path dnOrder="1">Source&amp;#160;Files/app/system_config/default/framework/driver/tmr/src</Path>
+        <Checksum dnOrder="2">26B2BF6E30BCA70608AE8328D4179E43</Checksum>
+      </Template>
+      <Template dnOrder="25">
+        <Name dnOrder="0">drv_spi_master_ebm_tasks.c</Name>
+        <Path dnOrder="1">Source&amp;#160;Files/app/system_config/default/framework/driver/spi/dynamic</Path>
+        <Checksum dnOrder="2">DF2E896C1FA81F4B5056E3B22DD340B6</Checksum>
+      </Template>
+      <Template dnOrder="26">
+        <Name dnOrder="0">drv_usart_static_local.h</Name>
+        <Path dnOrder="1">Header&amp;#160;Files/app/system_config/default/framework/driver/usart/src</Path>
+        <Checksum dnOrder="2">9563F23392942CF4B5C01E1065907D06</Checksum>
+      </Template>
+      <Template dnOrder="27">
         <Name dnOrder="0">sys_clk_pic32mx.c</Name>
         <Path dnOrder="1">Source&amp;#160;Files/app/system_config/default/framework/system/clk/src</Path>
         <Checksum dnOrder="2">414614ADF5119836C3646F3BDC5F076F</Checksum>

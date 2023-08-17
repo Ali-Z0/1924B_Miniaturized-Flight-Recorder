@@ -8,7 +8,18 @@
         <logicalFolder name="f1" displayName="system_config" projectFiles="true">
           <logicalFolder name="f1" displayName="default" projectFiles="true">
             <logicalFolder name="f1" displayName="framework" projectFiles="true">
-              <logicalFolder name="f1" displayName="system" projectFiles="true">
+              <logicalFolder name="f1" displayName="driver" projectFiles="true">
+                <logicalFolder name="f1" displayName="tmr" projectFiles="true">
+                  <itemPath>../src/system_config/default/framework/driver/tmr/drv_tmr_static.h</itemPath>
+                </logicalFolder>
+                <logicalFolder name="f2" displayName="usart" projectFiles="true">
+                  <logicalFolder name="f1" displayName="src" projectFiles="true">
+                    <itemPath>../src/system_config/default/framework/driver/usart/src/drv_usart_static_local.h</itemPath>
+                  </logicalFolder>
+                  <itemPath>../src/system_config/default/framework/driver/usart/drv_usart_static.h</itemPath>
+                </logicalFolder>
+              </logicalFolder>
+              <logicalFolder name="f2" displayName="system" projectFiles="true">
                 <logicalFolder name="f1" displayName="devcon" projectFiles="true">
                   <logicalFolder name="f1" displayName="src" projectFiles="true">
                     <itemPath>../src/system_config/default/framework/system/devcon/src/sys_devcon_local.h</itemPath>
@@ -26,6 +37,12 @@
           </logicalFolder>
         </logicalFolder>
         <itemPath>../src/app.h</itemPath>
+        <itemPath>../src/MC32_serComm.h</itemPath>
+        <itemPath>../src/Mc32Debounce.h</itemPath>
+        <itemPath>../src/Mc32_I2cUtilCCS.h</itemPath>
+        <itemPath>../src/Mc32_sdFatGest.h</itemPath>
+        <itemPath>../src/bno055.h</itemPath>
+        <itemPath>../src/bno055_support.h</itemPath>
       </logicalFolder>
       <logicalFolder name="f1" displayName="framework" projectFiles="true">
         <logicalFolder name="f1" displayName="driver" projectFiles="true">
@@ -52,12 +69,18 @@
           <logicalFolder name="f3" displayName="tmr" projectFiles="true">
             <logicalFolder name="f1" displayName="src" projectFiles="true">
               <itemPath>../../../../../../framework/driver/tmr/src/drv_tmr_variant_mapping.h</itemPath>
-              <itemPath>../../../../../../framework/driver/tmr/src/drv_tmr_local.h</itemPath>
             </logicalFolder>
             <itemPath>../../../../../../framework/driver/tmr/drv_tmr.h</itemPath>
             <itemPath>../../../../../../framework/driver/tmr/drv_tmr_mapping.h</itemPath>
             <itemPath>../../../../../../framework/driver/tmr/drv_tmr_compatibility.h</itemPath>
             <itemPath>../../../../../../framework/driver/tmr/tmr_definitions_pic32m.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="f4" displayName="usart" projectFiles="true">
+            <logicalFolder name="f1" displayName="src" projectFiles="true">
+              <itemPath>../../../../../../framework/driver/usart/src/drv_usart_variant_mapping.h</itemPath>
+            </logicalFolder>
+            <itemPath>../../../../../../framework/driver/usart/drv_usart.h</itemPath>
+            <itemPath>../../../../../../framework/driver/usart/drv_usart_definitions.h</itemPath>
           </logicalFolder>
           <itemPath>../../../../../../framework/driver/driver.h</itemPath>
           <itemPath>../../../../../../framework/driver/driver_common.h</itemPath>
@@ -84,6 +107,7 @@
           </logicalFolder>
           <logicalFolder name="f2" displayName="dma" projectFiles="true">
             <itemPath>../../../../../../framework/system/dma/sys_dma.h</itemPath>
+            <itemPath>../../../../../../framework/system/dma/sys_dma_definitions.h</itemPath>
           </logicalFolder>
           <logicalFolder name="f7" displayName="fs" projectFiles="true">
             <logicalFolder name="f2" displayName="fat_fs" projectFiles="true">
@@ -150,6 +174,19 @@
                     <itemPath>../src/system_config/default/framework/driver/spi/dynamic/drv_spi_master_ebm_tasks.c</itemPath>
                   </logicalFolder>
                 </logicalFolder>
+                <logicalFolder name="f2" displayName="tmr" projectFiles="true">
+                  <logicalFolder name="f1" displayName="src" projectFiles="true">
+                    <itemPath>../src/system_config/default/framework/driver/tmr/src/drv_tmr_static.c</itemPath>
+                    <itemPath>../src/system_config/default/framework/driver/tmr/src/drv_tmr_mapping.c</itemPath>
+                  </logicalFolder>
+                </logicalFolder>
+                <logicalFolder name="f3" displayName="usart" projectFiles="true">
+                  <logicalFolder name="f1" displayName="src" projectFiles="true">
+                    <itemPath>../src/system_config/default/framework/driver/usart/src/drv_usart_mapping.c</itemPath>
+                    <itemPath>../src/system_config/default/framework/driver/usart/src/drv_usart_static.c</itemPath>
+                    <itemPath>../src/system_config/default/framework/driver/usart/src/drv_usart_static_byte_model.c</itemPath>
+                  </logicalFolder>
+                </logicalFolder>
               </logicalFolder>
               <logicalFolder name="f2" displayName="system" projectFiles="true">
                 <logicalFolder name="f1" displayName="clk" projectFiles="true">
@@ -178,6 +215,12 @@
         </logicalFolder>
         <itemPath>../src/app.c</itemPath>
         <itemPath>../src/main.c</itemPath>
+        <itemPath>../src/MC32_serComm.c</itemPath>
+        <itemPath>../src/Mc32Debounce.c</itemPath>
+        <itemPath>../src/Mc32_I2cUtilCCS.c</itemPath>
+        <itemPath>../src/Mc32_sdFatGest.c</itemPath>
+        <itemPath>../src/bno055.c</itemPath>
+        <itemPath>../src/bno055_support.c</itemPath>
       </logicalFolder>
       <logicalFolder name="f1" displayName="framework" projectFiles="true">
         <logicalFolder name="f1" displayName="driver" projectFiles="true">
@@ -194,13 +237,6 @@
                 <itemPath>../../../../../../framework/driver/spi/src/dynamic/drv_spi.c</itemPath>
               </logicalFolder>
               <itemPath>../../../../../../framework/driver/spi/src/drv_spi_sys_queue_fifo.c</itemPath>
-            </logicalFolder>
-          </logicalFolder>
-          <logicalFolder name="f3" displayName="tmr" projectFiles="true">
-            <logicalFolder name="f1" displayName="src" projectFiles="true">
-              <logicalFolder name="f1" displayName="dynamic" projectFiles="true">
-                <itemPath>../../../../../../framework/driver/tmr/src/dynamic/drv_tmr.c</itemPath>
-              </logicalFolder>
             </logicalFolder>
           </logicalFolder>
         </logicalFolder>
@@ -255,7 +291,7 @@
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="PIC32MX_DFP" vendor="Microchip" version="1.5.259"/>
+        <pack name="PIC32MX_DFP" vendor="Microchip" version="1.3.231"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
@@ -306,7 +342,6 @@
         <property key="preprocessor-macros" value=""/>
         <property key="strict-ansi" value="false"/>
         <property key="support-ansi" value="false"/>
-        <property key="tentative-definitions" value="-fno-common"/>
         <property key="toplevel-reordering" value=""/>
         <property key="unaligned-access" value=""/>
         <property key="use-cci" value="false"/>
@@ -338,7 +373,6 @@
       </C32-AS>
       <C32-CO>
         <property key="coverage-enable" value=""/>
-        <property key="stack-guidance" value="false"/>
       </C32-CO>
       <C32-LD>
         <property key="additional-options-use-response-files" value="false"/>
@@ -419,7 +453,6 @@
         <property key="omit-pack-options" value="1"/>
         <property key="relaxed-math" value="false"/>
         <property key="save-temps" value="false"/>
-        <property key="stack-smashing" value=""/>
         <property key="wpo-lto" value="false"/>
       </C32Global>
     </conf>
