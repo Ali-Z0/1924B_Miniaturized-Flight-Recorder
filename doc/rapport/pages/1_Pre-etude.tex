@@ -61,7 +61,7 @@ Sur la figure \ref{fig:famillespic32} le \gls{mcu} sélectionné appartient à l
 
 \clearpage
 \subsubsection{Centrale inertielle} 
-Pour la centrale inertielle, il existe un composant avec lequel j'ai déjà acquis une certaine expérience et eu l'occasion d'utiliser et de créer des librairies pour le firmware en C. Celui-ci est performant et très utilisé dans l'industrie. Il est hautement configurable et a le grand avantage de calculer déjà une fusion de capteurs ainsi qu'une compensation de la dérive par les mesures de température. Cela permet notamment d'accéder à des données plus poussées, telles que les quaternions et les angles d'Euler. Il s'agit du \fbox{BNO055} de BOSCH.
+Pour la centrale inertielle, il existe un composant avec lequel j'ai déjà acquis une certaine expérience et eu l'occasion d'utiliser et de créer des librairies pour le firmware en C. Celui-ci est performant et très utilisé dans l'industrie. Il est hautement configurable et a le grand avantage de calculer déjà une fusion de capteurs ainsi qu'une compensation de la dérive par les mesures de température. Cela permet notamment d'accéder à des données plus poussées, telles que les quaternions et les angles d'Euler. Il s'agit du \fbox{\href{https://www.bosch-sensortec.com/products/smart-sensors/bno055/}{BNO055}} de BOSCH.
  
 \begin{center}
 	\underline{Caractéristiques importantes :} \\
@@ -76,7 +76,7 @@ Pour la centrale inertielle, il existe un composant avec lequel j'ai déjà acqu
 	\end{tabular} \\
 \end{center}
 
-Afin de simplifier l'implémentation de ce composant dans le projet, sachant qu'il s'agit d'un boîtier de composant difficile à souder ou à mettre au four, il est possible d'utiliser la carte miniature d'Adafruit, cette carte comprend tous les composants passifs requis. Cela facilite ainsi son montage sur le PCB.
+Afin de simplifier l'implémentation de ce composant dans le projet, sachant qu'il s'agit d'un boîtier \textit{28-TFLGA} difficile à souder ou à mettre au four, il est possible d'utiliser la carte miniature d'Adafruit, cette carte comprend tous les composants passifs requis. Cela facilite ainsi son montage sur le \gls{pcb}.
 
 \begin{figure}[h]
 	\centering
@@ -219,10 +219,10 @@ En examinant les consommations typiques et moyennes du tableau \ref{tab:consomma
 	\begin{tabular}{l|l}
 		Avantages &  Inconvénient\\
 		\hline
-		Haute densité d'énergie & Risque d'éclatement \\
-		Poids léger & Risque d'enflammement avec l'eau \\ 
-		Haute durée de vie & Sensible a la température \\
-		Charge rapide & Décharge complète altérante \\
+		Haute densité d'énergie. & Risque d'éclatement. \\
+		Poids léger. & Risque d'enflammement avec l'eau. \\ 
+		Haute durée de vie. & Sensible a la température. \\
+		Charge rapide. & Décharge complète altérante. \\
 		\hline
 	\end{tabular}
 		\caption{Tableau avantages/inconvénient LI-ION}
@@ -327,7 +327,7 @@ Sur la figure \ref{fig:diagrammeetatpreetude} les états de communication par le
 Cette estimation est relativement élevée. Il est à noter que le coût du \gls{pcb} pourrait être réduit en cas de commande groupée dans un panel\footnote{Regroupement de plusieurs circuits imprimés en un seul, pour diminuer le coût.}. Par ailleurs, les prix du boîtier et des composants semblent également être assez élevés.
 
 
-\section{Conclusion de la Pré-étude}
+\subsection{Conclusion et perspectives de la Pré-étude}
 
 \textbf{Fonctionnement du système:}
 La conception du système semble possible, le microcontrôleur s'interface avec quatre périphériques essentiels : un \gls{GNSS} pour la localisation, une centrale inertielle pour des mesures sur 9 axes (priorisant les mesures gyroscopiques et d'accélération), une carte SD pour le stockage (conservant au moins 15 minutes de données de vol), et un périphérique \gls{FTDI} pour l'interface avec un ordinateur via USB-C.

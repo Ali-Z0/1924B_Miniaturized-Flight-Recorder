@@ -4,8 +4,65 @@ Dans cette section, nous nous attarderons sur le processus de conception et de d
 \clearpage
 
 \subsection{Mécanique du projet} \label{ssec:mechProjet}
+L'un des objectifs majeurs du projet est de concevoir un produit qui, par sa petite taille et son design compact, se prête à une installation qui se veut à la fois discrète et non encombrante.
+ 
+\subsubsection{Choix du boitier}
+Pour réduire la taille au maximum, un processus itératif a eu lieu, consistant à trouver un boîter plastique le plus petit possible et d'essayer en respectant les contraintes de taille, de placer les composants, puis, d'observer et déduire si la taille est suffisante. Grâce à cette procédure itérative, un boîtier a été déterminé : le \fbox{\textbf{SIC5-9-3B}} de chez \href{https://www.takachi-enclosure.com/products/SIC}{TAKACHI}.
 
+\begin{figure}[h!]
+	\centering
+	\begin{subfigure}[b]{0.6\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{../figures/dev-pcb/boitier-dim}
+		\caption{Dimensions boîtier}
+		\label{fig:boitier-dim}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.35\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{../figures/dev-pcb/boitier-dims-pcb}
+		\caption{Dimension trous \gls{pcb}}
+		\label{fig:boitier-dims-pcb}
+	\end{subfigure}
+	\caption{Dimensions du SIC5-9-3B}
+	\source{\href{https://www.takachi-enclosure.com/products/SIC}{\Gls{datasheet} du SIC5-9-3B, TAKACHI}}
+	\label{fig:boitier-dimensions}
+\end{figure}
 
+\subsubsection{Placement des composants} \label{ssec:placementComp}
+Désormais, sachant que nous connaissons les dimensions du \gls{pcb} grâce à la figure \ref{fig:boitier-dims-pcb}, nous pouvons positionner les composants de manière optimisée pour le routage et la mécanique. En prenant différents éléments en compte :
+
+\begin{table}[!h]
+\begin{adjustbox}{max width=\textwidth}
+	\begin{tabular}{llll}
+	\hline
+	& Élément & & Contraintes, règles et dispositions particulières \\
+	\hline
+	\faChevronRight & \textbf{Connecteur USB} & : & Placer proche du bord, usinage du boitier pour passer chargeur. \\
+	\faChevronRight & \textbf{Connecteur \micro SD} & : & Proche du bord, facile d'accès. \\
+	\faChevronRight & \textbf{\gls{gnss}} & : & Isolé des autres composants, faciliter réception. \\
+	\faChevronRight & \textbf{Carte BNO055} & : & Espace requis, permettre de le braser sur le \gls{pcb}. \\
+	\faChevronRight & \textbf{LED de vie} & : & Dégagée, peut être déportée avec un guide-lumière. \\
+	\faChevronRight & \textbf{Connecteur batterie} & : & Accessible et permettre de passer les fils de l'autre coté du \gls{pcb}. \\
+	\faChevronRight & \textbf{Connecteur bouton ON/OFF} & : & Bouton déporté sur le boîtier. \\
+	\faChevronRight & \textbf{Bouton reset} & : & Accessible pendant le développement et en cas de bug. \\
+	\end{tabular}	
+\end{adjustbox}
+\label{tab:reglesPlacement}
+\caption{Tableau des contraintes de placement}
+\source{Auteur}
+\end{table}
+
+\clearpage
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\linewidth]{../figures/dev-pcb/PCB-Dims}
+	\caption{Placement des composant et dimensions de la carte}
+	\label{fig:pcb-dims}
+\end{figure}
+
+En considérant les éléments de la table \ref{tab:reglesPlacement}, nous obtenons un design tel que la figure \ref{fig:pcb-dims}
 
 \clearpage
 
@@ -140,11 +197,15 @@ Avec le schéma et la mécanique désormais établis, il est possible de dresser
 	\label{tab:Bom_Capa}
 \end{table}
 
-
-
-\subsection{Placement des composants} \label{ssec:placementComp}
-
 \subsection{Mécanique du PCB} \label{ssec:Mech-PCB}
 
 \subsection{Routage} \label{ssec:routage}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\linewidth]{../figures/dev-pcb/Couches-layout}
+	\caption{Routage des différentes couches}
+	\label{fig:couches-layout}
+\end{figure}
+
 
