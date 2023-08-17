@@ -48,8 +48,8 @@ Désormais, sachant que nous connaissons les dimensions du \gls{pcb} grâce à l
 	\faChevronRight & \textbf{Bouton reset} & : & Accessible pendant le développement et en cas de bug. \\
 	\end{tabular}	
 \end{adjustbox}
-\label{tab:reglesPlacement}
 \caption{Tableau des contraintes de placement}
+\label{tab:reglesPlacement}
 \source{Auteur}
 \end{table}
 
@@ -57,12 +57,45 @@ Désormais, sachant que nous connaissons les dimensions du \gls{pcb} grâce à l
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=1\linewidth]{../figures/dev-pcb/PCB-Dims}
+	\includegraphics[width=.75\linewidth]{../figures/dev-pcb/PCB-Dims}
 	\caption{Placement des composant et dimensions de la carte}
 	\label{fig:pcb-dims}
 \end{figure}
 
-En considérant les éléments de la table \ref{tab:reglesPlacement}, nous obtenons un design tel que la figure \ref{fig:pcb-dims}
+En considérant les contraintes des différents éléments de la table \ref{tab:reglesPlacement}, nous obtenons un design tel que celui de la figure \ref{fig:pcb-dims}. Nous y observons plusieurs solutions apportées telles que :
+un trou (En bas à droite du \gls{pcb}) permettant de passer le fils de la batterie, une carte SD et un connecteur USB placés proche du bord, un bouton de reset accessible et un \gls{gnss} isolé du reste pour garantir l'intégrité de l'antenne. 
+
+\subsubsection{Assemblage}
+Lors de cette section, nous allons assembler le circuit imprimé avec ses composant et la batterie, dans le modèle 3d du boîtier \textbf{SIC5-9-3B}.
+
+\begin{figure}[!h]
+	\centering
+	\begin{subfigure}[b]{0.24\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{../figures/dev-pcb/3d-view3}
+		\caption{Vue 3D, 1}
+		\label{fig:3d-1}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.33\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{../figures/dev-pcb/3d-view2}
+		\caption{Vue 3D, 2}
+		\label{fig:3d-2}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.36\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{../figures/dev-pcb/3d-view1}
+		\caption{Vue 3D, 3}
+		\label{fig:3d-3}
+	\end{subfigure}
+	\caption{Vues 3d de l'assemblage}
+	\label{fig:MechAssembly}
+	\source{Auteur}
+\end{figure}
+
+Comme nous pouvons observer sur la figure \ref{fig:MechAssembly}, l'ensemble, s'assemble correctement.
 
 \clearpage
 
@@ -197,15 +230,16 @@ Avec le schéma et la mécanique désormais établis, il est possible de dresser
 	\label{tab:Bom_Capa}
 \end{table}
 
-\subsection{Mécanique du PCB} \label{ssec:Mech-PCB}
+\clearpage
 
 \subsection{Routage} \label{ssec:routage}
 
-\begin{figure}[h]
+\begin{figure}[!h]
 	\centering
 	\includegraphics[width=1\linewidth]{../figures/dev-pcb/Couches-layout}
 	\caption{Routage des différentes couches}
 	\label{fig:couches-layout}
+	\source{Auteur}
 \end{figure}
 
 
