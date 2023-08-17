@@ -57,7 +57,7 @@ Désormais, sachant que nous connaissons les dimensions du \gls{pcb} grâce à l
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=.75\linewidth]{../figures/dev-pcb/PCB-Dims}
+	\includegraphics[width=.83\linewidth]{../figures/dev-pcb/PCB-Dims}
 	\caption{Placement des composant et dimensions de la carte}
 	\label{fig:pcb-dims}
 \end{figure}
@@ -241,5 +241,36 @@ Avec le schéma et la mécanique désormais établis, il est possible de dresser
 	\label{fig:couches-layout}
 	\source{Auteur}
 \end{figure}
+
+Les justifications du routage des différentes couche sont présentées dans la table \ref{tab:descr-routage}.
+
+\begin{table}[!h]
+	\centering
+		\begin{tabular}{|lll|}
+			\hline
+			\textbf{TOP}     &                 &                                  \\
+			& \faChevronRight & Composants à braser au four.     \\
+			& \faChevronRight & Signaux proche du \gls{mcu}.     \\
+			& \faChevronRight & Signaux sortant du \gls{gnss}.   \\
+			& \faChevronRight & Pistes horizontales.             \\
+			& \faChevronRight & Plan de masse.                   \\
+			& \faChevronRight & Connecteurs boutons et batterie. \\ \hline
+			\textbf{LAYER 1} &                 &                                  \\
+			& \faChevronRight & Piste de signaux verticales.     \\
+			& \faChevronRight & Plan de masse.                   \\ \hline
+			\textbf{LAYER 2} &                 &                                  \\
+			& \faChevronRight & Plan de masse homogène.          \\
+			& \faChevronRight & Plan de 3.3V.                    \\ \hline
+			\textbf{BOTTOM}  &                 &                                  \\
+			& \faChevronRight & Composants des régulateurs.         \\
+			& \faChevronRight & Mosfets et composants passifs.   \\
+			& \faChevronRight & Piste signaux verticales.        \\
+			& \faChevronRight & Plan de masse.                   \\ \hline
+		\end{tabular}%
+	\caption{Descriptions des éléments du routage}
+	\label{tab:descr-routage}
+\end{table}
+
+\clearpage
 
 
