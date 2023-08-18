@@ -5,6 +5,17 @@
                    displayName="Header Files"
                    projectFiles="true">
       <logicalFolder name="f2" displayName="app" projectFiles="true">
+        <logicalFolder name="f3" displayName="BNO055" projectFiles="true">
+          <itemPath>../src/bno055.h</itemPath>
+          <itemPath>../src/bno055_support.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="f2" displayName="GNSS" projectFiles="true">
+          <itemPath>../src/GNSS/u_gnss_pos.h</itemPath>
+          <itemPath>../src/GNSS/u_error_common.h</itemPath>
+          <itemPath>../src/GNSS/u_ubx_protocol.h</itemPath>
+          <itemPath>../src/GNSS/u_time.h</itemPath>
+          <itemPath>../src/gnss_support.h</itemPath>
+        </logicalFolder>
         <logicalFolder name="f1" displayName="system_config" projectFiles="true">
           <logicalFolder name="f1" displayName="default" projectFiles="true">
             <logicalFolder name="f1" displayName="framework" projectFiles="true">
@@ -41,8 +52,6 @@
         <itemPath>../src/Mc32Debounce.h</itemPath>
         <itemPath>../src/Mc32_I2cUtilCCS.h</itemPath>
         <itemPath>../src/Mc32_sdFatGest.h</itemPath>
-        <itemPath>../src/bno055.h</itemPath>
-        <itemPath>../src/bno055_support.h</itemPath>
       </logicalFolder>
       <logicalFolder name="f1" displayName="framework" projectFiles="true">
         <logicalFolder name="f1" displayName="driver" projectFiles="true">
@@ -163,6 +172,16 @@
                    displayName="Source Files"
                    projectFiles="true">
       <logicalFolder name="f2" displayName="app" projectFiles="true">
+        <logicalFolder name="f3" displayName="BNO055" projectFiles="true">
+          <itemPath>../src/bno055_support.c</itemPath>
+          <itemPath>../src/bno055.c</itemPath>
+        </logicalFolder>
+        <logicalFolder name="f2" displayName="GNSS" projectFiles="true">
+          <itemPath>../src/GNSS/u_gnss_pos.c</itemPath>
+          <itemPath>../src/GNSS/u_ubx_protocol.c</itemPath>
+          <itemPath>../src/GNSS/u_time.c</itemPath>
+          <itemPath>../src/gnss_support.c</itemPath>
+        </logicalFolder>
         <logicalFolder name="f1" displayName="system_config" projectFiles="true">
           <logicalFolder name="f1" displayName="default" projectFiles="true">
             <logicalFolder name="f1" displayName="framework" projectFiles="true">
@@ -219,8 +238,6 @@
         <itemPath>../src/Mc32Debounce.c</itemPath>
         <itemPath>../src/Mc32_I2cUtilCCS.c</itemPath>
         <itemPath>../src/Mc32_sdFatGest.c</itemPath>
-        <itemPath>../src/bno055.c</itemPath>
-        <itemPath>../src/bno055_support.c</itemPath>
       </logicalFolder>
       <logicalFolder name="f1" displayName="framework" projectFiles="true">
         <logicalFolder name="f1" displayName="driver" projectFiles="true">

@@ -145,7 +145,6 @@ void APP_Initialize ( void )
 {
     /* Keep the device ON */
     PWR_HOLDOn();
-    
     /* In ms */
     timeData.measPeriod[BNO055_idx] = 500;
     timeData.measPeriod[BNO055_idx] = 5000;
