@@ -28,6 +28,7 @@
 # include "u_cfg_override.h" // For a customer's configuration override
 #endif
 
+#include "app.h"
 #include "limits.h"    // INT_MIN
 #include "stddef.h"    // NULL, size_t etc.
 #include "stdint.h"    // int32_t etc.
@@ -108,12 +109,7 @@ int32_t gRrlpModeToUbxRxmMessageClass[] = {
 
 // Decode the contents of a UBX-NAV-PVT message.  pMessage must
 // be a pointer to the 92 byte body of a UBX-NAV-PVT message.
-static int32_t posDecode(char *pMessage,
-                         int32_t *pLatitudeX1e7, int32_t *pLongitudeX1e7,
-                         int32_t *pAltitudeMillimetres,
-                         int32_t *pRadiusMillimetres,
-                         int32_t *pSpeedMillimetresPerSecond,
-                         int32_t *pSvs, int64_t *pTimeUtc, bool printIt)
+static int32_t posDecode(char *pMessage, s_gnssData *pGnssData, bool printIt)
 {
     int32_t errorCode = (int32_t) U_ERROR_COMMON_TIMEOUT;
     int32_t months;
@@ -145,8 +141,8 @@ static int32_t posDecode(char *pMessage,
             //uPortLog("U_GNSS_POS: UTC time = %d.\n", (int32_t) t);
         }
     }
-    if (pTimeUtc != NULL) {
-        *pTimeUtc = t;
+    if (pGnssData != NULL) {
+        pGnssData->TimeUtc = t;
     }
     // From here onwards Lint complains about accesses
     // into message[] and it doesn't seem to be possible
@@ -161,22 +157,22 @@ static int32_t posDecode(char *pMessage,
         if (printIt) {
             //uPortLog("U_GNSS_POS: satellite(s) = %d.\n", y);
         }
-        if (pSvs != NULL) {
-            *pSvs = y;
+        if (pGnssData->Svs != NULL) {
+            pGnssData->Svs = y;
         }
         y = (int32_t) uUbxProtocolUint32Decode(pMessage + 24);
         if (printIt) {
             //uPortLog("U_GNSS_POS: longitude = %d (degrees * 10^7).\n", y);
         }
-        if (pLongitudeX1e7 != NULL) {
-            *pLongitudeX1e7 = y;
+        if (pGnssData->LongitudeX1e7 != NULL) {
+            pGnssData->LongitudeX1e7 = y;
         }
         y = (int32_t) uUbxProtocolUint32Decode(pMessage + 28);
         if (printIt) {
             //uPortLog("U_GNSS_POS: latitude = %d (degrees * 10^7).\n", y);
         }
-        if (pLatitudeX1e7 != NULL) {
-            *pLatitudeX1e7 = y;
+        if (pGnssData->LatitudeX1e7 != NULL) {
+            pGnssData->LatitudeX1e7 = y;
         }
         y = INT_MIN;
         if (*(pMessage + 20) == 0x03) {
@@ -185,22 +181,22 @@ static int32_t posDecode(char *pMessage,
                 //uPortLog("U_GNSS_POS: altitude = %d (mm).\n", y);
             }
         }
-        if (pAltitudeMillimetres != NULL) {
-            *pAltitudeMillimetres = y;
+        if (pGnssData->AltitudeMillimetres != NULL) {
+            pGnssData->AltitudeMillimetres = y;
         }
         y = (int32_t) uUbxProtocolUint32Decode(pMessage + 40);
         if (printIt) {
             //uPortLog("U_GNSS_POS: radius = %d (mm).\n", y);
         }
-        if (pRadiusMillimetres != NULL) {
-            *pRadiusMillimetres = y;
+        if (pGnssData->RadiusMillimetres != NULL) {
+            pGnssData->RadiusMillimetres = y;
         }
         y = (int32_t) uUbxProtocolUint32Decode(pMessage + 60);
         if (printIt) {
             //uPortLog("U_GNSS_POS: speed = %d (mm/s).\n", y);
         }
-        if (pSpeedMillimetresPerSecond != NULL) {
-            *pSpeedMillimetresPerSecond = y;
+        if (pGnssData->SpeedMillimetresPerSecond != NULL) {
+            pGnssData->SpeedMillimetresPerSecond = y;
         }
         errorCode = (int32_t) U_ERROR_COMMON_SUCCESS;
         //lint -restore
@@ -210,33 +206,27 @@ static int32_t posDecode(char *pMessage,
 }
 
 // Establish position.
-static int32_t posGet(int32_t *pLatitudeX1e7, int32_t *pLongitudeX1e7,
-                      int32_t *pAltitudeMillimetres,
-                      int32_t *pRadiusMillimetres,
-                      int32_t *pSpeedMillimetresPerSecond,
-                      int32_t *pSvs, int64_t *pTimeUtc, bool printIt)
+int32_t gnss_posGet(s_gnssData *pGnssData, bool printIt)
 {
     int32_t errorCode = (int32_t) U_ERROR_COMMON_TIMEOUT;
     // Enough room for the body of the UBX-NAV-PVT message
     char message[92] = {0};
-
+    uint32_t i = 0;
     
+    // Read to empty the receive buffer
+    while(!(DRV_USART_ReceiverBufferIsEmpty(USART_ID_1)))    {
+        // 
+        message[i] = DRV_USART_ReadByte(USART_ID_1);
+        i++;
+    }
     // UBX-CFG-PRT Then wait for UBX-ACK-ACK
-    
     //errorCode = uUbxProtocolEncode(0x07,0x01 , message, sizeof(message), );
-    
-    
     /*errorCode = uGnssPrivateSendReceiveUbxMessage(pInstance,
                                                   0x01, 0x07, NULL, 0,
                                                   message, sizeof(message));*/
     if (errorCode == sizeof(message)) {
         // Got the correct message body length, process it
-        errorCode = posDecode(message,
-                              pLatitudeX1e7, pLongitudeX1e7,
-                              pAltitudeMillimetres,
-                              pRadiusMillimetres,
-                              pSpeedMillimetresPerSecond,
-                              pSvs, pTimeUtc, printIt);
+        errorCode = posDecode(message, pGnssData, printIt);
     } else {
         if (errorCode >= 0) {
             errorCode = (int32_t) U_ERROR_COMMON_DEVICE_ERROR;
@@ -244,6 +234,18 @@ static int32_t posGet(int32_t *pLatitudeX1e7, int32_t *pLongitudeX1e7,
     }
 
     return errorCode;
+}
+
+/* ----------------------------------------------------------------
+ * FUNCTIONS
+ * -------------------------------------------------------------- */
+
+void gnss_receiveTask (void)
+{
+    
+        
+    
+    
 }
 
 // End of file

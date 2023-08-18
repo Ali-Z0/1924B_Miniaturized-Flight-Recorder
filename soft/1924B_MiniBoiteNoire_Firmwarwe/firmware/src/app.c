@@ -56,6 +56,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 #include "app.h"
 #include "bno055.h"
 #include "bno055_support.h"
+#include "GNSS/u_gnss_pos.h"
 #include "Mc32_I2cUtilCCS.h"
 #include "Mc32_serComm.h"
 #include "Mc32_sdFatGest.h"
@@ -162,8 +163,7 @@ void APP_Initialize ( void )
     RST_IMUOn();
     BNO055_delay_msek(100);
     
-        
-    /* Place the App state machine in its initial state. */
+        /* Place the App state machine in its initial state. */
     appData.state = APP_STATE_INIT;
     
 }
@@ -180,7 +180,8 @@ void APP_Initialize ( void )
 void APP_Tasks ( void )
 {
     /* Local bno055 data */
-    s_bno055_data bno055_local_data;  
+    s_bno055_data bno055_local_data; 
+    s_gnssData gnss_local_data;
 
     /* Check the application's current state. */
     switch ( appData.state )
@@ -200,6 +201,7 @@ void APP_Tasks ( void )
         }
         case APP_STATE_LOGGING:
         {    
+            // BNO055 Measure routine
             if((timeData.measTodo[BNO055_idx] == true )&&(sd_getState() == APP_IDLE))
             {
                 /* BNO055 Read all important info routine */
@@ -214,6 +216,16 @@ void APP_Tasks ( void )
                 timeData.measTodo[BNO055_idx] = false;
                 /* Update last time counter */
                 timeData.ltime[BNO055_idx] = timeData.measCnt[BNO055_idx];
+            }
+            // GNSS Measure routine
+            if((timeData.measTodo[GNSS_idx] == true )&&(sd_getState() == APP_IDLE))
+            {
+                /* Read GNSS position measure */
+                gnss_posGet(&gnss_local_data, false);
+                /* Write value to sdCard */
+                sd_BNO_scheduleWrite_GNSS(&bno055_local_data);
+                /* Reset measure flag */
+                timeData.measTodo[GNSS_idx] = false;
             }
             else
             {

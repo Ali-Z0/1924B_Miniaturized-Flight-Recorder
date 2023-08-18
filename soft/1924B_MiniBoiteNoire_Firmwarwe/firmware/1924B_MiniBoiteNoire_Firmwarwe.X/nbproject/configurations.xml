@@ -14,7 +14,6 @@
           <itemPath>../src/GNSS/u_error_common.h</itemPath>
           <itemPath>../src/GNSS/u_ubx_protocol.h</itemPath>
           <itemPath>../src/GNSS/u_time.h</itemPath>
-          <itemPath>../src/gnss_support.h</itemPath>
         </logicalFolder>
         <logicalFolder name="f1" displayName="system_config" projectFiles="true">
           <logicalFolder name="f1" displayName="default" projectFiles="true">
@@ -180,7 +179,6 @@
           <itemPath>../src/GNSS/u_gnss_pos.c</itemPath>
           <itemPath>../src/GNSS/u_ubx_protocol.c</itemPath>
           <itemPath>../src/GNSS/u_time.c</itemPath>
-          <itemPath>../src/gnss_support.c</itemPath>
         </logicalFolder>
         <logicalFolder name="f1" displayName="system_config" projectFiles="true">
           <logicalFolder name="f1" displayName="default" projectFiles="true">

@@ -28,6 +28,7 @@
 #include <stdio.h>
 #include "app.h"
 #include "bno055_support.h"
+#include "GNSS/u_gnss_pos.h"
 
 /* ************************************************************************** */
 /* ************************************************************************** */
@@ -190,6 +191,23 @@ void sd_BNO_scheduleWrite_BNO055 (s_bno055_data * data)
                                   ,data->flagImportantMeas, (data->d_time), data->gravity.x, data->gravity.y, data->gravity.z, data->gyro.x, data->gyro.y, data->gyro.z
                                   ,data->mag.x, data->mag.y, data->mag.z, data->linear_accel.x, data->linear_accel.y, data->linear_accel.z
                                   ,data->euler.h, data->euler.p, data->euler.r, data->quaternion.w, data->quaternion.x, data->quaternion.y, data->quaternion.z);
+        /* Compute the number of bytes to send */
+        appFatData.nBytesToWrite = strlen(appFatData.data);
+    }
+}
+
+void sd_GNSS_scheduleWrite (s_gnssData * pGnssData)
+{
+    /* If sd Card available */
+    if(appFatData.state == APP_IDLE)
+    {
+        /* Next state : write to file */
+        appFatData.state = APP_WRITE_MEASURE_FILE;
+        /* Write the buffer */
+        /*sprintf(appFatData.data, "%d;%d0;%.4f;%.4f;%.4f;%.4f;%.4f;%.4f;%.4f;%.4f;%.4f;%.4f;%.4f;%.4f;%.4f;%.4f;%.4f;%d;%d;%d;%d;\r\n"
+                                  ,data->flagImportantMeas, (data->d_time), data->gravity.x, data->gravity.y, data->gravity.z, data->gyro.x, data->gyro.y, data->gyro.z
+                                  ,data->mag.x, data->mag.y, data->mag.z, data->linear_accel.x, data->linear_accel.y, data->linear_accel.z
+                                  ,data->euler.h, data->euler.p, data->euler.r, data->quaternion.w, data->quaternion.x, data->quaternion.y, data->quaternion.z);*/
         /* Compute the number of bytes to send */
         appFatData.nBytesToWrite = strlen(appFatData.data);
     }

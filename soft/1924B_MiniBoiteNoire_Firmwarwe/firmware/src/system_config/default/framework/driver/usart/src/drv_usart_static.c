@@ -103,7 +103,7 @@ SYS_MODULE_OBJ DRV_USART0_Initialize(void)
     /* Set the baud rate and enable the USART */
     PLIB_USART_BaudSetAndEnable(USART_ID_1,
             clockSource,
-            115200);  /*Desired Baud rate value*/
+            9600);  /*Desired Baud rate value*/
 
     /* Return the driver instance value*/
     return (SYS_MODULE_OBJ)DRV_USART_INDEX_0;

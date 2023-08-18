@@ -5,9 +5,9 @@
         <group>
             <file>file:/C:/microchip/harmony/v2_06/apps/1924B_MiniBoiteNoire/soft/1924B_MiniBoiteNoire_Firmwarwe/firmware/src/GNSS/u_ubx_protocol.c</file>
             <file>file:/C:/microchip/harmony/v2_06/apps/1924B_MiniBoiteNoire/soft/1924B_MiniBoiteNoire_Firmwarwe/firmware/src/GNSS/u_gnss_pos.h</file>
-            <file>file:/C:/microchip/harmony/v2_06/apps/1924B_MiniBoiteNoire/soft/1924B_MiniBoiteNoire_Firmwarwe/firmware/src/gnss_support.c</file>
+            <file>file:/C:/microchip/harmony/v2_06/apps/1924B_MiniBoiteNoire/soft/1924B_MiniBoiteNoire_Firmwarwe/firmware/src/app.h</file>
             <file>file:/C:/microchip/harmony/v2_06/apps/1924B_MiniBoiteNoire/soft/1924B_MiniBoiteNoire_Firmwarwe/firmware/src/GNSS/u_gnss_pos.c</file>
-            <file>file:/C:/microchip/harmony/v2_06/apps/1924B_MiniBoiteNoire/soft/1924B_MiniBoiteNoire_Firmwarwe/firmware/src/gnss_support.h</file>
+            <file>file:/C:/microchip/harmony/v2_06/apps/1924B_MiniBoiteNoire/soft/1924B_MiniBoiteNoire_Firmwarwe/firmware/src/app.c</file>
             <file>file:/C:/microchip/harmony/v2_06/apps/1924B_MiniBoiteNoire/soft/1924B_MiniBoiteNoire_Firmwarwe/firmware/src/GNSS/u_ubx_protocol.h</file>
         </group>
     </open-files>

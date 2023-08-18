@@ -34,6 +34,12 @@
 extern "C" {
 #endif
 
+#include <stdint.h>
+#include <stdbool.h>
+#include <stddef.h>
+#include <stdlib.h>
+#include "system_config.h"
+#include "system_definitions.h"
 /* ----------------------------------------------------------------
  * COMPILE-TIME MACROS
  * -------------------------------------------------------------- */
@@ -72,19 +78,20 @@ extern "C" {
 /* ----------------------------------------------------------------
  * TYPES
  * -------------------------------------------------------------- */
-
+    typedef struct {
+        int32_t LatitudeX1e7;
+        int32_t LongitudeX1e7;
+        int32_t AltitudeMillimetres;
+        int32_t RadiusMillimetres;
+        int32_t SpeedMillimetresPerSecond;
+        int32_t Svs; 
+        int64_t TimeUtc;
+    }s_gnssData;
 /* ----------------------------------------------------------------
  * FUNCTIONS:  WORKAROUND FOR LINKER ISSUE
  * -------------------------------------------------------------- */
 
-/** Workaround for Espressif linker missing out files that
- * only contain functions which also have weak alternatives
- * (see https://www.esp32.com/viewtopic.php?f=13&t=8418&p=35899).
- *
- * You can ignore this function.
- */
-void uGnssPosPrivateLink(void);
-
+int32_t gnss_posGet(s_gnssData *pGnssData, bool printIt);
 /* ----------------------------------------------------------------
  * FUNCTIONS
  * -------------------------------------------------------------- */
