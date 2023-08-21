@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.8.7)  21 AUG 2023 15:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.8.7)  21 AUG 2023 16:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1892,7 +1892,7 @@ File: ../figures/code/Messages-NMEA.jpg Graphic file (type jpg)
 <use ../figures/code/Messages-NMEA.jpg>
 Package pdftex.def Info: ../figures/code/Messages-NMEA.jpg  used on input line 
 45.
-(pdftex.def)             Requested size: 317.07614pt x 181.21957pt.
+(pdftex.def)             Requested size: 249.13371pt x 142.38342pt.
 Package epstopdf Info: Source file: <../figures/code/map-localisation.eps>
 (epstopdf)                    date: 2023-08-21 14:59:30
 (epstopdf)                    size: 5389495 bytes
@@ -1908,7 +1908,13 @@ File: ./map-localisation-eps-converted-to.pdf Graphic file (type pdf)
 <use ./map-localisation-eps-converted-to.pdf>
 Package pdftex.def Info: ./map-localisation-eps-converted-to.pdf  used on input
  line 58.
-(pdftex.def)             Requested size: 452.9679pt x 154.38077pt.
+(pdftex.def)             Requested size: 339.72592pt x 115.7807pt.
+<../figures/code/parsed-nmea.jpg, id=731, 1013.28563pt x 133.24782pt>
+File: ../figures/code/parsed-nmea.jpg Graphic file (type jpg)
+<use ../figures/code/parsed-nmea.jpg>
+Package pdftex.def Info: ../figures/code/parsed-nmea.jpg  used on input line 68
+.
+(pdftex.def)             Requested size: 362.37569pt x 47.652pt.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1920,8 +1926,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [29
 
- <../figures/code/Messages-NMEA.JPG> <./map-localisation-eps-converted-to.pdf>]
-) (./pages/5_Val-MES.tex)
+ <../figures/code/Messages-NMEA.JPG> <./map-localisation-eps-converted-to.pdf> 
+<../figures/code/parsed-nmea.jpg>]) (./pages/5_Val-MES.tex)
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1968,14 +1974,21 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-03>
  ***********
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 077F7BCA30607B2995F759C2EB880E78;9332.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: 077F7BCA30607B2995F759C2EB880E78;9332
+(rerunfilecheck)             After:  DE000AB32057D85C80A572E4DE34E8BD;9550.
  ) 
 Here is how much of TeX's memory you used:
- 41906 strings out of 475187
- 795421 string characters out of 5767784
+ 41922 strings out of 475187
+ 795953 string characters out of 5767784
  1944248 words of memory out of 5000000
- 62318 multiletter control sequences out of 15000+600000
+ 62332 multiletter control sequences out of 15000+600000
  639223 words of font info for 120 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  109i,15n,117p,2289b,848s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1987,10 +2000,10 @@ exmf-dist/fonts/type1/urw/symbol/usyr.pfb><c:/texlive/2023/texmf-dist/fonts/typ
 e1/urw/symbol/usyr.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/times/utmb8a
 .pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2
 023/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (34 pages, 12590912 bytes).
+Output written on main.pdf (34 pages, 12619542 bytes).
 PDF statistics:
- 843 PDF objects out of 1000 (max. 8388607)
- 713 compressed objects within 8 object streams
- 178 named destinations out of 1000 (max. 500000)
- 675 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 850 PDF objects out of 1000 (max. 8388607)
+ 718 compressed objects within 8 object streams
+ 180 named destinations out of 1000 (max. 500000)
+ 680 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -42,7 +42,7 @@ Celles-ci sont décrites dans le \href{https://www.ekf.de/c/cgps/cg2/inf/nmea_re
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.7\linewidth]{../figures/code/Messages-NMEA}
+	\includegraphics[width=0.55\linewidth]{../figures/code/Messages-NMEA}
 	\caption{Messages NMEA.}
 	\source{\href{https://www.ekf.de/c/cgps/cg2/inf/nmea_reference_manual.pdf}{Manuel du protocole NMEA}}
 	\label{fig:messages-nmea}
@@ -55,13 +55,23 @@ Avant d'avoir le \gls{pcb} monté et exploitable, sachant que nous connaissons l
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=1\textwidth]{../figures/code/map-localisation}
+	\includegraphics[width=.75\textwidth]{../figures/code/map-localisation}
 	\caption{Application d'une localisation NMEA.}
 	\source{\href{https://www.nmeagen.org/}{nmeagen.org}, aéroport de La Blécherette, Lausanne}
 	\label{fig:map-localisation}
 \end{figure}
 
+Sur la figure \ref{fig:parsed-nmea}, les messages de la figure \ref{fig:map-localisation} sont décodés.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.8\linewidth]{../figures/code/parsed-nmea}
+	\caption{Messages NMEA décodés.}
+	\source{\href{https://swairlearn.bluecover.pt/nmea_analyser}{NMEA online analyser}}
+	\label{fig:parsed-nmea}
+\end{figure}
 
 \clearpage
 
+\subsubsection{Code décodeur de trame NMEA}
 
