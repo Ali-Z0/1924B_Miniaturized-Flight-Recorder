@@ -14,10 +14,10 @@ Il existe différents protocoles pour le format de données de localisation. Le 
 	\label{fig:protocolsGNSS}
 \end{figure}
 
-\begin{tabularx}{\textwidth}{lX}
-	\textbf{NMEA :} & Norme établie par la \textit{National Marine Electronics Association}. Elle suit un format \fbox{\textbf{ASCII}}. \\
-	\textbf{UBX :} & Format propriétaire de u-blox avec des données \fbox{\textbf{binaires}}. Il permet d'envoyer des trames de configuration. \\
-	\textbf{RTCM :} & Protocole pour des données GPS différentielles. Établi par la \textit{Radio Technical Commission for Maritime Service}.
+\begin{tabularx}{\textwidth}{llX}
+	\textbf{NMEA}& : & Norme établie par la \textit{National Marine Electronics Association}. Elle suit un format \fbox{\textbf{ASCII}}. \\
+	\textbf{UBX} & : & Format propriétaire de u-blox avec des données \fbox{\textbf{binaires}}. Il permet d'envoyer des trames de configuration. \\
+	\textbf{RTCM} & : & Protocole pour des données GPS différentielles. Établi par la \textit{Radio Technical Commission for Maritime Service}.
 \end{tabularx} 
 
 
@@ -34,7 +34,7 @@ Le \textbf{CAM-M8C-0} est configuré, par défaut, pour envoyer des messages au 
 \clearpage
 
 \subsubsection{Messages NMEA}
-Comme nous avons pu constater sur la figure \ref{fig:default-messages}, il y a plusieurs trames \textbf{NMEA} : 
+Comme nous avons pu constater sur la figure \ref{fig:default-messages}, il y a plusieurs messages \textbf{NMEA} : 
 
 \textbf{GGA, GLL, GSA, GSV, RMC, VTG, TXT}
 
@@ -50,10 +50,17 @@ Celles-ci sont décrites dans le \href{https://www.ekf.de/c/cgps/cg2/inf/nmea_re
 
 
 
-
-
 \subsubsection{Analyse des données}
 Avant d'avoir le \gls{pcb} monté et exploitable, sachant que nous connaissons le protocole par défaut du module, nous pouvons analyser des données \textbf{NMEA} pour mieux les comprendre et les traiter par la suite. Pour se faire, le site \href{https://www.nmeagen.org/}{https://www.nmeagen.org/}, permet de générer des coordonnées GPS en format \textbf{NMEA}.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\textwidth]{../figures/code/map-localisation}
+	\caption{Application d'une localisation NMEA.}
+	\source{\href{https://www.nmeagen.org/}{nmeagen.org}, aéroport de La Blécherette, Lausanne}
+	\label{fig:map-localisation}
+\end{figure}
+
 
 \clearpage
 
