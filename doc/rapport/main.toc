@@ -58,7 +58,7 @@
 \contentsline {section}{\numberline {5}Développement firmware}{28}{section.5}%
 \contentsline {subsection}{\numberline {5.1}Protocoles du GNSS}{28}{subsection.5.1}%
 \contentsline {subsubsection}{\numberline {5.1.1}Messages NMEA}{29}{subsubsection.5.1.1}%
-\contentsline {subsubsection}{\numberline {5.1.2}Analyse des données}{29}{subsubsection.5.1.2}%
+\contentsline {subsubsection}{\numberline {5.1.2}Interprétation des données NMEA}{29}{subsubsection.5.1.2}%
 \contentsline {section}{\numberline {6}Validation du design}{30}{section.6}%
 \contentsline {subsection}{\numberline {6.1}Liste de matériel}{30}{subsection.6.1}%
 \contentsline {subsection}{\numberline {6.2}Contrôle des alimentations}{30}{subsection.6.2}%
