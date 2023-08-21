@@ -8,7 +8,7 @@ Le microcontrôleur interagît avec 4 périphériques principaux : Avec le \gls{
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=1\textwidth]{../figures/cdc/blocs_grossiers_no_antenna.jpg}
-	\caption{Schéma bloc}
+	\caption{Schéma bloc.}
 	\label{fig:schbloc}
 	\source{Auteur}
 \end{figure}
@@ -44,7 +44,7 @@ Il est préférable que le \gls{mcu} dispose de différentes configurations de g
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.65\linewidth]{../figures/pre_etude/familles_pic32}
-	\caption{Familles PIC32}
+	\caption{Familles PIC32.}
 	\label{fig:famillespic32}
 	\source{\href{https://www.microchip.com/en-us/products/microcontrollers-and-microprocessors/32-bit-mcus/pic32-32-bit-mcus}{Microchip, familles}}
 \end{figure}
@@ -54,7 +54,7 @@ Sur la figure \ref{fig:famillespic32} le \gls{mcu} sélectionné appartient à l
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.7\linewidth]{../figures/pre_etude/Carac_PIC32}
-	\caption{Caractéristiques du PIC32 choisi}
+	\caption{Caractéristiques du PIC32 choisi.}
 	\source{Auteur}
 	\label{fig:caracpic32}
 \end{figure}
@@ -81,7 +81,7 @@ Afin de simplifier l'implémentation de ce composant dans le projet, sachant qu'
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.4\linewidth]{../figures/pre_etude/BNO055_Adafruit}
-	\caption{Carte d'extension, centrale inertielle}
+	\caption{Carte d'extension, centrale inertielle.}
 	\source{\href{https://www.digikey.ch/en/products/detail/adafruit-industries-llc/4646/12609996?s=N4IgTCBcDaIEYDsD2AGArGgBAQwCbYDMAnAVwEsAXEAXQF8g}{Digikey, 4646}}
 	\label{fig:bno055adafruit}
 \end{figure}
@@ -107,7 +107,7 @@ Afin de simplifier l'implémentation de ce composant dans le projet, sachant qu'
 		Accélération & XYZ \\
 		\hline
 	\end{tabular}
-	\caption{Liste des données accessibles}
+	\caption{Liste des données accessibles.}
 	\end{table}
 \end{center}
 
@@ -123,7 +123,7 @@ Le \textbf{CAM-M8C-0} (BeiDou, GLONASS, GNSS, GPS, QZSS) avec une antenne omnidi
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.6\linewidth]{../figures/pre_etude/img_gnss}
-	\caption{Illustration des deux GNSS}
+	\caption{Illustration des deux GNSS.}
 	\source{\href{https://www.digikey.ch/fr/products/detail/u-blox/CAM-M8C-0/6150647?s=N4IgTCBcDaIMIEECyBaJAOOKAMIC6AvkA}{Digikey, MAX-M10 et CAM-M8C}}
 	\label{fig:imggnss}
 \end{figure}
@@ -131,13 +131,13 @@ Le \textbf{CAM-M8C-0} (BeiDou, GLONASS, GNSS, GPS, QZSS) avec une antenne omnidi
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.65\linewidth]{../figures/pre_etude/Comp_GNSS}
-	\caption{Comparaison GNSS}
+	\includegraphics[width=0.6\linewidth]{../figures/pre_etude/Comp_GNSS}
+	\caption{Comparaison GNSS.}
 	\source{Auteur}
 	\label{fig:compgnss}
 \end{figure}
 
-Malgré les différents avantages que présente le MAX-M10M-00B sur la figure \ref{fig:compgnss}, le choix s'est porté sur CAM-M8C-0 grâce à sa facilitée d'implémentation et à la garantie du fabricant sur son antenne omnidirectionnelle de qualité.
+Malgré les différents avantages que présente le \textit{MAX-M10M-00B} sur la figure \ref{fig:compgnss}, le choix s'est porté sur \textbf{CAM-M8C-0} grâce à sa facilitée d'implémentation et à la garantie du fabricant sur son antenne omnidirectionnelle de qualité. Les détails concernant les protocoles du modules seront décrits lors de la section \ref{ssec:ProtocolGNSS}.
 
 \clearpage
 
@@ -147,7 +147,7 @@ Les pilotes de carte SD disponibles dans \gls{harmony} ne permettent pas une ges
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.2\linewidth]{../figures/pre_etude/CarteSD_Illustration}
-	\caption{Illustration carte SD}
+	\caption{Illustration carte SD.}
 	\source{\href{https://www.oempcworld.com/OEMPCworld-com/017045.html}{https://www.oempcworld.com/OEMPCworld-com/017045.html}}
 	\label{fig:cartesdillustration}
 \end{figure}
@@ -205,7 +205,7 @@ Afin de dimensionner une batterie pour le projet, il faut considérer les diffé
 			Totale moyennes & \underline{125.3} & [mA] & Moyenne \\
 			\hline
 		\end{tabular}
-		\caption{Tableau des consommations de courant}
+		\caption{Tableau des consommations de courant.}
 		\label{tab:consommateur}
 	\end{table}
 \end{center}
@@ -225,7 +225,7 @@ En examinant les consommations typiques et moyennes du tableau \ref{tab:consomma
 		Charge rapide. & Décharge complète altérante. \\
 		\hline
 	\end{tabular}
-		\caption{Tableau avantages/inconvénient LI-ION}
+		\caption{Tableau avantages/inconvénient LI-ION.}
 		\label{tab:inconvlion}
 \end{table}
 
@@ -238,7 +238,7 @@ Les inconvénients listés dans le tableau \ref{tab:inconvlion} posent un risque
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.55\linewidth]{../figures/pre_etude/batt}
-	\caption{Dimension de la batterie}
+	\caption{Dimension de la batterie.}
 	\label{fig:batt}
 	\source{Auteur}
 \end{figure}
@@ -255,7 +255,7 @@ Les inconvénients listés dans le tableau \ref{tab:inconvlion} posent un risque
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.2\linewidth]{../figures/pre_etude/MCP}
-	\caption{MCP73871T-2CCI/ML}
+	\caption{MCP73871T-2CCI/ML.}
 	\source{\href{https://www.digikey.ch/fr/products/detail/microchip-technology/MCP73871T-2CCI-ML/7065594}{Digikey IC BATT CHG LI-ION 1CELL 20QFN}}
 	\label{fig:mcp}
 \end{figure}
@@ -284,7 +284,7 @@ Au-delà des 10 heures d'autonomie estimées, il est envisageable, pour maximise
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.8\linewidth]{../figures/pre_etude/Diagramme_Etat_Preetude}
-	\caption{Diagrammes des états (Sans USB)}
+	\caption{Diagrammes des états (Sans USB).}
 	\source{Auteur}
 	\label{fig:diagrammeetatpreetude}
 \end{figure}

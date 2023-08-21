@@ -24,7 +24,7 @@ Pour réduire la taille au maximum, un processus itératif a eu lieu, consistant
 		\caption{Dimension trous \gls{pcb}}
 		\label{fig:boitier-dims-pcb}
 	\end{subfigure}
-	\caption{Dimensions du SIC5-9-3B}
+	\caption{Dimensions du SIC5-9-3B.}
 	\source{\href{https://www.takachi-enclosure.com/products/SIC}{\Gls{datasheet} du SIC5-9-3B, TAKACHI}}
 	\label{fig:boitier-dimensions}
 \end{figure}
@@ -48,7 +48,7 @@ Désormais, sachant que nous connaissons les dimensions du \gls{pcb} grâce à l
 	\faChevronRight & \textbf{Bouton reset} & : & Accessible pendant le développement et en cas de bug. \\
 	\end{tabular}	
 \end{adjustbox}
-\caption{Tableau des contraintes de placement}
+\caption{Tableau des contraintes de placement.}
 \label{tab:reglesPlacement}
 \source{Auteur}
 \end{table}
@@ -58,7 +58,8 @@ Désormais, sachant que nous connaissons les dimensions du \gls{pcb} grâce à l
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=.83\linewidth]{../figures/dev-pcb/PCB-Dims}
-	\caption{Placement des composant et dimensions de la carte}
+	\caption{Placement des composant et dimensions de la carte.}
+	\source{Auteur}
 	\label{fig:pcb-dims}
 \end{figure}
 
@@ -90,7 +91,7 @@ Lors de cette section, nous allons assembler le circuit imprimé avec ses compos
 		\caption{Vue 3D, 3}
 		\label{fig:3d-3}
 	\end{subfigure}
-	\caption{Vues 3d de l'assemblage}
+	\caption{Vues 3d de l'assemblage.}
 	\label{fig:MechAssembly}
 	\source{Auteur}
 \end{figure}
@@ -137,7 +138,7 @@ Avec le schéma et la mécanique désormais établis, il est possible de dresser
 			\multicolumn{1}{|c|}{\textbf{TOTAL}} & \multicolumn{4}{c|}{\textbf{117.78}}                                                                                        \\ \hline
 		\end{tabular}%
 	}
-	\caption{Liste des composants hors-stocks}
+	\caption{Liste des composants hors-stocks.}
 	\label{tab:BOM_PRIX}
 \end{table}
 
@@ -156,7 +157,7 @@ Avec le schéma et la mécanique désormais établis, il est possible de dresser
 			\multicolumn{1}{|c|}{\textbf{TOTAL}} & \multicolumn{4}{c|}{\textbf{10.02}}                                                               \\ \hline
 		\end{tabular}%
 	}
-	\caption{Liste des composants en stock}
+	\caption{Liste des composants en stock.}
 	\label{tab:BOM-Stock}
 \end{table}
 
@@ -200,7 +201,7 @@ Avec le schéma et la mécanique désormais établis, il est possible de dresser
 			1 \\ \hline
 		\end{tabular}%
 	}
-	\caption{Liste des valeurs des résistances}
+	\caption{Liste des valeurs des résistances.}
 	\label{tab:Bom_resistors}
 \end{table}
 
@@ -226,7 +227,7 @@ Avec le schéma et la mécanique désormais établis, il est possible de dresser
 		\multicolumn{1}{c|}{1} &
 		2 \\ \hline
 	\end{tabular}
-	\caption{Liste des valeurs des condensateurs}
+	\caption{Liste des valeurs des condensateurs.}
 	\label{tab:Bom_Capa}
 \end{table}
 
@@ -237,7 +238,7 @@ Avec le schéma et la mécanique désormais établis, il est possible de dresser
 \begin{figure}[!h]
 	\centering
 	\includegraphics[width=1\linewidth]{../figures/dev-pcb/Couches-layout}
-	\caption{Routage des différentes couches}
+	\caption{Routage des différentes couches.}
 	\label{fig:couches-layout}
 	\source{Auteur}
 \end{figure}
@@ -246,31 +247,37 @@ Les justifications du routage des différentes couche sont présentées dans la 
 
 \begin{table}[!h]
 	\centering
+	\resizebox{.63\textwidth}{!}{%
 		\begin{tabular}{|lll|}
 			\hline
 			\textbf{TOP}     &                 &                                  \\
 			& \faChevronRight & Composants à braser au four.     \\
-			& \faChevronRight & Signaux proche du \gls{mcu}.     \\
+			& \faChevronRight & Signaux proches du \gls{mcu}.     \\
 			& \faChevronRight & Signaux sortant du \gls{gnss}.   \\
 			& \faChevronRight & Pistes horizontales.             \\
 			& \faChevronRight & Plan de masse.                   \\
-			& \faChevronRight & Connecteurs boutons et batterie. \\ \hline
+			& \faChevronRight & Connecteurs pour boutons et batterie. \\ \hline
 			\textbf{LAYER 1} &                 &                                  \\
-			& \faChevronRight & Piste de signaux verticales.     \\
+			& \faChevronRight & Pistes de signaux verticaux.     \\
 			& \faChevronRight & Plan de masse.                   \\ \hline
 			\textbf{LAYER 2} &                 &                                  \\
 			& \faChevronRight & Plan de masse homogène.          \\
 			& \faChevronRight & Plan de 3.3V.                    \\ \hline
 			\textbf{BOTTOM}  &                 &                                  \\
-			& \faChevronRight & Composants des régulateurs.         \\
+			& \faChevronRight & Composants des régulateurs.      \\
 			& \faChevronRight & Mosfets et composants passifs.   \\
-			& \faChevronRight & Piste signaux verticales.        \\
+			& \faChevronRight & Pistes de signaux verticaux.     \\
 			& \faChevronRight & Plan de masse.                   \\ \hline
 		\end{tabular}%
-	\caption{Descriptions des éléments du routage}
+	}
+	\caption{Description des éléments du routage.}
 	\label{tab:descr-routage}
 \end{table}
 
 \clearpage
+
+\subsection{Conclusion et perspectives de la conception}
+
+Durant cette section, nous avons conçu le circuit imprimé de la boîte noire, défini son implémentation dans un petit boîtier plastique, vérifié l'intégration du circuit et de la batterie à l'intérieur, et avons décrit les différentes justifications de développement. Par la suite, la carte sera montée, brasée, et les phases de programmation sur la carte auront lieu.
 
 
