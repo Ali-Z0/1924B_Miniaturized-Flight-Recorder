@@ -202,12 +202,16 @@ void APP_Tasks ( void )
             // Initialization of the USART FIFOs
             initFifo(&usartFifoRx, FIFO_RX_SIZE, a_fifoRx, 0);
             initFifo(&usartFifoTx, FIFO_TX_SIZE, a_fifoTx, 0);
+            
+            // Init system configuration
+            
+            
             break;
         }
         case APP_STATE_LOGGING:
         {    
             // BNO055 Measure routine
-            if((timeData.measTodo[BNO055_idx] == true )&&(sd_getState() == APP_IDLE))
+            if((timeData.measTodo[BNO055_idx] == true )&&(sd_logGetState() == APP_IDLE))
             {
                 /* BNO055 Read all important info routine */
                 bno055_local_data.comres = bno055_read_routine(&bno055_local_data);
@@ -223,7 +227,7 @@ void APP_Tasks ( void )
                 timeData.ltime[BNO055_idx] = timeData.measCnt[BNO055_idx];
             }
             // GNSS Measure routine
-            if((timeData.measTodo[GNSS_idx] == true )&&(sd_getState() == APP_IDLE))
+            if((timeData.measTodo[GNSS_idx] == true )&&(sd_logGetState() == APP_IDLE))
             {
                 /* Read GNSS position measure */
                 gnss_posGet_nmea(&gnss_nmea_local_data, &gnss_nmea_msgId);
@@ -239,13 +243,13 @@ void APP_Tasks ( void )
             }
             
             /* If error detected : error LED */
-            if((bno055_local_data.comres != 0)||(sd_getState() == APP_MOUNT_DISK))
+            if((bno055_local_data.comres != 0)||(sd_logGetState() == APP_MOUNT_DISK))
                 LED_ROn();
             else
                 LED_ROff();
             
             /* --- SD FAT routine --- */
-            sd_fat_task();
+            sd_fat_logging_task();
             /* --- Button routine --- */
             btnTaskGest();
             
@@ -300,17 +304,17 @@ void sys_shutdown( void ) {
     LED_ROn();
 
     /* If and SD card is mounted */
-    if(sd_getState() != APP_MOUNT_DISK){
+    if(sd_logGetState() != APP_MOUNT_DISK){
         /* Wait until SD availaible */
-        while(sd_getState() != APP_IDLE){
+        while(sd_logGetState() != APP_IDLE){
             /* SD FAT routine */
-            sd_fat_task();
+            sd_fat_logging_task();
         }
         /* Unmount disk */
-        sd_setState(APP_UNMOUNT_DISK);
+        sd_logSetState(APP_UNMOUNT_DISK);
         /* Wait until unmounted*/
-        while(sd_getState() != APP_IDLE){
-            sd_fat_task();
+        while(sd_logGetState() != APP_IDLE){
+            sd_fat_logging_task();
         }
     }
     /* turn off the device */

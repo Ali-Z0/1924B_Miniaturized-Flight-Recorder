@@ -105,7 +105,45 @@ typedef enum
     /* Unmount disk */
     APP_UNMOUNT_DISK
 
-} APP_FAT_STATES;
+} APP_FAT_LOG_STATES;
+
+typedef enum
+{
+	/* Application's state machine's initial state. */
+	/* The app mounts the disk */
+    APP_CFG_MOUNT_DISK = 0,
+
+    /* Set the current drive */
+    APP_CFG_SET_CURRENT_DRIVE,
+            
+    /* The app opens the file to read */
+    APP_CFG_OPEN_READ_CONFIG_FILE,
+
+	/* The app opens the file to read */
+    APP_CFG_READ_CONFIG_FILE,
+    
+    /* The app opens the file to write */
+    APP_CFG_OPEN_WRITE_CONFIG_FILE,
+       
+    /* Execute write */
+    APP_CFG_WRITE_CONFIG_FILE,
+
+    /* The app closes the file*/
+    APP_CFG_CLOSE_FILE,
+
+    /* The app closes the file and idles */
+    APP_CFG_IDLE,
+
+    /* An app error has occurred */
+    APP_CFG_ERROR,
+    
+    /* Couldnt find config file */
+    APP_CFG_NO_CFG_FILE,
+            
+    /* Unmount disk */
+    APP_CFG_UNMOUNT_DISK
+
+} APP_FAT_CONFIG_STATES;
 
 
 // *****************************************************************************
@@ -130,10 +168,13 @@ typedef struct
     SYS_FS_HANDLE      fileHandle1;
 
     /* Application's current state */
-    APP_FAT_STATES         state;
+    APP_FAT_LOG_STATES         log_state;
+    APP_FAT_CONFIG_STATES      cfg_state;
     
     /* Application data buffer */
     char                data[256] DATA_BUFFER_ALIGN;
+    /* Application config file */
+    char                cfg_data[100] DATA_BUFFER_ALIGN;
 
     uint32_t           nBytesWritten;
 
@@ -189,13 +230,17 @@ typedef struct
     This routine must be called from SYS_Tasks() routine.
  */
 
-void sd_fat_task ( void );
+void sd_fat_readConfig_task ( void );
+void sd_CFG_Write (uint32_t tLogGNSS_ms, uint32_t tLogIMU_ms, uint8_t ledState, bool skipMount);
+APP_FAT_CONFIG_STATES sd_cfgGetState( void );
+
+void sd_fat_logging_task ( void );
+APP_FAT_LOG_STATES sd_logGetState( void );
+void sd_logSetState( APP_FAT_LOG_STATES newState );
 
 void sd_BNO_scheduleWrite_BNO055 (s_bno055_data * data);
 
-APP_FAT_STATES sd_getState( void );
 
-void sd_setState( APP_FAT_STATES newState );
 
 #endif /* _APP_H */
 /*******************************************************************************
