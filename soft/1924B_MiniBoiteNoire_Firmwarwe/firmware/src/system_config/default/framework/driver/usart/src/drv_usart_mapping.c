@@ -128,23 +128,65 @@ SYS_STATUS DRV_USART_Status( SYS_MODULE_OBJ object)
 
 void DRV_USART_TasksTransmit ( SYS_MODULE_OBJ object )
 {
-    /* Usart is configured for static byte model without callbacks.
-       Hence, no task need to be executed */
-    return;	
+    switch(object)
+    {
+        case DRV_USART_INDEX_0:
+        {
+            DRV_USART0_TasksTransmit();
+            break;
+        }
+        case DRV_USART_INDEX_1:
+        {
+            DRV_USART1_TasksTransmit();
+            break;
+        }
+        default:
+        {
+            break;
+        }
+    }
 }
 
 void DRV_USART_TasksReceive ( SYS_MODULE_OBJ object )
 {
-    /* Usart is configured for static byte model without callbacks.
-       Hence, no task need to be executed */
-    return;	
+    switch(object)
+    {
+        case DRV_USART_INDEX_0:
+        {
+            DRV_USART0_TasksReceive();
+            break;
+        }
+        case DRV_USART_INDEX_1:
+        {
+            DRV_USART1_TasksReceive();
+            break;
+        }
+        default:
+        {
+            break;
+        }
+    }
 }
 
 void DRV_USART_TasksError ( SYS_MODULE_OBJ object )
 {
-    /* Usart is configured for static byte model without callbacks.
-       Hence, no task need to be executed */
-    return;	
+    switch(object)
+    {
+        case DRV_USART_INDEX_0:
+        {
+            DRV_USART0_TasksError();
+            break;
+        }
+        case DRV_USART_INDEX_1:
+        {
+            DRV_USART1_TasksError();
+            break;
+        }
+        default:
+        {
+            break;
+        }
+    }
 }
 
 

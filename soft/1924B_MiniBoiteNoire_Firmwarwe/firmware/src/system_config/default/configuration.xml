@@ -269,7 +269,7 @@
       <Template dnOrder="3">
         <Name dnOrder="0">drv_usart_mapping.c</Name>
         <Path dnOrder="1">Source&amp;#160;Files/app/system_config/default/framework/driver/usart/src</Path>
-        <Checksum dnOrder="2">64FB3C959ACBED05166C75B3E058355D</Checksum>
+        <Checksum dnOrder="2">0B58CA23E3A469878E6C19FBE504D792</Checksum>
       </Template>
       <Template dnOrder="4">
         <Name dnOrder="0">sys_devcon_local.h</Name>
@@ -289,12 +289,12 @@
       <Template dnOrder="7">
         <Name dnOrder="0">drv_usart_static_byte_model.c</Name>
         <Path dnOrder="1">Source&amp;#160;Files/app/system_config/default/framework/driver/usart/src</Path>
-        <Checksum dnOrder="2">53233B1AD06BF6C2B845B61A7D609432</Checksum>
+        <Checksum dnOrder="2">B2F3B37587660037243A66B111900E28</Checksum>
       </Template>
       <Template dnOrder="8">
         <Name dnOrder="0">system_interrupt.c</Name>
         <Path dnOrder="1">Source&amp;#160;Files/app/system_config/default</Path>
-        <Checksum dnOrder="2">1BABB2BABE42EF74955AFE2DE8EEDC93</Checksum>
+        <Checksum dnOrder="2">B70684D7F6D5BD15DB3F41AE98515414</Checksum>
         <ProjectFileChecksum dnOrder="3">D397A0ED572FEDABDA4AD99D1E2412EE</ProjectFileChecksum>
       </Template>
       <Template dnOrder="9">
@@ -310,12 +310,12 @@
       <Template dnOrder="11">
         <Name dnOrder="0">drv_usart_static.c</Name>
         <Path dnOrder="1">Source&amp;#160;Files/app/system_config/default/framework/driver/usart/src</Path>
-        <Checksum dnOrder="2">86CA6A0973A222494C755F21D2880433</Checksum>
+        <Checksum dnOrder="2">6657A4150363AF9D066EDF57A0CBDBBA</Checksum>
       </Template>
       <Template dnOrder="12">
         <Name dnOrder="0">system_init.c</Name>
         <Path dnOrder="1">Source&amp;#160;Files/app/system_config/default</Path>
-        <Checksum dnOrder="2">E9D76C5F1CC1F2E52082B4585519F9CE</Checksum>
+        <Checksum dnOrder="2">2B2B9A8C9ACAD91056B215777E4DD50D</Checksum>
       </Template>
       <Template dnOrder="13">
         <Name dnOrder="0">main.c</Name>
@@ -353,7 +353,7 @@
       <Template dnOrder="20">
         <Name dnOrder="0">system_tasks.c</Name>
         <Path dnOrder="1">Source&amp;#160;Files/app/system_config/default</Path>
-        <Checksum dnOrder="2">ADC6FC499112E905ECFF4DD82ACEAE00</Checksum>
+        <Checksum dnOrder="2">4E9AD83CB2160CFD66817CDB1789A665</Checksum>
       </Template>
       <Template dnOrder="21">
         <Name dnOrder="0">sys_devcon_pic32mx.c</Name>
@@ -363,7 +363,7 @@
       <Template dnOrder="22">
         <Name dnOrder="0">system_config.h</Name>
         <Path dnOrder="1">Header&amp;#160;Files/app/system_config/default</Path>
-        <Checksum dnOrder="2">EF0EE3F75D7AD684440F44D96DE31284</Checksum>
+        <Checksum dnOrder="2">2C8E00CA639258F050FD3C2F547000F9</Checksum>
       </Template>
       <Template dnOrder="23">
         <Name dnOrder="0">app.h</Name>

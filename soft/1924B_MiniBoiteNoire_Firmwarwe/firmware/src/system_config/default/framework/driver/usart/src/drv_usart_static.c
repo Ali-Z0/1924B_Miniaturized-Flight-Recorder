@@ -105,12 +105,32 @@ SYS_MODULE_OBJ DRV_USART0_Initialize(void)
             clockSource,
             9600);  /*Desired Baud rate value*/
 
+    /* Clear the interrupts to be on the safer side*/
+    SYS_INT_SourceStatusClear(INT_SOURCE_USART_1_TRANSMIT);
+    SYS_INT_SourceStatusClear(INT_SOURCE_USART_1_RECEIVE);
+    SYS_INT_SourceStatusClear(INT_SOURCE_USART_1_ERROR);
+
+    /* Enable the error interrupt source */
+    SYS_INT_SourceEnable(INT_SOURCE_USART_1_ERROR);
+
+    /* Enable the Receive interrupt source */
+    SYS_INT_SourceEnable(INT_SOURCE_USART_1_RECEIVE);
+
     /* Return the driver instance value*/
     return (SYS_MODULE_OBJ)DRV_USART_INDEX_0;
 }
 
 void  DRV_USART0_Deinitialize(void)
 {
+    bool status;
+
+    /* Disable the interrupts */
+    status = SYS_INT_SourceDisable(INT_SOURCE_USART_1_TRANSMIT) ;
+    status = SYS_INT_SourceDisable(INT_SOURCE_USART_1_RECEIVE) ;
+    status = SYS_INT_SourceDisable(INT_SOURCE_USART_1_ERROR);
+    /* Ignore the warning */
+    (void)status;
+
     /* Disable USART module */
     PLIB_USART_Disable (USART_ID_1);
 
@@ -121,6 +141,55 @@ SYS_STATUS DRV_USART0_Status(void)
 {
     /* Return the status as ready always */
     return SYS_STATUS_READY;
+}
+
+
+void DRV_USART0_TasksTransmit(void)
+{
+    /* This is the USART Driver Transmit tasks routine.
+       In this function, the driver checks if a transmit
+       interrupt is active and performs respective action*/
+
+    /* Reading the transmit interrupt flag */
+    if(SYS_INT_SourceStatusGet(INT_SOURCE_USART_1_TRANSMIT))
+    {
+        /* Disable the interrupt, to avoid calling ISR continuously*/
+        SYS_INT_SourceDisable(INT_SOURCE_USART_1_TRANSMIT);
+
+        /* Clear up the interrupt flag */
+        SYS_INT_SourceStatusClear(INT_SOURCE_USART_1_TRANSMIT);
+    }
+}
+
+void DRV_USART0_TasksReceive(void)
+{
+    /* This is the USART Driver Receive tasks routine. If the receive
+       interrupt flag is set, the tasks routines are executed.
+     */
+
+    /* Reading the receive interrupt flag */
+    if(SYS_INT_SourceStatusGet(INT_SOURCE_USART_1_RECEIVE))
+    {
+
+        /* Clear up the interrupt flag */
+        SYS_INT_SourceStatusClear(INT_SOURCE_USART_1_RECEIVE);
+    }
+}
+
+
+void DRV_USART0_TasksError(void)
+{
+    /* This is the USART Driver Error tasks routine. In this function, the
+     * driver checks if an error interrupt has occurred. If so the error
+     * condition is cleared.  */
+
+    /* Reading the error interrupt flag */
+    if(SYS_INT_SourceStatusGet(INT_SOURCE_USART_1_ERROR))
+    {
+        /* This means an error has occurred */
+        /* Clear up the error interrupt flag */
+        SYS_INT_SourceStatusClear(INT_SOURCE_USART_1_ERROR);
+    }
 }
 
 DRV_HANDLE DRV_USART0_Open(const SYS_MODULE_INDEX index, const DRV_IO_INTENT ioIntent)
@@ -354,12 +423,32 @@ SYS_MODULE_OBJ DRV_USART1_Initialize(void)
             clockSource,
             9600);  /*Desired Baud rate value*/
 
+    /* Clear the interrupts to be on the safer side*/
+    SYS_INT_SourceStatusClear(INT_SOURCE_USART_2_TRANSMIT);
+    SYS_INT_SourceStatusClear(INT_SOURCE_USART_2_RECEIVE);
+    SYS_INT_SourceStatusClear(INT_SOURCE_USART_2_ERROR);
+
+    /* Enable the error interrupt source */
+    SYS_INT_SourceEnable(INT_SOURCE_USART_2_ERROR);
+
+    /* Enable the Receive interrupt source */
+    SYS_INT_SourceEnable(INT_SOURCE_USART_2_RECEIVE);
+
     /* Return the driver instance value*/
     return (SYS_MODULE_OBJ)DRV_USART_INDEX_1;
 }
 
 void  DRV_USART1_Deinitialize(void)
 {
+    bool status;
+
+    /* Disable the interrupts */
+    status = SYS_INT_SourceDisable(INT_SOURCE_USART_2_TRANSMIT) ;
+    status = SYS_INT_SourceDisable(INT_SOURCE_USART_2_RECEIVE) ;
+    status = SYS_INT_SourceDisable(INT_SOURCE_USART_2_ERROR);
+    /* Ignore the warning */
+    (void)status;
+
     /* Disable USART module */
     PLIB_USART_Disable (USART_ID_2);
 
@@ -370,6 +459,55 @@ SYS_STATUS DRV_USART1_Status(void)
 {
     /* Return the status as ready always */
     return SYS_STATUS_READY;
+}
+
+
+void DRV_USART1_TasksTransmit(void)
+{
+    /* This is the USART Driver Transmit tasks routine.
+       In this function, the driver checks if a transmit
+       interrupt is active and performs respective action*/
+
+    /* Reading the transmit interrupt flag */
+    if(SYS_INT_SourceStatusGet(INT_SOURCE_USART_2_TRANSMIT))
+    {
+        /* Disable the interrupt, to avoid calling ISR continuously*/
+        SYS_INT_SourceDisable(INT_SOURCE_USART_2_TRANSMIT);
+
+        /* Clear up the interrupt flag */
+        SYS_INT_SourceStatusClear(INT_SOURCE_USART_2_TRANSMIT);
+    }
+}
+
+void DRV_USART1_TasksReceive(void)
+{
+    /* This is the USART Driver Receive tasks routine. If the receive
+       interrupt flag is set, the tasks routines are executed.
+     */
+
+    /* Reading the receive interrupt flag */
+    if(SYS_INT_SourceStatusGet(INT_SOURCE_USART_2_RECEIVE))
+    {
+
+        /* Clear up the interrupt flag */
+        SYS_INT_SourceStatusClear(INT_SOURCE_USART_2_RECEIVE);
+    }
+}
+
+
+void DRV_USART1_TasksError(void)
+{
+    /* This is the USART Driver Error tasks routine. In this function, the
+     * driver checks if an error interrupt has occurred. If so the error
+     * condition is cleared.  */
+
+    /* Reading the error interrupt flag */
+    if(SYS_INT_SourceStatusGet(INT_SOURCE_USART_2_ERROR))
+    {
+        /* This means an error has occurred */
+        /* Clear up the error interrupt flag */
+        SYS_INT_SourceStatusClear(INT_SOURCE_USART_2_ERROR);
+    }
 }
 
 DRV_HANDLE DRV_USART1_Open(const SYS_MODULE_INDEX index, const DRV_IO_INTENT ioIntent)

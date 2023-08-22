@@ -163,7 +163,7 @@ void APP_Initialize ( void )
     RST_IMUOn();
     BNO055_delay_msek(100);
     
-        /* Place the App state machine in its initial state. */
+    /* Place the App state machine in its initial state. */
     appData.state = APP_STATE_INIT;
     
 }
@@ -181,7 +181,9 @@ void APP_Tasks ( void )
 {
     /* Local bno055 data */
     s_bno055_data bno055_local_data; 
-    s_gnssData gnss_local_data;
+    //s_gnssData gnss_ubx_local_data;
+    minmea_messages gnss_nmea_local_data;
+    enum minmea_sentence_id gnss_nmea_msgId = MINMEA_UNKNOWN;
 
     /* Check the application's current state. */
     switch ( appData.state )
@@ -197,6 +199,9 @@ void APP_Tasks ( void )
             appData.state = APP_STATE_LOGGING;
             /* Init ltime_BNO055 counter */
             timeData.ltime[BNO055_idx] = 0;
+            // Initialization of the USART FIFOs
+            initFifo(&usartFifoRx, FIFO_RX_SIZE, a_fifoRx, 0);
+            initFifo(&usartFifoTx, FIFO_TX_SIZE, a_fifoTx, 0);
             break;
         }
         case APP_STATE_LOGGING:
@@ -221,9 +226,9 @@ void APP_Tasks ( void )
             if((timeData.measTodo[GNSS_idx] == true )&&(sd_getState() == APP_IDLE))
             {
                 /* Read GNSS position measure */
-                gnss_posGet(&gnss_local_data, false);
+                gnss_posGet_nmea(&gnss_nmea_local_data, &gnss_nmea_msgId);
                 /* Write value to sdCard */
-                sd_BNO_scheduleWrite_GNSS(&bno055_local_data);
+                //sd_BNO_scheduleWrite_GNSS(&bno055_local_data);
                 /* Reset measure flag */
                 timeData.measTodo[GNSS_idx] = false;
             }

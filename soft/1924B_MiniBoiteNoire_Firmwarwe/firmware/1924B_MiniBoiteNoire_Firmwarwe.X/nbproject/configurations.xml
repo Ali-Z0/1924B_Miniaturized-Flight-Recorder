@@ -14,6 +14,7 @@
           <itemPath>../src/GNSS/u_error_common.h</itemPath>
           <itemPath>../src/GNSS/u_ubx_protocol.h</itemPath>
           <itemPath>../src/GNSS/u_time.h</itemPath>
+          <itemPath>../src/GNSS/minmea.h</itemPath>
         </logicalFolder>
         <logicalFolder name="f1" displayName="system_config" projectFiles="true">
           <logicalFolder name="f1" displayName="default" projectFiles="true">
@@ -51,6 +52,7 @@
         <itemPath>../src/Mc32Debounce.h</itemPath>
         <itemPath>../src/Mc32_I2cUtilCCS.h</itemPath>
         <itemPath>../src/Mc32_sdFatGest.h</itemPath>
+        <itemPath>../src/usart_FIFO.h</itemPath>
       </logicalFolder>
       <logicalFolder name="f1" displayName="framework" projectFiles="true">
         <logicalFolder name="f1" displayName="driver" projectFiles="true">
@@ -179,6 +181,7 @@
           <itemPath>../src/GNSS/u_gnss_pos.c</itemPath>
           <itemPath>../src/GNSS/u_ubx_protocol.c</itemPath>
           <itemPath>../src/GNSS/u_time.c</itemPath>
+          <itemPath>../src/GNSS/minmea.c</itemPath>
         </logicalFolder>
         <logicalFolder name="f1" displayName="system_config" projectFiles="true">
           <logicalFolder name="f1" displayName="default" projectFiles="true">
@@ -236,6 +239,7 @@
         <itemPath>../src/Mc32Debounce.c</itemPath>
         <itemPath>../src/Mc32_I2cUtilCCS.c</itemPath>
         <itemPath>../src/Mc32_sdFatGest.c</itemPath>
+        <itemPath>../src/usart_FIFO.c</itemPath>
       </logicalFolder>
       <logicalFolder name="f1" displayName="framework" projectFiles="true">
         <logicalFolder name="f1" displayName="driver" projectFiles="true">

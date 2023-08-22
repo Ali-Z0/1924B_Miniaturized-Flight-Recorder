@@ -21,9 +21,13 @@ extern "C" {
 #ifdef MINMEA_INCLUDE_COMPAT
 #include <minmea_compat.h>
 #endif
-
+    
 #ifndef MINMEA_MAX_SENTENCE_LENGTH
 #define MINMEA_MAX_SENTENCE_LENGTH 80
+#endif
+    
+#ifndef NAN
+#define NAN -1
 #endif
 
 enum minmea_sentence_id {
@@ -38,6 +42,11 @@ enum minmea_sentence_id {
     MINMEA_SENTENCE_RMC,
     MINMEA_SENTENCE_VTG,
     MINMEA_SENTENCE_ZDA,
+};
+
+struct timespec {
+    time_t tv_sec;      // nombre de secondes
+    long tv_nsec;       // nombre de nanosecondes
 };
 
 struct minmea_float {
@@ -175,6 +184,19 @@ struct minmea_sentence_zda {
     int hour_offset;
     int minute_offset;
 };
+
+typedef struct minmea_messages{
+    struct minmea_sentence_gbs gbs;
+    struct minmea_sentence_rmc rmc;
+    struct minmea_sentence_gga gga;
+    struct minmea_sentence_gll gll;
+    struct minmea_sentence_gst gst;
+    struct minmea_sentence_gsa gsa;
+    struct minmea_sentence_gsv gsv;
+    struct minmea_sentence_vtg vtg;
+    struct minmea_sentence_zda zda;
+}minmea_messages;
+
 
 /**
  * Calculate raw sentence checksum. Does not check sentence integrity.

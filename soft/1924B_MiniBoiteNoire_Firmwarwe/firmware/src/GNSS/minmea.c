@@ -6,7 +6,7 @@
  * published by Sam Hocevar. See the COPYING file for more details.
  */
 
-#include "minmea.h"
+#include "GNSS/minmea.h"
 
 #include <stdlib.h>
 #include <string.h>
@@ -239,13 +239,14 @@ bool minmea_scan(const char *sentence, const char *format, ...)
             } break;
 
             case 't': { // NMEA talker+sentence identifier (char *).
+                int f = 0;
                 // This field is always mandatory.
                 if (!field)
                     goto parse_error;
 
                 if (field[0] != '$')
                     goto parse_error;
-                for (int f=0; f<5; f++)
+                for (f=0; f<5; f++)
                     if (!minmea_isfield(field[1+f]))
                         goto parse_error;
 
@@ -255,13 +256,14 @@ bool minmea_scan(const char *sentence, const char *format, ...)
             } break;
 
             case 'D': { // Date (int, int, int), -1 if empty.
+                int f = 0;
                 struct minmea_date *date = va_arg(ap, struct minmea_date *);
 
                 int d = -1, m = -1, y = -1;
 
                 if (field && minmea_isfield(*field)) {
                     // Always six digits.
-                    for (int f=0; f<6; f++)
+                    for (f=0; f<6; f++)
                         if (!isdigit((unsigned char) field[f]))
                             goto parse_error;
 
@@ -279,13 +281,14 @@ bool minmea_scan(const char *sentence, const char *format, ...)
             } break;
 
             case 'T': { // Time (int, int, int, int), -1 if empty.
+                int f = 0;
                 struct minmea_time *time_ = va_arg(ap, struct minmea_time *);
 
                 int h = -1, i = -1, s = -1, u = -1;
 
                 if (field && minmea_isfield(*field)) {
                     // Minimum required: integer time.
-                    for (int f=0; f<6; f++)
+                    for (f=0; f<6; f++)
                         if (!isdigit((unsigned char) field[f]))
                             goto parse_error;
 
@@ -666,7 +669,7 @@ int minmea_gettime(struct timespec *ts, const struct minmea_date *date, const st
     if (minmea_getdatetime(&tm, date, time_))
         return -1;
 
-    time_t timestamp = timegm(&tm); /* See README.md if your system lacks timegm(). */
+    time_t timestamp = mktime(&tm); /* See README.md if your system lacks timegm(). */
     if (timestamp != (time_t)-1) {
         ts->tv_sec = timestamp;
         ts->tv_nsec = time_->microseconds * 1000;

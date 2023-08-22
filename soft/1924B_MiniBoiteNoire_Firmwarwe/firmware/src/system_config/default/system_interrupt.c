@@ -68,9 +68,86 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 // Section: System Interrupt Vector Functions
 // *****************************************************************************
 // *****************************************************************************
+void __ISR(_UART_1_VECTOR, ipl0AUTO) _IntHandlerDrvUsartInstance0(void)
+{
+    DRV_USART_TasksTransmit(sysObj.drvUsart0);
+    DRV_USART_TasksError(sysObj.drvUsart0);
+    DRV_USART_TasksReceive(sysObj.drvUsart0);
+}
 
  
 
+
+void __ISR(_UART_2_VECTOR, ipl1AUTO) _IntHandlerDrvUsartInstance1(void)
+{
+    USART_ERROR usartStatus;
+    bool        isTxBuffFull;
+    char      charReceived;
+    char      charToSend;
+    char      TXsize;
+    
+     //------------------------------------------------------------------------// RX interrupt
+    if(PLIB_INT_SourceFlagGet(INT_ID_0, INT_SOURCE_USART_2_RECEIVE) &&
+                PLIB_INT_SourceIsEnabled(INT_ID_0, INT_SOURCE_USART_2_RECEIVE)){
+
+        // Parity error or overrun
+        usartStatus = PLIB_USART_ErrorsGet(USART_ID_2);
+
+        if ((usartStatus & (USART_ERROR_PARITY | USART_ERROR_FRAMING | 
+                USART_ERROR_RECEIVER_OVERRUN)) == 0){
+
+            // All char received are transferred to the FIFO
+            // 1 if ONE_CHAR, 4 if HALF_FULL and 6 3B4FULL
+            while(PLIB_USART_ReceiverDataIsAvailable(USART_ID_2)){
+                
+                charReceived = PLIB_USART_ReceiverByteReceive(USART_ID_2);
+                putCharInFifo(&usartFifoRx, charReceived);
+            }
+            // Buffer is empty, clear interrupt flag
+            PLIB_INT_SourceFlagClear(INT_ID_0, INT_SOURCE_USART_2_RECEIVE);
+       
+        }else{
+            // Deleting errors
+            // Reading errors clears them except for overrun
+            if((usartStatus & USART_ERROR_RECEIVER_OVERRUN) == 
+                    USART_ERROR_RECEIVER_OVERRUN){
+                
+                PLIB_USART_ReceiverOverrunErrorClear(USART_ID_2);
+            }
+        }
+    }
+    
+    
+    //------------------------------------------------------------------------// TX interrupt
+    if (PLIB_INT_SourceFlagGet(INT_ID_0, INT_SOURCE_USART_2_TRANSMIT) &&
+                 PLIB_INT_SourceIsEnabled(INT_ID_0, INT_SOURCE_USART_2_TRANSMIT)){
+        
+        TXsize = getReadSize(&usartFifoTx);
+        // i_cts = input(RS232_CTS);
+       
+        isTxBuffFull = PLIB_USART_TransmitterBufferIsFull(USART_ID_2);
+       
+        if (/*(i_cts == 0) && */(TXsize > 0) && (isTxBuffFull == false)){
+            do{
+                getCharFromFifo(&usartFifoTx, &charToSend);
+                if(charToSend != '\0') PLIB_USART_TransmitterByteSend(USART_ID_2, charToSend);
+                /*i_cts = RS232_CTS;*/
+                TXsize = getReadSize (&usartFifoTx);
+                isTxBuffFull = PLIB_USART_TransmitterBufferIsFull(USART_ID_2);
+            }while(/*(i_cts == 0) && */( TXsize > 0 ) && isTxBuffFull == false);
+        }
+		
+        // Disables TX interrupt (to avoid unnecessary interruptions if there's 
+        // nothing left to transmit)
+        if(TXsize == 0){
+            
+            PLIB_INT_SourceDisable(INT_ID_0, INT_SOURCE_USART_2_TRANSMIT);
+        }
+        // Clears the TX interrupt Flag
+        PLIB_INT_SourceFlagClear(INT_ID_0, INT_SOURCE_USART_2_TRANSMIT);
+    }
+}
+ 
 void __ISR(_TIMER_1_VECTOR, ipl1AUTO) IntHandlerDrvTmrInstance0(void)
 {
     PLIB_INT_SourceFlagClear(INT_ID_0,INT_SOURCE_TIMER_1);

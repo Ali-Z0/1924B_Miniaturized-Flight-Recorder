@@ -40,6 +40,7 @@ extern "C" {
 #include <stdlib.h>
 #include "system_config.h"
 #include "system_definitions.h"
+#include "GNSS/minmea.h"
 /* ----------------------------------------------------------------
  * COMPILE-TIME MACROS
  * -------------------------------------------------------------- */
@@ -91,7 +92,8 @@ extern "C" {
  * FUNCTIONS:  WORKAROUND FOR LINKER ISSUE
  * -------------------------------------------------------------- */
 
-int32_t gnss_posGet(s_gnssData *pGnssData, bool printIt);
+int32_t gnss_posGet_ubx(s_gnssData *pGnssData, bool printIt);
+int32_t gnss_posGet_nmea(minmea_messages *sentences, enum minmea_sentence_id *id);
 /* ----------------------------------------------------------------
  * FUNCTIONS
  * -------------------------------------------------------------- */

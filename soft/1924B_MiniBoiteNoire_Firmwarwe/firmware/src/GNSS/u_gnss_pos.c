@@ -38,6 +38,8 @@
 #include "u_time.h"
 #include "u_ubx_protocol.h"
 #include "u_gnss_pos.h"
+#include "minmea.h"
+#include "usart_FIFO.h"
 
 /* ----------------------------------------------------------------
  * COMPILE-TIME MACROS
@@ -206,7 +208,7 @@ static int32_t posDecode(char *pMessage, s_gnssData *pGnssData, bool printIt)
 }
 
 // Establish position.
-int32_t gnss_posGet(s_gnssData *pGnssData, bool printIt)
+int32_t gnss_posGet_ubx(s_gnssData *pGnssData, bool printIt)
 {
     int32_t errorCode = (int32_t) U_ERROR_COMMON_TIMEOUT;
     // Enough room for the body of the UBX-NAV-PVT message
@@ -227,6 +229,57 @@ int32_t gnss_posGet(s_gnssData *pGnssData, bool printIt)
     if (errorCode == sizeof(message)) {
         // Got the correct message body length, process it
         errorCode = posDecode(message, pGnssData, printIt);
+    } else {
+        if (errorCode >= 0) {
+            errorCode = (int32_t) U_ERROR_COMMON_DEVICE_ERROR;
+        }
+    }
+
+    return errorCode;
+}
+
+// Establish position.
+int32_t gnss_posGet_nmea(minmea_messages *sentences, enum minmea_sentence_id *msg_id)
+{
+    int32_t errorCode = (int32_t) U_ERROR_COMMON_TIMEOUT;
+    // Enough room for the body of the message
+    char message[82] = {0};
+    *msg_id = MINMEA_UNKNOWN;
+    
+    /* Get full message */
+    errorCode = getStringFromFifo(&usartFifoRx, message);
+    
+    if (errorCode == sizeof(message)) {
+        // Got the correct message body length, process it
+        
+        // Get message id, strict
+        *msg_id = minmea_sentence_id(message, true);
+        
+        // Commm succes if not overwritten
+        errorCode = (int32_t) U_ERROR_COMMON_SUCCESS;
+        
+        // Parse message depending on ID
+        if (*msg_id == MINMEA_SENTENCE_GBS)
+            minmea_parse_gbs(&sentences->gbs, message);
+        else if (*msg_id == MINMEA_SENTENCE_GGA)
+            minmea_parse_gga(&sentences->gga, message);
+        else if (*msg_id == MINMEA_SENTENCE_GLL)
+            minmea_parse_gll(&sentences->gll, message);
+        else if (*msg_id == MINMEA_SENTENCE_GSA)
+            minmea_parse_gsa(&sentences->gsa, message);
+        else if (*msg_id == MINMEA_SENTENCE_GST)
+            minmea_parse_gst(&sentences->gst, message);
+        else if (*msg_id == MINMEA_SENTENCE_GSV)
+            minmea_parse_gsv(&sentences->gsv, message);
+        else if (*msg_id == MINMEA_SENTENCE_RMC)
+            minmea_parse_rmc(&sentences->rmc, message);
+        else if (*msg_id == MINMEA_SENTENCE_VTG)
+            minmea_parse_vtg(&sentences->vtg, message);
+        else if (*msg_id == MINMEA_SENTENCE_ZDA)
+            minmea_parse_zda(&sentences->zda, message);
+        else
+           errorCode = (int32_t) U_ERROR_COMMON_PROTOCOL_ERROR; 
+        
     } else {
         if (errorCode >= 0) {
             errorCode = (int32_t) U_ERROR_COMMON_DEVICE_ERROR;
