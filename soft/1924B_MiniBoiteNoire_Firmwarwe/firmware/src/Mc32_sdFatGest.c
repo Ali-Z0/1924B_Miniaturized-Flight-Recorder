@@ -326,117 +326,119 @@ void sd_GNSS_scheduleWrite (s_gnssData * pGnssData)
 void sd_CFG_Write (uint32_t tLogGNSS_ms, uint32_t tLogIMU_ms, uint8_t ledState, bool skipMount)
 {
     /* If sd Card available */
-    if(appFatData.log_state == APP_IDLE)
+    if(appFatData.cfg_state == APP_CFG_IDLE)
     {
         if(skipMount == false)
             /* Next config : mount disk */
-            appFatData.log_state = APP_CFG_MOUNT_DISK;
+            appFatData.cfg_state = APP_CFG_MOUNT_DISK;
         else if(skipMount == true)
             /* Next config : write to file */
-            appFatData.log_state = APP_CFG_OPEN_WRITE_CONFIG_FILE;
+            appFatData.cfg_state = APP_CFG_OPEN_WRITE_CONFIG_FILE;
         
         /* Write the buffer */
         sprintf(appFatData.cfg_data, "$LOG INTERVAL GNSS\t[ms]\t:\t%ud\r\n$LOG INTERVAL IMU\t[ms]\t:\t%ud\r\n$LED STATE\t[1/0]\t:\t%ud\r\n", tLogGNSS_ms, tLogIMU_ms, ledState);
         /* Compute the number of bytes to send */
         appFatData.nBytesToWrite = strlen(appFatData.cfg_data);
         
-           /* The application task cfg_state machine */
-        switch(appFatData.cfg_state)
-        {
-            case APP_CFG_MOUNT_DISK:
-                if(SYS_FS_Mount("/dev/mmcblka1", "/mnt/myDrive", FAT, 0, NULL) != 0)
-                {
-                    appFatData.cfg_state = APP_MOUNT_DISK;
-                }
-                else
-                {
-                    /* Mount was successful. Unmount the disk, for testing. */
-                    appFatData.cfg_state = APP_SET_CURRENT_DRIVE;
-                }
-                break;
+        do{
+            /* The application task cfg_state machine */
+            switch(appFatData.cfg_state)
+            {
+                case APP_CFG_MOUNT_DISK:
+                    if(SYS_FS_Mount("/dev/mmcblka1", "/mnt/myDrive", FAT, 0, NULL) != 0)
+                    {
+                        appFatData.cfg_state = APP_CFG_MOUNT_DISK;
+                    }
+                    else
+                    {
+                        /* Mount was successful. Unmount the disk, for testing. */
+                        appFatData.cfg_state = APP_CFG_SET_CURRENT_DRIVE;
+                    }
+                    break;
 
-            case APP_CFG_SET_CURRENT_DRIVE:
-                if(SYS_FS_CurrentDriveSet("/mnt/myDrive") == SYS_FS_RES_FAILURE)
-                {
-                    /* Error while setting current drive */
-                    appFatData.cfg_state = APP_ERROR;
-                }
-                else
-                {
-                    /* Open a file for reading. */
-                    appFatData.cfg_state = APP_CFG_OPEN_WRITE_CONFIG_FILE;
-                }
-                break;
+                case APP_CFG_SET_CURRENT_DRIVE:
+                    if(SYS_FS_CurrentDriveSet("/mnt/myDrive") == SYS_FS_RES_FAILURE)
+                    {
+                        /* Error while setting current drive */
+                        appFatData.cfg_state = APP_CFG_ERROR;
+                    }
+                    else
+                    {
+                        /* Open a file for reading. */
+                        appFatData.cfg_state = APP_CFG_OPEN_WRITE_CONFIG_FILE;
+                    }
+                    break;
 
-            case APP_CFG_OPEN_WRITE_CONFIG_FILE:
-                appFatData.fileHandle = SYS_FS_FileOpen("CONFIG.txt",
-                        (SYS_FS_FILE_OPEN_WRITE_PLUS));
-                if(appFatData.fileHandle == SYS_FS_HANDLE_INVALID)
-                {
-                    /* Could not open the file. Error out*/
-                    appFatData.cfg_state = APP_ERROR;
-                }
-                else
-                {
-                    /* Create a directory. */
-                    appFatData.cfg_state = APP_CFG_WRITE_CONFIG_FILE;
-                }
-                break;
+                case APP_CFG_OPEN_WRITE_CONFIG_FILE:
+                    appFatData.fileHandle = SYS_FS_FileOpen("CONFIG.txt",
+                            (SYS_FS_FILE_OPEN_WRITE_PLUS));
+                    if(appFatData.fileHandle == SYS_FS_HANDLE_INVALID)
+                    {
+                        /* Could not open the file. Error out*/
+                        appFatData.cfg_state = APP_CFG_ERROR;
+                    }
+                    else
+                    {
+                        /* Create a directory. */
+                        appFatData.cfg_state = APP_CFG_WRITE_CONFIG_FILE;
+                    }
+                    break;
 
-            case APP_CFG_WRITE_CONFIG_FILE:                             
-                /* If read was success, try writing to the new file */
-                if(SYS_FS_FileWrite(appFatData.fileHandle, appFatData.cfg_data, 
-                        appFatData.nBytesToWrite == -1))
-                {
-                    /* Write was not successful. Close the file
-                     * and error out.*/
+                case APP_CFG_WRITE_CONFIG_FILE:                             
+                    /* If read was success, try writing to the new file */
+                    if(SYS_FS_FileWrite(appFatData.fileHandle, appFatData.cfg_data, 
+                            appFatData.nBytesToWrite == -1))
+                    {
+                        /* Write was not successful. Close the file
+                         * and error out.*/
+                        SYS_FS_FileClose(appFatData.fileHandle);
+                        appFatData.cfg_state = APP_CFG_ERROR;
+                    }
+                    else
+                    {
+                        appFatData.cfg_state = APP_CFG_CLOSE_FILE;
+                    }
+                    break;
+
+                case APP_CFG_CLOSE_FILE:
+                    /* Close both files */
                     SYS_FS_FileClose(appFatData.fileHandle);
-                    appFatData.cfg_state = APP_ERROR;
-                }
-                else
-                {
-                    appFatData.cfg_state = APP_CLOSE_FILE;
-                }
-                break;
+                     /* The test was successful. Lets unmount. */
+                    appFatData.cfg_state = APP_CFG_UNMOUNT_DISK;
+                    break;
 
-            case APP_CFG_CLOSE_FILE:
-                /* Close both files */
-                SYS_FS_FileClose(appFatData.fileHandle);
-                 /* The test was successful. Lets unmount. */
-                appFatData.cfg_state = APP_CFG_UNMOUNT_DISK;
-                break;
+                case APP_CFG_IDLE:
+                    /* The appliction comes here when the demo
+                     * has completed successfully. Switch on
+                     * green LED. */
+                    //BSP_LEDOn(APP_SUCCESS_LED);
+                    LED_ROff();
+                    break;
+                case APP_CFG_ERROR:
+                    /* The appliction comes here when the demo
+                     * has failed. Switch on the red LED.*/
+                    //BSP_LEDOn(APP_FAILURE_LED);
+                    LED_ROn();
+                    break;
+                default:
+                    break;
 
-            case APP_CFG_IDLE:
-                /* The appliction comes here when the demo
-                 * has completed successfully. Switch on
-                 * green LED. */
-                //BSP_LEDOn(APP_SUCCESS_LED);
-                LED_ROff();
-                break;
-            case APP_CFG_ERROR:
-                /* The appliction comes here when the demo
-                 * has failed. Switch on the red LED.*/
-                //BSP_LEDOn(APP_FAILURE_LED);
-                LED_ROn();
-                break;
-            default:
-                break;
+                case APP_CFG_UNMOUNT_DISK:
+                    if(SYS_FS_Unmount("/mnt/myDrive") != 0)
+                    {
+                        /* The disk could not be un mounted. Try
+                         * un mounting again untill success. */
 
-            case APP_CFG_UNMOUNT_DISK:
-                if(SYS_FS_Unmount("/mnt/myDrive") != 0)
-                {
-                    /* The disk could not be un mounted. Try
-                     * un mounting again untill success. */
-
-                    appFatData.cfg_state = APP_UNMOUNT_DISK;
-                }
-                else
-                {
-                    /* UnMount was successful. */
-                    appFatData.cfg_state = APP_IDLE;
-                }
-                break;
-        } 
+                        appFatData.cfg_state = APP_CFG_UNMOUNT_DISK;
+                    }
+                    else
+                    {
+                        /* UnMount was successful. */
+                        appFatData.cfg_state = APP_CFG_IDLE;
+                    }
+                    break;
+            } 
+        }while((appFatData.cfg_state != APP_CFG_IDLE)||(appFatData.cfg_state != APP_CFG_ERROR));
     }
 }
 
