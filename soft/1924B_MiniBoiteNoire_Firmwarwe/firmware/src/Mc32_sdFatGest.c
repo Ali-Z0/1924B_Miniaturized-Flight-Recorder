@@ -107,9 +107,9 @@ void sd_fat_readConfig_task ( void )
             break;
             
         case APP_CFG_OPEN_READ_CONFIG_FILE:
-            appFatData.fileHandle = SYS_FS_FileOpen("CONFIG.txt",
+            appFatData.fileCfgHandle = SYS_FS_FileOpen("CONFIG.txt",
                     (SYS_FS_FILE_OPEN_READ));
-            if(appFatData.fileHandle == SYS_FS_HANDLE_INVALID)
+            if(appFatData.fileCfgHandle == SYS_FS_HANDLE_INVALID)
             {
                 /* No config file, write default config file */
                 sd_CFG_Write(5000, 500, 1, true);
@@ -127,12 +127,12 @@ void sd_fat_readConfig_task ( void )
 
         case APP_CFG_READ_CONFIG_FILE:                             
             /* If read was success, try writing to the new file */
-            if(SYS_FS_FileRead(appFatData.fileHandle, appFatData.cfg_data, 
-                    SYS_FS_FileSize(appFatData.fileHandle)) == -1)
+            if(SYS_FS_FileRead(appFatData.fileCfgHandle, appFatData.cfg_data, 
+                    SYS_FS_FileSize(appFatData.fileCfgHandle)) == -1)
             {
                 /* Write was not successful. Close the file
                  * and error out.*/
-                SYS_FS_FileClose(appFatData.fileHandle);
+                SYS_FS_FileClose(appFatData.fileCfgHandle);
                 appFatData.cfg_state = APP_CFG_ERROR;
             }
             else
@@ -143,7 +143,7 @@ void sd_fat_readConfig_task ( void )
 
         case APP_CFG_CLOSE_FILE:
             /* Close both files */
-            SYS_FS_FileClose(appFatData.fileHandle);
+            SYS_FS_FileClose(appFatData.fileCfgHandle);
              /* The test was successful. Lets idle. */
             appFatData.cfg_state = APP_CFG_UNMOUNT_DISK;
             break;
@@ -217,9 +217,9 @@ void sd_fat_logging_task ( void )
             break;
             
         case APP_WRITE_MEASURE_FILE:
-            appFatData.fileHandle = SYS_FS_FileOpen("MESURES.csv",
+            appFatData.fileMeasureHandle = SYS_FS_FileOpen("MESURES.csv",
                     (SYS_FS_FILE_OPEN_APPEND_PLUS));
-            if(appFatData.fileHandle == SYS_FS_HANDLE_INVALID)
+            if(appFatData.fileMeasureHandle == SYS_FS_HANDLE_INVALID)
             {
                 /* Could not open the file. Error out*/
                 appFatData.log_state = APP_ERROR;
@@ -233,11 +233,11 @@ void sd_fat_logging_task ( void )
 
         case APP_WRITE_TO_MEASURE_FILE:                             
             /* If read was success, try writing to the new file */
-            if(SYS_FS_FileStringPut(appFatData.fileHandle, appFatData.data) == -1)
+            if(SYS_FS_FileStringPut(appFatData.fileMeasureHandle, appFatData.data) == -1)
             {
                 /* Write was not successful. Close the file
                  * and error out.*/
-                SYS_FS_FileClose(appFatData.fileHandle);
+                SYS_FS_FileClose(appFatData.fileMeasureHandle);
                 appFatData.log_state = APP_ERROR;
             }
             else
@@ -248,7 +248,7 @@ void sd_fat_logging_task ( void )
 
         case APP_CLOSE_FILE:
             /* Close both files */
-            SYS_FS_FileClose(appFatData.fileHandle);
+            SYS_FS_FileClose(appFatData.fileMeasureHandle);
              /* The test was successful. Lets idle. */
             appFatData.log_state = APP_IDLE;
             break;
@@ -370,9 +370,9 @@ void sd_CFG_Write (uint32_t tLogGNSS_ms, uint32_t tLogIMU_ms, uint8_t ledState, 
                     break;
 
                 case APP_CFG_OPEN_WRITE_CONFIG_FILE:
-                    appFatData.fileHandle = SYS_FS_FileOpen("CONFIG.txt",
+                    appFatData.fileCfgHandle = SYS_FS_FileOpen("CONFIG.txt",
                             (SYS_FS_FILE_OPEN_WRITE_PLUS));
-                    if(appFatData.fileHandle == SYS_FS_HANDLE_INVALID)
+                    if(appFatData.fileCfgHandle == SYS_FS_HANDLE_INVALID)
                     {
                         /* Could not open the file. Error out*/
                         appFatData.cfg_state = APP_CFG_ERROR;
@@ -386,12 +386,12 @@ void sd_CFG_Write (uint32_t tLogGNSS_ms, uint32_t tLogIMU_ms, uint8_t ledState, 
 
                 case APP_CFG_WRITE_CONFIG_FILE:                             
                     /* If read was success, try writing to the new file */
-                    if(SYS_FS_FileWrite(appFatData.fileHandle, appFatData.cfg_data, 
+                    if(SYS_FS_FileWrite(appFatData.fileCfgHandle, appFatData.cfg_data, 
                             appFatData.nBytesToWrite == -1))
                     {
                         /* Write was not successful. Close the file
                          * and error out.*/
-                        SYS_FS_FileClose(appFatData.fileHandle);
+                        SYS_FS_FileClose(appFatData.fileCfgHandle);
                         appFatData.cfg_state = APP_CFG_ERROR;
                     }
                     else
@@ -402,7 +402,7 @@ void sd_CFG_Write (uint32_t tLogGNSS_ms, uint32_t tLogIMU_ms, uint8_t ledState, 
 
                 case APP_CFG_CLOSE_FILE:
                     /* Close both files */
-                    SYS_FS_FileClose(appFatData.fileHandle);
+                    SYS_FS_FileClose(appFatData.fileCfgHandle);
                      /* The test was successful. Lets unmount. */
                     appFatData.cfg_state = APP_CFG_UNMOUNT_DISK;
                     break;
@@ -460,6 +460,14 @@ APP_FAT_CONFIG_STATES sd_cfgGetState( void )
     return appFatData.cfg_state;
 }
 
+void sd_fat_init(void)
+{
+    appFatData.nBytesRead = 0;
+    appFatData.nBytesToWrite = 0;
+
+    appFatData.log_state = APP_MOUNT_DISK;
+    appFatData.cfg_state = APP_CFG_MOUNT_DISK;
+}
 
 /* *****************************************************************************
  End of File

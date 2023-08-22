@@ -162,7 +162,7 @@ void APP_Initialize ( void )
     BNO055_delay_msek(100);
     RST_IMUOn();
     BNO055_delay_msek(100);
-    
+        
     /* Place the App state machine in its initial state. */
     appData.state = APP_STATE_INIT;
     
@@ -203,8 +203,12 @@ void APP_Tasks ( void )
             initFifo(&usartFifoRx, FIFO_RX_SIZE, a_fifoRx, 0);
             initFifo(&usartFifoTx, FIFO_TX_SIZE, a_fifoTx, 0);
             
+            /* Init sd card parameters */
+            sd_fat_init();
             // Init system configuration
-            
+            do{
+                sd_fat_readConfig_task();
+            }while ((sd_cfgGetState() != APP_CFG_IDLE)||(sd_cfgGetState() != APP_CFG_ERROR));
             
             break;
         }

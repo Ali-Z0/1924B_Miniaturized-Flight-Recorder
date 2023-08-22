@@ -162,10 +162,10 @@ typedef enum
 typedef struct
 {
     /* SYS_FS File handle for 1st file */
-    SYS_FS_HANDLE      fileHandle;
+    SYS_FS_HANDLE      fileMeasureHandle;
 
     /* SYS_FS File handle for 2nd file */
-    SYS_FS_HANDLE      fileHandle1;
+    SYS_FS_HANDLE      fileCfgHandle;
 
     /* Application's current state */
     APP_FAT_LOG_STATES         log_state;
@@ -229,6 +229,8 @@ typedef struct
   Remarks:
     This routine must be called from SYS_Tasks() routine.
  */
+
+void sd_fat_init(void);
 
 void sd_fat_readConfig_task ( void );
 void sd_CFG_Write (uint32_t tLogGNSS_ms, uint32_t tLogIMU_ms, uint8_t ledState, bool skipMount);
