@@ -61,7 +61,8 @@ APP_FAT_DATA COHERENT_ALIGNED appFatData;
 // Section: Local Functions                                                   */
 /* ************************************************************************** */
 /* ************************************************************************** */
-
+// Function prototype
+static uint8_t parseConfig(char *cfgBuffer, unsigned long *tGnss, unsigned long *tImu, uint8_t *ledState);
 /* ************************************************************************** */
 
 
@@ -112,7 +113,7 @@ void sd_fat_readConfig_task ( void )
             if(appFatData.fileCfgHandle == SYS_FS_HANDLE_INVALID)
             {
                 /* No config file, write default config file */
-                sd_CFG_Write(5000, 500, 1, true);
+                sd_CFG_Write(T_INTERVAL_GNSS_DEFAULT, T_INTERVAL_IMU_DEFAULT, LED_STATE_DEFAULT, true);
                 
                 /* Re-try to open file as read */
                 appFatData.cfg_state = APP_CFG_OPEN_READ_CONFIG_FILE;         
@@ -326,7 +327,7 @@ void sd_GNSS_scheduleWrite (s_gnssData * pGnssData)
 void sd_CFG_Write (uint32_t tLogGNSS_ms, uint32_t tLogIMU_ms, uint8_t ledState, bool skipMount)
 {
     /* If sd Card available */
-    if(appFatData.cfg_state == APP_CFG_IDLE)
+    if((appFatData.cfg_state == APP_CFG_IDLE)||(appFatData.cfg_state == APP_CFG_OPEN_READ_CONFIG_FILE))
     {
         if(skipMount == false)
             /* Next config : mount disk */
@@ -336,7 +337,7 @@ void sd_CFG_Write (uint32_t tLogGNSS_ms, uint32_t tLogIMU_ms, uint8_t ledState, 
             appFatData.cfg_state = APP_CFG_OPEN_WRITE_CONFIG_FILE;
         
         /* Write the buffer */
-        sprintf(appFatData.cfg_data, "$LOG INTERVAL GNSS\t[ms]\t:\t%ud\r\n$LOG INTERVAL IMU\t[ms]\t:\t%ud\r\n$LED STATE\t[1/0]\t:\t%ud\r\n", tLogGNSS_ms, tLogIMU_ms, ledState);
+        sprintf(appFatData.cfg_data, "$LOG INTERVAL GNSS [ms] : %ud\r\n$LOG INTERVAL IMU [ms] : %ud\r\n$LED ENABLE [1/0] : %ud\r\n", tLogGNSS_ms, tLogIMU_ms, ledState);
         /* Compute the number of bytes to send */
         appFatData.nBytesToWrite = strlen(appFatData.cfg_data);
         
@@ -460,13 +461,98 @@ APP_FAT_CONFIG_STATES sd_cfgGetState( void )
     return appFatData.cfg_state;
 }
 
-void sd_fat_init(void)
+char* sd_cfgGetCfgBuffer( void )
 {
+    return appFatData.cfg_data;
+}
+
+void sd_fat_cfg_init(unsigned long *tGnss, unsigned long *tImu, uint8_t *ledState)
+{
+    // Config parser error
+    uint8_t parseError = 0;
+    unsigned long tGnssLocal = 0;
+    unsigned long tImuLocal = 0;
+    uint8_t ledStateLocal = 0;
+    
     appFatData.nBytesRead = 0;
     appFatData.nBytesToWrite = 0;
 
     appFatData.log_state = APP_MOUNT_DISK;
     appFatData.cfg_state = APP_CFG_MOUNT_DISK;
+    
+    // Read config routine, until error or success
+    do{
+        sd_fat_readConfig_task();
+    }while ((sd_cfgGetState() != APP_CFG_IDLE)||(sd_cfgGetState() != APP_CFG_ERROR));
+    
+    // If read config routine was a success
+    if(sd_cfgGetState() != APP_CFG_ERROR)
+        // Parse config buffer to get parameters
+        parseError = parseConfig(sd_cfgGetCfgBuffer(), &tGnssLocal, &tImuLocal, &ledStateLocal);
+    // If the parsing failed or the read config routine failed
+    if((parseError > 0)||(sd_cfgGetState() == APP_CFG_ERROR))
+    {
+        // Set default system parameters
+        *tGnss = T_INTERVAL_GNSS_DEFAULT;
+        *tImu = T_INTERVAL_IMU_DEFAULT;
+        *ledState = LED_STATE_DEFAULT;
+    }
+    else
+    {
+        *tGnss = tGnssLocal;
+        *tImu = tImuLocal;
+        *ledState = ledStateLocal;
+    }
+}
+
+static uint8_t parseConfig(char *cfgBuffer, unsigned long *tGnss, unsigned long *tImu, uint8_t *ledState)
+{
+    char *ptBufferHead;
+    char *ptBufferTail;
+    char ptTrame[10];
+    uint8_t error = 0;
+        
+    // Locate the head and tail of the first data
+    ptBufferHead = strstr(cfgBuffer, " \t");
+    ptBufferTail = strstr(cfgBuffer, "\r\n");
+    // Check if the pointers are corrects
+    if((ptBufferHead != NULL)&&(ptBufferTail != NULL)&&(ptBufferHead < ptBufferTail)){
+        // Copy the data between the head and the tail in a sub-pointer
+        strncpy(ptTrame, (ptBufferHead+2), (ptBufferTail-ptBufferHead));
+        // Convert the character to value
+        *tGnss = (uint32_t) atoi(ptTrame);
+    }
+    else 
+        error++;
+    
+    // Locate the head and tail of the first data
+    ptBufferHead = strstr(ptBufferTail, " \t");
+    ptBufferTail = strstr(ptBufferHead, "\r\n");
+    // Check if the pointers are corrects
+    if((ptBufferHead != NULL)&&(ptBufferTail != NULL)&&(ptBufferHead < ptBufferTail)){
+        // Copy the data between the head and the tail in a sub-pointer
+        strncpy(ptTrame, (ptBufferHead+2), (ptBufferTail-ptBufferHead));
+        // Convert the character to value
+        *tImu = (uint32_t) atoi(ptTrame);
+    }
+    else
+        error++;
+    
+    // Locate the head and tail of the first data
+    ptBufferHead = strstr(ptBufferTail, " \t");
+    ptBufferTail = (ptBufferHead + 3);
+    // Check if the pointers are corrects
+    if((ptBufferHead != NULL)&&(ptBufferTail != NULL)&&(ptBufferHead < ptBufferTail)){
+        // Copy the data between the head and the tail in a sub-pointer
+        strncpy(ptTrame, (ptBufferHead+2), (ptBufferTail-ptBufferHead));
+        // Convert the character to value
+        *ledState = (uint32_t) atoi(ptTrame);
+    }
+    else
+        error++;
+    
+    return error;
+    
 }
 
 /* *****************************************************************************

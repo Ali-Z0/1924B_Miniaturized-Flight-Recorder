@@ -72,6 +72,10 @@ extern "C" {
 #define TIME_OUT            80000000U
 #define TIME_POWER_OFF      500
 #define NB_MEASURES         2
+  
+#define T_INTERVAL_GNSS_DEFAULT     5000UL
+#define T_INTERVAL_IMU_DEFAULT      500UL
+#define LED_STATE_DEFAULT           (uint8_t)1
     
 // *****************************************************************************
 // *****************************************************************************
@@ -133,6 +137,8 @@ typedef struct
 {
     /* The application's current state */
     APP_STATES state;
+    
+    uint8_t ledState;
 
     /* TODO: Define any additional data used by the application. */
 

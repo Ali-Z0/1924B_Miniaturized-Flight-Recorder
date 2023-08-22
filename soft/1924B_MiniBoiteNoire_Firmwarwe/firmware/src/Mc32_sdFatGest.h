@@ -230,11 +230,12 @@ typedef struct
     This routine must be called from SYS_Tasks() routine.
  */
 
-void sd_fat_init(void);
+void sd_fat_cfg_init(unsigned long *tGnss, unsigned long *tImu, uint8_t *ledState);
 
 void sd_fat_readConfig_task ( void );
 void sd_CFG_Write (uint32_t tLogGNSS_ms, uint32_t tLogIMU_ms, uint8_t ledState, bool skipMount);
 APP_FAT_CONFIG_STATES sd_cfgGetState( void );
+char* sd_cfgGetCfgBuffer( void );
 
 void sd_fat_logging_task ( void );
 APP_FAT_LOG_STATES sd_logGetState( void );

@@ -88,6 +88,7 @@ S_SwitchDescriptor switchDescr;
 APP_DATA appData;
 TIMER_DATA timeData;
 
+
 // *****************************************************************************
 // *****************************************************************************
 // Section: Application Callback Functions
@@ -146,14 +147,7 @@ void APP_Initialize ( void )
 {
     /* Keep the device ON */
     PWR_HOLDOn();
-    /* In ms */
-    timeData.measPeriod[BNO055_idx] = 500;
-    timeData.measPeriod[BNO055_idx] = 5000;
-    
-    /* Peripherals init */
-    DRV_TMR0_Start();
-    DRV_TMR1_Start();
-    
+       
     /* Init i2c bus */
     i2c_init(1);
     
@@ -203,12 +197,13 @@ void APP_Tasks ( void )
             initFifo(&usartFifoRx, FIFO_RX_SIZE, a_fifoRx, 0);
             initFifo(&usartFifoTx, FIFO_TX_SIZE, a_fifoTx, 0);
             
-            /* Init sd card parameters */
-            sd_fat_init();
-            // Init system configuration
-            do{
-                sd_fat_readConfig_task();
-            }while ((sd_cfgGetState() != APP_CFG_IDLE)||(sd_cfgGetState() != APP_CFG_ERROR));
+            /* Init sd card parameters and read/create config File */
+            sd_fat_cfg_init(&timeData.measPeriod[BNO055_idx], &timeData.measPeriod[BNO055_idx], &appData.ledState);
+            
+            /* Start timers */
+            DRV_TMR0_Start();
+            DRV_TMR1_Start();
+            
             
             break;
         }
