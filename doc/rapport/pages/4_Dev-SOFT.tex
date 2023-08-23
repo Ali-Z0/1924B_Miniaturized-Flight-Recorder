@@ -2,17 +2,19 @@
 
 Lors de cette section, nous décrirons le processus de développement du firmware du PIC32. Les décisions prises seront expliquées et les différents algorithmes seront illustrés et décrits.
 
+En premier lieux nous allons analyser lors de la section \ref{ssec:ProtocolGNSS} comment traiter les données du \gls{gnss}, il s'agit d'un élément critique.
+
 
 \subsection{Protocoles du GNSS} \label{ssec:ProtocolGNSS}
 Il existe différents protocoles pour le format de données de localisation. Le \textbf{CAM-M8C-0} supporte plusieurs protocoles, visibles sur la figure \ref{fig:protocolsGNSS} :
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=.8\linewidth]{../figures/code/Protocols}
+	\includegraphics[width=.75\linewidth]{../figures/code/Protocols}
 	\caption{Protocoles disponibles.}
 	\source{\Gls{datasheet} du \href{https://content.u-blox.com/sites/default/files/CAM-M8-FW3\_DataSheet\_\%28UBX-15031574\%29.pdf}{CAM-M8C-0}}
 	\label{fig:protocolsGNSS}
-\end{figure}
+\end{figure} \vspace{-4mm}
 
 \begin{tabularx}{\textwidth}{llX}
 	\textbf{NMEA}& : & Norme établie par la \textit{National Marine Electronics Association}. Elle suit un format \fbox{\textbf{ASCII}}. \\
@@ -21,11 +23,11 @@ Il existe différents protocoles pour le format de données de localisation. Le 
 \end{tabularx} 
 
 
-Le \textbf{CAM-M8C-0} est configuré, par défaut, pour envoyer des messages au format NMEA, comme illustré sur la figure \ref{fig:default-messages}.
+Le \textbf{CAM-M8C-0} est configuré, par défaut, pour envoyer des messages au format NMEA, comme illustré sur la figure \ref{fig:default-messages}. \vspace{+2mm}
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[width=0.8\linewidth]{../figures/code/Default-messages}
+	\includegraphics[width=0.7\linewidth]{../figures/code/Default-messages}
 	\caption{Protocole par défaut.}
 	\source{\Gls{datasheet} du \href{https://content.u-blox.com/sites/default/files/CAM-M8-FW3\_DataSheet\_\%28UBX-15031574\%29.pdf}{CAM-M8C-0}}
 	\label{fig:default-messages}
@@ -48,10 +50,10 @@ Ceux-ci sont décris dans le \href{https://www.ekf.de/c/cgps/cg2/inf/nmea_refere
 	\label{fig:messages-nmea}
 \end{figure}
 
-Les différents messages de la figure \ref{fig:messages-nmea} présentent des différentes données sous divers formats. Les messages peuvent être activés ou désactivés en configurant le module u-blox
+Les différents messages de la figure \ref{fig:messages-nmea} présentent des différentes données sous divers formats. Les messages peuvent être activés ou désactivés en configurant le module u-blox.
 
 \subsubsection{Interprétation des données NMEA}
-Avant d'avoir le \gls{pcb} monté et exploitable, sachant que nous connaissons le protocole par défaut du module, nous pouvons analyser des données \textbf{NMEA} pour mieux les comprendre et les traiter par la suite. Pour se faire, le site \href{https://www.nmeagen.org/}{https://www.nmeagen.org/}, permet de générer des coordonnées avec le protocole \textbf{NMEA}.
+Avant d'avoir le \gls{pcb} monté et exploitable, sachant que nous connaissons le protocole par défaut du module, nous pouvons analyser des données \textbf{NMEA} pour mieux les comprendre et les traiter par la suite. Pour ce faire, le site \href{https://www.nmeagen.org/}{https://www.nmeagen.org/} permet de générer des coordonnées avec le protocole \textbf{NMEA}.
 
 \begin{figure}[h]
 	\centering
@@ -61,7 +63,7 @@ Avant d'avoir le \gls{pcb} monté et exploitable, sachant que nous connaissons l
 	\label{fig:map-localisation}
 \end{figure}
 
-Sur la figure \ref{fig:parsed-nmea}, les messages de la figure \ref{fig:map-localisation} sont décodés.
+Sur la figure \ref{fig:parsed-nmea}, les messages de la figure \ref{fig:map-localisation} sont décodés via un \href{https://swairlearn.bluecover.pt/nmea_analyser}{analyseur NMEA en ligne}.
 
 \begin{figure}[h]
 	\centering
@@ -74,6 +76,113 @@ Sur la figure \ref{fig:parsed-nmea}, les messages de la figure \ref{fig:map-loca
 \clearpage
 
 \subsubsection{Code décodeur de trame NMEA}
+Afin de développer le code du décodeur \textbf{NMEA}, la librairie \href{https://github.com/kosma/minmea}{\textbf{minmea}} de licence libre, a pu être utilisée, modifiée et adaptée. Un algorithme a ensuite été mis en place :
+
+\begin{itemize}
+	\item[\oldstylenums{1}] Lecture du type de message (\textbf{GBS, GGA, GLL, GSA, GST, GSV, RMC, VTG, ZDA});
+	\item[\oldstylenums{2}] Parsing des valeurs correspondantes à l'ID du message;
+	\item[\oldstylenums{3}] Sauvegarde des valeurs dans une structure.
+\end{itemize}
+
+
+\begin{code}
+\caption{gnss\_posGet\_nmea(...), décodage \textbf{NMEA}.}
+\label{code:posget-nmea}
+\begin{minted}[breaklines]{c}
+// Get message ID, strict
+*msg_id = minmea_sentence_id(message, true);
+// Parse message depending on ID
+if (*msg_id == MINMEA_SENTENCE_GBS)
+	minmea_parse_gbs(&sentences->gbs, message);
+else if (*msg_id == MINMEA_SENTENCE_GGA)
+	minmea_parse_gga(&sentences->gga, message);
+else if ...
+\end{minted}
+\end{code}
+
+Dans le code \ref{code:posget-nmea}, on fait appel à une fonction qui va masquer les caractères du type du message. Ensuite, selon le message dont il s'agit, on le décode de différentes façons.
+
+\begin{code}
+\caption{minmea\_parse\_gbs(...), décodage message \textbf{GBS}.}
+\label{code:parse-gbs}
+\begin{minted}[breaklines]{c}
+bool minmea_parse_gbs(struct minmea_sentence_gbs *frame, const char *sentence)
+{
+	// $GNGBS,170556.00,3.0,2.9,8.3,,,,*5C
+	char type[6];
+	if (!minmea_scan(sentence, "tTfffifff",
+			type,
+			&frame->time,
+			&frame->err_latitude,
+			&frame->err_longitude,
+			&frame->err_altitude,
+			&frame->svid,
+			&frame->prob,
+			&frame->bias,
+			&frame->stddev
+			))
+		return false;
+	if (strcmp(type+2, "GBS"))
+		return false;
+	return true;
+}
+\end{minted}
+\end{code}
+
+Dans le code \ref{code:parse-gbs}, on masque les éléments du message selon son format, d'une manière similaire à la fonction standard \textit{\textbf{scanf(...)}}.
+
+\clearpage
+
+Les données spécifique au message \textbf{GBS} sont ensuite stockées dans une structure, que l'on peut observer dans le code \ref{code:struct-gbs}.
+
+\begin{code}
+\caption{Structure \textbf{GBS}.}
+\label{code:struct-gbs}
+\begin{minted}[breaklines]{c}
+struct minmea_sentence_gbs {
+	struct minmea_time time;
+	struct minmea_float err_latitude;
+	struct minmea_float err_longitude;
+	struct minmea_float err_altitude;
+	int svid;
+	struct minmea_float prob;
+	struct minmea_float bias;
+	struct minmea_float stddev;
+};
+\end{minted}
+\end{code}
+
+Sachant que plusieurs types de messages peuvent être interceptés, chacune des structures des différents formats de messages est elle-même stockée dans une structure que l'on peut observer dans le code \ref{code:struct-msgs}.
+
+\begin{code}
+\caption{Structures messages.}
+\label{code:struct-msgs}
+\begin{minted}[breaklines]{c}
+typedef struct minmea_messages{
+	struct minmea_sentence_gbs gbs;
+	struct minmea_sentence_rmc rmc;
+	struct minmea_sentence_gga gga;
+	struct minmea_sentence_gll gll;
+	struct minmea_sentence_gst gst;
+	struct minmea_sentence_gsa gsa;
+	struct minmea_sentence_gsv gsv;
+	struct minmea_sentence_vtg vtg;
+	struct minmea_sentence_zda zda;
+}minmea_messages;
+\end{minted}
+\end{code}
+
+Les données sont ensuite traitées dans l'application. Pour paramétrer le \textbf{CAM-M8C-0}, des messages \textbf{UBX} peuvent être envoyés. Pour ce faire, des éléments de la librairie \href{https://github.com/u-blox/ubxlib}{\textit{ubxlib}} peuvent être repris, notamment les fonctions d'encodage et de décodage des messages \textbf{UBX}.
+
+
+
+\subsection{Configuration des périphériques}
+Les périphériques utilisés par le microcontrôleur doivent êtres paramétrés et initialisés. Le configurateur \gls{harmony} permet de le faire simplement.
+
+
+%\includesvg{../figures/code/périphériques.svg}
+
+
 
 
 
