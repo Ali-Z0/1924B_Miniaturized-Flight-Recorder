@@ -179,10 +179,96 @@ Les données sont ensuite traitées dans l'application. Pour paramétrer le \tex
 \subsection{Configuration des périphériques}
 Les périphériques utilisés par le microcontrôleur doivent êtres paramétrés et initialisés. Le configurateur \gls{harmony} permet de le faire simplement.
 
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=.5\linewidth]{../figures/code/périphériques}
+\end{figure}
 
-%\includesvg{../figures/code/périphériques.svg}
+\clearpage
+
+\subsubsection{Timers}
+Lors de cette section, 2 timers vont être configurés, ceux-ci ont des utilités différentes :
+
+\begin{table}[h]
+\begin{tabular}{lll}
+	\textbf{Timer 1} & sert pour les attentes bloquantes précises. & 1 [$ms$] \\
+	\textbf{Timer 2} & gère les délais entre les mesures et l'affichage des LEDs. & 10 [$ms$] \\
+\end{tabular} 
+\end{table} \vspace*{-5pt}
+
+\underline{Dimensionnement timer 1}
+
+$f_{sys} = 48\;MHz$
+
+$f_{per} = 1\;kHz$
+
+$presc = 1\;[-]$ \vspace*{-5pt}
+
+\begin{equation*}
+	C_{T1} = \frac{f_{sys}}{f_{per}*presc} - 1 = \frac{48*10^{6}}{1*10^{3}} - 1 = 47'999\;[-]
+\end{equation*}
+
+\underline{Dimensionnement timer 2}
+
+$f_{sys} = 48\;MHz$
+
+$f_{per} = 100\;Hz$
+
+$presc = 16\;[-]$ \vspace*{-5pt}
+
+\begin{equation*}
+	C_{T1} = \frac{f_{sys}}{f_{per}*presc} - 1 = \frac{48*10^{6}}{100*16} - 1 = 29'999\;[-]
+\end{equation*}
+
+\begin{figure}[h]
+	\centering
+	\fbox{\includegraphics[width=.4\linewidth]{../figures/code/harmony/timers}}
+	\caption{Configuration des timers.}
+	\source{Auteur}
+	\label{fig:timers}
+\end{figure}
 
 
+\begin{code}
+\caption{Interruption \textbf{timer 1}, 1 [$ms$]}
+\label{code:int-t1}
+\begin{minted}[breaklines]{c}
+void delayTimer_callback(){
+	/* Increment delay timer */
+	timeData.delayCnt ++;
+}
+\end{minted}
+\end{code}
 
+\begin{code}
+\caption{Interruption \textbf{timer 2}, 10 [$ms$]}
+\label{code:int-t2}
+\begin{minted}[breaklines]{c}
+void stateTimer_callback()
+{
+	/* Increment utility timers */
+	timeData.ledCnt ++;
+	timeData.measCnt[BNO055_idx] ++;
+	timeData.measCnt[GNSS_idx] ++;
+	timeData.tmrTickFlag = true;
+	/* If button is pressed, count pressed time */
+	if(timeData.flagCntBtnPressed){
+		timeData.cntBtnPressed++;
+	}
+	/* Do debounce every 10 ms */
+	DoDebounce(&switchDescr, ButtonMFStateGet());
+	/* Start a measure set each 100ms */        
+	if ( ( timeData.measCnt[BNO055_idx] % (timeData.measPeriod[BNO055_idx]/10) ) == 0)
+	timeData.measTodo[BNO055_idx] = true;
+	
+	/* Start a measure set each 100ms */        
+	if ( ( timeData.measCnt[GNSS_idx] % (timeData.measPeriod[GNSS_idx]/10) ) == 0)
+	timeData.measTodo[GNSS_idx] = true;
+}	
+\end{minted}
+\end{code}	
 
+Dans le code \ref{code:int-t2}, 
+
+\clearpage
 

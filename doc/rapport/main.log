@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.8.7)  23 AUG 2023 13:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.8.7)  23 AUG 2023 16:38
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1064,7 +1064,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip66
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 55.
+Package hyperref Info: Option `colorlinks' set `true' on input line 54.
 
 (c:/texlive/2023/texmf-dist/tex/latex/glossaries-extra/glossaries-extra.sty
 Package: glossaries-extra 2023/06/28 v1.52 (NLCT)
@@ -1302,7 +1302,7 @@ in.aex <nul: /p x=^%~$PATH:i>> main.aex)...executed.
 
 runsystem(del main.aex)...executed.
 
-LaTeX Font Info:    Trying to load font information for T1+ptm on input line 73
+LaTeX Font Info:    Trying to load font information for T1+ptm on input line 72
 .
 
 (c:/texlive/2023/texmf-dist/tex/latex/psnfss/t1ptm.fd
@@ -1310,24 +1310,24 @@ File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 ) (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
 
 (c:/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -1377,11 +1377,11 @@ LaTeX Font Info:    ... okay on input line 73.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \degres on input line 73.
+LaTeX Info: Redefining \degres on input line 72.
 Package french.ldf Info: Setting StandardEnumerateEnv=true for
 (french.ldf)             compatibility with enumerate package,
-(french.ldf)             reported on input line 73.
-LaTeX Info: Redefining \up on input line 73.
+(french.ldf)             reported on input line 72.
+LaTeX Info: Redefining \up on input line 72.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
@@ -1393,15 +1393,15 @@ Package caption Info: supertabular package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \symgns@font=\mathgroup8
 LaTeX Font Info:    Overwriting symbol font `gns@font' in version `bold'
-(Font)                  TS1/ptm/m/n --> TS1/ptm/b/n on input line 73.
-Package gensymb Info: Math companion symbols declared on input line 73.
-LaTeX Info: Redefining \degree on input line 73.
-LaTeX Info: Redefining \celsius on input line 73.
+(Font)                  TS1/ptm/m/n --> TS1/ptm/b/n on input line 72.
+Package gensymb Info: Math companion symbols declared on input line 72.
+LaTeX Info: Redefining \degree on input line 72.
+LaTeX Info: Redefining \celsius on input line 72.
 Package gensymb Info: Using text companion symbols for \degree, \celsius and \p
-erthousand on input line 73.
-LaTeX Info: Redefining \ohm on input line 73.
-Package gensymb Info: Using \textohm for \ohm on input line 73.
-Package gensymb Info: Using \textmu for \micro on input line 73.
+erthousand on input line 72.
+LaTeX Info: Redefining \ohm on input line 72.
+Package gensymb Info: Using \textohm for \ohm on input line 72.
+Package gensymb Info: Using \textmu for \micro on input line 72.
 
 (c:/texlive/2023/texmf-dist/tex/latex/pdflscape/pdflscape.sty
 Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
@@ -1416,7 +1416,7 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ))
 \c@lstlisting=\count443
-Package hyperref Info: Link coloring ON on input line 73.
+Package hyperref Info: Link coloring ON on input line 72.
  (./main.out)
 (./main.out)
 \@outlinefile=\write6
@@ -1430,7 +1430,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.83 \clearpage
+l.82 \clearpage
                 [1
 
 ] (./main.toc
@@ -1509,7 +1509,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [4
 
 ]
-<./ETML-ES-LOGO.png, id=354, 200.75pt x 200.75pt>
+<./ETML-ES-LOGO.png, id=359, 200.75pt x 200.75pt>
 File: ./ETML-ES-LOGO.png Graphic file (type png)
 <use ./ETML-ES-LOGO.png>
 Package pdftex.def Info: ./ETML-ES-LOGO.png  used on input line 6.
@@ -1529,7 +1529,7 @@ Overfull \hbox (2.28003pt too wide) in paragraph at lines 19--42
 [] [] 
  []
 
-<../figures/cdc/schema_principe.jpg, id=363, 2137.9875pt x 2475.2475pt>
+<../figures/cdc/schema_principe.jpg, id=368, 2137.9875pt x 2475.2475pt>
 File: ../figures/cdc/schema_principe.jpg Graphic file (type jpg)
 <use ../figures/cdc/schema_principe.jpg>
 Package pdftex.def Info: ../figures/cdc/schema_principe.jpg  used on input line
@@ -1555,12 +1555,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [6 <../figures/cdc/schema_principe.jpg>]
-<../figures/cdc/planif.png, id=377, 3012.0028pt x 1509.38907pt>
+<../figures/cdc/planif.png, id=382, 3012.0028pt x 1509.38907pt>
 File: ../figures/cdc/planif.png Graphic file (type png)
 <use ../figures/cdc/planif.png>
 Package pdftex.def Info: ../figures/cdc/planif.png  used on input line 80.
 (pdftex.def)             Requested size: 452.9679pt x 226.97438pt.
-<../figures/cdc/planif_theorique.png, id=378, 1383.66937pt x 336.50719pt>
+<../figures/cdc/planif_theorique.png, id=383, 1383.66937pt x 336.50719pt>
 File: ../figures/cdc/planif_theorique.png Graphic file (type png)
 <use ../figures/cdc/planif_theorique.png>
 Package pdftex.def Info: ../figures/cdc/planif_theorique.png  used on input lin
@@ -1579,7 +1579,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
  <../figures/cdc/planif.png> <../figures/cdc/planif_theorique.png>])
 (./pages/1_Pre-etude.tex
-<../figures/cdc/blocs_grossiers_no_antenna.jpg, id=389, 4573.085pt x 2489.3pt>
+<../figures/cdc/blocs_grossiers_no_antenna.jpg, id=394, 4573.085pt x 2489.3pt>
 File: ../figures/cdc/blocs_grossiers_no_antenna.jpg Graphic file (type jpg)
 <use ../figures/cdc/blocs_grossiers_no_antenna.jpg>
 Package pdftex.def Info: ../figures/cdc/blocs_grossiers_no_antenna.jpg  used on
@@ -1597,13 +1597,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [8
 
  <../figures/cdc/blocs_grossiers_no_antenna.jpg>]
-<../figures/pre_etude/familles_pic32.png, id=402, 1034.36438pt x 727.21687pt>
+<../figures/pre_etude/familles_pic32.png, id=407, 1034.36438pt x 727.21687pt>
 File: ../figures/pre_etude/familles_pic32.png Graphic file (type png)
 <use ../figures/pre_etude/familles_pic32.png>
 Package pdftex.def Info: ../figures/pre_etude/familles_pic32.png  used on input
  line 46.
 (pdftex.def)             Requested size: 294.42636pt x 206.99265pt.
-<../figures/pre_etude/Carac_PIC32.png, id=407, 661.72218pt x 271.0125pt>
+<../figures/pre_etude/Carac_PIC32.png, id=412, 661.72218pt x 271.0125pt>
 File: ../figures/pre_etude/Carac_PIC32.png Graphic file (type png)
 <use ../figures/pre_etude/Carac_PIC32.png>
 Package pdftex.def Info: ../figures/pre_etude/Carac_PIC32.png  used on input li
@@ -1622,7 +1622,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
  <../figures/pre_etude/familles_pic32.png> <../figures/pre_etude/Carac_PIC32.pn
 g>]
-<../figures/pre_etude/BNO055_Adafruit.png, id=417, 338.01282pt x 269.50688pt>
+<../figures/pre_etude/BNO055_Adafruit.png, id=422, 338.01282pt x 269.50688pt>
 File: ../figures/pre_etude/BNO055_Adafruit.png Graphic file (type png)
 <use ../figures/pre_etude/BNO055_Adafruit.png>
 Package pdftex.def Info: ../figures/pre_etude/BNO055_Adafruit.png  used on inpu
@@ -1640,13 +1640,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [10
 
  <../figures/pre_etude/BNO055_Adafruit.png>]
-<../figures/pre_etude/img_gnss.png, id=432, 1035.87pt x 472.01344pt>
+<../figures/pre_etude/img_gnss.png, id=437, 1035.87pt x 472.01344pt>
 File: ../figures/pre_etude/img_gnss.png Graphic file (type png)
 <use ../figures/pre_etude/img_gnss.png>
 Package pdftex.def Info: ../figures/pre_etude/img_gnss.png  used on input line 
 125.
 (pdftex.def)             Requested size: 271.7835pt x 123.84416pt.
-<../figures/pre_etude/Comp_GNSS.png, id=435, 685.8122pt x 547.2947pt>
+<../figures/pre_etude/Comp_GNSS.png, id=440, 685.8122pt x 547.2947pt>
 File: ../figures/pre_etude/Comp_GNSS.png Graphic file (type png)
 <use ../figures/pre_etude/Comp_GNSS.png>
 Package pdftex.def Info: ../figures/pre_etude/Comp_GNSS.png  used on input line
@@ -1665,7 +1665,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
  <../figures/pre_etude/img_gnss.png> <../figures/pre_etude/Comp_GNSS.png (PNG c
 opy)>]
-<../figures/pre_etude/CarteSD_Illustration.png, id=446, 376.40625pt x 376.40625
+<../figures/pre_etude/CarteSD_Illustration.png, id=451, 376.40625pt x 376.40625
 pt>
 File: ../figures/pre_etude/CarteSD_Illustration.png Graphic file (type png)
 <use ../figures/pre_etude/CarteSD_Illustration.png>
@@ -1695,19 +1695,19 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [13
 
 ]
-<../figures/pre_etude/batt.png, id=480, 481.8pt x 274.77657pt>
+<../figures/pre_etude/batt.png, id=485, 481.8pt x 274.77657pt>
 File: ../figures/pre_etude/batt.png Graphic file (type png)
 <use ../figures/pre_etude/batt.png>
 Package pdftex.def Info: ../figures/pre_etude/batt.png  used on input line 240.
 
 (pdftex.def)             Requested size: 249.13371pt x 142.0838pt.
-<../figures/pre_etude/Carac_Batt.png, id=481, 743.77875pt x 289.08pt>
+<../figures/pre_etude/Carac_Batt.png, id=486, 743.77875pt x 289.08pt>
 File: ../figures/pre_etude/Carac_Batt.png Graphic file (type png)
 <use ../figures/pre_etude/Carac_Batt.png>
 Package pdftex.def Info: ../figures/pre_etude/Carac_Batt.png  used on input lin
 e 248.
 (pdftex.def)             Requested size: 317.07614pt x 123.23892pt.
-<../figures/pre_etude/MCP.png, id=482, 481.8pt x 481.8pt>
+<../figures/pre_etude/MCP.png, id=487, 481.8pt x 481.8pt>
 File: ../figures/pre_etude/MCP.png Graphic file (type png)
 <use ../figures/pre_etude/MCP.png>
 Package pdftex.def Info: ../figures/pre_etude/MCP.png  used on input line 257.
@@ -1725,7 +1725,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
  <../figures/pre_etude/batt.png> <../figures/pre_etude/Carac_Batt.png (PNG copy
 )> <../figures/pre_etude/MCP.png>]
-<../figures/pre_etude/Diagramme_Etat_Preetude.jpg, id=501, 2715.14375pt x 943.5
+<../figures/pre_etude/Diagramme_Etat_Preetude.jpg, id=506, 2715.14375pt x 943.5
 25pt>
 File: ../figures/pre_etude/Diagramme_Etat_Preetude.jpg Graphic file (type jpg)
 <use ../figures/pre_etude/Diagramme_Etat_Preetude.jpg>
@@ -1755,7 +1755,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [16
 
 ]
-<../figures/etude/sch/BLOCS.jpg, id=542, 4386.3875pt x 1816.7875pt>
+<../figures/etude/sch/BLOCS.jpg, id=547, 4386.3875pt x 1816.7875pt>
 File: ../figures/etude/sch/BLOCS.jpg Graphic file (type jpg)
 <use ../figures/etude/sch/BLOCS.jpg>
 Package pdftex.def Info: ../figures/etude/sch/BLOCS.jpg  used on input line 11.
@@ -1771,18 +1771,18 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [17 <../figures/etude/sch/BLOCS.jpg>]
-<../figures/etude/sch/MCU.jpg, id=562, 4386.3875pt x 2146.0175pt>
+<../figures/etude/sch/MCU.jpg, id=568, 4386.3875pt x 2146.0175pt>
 File: ../figures/etude/sch/MCU.jpg Graphic file (type jpg)
 <use ../figures/etude/sch/MCU.jpg>
 Package pdftex.def Info: ../figures/etude/sch/MCU.jpg  used on input line 56.
 (pdftex.def)             Requested size: 271.7835pt x 132.94691pt.
-<../figures/etude/sch/MCU-HARMONY.jpg, id=563, 3129.6925pt x 3087.535pt>
+<../figures/etude/sch/MCU-HARMONY.jpg, id=569, 3129.6925pt x 3087.535pt>
 File: ../figures/etude/sch/MCU-HARMONY.jpg Graphic file (type jpg)
 <use ../figures/etude/sch/MCU-HARMONY.jpg>
 Package pdftex.def Info: ../figures/etude/sch/MCU-HARMONY.jpg  used on input li
 ne 63.
 (pdftex.def)             Requested size: 135.89174pt x 134.03343pt.
-<../figures/etude/sch/Prog-Reset.jpg, id=569, 4378.3575pt x 2336.73pt>
+<../figures/etude/sch/Prog-Reset.jpg, id=575, 4378.3575pt x 2336.73pt>
 File: ../figures/etude/sch/Prog-Reset.jpg Graphic file (type jpg)
 <use ../figures/etude/sch/Prog-Reset.jpg>
 Package pdftex.def Info: ../figures/etude/sch/Prog-Reset.jpg  used on input lin
@@ -1801,12 +1801,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
  <../figures/etude/sch/MCU.jpg> <../figures/etude/sch/MCU-HARMONY.jpg> <../figu
 res/etude/sch/Prog-Reset.jpg>]
-<../figures/etude/DIM-LED.jpg, id=580, 240.28352pt x 91.13852pt>
+<../figures/etude/DIM-LED.jpg, id=585, 240.28352pt x 91.13852pt>
 File: ../figures/etude/DIM-LED.jpg Graphic file (type jpg)
 <use ../figures/etude/DIM-LED.jpg>
 Package pdftex.def Info: ../figures/etude/DIM-LED.jpg  used on input line 94.
 (pdftex.def)             Requested size: 407.66833pt x 154.62747pt.
-<../figures/etude/sch/LED-Vie.jpg, id=585, 2259.44125pt x 3071.475pt>
+<../figures/etude/sch/LED-Vie.jpg, id=590, 2259.44125pt x 3071.475pt>
 File: ../figures/etude/sch/LED-Vie.jpg Graphic file (type jpg)
 <use ../figures/etude/sch/LED-Vie.jpg>
 Package pdftex.def Info: ../figures/etude/sch/LED-Vie.jpg  used on input line 1
@@ -1824,18 +1824,18 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [19
 
  <../figures/etude/DIM-LED.jpg> <../figures/etude/sch/LED-Vie.jpg>]
-<../figures/etude/sch/Carte-SD.jpg, id=595, 4467.69125pt x 2974.11125pt>
+<../figures/etude/sch/Carte-SD.jpg, id=600, 4467.69125pt x 2974.11125pt>
 File: ../figures/etude/sch/Carte-SD.jpg Graphic file (type jpg)
 <use ../figures/etude/sch/Carte-SD.jpg>
 Package pdftex.def Info: ../figures/etude/sch/Carte-SD.jpg  used on input line 
 126.
 (pdftex.def)             Requested size: 226.48395pt x 150.75642pt.
-<../figures/etude/sch/IMU.jpg, id=597, 4355.27126pt x 2789.42125pt>
+<../figures/etude/sch/IMU.jpg, id=602, 4355.27126pt x 2789.42125pt>
 File: ../figures/etude/sch/IMU.jpg Graphic file (type jpg)
 <use ../figures/etude/sch/IMU.jpg>
 Package pdftex.def Info: ../figures/etude/sch/IMU.jpg  used on input line 139.
 (pdftex.def)             Requested size: 226.48395pt x 145.055pt.
-<../figures/etude/sch/GNSS.jpg, id=600, 4401.44376pt x 2495.3225pt>
+<../figures/etude/sch/GNSS.jpg, id=605, 4401.44376pt x 2495.3225pt>
 File: ../figures/etude/sch/GNSS.jpg Graphic file (type jpg)
 <use ../figures/etude/sch/GNSS.jpg>
 Package pdftex.def Info: ../figures/etude/sch/GNSS.jpg  used on input line 151.
@@ -1853,7 +1853,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [20
 
  <../figures/etude/sch/Carte-SD.jpg> <../figures/etude/sch/IMU.jpg>]
-<../figures/etude/sch/USB-FTDI.jpg, id=614, 4392.41pt x 2623.8025pt>
+<../figures/etude/sch/USB-FTDI.jpg, id=619, 4392.41pt x 2623.8025pt>
 File: ../figures/etude/sch/USB-FTDI.jpg Graphic file (type jpg)
 <use ../figures/etude/sch/USB-FTDI.jpg>
 Package pdftex.def Info: ../figures/etude/sch/USB-FTDI.jpg  used on input line 
@@ -1869,7 +1869,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [21 <../figures/etude/sch/GNSS.jpg> <../figures/etude/sch/USB-FTDI.jpg>]
-<../figures/etude/sch/CHRG-BAT.jpg, id=622, 4391.40625pt x 2309.62875pt>
+<../figures/etude/sch/CHRG-BAT.jpg, id=627, 4391.40625pt x 2309.62875pt>
 File: ../figures/etude/sch/CHRG-BAT.jpg Graphic file (type jpg)
 <use ../figures/etude/sch/CHRG-BAT.jpg>
 Package pdftex.def Info: ../figures/etude/sch/CHRG-BAT.jpg  used on input line 
@@ -1887,7 +1887,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [22
 
  <../figures/etude/sch/CHRG-BAT.jpg>]
-<../figures/etude/sch/ON-OFF.jpg, id=630, 4389.39874pt x 1528.71124pt>
+<../figures/etude/sch/ON-OFF.jpg, id=635, 4389.39874pt x 1528.71124pt>
 File: ../figures/etude/sch/ON-OFF.jpg Graphic file (type jpg)
 <use ../figures/etude/sch/ON-OFF.jpg>
 Package pdftex.def Info: ../figures/etude/sch/ON-OFF.jpg  used on input line 21
@@ -1910,13 +1910,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 {c:/texlive/2023/texmf-dist/fonts/enc/dvips/fontawesome5/fa5free0.enc} <../figu
 res/etude/sch/ON-OFF.jpg>]
-<../figures/dev-pcb/boitier-dim.jpg, id=648, 2409.0pt x 1568.86125pt>
+<../figures/dev-pcb/boitier-dim.jpg, id=653, 2409.0pt x 1568.86125pt>
 File: ../figures/dev-pcb/boitier-dim.jpg Graphic file (type jpg)
 <use ../figures/dev-pcb/boitier-dim.jpg>
 Package pdftex.def Info: ../figures/dev-pcb/boitier-dim.jpg  used on input line
  16.
 (pdftex.def)             Requested size: 271.7835pt x 176.98001pt.
-<../figures/dev-pcb/boitier-dims-pcb.jpg, id=649, 2469.225pt x 3212.0pt>
+<../figures/dev-pcb/boitier-dims-pcb.jpg, id=654, 2469.225pt x 3212.0pt>
 File: ../figures/dev-pcb/boitier-dims-pcb.jpg Graphic file (type jpg)
 <use ../figures/dev-pcb/boitier-dims-pcb.jpg>
 Package pdftex.def Info: ../figures/dev-pcb/boitier-dims-pcb.jpg  used on input
@@ -1935,25 +1935,25 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
  <../figures/dev-pcb/boitier-dim.jpg> <../figures/dev-pcb/boitier-dims-pcb.jpg>
 ]
-<../figures/dev-pcb/PCB-Dims.jpg, id=668, 2385.66281pt x 1271.5003pt>
+<../figures/dev-pcb/PCB-Dims.jpg, id=673, 2385.66281pt x 1271.5003pt>
 File: ../figures/dev-pcb/PCB-Dims.jpg Graphic file (type jpg)
 <use ../figures/dev-pcb/PCB-Dims.jpg>
 Package pdftex.def Info: ../figures/dev-pcb/PCB-Dims.jpg  used on input line 60
 .
 (pdftex.def)             Requested size: 375.96417pt x 200.37877pt.
-<../figures/dev-pcb/3d-view3.png, id=673, 354.32375pt x 709.65125pt>
+<../figures/dev-pcb/3d-view3.png, id=678, 354.32375pt x 709.65125pt>
 File: ../figures/dev-pcb/3d-view3.png Graphic file (type png)
 <use ../figures/dev-pcb/3d-view3.png>
 Package pdftex.def Info: ../figures/dev-pcb/3d-view3.png  used on input line 76
 .
 (pdftex.def)             Requested size: 108.71478pt x 217.7373pt.
-<../figures/dev-pcb/3d-view2.png, id=674, 368.1253pt x 384.6872pt>
+<../figures/dev-pcb/3d-view2.png, id=679, 368.1253pt x 384.6872pt>
 File: ../figures/dev-pcb/3d-view2.png Graphic file (type png)
 <use ../figures/dev-pcb/3d-view2.png>
 Package pdftex.def Info: ../figures/dev-pcb/3d-view2.png  used on input line 83
 .
 (pdftex.def)             Requested size: 149.48022pt x 156.20834pt.
-<../figures/dev-pcb/3d-view1.png, id=675, 581.17125pt x 243.15843pt>
+<../figures/dev-pcb/3d-view1.png, id=680, 581.17125pt x 243.15843pt>
 File: ../figures/dev-pcb/3d-view1.png Graphic file (type png)
 <use ../figures/dev-pcb/3d-view1.png>
 Package pdftex.def Info: ../figures/dev-pcb/3d-view1.png  used on input line 90
@@ -1983,7 +1983,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [26
 
 ]
-<../figures/dev-pcb/Couches-layout.jpg, id=699, 6070.68pt x 3376.615pt>
+<../figures/dev-pcb/Couches-layout.jpg, id=704, 6070.68pt x 3376.615pt>
 File: ../figures/dev-pcb/Couches-layout.jpg Graphic file (type jpg)
 <use ../figures/dev-pcb/Couches-layout.jpg>
 Package pdftex.def Info: ../figures/dev-pcb/Couches-layout.jpg  used on input l
@@ -2001,7 +2001,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [27
 
  <../figures/dev-pcb/Couches-layout.jpg>]) (./pages/4_Dev-SOFT.tex
-<../figures/code/Protocols.jpg, id=713, 1300.1072pt x 223.58531pt>
+<../figures/code/Protocols.jpg, id=718, 1300.1072pt x 223.58531pt>
 File: ../figures/code/Protocols.jpg Graphic file (type jpg)
 <use ../figures/code/Protocols.jpg>
 Package pdftex.def Info: ../figures/code/Protocols.jpg  used on input line 13.
@@ -2011,7 +2011,7 @@ Overfull \hbox (17.62482pt too wide) in paragraph at lines 23--24
 [][] 
  []
 
-<../figures/code/Default-messages.jpg, id=719, 1300.86pt x 579.66562pt>
+<../figures/code/Default-messages.jpg, id=724, 1300.86pt x 579.66562pt>
 File: ../figures/code/Default-messages.jpg Graphic file (type jpg)
 <use ../figures/code/Default-messages.jpg>
 Package pdftex.def Info: ../figures/code/Default-messages.jpg  used on input li
@@ -2028,7 +2028,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [28
 
  <../figures/code/Protocols.JPG> <../figures/code/Default-messages.JPG>]
-<../figures/code/Messages-NMEA.jpg, id=733, 1084.05pt x 619.56468pt>
+<../figures/code/Messages-NMEA.jpg, id=738, 1084.05pt x 619.56468pt>
 File: ../figures/code/Messages-NMEA.jpg Graphic file (type jpg)
 <use ../figures/code/Messages-NMEA.jpg>
 Package pdftex.def Info: ../figures/code/Messages-NMEA.jpg  used on input line 
@@ -2044,13 +2044,13 @@ Package epstopdf Info: Source file: <../figures/code/map-localisation.eps>
 erted-to.pdf ../figures/code/map-localisation.eps>
 (epstopdf)             \includegraphics on input line 60.
 Package epstopdf Info: Output file is already uptodate.
-<./map-localisation-eps-converted-to.pdf, id=739, 1251.67625pt x 426.59375pt>
+<./map-localisation-eps-converted-to.pdf, id=744, 1251.67625pt x 426.59375pt>
 File: ./map-localisation-eps-converted-to.pdf Graphic file (type pdf)
 <use ./map-localisation-eps-converted-to.pdf>
 Package pdftex.def Info: ./map-localisation-eps-converted-to.pdf  used on input
  line 60.
 (pdftex.def)             Requested size: 339.72592pt x 115.7807pt.
-<../figures/code/parsed-nmea.jpg, id=745, 1013.28563pt x 133.24782pt>
+<../figures/code/parsed-nmea.jpg, id=750, 1013.28563pt x 133.24782pt>
 File: ../figures/code/parsed-nmea.jpg Graphic file (type jpg)
 <use ../figures/code/parsed-nmea.jpg>
 Package pdftex.def Info: ../figures/code/parsed-nmea.jpg  used on input line 70
@@ -2121,7 +2121,24 @@ ve/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}]
 
 
 (./_minted-main/A0CD5EEA3E862150DA329A03FB64E24ABE8BFDC1C42DF7C070F1D172D564406
-3.pygtex)) (./pages/5_Val-MES.tex
+3.pygtex)
+Package epstopdf Info: Source file: <../figures/code/périphériques.eps>
+(epstopdf)                    date: 2023-08-23 14:12:40
+(epstopdf)                    size: 54914 bytes
+(epstopdf)             Output file: <./périphériques-eps-converted-to.pdf>
+(epstopdf)                    date: 2023-08-23 14:13:01
+(epstopdf)                    size: 52330 bytes
+(epstopdf)             Command: <epstopdf --outfile=./périphériques-eps-conve
+rted-to.pdf ../figures/code/périphériques.eps>
+(epstopdf)             \includegraphics on input line 184.
+Package epstopdf Info: Output file is already uptodate.
+<./périphériques-eps-converted-to.pdf, id=780, 290.08376pt x 63.23625pt>
+File: ./périphériques-eps-converted-to.pdf Graphic file (type pdf)
+<use ./périphériques-eps-converted-to.pdf>
+Package pdftex.def Info: ./périphériques-eps-converted-to.pdf  used on input 
+line 184.
+(pdftex.def)             Requested size: 226.48395pt x 49.3723pt.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2132,7 +2149,18 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [31
 
-])
+ <./périphériques-eps-converted-to.pdf>]
+<../figures/code/harmony/timers.jpg, id=793, 1854.93pt x 2409.0pt>
+File: ../figures/code/harmony/timers.jpg Graphic file (type jpg)
+<use ../figures/code/harmony/timers.jpg>
+Package pdftex.def Info: ../figures/code/harmony/timers.jpg  used on input line
+ 225.
+(pdftex.def)             Requested size: 181.18439pt x 235.29008pt.
+\openout4 = `main.pyg'.
+
+
+(./_minted-main/163031B2D94EDAD6EE7F958F4A2919B4BE8BFDC1C42DF7C070F1D172D564406
+3.pygtex)
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2141,7 +2169,14 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[32]
+[32
+
+ <../figures/code/harmony/timers.JPG>]
+\openout4 = `main.pyg'.
+
+
+(./_minted-main/560E7F0C5118ED10A8D1DED59B6D2391BE8BFDC1C42DF7C070F1D172D564406
+3.pygtex)
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2150,9 +2185,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[33
-
-] (./Main.bbl)
+[33]) (./pages/5_Val-MES.tex)
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2161,7 +2194,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[34]
+[34
+
+]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2172,21 +2207,41 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [35
 
+] (./Main.bbl)
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[36]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[37
+
 ] (./main.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-03>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 73D07E65992B0283A7366154DEC14EC1;9775.
+(rerunfilecheck)             Checksum: C0004EAF4DA0679C5D6BC366DA357DC4;9873.
 runsystem(del main.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 47026 strings out of 475187
- 917974 string characters out of 5767784
+ 47105 strings out of 475187
+ 921461 string characters out of 5767784
  1945248 words of memory out of 5000000
- 67329 multiletter control sequences out of 15000+600000
+ 67394 multiletter control sequences out of 15000+600000
  655471 words of font info for 152 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  109i,15n,117p,2289b,960s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2202,10 +2257,10 @@ live/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2023/texmf-di
 st/fonts/type1/urw/times/utmbi8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/ur
 w/times/utmr8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/times/utmri8a.pf
 b>
-Output written on main.pdf (36 pages, 12709184 bytes).
+Output written on main.pdf (38 pages, 13584287 bytes).
 PDF statistics:
- 907 PDF objects out of 1000 (max. 8388607)
- 765 compressed objects within 8 object streams
- 187 named destinations out of 1000 (max. 500000)
- 696 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 937 PDF objects out of 1000 (max. 8388607)
+ 787 compressed objects within 8 object streams
+ 195 named destinations out of 1000 (max. 500000)
+ 714 words of extra memory for PDF output out of 10000 (max. 10000000)
 
