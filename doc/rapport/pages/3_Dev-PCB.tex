@@ -64,10 +64,10 @@ Désormais, sachant que nous connaissons les dimensions du \gls{pcb} grâce à l
 \end{figure}
 
 En considérant les contraintes des différents éléments de la table \ref{tab:reglesPlacement}, nous obtenons un design tel que celui de la figure \ref{fig:pcb-dims}. Nous y observons plusieurs solutions apportées telles que :
-un trou (En bas à droite du \gls{pcb}) permettant de passer le fils de la batterie, une carte SD et un connecteur USB placés proche du bord, un bouton de reset accessible et un \gls{gnss} isolé du reste pour garantir l'intégrité de l'antenne. 
+un trou (En bas à droite du \gls{pcb}) permettant de passer les fils de la batterie, une carte SD et un connecteur USB placés proche du bord, un bouton de reset accessible et un \gls{gnss} isolé du reste pour garantir l'intégrité de l'antenne. 
 
 \subsubsection{Assemblage}
-Lors de cette section, nous allons assembler le circuit imprimé avec ses composant et la batterie, dans le modèle 3d du boîtier \textbf{SIC5-9-3B}.
+Lors de cette section, nous allons assembler le circuit imprimé avec ses composants et la batterie, dans le modèle 3D du boîtier \textbf{SIC5-9-3B}.
 
 \begin{figure}[!h]
 	\centering
@@ -234,10 +234,11 @@ Avec le schéma et la mécanique désormais établis, il est possible de dresser
 \clearpage
 
 \subsection{Routage} \label{ssec:routage}
+Une fois les composants placés, les pistes et les plan ont put être 
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[width=1\linewidth]{../figures/dev-pcb/Couches-layout}
+	\includegraphics[width=.9\linewidth]{../figures/dev-pcb/Couches-layout}
 	\caption{Routage des différentes couches.}
 	\label{fig:couches-layout}
 	\source{Auteur}
@@ -255,7 +256,7 @@ Les justifications du routage des différentes couche sont présentées dans la 
 			& \faChevronRight & Signaux proches du \gls{mcu}.     \\
 			& \faChevronRight & Signaux sortant du \gls{gnss}.   \\
 			& \faChevronRight & Pistes horizontales.             \\
-			& \faChevronRight & Plan de masse.                   \\
+			& \faChevronRight & Plan de masse.                    \\
 			& \faChevronRight & Connecteurs pour boutons et batterie. \\ \hline
 			\textbf{LAYER 1} &                 &                                  \\
 			& \faChevronRight & Pistes de signaux verticaux.     \\

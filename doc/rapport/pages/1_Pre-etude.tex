@@ -231,24 +231,28 @@ En examinant les consommations typiques et moyennes du tableau \ref{tab:consomma
 
 Les inconvénients listés dans le tableau \ref{tab:inconvlion} posent un risque pour l'intégrité des données de la carte-SD. C'est pourquoi il est essentiel de bien dimensionner le boîtier ainsi que l'intégration du circuit et de la batterie pour pallier ces dangers. Malgré les risques du Li-Ion, il s'agit d'une technologie très utilisée, y compris dans des domaines sensibles.
 
+\paragraph{Choix de la batterie} La batterie doit avoir une capacité d'au moins \textbf{1260 mAh} et être suffisamment compacte pour être intégrée dans un boîtier de petite taille. Une batterie répond à ces critères : il s'agit de la \fbox{\textbf{PICPAL36}} de chez Farnell\footnote{Distributeur de composants électroniques. \href{https://ch.farnell.com/en-CH/panasonic/picpal36/battery-li-ion-1-3ah-3-7v/dp/2819223}{Lien de la batterie.}}. Les dimensions et caractéristiques de cette batterie sont visibles sur les figures \ref{fig:batt}.
+
 \clearpage
 
-\paragraph{Choix de la batterie} La batterie doit avoir une capacité d'au moins \textbf{1260 mAh} et être suffisamment compacte pour être intégrée dans un boîtier de petite taille. Une batterie répond à ces critères : il s'agit de la \fbox{\textbf{PICPAL36}} de chez Farnell\footnote{Distributeur de composants électroniques. \href{https://ch.farnell.com/en-CH/panasonic/picpal36/battery-li-ion-1-3ah-3-7v/dp/2819223}{Lien de la batterie.}}. Les dimensions et caractéristiques de cette batterie sont visibles sur les figures \ref{fig:batt} et \ref{fig:caracbatt}.
-
-\begin{figure}[h]
+\begin{figure}[!h]
 	\centering
-	\includegraphics[width=0.55\linewidth]{../figures/pre_etude/batt}
-	\caption{Dimension de la batterie.}
+	\includegraphics[width=.8\linewidth]{../figures/pre_etude/batt}
+	\caption{Caractéristiques de la PICPAL36.}
 	\label{fig:batt}
 	\source{Auteur}
 \end{figure}
 
+Dû à des problèmes de commandes, une batterie alternative à dû être trouvée, celle-ci est la XCell \fbox{\textbf{B520003}} de \textbf{1600mAh}, ses caractéristiques sont présentées dans la figure \ref{fig:batt2}.
+
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.7\linewidth]{../figures/pre_etude/Carac_Batt}
-	\caption{Caractéristiques de la batterie}
-	\label{fig:caracbatt}
+	\includegraphics[width=.8\linewidth]{../figures/pre_etude/batt2}
+	\caption{Caractéristiques de la XCell \textbf{B520003}}
+	\label{fig:batt2}
 \end{figure}
+
+
 
 \paragraph{Régulateur de charge} Le choix du régulateur de charge s'est orienté vers un composant déjà utilisé par l'école, dont les caractéristiques et le montage sont bien connus. C'est un composant performant et fréquemment employé. De plus, il est disponible dans le stock de composants de l'école. Il s'agit du \fbox{\textbf{MCP73871T-2CCI/ML}}. Il est configurable et permet la charge des batteries Li-ion et Li-po.
 
@@ -259,7 +263,6 @@ Les inconvénients listés dans le tableau \ref{tab:inconvlion} posent un risque
 	\source{\href{https://www.digikey.ch/fr/products/detail/microchip-technology/MCP73871T-2CCI-ML/7065594}{Digikey IC BATT CHG LI-ION 1CELL 20QFN}}
 	\label{fig:mcp}
 \end{figure}
-
 
 \clearpage
 

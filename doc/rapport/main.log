@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.8.7)  23 AUG 2023 16:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.8.7)  24 AUG 2023 10:39
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1695,22 +1695,22 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [13
 
 ]
-<../figures/pre_etude/batt.png, id=485, 481.8pt x 274.77657pt>
-File: ../figures/pre_etude/batt.png Graphic file (type png)
-<use ../figures/pre_etude/batt.png>
-Package pdftex.def Info: ../figures/pre_etude/batt.png  used on input line 240.
+<../figures/pre_etude/batt.jpg, id=487, 466.75565pt x 108.54782pt>
+File: ../figures/pre_etude/batt.jpg Graphic file (type jpg)
+<use ../figures/pre_etude/batt.jpg>
+Package pdftex.def Info: ../figures/pre_etude/batt.jpg  used on input line 240.
 
-(pdftex.def)             Requested size: 249.13371pt x 142.0838pt.
-<../figures/pre_etude/Carac_Batt.png, id=486, 743.77875pt x 289.08pt>
-File: ../figures/pre_etude/Carac_Batt.png Graphic file (type png)
-<use ../figures/pre_etude/Carac_Batt.png>
-Package pdftex.def Info: ../figures/pre_etude/Carac_Batt.png  used on input lin
-e 248.
-(pdftex.def)             Requested size: 317.07614pt x 123.23892pt.
-<../figures/pre_etude/MCP.png, id=487, 481.8pt x 481.8pt>
+(pdftex.def)             Requested size: 362.37569pt x 84.27274pt.
+<../figures/pre_etude/batt2.jpg, id=489, 575.30348pt x 206.52652pt>
+File: ../figures/pre_etude/batt2.jpg Graphic file (type jpg)
+<use ../figures/pre_etude/batt2.jpg>
+Package pdftex.def Info: ../figures/pre_etude/batt2.jpg  used on input line 250
+.
+(pdftex.def)             Requested size: 362.37569pt x 130.09033pt.
+<../figures/pre_etude/MCP.png, id=490, 481.8pt x 481.8pt>
 File: ../figures/pre_etude/MCP.png Graphic file (type png)
 <use ../figures/pre_etude/MCP.png>
-Package pdftex.def Info: ../figures/pre_etude/MCP.png  used on input line 257.
+Package pdftex.def Info: ../figures/pre_etude/MCP.png  used on input line 261.
 (pdftex.def)             Requested size: 90.5922pt x 90.58722pt.
 
 
@@ -1723,14 +1723,14 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [14
 
- <../figures/pre_etude/batt.png> <../figures/pre_etude/Carac_Batt.png (PNG copy
-)> <../figures/pre_etude/MCP.png>]
+ <../figures/pre_etude/batt.jpg> <../figures/pre_etude/batt2.jpg> <../figures/p
+re_etude/MCP.png>]
 <../figures/pre_etude/Diagramme_Etat_Preetude.jpg, id=506, 2715.14375pt x 943.5
 25pt>
 File: ../figures/pre_etude/Diagramme_Etat_Preetude.jpg Graphic file (type jpg)
 <use ../figures/pre_etude/Diagramme_Etat_Preetude.jpg>
 Package pdftex.def Info: ../figures/pre_etude/Diagramme_Etat_Preetude.jpg  used
- on input line 286.
+ on input line 289.
 (pdftex.def)             Requested size: 362.37569pt x 125.91628pt.
 
 
@@ -1987,8 +1987,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 File: ../figures/dev-pcb/Couches-layout.jpg Graphic file (type jpg)
 <use ../figures/dev-pcb/Couches-layout.jpg>
 Package pdftex.def Info: ../figures/dev-pcb/Couches-layout.jpg  used on input l
-ine 240.
-(pdftex.def)             Requested size: 452.9679pt x 251.94713pt.
+ine 241.
+(pdftex.def)             Requested size: 407.66833pt x 226.70088pt.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2238,10 +2238,10 @@ runsystem(del main.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 47105 strings out of 475187
- 921461 string characters out of 5767784
+ 47109 strings out of 475187
+ 921544 string characters out of 5767784
  1945248 words of memory out of 5000000
- 67394 multiletter control sequences out of 15000+600000
+ 67398 multiletter control sequences out of 15000+600000
  655471 words of font info for 152 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  109i,15n,117p,2289b,960s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2257,7 +2257,7 @@ live/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2023/texmf-di
 st/fonts/type1/urw/times/utmbi8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/ur
 w/times/utmr8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/times/utmri8a.pf
 b>
-Output written on main.pdf (38 pages, 13584287 bytes).
+Output written on main.pdf (38 pages, 13805781 bytes).
 PDF statistics:
  937 PDF objects out of 1000 (max. 8388607)
  787 compressed objects within 8 object streams
