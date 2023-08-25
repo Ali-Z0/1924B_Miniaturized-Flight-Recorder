@@ -187,23 +187,23 @@ Le composant \textbf{MCP73871T-2CCI/ML} est configurable pour délivrer un coura
 
 Où :
 
-$C = 1300 mAh$ est la capacité de la batterie.
+$C = 1600 mAh$ est la capacité de la batterie.
 
 $k_{term} = 0.05$ est le ratio de fin de charge.
 
-$k_{chg} = 0.1$ est le ratio de charge.
+$k_{chg} = 0.15$ est le ratio de charge.
 
 Le courant de terminais peut être calculé ainsi :
 \begin{equation*}
-	I_{term} = C * k_{term} = 1300 * 0.05 = 65 \; mA
+	I_{term} = C * k_{term} = 1600 * 0.05 = 80 \; mA
 \end{equation*}
 Par conséquent, d'après la \gls{datasheet} (\href{https://ww1.microchip.com/downloads/en/DeviceDoc/MCP73871-Data-Sheet-20002090E.pdf}{Equation 4-2}) la résistance de programmation de fin de charge vaudrait :
 \begin{equation*}
-	R_{prog3} = \frac{1000V}{I_{term}} = \frac{1000}{65*10^{-3}} = 15.38 \; k\Omega \Rightarrow 15 \; k\Omega
+	R_{prog3} = \frac{1000V}{I_{term}} = \frac{1000}{65*10^{-3}} = 12.5 \; k\Omega \Rightarrow 12 \; k\Omega
 \end{equation*}
 Nous pouvons de la même facon cacluler la résistance de charge \textbf{Rprog1} :
 \begin{equation*}
-	R_{prog3} = \frac{1000V}{C*k_{chg}} = \frac{1000}{1300*0.1} = 7.69 \; k\Omega \Rightarrow 8,2 \; k\Omega
+	R_{prog1} = \frac{1000V}{C*k_{chg}} = \frac{1000}{1600*10^{-3}*0.15} = 4.166 \; k\Omega \Rightarrow 3.9 \; k\Omega
 \end{equation*}
 
 \clearpage

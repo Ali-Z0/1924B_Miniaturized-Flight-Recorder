@@ -148,7 +148,7 @@ typedef struct
 {
     /* DELAY DATA */
     bool tmrTickFlag;
-    uint32_t delayCnt;
+    unsigned long delayCnt;
         
     /* MEASURES DATA */
     unsigned long measCnt[NB_MEASURES];

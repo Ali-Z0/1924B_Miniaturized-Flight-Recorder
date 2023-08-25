@@ -116,7 +116,7 @@ const DRV_SDCARD_INIT drvSDCardInit =
 {
     .spiId = SPI_ID_1,
     .spiIndex = 0,
-    .sdcardSpeedHz = 20000000,
+    .sdcardSpeedHz = 5000000,
     .spiClk = CLK_BUS_PERIPHERAL_1,
     .chipSelectPort = PORT_CHANNEL_A,
     .chipSelectBitPosition = PORTS_BIT_POS_10,

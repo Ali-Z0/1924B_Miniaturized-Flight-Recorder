@@ -147,15 +147,20 @@ void APP_Initialize ( void )
 {
     /* Keep the device ON */
     PWR_HOLDOn();
+    LED_BOn();
        
+    /* Start timers*/
+    DRV_TMR0_Start();
     /* Init i2c bus */
     i2c_init(1);
-    
+
     /* Reset IMU */
     RST_IMUOff();
     BNO055_delay_msek(100);
     RST_IMUOn();
     BNO055_delay_msek(100);
+    
+    LED_ROn();
         
     /* Place the App state machine in its initial state. */
     appData.state = APP_STATE_INIT;
@@ -200,11 +205,8 @@ void APP_Tasks ( void )
             /* Init sd card parameters and read/create config File */
             sd_fat_cfg_init(&timeData.measPeriod[BNO055_idx], &timeData.measPeriod[BNO055_idx], &appData.ledState);
             
-            /* Start timers */
-            DRV_TMR0_Start();
+            // Start measure timer
             DRV_TMR1_Start();
-            
-            
             break;
         }
         case APP_STATE_LOGGING:
