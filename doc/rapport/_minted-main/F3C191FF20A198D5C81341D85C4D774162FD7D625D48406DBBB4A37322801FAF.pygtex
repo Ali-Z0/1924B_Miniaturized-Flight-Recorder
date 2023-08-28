@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{// Get message ID, strict}
+\PYG{o}{*}\PYG{n}{msg\PYGZus{}id}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{minmea\PYGZus{}sentence\PYGZus{}id}\PYG{p}{(}\PYG{n}{message}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nb}{true}\PYG{p}{);}
+\PYG{c+c1}{// Parse message depending on ID}
+\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{o}{*}\PYG{n}{msg\PYGZus{}id}\PYG{+w}{ }\PYG{o}{==}\PYG{+w}{ }\PYG{n}{MINMEA\PYGZus{}SENTENCE\PYGZus{}GBS}\PYG{p}{)}
+\PYG{+w}{	}\PYG{n}{minmea\PYGZus{}parse\PYGZus{}gbs}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{sentences}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{gbs}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{message}\PYG{p}{);}
+\PYG{k}{else}\PYG{+w}{ }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{o}{*}\PYG{n}{msg\PYGZus{}id}\PYG{+w}{ }\PYG{o}{==}\PYG{+w}{ }\PYG{n}{MINMEA\PYGZus{}SENTENCE\PYGZus{}GGA}\PYG{p}{)}
+\PYG{+w}{	}\PYG{n}{minmea\PYGZus{}parse\PYGZus{}gga}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{sentences}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{gga}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{message}\PYG{p}{);}
+\PYG{k}{else}\PYG{+w}{ }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{...}
+\end{Verbatim}

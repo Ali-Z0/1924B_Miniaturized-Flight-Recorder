@@ -24,18 +24,18 @@
 \usepackage{pdfpages}
 \usepackage{caption}
 \usepackage{subcaption}
-\usepackage{listings}
+%\usepackage{listings}
 \usepackage{afterpage}
 \usepackage[bottom]{footmisc}
 \usepackage{textcomp}
 \usepackage{fontawesome5}
 \usepackage[outdir=./]{epstopdf}
 
-
+\usepackage{amsmath}
 % ---- CODE Packages ---
-\usepackage[newfloat]{minted}
 \usepackage{tcolorbox}
 \usepackage{etoolbox}
+\usepackage[newfloat]{minted}
 \BeforeBeginEnvironment{minted}{\begin{tcolorbox}}%
 \AfterEndEnvironment{minted}{\end{tcolorbox}}%
 \newenvironment{code}{\captionsetup{type=listing}}{}

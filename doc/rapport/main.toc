@@ -30,7 +30,7 @@
 \contentsline {paragraph}{$\circ $ Alimentation de la carte SD}{15}{section*.32}%
 \contentsline {paragraph}{$\bullet $ Mise en veille automatique du système}{15}{section*.33}%
 \contentsline {subsection}{\numberline {2.7}Diagramme des états du système}{15}{subsection.2.7}%
-\contentsline {subsection}{\numberline {2.8}Estimation des coûts}{16}{subsection.2.8}%
+\contentsline {subsection}{\numberline {2.8}Estimation du coût du prototype}{16}{subsection.2.8}%
 \contentsline {subsection}{\numberline {2.9}Conclusion et perspectives de la Pré-étude}{16}{subsection.2.9}%
 \contentsline {section}{\numberline {3}Développement du schéma électronique}{17}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Blocs développés}{17}{subsection.3.1}%

@@ -1,0 +1,12 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{struct}\PYG{+w}{ }\PYG{n+nc}{minmea\PYGZus{}sentence\PYGZus{}gbs}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{	}\PYG{k}{struct}\PYG{+w}{ }\PYG{n+nc}{minmea\PYGZus{}time}\PYG{+w}{ }\PYG{n}{time}\PYG{p}{;}
+\PYG{+w}{	}\PYG{k}{struct}\PYG{+w}{ }\PYG{n+nc}{minmea\PYGZus{}float}\PYG{+w}{ }\PYG{n}{err\PYGZus{}latitude}\PYG{p}{;}
+\PYG{+w}{	}\PYG{k}{struct}\PYG{+w}{ }\PYG{n+nc}{minmea\PYGZus{}float}\PYG{+w}{ }\PYG{n}{err\PYGZus{}longitude}\PYG{p}{;}
+\PYG{+w}{	}\PYG{k}{struct}\PYG{+w}{ }\PYG{n+nc}{minmea\PYGZus{}float}\PYG{+w}{ }\PYG{n}{err\PYGZus{}altitude}\PYG{p}{;}
+\PYG{+w}{	}\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{svid}\PYG{p}{;}
+\PYG{+w}{	}\PYG{k}{struct}\PYG{+w}{ }\PYG{n+nc}{minmea\PYGZus{}float}\PYG{+w}{ }\PYG{n}{prob}\PYG{p}{;}
+\PYG{+w}{	}\PYG{k}{struct}\PYG{+w}{ }\PYG{n+nc}{minmea\PYGZus{}float}\PYG{+w}{ }\PYG{n}{bias}\PYG{p}{;}
+\PYG{+w}{	}\PYG{k}{struct}\PYG{+w}{ }\PYG{n+nc}{minmea\PYGZus{}float}\PYG{+w}{ }\PYG{n}{stddev}\PYG{p}{;}
+\PYG{p}{\PYGZcb{};}
+\end{Verbatim}
