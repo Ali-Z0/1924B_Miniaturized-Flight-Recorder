@@ -74,7 +74,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 #pragma config IESO =       ON
 #pragma config POSCMOD =    OFF
 #pragma config OSCIOFNC =   OFF
-#pragma config FPBDIV =     DIV_8
+#pragma config FPBDIV =     DIV_1
 #pragma config FCKSM =      CSDCMD
 #pragma config WDTPS =      PS1048576
 #pragma config WDTSPGM =    ON
@@ -85,8 +85,8 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 
 #pragma config FPLLIDIV =   DIV_2
 #pragma config FPLLICLK =   PLL_FRC
-#pragma config FPLLMUL =    MUL_24
-#pragma config FPLLODIV =   DIV_2
+#pragma config FPLLMUL =    MUL_18
+#pragma config FPLLODIV =   DIV_1
 #pragma config DSBOREN =    ON
 #pragma config DSWDTPS =    DSPS32
 #pragma config DSWDTOSC =   LPRC
@@ -116,7 +116,7 @@ const DRV_SDCARD_INIT drvSDCardInit =
 {
     .spiId = SPI_ID_1,
     .spiIndex = 0,
-    .sdcardSpeedHz = 5000000,
+    .sdcardSpeedHz = 10000000,
     .spiClk = CLK_BUS_PERIPHERAL_1,
     .chipSelectPort = PORT_CHANNEL_A,
     .chipSelectBitPosition = PORTS_BIT_POS_10,
@@ -240,7 +240,7 @@ void SYS_Initialize ( void* data )
     sysObj.drvUsart1 = DRV_USART_Initialize(DRV_USART_INDEX_1, (SYS_MODULE_INIT *)NULL);
     SYS_INT_VectorPrioritySet(INT_VECTOR_UART1, INT_DISABLE_INTERRUPT);
     SYS_INT_VectorSubprioritySet(INT_VECTOR_UART1, INT_SUBPRIORITY_LEVEL0);
-    SYS_INT_VectorPrioritySet(INT_VECTOR_UART2, INT_PRIORITY_LEVEL1);
+    SYS_INT_VectorPrioritySet(INT_VECTOR_UART2, INT_DISABLE_INTERRUPT);
     SYS_INT_VectorSubprioritySet(INT_VECTOR_UART2, INT_SUBPRIORITY_LEVEL0);
 
     /* Initialize System Services */

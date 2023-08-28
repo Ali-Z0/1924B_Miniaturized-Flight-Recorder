@@ -112,6 +112,7 @@ typedef enum
 {
 	/* Application's state machine's initial state. */
 	APP_STATE_INIT=0,
+    APP_STATE_CONFIG,
     APP_STATE_LOGGING,
     APP_STATE_FLAG_MEAS,
 	APP_STATE_SHUTDOWN
@@ -250,6 +251,8 @@ void APP_Tasks( void );
 // CALLBACKS
 void delayTimer_callback( void );
 void stateTimer_callback( void );
+
+void appStateSet( APP_STATES newState );
 
 #endif /* _APP_H */
 

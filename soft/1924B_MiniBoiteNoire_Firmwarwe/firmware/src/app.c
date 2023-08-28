@@ -153,6 +153,9 @@ void APP_Initialize ( void )
     DRV_TMR0_Start();
     /* Init i2c bus */
     i2c_init(1);
+    
+    /* Unreset GNSS */
+    RESET_NOn();
 
     /* Reset IMU */
     RST_IMUOff();
@@ -193,18 +196,26 @@ void APP_Tasks ( void )
             // Init and Measure set
             bno055_init_readout();
             /* go to service task */
-            appData.state = APP_STATE_LOGGING;
+            appData.state = APP_STATE_CONFIG;
             /* Init ltime_BNO055 counter */
             timeData.ltime[BNO055_idx] = 0;
             // Initialization of the USART FIFOs
             initFifo(&usartFifoRx, FIFO_RX_SIZE, a_fifoRx, 0);
             initFifo(&usartFifoTx, FIFO_TX_SIZE, a_fifoTx, 0);
-            
+            break;
+        }
+        case APP_STATE_CONFIG:
+        {
             /* Init sd card parameters and read/create config File */
             sd_fat_cfg_init(&timeData.measPeriod[BNO055_idx], &timeData.measPeriod[BNO055_idx], &appData.ledState);
             
-            // Start measure timer
-            DRV_TMR1_Start();
+            // Set default system parameters
+            /*timeData.measPeriod[BNO055_idx] = T_INTERVAL_GNSS_DEFAULT;
+            timeData.measPeriod[GNSS_idx] = T_INTERVAL_IMU_DEFAULT;
+            appData.ledState = LED_STATE_DEFAULT;
+            appData.state = APP_STATE_LOGGING;*/
+            
+            LED_BOff();
             break;
         }
         case APP_STATE_LOGGING:
@@ -224,6 +235,8 @@ void APP_Tasks ( void )
                 timeData.measTodo[BNO055_idx] = false;
                 /* Update last time counter */
                 timeData.ltime[BNO055_idx] = timeData.measCnt[BNO055_idx];
+                
+                LED_BOn();
             }
             // GNSS Measure routine
             if((timeData.measTodo[GNSS_idx] == true )&&(sd_logGetState() == APP_IDLE))
@@ -234,11 +247,13 @@ void APP_Tasks ( void )
                 //sd_BNO_scheduleWrite_GNSS(&bno055_local_data);
                 /* Reset measure flag */
                 timeData.measTodo[GNSS_idx] = false;
+                LED_BOn();
             }
             else
             {
                 /* No comm, so no error */
                 bno055_local_data.comres = 0;
+                LED_BOff();
             }
             
             /* If error detected : error LED */
@@ -268,6 +283,10 @@ void APP_Tasks ( void )
             break;
         }
     }
+}
+
+void appStateSet( APP_STATES newState ){
+     appData.state = newState;
 }
 
 void btnTaskGest( void ){

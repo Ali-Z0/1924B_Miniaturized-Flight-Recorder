@@ -294,7 +294,7 @@
       <Template dnOrder="8">
         <Name dnOrder="0">system_interrupt.c</Name>
         <Path dnOrder="1">Source&amp;#160;Files/app/system_config/default</Path>
-        <Checksum dnOrder="2">CD01EF4193B5B52D1F754A02662DD610</Checksum>
+        <Checksum dnOrder="2">D07D01E3044E519EC9408915BA6A2D8C</Checksum>
         <ProjectFileChecksum dnOrder="3">D397A0ED572FEDABDA4AD99D1E2412EE</ProjectFileChecksum>
       </Template>
       <Template dnOrder="9">
@@ -315,7 +315,7 @@
       <Template dnOrder="12">
         <Name dnOrder="0">system_init.c</Name>
         <Path dnOrder="1">Source&amp;#160;Files/app/system_config/default</Path>
-        <Checksum dnOrder="2">7DECD78D1E7A7E0BD794B5D17E61E842</Checksum>
+        <Checksum dnOrder="2">358ADC3860D5FA4298BA8520A8889758</Checksum>
       </Template>
       <Template dnOrder="13">
         <Name dnOrder="0">main.c</Name>
@@ -363,7 +363,7 @@
       <Template dnOrder="22">
         <Name dnOrder="0">system_config.h</Name>
         <Path dnOrder="1">Header&amp;#160;Files/app/system_config/default</Path>
-        <Checksum dnOrder="2">055D04897E77B0BA9F0585A20D9FD1A5</Checksum>
+        <Checksum dnOrder="2">B4A99A8B243563373D01E65881893745</Checksum>
       </Template>
       <Template dnOrder="23">
         <Name dnOrder="0">app.h</Name>
@@ -372,7 +372,7 @@
       <Template dnOrder="24">
         <Name dnOrder="0">drv_tmr_static.c</Name>
         <Path dnOrder="1">Source&amp;#160;Files/app/system_config/default/framework/driver/tmr/src</Path>
-        <Checksum dnOrder="2">AAA0B597EFD56348803508BB9C08CC15</Checksum>
+        <Checksum dnOrder="2">D0737886653AFED4E80A962A397F521E</Checksum>
       </Template>
       <Template dnOrder="25">
         <Name dnOrder="0">drv_spi_master_ebm_tasks.c</Name>
@@ -387,7 +387,7 @@
       <Template dnOrder="27">
         <Name dnOrder="0">sys_clk_pic32mx.c</Name>
         <Path dnOrder="1">Source&amp;#160;Files/app/system_config/default/framework/system/clk/src</Path>
-        <Checksum dnOrder="2">414614ADF5119836C3646F3BDC5F076F</Checksum>
+        <Checksum dnOrder="2">6C421F612F5BB770AEEE8455A404A3C5</Checksum>
       </Template>
     </Templates>
     <CompilerItems dnOrder="2">

@@ -116,7 +116,7 @@ void sd_fat_readConfig_task ( void )
                 sd_CFG_Write(T_INTERVAL_GNSS_DEFAULT, T_INTERVAL_IMU_DEFAULT, LED_STATE_DEFAULT, true);
                 
                 /* Re-try to open file as read */
-                appFatData.cfg_state = APP_CFG_OPEN_READ_CONFIG_FILE;         
+                //appFatData.cfg_state = APP_CFG_OPEN_READ_CONFIG_FILE;         
                 
             }
             else
@@ -125,7 +125,7 @@ void sd_fat_readConfig_task ( void )
                 appFatData.cfg_state = APP_CFG_READ_CONFIG_FILE;
             }
             break;
-
+        
         case APP_CFG_READ_CONFIG_FILE:                             
             /* If read was success, try writing to the new file */
             if(SYS_FS_FileRead(appFatData.fileCfgHandle, appFatData.cfg_data, 
@@ -141,7 +141,36 @@ void sd_fat_readConfig_task ( void )
                 appFatData.cfg_state = APP_CFG_CLOSE_FILE;
             }
             break;
+        case APP_CFG_OPEN_WRITE_CONFIG_FILE:
+			appFatData.fileCfgHandle = SYS_FS_FileOpen("CONFIG.txt",
+					(SYS_FS_FILE_OPEN_WRITE_PLUS));
+			if(appFatData.fileCfgHandle == SYS_FS_HANDLE_INVALID)
+			{
+				/* Could not open the file. Error out*/
+				appFatData.cfg_state = APP_CFG_ERROR;
+			}
+			else
+			{
+				/* Create a directory. */
+				appFatData.cfg_state = APP_CFG_WRITE_CONFIG_FILE;
+			}
+			break;
 
+		case APP_CFG_WRITE_CONFIG_FILE:                             
+			/* If read was success, try writing to the new file */
+			if(SYS_FS_FileWrite(appFatData.fileCfgHandle, appFatData.cfg_data, 
+					appFatData.nBytesToWrite == -1))
+			{
+				/* Write was not successful. Close the file
+				 * and error out.*/
+				SYS_FS_FileClose(appFatData.fileCfgHandle);
+				appFatData.cfg_state = APP_CFG_ERROR;
+			}
+			else
+			{
+				appFatData.cfg_state = APP_CFG_CLOSE_FILE;
+			}
+			break;
         case APP_CFG_CLOSE_FILE:
             /* Close both files */
             SYS_FS_FileClose(appFatData.fileCfgHandle);
@@ -341,105 +370,6 @@ void sd_CFG_Write (uint32_t tLogGNSS_ms, uint32_t tLogIMU_ms, uint8_t ledState, 
         /* Compute the number of bytes to send */
         appFatData.nBytesToWrite = strlen(appFatData.cfg_data);
         
-        do{
-            /* The application task cfg_state machine */
-            switch(appFatData.cfg_state)
-            {
-                case APP_CFG_MOUNT_DISK:
-                    if(SYS_FS_Mount("/dev/mmcblka1", "/mnt/myDrive", FAT, 0, NULL) != 0)
-                    {
-                        appFatData.cfg_state = APP_CFG_MOUNT_DISK;
-                    }
-                    else
-                    {
-                        /* Mount was successful. Unmount the disk, for testing. */
-                        appFatData.cfg_state = APP_CFG_SET_CURRENT_DRIVE;
-                    }
-                    break;
-
-                case APP_CFG_SET_CURRENT_DRIVE:
-                    if(SYS_FS_CurrentDriveSet("/mnt/myDrive") == SYS_FS_RES_FAILURE)
-                    {
-                        /* Error while setting current drive */
-                        appFatData.cfg_state = APP_CFG_ERROR;
-                    }
-                    else
-                    {
-                        /* Open a file for reading. */
-                        appFatData.cfg_state = APP_CFG_OPEN_WRITE_CONFIG_FILE;
-                    }
-                    break;
-
-                case APP_CFG_OPEN_WRITE_CONFIG_FILE:
-                    appFatData.fileCfgHandle = SYS_FS_FileOpen("CONFIG.txt",
-                            (SYS_FS_FILE_OPEN_WRITE_PLUS));
-                    if(appFatData.fileCfgHandle == SYS_FS_HANDLE_INVALID)
-                    {
-                        /* Could not open the file. Error out*/
-                        appFatData.cfg_state = APP_CFG_ERROR;
-                    }
-                    else
-                    {
-                        /* Create a directory. */
-                        appFatData.cfg_state = APP_CFG_WRITE_CONFIG_FILE;
-                    }
-                    break;
-
-                case APP_CFG_WRITE_CONFIG_FILE:                             
-                    /* If read was success, try writing to the new file */
-                    if(SYS_FS_FileWrite(appFatData.fileCfgHandle, appFatData.cfg_data, 
-                            appFatData.nBytesToWrite == -1))
-                    {
-                        /* Write was not successful. Close the file
-                         * and error out.*/
-                        SYS_FS_FileClose(appFatData.fileCfgHandle);
-                        appFatData.cfg_state = APP_CFG_ERROR;
-                    }
-                    else
-                    {
-                        appFatData.cfg_state = APP_CFG_CLOSE_FILE;
-                    }
-                    break;
-
-                case APP_CFG_CLOSE_FILE:
-                    /* Close both files */
-                    SYS_FS_FileClose(appFatData.fileCfgHandle);
-                     /* The test was successful. Lets unmount. */
-                    appFatData.cfg_state = APP_CFG_UNMOUNT_DISK;
-                    break;
-
-                case APP_CFG_IDLE:
-                    /* The appliction comes here when the demo
-                     * has completed successfully. Switch on
-                     * green LED. */
-                    //BSP_LEDOn(APP_SUCCESS_LED);
-                    LED_ROff();
-                    break;
-                case APP_CFG_ERROR:
-                    /* The appliction comes here when the demo
-                     * has failed. Switch on the red LED.*/
-                    //BSP_LEDOn(APP_FAILURE_LED);
-                    LED_ROn();
-                    break;
-                default:
-                    break;
-
-                case APP_CFG_UNMOUNT_DISK:
-                    if(SYS_FS_Unmount("/mnt/myDrive") != 0)
-                    {
-                        /* The disk could not be un mounted. Try
-                         * un mounting again untill success. */
-
-                        appFatData.cfg_state = APP_CFG_UNMOUNT_DISK;
-                    }
-                    else
-                    {
-                        /* UnMount was successful. */
-                        appFatData.cfg_state = APP_CFG_IDLE;
-                    }
-                    break;
-            } 
-        }while((appFatData.cfg_state != APP_CFG_IDLE)||(appFatData.cfg_state != APP_CFG_ERROR));
     }
 }
 
@@ -474,21 +404,19 @@ void sd_fat_cfg_init(unsigned long *tGnss, unsigned long *tImu, uint8_t *ledStat
     unsigned long tImuLocal = 0;
     uint8_t ledStateLocal = 0;
     
-    appFatData.nBytesRead = 0;
-    appFatData.nBytesToWrite = 0;
+    //appFatData.nBytesRead = 0;
+    //appFatData.nBytesToWrite = 0;
 
-    appFatData.log_state = APP_MOUNT_DISK;
-    appFatData.cfg_state = APP_CFG_MOUNT_DISK;
+    //appFatData.log_state = APP_MOUNT_DISK;
+    //appFatData.cfg_state = APP_CFG_MOUNT_DISK;
     
     // Read config routine, until error or success
-    do{
-        sd_fat_readConfig_task();
-    }while ((sd_cfgGetState() != APP_CFG_IDLE)||(sd_cfgGetState() != APP_CFG_ERROR));
+    sd_fat_readConfig_task();
     
     // If read config routine was a success
-    if(sd_cfgGetState() != APP_CFG_ERROR)
+    if(sd_cfgGetState() == APP_CFG_IDLE)
         // Parse config buffer to get parameters
-        parseError = parseConfig(sd_cfgGetCfgBuffer(), &tGnssLocal, &tImuLocal, &ledStateLocal);
+        parseError = parseConfig(appFatData.cfg_data, &tGnssLocal, &tImuLocal, &ledStateLocal);
     // If the parsing failed or the read config routine failed
     if((parseError > 0)||(sd_cfgGetState() == APP_CFG_ERROR))
     {
@@ -496,16 +424,22 @@ void sd_fat_cfg_init(unsigned long *tGnss, unsigned long *tImu, uint8_t *ledStat
         *tGnss = T_INTERVAL_GNSS_DEFAULT;
         *tImu = T_INTERVAL_IMU_DEFAULT;
         *ledState = LED_STATE_DEFAULT;
+        appStateSet(APP_STATE_LOGGING);
+        // Start measure timer
+        DRV_TMR1_Start();
     }
-    else
+    else if ((sd_cfgGetState() == APP_CFG_IDLE))
     {
         *tGnss = tGnssLocal;
         *tImu = tImuLocal;
         *ledState = ledStateLocal;
+        appStateSet(APP_STATE_LOGGING);
+        // Start measure timer
+        DRV_TMR1_Start();
     }
 }
 
-static uint8_t parseConfig(char *cfgBuffer, unsigned long *tGnss, unsigned long *tImu, uint8_t *ledState)
+static uint8_t parseConfig(char cfgBuffer[], unsigned long *tGnss, unsigned long *tImu, uint8_t *ledState)
 {
     char *ptBufferHead;
     char *ptBufferTail;
