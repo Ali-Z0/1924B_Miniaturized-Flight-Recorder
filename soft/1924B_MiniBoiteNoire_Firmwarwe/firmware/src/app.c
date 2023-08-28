@@ -159,8 +159,6 @@ void APP_Initialize ( void )
     BNO055_delay_msek(100);
     RST_IMUOn();
     BNO055_delay_msek(100);
-    
-    LED_ROn();
         
     /* Place the App state machine in its initial state. */
     appData.state = APP_STATE_INIT;
