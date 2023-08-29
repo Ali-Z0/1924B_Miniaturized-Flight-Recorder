@@ -61,6 +61,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 #include "Mc32_serComm.h"
 #include "Mc32_sdFatGest.h"
 #include "Mc32Debounce.h"
+#include "usart_FIFO.h"
 #include <stdio.h>
 
 // *****************************************************************************
@@ -148,6 +149,10 @@ void APP_Initialize ( void )
     /* Keep the device ON */
     PWR_HOLDOn();
     LED_BOn();
+    
+    // Initialization of the USART FIFOs
+    initFifo(&usartFifoRx, FIFO_RX_SIZE, a_fifoRx, 0);
+    initFifo(&usartFifoTx, FIFO_TX_SIZE, a_fifoTx, 0);
        
     /* Start timers*/
     DRV_TMR0_Start();
@@ -199,9 +204,6 @@ void APP_Tasks ( void )
             appData.state = APP_STATE_CONFIG;
             /* Init ltime_BNO055 counter */
             timeData.ltime[BNO055_idx] = 0;
-            // Initialization of the USART FIFOs
-            initFifo(&usartFifoRx, FIFO_RX_SIZE, a_fifoRx, 0);
-            initFifo(&usartFifoTx, FIFO_TX_SIZE, a_fifoTx, 0);
             break;
         }
         case APP_STATE_CONFIG:

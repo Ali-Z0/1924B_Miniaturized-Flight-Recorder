@@ -62,6 +62,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 #include "system/common/sys_common.h"
 #include "app.h"
 #include "system_definitions.h"
+#include "usart_FIFO.h"
 
 // *****************************************************************************
 // *****************************************************************************
@@ -78,7 +79,7 @@ void __ISR(_UART_1_VECTOR, ipl0AUTO) _IntHandlerDrvUsartInstance0(void)
  
 
 
-void __ISR(_UART_2_VECTOR, ipl0AUTO) _IntHandlerDrvUsartInstance1(void)
+void __ISR(_UART_2_VECTOR, ipl1AUTO) _IntHandlerDrvUsartInstance1(void)
 {
     USART_ERROR usartStatus;
     bool        isTxBuffFull;

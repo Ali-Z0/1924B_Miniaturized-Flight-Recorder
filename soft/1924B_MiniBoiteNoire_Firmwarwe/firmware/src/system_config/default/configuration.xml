@@ -294,7 +294,7 @@
       <Template dnOrder="8">
         <Name dnOrder="0">system_interrupt.c</Name>
         <Path dnOrder="1">Source&amp;#160;Files/app/system_config/default</Path>
-        <Checksum dnOrder="2">D07D01E3044E519EC9408915BA6A2D8C</Checksum>
+        <Checksum dnOrder="2">2936216CAC95C113506A2EF68283EFD3</Checksum>
         <ProjectFileChecksum dnOrder="3">D397A0ED572FEDABDA4AD99D1E2412EE</ProjectFileChecksum>
       </Template>
       <Template dnOrder="9">
@@ -315,7 +315,7 @@
       <Template dnOrder="12">
         <Name dnOrder="0">system_init.c</Name>
         <Path dnOrder="1">Source&amp;#160;Files/app/system_config/default</Path>
-        <Checksum dnOrder="2">358ADC3860D5FA4298BA8520A8889758</Checksum>
+        <Checksum dnOrder="2">E7BAEB083BF00FFA6F27DFFC767D4447</Checksum>
       </Template>
       <Template dnOrder="13">
         <Name dnOrder="0">main.c</Name>

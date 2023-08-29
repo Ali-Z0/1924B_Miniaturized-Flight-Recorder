@@ -249,11 +249,11 @@ int32_t gnss_posGet_nmea(minmea_messages *sentences, enum minmea_sentence_id *ms
     /* Get full message */
     errorCode = getStringFromFifo(&usartFifoRx, message);
     
-    if (errorCode == sizeof(message)) {
+    if (errorCode == (sizeof(message)-1)) {
         // Got the correct message body length, process it
         
         // Get message id, strict
-        *msg_id = minmea_sentence_id(message, true);
+        *msg_id = minmea_sentence_id(message, false);
         
         // Commm succes if not overwritten
         errorCode = (int32_t) U_ERROR_COMMON_SUCCESS;
