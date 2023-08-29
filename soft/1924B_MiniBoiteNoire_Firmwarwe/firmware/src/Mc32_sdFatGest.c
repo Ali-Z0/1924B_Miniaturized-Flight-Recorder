@@ -62,7 +62,7 @@ APP_FAT_DATA COHERENT_ALIGNED appFatData;
 /* ************************************************************************** */
 /* ************************************************************************** */
 // Function prototype
-static uint8_t parseConfig(char *cfgBuffer, unsigned long *tGnss, unsigned long *tImu, uint8_t *ledState);
+static uint8_t parseConfig(unsigned long *tGnss, unsigned long *tImu, uint8_t *ledState);
 /* ************************************************************************** */
 
 
@@ -83,13 +83,13 @@ void sd_fat_readConfig_task ( void )
             {
                 /* The disk could not be mounted. Try
                  * mounting again untill success. */
-
+                LED_ROn();
                 appFatData.cfg_state = APP_CFG_MOUNT_DISK;
             }
             else
             {
                 /* Mount was successful. Unmount the disk, for testing. */
-
+                LED_ROff();
                 appFatData.cfg_state = APP_CFG_SET_CURRENT_DRIVE;
             }
             break;
@@ -143,7 +143,7 @@ void sd_fat_readConfig_task ( void )
             break;
         case APP_CFG_OPEN_WRITE_CONFIG_FILE:
 			appFatData.fileCfgHandle = SYS_FS_FileOpen("CONFIG.txt",
-					(SYS_FS_FILE_OPEN_WRITE_PLUS));
+					(SYS_FS_FILE_OPEN_WRITE));
 			if(appFatData.fileCfgHandle == SYS_FS_HANDLE_INVALID)
 			{
 				/* Could not open the file. Error out*/
@@ -158,8 +158,7 @@ void sd_fat_readConfig_task ( void )
 
 		case APP_CFG_WRITE_CONFIG_FILE:                             
 			/* If read was success, try writing to the new file */
-			if(SYS_FS_FileWrite(appFatData.fileCfgHandle, appFatData.cfg_data, 
-					appFatData.nBytesToWrite == -1))
+			if(SYS_FS_FileStringPut(appFatData.fileCfgHandle, appFatData.cfg_data)== -1)
 			{
 				/* Write was not successful. Close the file
 				 * and error out.*/
@@ -172,7 +171,7 @@ void sd_fat_readConfig_task ( void )
 			}
 			break;
         case APP_CFG_CLOSE_FILE:
-            /* Close both files */
+            /* Close the file */
             SYS_FS_FileClose(appFatData.fileCfgHandle);
              /* The test was successful. Lets idle. */
             appFatData.cfg_state = APP_CFG_UNMOUNT_DISK;
@@ -247,7 +246,7 @@ void sd_fat_logging_task ( void )
             break;
             
         case APP_WRITE_MEASURE_FILE:
-            appFatData.fileMeasureHandle = SYS_FS_FileOpen("MESURES.csv",
+            appFatData.fileMeasureHandle = SYS_FS_FileOpen("TRACKING.csv",
                     (SYS_FS_FILE_OPEN_APPEND_PLUS));
             if(appFatData.fileMeasureHandle == SYS_FS_HANDLE_INVALID)
             {
@@ -327,7 +326,7 @@ void sd_BNO_scheduleWrite_BNO055 (s_bno055_data * data)
         /* Next log_state : write to file */
         appFatData.log_state = APP_WRITE_MEASURE_FILE;
         /* Write the buffer */
-        sprintf(appFatData.data, "%d;%d0;%.4f;%.4f;%.4f;%.4f;%.4f;%.4f;%.4f;%.4f;%.4f;%.4f;%.4f;%.4f;%.4f;%.4f;%.4f;%d;%d;%d;%d;\r\n"
+        sprintf(appFatData.data, "IMU;%d;%d0;%.4f;%.4f;%.4f;%.4f;%.4f;%.4f;%.4f;%.4f;%.4f;%.4f;%.4f;%.4f;%.4f;%.4f;%.4f;%d;%d;%d;%d;\r\n"
                                   ,data->flagImportantMeas, (data->d_time), data->gravity.x, data->gravity.y, data->gravity.z, data->gyro.x, data->gyro.y, data->gyro.z
                                   ,data->mag.x, data->mag.y, data->mag.z, data->linear_accel.x, data->linear_accel.y, data->linear_accel.z
                                   ,data->euler.h, data->euler.p, data->euler.r, data->quaternion.w, data->quaternion.x, data->quaternion.y, data->quaternion.z);
@@ -358,6 +357,9 @@ void sd_CFG_Write (uint32_t tLogGNSS_ms, uint32_t tLogIMU_ms, uint8_t ledState, 
     /* If sd Card available */
     if((appFatData.cfg_state == APP_CFG_IDLE)||(appFatData.cfg_state == APP_CFG_OPEN_READ_CONFIG_FILE))
     {
+        /* Close the file */
+        SYS_FS_FileClose(appFatData.fileCfgHandle);
+            
         if(skipMount == false)
             /* Next config : mount disk */
             appFatData.cfg_state = APP_CFG_MOUNT_DISK;
@@ -366,7 +368,7 @@ void sd_CFG_Write (uint32_t tLogGNSS_ms, uint32_t tLogIMU_ms, uint8_t ledState, 
             appFatData.cfg_state = APP_CFG_OPEN_WRITE_CONFIG_FILE;
         
         /* Write the buffer */
-        sprintf(appFatData.cfg_data, "$LOG INTERVAL GNSS [ms] : %ud\r\n$LOG INTERVAL IMU [ms] : %ud\r\n$LED ENABLE [1/0] : %ud\r\n", tLogGNSS_ms, tLogIMU_ms, ledState);
+        sprintf(appFatData.cfg_data, "$LOG INTERVAL GNSS [ms] : %u\r\n$LOG INTERVAL IMU [ms] : %u\r\n$LED ENABLE [1/0] : %u\r\n", tLogGNSS_ms, tLogIMU_ms, ledState);
         /* Compute the number of bytes to send */
         appFatData.nBytesToWrite = strlen(appFatData.cfg_data);
         
@@ -416,7 +418,7 @@ void sd_fat_cfg_init(unsigned long *tGnss, unsigned long *tImu, uint8_t *ledStat
     // If read config routine was a success
     if(sd_cfgGetState() == APP_CFG_IDLE)
         // Parse config buffer to get parameters
-        parseError = parseConfig(appFatData.cfg_data, &tGnssLocal, &tImuLocal, &ledStateLocal);
+        parseError = parseConfig(&tGnssLocal, &tImuLocal, &ledStateLocal);
     // If the parsing failed or the read config routine failed
     if((parseError > 0)||(sd_cfgGetState() == APP_CFG_ERROR))
     {
@@ -439,7 +441,7 @@ void sd_fat_cfg_init(unsigned long *tGnss, unsigned long *tImu, uint8_t *ledStat
     }
 }
 
-static uint8_t parseConfig(char cfgBuffer[], unsigned long *tGnss, unsigned long *tImu, uint8_t *ledState)
+static uint8_t parseConfig(unsigned long *tGnss, unsigned long *tImu, uint8_t *ledState)
 {
     char *ptBufferHead;
     char *ptBufferTail;
@@ -447,8 +449,8 @@ static uint8_t parseConfig(char cfgBuffer[], unsigned long *tGnss, unsigned long
     uint8_t error = 0;
         
     // Locate the head and tail of the first data
-    ptBufferHead = strstr(cfgBuffer, " \t");
-    ptBufferTail = strstr(cfgBuffer, "\r\n");
+    ptBufferHead = strstr(appFatData.cfg_data, " :");
+    ptBufferTail = strstr(appFatData.cfg_data, "\r\n");
     // Check if the pointers are corrects
     if((ptBufferHead != NULL)&&(ptBufferTail != NULL)&&(ptBufferHead < ptBufferTail)){
         // Copy the data between the head and the tail in a sub-pointer
@@ -460,7 +462,7 @@ static uint8_t parseConfig(char cfgBuffer[], unsigned long *tGnss, unsigned long
         error++;
     
     // Locate the head and tail of the first data
-    ptBufferHead = strstr(ptBufferTail, " \t");
+    ptBufferHead = strstr(ptBufferTail, " :");
     ptBufferTail = strstr(ptBufferHead, "\r\n");
     // Check if the pointers are corrects
     if((ptBufferHead != NULL)&&(ptBufferTail != NULL)&&(ptBufferHead < ptBufferTail)){
@@ -473,7 +475,7 @@ static uint8_t parseConfig(char cfgBuffer[], unsigned long *tGnss, unsigned long
         error++;
     
     // Locate the head and tail of the first data
-    ptBufferHead = strstr(ptBufferTail, " \t");
+    ptBufferHead = strstr(ptBufferTail, " :");
     ptBufferTail = (ptBufferHead + 3);
     // Check if the pointers are corrects
     if((ptBufferHead != NULL)&&(ptBufferTail != NULL)&&(ptBufferHead < ptBufferTail)){

@@ -207,7 +207,7 @@ void APP_Tasks ( void )
         case APP_STATE_CONFIG:
         {
             /* Init sd card parameters and read/create config File */
-            sd_fat_cfg_init(&timeData.measPeriod[BNO055_idx], &timeData.measPeriod[BNO055_idx], &appData.ledState);
+            sd_fat_cfg_init(&timeData.measPeriod[GNSS_idx], &timeData.measPeriod[BNO055_idx], &appData.ledState);
             
             // Set default system parameters
             /*timeData.measPeriod[BNO055_idx] = T_INTERVAL_GNSS_DEFAULT;
@@ -235,8 +235,6 @@ void APP_Tasks ( void )
                 timeData.measTodo[BNO055_idx] = false;
                 /* Update last time counter */
                 timeData.ltime[BNO055_idx] = timeData.measCnt[BNO055_idx];
-                
-                LED_BOn();
             }
             // GNSS Measure routine
             if((timeData.measTodo[GNSS_idx] == true )&&(sd_logGetState() == APP_IDLE))
@@ -244,10 +242,12 @@ void APP_Tasks ( void )
                 /* Read GNSS position measure */
                 gnss_posGet_nmea(&gnss_nmea_local_data, &gnss_nmea_msgId);
                 /* Write value to sdCard */
-                //sd_BNO_scheduleWrite_GNSS(&bno055_local_data);
+                //sd_BNO_scheduleWrite_GNSS(&gnss_nmea_local_data);
                 /* Reset measure flag */
                 timeData.measTodo[GNSS_idx] = false;
-                LED_BOn();
+                // If LED enabled
+                if(appData.ledState > 0)
+                    LED_BOn();
             }
             else
             {
