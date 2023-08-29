@@ -121,6 +121,9 @@ void stateTimer_callback()
     /* Start a measure set each 100ms */        
     if ( ( timeData.measCnt[GNSS_idx] % (timeData.measPeriod[GNSS_idx]/10) ) == 0)
         timeData.measTodo[GNSS_idx] = true;
+     
+     if((timeData.ledCnt >= 50) && (appData.ledState > 0))
+        LED_BOff();
 }
 
 // *****************************************************************************
@@ -148,7 +151,7 @@ void APP_Initialize ( void )
 {
     /* Keep the device ON */
     PWR_HOLDOn();
-    LED_BOn();
+    LED_GOn();
     
     // Initialization of the USART FIFOs
     initFifo(&usartFifoRx, FIFO_RX_SIZE, a_fifoRx, 0);
@@ -159,6 +162,10 @@ void APP_Initialize ( void )
     /* Init i2c bus */
     i2c_init(1);
     
+    
+    /* Reset GNSS*/
+    RESET_NOff();
+    BNO055_delay_msek(100);
     /* Unreset GNSS */
     RESET_NOn();
 
@@ -188,7 +195,7 @@ void APP_Tasks ( void )
     s_bno055_data bno055_local_data; 
     //s_gnssData gnss_ubx_local_data;
     minmea_messages gnss_nmea_local_data;
-    enum minmea_sentence_id gnss_nmea_msgId = MINMEA_UNKNOWN;
+    //enum minmea_sentence_id gnss_nmea_msgId = MINMEA_UNKNOWN;
 
     /* Check the application's current state. */
     switch ( appData.state )
@@ -217,7 +224,7 @@ void APP_Tasks ( void )
             appData.ledState = LED_STATE_DEFAULT;
             appData.state = APP_STATE_LOGGING;*/
             
-            LED_BOff();
+            LED_GOff();
             break;
         }
         case APP_STATE_LOGGING:
@@ -225,6 +232,12 @@ void APP_Tasks ( void )
             // BNO055 Measure routine
             if((timeData.measTodo[BNO055_idx] == true )&&(sd_logGetState() == APP_IDLE))
             {
+                // If LED enabled
+                if(appData.ledState > 0){
+                    timeData.ledCnt = 0;
+                    LED_BOn();
+                }
+                
                 /* BNO055 Read all important info routine */
                 bno055_local_data.comres = bno055_read_routine(&bno055_local_data);
                 /* Delta time */
@@ -232,25 +245,22 @@ void APP_Tasks ( void )
                 /* Pressure measure */
                 bno055_local_data.pressure = 0;
                 /* Write value to sdCard */
-                sd_BNO_scheduleWrite_BNO055(&bno055_local_data);
+                sd_IMU_scheduleWrite(&bno055_local_data);
                 /* Reset measure flag */
                 timeData.measTodo[BNO055_idx] = false;
                 /* Update last time counter */
                 timeData.ltime[BNO055_idx] = timeData.measCnt[BNO055_idx];
             }
             // GNSS Measure routine
-            if((timeData.measTodo[GNSS_idx] == true )&&(sd_logGetState() == APP_IDLE))
+            else if((timeData.measTodo[GNSS_idx] == true )&&(sd_logGetState() == APP_IDLE))
             {
                 /* Read GNSS position measure */
-                gnss_posGet_nmea(&gnss_nmea_local_data, &gnss_nmea_msgId);
+                //gnss_posGet_nmea(&gnss_nmea_local_data, &gnss_nmea_msgId);
                 /* Write value to sdCard */
-                //sd_BNO_scheduleWrite_GNSS(&gnss_nmea_local_data);
+                sd_GNSS_scheduleWrite(&gnss_nmea_local_data);
                 /* Reset measure flag */
                 timeData.measTodo[GNSS_idx] = false;
-                // If LED enabled
-                if(appData.ledState > 0)
-                    LED_BOn();
-            }
+                            }
             else
             {
                 /* No comm, so no error */

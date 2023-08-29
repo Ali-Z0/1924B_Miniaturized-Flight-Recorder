@@ -54,7 +54,8 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 // *****************************************************************************
 
 #include "app.h"
-
+#include "GNSS/minmea.h"
+#include "usart_FIFO.h"
 // *****************************************************************************
 // *****************************************************************************
 // Section: Type Definitions
@@ -172,10 +173,13 @@ typedef struct
     APP_FAT_CONFIG_STATES      cfg_state;
     
     /* Application data buffer */
-    char                data[256] DATA_BUFFER_ALIGN;
+    char                data[FIFO_RX_SIZE+2] DATA_BUFFER_ALIGN;
     /* Application config file */
     char                cfg_data[100] DATA_BUFFER_ALIGN;
-
+    
+    /* Filename variable */
+    char                fileName[15] DATA_BUFFER_ALIGN;
+    
     uint32_t           nBytesWritten;
 
     uint32_t           nBytesRead;
@@ -241,7 +245,9 @@ void sd_fat_logging_task ( void );
 APP_FAT_LOG_STATES sd_logGetState( void );
 void sd_logSetState( APP_FAT_LOG_STATES newState );
 
-void sd_BNO_scheduleWrite_BNO055 (s_bno055_data * data);
+void sd_IMU_scheduleWrite (s_bno055_data * data);
+
+void sd_GNSS_scheduleWrite (minmea_messages * pGnssData);
 
 
 

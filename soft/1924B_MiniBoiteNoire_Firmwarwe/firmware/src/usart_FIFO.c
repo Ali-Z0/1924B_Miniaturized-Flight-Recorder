@@ -189,6 +189,29 @@ int32_t getStringFromFifo(USART_FIFO *pFifo, char* pArrayToModify){
     return arraySize;
 }
 
+int32_t getFifoToLastReturn(USART_FIFO *pFifo, char* pArrayToModify){
+    
+    int32_t arraySize;
+    int i = 0;
+    
+    char *ptTail;
+    //char *ptHead;
+
+    ptTail = strrchr(a_fifoRx, '\n');
+    //ptHead = strchr(a_fifoRx, '$');
+    
+    arraySize = (ptTail - &a_fifoRx[0]);
+    
+    getCharFromFifo(pFifo, &pArrayToModify[i]);
+    
+    for(i = 1; i < (arraySize); i++){
+        
+        getCharFromFifo(pFifo, &pArrayToModify[i]);
+    }
+    
+    return arraySize;
+}
+
 int32_t getFullFifo(USART_FIFO *pFifo, char* pArrayToModify){
     
     int32_t arraySize;

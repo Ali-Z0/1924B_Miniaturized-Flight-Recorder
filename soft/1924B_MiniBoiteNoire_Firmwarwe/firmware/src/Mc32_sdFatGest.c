@@ -29,6 +29,7 @@
 #include "app.h"
 #include "bno055_support.h"
 #include "GNSS/u_gnss_pos.h"
+#include "usart_FIFO.h"
 
 /* ************************************************************************** */
 /* ************************************************************************** */
@@ -246,7 +247,7 @@ void sd_fat_logging_task ( void )
             break;
             
         case APP_WRITE_MEASURE_FILE:
-            appFatData.fileMeasureHandle = SYS_FS_FileOpen("TRACKING.csv",
+            appFatData.fileMeasureHandle = SYS_FS_FileOpen(appFatData.fileName,
                     (SYS_FS_FILE_OPEN_APPEND_PLUS));
             if(appFatData.fileMeasureHandle == SYS_FS_HANDLE_INVALID)
             {
@@ -318,15 +319,17 @@ void sd_fat_logging_task ( void )
 //    SYS_FS_Tasks();
 } //End of APP_Tasks
 
-void sd_BNO_scheduleWrite_BNO055 (s_bno055_data * data)
+void sd_IMU_scheduleWrite (s_bno055_data * data)
 {
     /* If sd Card available */
     if(appFatData.log_state == APP_IDLE)
     {
+        // Prepare file name
+        sprintf(appFatData.fileName, "LOG_IMU.csv");
         /* Next log_state : write to file */
         appFatData.log_state = APP_WRITE_MEASURE_FILE;
         /* Write the buffer */
-        sprintf(appFatData.data, "IMU;%d;%d0;%.4f;%.4f;%.4f;%.4f;%.4f;%.4f;%.4f;%.4f;%.4f;%.4f;%.4f;%.4f;%.4f;%.4f;%.4f;%d;%d;%d;%d;\r\n"
+        sprintf(appFatData.data, "%d;%d0;%.4f;%.4f;%.4f;%.4f;%.4f;%.4f;%.4f;%.4f;%.4f;%.4f;%.4f;%.4f;%.4f;%.4f;%.4f;%d;%d;%d;%d;\r\n"
                                   ,data->flagImportantMeas, (data->d_time), data->gravity.x, data->gravity.y, data->gravity.z, data->gyro.x, data->gyro.y, data->gyro.z
                                   ,data->mag.x, data->mag.y, data->mag.z, data->linear_accel.x, data->linear_accel.y, data->linear_accel.z
                                   ,data->euler.h, data->euler.p, data->euler.r, data->quaternion.w, data->quaternion.x, data->quaternion.y, data->quaternion.z);
@@ -335,18 +338,22 @@ void sd_BNO_scheduleWrite_BNO055 (s_bno055_data * data)
     }
 }
 
-void sd_GNSS_scheduleWrite (s_gnssData * pGnssData)
+void sd_GNSS_scheduleWrite (minmea_messages * pGnssData)
 {
+    char fifoBuffer[FIFO_RX_SIZE];
     /* If sd Card available */
     if(appFatData.log_state == APP_IDLE)
     {
+        // Prepare file name
+        sprintf(appFatData.fileName, "LOG_GNSS.csv");
         /* Next log_state : write to file */
         appFatData.log_state = APP_WRITE_MEASURE_FILE;
         /* Write the buffer */
-        /*sprintf(appFatData.data, "%d;%d0;%.4f;%.4f;%.4f;%.4f;%.4f;%.4f;%.4f;%.4f;%.4f;%.4f;%.4f;%.4f;%.4f;%.4f;%.4f;%d;%d;%d;%d;\r\n"
-                                  ,data->flagImportantMeas, (data->d_time), data->gravity.x, data->gravity.y, data->gravity.z, data->gyro.x, data->gyro.y, data->gyro.z
-                                  ,data->mag.x, data->mag.y, data->mag.z, data->linear_accel.x, data->linear_accel.y, data->linear_accel.z
-                                  ,data->euler.h, data->euler.p, data->euler.r, data->quaternion.w, data->quaternion.x, data->quaternion.y, data->quaternion.z);*/
+        getFifoToLastReturn(&usartFifoRx, fifoBuffer);
+        
+        sprintf(appFatData.data, "%s", fifoBuffer);
+        
+        //sprintf(appFatData.data, "%s",  );
         /* Compute the number of bytes to send */
         appFatData.nBytesToWrite = strlen(appFatData.data);
     }

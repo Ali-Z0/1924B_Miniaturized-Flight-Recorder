@@ -23,7 +23,7 @@ extern "C" {
 #include "app.h"
 
     
-#define FIFO_RX_SIZE 82
+#define FIFO_RX_SIZE 820 // 82 NMEA
 #define FIFO_TX_SIZE 82
 
     
@@ -52,6 +52,7 @@ uint8_t getCharFromFifo(USART_FIFO *pFifo, char *charRead);
 void putStringInFifo(USART_FIFO *pFifo, size_t arraySize, char* pArrayToSave);
 int32_t getFullFifo(USART_FIFO *pFifo, char* pArrayToModify);
 int32_t getStringFromFifo(USART_FIFO *pFifo, char* pArrayToModify);
+int32_t getFifoToLastReturn(USART_FIFO *pFifo, char* pArrayToModify);
 
 //----------------------------------------------------------------------------// Variables and structures delarations
 extern USART_FIFO usartFifoRx;
