@@ -131,8 +131,10 @@ void stateTimer_callback()
 // Section: Application Local Functions
 // *****************************************************************************
 // *****************************************************************************
-void btnTaskGest( void );
-void sys_shutdown( void );
+static void stopLogging (void);
+static void btnTaskGest( void );
+static void sys_shutdown( void );
+static void startLogging (void);
 // *****************************************************************************
 // *****************************************************************************
 // Section: Application Initialization and State Machine Functions
@@ -196,6 +198,12 @@ void APP_Tasks ( void )
     //s_gnssData gnss_ubx_local_data;
     minmea_messages gnss_nmea_local_data;
     //enum minmea_sentence_id gnss_nmea_msgId = MINMEA_UNKNOWN;
+    /* CONFIGURATION */
+    char param[10] = {0};
+    uint32_t i = 0;
+            
+    // Character to send trough USART
+    static char charToSend = 0;
 
     /* Check the application's current state. */
     switch ( appData.state )
@@ -217,12 +225,6 @@ void APP_Tasks ( void )
         {
             /* Init sd card parameters and read/create config File */
             sd_fat_cfg_init(&timeData.measPeriod[GNSS_idx], &timeData.measPeriod[BNO055_idx], &appData.ledState);
-            
-            // Set default system parameters
-            /*timeData.measPeriod[BNO055_idx] = T_INTERVAL_GNSS_DEFAULT;
-            timeData.measPeriod[GNSS_idx] = T_INTERVAL_IMU_DEFAULT;
-            appData.ledState = LED_STATE_DEFAULT;
-            appData.state = APP_STATE_LOGGING;*/
             
             LED_GOff();
             break;
@@ -279,8 +281,125 @@ void APP_Tasks ( void )
             /* --- Button routine --- */
             btnTaskGest();
             
+            /* --- LIVE GNSS COMMAND --- */
+            if(pollSerialCmds(USART_ID_1, "glive", "GLIVE", "-lvg", "-LVG")){
+                /* Stop SD card logging */
+                stopLogging();       
+                /* USB communication states */
+                appData.state = APP_STATE_COMM_LIVE_GNSS;
+                LED_BOn();
+            }
+            /* --- LIVE IMU COMMAND --- */
+            if(pollSerialCmds(USART_ID_1, "ilive", "ILIVE", "-lvi", "-LVI")){
+                /* Stop SD card logging */
+                stopLogging();       
+                /* USB communication states */
+                appData.state = APP_STATE_COMM_LIVE_IMU;
+                LED_GOn();
+                /* Deactivate USART2 (not used) */
+                PLIB_USART_Disable(USART_ID_2);
+                /* Reset measure flags and stop timer */
+                DRV_TMR1_Start();
+            }
+            
+            /* --- SHUTDOWN SYSTEM COMMAND  --- */
+            if(pollSerialCmds(USART_ID_1, "shutdown", "SHUTDOWN", "-off", "-OFF")){       
+                /* Turn off state */
+                appData.state = APP_STATE_SHUTDOWN;
+            }
+            
+            /* --- CONFIG BLACKBOX --- */
+            if(pollSerialCmds(USART_ID_1, "config", "CONFIG", "-cfg", "-CFG")){       
+                // Stop SD card logging 
+                stopLogging();
+                serTransmitString("MODE CONFIGURATION \r\n");
+                // Turn off state 
+                appData.state = APP_STATE_CONFIGURATE_BBX;
+            }
+            
+            /* --- GET GNSS LOGS --- */
+            /*if(pollSerialCmds(USART_ID_1, "glog", "GLOG", "-gl", "-GL")){       
+                // Stop SD card logging 
+                stopLogging();
+                // Turn off state 
+                appData.state = APP_STATE_SHUTDOWN;
+            }*/
+            
+            /* --- GEST IMU LOGS --- */
+            /*if(pollSerialCmds(USART_ID_1, "glog", "GLOG", "-gl", "-GL")){       
+                // Stop SD card logging 
+                stopLogging();
+                // Turn off state 
+                appData.state = APP_STATE_SHUTDOWN;
+            }*/
            break;
         }
+        case APP_STATE_COMM_LIVE_GNSS:  
+            
+            // Display GNSS live data trough USART 1
+            if(getReadSize(&usartFifoRx) > 0){
+                getCharFromFifo(&usartFifoRx, &charToSend);
+                PLIB_USART_TransmitterByteSend(USART_ID_1, charToSend);
+            }
+            // If exit command detected, return to logging
+            if(pollSerialCmds(USART_ID_1, "exit", "EXIT", "x" ,"X"))
+                startLogging();
+            break;
+        case APP_STATE_COMM_LIVE_IMU:
+            // BNO055 Measure routine
+            if(timeData.measTodo[BNO055_idx] == true )
+            {
+                // If LED enabled
+                if(appData.ledState > 0){
+                    timeData.ledCnt = 0;
+                    LED_BOn();
+                }
+                /* BNO055 Read all important info routine */
+                bno055_local_data.comres = bno055_read_routine(&bno055_local_data);
+                /* Delta time */
+                bno055_local_data.d_time = timeData.measCnt[BNO055_idx] - timeData.ltime[BNO055_idx];
+                /* Pressure measure */
+                bno055_local_data.pressure = 0;
+                
+                /* Display readed values */
+                serDisplayValues(&bno055_local_data);
+                
+                /* Reset measure flag */
+                timeData.measTodo[BNO055_idx] = false;
+                /* Update last time counter */
+                timeData.ltime[BNO055_idx] = timeData.measCnt[BNO055_idx];
+            }
+            // If exit command detected, return to logging
+            if(pollSerialCmds(USART_ID_1, "exit", "EXIT", "x" ,"X")){
+                startLogging();
+                /* Reactivate USART2 (used) */
+                PLIB_USART_Enable(USART_ID_2);
+            }
+                
+            break;
+            
+        case APP_STATE_CONFIGURATE_BBX:
+
+            
+                        
+            if (pollSerialSingleCmd(USART_ID_1, "INTG:")){
+                while(!DRV_USART_ReceiverBufferIsEmpty(USART_ID_1)){
+                    param[i] = DRV_USART_ReadByte(USART_ID_1);
+                    i++;
+                }    
+                i = 0;
+                timeData.measPeriod[GNSS_idx] = atoi(param);
+                sd_CFG_Write(timeData.measPeriod[GNSS_idx], timeData.measPeriod[BNO055_idx], appData.ledState, true);
+            }
+            
+            // Manipulate configuration
+            sd_fat_config_task(false);
+            
+            // If exit command detected, return to logging
+            if(pollSerialCmds(USART_ID_1, "exit", "EXIT", "x" ,"X"))
+                startLogging();
+            break;
+            
         case APP_STATE_SHUTDOWN:
         {
             /* Save and shutdown system */
@@ -301,7 +420,7 @@ void appStateSet( APP_STATES newState ){
      appData.state = newState;
 }
 
-void btnTaskGest( void ){
+static void btnTaskGest( void ){
     static bool Hold = false;
     /* Button management : if rising edge detected */
     if(((ButtonMFStateGet()))||(Hold == true))
@@ -327,7 +446,7 @@ void btnTaskGest( void ){
     }
 }
 
-void sys_shutdown( void ) {
+static void sys_shutdown( void ) {
     /* Display shutting off mode */
     LED_BOff();
     LED_GOff();
@@ -349,6 +468,41 @@ void sys_shutdown( void ) {
     }
     /* turn off the device */
     PWR_HOLDOff();
+}
+
+static void stopLogging (void)
+{
+    /* Reset measure flags and stop timer */
+    DRV_TMR1_Stop();
+    timeData.measTodo[GNSS_idx] = false;
+    timeData.measTodo[BNO055_idx] = false;
+
+    /* Finish config */
+    while(sd_cfgGetState() != APP_CFG_IDLE){
+        sd_fat_cfg_init(&timeData.measPeriod[GNSS_idx], &timeData.measPeriod[BNO055_idx], &appData.ledState);
+    }
+
+    /* Finish logging */
+    while(sd_logGetState() != APP_IDLE){
+        sd_fat_logging_task();
+    }
+
+    /* Reset Leds states */
+    LED_ROff();
+    LED_ROff();
+    LED_GOff();
+}
+
+static void startLogging (void)
+{
+    // Logging state
+    appData.state = APP_STATE_LOGGING;
+    // Restart timer 1
+    DRV_TMR1_Start();
+    /* Reset Leds states */
+    LED_ROff();
+    LED_ROff();
+    LED_GOff();
 }
 
 /*******************************************************************************

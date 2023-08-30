@@ -114,6 +114,9 @@ typedef enum
     APP_STATE_CONFIG,
     APP_STATE_LOGGING,
     APP_STATE_FLAG_MEAS,
+    APP_STATE_COMM_LIVE_GNSS,
+    APP_STATE_COMM_LIVE_IMU,
+    APP_STATE_CONFIGURATE_BBX,
 	APP_STATE_SHUTDOWN
 	/* TODO: Define states used by the application state machine. */
 

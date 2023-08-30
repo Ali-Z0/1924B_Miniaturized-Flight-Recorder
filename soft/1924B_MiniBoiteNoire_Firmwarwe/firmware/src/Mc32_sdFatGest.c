@@ -74,7 +74,7 @@ static uint8_t parseConfig(unsigned long *tGnss, unsigned long *tImu, uint8_t *l
 /* ************************************************************************** */
 /* ************************************************************************** */
 
-void sd_fat_readConfig_task ( void )
+void sd_fat_config_task ( bool init )
 {
     /* The application task cfg_state machine */
     switch(appFatData.cfg_state)
@@ -103,8 +103,12 @@ void sd_fat_readConfig_task ( void )
             }
             else
             {
-                /* Open a file for reading. */
-                appFatData.cfg_state = APP_CFG_OPEN_READ_CONFIG_FILE;
+                if(init == true)
+                    /* Open config file for reading. */
+                    appFatData.cfg_state = APP_CFG_OPEN_READ_CONFIG_FILE;
+                else
+                    /* Wait for further commands. */
+                    appFatData.cfg_state = APP_CFG_IDLE;
             }
             break;
             
@@ -399,6 +403,10 @@ APP_FAT_CONFIG_STATES sd_cfgGetState( void )
 {
     return appFatData.cfg_state;
 }
+void sd_cfgSetState( APP_FAT_CONFIG_STATES newState )
+{
+     appFatData.cfg_state = newState;
+}
 
 char* sd_cfgGetCfgBuffer( void )
 {
@@ -420,7 +428,7 @@ void sd_fat_cfg_init(unsigned long *tGnss, unsigned long *tImu, uint8_t *ledStat
     //appFatData.cfg_state = APP_CFG_MOUNT_DISK;
     
     // Read config routine, until error or success
-    sd_fat_readConfig_task();
+    sd_fat_config_task(true);
     
     // If read config routine was a success
     if(sd_cfgGetState() == APP_CFG_IDLE)

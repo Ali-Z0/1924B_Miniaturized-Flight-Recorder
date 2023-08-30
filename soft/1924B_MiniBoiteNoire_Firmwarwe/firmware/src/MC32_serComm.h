@@ -85,7 +85,12 @@ extern "C" {
 
 void serDisplayValues ( s_bno055_data *bno055_data );
 
+bool pollSerialCmds(USART_MODULE_ID usartID, const char * command1, const char * 
+                        command2, const char * command3,const char * command4);
 
+bool pollSerialSingleCmd(USART_MODULE_ID usartID, const char * command1);
+
+void serTransmitString ( const char * msg );
     /* Provide C++ Compatibility */
 #ifdef __cplusplus
 }

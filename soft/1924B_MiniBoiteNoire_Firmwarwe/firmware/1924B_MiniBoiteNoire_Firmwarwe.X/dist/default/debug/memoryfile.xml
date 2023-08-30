@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?> 
 <project>                                  
-  <executable name="dist/default/production/1924B_MiniBoiteNoire_Firmwarwe.X.production.elf">                 
+  <executable name="dist/default/debug/1924B_MiniBoiteNoire_Firmwarwe.X.debug.elf">                 
     <memory name="program">                 
       <units>bytes</units>                 
       <length>269824</length>                 
-      <used>157220</used>                     
-      <free>112604</free>                     
+      <used>157252</used>                     
+      <free>112572</free>                     
     </memory>                              
     <memory name="data">              
       <units>bytes</units>                 
-      <length>65536</length>                 
-      <used>7408</used>                     
-      <free>58128</free>                     
+      <length>66048</length>                 
+      <used>8432</used>                     
+      <free>57616</free>                     
     </memory>                              
   </executable>                            
 </project>                                 
