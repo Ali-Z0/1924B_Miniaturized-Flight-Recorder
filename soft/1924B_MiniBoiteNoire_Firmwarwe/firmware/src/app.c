@@ -313,7 +313,11 @@ void APP_Tasks ( void )
             if(pollSerialCmds(USART_ID_1, "config", "CONFIG", "-cfg", "-CFG")){       
                 // Stop SD card logging 
                 stopLogging();
+                /* Deactivate USART2 (not used) */
+                PLIB_USART_Disable(USART_ID_2);
                 serTransmitString("MODE CONFIGURATION \r\n");
+                // Set config state to idle
+                sd_cfgSetState(APP_CFG_IDLE);
                 // Turn off state 
                 appData.state = APP_STATE_CONFIGURATE_BBX;
                 LED_GOn();
@@ -382,7 +386,6 @@ void APP_Tasks ( void )
             
         case APP_STATE_CONFIGURATE_BBX:
             
-            
             // Get command's characters
             while((PLIB_USART_ReceiverDataIsAvailable(USART_ID_1))&&(readCnt < 30)){
                 charRead[readCnt] = PLIB_USART_ReceiverByteReceive(USART_ID_1);
@@ -396,26 +399,37 @@ void APP_Tasks ( void )
                 /* Clear read buffer */
                 memset(charRead,0,strlen(charRead));
             }
+            scanf("",);
+//            if(strstr(charRead, "INTG:") != NULL)
+//            {
+//                ptTrame = strstr(charRead, "INTG:");
+//                // Copy the data between the head and the tail in a sub-pointer
+//                strncpy(ptTrame, (ptTrame+5), 5);
+//                if(atoi(ptTrame) > 0){
+//                    timeData.measPeriod[GNSS_idx] = atoi(ptTrame);
+//                    sd_CFG_Write (timeData.measPeriod[GNSS_idx], timeData.measPeriod[BNO055_idx], appData.ledState, true);
+//                }
+//                /* Reset read counter */
+//                readCnt = 0;
+//                /* Clear read buffer */
+//                memset(charRead,0,strlen(charRead));
+//             }
             // Check occurence with commands
             if((strstr(charRead, "exit") != NULL)||(strstr(charRead, "EXIT") != NULL)
                 || (strstr(charRead, "x") != NULL) || (strstr(charRead, "X") != NULL)) { 
+                /* Command detected */
+                startLogging();
+                /* Reactivate USART2 (used) */
+                PLIB_USART_Enable(USART_ID_2);
                 /* Reset read counter */
                 readCnt = 0;
                 /* Clear read buffer */
                 memset(charRead,0,strlen(charRead));
-                /* Command detected */
-                startLogging();
             }
-            if(strstr(charRead, "INTG:"))
-            {
-                ptTrame = strstr(charRead, "INTG:");
-                // Copy the data between the head and the tail in a sub-pointer
-                strncpy(ptTrame, (ptTrame+5), 5);
-                if(atoi(ptTrame) > 0){
-                    timeData.measPeriod[GNSS_idx] = atoi(ptTrame);
-                    sd_CFG_Write (timeData.measPeriod[GNSS_idx], timeData.measPeriod[BNO055_idx], appData.ledState, true);
-                }
-            }
+            
+            // Manipulate config file
+            //sd_fat_config_task ( false );
+            
             break;
             
         case APP_STATE_SHUTDOWN:

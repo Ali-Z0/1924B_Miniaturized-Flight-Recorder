@@ -366,7 +366,7 @@ void sd_GNSS_scheduleWrite (minmea_messages * pGnssData)
 void sd_CFG_Write (uint32_t tLogGNSS_ms, uint32_t tLogIMU_ms, uint8_t ledState, bool skipMount)
 {
     /* If sd Card available */
-    if((appFatData.cfg_state == APP_CFG_IDLE)||(appFatData.cfg_state == APP_CFG_OPEN_READ_CONFIG_FILE))
+    if(appFatData.cfg_state == APP_CFG_IDLE)
     {
         /* Close the file */
         SYS_FS_FileClose(appFatData.fileCfgHandle);
