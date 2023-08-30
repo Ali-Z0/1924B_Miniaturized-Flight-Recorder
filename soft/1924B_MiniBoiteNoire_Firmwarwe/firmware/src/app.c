@@ -199,8 +199,9 @@ void APP_Tasks ( void )
     minmea_messages gnss_nmea_local_data;
     //enum minmea_sentence_id gnss_nmea_msgId = MINMEA_UNKNOWN;
     /* CONFIGURATION */
-    char param[10] = {0};
-    uint32_t i = 0;
+    static char charRead[30] = {0};
+    static uint32_t readCnt = 0;
+    char * ptTrame = 0;
             
     // Character to send trough USART
     static char charToSend = 0;
@@ -315,6 +316,7 @@ void APP_Tasks ( void )
                 serTransmitString("MODE CONFIGURATION \r\n");
                 // Turn off state 
                 appData.state = APP_STATE_CONFIGURATE_BBX;
+                LED_GOn();
             }
             
             /* --- GET GNSS LOGS --- */
@@ -379,25 +381,41 @@ void APP_Tasks ( void )
             break;
             
         case APP_STATE_CONFIGURATE_BBX:
-
             
-                        
-            if (pollSerialSingleCmd(USART_ID_1, "INTG:")){
-                while(!DRV_USART_ReceiverBufferIsEmpty(USART_ID_1)){
-                    param[i] = DRV_USART_ReadByte(USART_ID_1);
-                    i++;
-                }    
-                i = 0;
-                timeData.measPeriod[GNSS_idx] = atoi(param);
-                sd_CFG_Write(timeData.measPeriod[GNSS_idx], timeData.measPeriod[BNO055_idx], appData.ledState, true);
+            
+            // Get command's characters
+            while((PLIB_USART_ReceiverDataIsAvailable(USART_ID_1))&&(readCnt < 30)){
+                charRead[readCnt] = PLIB_USART_ReceiverByteReceive(USART_ID_1);
+                readCnt++;
             }
-            
-            // Manipulate configuration
-            sd_fat_config_task(false);
-            
-            // If exit command detected, return to logging
-            if(pollSerialCmds(USART_ID_1, "exit", "EXIT", "x" ,"X"))
+            // Command 
+            if(readCnt >= 30)
+            {
+                /* Reset read counter */
+                readCnt = 0;
+                /* Clear read buffer */
+                memset(charRead,0,strlen(charRead));
+            }
+            // Check occurence with commands
+            if((strstr(charRead, "exit") != NULL)||(strstr(charRead, "EXIT") != NULL)
+                || (strstr(charRead, "x") != NULL) || (strstr(charRead, "X") != NULL)) { 
+                /* Reset read counter */
+                readCnt = 0;
+                /* Clear read buffer */
+                memset(charRead,0,strlen(charRead));
+                /* Command detected */
                 startLogging();
+            }
+            if(strstr(charRead, "INTG:"))
+            {
+                ptTrame = strstr(charRead, "INTG:");
+                // Copy the data between the head and the tail in a sub-pointer
+                strncpy(ptTrame, (ptTrame+5), 5);
+                if(atoi(ptTrame) > 0){
+                    timeData.measPeriod[GNSS_idx] = atoi(ptTrame);
+                    sd_CFG_Write (timeData.measPeriod[GNSS_idx], timeData.measPeriod[BNO055_idx], appData.ledState, true);
+                }
+            }
             break;
             
         case APP_STATE_SHUTDOWN:
