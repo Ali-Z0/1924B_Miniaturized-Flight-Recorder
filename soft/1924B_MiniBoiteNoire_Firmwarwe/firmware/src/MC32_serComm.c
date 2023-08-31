@@ -165,7 +165,7 @@ void serDisplayValues ( s_bno055_data *bno055_data )
     
 }
 
-void serTransmitString ( const char * msg )
+void serTransmitString ( USART_MODULE_ID usartId, const char * msg )
 {
     char bufferMsg[60] = {0};
     static uint32_t i = 0;
@@ -175,13 +175,30 @@ void serTransmitString ( const char * msg )
     
     /* Transmit string */
     do{
-        if(!PLIB_USART_TransmitterBufferIsFull(USART_ID_1))
+        if(!PLIB_USART_TransmitterBufferIsFull(usartId))
         {
-            PLIB_USART_TransmitterByteSend(USART_ID_1, bufferMsg[i]);
+            PLIB_USART_TransmitterByteSend(usartId, bufferMsg[i]);
             i++;
         }
         ctnTimeout++;
     }while((bufferMsg[i-1] != '\0')&&(ctnTimeout<TIME_OUT));
+    i = 0;
+}
+
+void serTransmitbuffer ( USART_MODULE_ID usartId, char * msg )
+{
+    static uint32_t i = 0;
+    static uint32_t ctnTimeout = 0;
+    
+    /* Transmit string */
+    do{
+        if(!PLIB_USART_TransmitterBufferIsFull(usartId))
+        {
+            PLIB_USART_TransmitterByteSend(usartId, msg[i]);
+            i++;
+        }
+        ctnTimeout++;
+    }while((msg[i-1] != '\0')&&(ctnTimeout<TIME_OUT));
     i = 0;
 }
 

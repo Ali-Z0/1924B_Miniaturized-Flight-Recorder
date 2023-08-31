@@ -62,6 +62,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 #include "Mc32_sdFatGest.h"
 #include "Mc32Debounce.h"
 #include "usart_FIFO.h"
+#include "GNSS/u_ubx_protocol.h"
 #include <stdio.h>
 
 // *****************************************************************************
@@ -155,6 +156,10 @@ void APP_Initialize ( void )
     PWR_HOLDOn();
     LED_GOn();
     
+    char gnssMessage[4+U_UBX_PROTOCOL_OVERHEAD_LENGTH_BYTES];
+    char msgBody[4] = {0xFF, 0xFF, 0X09, 0x00};
+    char gnssReceivedMsg[20] = {0};
+    
     // Initialization of the USART FIFOs
     initFifo(&usartFifoRx, FIFO_RX_SIZE, a_fifoRx, 0);
     initFifo(&usartFifoTx, FIFO_TX_SIZE, a_fifoTx, 0);
@@ -164,12 +169,17 @@ void APP_Initialize ( void )
     /* Init i2c bus */
     i2c_init(1);
     
-    
     /* Reset GNSS*/
     RESET_NOff();
     BNO055_delay_msek(100);
     /* Unreset GNSS */
     RESET_NOn();
+    BNO055_delay_msek(300);
+            
+    // Software Reset GNSS
+    uUbxProtocolEncode(0x06, 0x04, msgBody, 4, gnssMessage);
+    serTransmitbuffer(USART_ID_2, gnssMessage);
+    getFullFifo(&usartFifoRx, gnssReceivedMsg);
 
     /* Reset IMU */
     RST_IMUOff();
@@ -318,8 +328,7 @@ void APP_Tasks ( void )
                 stopLogging();
                 /* Deactivate USART2 (not used) */
                 PLIB_USART_Disable(USART_ID_2);
-                serTransmitString("CONFIGURATION MODE \r\n");
-                serTransmitString(charRead);
+                serTransmitString(USART_ID_1, "CONFIGURATION MODE \r\n");
                 // Set config state to idle
                 sd_cfgSetState(APP_CFG_IDLE);
                 // Update configuration variables
@@ -347,14 +356,14 @@ void APP_Tasks ( void )
             if(pollSerialCmds(USART_ID_1, "gclr", "GCLR", "-gc", "-GC")){       
                 // Delete file
                 SYS_FS_FileDirectoryRemove("LOG_GNSS.csv");
-                serTransmitString("GNSS LOG DELETED \r\n");
+                serTransmitString(USART_ID_1, "GNSS LOG DELETED \r\n");
             }
             
             /* --- DELETE COMMAND --- */
             if(pollSerialCmds(USART_ID_1, "iclr", "ICLR", "-ic", "-IC")){       
                 // Delete file
                 SYS_FS_FileDirectoryRemove("LOG_IMU.csv");
-                serTransmitString("IMU LOG DELETED \r\n");
+                serTransmitString(USART_ID_1, "IMU LOG DELETED \r\n");
             } 
             
            break;
@@ -439,16 +448,16 @@ void APP_Tasks ( void )
             // If config value changed
             if((timeData.measPeriod[GNSS_idx] != oldIntG) || (timeData.measPeriod[BNO055_idx] != oldIntI) || (appData.ledState != oldLed)){
                                 
-                serTransmitString("COMMAND : VALUE CHANGED \r\n");
+                serTransmitString(USART_ID_1, "COMMAND : VALUE CHANGED \r\n");
                 // If data is not valid, keep the previous one
                 if(timeData.measPeriod[GNSS_idx] <= 0){
                     timeData.measPeriod[GNSS_idx] = oldIntG;
-                    serTransmitString("ERROR GNSS VALUE <= 0 \r\n");
+                    serTransmitString(USART_ID_1, "ERROR GNSS VALUE <= 0 \r\n");
                 }
                 // If data is not valid, keep the previous one
                 if(timeData.measPeriod[BNO055_idx] <= 0){
                     timeData.measPeriod[BNO055_idx] = oldIntI;
-                    serTransmitString("ERROR IMU VALUE <= 0 \r\n");
+                    serTransmitString(USART_ID_1, "ERROR IMU VALUE <= 0 \r\n");
                 }
                 // Write new config file
                 sd_CFG_Write (timeData.measPeriod[GNSS_idx], timeData.measPeriod[BNO055_idx], appData.ledState, true);
