@@ -318,7 +318,7 @@ void APP_Tasks ( void )
                 stopLogging();
                 /* Deactivate USART2 (not used) */
                 PLIB_USART_Disable(USART_ID_2);
-                serTransmitString("MODE CONFIGURATION \r\n");
+                serTransmitString("CONFIGURATION MODE \r\n");
                 serTransmitString(charRead);
                 // Set config state to idle
                 sd_cfgSetState(APP_CFG_IDLE);
@@ -338,10 +338,25 @@ void APP_Tasks ( void )
             }
             
             /* --- GEST IMU LOGS --- */
-            if(pollSerialCmds(USART_ID_1, "glog", "GLOG", "-gl", "-GL")){       
+            if(pollSerialCmds(USART_ID_1, "ilog", "ILOG", "-il", "-IL")){       
                 // Display IMU logs
                 sd_fat_readDisplayFile("LOG_IMU.csv");
             }
+            
+            /* --- DELETE COMMAND --- */
+            if(pollSerialCmds(USART_ID_1, "gclr", "GCLR", "-gc", "-GC")){       
+                // Delete file
+                SYS_FS_FileDirectoryRemove("LOG_GNSS.csv");
+                serTransmitString("GNSS LOG DELETED \r\n");
+            }
+            
+            /* --- DELETE COMMAND --- */
+            if(pollSerialCmds(USART_ID_1, "iclr", "ICLR", "-ic", "-IC")){       
+                // Delete file
+                SYS_FS_FileDirectoryRemove("LOG_IMU.csv");
+                serTransmitString("IMU LOG DELETED \r\n");
+            } 
+            
            break;
         }
         case APP_STATE_COMM_LIVE_GNSS:  
@@ -424,16 +439,16 @@ void APP_Tasks ( void )
             // If config value changed
             if((timeData.measPeriod[GNSS_idx] != oldIntG) || (timeData.measPeriod[BNO055_idx] != oldIntI) || (appData.ledState != oldLed)){
                                 
-                serTransmitString("COMMANDE : VALEUR MODIFIEE \r\n");
+                serTransmitString("COMMAND : VALUE CHANGED \r\n");
                 // If data is not valid, keep the previous one
                 if(timeData.measPeriod[GNSS_idx] <= 0){
                     timeData.measPeriod[GNSS_idx] = oldIntG;
-                    serTransmitString("ERREUR VALEUR GNSS <= 0 \r\n");
+                    serTransmitString("ERROR GNSS VALUE <= 0 \r\n");
                 }
                 // If data is not valid, keep the previous one
                 if(timeData.measPeriod[BNO055_idx] <= 0){
                     timeData.measPeriod[BNO055_idx] = oldIntI;
-                    serTransmitString("ERREUR VALEUR IMU <= 0 \r\n");
+                    serTransmitString("ERROR IMU VALUE <= 0 \r\n");
                 }
                 // Write new config file
                 sd_CFG_Write (timeData.measPeriod[GNSS_idx], timeData.measPeriod[BNO055_idx], appData.ledState, true);
