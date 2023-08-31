@@ -122,7 +122,7 @@ void stateTimer_callback()
     if ( ( timeData.measCnt[GNSS_idx] % (timeData.measPeriod[GNSS_idx]/10) ) == 0)
         timeData.measTodo[GNSS_idx] = true;
      
-     if((timeData.ledCnt >= 50) && (appData.ledState > 0))
+     if((timeData.ledCnt >= 50) && (appData.ledState == true))
         LED_BOff();
 }
 
@@ -201,8 +201,11 @@ void APP_Tasks ( void )
     /* CONFIGURATION */
     static char charRead[30] = {0};
     static uint32_t readCnt = 0;
-    char * ptTrame = 0;
-            
+    static unsigned long oldIntG = 0;
+    static unsigned long oldIntI = 0;
+    static bool oldLed = 0;
+    int ledStateTemp = 0;
+    
     // Character to send trough USART
     static char charToSend = 0;
 
@@ -236,7 +239,7 @@ void APP_Tasks ( void )
             if((timeData.measTodo[BNO055_idx] == true )&&(sd_logGetState() == APP_IDLE))
             {
                 // If LED enabled
-                if(appData.ledState > 0){
+                if(appData.ledState == true){
                     timeData.ledCnt = 0;
                     LED_BOn();
                 }
@@ -316,28 +319,29 @@ void APP_Tasks ( void )
                 /* Deactivate USART2 (not used) */
                 PLIB_USART_Disable(USART_ID_2);
                 serTransmitString("MODE CONFIGURATION \r\n");
+                serTransmitString(charRead);
                 // Set config state to idle
                 sd_cfgSetState(APP_CFG_IDLE);
+                // Update configuration variables
+                oldIntG = timeData.measPeriod[GNSS_idx];
+                oldIntI = timeData.measPeriod[BNO055_idx];
+                oldLed = appData.ledState;
                 // Turn off state 
                 appData.state = APP_STATE_CONFIGURATE_BBX;
                 LED_GOn();
             }
             
             /* --- GET GNSS LOGS --- */
-            /*if(pollSerialCmds(USART_ID_1, "glog", "GLOG", "-gl", "-GL")){       
-                // Stop SD card logging 
-                stopLogging();
-                // Turn off state 
-                appData.state = APP_STATE_SHUTDOWN;
-            }*/
+            if(pollSerialCmds(USART_ID_1, "glog", "GLOG", "-gl", "-GL")){       
+                // Display GNSS logs
+                sd_fat_readDisplayFile("LOG_GNSS.csv");
+            }
             
             /* --- GEST IMU LOGS --- */
-            /*if(pollSerialCmds(USART_ID_1, "glog", "GLOG", "-gl", "-GL")){       
-                // Stop SD card logging 
-                stopLogging();
-                // Turn off state 
-                appData.state = APP_STATE_SHUTDOWN;
-            }*/
+            if(pollSerialCmds(USART_ID_1, "glog", "GLOG", "-gl", "-GL")){       
+                // Display IMU logs
+                sd_fat_readDisplayFile("LOG_IMU.csv");
+            }
            break;
         }
         case APP_STATE_COMM_LIVE_GNSS:  
@@ -387,7 +391,7 @@ void APP_Tasks ( void )
         case APP_STATE_CONFIGURATE_BBX:
             
             // Get command's characters
-            while((PLIB_USART_ReceiverDataIsAvailable(USART_ID_1))&&(readCnt < 30)){
+            while(!(DRV_USART0_ReceiverBufferIsEmpty())&&(readCnt < 30)){
                 charRead[readCnt] = PLIB_USART_ReceiverByteReceive(USART_ID_1);
                 readCnt++;
             }
@@ -399,21 +403,46 @@ void APP_Tasks ( void )
                 /* Clear read buffer */
                 memset(charRead,0,strlen(charRead));
             }
-            scanf("",);
-//            if(strstr(charRead, "INTG:") != NULL)
-//            {
-//                ptTrame = strstr(charRead, "INTG:");
-//                // Copy the data between the head and the tail in a sub-pointer
-//                strncpy(ptTrame, (ptTrame+5), 5);
-//                if(atoi(ptTrame) > 0){
-//                    timeData.measPeriod[GNSS_idx] = atoi(ptTrame);
-//                    sd_CFG_Write (timeData.measPeriod[GNSS_idx], timeData.measPeriod[BNO055_idx], appData.ledState, true);
-//                }
-//                /* Reset read counter */
-//                readCnt = 0;
-//                /* Clear read buffer */
-//                memset(charRead,0,strlen(charRead));
-//             }
+            
+            // Detect ENTER (End of command)
+            if(strstr(charRead, "\r\0") != NULL){
+                // Scan command data
+                sscanf(charRead, "\rINTG:%lu", &timeData.measPeriod[GNSS_idx]);
+                sscanf(charRead, "\rINTI:%lu", &timeData.measPeriod[BNO055_idx]);
+                sscanf(charRead, "\rLEDV:%d", &ledStateTemp);
+                // Cast int into boolean
+                if (ledStateTemp > 0)
+                    appData.ledState = true;
+                else
+                    appData.ledState = false;
+                
+                /* Reset read counter */
+                readCnt = 0;
+                /* Clear read buffer */
+                memset(charRead,0,strlen(charRead));
+            }
+            // If config value changed
+            if((timeData.measPeriod[GNSS_idx] != oldIntG) || (timeData.measPeriod[BNO055_idx] != oldIntI) || (appData.ledState != oldLed)){
+                                
+                serTransmitString("COMMANDE : VALEUR MODIFIEE \r\n");
+                // If data is not valid, keep the previous one
+                if(timeData.measPeriod[GNSS_idx] <= 0){
+                    timeData.measPeriod[GNSS_idx] = oldIntG;
+                    serTransmitString("ERREUR VALEUR GNSS <= 0 \r\n");
+                }
+                // If data is not valid, keep the previous one
+                if(timeData.measPeriod[BNO055_idx] <= 0){
+                    timeData.measPeriod[BNO055_idx] = oldIntI;
+                    serTransmitString("ERREUR VALEUR IMU <= 0 \r\n");
+                }
+                // Write new config file
+                sd_CFG_Write (timeData.measPeriod[GNSS_idx], timeData.measPeriod[BNO055_idx], appData.ledState, true);
+            }
+            // Update polling config parameter
+            oldIntG = timeData.measPeriod[GNSS_idx];
+            oldIntI = timeData.measPeriod[BNO055_idx];
+            oldLed = appData.ledState;
+                
             // Check occurence with commands
             if((strstr(charRead, "exit") != NULL)||(strstr(charRead, "EXIT") != NULL)
                 || (strstr(charRead, "x") != NULL) || (strstr(charRead, "X") != NULL)) { 
@@ -426,9 +455,8 @@ void APP_Tasks ( void )
                 /* Clear read buffer */
                 memset(charRead,0,strlen(charRead));
             }
-            
             // Manipulate config file
-            //sd_fat_config_task ( false );
+            sd_fat_config_task ( false );
             
             break;
             

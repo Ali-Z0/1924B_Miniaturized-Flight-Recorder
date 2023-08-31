@@ -29,7 +29,9 @@
 #include "app.h"
 #include "bno055_support.h"
 #include "GNSS/u_gnss_pos.h"
+#include <stdio.h>
 #include "usart_FIFO.h"
+#include "MC32_serComm.h"
 
 /* ************************************************************************** */
 /* ************************************************************************** */
@@ -63,10 +65,8 @@ APP_FAT_DATA COHERENT_ALIGNED appFatData;
 /* ************************************************************************** */
 /* ************************************************************************** */
 // Function prototype
-static uint8_t parseConfig(unsigned long *tGnss, unsigned long *tImu, uint8_t *ledState);
+static uint8_t parseConfig(unsigned long *tGnss, unsigned long *tImu, bool *ledState);
 /* ************************************************************************** */
-
-
 
 /* ************************************************************************** */
 /* ************************************************************************** */
@@ -179,7 +179,10 @@ void sd_fat_config_task ( bool init )
             /* Close the file */
             SYS_FS_FileClose(appFatData.fileCfgHandle);
              /* The test was successful. Lets idle. */
-            appFatData.cfg_state = APP_CFG_UNMOUNT_DISK;
+            if(init == true)
+                appFatData.cfg_state = APP_CFG_UNMOUNT_DISK;
+            else
+                appFatData.cfg_state = APP_CFG_IDLE;
             break;
 
         case APP_CFG_IDLE:
@@ -366,7 +369,7 @@ void sd_GNSS_scheduleWrite (minmea_messages * pGnssData)
 void sd_CFG_Write (uint32_t tLogGNSS_ms, uint32_t tLogIMU_ms, uint8_t ledState, bool skipMount)
 {
     /* If sd Card available */
-    if(appFatData.cfg_state == APP_CFG_IDLE)
+    if((appFatData.cfg_state == APP_CFG_IDLE)||(appFatData.cfg_state == APP_CFG_OPEN_READ_CONFIG_FILE))
     {
         /* Close the file */
         SYS_FS_FileClose(appFatData.fileCfgHandle);
@@ -413,13 +416,13 @@ char* sd_cfgGetCfgBuffer( void )
     return appFatData.cfg_data;
 }
 
-void sd_fat_cfg_init(unsigned long *tGnss, unsigned long *tImu, uint8_t *ledState)
+void sd_fat_cfg_init(unsigned long *tGnss, unsigned long *tImu, bool *ledState)
 {
     // Config parser error
     uint8_t parseError = 0;
     unsigned long tGnssLocal = 0;
     unsigned long tImuLocal = 0;
-    uint8_t ledStateLocal = 0;
+    bool ledStateLocal = 0;
     
     //appFatData.nBytesRead = 0;
     //appFatData.nBytesToWrite = 0;
@@ -456,7 +459,7 @@ void sd_fat_cfg_init(unsigned long *tGnss, unsigned long *tImu, uint8_t *ledStat
     }
 }
 
-static uint8_t parseConfig(unsigned long *tGnss, unsigned long *tImu, uint8_t *ledState)
+static uint8_t parseConfig(unsigned long *tGnss, unsigned long *tImu, bool *ledState)
 {
     char *ptBufferHead;
     char *ptBufferTail;
@@ -497,7 +500,7 @@ static uint8_t parseConfig(unsigned long *tGnss, unsigned long *tImu, uint8_t *l
         // Copy the data between the head and the tail in a sub-pointer
         strncpy(ptTrame, (ptBufferHead+2), (ptBufferTail-ptBufferHead));
         // Convert the character to value
-        *ledState = (uint32_t) atoi(ptTrame);
+        *ledState = (bool) atoi(ptTrame);
     }
     else
         error++;
@@ -505,6 +508,63 @@ static uint8_t parseConfig(unsigned long *tGnss, unsigned long *tImu, uint8_t *l
     return error;
     
 }
+
+void sd_fat_readDisplayFile(const char * fileName)
+{
+    const uint16_t READSIZE = 256;
+    uint32_t i = 0;
+    char stringRead[READSIZE];
+    unsigned long cntTimeaout = 0;
+
+    /* Close both files */
+    SYS_FS_FileClose(appFatData.fileMeasureHandle);
+    // Read config file
+    appFatData.fileCfgHandle = SYS_FS_FileOpen(fileName,(SYS_FS_FILE_OPEN_READ));
+    
+    do{
+        
+        SYS_FS_FileStringGet(appFatData.fileCfgHandle, stringRead, READSIZE);
+        
+        do{
+            if(!PLIB_USART_TransmitterBufferIsFull(USART_ID_1))
+            {
+                PLIB_USART_TransmitterByteSend(USART_ID_1, stringRead[i]);
+                i++;
+            }
+            cntTimeaout++;
+        }while((i < strlen(stringRead))&&(cntTimeaout<TIME_OUT));
+        
+        i = 0;
+        cntTimeaout = 0; 
+        
+        if(pollSerialCmds(USART_ID_1, "exit", "EXIT", "x" ,"X"))
+            break;
+        
+    }while(!SYS_FS_FileEOF(appFatData.fileCfgHandle));
+    
+    /* Close both files */
+    SYS_FS_FileClose(appFatData.fileMeasureHandle);
+}
+
+//bool sd_fat_readFile(const char * fileName, char readBuffer[])
+//{
+//    uint32_t fileSize = 0;
+//    static bool fullyRead = false;
+//    /* Close both files */
+//    SYS_FS_FileClose(appFatData.fileMeasureHandle);
+//    // Read config file
+//    appFatData.fileCfgHandle = SYS_FS_FileOpen(fileName,(SYS_FS_FILE_OPEN_READ));
+//    
+//    fileSize = SYS_FS_FileSize(appFatData.fileCfgHandle);
+//    
+//    if (fileSize <= sizeof(readBuffer))
+//        SYS_FS_FileRead(appFatData.fileCfgHandle, readBuffer, fileSize);
+//    else{
+//        
+//    }
+//    /* Close both files */
+//    SYS_FS_FileClose(appFatData.fileMeasureHandle);
+//}
 
 /* *****************************************************************************
  End of File

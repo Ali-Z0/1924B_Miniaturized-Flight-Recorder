@@ -234,7 +234,7 @@ typedef struct
     This routine must be called from SYS_Tasks() routine.
  */
 
-void sd_fat_cfg_init(unsigned long *tGnss, unsigned long *tImu, uint8_t *ledState);
+void sd_fat_cfg_init(unsigned long *tGnss, unsigned long *tImu, bool *ledState);
 
 void sd_fat_config_task ( bool init );
 void sd_CFG_Write (uint32_t tLogGNSS_ms, uint32_t tLogIMU_ms, uint8_t ledState, bool skipMount);
@@ -250,6 +250,7 @@ void sd_IMU_scheduleWrite (s_bno055_data * data);
 
 void sd_GNSS_scheduleWrite (minmea_messages * pGnssData);
 
+void sd_fat_readDisplayFile(const char * fileName);
 
 
 #endif /* _APP_H */

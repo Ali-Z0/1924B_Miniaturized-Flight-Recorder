@@ -141,7 +141,7 @@ typedef struct
     /* The application's current state */
     APP_STATES state;
     
-    uint8_t ledState;
+    bool ledState;
 
     /* TODO: Define any additional data used by the application. */
 
