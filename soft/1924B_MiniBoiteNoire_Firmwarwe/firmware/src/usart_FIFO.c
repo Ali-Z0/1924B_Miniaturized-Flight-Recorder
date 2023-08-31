@@ -219,6 +219,9 @@ int32_t getFullFifo(USART_FIFO *pFifo, char* pArrayToModify){
     
     arraySize = getReadSize(pFifo);
     
+    if(arraySize > sizeof(pArrayToModify))
+        arraySize = sizeof(pArrayToModify);
+    
     getCharFromFifo(pFifo, &pArrayToModify[i]);
     
     for(i = 1; i < (arraySize); i++){

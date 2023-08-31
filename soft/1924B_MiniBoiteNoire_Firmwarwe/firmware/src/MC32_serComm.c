@@ -185,10 +185,10 @@ void serTransmitString ( USART_MODULE_ID usartId, const char * msg )
     i = 0;
 }
 
-void serTransmitbuffer ( USART_MODULE_ID usartId, char * msg )
+void serTransmitbuffer ( USART_MODULE_ID usartId, char msg[], uint32_t lenght )
 {
-    static uint32_t i = 0;
-    static uint32_t ctnTimeout = 0;
+    uint32_t i = 0;
+    uint32_t ctnTimeout = 0;
     
     /* Transmit string */
     do{
@@ -198,7 +198,7 @@ void serTransmitbuffer ( USART_MODULE_ID usartId, char * msg )
             i++;
         }
         ctnTimeout++;
-    }while((msg[i-1] != '\0')&&(ctnTimeout<TIME_OUT));
+    }while((i < lenght)&&(ctnTimeout<TIME_OUT));
     i = 0;
 }
 

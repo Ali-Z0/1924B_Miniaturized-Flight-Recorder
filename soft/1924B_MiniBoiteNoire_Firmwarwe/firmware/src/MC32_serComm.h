@@ -91,7 +91,7 @@ bool pollSerialCmds(USART_MODULE_ID usartID, const char * command1, const char *
 bool pollSerialSingleCmd(USART_MODULE_ID usartID, const char * command1);
 
 void serTransmitString ( USART_MODULE_ID usartId, const char * msg );
-void serTransmitbuffer ( USART_MODULE_ID usartId, char * msg );
+void serTransmitbuffer ( USART_MODULE_ID usartId, char msg[], uint32_t lenght );
     /* Provide C++ Compatibility */
 #ifdef __cplusplus
 }

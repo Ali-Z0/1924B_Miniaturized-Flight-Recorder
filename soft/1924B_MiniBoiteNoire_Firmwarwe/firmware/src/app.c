@@ -156,10 +156,16 @@ void APP_Initialize ( void )
     PWR_HOLDOn();
     LED_GOn();
     
+    // Start GNSS
     char gnssMessage[4+U_UBX_PROTOCOL_OVERHEAD_LENGTH_BYTES];
     char msgBody[4] = {0xFF, 0xFF, 0X09, 0x00};
-    char gnssReceivedMsg[20] = {0};
     
+    // GNSS initialsiation data
+    /*char gnssMessage2[4+U_UBX_PROTOCOL_OVERHEAD_LENGTH_BYTES];
+    char msgBody2[13] = {0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00, 0x01};
+    char msgBody3[4] = {0xFF, 0xFF, 0X09, 0x00};*/
+    
+        
     // Initialization of the USART FIFOs
     initFifo(&usartFifoRx, FIFO_RX_SIZE, a_fifoRx, 0);
     initFifo(&usartFifoTx, FIFO_TX_SIZE, a_fifoTx, 0);
@@ -176,10 +182,20 @@ void APP_Initialize ( void )
     RESET_NOn();
     BNO055_delay_msek(300);
             
-    // Software Reset GNSS
+    // Start GNSS
     uUbxProtocolEncode(0x06, 0x04, msgBody, 4, gnssMessage);
-    serTransmitbuffer(USART_ID_2, gnssMessage);
-    getFullFifo(&usartFifoRx, gnssReceivedMsg);
+    serTransmitbuffer(USART_ID_2, gnssMessage, sizeof(gnssMessage));
+    
+    // Save current configuration
+    /*BNO055_delay_msek(10);
+    uUbxProtocolEncode(0x06, 0x09, msgBody2, 4, gnssMessage2);
+    serTransmitbuffer(USART_ID_2, gnssMessage2, sizeof(gnssMessage2));*/
+    
+    // Reset command
+    /*uUbxProtocolEncode(0x06, 0x04, msgBody3, 4, gnssMessage);
+    serTransmitbuffer(USART_ID_2, gnssMessage, sizeof(gnssMessage));*/
+    
+    
 
     /* Reset IMU */
     RST_IMUOff();
