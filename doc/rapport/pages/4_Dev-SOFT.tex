@@ -198,27 +198,27 @@ Lors de cette section, 2 timers vont être configurés, ceux-ci ont des utilité
 
 \underline{Dimensionnement timer 1}
 
-$f_{sys} = 48\;MHz$
+$f_{sys} = 72\;MHz$
 
 $f_{per} = 1\;kHz$
 
-$presc = 1\;[-]$ \vspace*{-5pt}
+$presc = 8\;[-]$ \vspace*{-5pt}
 
 \begin{equation*}
-	C_{T1} = \frac{f_{sys}}{f_{per}*presc} - 1 = \frac{48*10^{6}}{1*10^{3}} - 1 = 47'999\; [-]
+	C_{T1} = \frac{f_{sys}}{f_{per}*presc} - 1 = \frac{72*10^{6}}{1*10^{3}*8} - 1 = 8'999\; [-]
 \end{equation*}
 
 
 \underline{Dimensionnement timer 2}
 
-$f_{sys} = 48\;MHz$
+$f_{sys} = 72\;MHz$
 
 $f_{per} = 100\;Hz$
 
 $presc = 16\;[-]$ \vspace*{-5pt}
 
 \begin{equation}
-	C_{T1} = \frac{f_{sys}}{f_{per}*presc} - 1 = \frac{48*10^{6}}{100*16} - 1 = 29'999\; [-]
+	C_{T1} = \frac{f_{sys}}{f_{per}*presc} - 1 = \frac{72*10^{6}}{100*16} - 1 = 44'999\; [-]
 \end{equation}
 
 \begin{figure}[h]
@@ -258,13 +258,16 @@ void stateTimer_callback()
 	}
 	/* Do debounce every 10 ms */
 	DoDebounce(&switchDescr, ButtonMFStateGet());
-	/* Start a measure set each 100ms */        
+	/* Start a measure set each IMU period */        
 	if ( ( timeData.measCnt[BNO055_idx] % (timeData.measPeriod[BNO055_idx]/10) ) == 0)
 	timeData.measTodo[BNO055_idx] = true;
 	
-	/* Start a measure set each 100ms */        
+	/* Start a measure set each GNSS period */        
 	if ( ( timeData.measCnt[GNSS_idx] % (timeData.measPeriod[GNSS_idx]/10) ) == 0)
 	timeData.measTodo[GNSS_idx] = true;
+	/* Manage LED if enabled */
+	if((timeData.ledCnt >= 50) && (appData.ledState == true))
+	LED_BOff();
 }	
 \end{minted}
 \end{code}	

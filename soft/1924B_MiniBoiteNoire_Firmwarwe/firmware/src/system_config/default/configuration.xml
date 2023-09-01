@@ -372,7 +372,7 @@
       <Template dnOrder="24">
         <Name dnOrder="0">drv_tmr_static.c</Name>
         <Path dnOrder="1">Source&amp;#160;Files/app/system_config/default/framework/driver/tmr/src</Path>
-        <Checksum dnOrder="2">D0737886653AFED4E80A962A397F521E</Checksum>
+        <Checksum dnOrder="2">BF7A30A73E5CC8CEACFC812CCD2E45FC</Checksum>
       </Template>
       <Template dnOrder="25">
         <Name dnOrder="0">drv_spi_master_ebm_tasks.c</Name>

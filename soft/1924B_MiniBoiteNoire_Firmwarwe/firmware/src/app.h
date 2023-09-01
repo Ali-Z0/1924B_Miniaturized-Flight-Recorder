@@ -68,13 +68,15 @@ extern "C" {
 #endif
 // DOM-IGNORE-END 
 
-#define TIME_OUT            80000000U
-#define TIME_POWER_OFF      500
-#define NB_MEASURES         2
+#define TIME_OUT                    80000000U
+#define TIME_POWER_OFF_x10ms        200
+#define NB_MEASURES                 2
   
 #define T_INTERVAL_GNSS_DEFAULT     5000UL
 #define T_INTERVAL_IMU_DEFAULT      500UL
 #define LED_STATE_DEFAULT           (uint8_t)1
+    
+#define LED_PERIOD                  50
     
 // *****************************************************************************
 // *****************************************************************************

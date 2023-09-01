@@ -115,16 +115,16 @@ void stateTimer_callback()
     }
      /* Do debounce every 10 ms */
      DoDebounce(&switchDescr, ButtonMFStateGet());
-    /* Start a measure set each 100ms */        
+    /* Start a measure set each IMU period */        
     if ( ( timeData.measCnt[BNO055_idx] % (timeData.measPeriod[BNO055_idx]/10) ) == 0)
         timeData.measTodo[BNO055_idx] = true;
      
-    /* Start a measure set each 100ms */        
+    /* Start a measure set each GNSS period */        
     if ( ( timeData.measCnt[GNSS_idx] % (timeData.measPeriod[GNSS_idx]/10) ) == 0)
         timeData.measTodo[GNSS_idx] = true;
-     
-     if((timeData.ledCnt >= 50) && (appData.ledState == true))
-        LED_BOff();
+    /* Manage LED if enabled */
+    if((timeData.ledCnt >= LED_PERIOD) && (appData.ledState == true))
+       LED_BOff();
 }
 
 // *****************************************************************************
@@ -536,7 +536,7 @@ static void btnTaskGest( void ){
             timeData.flagCntBtnPressed = false;
             DebounceClearReleased(&switchDescr);
             /* If pressed more time than power off */
-            if(timeData.cntBtnPressed >= TIME_POWER_OFF){
+            if(timeData.cntBtnPressed >= TIME_POWER_OFF_x10ms){
                 /* Power off the system */
                 appData.state = APP_STATE_SHUTDOWN;
             }

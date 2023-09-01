@@ -156,7 +156,7 @@ Les pilotes de carte SD disponibles dans \gls{harmony} ne permettent pas une ges
 \paragraph{Estimation de la capacité} Admettons les paramètres suivants où $S$ représente une taille de données et $T$ un temps :
 
 \begin{tabular}{lrl}
-	$S_{SD}$ & $256$ & $[KB]$ \\
+	$S_{SD}$ & $256$ & $[MB]$ \\
 	$S_{gyro}$ & $16$ & $[Bytes]$ \\
 	$S_{accel}$ & $16$ & $[Bytes]$ \\
 	$S_{gnss}$ & $\sim100$ & $[Bytes]$ \\
@@ -167,22 +167,22 @@ Les pilotes de carte SD disponibles dans \gls{harmony} ne permettent pas une ges
 
 Nous pouvons déduire la taille mémoire que prendra 5 secondes d'enregistrement avec les paramètres par défaut du système : 
 \begin{equation*}
-	S_{single} = \frac{T_{gnss}}{T_{inertiel}}(S_{gyro}+S_{accel}) + S_{gnss} = \frac{5}{0.5}(16+16) + 100 = 420 \; [Bytes]
+	S_{single} = \frac{T_{gnss}}{T_{inertiel}}S_{accel} + S_{gnss} = \frac{5}{0.5}16 + 100 = 260 \; [Bytes]
 \end{equation*}
 
-Nous pouvons enfin calculer à partir de cela, la taille mémoire que prendra 15 minutes d'enregistrement : 
+Nous pouvons enfin calculer à partir de cela, la taille mémoire que prendra 15 minutes d'enregistrement afin de valider le temps de logging minimum : 
 
 \begin{equation*}
-	S_{mesures} = \frac{S_{single}}{T_{gnss}} * T_{mesMin} = \frac{420}{5} * 900 = 75'600 \; [Bytes] = 75.6 \; [KB]
+	S_{mesures} = \frac{S_{single}}{T_{gnss}} * T_{mesMin} = \frac{260}{5} * 900 = 46'800 \; [Bytes] = 49.8 \; [KB]
 \end{equation*}
 
 Nous pouvons déduire avec cette estimation qu'une carte SD de 256MB est largement suffisante et permet de mesurer jusqu'à un temps calculable de cette façon :
 
 \begin{equation*}
-	T_{mesures} = \frac{S_{SD}*T_{gnss}}{S_{single}} = \frac{256'000*5}{420} = \sim508 \; Minutes = \sim8.5 \; Heures
+	T_{mesures} = \frac{S_{SD}*T_{gnss}}{S_{single}} = \frac{256*10^6*5}{260} = \sim82'051 \; Minutes = \sim1368 \; Heures
 \end{equation*}
 
-Nous estimons donc, que les données de vol des 8.5 dernières heures sont enregistrées dans la carte SD.
+Nous estimons donc, que la capacité de stockage de la carte SD est largement suffisante pour le stockage de nombreuses données de vol.
 
 \clearpage
 

@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{typedef}\PYG{+w}{ }\PYG{k}{struct}\PYG{+w}{ }\PYG{n+nc}{minmea\PYGZus{}messages}\PYG{p}{\PYGZob{}}
+\PYG{+w}{	}\PYG{k}{struct}\PYG{+w}{ }\PYG{n+nc}{minmea\PYGZus{}sentence\PYGZus{}gbs}\PYG{+w}{ }\PYG{n}{gbs}\PYG{p}{;}
+\PYG{+w}{	}\PYG{k}{struct}\PYG{+w}{ }\PYG{n+nc}{minmea\PYGZus{}sentence\PYGZus{}rmc}\PYG{+w}{ }\PYG{n}{rmc}\PYG{p}{;}
+\PYG{+w}{	}\PYG{k}{struct}\PYG{+w}{ }\PYG{n+nc}{minmea\PYGZus{}sentence\PYGZus{}gga}\PYG{+w}{ }\PYG{n}{gga}\PYG{p}{;}
+\PYG{+w}{	}\PYG{k}{struct}\PYG{+w}{ }\PYG{n+nc}{minmea\PYGZus{}sentence\PYGZus{}gll}\PYG{+w}{ }\PYG{n}{gll}\PYG{p}{;}
+\PYG{+w}{	}\PYG{k}{struct}\PYG{+w}{ }\PYG{n+nc}{minmea\PYGZus{}sentence\PYGZus{}gst}\PYG{+w}{ }\PYG{n}{gst}\PYG{p}{;}
+\PYG{+w}{	}\PYG{k}{struct}\PYG{+w}{ }\PYG{n+nc}{minmea\PYGZus{}sentence\PYGZus{}gsa}\PYG{+w}{ }\PYG{n}{gsa}\PYG{p}{;}
+\PYG{+w}{	}\PYG{k}{struct}\PYG{+w}{ }\PYG{n+nc}{minmea\PYGZus{}sentence\PYGZus{}gsv}\PYG{+w}{ }\PYG{n}{gsv}\PYG{p}{;}
+\PYG{+w}{	}\PYG{k}{struct}\PYG{+w}{ }\PYG{n+nc}{minmea\PYGZus{}sentence\PYGZus{}vtg}\PYG{+w}{ }\PYG{n}{vtg}\PYG{p}{;}
+\PYG{+w}{	}\PYG{k}{struct}\PYG{+w}{ }\PYG{n+nc}{minmea\PYGZus{}sentence\PYGZus{}zda}\PYG{+w}{ }\PYG{n}{zda}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}\PYG{n}{minmea\PYGZus{}messages}\PYG{p}{;}
+\end{Verbatim}
