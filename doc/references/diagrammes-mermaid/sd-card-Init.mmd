@@ -1,0 +1,37 @@
+stateDiagram
+    [*] --> MOUNT_DISK
+    MOUNT_DISK : Try to mount the disk
+    MOUNT_DISK --> MOUNT_DISK : Fail to mount
+    MOUNT_DISK --> SET_CURRENT_DRIVE : Successful mount
+
+    SET_CURRENT_DRIVE : Set the current drive
+    SET_CURRENT_DRIVE --> ERROR : Fail to set
+    SET_CURRENT_DRIVE --> OPEN_READ_CONFIG_FILE : init = true
+    SET_CURRENT_DRIVE --> IDLE : init = false
+
+    OPEN_READ_CONFIG_FILE : Open config file for reading
+    OPEN_READ_CONFIG_FILE --> READ_CONFIG_FILE : File exists
+    OPEN_READ_CONFIG_FILE --> OPEN_WRITE_CONFIG_FILE : File doesn't exist
+
+    READ_CONFIG_FILE : Read from the config file
+    READ_CONFIG_FILE --> CLOSE_FILE : Successful read
+    READ_CONFIG_FILE --> ERROR : Read failed
+
+    OPEN_WRITE_CONFIG_FILE : Open config file for writing
+    OPEN_WRITE_CONFIG_FILE --> WRITE_CONFIG_FILE : File opened
+    OPEN_WRITE_CONFIG_FILE --> ERROR : Fail to open
+
+    WRITE_CONFIG_FILE : Write to the config file
+    WRITE_CONFIG_FILE --> CLOSE_FILE : Successful write
+    WRITE_CONFIG_FILE --> ERROR : Write failed
+
+    CLOSE_FILE : Close the file
+    CLOSE_FILE --> IDLE : init = false
+    CLOSE_FILE --> UNMOUNT_DISK : init = true
+
+    UNMOUNT_DISK : Try to unmount the disk
+    UNMOUNT_DISK --> UNMOUNT_DISK : Fail to unmount
+    UNMOUNT_DISK --> IDLE : Successful unmount
+
+    IDLE : System in idle state
+    ERROR : System in error state

@@ -306,7 +306,7 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>snap</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>2.50</languageToolchainVersion>
+        <languageToolchainVersion>4.30</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
@@ -474,6 +474,11 @@
         <property key="save-temps" value="false"/>
         <property key="wpo-lto" value="false"/>
       </C32Global>
+      <Tool>
+        <property key="memories.programmemory.ranges" value="1d000000-1d03ffff"/>
+        <property key="programmerToGoFilePath"
+                  value="C:/microchip/harmony/v2_06/apps/1924B_MiniBoiteNoire/soft/1924B_MiniBoiteNoire_Firmwarwe/firmware/1924B_MiniBoiteNoire_Firmwarwe.X/debug/default/1924B_MiniBoiteNoire_Firmwarwe_ptg"/>
+      </Tool>
       <snap>
         <property key="memories.programmemory.ranges" value="1d000000-1d03ffff"/>
         <property key="programmerToGoFilePath"

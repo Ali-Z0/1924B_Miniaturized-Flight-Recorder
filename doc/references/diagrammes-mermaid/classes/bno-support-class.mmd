@@ -1,0 +1,26 @@
+classDiagram
+
+    class BNO055 {
+        -BNO055_WR_FUNC_PTR : function pointer
+        -BNO055_RD_FUNC_PTR : function pointer
+        -BNO055_BRD_FUNC_PTR : function pointer
+        -delay_msec : function pointer
+        -dev_addr : u8
+        -chip_id : data type not provided
+    }
+    
+    class bno055_support {
+        +BNO055_I2C_bus_read(u8, u8, u8*, u8) : s8
+        +BNO055_I2C_bus_write(u8, u8, u8*, u8) : s8
+        +I2C_routine() : s8
+        +BNO055_delay_msek(u32) : void
+        +bno055_init_readout() : s32
+        +bno055_read_routine(s_bno055_data*) : s32
+    }
+    
+    class s_bno055_data {
+        <<external>>
+    }
+    
+    bno055_support --> BNO055 : uses
+    bno055_support --> s_bno055_data : uses

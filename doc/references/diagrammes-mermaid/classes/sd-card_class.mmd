@@ -1,0 +1,69 @@
+classDiagram
+    class sd_fat {
+        -fileMeasureHandle : SYS_FS_HANDLE
+        -fileCfgHandle : SYS_FS_HANDLE
+        -log_state : APP_FAT_LOG_STATES
+        -cfg_state : APP_FAT_CONFIG_STATES
+        -data[FIFO_RX_SIZE+2] : char DATA_BUFFER_ALIGN
+        -cfg_data[100] : char DATA_BUFFER_ALIGN
+        -fileName[15] : char DATA_BUFFER_ALIGN
+        -nBytesWritten : uint32_t
+        -nBytesRead : uint32_t
+        -nBytesToWrite : uint32_t
+
+        +sd_fat_cfg_init(unsigned long*, unsigned long*, bool*)
+        +sd_fat_config_task(bool)
+        +sd_CFG_Write(uint32_t, uint32_t, uint8_t, bool)
+        +sd_cfgGetState() : APP_FAT_CONFIG_STATES
+        +sd_cfgSetState(APP_FAT_CONFIG_STATES)
+        +sd_cfgGetCfgBuffer() : char*
+        +sd_fat_logging_task()
+        +sd_logGetState() : APP_FAT_LOG_STATES
+        +sd_logSetState(APP_FAT_LOG_STATES)
+        +sd_IMU_scheduleWrite(s_bno055_data*)
+        +sd_GNSS_scheduleWrite(minmea_messages*)
+        +sd_fat_readDisplayFile(const char*)
+    }
+
+    class SYS_FS_HANDLE {
+        <<external>>
+    }
+
+    class s_bno055_data {
+        <<external>>
+    }
+
+    class minmea_messages {
+        <<external>>
+    }
+
+    class APP_FAT_LOG_STATES {
+        APP_MOUNT_DISK
+        APP_SET_CURRENT_DRIVE
+        APP_WRITE_MEASURE_FILE
+        APP_WRITE_TO_MEASURE_FILE
+        APP_CLOSE_FILE
+        APP_IDLE
+        APP_ERROR
+        APP_UNMOUNT_DISK
+    }
+
+    class APP_FAT_CONFIG_STATES {
+        APP_CFG_MOUNT_DISK
+        APP_CFG_SET_CURRENT_DRIVE
+        APP_CFG_OPEN_READ_CONFIG_FILE
+        APP_CFG_READ_CONFIG_FILE
+        APP_CFG_OPEN_WRITE_CONFIG_FILE
+        APP_CFG_WRITE_CONFIG_FILE
+        APP_CFG_CLOSE_FILE
+        APP_CFG_IDLE
+        APP_CFG_ERROR
+        APP_CFG_NO_CFG_FILE
+        APP_CFG_UNMOUNT_DISK
+    }
+
+    sd_fat --> SYS_FS_HANDLE : uses
+    sd_fat --> s_bno055_data : uses
+    sd_fat --> minmea_messages : uses
+    sd_fat --> APP_FAT_LOG_STATES : uses
+    sd_fat --> APP_FAT_CONFIG_STATES : uses

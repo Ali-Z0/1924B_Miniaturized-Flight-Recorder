@@ -1,0 +1,52 @@
+sequenceDiagram
+    participant Main as Main Loop (APP_Tasks)
+    participant Timer as Timer Interrupt
+    participant SD as SD Card Logger
+    participant GNSS
+    participant IMU
+    participant USART
+
+    Main->>Main: Initialize appData.state = APP_STATE_INIT
+    alt APP_STATE_INIT
+        Main->>IMU: Initialize IMU
+        Main->>GNSS: Initialize GNSS
+        Main->>Main: appData.state = APP_STATE_CONFIG
+    end
+
+    alt APP_STATE_CONFIG
+        Main->>SD: Initialize SD Card parameters
+    end
+
+    alt APP_STATE_LOGGING
+        Timer->>Main: stateTimer_callback()
+        alt timeData.measTodo[BNO055_idx] == true
+            Main->>IMU: Read IMU data
+            Main->>SD: Write IMU data
+        end
+        alt timeData.measTodo[GNSS_idx] == true
+            Main->>GNSS: Read GNSS data
+            Main->>SD: Write GNSS data
+        end
+        Main->>SD: sd_fat_logging_task()
+        Main->>Main: btnTaskGest()
+    end
+
+    alt APP_STATE_COMM_LIVE_GNSS
+        USART->>Main: Receive command
+        Main->>GNSS: Display GNSS live data
+    end
+
+    alt APP_STATE_COMM_LIVE_IMU
+        Timer->>Main: stateTimer_callback()
+        Main->>IMU: Read IMU data
+        Main->>USART: Display IMU data
+    end
+
+    alt APP_STATE_CONFIGURATE_BBX
+        USART->>Main: Receive command
+        Main->>SD: Update Config
+    end
+
+    alt APP_STATE_SHUTDOWN
+        Main->>Main: sys_shutdown()
+    end

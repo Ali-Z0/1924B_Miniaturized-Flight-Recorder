@@ -1,0 +1,30 @@
+stateDiagram
+    [*] --> MOUNT_DISK
+    MOUNT_DISK : Try to mount the disk
+    MOUNT_DISK --> MOUNT_DISK : Fail to mount
+    MOUNT_DISK --> SET_CURRENT_DRIVE : Successful mount
+
+    SET_CURRENT_DRIVE : Set the current drive
+    SET_CURRENT_DRIVE --> ERROR : Fail to set
+    SET_CURRENT_DRIVE --> IDLE : Success
+
+    IDLE : System in idle state
+    IDLE --> WRITE_MEASURE_FILE : Data ready for writing
+
+    WRITE_MEASURE_FILE : Open file for appending
+    WRITE_MEASURE_FILE --> WRITE_TO_MEASURE_FILE : File opened
+    WRITE_MEASURE_FILE --> ERROR : Fail to open
+
+    WRITE_TO_MEASURE_FILE : Write to the measure file
+    WRITE_TO_MEASURE_FILE --> CLOSE_FILE : Successful write
+    WRITE_TO_MEASURE_FILE --> ERROR : Write failed
+
+    CLOSE_FILE : Close the file
+    CLOSE_FILE --> IDLE : File closed
+
+    ERROR : System in error state
+    ERROR --> IDLE : Resolved
+
+    UNMOUNT_DISK : Try to unmount the disk
+    UNMOUNT_DISK --> UNMOUNT_DISK : Fail to unmount
+    UNMOUNT_DISK --> IDLE : Successful unmount

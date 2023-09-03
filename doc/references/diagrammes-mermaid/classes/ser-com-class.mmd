@@ -1,0 +1,21 @@
+classDiagram
+
+    class SER_COMM {
+        +EXAMPLE_CONSTANT : int = 0
+        +serDisplayValues(s_bno055_data*) : void
+        +pollSerialCmds(USART_MODULE_ID, const char*, const char*, const char*, const char*) : bool
+        +pollSerialSingleCmd(USART_MODULE_ID, const char*) : bool
+        +serTransmitString(USART_MODULE_ID, const char*) : void
+        +serTransmitbuffer(USART_MODULE_ID, char[], uint32_t) : void
+    }
+    
+    class s_bno055_data {
+        <<external>>
+    }
+    
+    class USART_MODULE_ID {
+        <<external>>
+    }
+    
+    SER_COMM --> s_bno055_data : uses
+    SER_COMM --> USART_MODULE_ID : uses

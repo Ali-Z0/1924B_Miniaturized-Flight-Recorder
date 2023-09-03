@@ -104,16 +104,16 @@ void delayTimer_callback(){
 
 void stateTimer_callback()
 {
-    /* Increment utility timers */
+    /* Increment all counters */
     timeData.ledCnt ++;
     timeData.measCnt[BNO055_idx] ++;
     timeData.measCnt[GNSS_idx] ++;
     timeData.tmrTickFlag = true;
-    /* If button is pressed, count pressed time */
+    /* When the button is pressed, the hold time is counted. */
     if(timeData.flagCntBtnPressed){
         timeData.cntBtnPressed++;
     }
-     /* Do debounce every 10 ms */
+     /* Do debounce on button every 10 ms */
      DoDebounce(&switchDescr, ButtonMFStateGet());
     /* Start a measure set each IMU period */        
     if ( ( timeData.measCnt[BNO055_idx] % (timeData.measPeriod[BNO055_idx]/10) ) == 0)
