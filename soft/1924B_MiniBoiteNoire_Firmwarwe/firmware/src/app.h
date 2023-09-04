@@ -68,15 +68,21 @@ extern "C" {
 #endif
 // DOM-IGNORE-END 
 
-#define TIME_OUT                    80000000U
-#define TIME_POWER_OFF_x10ms        200
+       
+#define TIME_OUT                    80000000U   
+#define BTN_HOLD_SHUTDOWN_x10ms     200
 #define NB_MEASURES                 2
-  
+ 
+#define T_CONFIG_TIMEOUT            20
+#define T_INACTIVE_PERIOD_DEFAULT   20UL   
 #define T_INTERVAL_GNSS_DEFAULT     5000UL
 #define T_INTERVAL_IMU_DEFAULT      500UL
 #define LED_STATE_DEFAULT           (uint8_t)1
     
 #define LED_PERIOD                  50
+
+#define G                 9.81
+
     
 // *****************************************************************************
 // *****************************************************************************
@@ -160,6 +166,9 @@ typedef struct
     unsigned long ltime[NB_MEASURES];
     bool measTodo[NB_MEASURES];
     unsigned long measPeriod[NB_MEASURES];
+    
+    unsigned long inactiveCnt;
+    uint32_t inactivePeriod;
     
     /* DISPLAY DATA */
     uint32_t ledCnt;

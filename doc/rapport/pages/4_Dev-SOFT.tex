@@ -280,14 +280,52 @@ Dans le code \ref{code:int-t2}, nous pouvons voir le code de la routine d'interr
 
 \subsection{Application principale} 
 
-Lors de cette section nous allons décrire le fonctionnement principale du système
+Lors de cette section nous allons décrire le fonctionnement principale du système sous la forme d'un diagramme d'état sur la figure \ref{fig:stateapp}.
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=1\linewidth]{../figures/code/diagrammes/state_app}
-	\caption{Diagramme d'état principal}
+	\caption{Diagramme d'état principal.}
 	\label{fig:stateapp}
 	\source{Auteur}
 \end{figure}
 
+\subsubsection{Commandes USB-UART}
+Les commandes permettent d'interagir avec le système et de manipuler les différentes données de la boîte noire.
+
+\begin{center}
+	\underline{Liste des commandes}
+	\begin{table}[h]
+		\centering
+		\resizebox{\textwidth}{!}{
+			\begin{tabular}{llll}
+			GLIVE & -LVG & : & Permet d'afficher les données du \gls{gnss} en live sur le terminal sans les enregistrer. \\
+			ILIVE & -LVI & : & Lance l'envoi des données live de l'\gls{imu} sans les enregistrer. \\
+			GLOG & -GL & : & Envoie les données de localisation de la carte-SD au terminal. \\
+			ILOG & -IL & : & Envoie les données inertielle de la carte-SD au terminal.\\
+			GCLR & -GC & : & Supprime les logs du \gls{gnss}.\\
+			ICLR & -IC & : & Supprime les logs de l'\gls{imu}.\\
+			EXIT & X & : & Quitte le mode en cours.\\
+			SHUTDOWN & -OFF & : & Sauvegarde et éteint le système. \\
+			CONFIG & -CFG & : & Démarre le mode de configuration du système. \\
+			\faChevronRight & INTG:XXXX & : & Dans mode config. permet de régler la période de mesure du \gls{gnss}.\\
+			\faChevronRight & INTI:XXXX & : & Dans mode config. permet de régler la période de mesure de l'\gls{imu}. \\
+			\faChevronRight & LEDV:X & : & Dans mode config. permet d'activer ou non la LED de vie. \\
+			\faChevronRight & TOFF:XX & : & Dans mode config. permet de fixer le temps d'inactivité (éteint le système).
+		\end{tabular}
+		}
+		\caption{Commandes disponibles}
+		\label{tab:cmdDisp}
+	\end{table}
+\end{center}
+
+
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=.7\linewidth]{../figures/code/diagrammes/sequence-app}
+	\caption{Diagramme de séquence principal.}
+	\label{fig:sequence-app}
+	\source{Auteur}
+\end{figure}
 

@@ -63,18 +63,19 @@
 \contentsline {subsection}{\numberline {5.2}Configuration des périphériques}{31}{subsection.5.2}%
 \contentsline {subsubsection}{\numberline {5.2.1}Timers}{32}{subsubsection.5.2.1}%
 \contentsline {subsection}{\numberline {5.3}Application principale}{34}{subsection.5.3}%
-\contentsline {section}{\numberline {6}Validation du design}{34}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Liste de matériel}{34}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Contrôle des alimentations}{34}{subsection.6.2}%
-\contentsline {paragraph}{Méthode de mesure}{34}{section*.73}%
-\contentsline {paragraph}{Mesures}{34}{section*.74}%
-\contentsline {subsection}{\numberline {6.3}Communication UART}{34}{subsection.6.3}%
-\contentsline {paragraph}{Méthode de mesure}{34}{section*.75}%
-\contentsline {paragraph}{Mesures}{34}{section*.76}%
-\contentsline {subsection}{\numberline {6.4}Communication SPI, carte SD}{34}{subsection.6.4}%
-\contentsline {paragraph}{Méthode de mesure}{34}{section*.77}%
-\contentsline {paragraph}{Mesures}{34}{section*.78}%
-\contentsline {section}{\numberline {7}Caractéristiques du produit fini}{35}{section.7}%
-\contentsline {section}{\numberline {8}Conclusion}{36}{section.8}%
-\contentsline {section}{\numberline {9}Bibliographie}{37}{section.9}%
-\contentsline {section}{\numberline {10}Annexes}{38}{section.10}%
+\contentsline {subsubsection}{\numberline {5.3.1}Commandes USB-UART}{34}{subsubsection.5.3.1}%
+\contentsline {section}{\numberline {6}Validation du design}{36}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Liste de matériel}{36}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Contrôle des alimentations}{36}{subsection.6.2}%
+\contentsline {paragraph}{Méthode de mesure}{36}{section*.75}%
+\contentsline {paragraph}{Mesures}{36}{section*.76}%
+\contentsline {subsection}{\numberline {6.3}Communication UART}{36}{subsection.6.3}%
+\contentsline {paragraph}{Méthode de mesure}{36}{section*.77}%
+\contentsline {paragraph}{Mesures}{36}{section*.78}%
+\contentsline {subsection}{\numberline {6.4}Communication SPI, carte SD}{36}{subsection.6.4}%
+\contentsline {paragraph}{Méthode de mesure}{36}{section*.79}%
+\contentsline {paragraph}{Mesures}{36}{section*.80}%
+\contentsline {section}{\numberline {7}Caractéristiques du produit fini}{36}{section.7}%
+\contentsline {section}{\numberline {8}Conclusion}{37}{section.8}%
+\contentsline {section}{\numberline {9}Bibliographie}{38}{section.9}%
+\contentsline {section}{\numberline {10}Annexes}{39}{section.10}%

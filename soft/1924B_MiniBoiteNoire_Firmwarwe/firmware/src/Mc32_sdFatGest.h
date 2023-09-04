@@ -175,7 +175,7 @@ typedef struct
     /* Application data buffer */
     char                data[FIFO_RX_SIZE+2] DATA_BUFFER_ALIGN;
     /* Application config file */
-    char                cfg_data[100] DATA_BUFFER_ALIGN;
+    char                cfg_data[200] DATA_BUFFER_ALIGN;
     
     /* Filename variable */
     char                fileName[15] DATA_BUFFER_ALIGN;
@@ -234,10 +234,11 @@ typedef struct
     This routine must be called from SYS_Tasks() routine.
  */
 
-void sd_fat_cfg_init(unsigned long *tGnss, unsigned long *tImu, bool *ledState);
+
+void sd_fat_cfg_init(unsigned long *tGnss, unsigned long *tImu, bool *ledState, uint32_t *tInactivePeriod);
 
 void sd_fat_config_task ( bool init );
-void sd_CFG_Write (uint32_t tLogGNSS_ms, uint32_t tLogIMU_ms, uint8_t ledState, bool skipMount);
+void sd_CFG_Write (uint32_t tLogGNSS_ms, uint32_t tLogIMU_ms, uint8_t ledState, uint32_t tInactiveP, bool skipMount);
 APP_FAT_CONFIG_STATES sd_cfgGetState( void );
 void sd_cfgSetState( APP_FAT_CONFIG_STATES newState );
 char* sd_cfgGetCfgBuffer( void );

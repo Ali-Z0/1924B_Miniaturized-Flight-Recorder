@@ -65,7 +65,7 @@ APP_FAT_DATA COHERENT_ALIGNED appFatData;
 /* ************************************************************************** */
 /* ************************************************************************** */
 // Function prototype
-static uint8_t parseConfig(unsigned long *tGnss, unsigned long *tImu, bool *ledState);
+static uint8_t parseConfig(unsigned long *tGnss, unsigned long *tImu, bool *ledState, unsigned long *tInactive);
 /* ************************************************************************** */
 
 /* ************************************************************************** */
@@ -118,7 +118,7 @@ void sd_fat_config_task ( bool init )
             if(appFatData.fileCfgHandle == SYS_FS_HANDLE_INVALID)
             {
                 /* No config file, write default config file */
-                sd_CFG_Write(T_INTERVAL_GNSS_DEFAULT, T_INTERVAL_IMU_DEFAULT, LED_STATE_DEFAULT, true);
+                sd_CFG_Write(T_INTERVAL_GNSS_DEFAULT, T_INTERVAL_IMU_DEFAULT, LED_STATE_DEFAULT, T_INACTIVE_PERIOD_DEFAULT, true);
                 
                 /* Re-try to open file as read */
                 //appFatData.cfg_state = APP_CFG_OPEN_READ_CONFIG_FILE;         
@@ -366,7 +366,7 @@ void sd_GNSS_scheduleWrite (minmea_messages * pGnssData)
     }
 }
 
-void sd_CFG_Write (uint32_t tLogGNSS_ms, uint32_t tLogIMU_ms, uint8_t ledState, bool skipMount)
+void sd_CFG_Write (uint32_t tLogGNSS_ms, uint32_t tLogIMU_ms, uint8_t ledState, uint32_t tInactiveP, bool skipMount)
 {
     /* If sd Card available */
     if((appFatData.cfg_state == APP_CFG_IDLE)||(appFatData.cfg_state == APP_CFG_OPEN_READ_CONFIG_FILE))
@@ -382,7 +382,8 @@ void sd_CFG_Write (uint32_t tLogGNSS_ms, uint32_t tLogIMU_ms, uint8_t ledState, 
             appFatData.cfg_state = APP_CFG_OPEN_WRITE_CONFIG_FILE;
         
         /* Write the buffer */
-        sprintf(appFatData.cfg_data, "$LOG INTERVAL GNSS [ms] : %u\r\n$LOG INTERVAL IMU [ms] : %u\r\n$LED ENABLE [1/0] : %u\r\n", tLogGNSS_ms, tLogIMU_ms, ledState);
+        sprintf(appFatData.cfg_data, "$LOG INTERVAL GNSS [ms] : %u\r\n$LOG INTERVAL IMU [ms] : %u\r\n$LED ENABLE [1/0] : %u\r\n$INACTIVE PERIOD [s] : %u\r\n", 
+                tLogGNSS_ms, tLogIMU_ms, ledState, tInactiveP);
         /* Compute the number of bytes to send */
         appFatData.nBytesToWrite = strlen(appFatData.cfg_data);
         
@@ -416,12 +417,13 @@ char* sd_cfgGetCfgBuffer( void )
     return appFatData.cfg_data;
 }
 
-void sd_fat_cfg_init(unsigned long *tGnss, unsigned long *tImu, bool *ledState)
+void sd_fat_cfg_init(unsigned long *tGnss, unsigned long *tImu, bool *ledState, uint32_t *tInactivePeriod)
 {
     // Config parser error
     uint8_t parseError = 0;
     unsigned long tGnssLocal = 0;
     unsigned long tImuLocal = 0;
+    unsigned long tInactive = 0;
     bool ledStateLocal = 0;
     
     //appFatData.nBytesRead = 0;
@@ -436,7 +438,7 @@ void sd_fat_cfg_init(unsigned long *tGnss, unsigned long *tImu, bool *ledState)
     // If read config routine was a success
     if(sd_cfgGetState() == APP_CFG_IDLE)
         // Parse config buffer to get parameters
-        parseError = parseConfig(&tGnssLocal, &tImuLocal, &ledStateLocal);
+        parseError = parseConfig(&tGnssLocal, &tImuLocal, &ledStateLocal, &tInactive);
     // If the parsing failed or the read config routine failed
     if((parseError > 0)||(sd_cfgGetState() == APP_CFG_ERROR))
     {
@@ -444,6 +446,7 @@ void sd_fat_cfg_init(unsigned long *tGnss, unsigned long *tImu, bool *ledState)
         *tGnss = T_INTERVAL_GNSS_DEFAULT;
         *tImu = T_INTERVAL_IMU_DEFAULT;
         *ledState = LED_STATE_DEFAULT;
+        *tInactivePeriod = T_INACTIVE_PERIOD_DEFAULT;
         appStateSet(APP_STATE_LOGGING);
         // Start measure timer
         DRV_TMR1_Start();
@@ -453,13 +456,14 @@ void sd_fat_cfg_init(unsigned long *tGnss, unsigned long *tImu, bool *ledState)
         *tGnss = tGnssLocal;
         *tImu = tImuLocal;
         *ledState = ledStateLocal;
+        *tInactivePeriod = tInactive;
         appStateSet(APP_STATE_LOGGING);
         // Start measure timer
         DRV_TMR1_Start();
     }
 }
 
-static uint8_t parseConfig(unsigned long *tGnss, unsigned long *tImu, bool *ledState)
+static uint8_t parseConfig(unsigned long *tGnss, unsigned long *tImu, bool *ledState, unsigned long *tInactive)
 {
     char *ptBufferHead;
     char *ptBufferTail;
@@ -494,13 +498,26 @@ static uint8_t parseConfig(unsigned long *tGnss, unsigned long *tImu, bool *ledS
     
     // Locate the head and tail of the first data
     ptBufferHead = strstr(ptBufferTail, " :");
-    ptBufferTail = (ptBufferHead + 3);
+    ptBufferTail = strstr(ptBufferHead, "\r\n");
     // Check if the pointers are corrects
     if((ptBufferHead != NULL)&&(ptBufferTail != NULL)&&(ptBufferHead < ptBufferTail)){
         // Copy the data between the head and the tail in a sub-pointer
         strncpy(ptTrame, (ptBufferHead+2), (ptBufferTail-ptBufferHead));
         // Convert the character to value
         *ledState = (bool) atoi(ptTrame);
+    }
+    else
+        error++;
+    
+    // Locate the head and tail of the first data
+    ptBufferHead = strstr(ptBufferTail, " :");
+    ptBufferTail = strstr(ptBufferHead, "\r\n");
+    // Check if the pointers are corrects
+    if((ptBufferHead != NULL)&&(ptBufferTail != NULL)&&(ptBufferHead < ptBufferTail)){
+        // Copy the data between the head and the tail in a sub-pointer
+        strncpy(ptTrame, (ptBufferHead+2), (ptBufferTail-ptBufferHead));
+        // Convert the character to value
+        *tInactive = (uint32_t) atoi(ptTrame);
     }
     else
         error++;

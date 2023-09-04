@@ -108,6 +108,7 @@ void stateTimer_callback()
     timeData.ledCnt ++;
     timeData.measCnt[BNO055_idx] ++;
     timeData.measCnt[GNSS_idx] ++;
+    timeData.inactiveCnt ++;
     timeData.tmrTickFlag = true;
     /* When the button is pressed, the hold time is counted. */
     if(timeData.flagCntBtnPressed){
@@ -157,8 +158,8 @@ void APP_Initialize ( void )
     LED_GOn();
     
     // Start GNSS
-    char gnssMessage[4+U_UBX_PROTOCOL_OVERHEAD_LENGTH_BYTES];
-    char msgBody[4] = {0xFF, 0xFF, 0X09, 0x00};
+    //char gnssMessage[4+U_UBX_PROTOCOL_OVERHEAD_LENGTH_BYTES];
+    //char msgBody[4] = {0xFF, 0xFF, 0X09, 0x00};
     
     // GNSS initialsiation data
     /*char gnssMessage2[4+U_UBX_PROTOCOL_OVERHEAD_LENGTH_BYTES];
@@ -183,19 +184,8 @@ void APP_Initialize ( void )
     BNO055_delay_msek(300);
             
     // Start GNSS
-    uUbxProtocolEncode(0x06, 0x04, msgBody, 4, gnssMessage);
-    serTransmitbuffer(USART_ID_2, gnssMessage, sizeof(gnssMessage));
-    
-    // Save current configuration
-    /*BNO055_delay_msek(10);
-    uUbxProtocolEncode(0x06, 0x09, msgBody2, 4, gnssMessage2);
-    serTransmitbuffer(USART_ID_2, gnssMessage2, sizeof(gnssMessage2));*/
-    
-    // Reset command
-    /*uUbxProtocolEncode(0x06, 0x04, msgBody3, 4, gnssMessage);
-    serTransmitbuffer(USART_ID_2, gnssMessage, sizeof(gnssMessage));*/
-    
-    
+    //uUbxProtocolEncode(0x06, 0x04, msgBody, 4, gnssMessage);
+    //serTransmitbuffer(USART_ID_2, gnssMessage, sizeof(gnssMessage));
 
     /* Reset IMU */
     RST_IMUOff();
@@ -229,8 +219,9 @@ void APP_Tasks ( void )
     static uint32_t readCnt = 0;
     static unsigned long oldIntG = 0;
     static unsigned long oldIntI = 0;
+    static uint32_t oldInaPer = 0;
     static bool oldLed = 0;
-    int ledStateTemp = 0;
+    static int ledStateTemp = 0;
     
     // Character to send trough USART
     static char charToSend = 0;
@@ -254,9 +245,13 @@ void APP_Tasks ( void )
         case APP_STATE_CONFIG:
         {
             /* Init sd card parameters and read/create config File */
-            sd_fat_cfg_init(&timeData.measPeriod[GNSS_idx], &timeData.measPeriod[BNO055_idx], &appData.ledState);
+            sd_fat_cfg_init(&timeData.measPeriod[GNSS_idx], &timeData.measPeriod[BNO055_idx], &appData.ledState, &timeData.inactivePeriod);
             
             LED_GOff();
+            
+            /* ---  Unmount timeout --- */
+            if (ButtonMFStateGet())
+                appData.state = APP_STATE_SHUTDOWN;
             break;
         }
         case APP_STATE_LOGGING:
@@ -274,8 +269,16 @@ void APP_Tasks ( void )
                 bno055_local_data.comres = bno055_read_routine(&bno055_local_data);
                 /* Delta time */
                 bno055_local_data.d_time = timeData.measCnt[BNO055_idx] - timeData.ltime[BNO055_idx];
-                /* Pressure measure */
-                bno055_local_data.pressure = 0;
+                /* Flag measure if acceleration detected */
+                if(bno055_local_data.gravity.x + bno055_local_data.gravity.y + bno055_local_data.gravity.z > 2*G)
+                    bno055_local_data.flagImportantMeas = 1;
+                else
+                    bno055_local_data.flagImportantMeas = 0;
+                
+                /* Detect activity */
+                if(bno055_local_data.gravity.x + bno055_local_data.gravity.y + bno055_local_data.gravity.z > 1.02*G)
+                    timeData.inactiveCnt = 0;
+                
                 /* Write value to sdCard */
                 sd_IMU_scheduleWrite(&bno055_local_data);
                 /* Reset measure flag */
@@ -310,6 +313,10 @@ void APP_Tasks ( void )
             sd_fat_logging_task();
             /* --- Button routine --- */
             btnTaskGest();
+            /* --- Inactivity shutdown --- */
+            if (timeData.inactiveCnt >= (timeData.inactivePeriod*100))
+                appData.state = APP_STATE_SHUTDOWN;
+                
             
             /* --- LIVE GNSS COMMAND --- */
             if(pollSerialCmds(USART_ID_1, "glive", "GLIVE", "-lvg", "-LVG")){
@@ -384,8 +391,9 @@ void APP_Tasks ( void )
             
            break;
         }
-        case APP_STATE_COMM_LIVE_GNSS:  
-            
+        case APP_STATE_COMM_LIVE_GNSS:
+            /* No inactivity during this mode */
+            timeData.inactiveCnt = 0;
             // Display GNSS live data trough USART 1
             if(getReadSize(&usartFifoRx) > 0){
                 getCharFromFifo(&usartFifoRx, &charToSend);
@@ -396,6 +404,8 @@ void APP_Tasks ( void )
                 startLogging();
             break;
         case APP_STATE_COMM_LIVE_IMU:
+            /* No inactivity during this mode */
+            timeData.inactiveCnt = 0;
             // BNO055 Measure routine
             if(timeData.measTodo[BNO055_idx] == true )
             {
@@ -429,7 +439,8 @@ void APP_Tasks ( void )
             break;
             
         case APP_STATE_CONFIGURATE_BBX:
-            
+            /* No inactivity during this mode */
+            timeData.inactiveCnt = 0;
             // Get command's characters
             while(!(DRV_USART0_ReceiverBufferIsEmpty())&&(readCnt < 30)){
                 charRead[readCnt] = PLIB_USART_ReceiverByteReceive(USART_ID_1);
@@ -450,6 +461,7 @@ void APP_Tasks ( void )
                 sscanf(charRead, "\rINTG:%lu", &timeData.measPeriod[GNSS_idx]);
                 sscanf(charRead, "\rINTI:%lu", &timeData.measPeriod[BNO055_idx]);
                 sscanf(charRead, "\rLEDV:%d", &ledStateTemp);
+                sscanf(charRead, "\rTOFF:%d", &timeData.inactivePeriod);
                 // Cast int into boolean
                 if (ledStateTemp > 0)
                     appData.ledState = true;
@@ -462,7 +474,8 @@ void APP_Tasks ( void )
                 memset(charRead,0,strlen(charRead));
             }
             // If config value changed
-            if((timeData.measPeriod[GNSS_idx] != oldIntG) || (timeData.measPeriod[BNO055_idx] != oldIntI) || (appData.ledState != oldLed)){
+            if((timeData.measPeriod[GNSS_idx] != oldIntG) || (timeData.measPeriod[BNO055_idx] != oldIntI) || (appData.ledState != oldLed)
+                || (timeData.inactivePeriod != oldInaPer) ){
                                 
                 serTransmitString(USART_ID_1, "COMMAND : VALUE CHANGED \r\n");
                 // If data is not valid, keep the previous one
@@ -475,13 +488,21 @@ void APP_Tasks ( void )
                     timeData.measPeriod[BNO055_idx] = oldIntI;
                     serTransmitString(USART_ID_1, "ERROR IMU VALUE <= 0 \r\n");
                 }
+                // If data is not valid, keep the previous one
+                if(timeData.inactivePeriod <= 10){
+                    timeData.inactivePeriod = oldInaPer;
+                    serTransmitString(USART_ID_1, "ERROR INACTIVE PERIOD VALUE <= 10 \r\n");
+                }
+                /* Clear read buffer */
+                memset(charRead,0,strlen(charRead));
                 // Write new config file
-                sd_CFG_Write (timeData.measPeriod[GNSS_idx], timeData.measPeriod[BNO055_idx], appData.ledState, true);
+                sd_CFG_Write (timeData.measPeriod[GNSS_idx], timeData.measPeriod[BNO055_idx], appData.ledState, timeData.inactivePeriod, true);
             }
             // Update polling config parameter
             oldIntG = timeData.measPeriod[GNSS_idx];
             oldIntI = timeData.measPeriod[BNO055_idx];
             oldLed = appData.ledState;
+            oldInaPer = timeData.inactivePeriod;
                 
             // Check occurence with commands
             if((strstr(charRead, "exit") != NULL)||(strstr(charRead, "EXIT") != NULL)
@@ -536,7 +557,7 @@ static void btnTaskGest( void ){
             timeData.flagCntBtnPressed = false;
             DebounceClearReleased(&switchDescr);
             /* If pressed more time than power off */
-            if(timeData.cntBtnPressed >= TIME_POWER_OFF_x10ms){
+            if(timeData.cntBtnPressed >= BTN_HOLD_SHUTDOWN_x10ms){
                 /* Power off the system */
                 appData.state = APP_STATE_SHUTDOWN;
             }
@@ -579,7 +600,7 @@ static void stopLogging (void)
 
     /* Finish config */
     while(sd_cfgGetState() != APP_CFG_IDLE){
-        sd_fat_cfg_init(&timeData.measPeriod[GNSS_idx], &timeData.measPeriod[BNO055_idx], &appData.ledState);
+        sd_fat_cfg_init(&timeData.measPeriod[GNSS_idx], &timeData.measPeriod[BNO055_idx], &appData.ledState, &timeData.inactivePeriod);
     }
 
     /* Finish logging */
