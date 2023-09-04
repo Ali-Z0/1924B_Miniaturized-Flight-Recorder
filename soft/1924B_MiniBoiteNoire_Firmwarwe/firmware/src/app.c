@@ -192,6 +192,9 @@ void APP_Initialize ( void )
     BNO055_delay_msek(100);
     RST_IMUOn();
     BNO055_delay_msek(100);
+    
+    // Reset interrupt pin
+    bno055_set_intr_rst(1);
         
     /* Place the App state machine in its initial state. */
     appData.state = APP_STATE_INIT;
@@ -236,6 +239,17 @@ void APP_Tasks ( void )
             BNO055_delay_msek(500);
             // Init and Measure set
             bno055_init_readout();
+            
+            /* BNO055 motion interrupt mode */
+            bno055_set_accel_any_motion_no_motion_axis_enable(BNO055_ACCEL_ANY_MOTION_NO_MOTION_X_AXIS, 1);
+            bno055_set_accel_any_motion_no_motion_axis_enable(BNO055_ACCEL_ANY_MOTION_NO_MOTION_Y_AXIS, 1);
+            bno055_set_accel_any_motion_no_motion_axis_enable(BNO055_ACCEL_ANY_MOTION_NO_MOTION_Z_AXIS, 1);
+    
+            bno055_set_accel_any_motion_thres(10);
+            bno055_set_accel_any_motion_durn(20);
+            bno055_set_intr_accel_any_motion(1);
+            bno055_set_intr_mask_accel_any_motion(1);
+                    
             /* go to service task */
             appData.state = APP_STATE_CONFIG;
             /* Init ltime_BNO055 counter */
@@ -244,6 +258,8 @@ void APP_Tasks ( void )
         }
         case APP_STATE_CONFIG:
         {
+            // Reset interrupt pin
+            bno055_set_intr_rst(1);
             /* Init sd card parameters and read/create config File */
             sd_fat_cfg_init(&timeData.measPeriod[GNSS_idx], &timeData.measPeriod[BNO055_idx], &appData.ledState, &timeData.inactivePeriod);
             
@@ -264,19 +280,20 @@ void APP_Tasks ( void )
                     timeData.ledCnt = 0;
                     LED_BOn();
                 }
-                
                 /* BNO055 Read all important info routine */
                 bno055_local_data.comres = bno055_read_routine(&bno055_local_data);
                 /* Delta time */
                 bno055_local_data.d_time = timeData.measCnt[BNO055_idx] - timeData.ltime[BNO055_idx];
                 /* Flag measure if acceleration detected */
-                if(bno055_local_data.gravity.x + bno055_local_data.gravity.y + bno055_local_data.gravity.z > 2*G)
+                if((bno055_local_data.linear_accel.x >= 2*G) || (bno055_local_data.linear_accel.y >= 2*G) || (bno055_local_data.linear_accel.z >= 2*G))
                     bno055_local_data.flagImportantMeas = 1;
                 else
                     bno055_local_data.flagImportantMeas = 0;
                 
                 /* Detect activity */
-                if(bno055_local_data.gravity.x + bno055_local_data.gravity.y + bno055_local_data.gravity.z > 1.02*G)
+                if((bno055_local_data.linear_accel.x >= ACCEL_ACTIV_DETECT_msq) 
+                   || (bno055_local_data.linear_accel.y >= ACCEL_ACTIV_DETECT_msq) 
+                   || (bno055_local_data.linear_accel.z >= ACCEL_ACTIV_DETECT_msq))
                     timeData.inactiveCnt = 0;
                 
                 /* Write value to sdCard */
@@ -587,6 +604,8 @@ static void sys_shutdown( void ) {
             sd_fat_logging_task();
         }
     }
+    // Reset interrupt pin
+    bno055_set_intr_rst(1);
     /* turn off the device */
     PWR_HOLDOff();
 }

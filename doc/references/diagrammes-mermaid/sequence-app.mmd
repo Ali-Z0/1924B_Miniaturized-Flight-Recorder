@@ -6,45 +6,61 @@ sequenceDiagram
     participant IMU
     participant USART
 
-    Main->>Main: Initialize appData.state = APP_STATE_INIT
+    Main->>+Main: Initialize appData.state = APP_STATE_INIT
     alt APP_STATE_INIT
-        Main->>IMU: Initialize IMU
-        Main->>GNSS: Initialize GNSS
+        Main->>+IMU: Initialize IMU
+        IMU-->>-Main: IMU Initialized
+        Main->>+GNSS: Initialize GNSS
+        GNSS-->>-Main: GNSS Initialized
         Main->>Main: appData.state = APP_STATE_CONFIG
     end
 
     alt APP_STATE_CONFIG
-        Main->>SD: Initialize SD Card parameters
+        Main->>+SD: Initialize SD Card parameters
+        SD-->>-Main: SD Card Parameters Set
     end
 
     alt APP_STATE_LOGGING
-        Timer->>Main: stateTimer_callback()
+        Timer->>+Main: stateTimer_callback()
         alt timeData.measTodo[BNO055_idx] == true
-            Main->>IMU: Read IMU data
-            Main->>SD: Write IMU data
+            Main->>+IMU: Read IMU data
+            IMU-->>-Main: IMU Data Read
+            Main->>+SD: Write IMU data
+            SD-->>-Main: IMU Data Written
         end
         alt timeData.measTodo[GNSS_idx] == true
-            Main->>GNSS: Read GNSS data
-            Main->>SD: Write GNSS data
+            Main->>+GNSS: Read GNSS data
+            GNSS-->>-Main: GNSS Data Read
+            Main->>+SD: Write GNSS data
+            SD-->>-Main: GNSS Data Written
         end
-        Main->>SD: sd_fat_logging_task()
+        Main->>+SD: sd_fat_logging_task()
+        SD-->>-Main: Logging Task Completed
         Main->>Main: btnTaskGest()
     end
 
     alt APP_STATE_COMM_LIVE_GNSS
-        USART->>Main: Receive command
-        Main->>GNSS: Display GNSS live data
+        USART->>+Main: Receive command
+        Main-->>-USART: Command Acknowledged
+        USART-->>Main: 
+        Main->>+GNSS: Display GNSS live data
+        GNSS-->>-Main: GNSS Data Displayed
     end
 
     alt APP_STATE_COMM_LIVE_IMU
-        Timer->>Main: stateTimer_callback()
-        Main->>IMU: Read IMU data
-        Main->>USART: Display IMU data
+        Timer->>+Main: stateTimer_callback()
+        Main->>+IMU: Read IMU data
+        IMU-->>-Main: IMU Data Read
+        Main->>+USART: Display IMU data
+        USART-->>-Main: IMU Data Displayed
     end
 
     alt APP_STATE_CONFIGURATE_BBX
-        USART->>Main: Receive command
-        Main->>SD: Update Config
+        USART->>+Main: Receive command
+        Main-->>-USART: Command Acknowledged
+        USART-->>Main: 
+        Main->>+SD: Update Config
+        SD-->>-Main: Config Updated
     end
 
     alt APP_STATE_SHUTDOWN

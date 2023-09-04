@@ -73,6 +73,7 @@ extern "C" {
 #define BTN_HOLD_SHUTDOWN_x10ms     200
 #define NB_MEASURES                 2
  
+#define ACCEL_ACTIV_DETECT_msq      0.3
 #define T_CONFIG_TIMEOUT            20
 #define T_INACTIVE_PERIOD_DEFAULT   20UL   
 #define T_INTERVAL_GNSS_DEFAULT     5000UL

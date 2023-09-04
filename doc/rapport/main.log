@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.8.7)  4 SEP 2023 11:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.8.7)  4 SEP 2023 15:17
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2159,24 +2159,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [33
 
 ]
-<../figures/code/diagrammes/state_app.jpg, id=823, 7470.91125pt x 4525.90875pt>
-
+<../figures/code/diagrammes/state_app.jpg, id=823, 4980.6075pt x 3017.2725pt>
 File: ../figures/code/diagrammes/state_app.jpg Graphic file (type jpg)
 <use ../figures/code/diagrammes/state_app.jpg>
 Package pdftex.def Info: ../figures/code/diagrammes/state_app.jpg  used on inpu
 t line 287.
-(pdftex.def)             Requested size: 452.9679pt x 274.37425pt.
-<../figures/code/diagrammes/sequence-app.png, id=830, 7869.4pt x 10439.0pt>
-File: ../figures/code/diagrammes/sequence-app.png Graphic file (type png)
-<use ../figures/code/diagrammes/sequence-app.png>
-Package pdftex.def Info: ../figures/code/diagrammes/sequence-app.png  used on i
-nput line 326.
-(pdftex.def)             Requested size: 317.07614pt x 420.51534pt.
+(pdftex.def)             Requested size: 452.9679pt x 274.39728pt.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-) (./pages/5_Val-MES.tex
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2188,6 +2177,14 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [34
 
  <../figures/code/diagrammes/state_app.jpg>]
+<../figures/code/diagrammes/sequence-app.jpg, id=838, 4196.67876pt x 8449.5675p
+t>
+File: ../figures/code/diagrammes/sequence-app.jpg Graphic file (type jpg)
+<use ../figures/code/diagrammes/sequence-app.jpg>
+Package pdftex.def Info: ../figures/code/diagrammes/sequence-app.jpg  used on i
+nput line 330.
+(pdftex.def)             Requested size: 294.42636pt x 592.69054pt.
+) (./pages/5_Val-MES.tex
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2196,7 +2193,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[35 <../figures/code/diagrammes/sequence-app.png>])
+[35
+
+ <../figures/code/diagrammes/sequence-app.jpg>])
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2249,10 +2248,10 @@ runsystem(del main.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 45806 strings out of 475187
- 903464 string characters out of 5767784
+ 45808 strings out of 475187
+ 903562 string characters out of 5767784
  1945248 words of memory out of 5000000
- 66096 multiletter control sequences out of 15000+600000
+ 66098 multiletter control sequences out of 15000+600000
  655471 words of font info for 152 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  109i,15n,117p,2289b,956s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2268,10 +2267,10 @@ live/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2023/texmf-di
 st/fonts/type1/urw/times/utmbi8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/ur
 w/times/utmr8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/times/utmri8a.pf
 b>
-Output written on main.pdf (40 pages, 16002453 bytes).
+Output written on main.pdf (40 pages, 16516160 bytes).
 PDF statistics:
- 974 PDF objects out of 1000 (max. 8388607)
- 818 compressed objects within 9 object streams
+ 975 PDF objects out of 1000 (max. 8388607)
+ 820 compressed objects within 9 object streams
  203 named destinations out of 1000 (max. 500000)
  740 words of extra memory for PDF output out of 10000 (max. 10000000)
 
