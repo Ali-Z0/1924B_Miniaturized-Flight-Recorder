@@ -365,7 +365,7 @@ void APP_Tasks ( void )
             /* --- CONFIG BLACKBOX --- */
             if(pollSerialCmds(USART_ID_1, "config", "CONFIG", "-cfg", "-CFG")){       
                 // Stop SD card logging 
-                stopLogging();
+                stopLogging(); 
                 /* Deactivate USART2 (not used) */
                 PLIB_USART_Disable(USART_ID_2);
                 serTransmitString(USART_ID_1, "CONFIGURATION MODE \r\n");
