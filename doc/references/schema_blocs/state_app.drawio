@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-09-04T11:27:29.029Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="XeoiO5YEaPFSTQHJ7-iy" version="21.7.2" type="device">
+<mxfile host="app.diagrams.net" modified="2023-09-05T10:13:53.099Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="IZwbWjdnSsTaiId9pb3-" version="21.7.2" type="device">
   <diagram name="Page-1" id="V-no2B27AdzD9TtR8Gwy">
-    <mxGraphModel dx="989" dy="545" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1195" dy="658" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -20,7 +20,7 @@
           <mxGeometry x="407" y="40" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="kkfDQyU8IbMwYjaVZHdR-4" value="Pression sur bouton" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="447" y="70" width="60" height="30" as="geometry" />
+          <mxGeometry x="447" y="60" width="113" height="30" as="geometry" />
         </mxCell>
         <mxCell id="kkfDQyU8IbMwYjaVZHdR-5" value="&lt;h1&gt;&lt;font style=&quot;font-size: 19px;&quot;&gt;Initalisation&lt;/font&gt;&lt;/h1&gt;&lt;div&gt;Initialise la &quot;FIFO&quot;, les timers, le bus I2C, la centrale inertielle et le GNSS. Vas également lire le fichier CONFIG.txt, si il n&#39;existe pas, il est créé avec les paramètres par défaut. Met à jour les variables de période et de LED.&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;verticalAlign=top;horizontal=1;" parent="1" vertex="1">
           <mxGeometry x="487" y="100" width="340" height="110" as="geometry" />
@@ -41,7 +41,7 @@
         <mxCell id="kkfDQyU8IbMwYjaVZHdR-12" value="POWER OFF" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
           <mxGeometry x="270" y="160" width="100" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="kkfDQyU8IbMwYjaVZHdR-14" value="&lt;h1&gt;&lt;font style=&quot;font-size: 19px;&quot;&gt;Initalisation&lt;/font&gt;&lt;/h1&gt;&lt;div&gt;Sauvegarde les mesures et éjecte la carte SD.&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;verticalAlign=top;horizontal=1;align=right;" parent="1" vertex="1">
+        <mxCell id="kkfDQyU8IbMwYjaVZHdR-14" value="&lt;h1&gt;&lt;font style=&quot;font-size: 19px;&quot;&gt;Power OFF&lt;/font&gt;&lt;/h1&gt;&lt;div&gt;Sauvegarde les mesures et éjecte la carte SD.&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;verticalAlign=top;horizontal=1;align=right;" parent="1" vertex="1">
           <mxGeometry y="150" width="260" height="110" as="geometry" />
         </mxCell>
         <mxCell id="kkfDQyU8IbMwYjaVZHdR-16" value="Pression sur bouton &amp;gt;&amp;nbsp; 2sec" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
@@ -119,8 +119,11 @@
         <mxCell id="kkfDQyU8IbMwYjaVZHdR-40" value="CMD: GLOG / ILOG" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;rotation=50;fontSize=11;" parent="1" vertex="1">
           <mxGeometry x="460" y="370" width="137" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="oajHU3bIGMmy59Xx9xr4-1" value="Pas de mouvement pdt. &amp;gt; periode" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="oajHU3bIGMmy59Xx9xr4-1" value="Pas de mouvement pdt. &amp;gt; periode" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="183" y="304" width="187" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="FfS86C2nnLOS5idLJLWR-1" value="Accélération détectée" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="447" y="73" width="123" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

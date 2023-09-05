@@ -275,6 +275,55 @@ void stateTimer_callback()
 
 Dans le code \ref{code:int-t2}, nous pouvons voir le code de la routine d'interruption du timer 2. Lors de cette interruption, les différents compteurs de mesures sont incrémentés et différentes conditions vont tester si la période de mesure est atteinte. Une gestion du bouton a également lieu, notamment une mesure du temps d'appui, et une limitation des effets de rebonds mécaniques sur les signaux électriques observés par le \gls{mcu} par un échantillonnage diminué. Enfin, la LED de vie est gérée, notamment son temps allumé.
 
+\clearpage
+
+\subsubsection{USARTs}
+
+Deux bus de communication UART ont dû être configurés dans le cadre de ce projet ; ceux-ci ont des utilités différentes.
+
+\begin{center}
+	\underline{Configuration des UARTs}
+	\begin{table}[h]
+		\centering
+		\begin{tabular}{llllll}
+			ID du BUS & Utilité & Baudrate & Interruption & Trame & Parité \\ 
+			\hline
+			UART ID1 & Réceptions commandes USB & 9600 & Priorité 1 & 8bits + 1stop & Non \\
+			UART ID2 & Communication avec le \gls{gnss} & 9600 & Non & 8bits + 1stop & Non \\
+		\end{tabular}
+		\caption{}
+		\label{tab:Usarts}
+	\end{table}
+\end{center}
+
+L'USART ID1, mentionné dans le tableau \ref{tab:Usarts}, est configuré avec une interruption. Celle-ci a été mise en place afin d'implémenter un mécanisme de FIFO associé à un tampon de réception. Ceci facilite le traitement des données et évite leur perte lors de réceptions consécutives.
+
+\subsubsection{Carte SD}
+Harmony permet de configurer directement un périphérique carte-SD avec le bus SPI.
+\begin{figure}[!h]
+	\centering
+	\begin{subfigure}[b]{0.5\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{../figures/code/harmony/SD-card}
+		\caption{Configuration Carte SD.}
+		\label{fig:sd-card}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.44\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{../figures/code/harmony/SD-card-spi}
+		\caption{Configuration SPI.}
+		\label{fig:sd-card-spi}
+	\end{subfigure}
+	\hfill
+	\caption{Harmony, driver carte-SD.}
+	\label{fig:HDriverSD}
+\end{figure}
+
+Sur la figure \ref{fig:sd-card}, on peut observer la configuration de la carte SD. La broche de \textit{Chip Select} est attribuée à \textbf{RA10}, qui correspond à \textbf{CS\_SD} sur le schéma présenté à la figure \ref{fig:mcu}. La connexion est établie avec une fréquence de \textbf{10MHz}.
+
+Concernant la figure \ref{fig:sd-card-spi}, les spécificités du bus SPI y sont configurées, incluant le mode de l'horloge et la phase de l'échantillonnage. Ces configurations ont été adaptées en adéquation avec les protocoles des cartes SD\footnote{\href{https://www.renesas.com/us/en/document/apn/sd-memory-card-interface-using-spi}{SD Memory Card Interface Using SPI}.}.
+
 
 \clearpage
 
@@ -327,9 +376,21 @@ Sur la figure \ref{fig:sequence-app}, la séquence de la boucle principale de l'
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[width=.65\linewidth]{../figures/code/diagrammes/sequence-app}
+	\includegraphics[width=.66\linewidth]{../figures/code/diagrammes/sequence-app}
 	\caption{Diagramme de séquence principal.}
 	\label{fig:sequence-app}
 	\source{Auteur}
 \end{figure}
+
+\clearpage
+\subsubsection{Etat logging}
+La figure \ref{fig:pdfresizer} présente un flowchart
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.56\linewidth]{../figures/code/diagrammes/logging-flow}
+	\caption{A}
+	\label{fig:pdfresizer}
+\end{figure}
+
 

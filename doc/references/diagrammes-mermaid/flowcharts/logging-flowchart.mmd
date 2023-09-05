@@ -1,0 +1,33 @@
+graph TB
+    start{{"Start"}} --> cond1{"timeData.measTodo[BNO055_idx] == true & sd_logGetState() == APP_IDLE"}
+    cond1 -->|True| subcond1{appData.ledState == true}
+    cond1 -->|False| cond2{"timeData.measTodo[GNSS_idx] == true & sd_logGetState() == APP_IDLE"}
+    subcond1 -->|True| A["timeData.ledCnt = 0"]
+    subcond1 -->|False| B["bno055_local_data.comres = bno055_read_routine(&bno055_local_data)"]
+    A --> B["bno055_local_data.comres = bno055_read_routine(&bno055_local_data)"]
+    B --> C["bno055_local_data.d_time = timeData.measCnt[BNO055_idx] - timeData.ltime[BNO055_idx]"]
+    C --> subcond2{Check acceleration values}
+    subcond2 -->|True| T["bno055_local_data.flagImportantMeas = 1"]
+    subcond2 -->|False| D["bno055_local_data.flagImportantMeas = 0"]
+    D & T --> subcond3{Check activity}
+    subcond3 -->|True| E["timeData.inactiveCnt = 0"]
+    subcond3 -->|False| F["sd_IMU_scheduleWrite(&bno055_local_data)"]
+    E --> F["sd_IMU_scheduleWrite(&bno055_local_data)"]
+    F --> G["timeData.measTodo[BNO055_idx] = false"]
+    G --> H["timeData.ltime[BNO055_idx] = timeData.measCnt[BNO055_idx]"]
+    cond2 -->|True| I["sd_GNSS_scheduleWrite(&gnss_nmea_local_data)"]
+    cond2 -->|False| J["bno055_local_data.comres = 0"]
+    I --> K["timeData.measTodo[GNSS_idx] = false"]
+    J --> L["LED_BOff()"]
+    H --> cond3{Error Check}
+    K --> cond3{Error Check}
+    L --> cond3{Error Check}
+    cond3 -->|True| M["LED_ROn()"]
+    cond3 -->|False| N["LED_ROff()"]
+    M & N --> O["SD card routine tasks"]
+    O --> P["Button routine task"]
+    P --> Q{Check inactivity}
+    Q -->|True| QT["appData.state = APP_STATE_SHUTDOWN"]
+    Q -->|False| Poll
+    QT --> Poll["Poll for serial commands"]
+    Poll --> final{{"End"}}
