@@ -454,17 +454,42 @@ Bosch propose une librairie\footnote{\href{https://github.com/BoschSensortec/BNO
 		\begin{tabular}{ll}
 			$\star$ \oldstylenums{1} & Réinitialisation hardware par la pin RESET pendant 100ms. \\
 			$\star$ \oldstylenums{2} & Désactivation de l'interruption\footnotemark de l'\gls{imu}. \\
-			$\star$ \oldstylenums{3} & Attribution des fonctions bas niveau dans les pointeurs de la librairie.
+			$\star$ \oldstylenums{3} & Attribution des fonctions bas niveau dans les pointeurs de la librairie. \\
+			$\star$ \oldstylenums{4} & Obtention des informations du BNO055 (IDs, Version...). \\
+			$\star$ \oldstylenums{5} & Attribution du mode d'alimentation "Normal". \\
+			$\star$ \oldstylenums{6} & Choix du mode d'opération "AMG" (pour lecture simple Accel. magnitude et gyro.). \\
+			$\star$ \oldstylenums{7} & Lecture initiale à vide, d'initialisation (Accel. magnitude gyroscope.). \\
+			$\star$ \oldstylenums{6} & Choix du mode d'opération "NDOF" (pour lecture des données de fusions complexes.). \\
+			$\star$ \oldstylenums{7} & Lecture initiale à vide, d'initialisation (Euler, Quaternion, gravité et accel. linéaire). \\
+			$\star$ \oldstylenums{8} & Programmation de l'interruption du BNO055 pour la détection d'une certaine accélération.
 		\end{tabular}
 		\caption{}
 		\label{LABEL}
 	\end{table}
 \end{center}
-
 \footnotetext{Reset toutes les sources d'interruptions de l'\gls{imu} dans le registre 0x3F bit 6. }
-
+\vspace*{-15mm}
 
 \subsubsection{Lecture des données}
+
+La phase cruciale concernait l'initialisation du BNO055. La lecture des diverses valeurs est assurée par une fonction spécifiquement créée, nommée \verb*|bno055_read_routine()|. Cette fonction récupère les données suivantes : Quaternion WXYZ, magnitude XYZ, gyroscope XYZ, angles d'Euler HPR, accélération linéaire XYZ, et gravité XYZ. Ces données son stockées dans une structure locale au fichier \textit{app.c} et possède la structure suivante :
+
+\begin{minted}{c}
+typedef struct {
+	s32 comres;
+	bool flagMeasReady;
+	uint8_t flagImportantMeas;
+	struct bno055_gravity_double_t gravity;
+	struct bno055_linear_accel_double_t linear_accel;
+	struct bno055_euler_double_t euler;
+	struct bno055_gyro_double_t gyro;
+	struct bno055_mag_double_t mag;
+	struct bno055_quaternion_t quaternion;
+	unsigned long time;
+	unsigned long l_time;
+	uint16_t d_time;
+}s_bno055_data;
+\end{minted}
 
 \subsubsection{Système de détection de mouvements}
 

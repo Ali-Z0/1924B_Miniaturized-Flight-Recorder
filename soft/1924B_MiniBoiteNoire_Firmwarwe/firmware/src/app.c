@@ -436,8 +436,6 @@ void APP_Tasks ( void )
                 bno055_local_data.comres = bno055_read_routine(&bno055_local_data);
                 /* Delta time */
                 bno055_local_data.d_time = timeData.measCnt[BNO055_idx] - timeData.ltime[BNO055_idx];
-                /* Pressure measure */
-                bno055_local_data.pressure = 0;
                 
                 /* Display readed values */
                 serDisplayValues(&bno055_local_data);

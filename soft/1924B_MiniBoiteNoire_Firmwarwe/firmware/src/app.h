@@ -103,7 +103,6 @@ typedef struct {
     unsigned long time;
     unsigned long l_time;
     uint16_t d_time;
-    float pressure;
 }s_bno055_data;
 // *****************************************************************************
 /* Application states
