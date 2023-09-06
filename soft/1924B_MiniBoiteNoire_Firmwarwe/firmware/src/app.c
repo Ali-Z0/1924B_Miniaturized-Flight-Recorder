@@ -375,6 +375,7 @@ void APP_Tasks ( void )
                 oldIntG = timeData.measPeriod[GNSS_idx];
                 oldIntI = timeData.measPeriod[BNO055_idx];
                 oldLed = appData.ledState;
+                ledStateTemp = appData.ledState;
                 // Turn off state 
                 appData.state = APP_STATE_CONFIGURATE_BBX;
                 LED_GOn();

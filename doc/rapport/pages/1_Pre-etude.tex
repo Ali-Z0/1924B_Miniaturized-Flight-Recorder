@@ -60,7 +60,7 @@ Sur la figure \ref{fig:famillespic32} le \gls{mcu} sélectionné appartient à l
 \end{figure}
 
 \clearpage
-\subsubsection{Centrale inertielle} 
+\subsubsection{Centrale inertielle} \label{sssection:choix-IMU}
 Pour la centrale inertielle, il existe un composant avec lequel j'ai déjà acquis une certaine expérience et eu l'occasion d'utiliser et de créer des librairies pour le firmware en C. Celui-ci est performant et très utilisé dans l'industrie. Il est hautement configurable et a le grand avantage de calculer déjà une fusion de capteurs ainsi qu'une compensation de la dérive par les mesures de température. Cela permet notamment d'accéder à des données plus poussées, telles que les quaternions et les angles d'Euler. Il s'agit du \fbox{\href{https://www.bosch-sensortec.com/products/smart-sensors/bno055/}{BNO055}} de BOSCH.
  
 \begin{center}

@@ -378,7 +378,7 @@ Sur la figure \ref{fig:sequence-app}, la séquence de la boucle principale de l'
 
 \begin{figure}[!h]
 	\centering
-\	\includegraphics[width=.95\linewidth]{../figures/code/diagrammes/sequence-app}
+\	\includegraphics[width=.96\linewidth]{../figures/code/diagrammes/sequence-app}
 	\caption{Diagramme de séquence principal.}
 	\label{fig:sequence-app}
 	\source{Auteur}
@@ -418,9 +418,66 @@ La machine d'état initiale est appelée lorsqu'elle se trouve dans l'état \tex
 \clearpage
 
 \subsubsection{Carte SD : écriture des données}
-Cette machine d'état est systématiquement appelée lorsque le système est dans l'état 
-\noindent
+Cette machine d'état est systématiquement appelée lorsque le système se trouve dans l'état \textbf{APP\_STATE\_LOGGING}, comme illustré sur la figure \ref{fig:sequence-app}. Ceci est réalisé via la fonction \verb*|sd_fat_logging_task()|. Pour programmer des écritures et interagir avec cette machine d'état, deux fonctions d'interface sont utilisées : \verb*|sd_IMU_scheduleWrite()| qui permet de planifier l'écriture de données de l'\gls{imu}, et \verb*|sd_GNSS_scheduleWrite()| pour l'écriture des données du \gls{gnss}.
 
-\textbf{APP\_STATE\_LOGGING}, visible sur la figure \ref{fig:sequence-app} via la fonction \verb*|sd_fat_logging_task()|. Pour programmer des écritures et interagir avec cette machine d'état, on utilise la fonction d'interface \verb*|sd_IMU_scheduleWrite()|, qui permet de planifier l'écriture de données de l'\gls{imu}, et la fonction \verb*|sd_GNSS_scheduleWrite()|, qui permet de planifier l'écriture des données du \gls{gnss}.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=.85\linewidth]{../figures/code/diagrammes/sd-card-logging}
+	\caption{Machine d'état logging.}
+	\label{fig:sd-card-logging}
+	\source{Auteur}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.46\linewidth]{../figures/code/Illustration-SD-per}
+	\caption{Illustration des interactions.}
+	\label{fig:illustration-sd-per}
+	\source{Auteur}
+\end{figure}
+
+\clearpage
+
+\subsection{Centrale inertielle}
+Lors de cette section, nous allons décrire les différents aspects de la mise en place de la centrale inertielle \fbox{\href{https://www.bosch-sensortec.com/products/smart-sensors/bno055/}{BNO055}}.
+
+\paragraph{Interfaçage de l'\gls{imu}}
+Bosch propose une librairie\footnote{\href{https://github.com/BoschSensortec/BNO055_driver}{https://github.com/BoschSensortec/BNO055\_driver}} d'APIs pour communiquer avec la centrale inertielle. Cette librairie est accompagnée d'un fichier \textit{support} qui sert à lier les fonctions de protocoles aux fonctions bas niveau du bus de communication I2C.
+
+
+\subsubsection{Initialisation}
+
+\begin{center}
+	\underline{Procédure d'initialisation}
+	\begin{table}[h]
+		\centering
+		\begin{tabular}{ll}
+			$\star$ \oldstylenums{1} & Réinitialisation hardware par la pin RESET pendant 100ms. \\
+			$\star$ \oldstylenums{2} & Désactivation de l'interruption\footnotemark de l'\gls{imu}. \\
+			$\star$ \oldstylenums{3} & Attribution des fonctions bas niveau dans les pointeurs de la librairie.
+		\end{tabular}
+		\caption{}
+		\label{LABEL}
+	\end{table}
+\end{center}
+
+\footnotetext{Reset toutes les sources d'interruptions de l'\gls{imu} dans le registre 0x3F bit 6. }
+
+
+\subsubsection{Lecture des données}
+
+\subsubsection{Système de détection de mouvements}
+
+\clearpage
+
+\subsection{GNSS}
+
+\subsubsection{Trames de configurations UBX}
+
+\subsection{Format des données}
+
+\subsection{Hiérarchie des fichiers du système}
+
+
 
 

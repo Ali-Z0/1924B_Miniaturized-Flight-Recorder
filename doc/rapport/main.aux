@@ -59,6 +59,7 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Caractéristiques du PIC32 choisi.}}{9}{figure.caption.13}\protected@file@percent }
 \newlabel{fig:caracpic32}{{6}{9}{Caractéristiques du PIC32 choisi}{figure.caption.13}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {2.4.2}Centrale inertielle}{10}{subsubsection.2.4.2}\protected@file@percent }
+\newlabel{sssection:choix-IMU}{{2.4.2}{10}{Centrale inertielle}{subsubsection.2.4.2}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Carte d'extension, centrale inertielle.}}{10}{figure.caption.14}\protected@file@percent }
 \newlabel{fig:bno055adafruit}{{7}{10}{Carte d'extension, centrale inertielle}{figure.caption.14}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Liste des données accessibles.}}{10}{table.caption.15}\protected@file@percent }
@@ -253,31 +254,47 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {40}{\ignorespaces Application carte SD initialisation/config.}}{38}{figure.caption.78}\protected@file@percent }
 \newlabel{fig:sd-card-init}{{40}{38}{Application carte SD initialisation/config}{figure.caption.78}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {5.4.2}Carte SD : écriture des données}{39}{subsubsection.5.4.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {6}Validation du design}{40}{section.6}\protected@file@percent }
-\newlabel{sec:Validation-design}{{6}{40}{Validation du design}{section.6}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Liste de matériel}{40}{subsection.6.1}\protected@file@percent }
-\newlabel{ssec:Liste-materiel}{{6.1}{40}{Liste de matériel}{subsection.6.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Contrôle des alimentations}{40}{subsection.6.2}\protected@file@percent }
-\newlabel{ssec:Controle-alims}{{6.2}{40}{Contrôle des alimentations}{subsection.6.2}{}}
-\@writefile{toc}{\contentsline {paragraph}{Méthode de mesure}{40}{section*.79}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Mesures}{40}{section*.80}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}Communication UART}{40}{subsection.6.3}\protected@file@percent }
-\newlabel{ssec:Comm-UART}{{6.3}{40}{Communication UART}{subsection.6.3}{}}
-\@writefile{toc}{\contentsline {paragraph}{Méthode de mesure}{40}{section*.81}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Mesures}{40}{section*.82}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.4}Communication SPI, carte SD}{40}{subsection.6.4}\protected@file@percent }
-\newlabel{ssec:Comm-SPI}{{6.4}{40}{Communication SPI, carte SD}{subsection.6.4}{}}
-\@writefile{toc}{\contentsline {paragraph}{Méthode de mesure}{40}{section*.83}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Mesures}{40}{section*.84}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {7}Caractéristiques du produit fini}{40}{section.7}\protected@file@percent }
-\newlabel{sec:Carac-finis}{{7}{40}{Caractéristiques du produit fini}{section.7}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {8}Conclusion}{41}{section.8}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {41}{\ignorespaces Machine d'état logging.}}{39}{figure.caption.79}\protected@file@percent }
+\newlabel{fig:sd-card-logging}{{41}{39}{Machine d'état logging}{figure.caption.79}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {42}{\ignorespaces Illustration des interactions.}}{39}{figure.caption.80}\protected@file@percent }
+\newlabel{fig:illustration-sd-per}{{42}{39}{Illustration des interactions}{figure.caption.80}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.5}Centrale inertielle}{40}{subsection.5.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Interfaçage de l'\gls {imu}}{40}{section*.81}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.5.1}Initialisation}{40}{subsubsection.5.5.1}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {14}{\ignorespaces \relax }}{40}{table.caption.82}\protected@file@percent }
+\newlabel{LABEL}{{14}{40}{\relax }{table.caption.82}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.5.2}Lecture des données}{40}{subsubsection.5.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.5.3}Système de détection de mouvements}{40}{subsubsection.5.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.6}GNSS}{41}{subsection.5.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.6.1}Trames de configurations UBX}{41}{subsubsection.5.6.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.7}Format des données}{41}{subsection.5.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.8}Hiérarchie des fichiers du système}{41}{subsection.5.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6}Validation du design}{42}{section.6}\protected@file@percent }
+\newlabel{sec:Validation-design}{{6}{42}{Validation du design}{section.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Liste de matériel}{42}{subsection.6.1}\protected@file@percent }
+\newlabel{ssec:Liste-materiel}{{6.1}{42}{Liste de matériel}{subsection.6.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Contrôle des alimentations}{42}{subsection.6.2}\protected@file@percent }
+\newlabel{ssec:Controle-alims}{{6.2}{42}{Contrôle des alimentations}{subsection.6.2}{}}
+\@writefile{toc}{\contentsline {paragraph}{Méthode de mesure}{42}{section*.83}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Mesures}{42}{section*.84}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Consommations}{42}{section*.85}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}Communication UART}{42}{subsection.6.3}\protected@file@percent }
+\newlabel{ssec:Comm-UART}{{6.3}{42}{Communication UART}{subsection.6.3}{}}
+\@writefile{toc}{\contentsline {paragraph}{Méthode de mesure}{42}{section*.86}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Mesures}{42}{section*.87}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.4}Communication SPI, carte SD}{42}{subsection.6.4}\protected@file@percent }
+\newlabel{ssec:Comm-SPI}{{6.4}{42}{Communication SPI, carte SD}{subsection.6.4}{}}
+\@writefile{toc}{\contentsline {paragraph}{Méthode de mesure}{42}{section*.88}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Mesures}{42}{section*.89}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7}Caractéristiques du produit fini}{42}{section.7}\protected@file@percent }
+\newlabel{sec:Carac-finis}{{7}{42}{Caractéristiques du produit fini}{section.7}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {8}Conclusion}{43}{section.8}\protected@file@percent }
 \citation{*}
 \bibdata{Biblio_TDD}
 \bibcite{8453510}{1}
 \bibstyle{ieeetr}
-\@writefile{toc}{\contentsline {section}{\numberline {9}Bibliographie}{42}{section.9}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {10}Annexes}{43}{section.10}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {9}Bibliographie}{44}{section.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {10}Annexes}{45}{section.10}\protected@file@percent }
 \gdef\minted@oldcachelist{,
   default.pygstyle,
   F3C191FF20A198D5C81341D85C4D7741BE8BFDC1C42DF7C070F1D172D5644063.pygtex,
@@ -286,4 +303,4 @@
   A0CD5EEA3E862150DA329A03FB64E24ABE8BFDC1C42DF7C070F1D172D5644063.pygtex,
   163031B2D94EDAD6EE7F958F4A2919B4BE8BFDC1C42DF7C070F1D172D5644063.pygtex,
   D64E0D8DB2B888B497286A6843588FEBBE8BFDC1C42DF7C070F1D172D5644063.pygtex}
-\gdef \@abspage@last{44}
+\gdef \@abspage@last{46}
