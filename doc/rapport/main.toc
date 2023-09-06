@@ -55,7 +55,7 @@
 \contentsline {subsection}{\numberline {4.2}Bill of materials}{26}{subsection.4.2}%
 \contentsline {subsection}{\numberline {4.3}Routage}{27}{subsection.4.3}%
 \contentsline {subsection}{\numberline {4.4}Conclusion et perspectives de la conception}{28}{subsection.4.4}%
-\contentsline {section}{\numberline {5}Développement firmware}{28}{section.5}%
+\contentsline {section}{\numberline {5}Développement du firmware}{28}{section.5}%
 \contentsline {subsection}{\numberline {5.1}Protocoles du GNSS}{28}{subsection.5.1}%
 \contentsline {subsubsection}{\numberline {5.1.1}Messages NMEA}{29}{subsubsection.5.1.1}%
 \contentsline {subsubsection}{\numberline {5.1.2}Interprétation des données NMEA}{29}{subsubsection.5.1.2}%
@@ -66,19 +66,22 @@
 \contentsline {subsubsection}{\numberline {5.2.3}Carte SD}{34}{subsubsection.5.2.3}%
 \contentsline {subsection}{\numberline {5.3}Application principale}{35}{subsection.5.3}%
 \contentsline {subsubsection}{\numberline {5.3.1}Commandes USB-UART}{35}{subsubsection.5.3.1}%
-\contentsline {subsubsection}{\numberline {5.3.2}Etat logging}{37}{subsubsection.5.3.2}%
-\contentsline {section}{\numberline {6}Validation du design}{38}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Liste de matériel}{38}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Contrôle des alimentations}{38}{subsection.6.2}%
-\contentsline {paragraph}{Méthode de mesure}{38}{section*.78}%
-\contentsline {paragraph}{Mesures}{38}{section*.79}%
-\contentsline {subsection}{\numberline {6.3}Communication UART}{38}{subsection.6.3}%
-\contentsline {paragraph}{Méthode de mesure}{38}{section*.80}%
-\contentsline {paragraph}{Mesures}{38}{section*.81}%
-\contentsline {subsection}{\numberline {6.4}Communication SPI, carte SD}{38}{subsection.6.4}%
-\contentsline {paragraph}{Méthode de mesure}{38}{section*.82}%
-\contentsline {paragraph}{Mesures}{38}{section*.83}%
-\contentsline {section}{\numberline {7}Caractéristiques du produit fini}{38}{section.7}%
-\contentsline {section}{\numberline {8}Conclusion}{39}{section.8}%
-\contentsline {section}{\numberline {9}Bibliographie}{40}{section.9}%
-\contentsline {section}{\numberline {10}Annexes}{41}{section.10}%
+\contentsline {subsubsection}{\numberline {5.3.2}État de logging du système}{37}{subsubsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.4}Carte SD}{38}{subsection.5.4}%
+\contentsline {subsubsection}{\numberline {5.4.1}Carte SD : initialisation et configuration}{38}{subsubsection.5.4.1}%
+\contentsline {subsubsection}{\numberline {5.4.2}Carte SD : écriture des données}{39}{subsubsection.5.4.2}%
+\contentsline {section}{\numberline {6}Validation du design}{40}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Liste de matériel}{40}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Contrôle des alimentations}{40}{subsection.6.2}%
+\contentsline {paragraph}{Méthode de mesure}{40}{section*.79}%
+\contentsline {paragraph}{Mesures}{40}{section*.80}%
+\contentsline {subsection}{\numberline {6.3}Communication UART}{40}{subsection.6.3}%
+\contentsline {paragraph}{Méthode de mesure}{40}{section*.81}%
+\contentsline {paragraph}{Mesures}{40}{section*.82}%
+\contentsline {subsection}{\numberline {6.4}Communication SPI, carte SD}{40}{subsection.6.4}%
+\contentsline {paragraph}{Méthode de mesure}{40}{section*.83}%
+\contentsline {paragraph}{Mesures}{40}{section*.84}%
+\contentsline {section}{\numberline {7}Caractéristiques du produit fini}{40}{section.7}%
+\contentsline {section}{\numberline {8}Conclusion}{41}{section.8}%
+\contentsline {section}{\numberline {9}Bibliographie}{42}{section.9}%
+\contentsline {section}{\numberline {10}Annexes}{43}{section.10}%

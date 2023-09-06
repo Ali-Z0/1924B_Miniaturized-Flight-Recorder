@@ -1,4 +1,4 @@
-\section{Développement firmware} \label{sec:Dev-firmware}
+\section{Développement du firmware} \label{sec:Dev-firmware}
 
 Lors de cette section, nous décrirons le processus de développement du firmware du PIC32. Les décisions prises seront expliquées et les différents algorithmes seront illustrés et décrits.
 
@@ -126,6 +126,7 @@ bool minmea_parse_gbs(struct minmea_sentence_gbs *frame, const char *sentence)
 		return false;
 	return true;
 }
+
 \end{minted}
 \end{code}
 
@@ -318,6 +319,7 @@ Harmony permet de configurer directement un périphérique carte-SD avec le bus 
 	\hfill
 	\caption{Harmony, driver carte-SD.}
 	\label{fig:HDriverSD}
+	\source{Auteur}
 \end{figure}
 
 Sur la figure \ref{fig:sd-card}, on peut observer la configuration de la carte SD. La broche de \textit{Chip Select} est attribuée à \textbf{RA10}, qui correspond à \textbf{CS\_SD} sur le schéma présenté à la figure \ref{fig:mcu}. La connexion est établie avec une fréquence de \textbf{10MHz}.
@@ -376,21 +378,49 @@ Sur la figure \ref{fig:sequence-app}, la séquence de la boucle principale de l'
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[width=.66\linewidth]{../figures/code/diagrammes/sequence-app}
+\	\includegraphics[width=.95\linewidth]{../figures/code/diagrammes/sequence-app}
 	\caption{Diagramme de séquence principal.}
 	\label{fig:sequence-app}
 	\source{Auteur}
 \end{figure}
 
 \clearpage
-\subsubsection{Etat logging}
-asdjaoisd asj doajsdoiasjd jaisdj aisjd ioasjd oasjd oaisjd aisjd iasjd oi
+\subsubsection{État de logging du système}
+L'état de logging est représenté par un flowchart sur la figure \ref{fig:pdfresizer}.
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[width=.94\textwidth]{../figures/code/diagrammes/logging-flowchart}
+	\includegraphics[width=.95\textwidth]{../figures/code/diagrammes/logging-flowchart}
 	\caption{Flowchart de l'état de logging.}
 	\label{fig:pdfresizer}
+	\source{Auteur}
 \end{figure}
+
+\clearpage
+
+\subsection{Carte SD}
+Le code de gestion de fichier de la carte SD est divisé en deux machines d'états. La première est dédiée à l'initialisation, à la lecture et à la modification du fichier de configuration. La seconde s'occupe du logging et de l'enregistrement des mesures dans des fichiers distincts. Ces machines d'états sont non-bloquantes et doivent être appelées périodiquement pour permettre une routine de gestion de la carte SD.
+
+\subsubsection{Carte SD : initialisation et configuration}
+
+La machine d'état initiale est appelée lorsqu'elle se trouve dans l'état \textbf{APP\_STATE\_CONFIG}, comme illustré sur la figure \ref{fig:sequence-app}. Elle continuera d'être appelée jusqu'à ce qu'elle atteigne l'état \textbf{\textit{IDLE}}. Notons également que cette machine d'état est sollicitée en mode configuration (\textbf{\textit{init = false}}) durant l'état \textbf{APP\_STATE\_CONFIGURATE\_BBX}, visible sur la même figure \ref{fig:sequence-app}. Ce processus est représenté sous forme de diagramme d'état à la figure \ref{fig:sd-card-init}
+
+
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\linewidth]{../figures/code/diagrammes/sd-card-Init}
+	\caption{Application carte SD initialisation/config.}
+	\label{fig:sd-card-init}
+	\source{Auteur}
+\end{figure}
+
+\clearpage
+
+\subsubsection{Carte SD : écriture des données}
+Cette machine d'état est systématiquement appelée lorsque le système est dans l'état 
+\noindent
+
+\textbf{APP\_STATE\_LOGGING}, visible sur la figure \ref{fig:sequence-app} via la fonction \verb*|sd_fat_logging_task()|. Pour programmer des écritures et interagir avec cette machine d'état, on utilise la fonction d'interface \verb*|sd_IMU_scheduleWrite()|, qui permet de planifier l'écriture de données de l'\gls{imu}, et la fonction \verb*|sd_GNSS_scheduleWrite()|, qui permet de planifier l'écriture des données du \gls{gnss}.
 
 
