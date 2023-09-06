@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.8.7)  5 SEP 2023 15:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.8.7)  6 SEP 2023 09:39
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2224,13 +2224,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [36
 
  <../figures/code/diagrammes/sequence-app.jpg>]
-<../figures/code/diagrammes/logging-flow.png, id=876, 1726.19907pt x 5020.50656
-pt>
-File: ../figures/code/diagrammes/logging-flow.png Graphic file (type png)
-<use ../figures/code/diagrammes/logging-flow.png>
-Package pdftex.def Info: ../figures/code/diagrammes/logging-flow.png  used on i
+
+pdfTeX warning: pdflatex.exe (file ../figures/code/diagrammes/logging-flow.pdf)
+: PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<../figures/code/diagrammes/logging-flow.pdf, id=876, 597.55246pt x 845.07724pt
+>
+File: ../figures/code/diagrammes/logging-flow.pdf Graphic file (type pdf)
+<use ../figures/code/diagrammes/logging-flow.pdf>
+Package pdftex.def Info: ../figures/code/diagrammes/logging-flow.pdf  used on i
 nput line 390.
-(pdftex.def)             Requested size: 176.6572pt x 513.72429pt.
+(pdftex.def)             Requested size: 452.9679pt x 640.61484pt.
 ) (./pages/5_Val-MES.tex
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2242,7 +2245,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [37
 
- <../figures/code/diagrammes/logging-flow.png>])
+ <../figures/code/diagrammes/logging-flow.pdf>])
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2295,10 +2298,10 @@ runsystem(del main.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 45864 strings out of 475187
- 905519 string characters out of 5767784
+ 45862 strings out of 475187
+ 905445 string characters out of 5767784
  1945248 words of memory out of 5000000
- 66145 multiletter control sequences out of 15000+600000
+ 66143 multiletter control sequences out of 15000+600000
  655471 words of font info for 152 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  109i,15n,117p,2289b,956s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2314,10 +2317,10 @@ live/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2023/texmf-di
 st/fonts/type1/urw/times/utmbi8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/ur
 w/times/utmr8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/times/utmri8a.pf
 b>
-Output written on main.pdf (42 pages, 17883412 bytes).
+Output written on main.pdf (42 pages, 17658058 bytes).
 PDF statistics:
  1015 PDF objects out of 1200 (max. 8388607)
- 854 compressed objects within 9 object streams
+ 855 compressed objects within 9 object streams
  212 named destinations out of 1000 (max. 500000)
  779 words of extra memory for PDF output out of 10000 (max. 10000000)
 
