@@ -29,7 +29,7 @@ graph TB
     M & N --> O["SD card routine tasks"]
     O --> P["Button routine task"]
     P --> Q{Check inactivity}
-    Q -->|True| QT["appData.state = APP_STATE_SHUTDOWN"]
+    Q -->|True| QT["Shutdown system"]
     Q -->|False| Poll
     QT --> Poll["Poll for serial commands"]
     Poll --> final{{"End"}}
