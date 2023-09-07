@@ -15,7 +15,7 @@ dbg = 0
 
 gRoot = Tk()
 gRoot.config(bg="#26242f")
-gRoot.geometry("820x575")
+gRoot.geometry("815x575")
 gRoot.title("Black Box Connect")
 sty = ttk.Style()
 sty.theme_use("clam")
@@ -152,6 +152,8 @@ def serial_connect(com_port,baud_rate):
     #serial_print()
 counter1 = 0;
 
+def CONFIG():
+    ser.write("CONFIG".encode())
 def SHUTDOWN():
     ser.write("SHUTDOWN".encode())
 def GCLR():
