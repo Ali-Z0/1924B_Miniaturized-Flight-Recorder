@@ -441,7 +441,7 @@ Cette machine d'état est systématiquement appelée lorsque le système se trou
 \subsection{Centrale inertielle}
 Lors de cette section, nous allons décrire les différents aspects de la mise en place de la centrale inertielle \fbox{\href{https://www.bosch-sensortec.com/products/smart-sensors/bno055/}{BNO055}}.
 
-\paragraph{Interfaçage de l'\gls{imu}}
+\paragraph*{Interfaçage de l'\gls{imu}}
 Bosch propose une librairie\footnote{\href{https://github.com/BoschSensortec/BNO055_driver}{https://github.com/BoschSensortec/BNO055\_driver}} d'APIs pour communiquer avec la centrale inertielle. Cette librairie est accompagnée d'un fichier \textit{support} qui sert à lier les fonctions de protocoles aux fonctions bas niveau du bus de communication I2C.
 
 
@@ -463,8 +463,6 @@ Bosch propose une librairie\footnote{\href{https://github.com/BoschSensortec/BNO
 			$\star$ \oldstylenums{7} & Lecture initiale à vide, d'initialisation (Euler, Quaternion, gravité et accel. linéaire). \\
 			$\star$ \oldstylenums{8} & Programmation de l'interruption du BNO055 pour la détection d'une certaine accélération.
 		\end{tabular}
-		\caption{}
-		\label{tab:configIMU}
 	\end{table}
 \end{center}
 \footnotetext{Reset toutes les sources d'interruptions de l'\gls{imu} dans le registre 0x3F bit 6. }
@@ -511,8 +509,10 @@ La centrale inertielle \textit{BNO055} permet de configurer une interruption pou
 \end{minted}
 \end{code}
 
+Les valeurs de configuration peuvent êtres définies en tant que constantes pour êtres plus facilement configurable lors de mise-à-jour firmware.
+
 \begin{center}
-	\underline{Description du code}
+	\underline{Description des lignes du code \ref{code:configInt}}
 	\begin{table}[h]
 		\centering
 		\begin{tabular}{ll}
@@ -524,16 +524,59 @@ La centrale inertielle \textit{BNO055} permet de configurer une interruption pou
 			$\star$ \oldstylenums{6} & Active l'interruption, accélération. \\
 			$\star$ \oldstylenums{7} & Masque l'interruption. \\
 		\end{tabular}
-		\caption{}
-		\label{tab:configInterrupt}
 	\end{table}
-\end{center}
+\end{center} \vspace*{-10mm}
 
-\paragraph{Gestion de l'interruption} L'interruption est resetée au moment du démarrage du système et lors de sa désactivation.
+\paragraph{Gestion de l'interruption} L'interruption est réinitialisée au démarrage du système ainsi que lors de sa mise en veille.
+\vspace*{-4mm}
+\paragraph{Mode low power} lorsque le système se met en veille, la BNO055 est configurée pour fonctionner uniquement avec son accéléromètre et son mode de puissance passe en \textit{low power}.
 
-\paragraph{Mode low power}
+\begin{code}
+\caption{Configuration de l'interruption}
+\label{code:lowPowerBNO}
+\begin{minted}[breaklines]{c}
+/* Set acceleration only operation, power saving */
+bno055_set_operation_mode(BNO055_OPERATION_MODE_ACCONLY);
+/* set the power mode to LOW POWER */
+bno055_set_power_mode(BNO055_POWER_MODE_LOWPOWER);
+/* Reset interrupt pin */
+bno055_set_intr_rst(1);	
+\end{minted}
+\end{code}
 
 \clearpage
+
+\paragraph{Configuration enclenchement automatique}
+
+Le système propose deux modes d'opération : le premier permet un enclenchement automatique lors de la détection d'un mouvement, tandis que le second active le système suite à une impulsion sur le bouton. Il est à noter que pour activer le mode automatique, une première impulsion sur le bouton est nécessaire et le système doit avoir transité au moins une fois par l'état "shutdown" du code. Dans les deux modes, le système peut entrer en veille si aucun mouvement n'est détecté sur une durée configurée.
+
+Lorsque le système est en mode d'enclenchement automatique, le circuit reste partiellement actif, ce qui engendre une consommation d'énergie détaillée ultérieurement dans la section "Validation du design". Même si la batterie est en mesure de supporter cette consommation, il reste possible de désactiver ce mode pour activer le système uniquement par le biais du bouton.
+
+\paragraph*{Configuration} La centrale inertielle peut être alimentée soit de manière indépendante, soit avec le reste du système, influençant ainsi les modes décrits précédemment. Pour configurer ces modes, deux options sont disponibles : \vspace*{+2mm}
+
+
+\begin{tabular}{lll}
+	\textbf{W6} connecté & \gls{imu} alimentation autonome. & Mode accélération auto-enclenchement. \\
+	\textbf{W7} connecté & Alimentation dépendant du système. & Mode enclenchement bouton uniquement. \\
+	\textbf{W6}\&\textbf{W7} & \color{red}{Connexion à éviter !} & \\
+\end{tabular}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{../figures/code/jumper-config-mode-IMU}
+	\caption{Connexions des jumber du BNO055.}
+	\label{fig:jumper-config-mode-imu}
+\end{figure}
+
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.5\linewidth]{../figures/code/config-mode-IMU}
+	\caption{}
+	\label{fig:config-mode-imu}
+\end{figure}
+
+\clearpage	
 
 \subsection{GNSS}
 

@@ -212,7 +212,7 @@ Afin de dimensionner une batterie pour le projet, il faut considérer les diffé
 
 En examinant les consommations typiques et moyennes du tableau \ref{tab:consommateur} à régime constant, et en visant une autonomie de \fbox{\textbf{10 heures}}, nous aurions besoin d'une batterie d'une capacité de \fbox{\textbf{1253 mAh}}.
 
-\paragraph{Technologies} Concernant la technologie de la batterie, notre objectif, dans un souci d'ergonomie, est de permettre son chargement via un connecteur USB. La technologie offrant actuellement la meilleure densité d'énergie est le \fbox{Lithium Ion}\footnote{\href{https://www.epectec.com/batteries/cell-comparison.html}{https://www.epectec.com/batteries/cell-comparison.html}}. Elle présente cependant des inconvénients, énumérés dans le tableau \ref{tab:inconvlion}.
+\subsubsection{Technologies} Concernant la technologie de la batterie, notre objectif, dans un souci d'ergonomie, est de permettre son chargement via un connecteur USB. La technologie offrant actuellement la meilleure densité d'énergie est le \fbox{Lithium Ion}\footnote{\href{https://www.epectec.com/batteries/cell-comparison.html}{https://www.epectec.com/batteries/cell-comparison.html}}. Elle présente cependant des inconvénients, énumérés dans le tableau \ref{tab:inconvlion}.
 
 \begin{table}[h]
 	\centering
@@ -227,11 +227,11 @@ En examinant les consommations typiques et moyennes du tableau \ref{tab:consomma
 	\end{tabular}
 		\caption{Tableau avantages/inconvénient LI-ION.}
 		\label{tab:inconvlion}
-\end{table}
+\end{table} \vspace*{-5mm}
 
 Les inconvénients listés dans le tableau \ref{tab:inconvlion} posent un risque pour l'intégrité des données de la carte-SD. C'est pourquoi il est essentiel de bien dimensionner le boîtier ainsi que l'intégration du circuit et de la batterie pour pallier ces dangers. Malgré les risques du Li-Ion, il s'agit d'une technologie très utilisée, y compris dans des domaines sensibles.
 
-\paragraph{Choix de la batterie} La batterie doit avoir une capacité d'au moins \textbf{1260 mAh} et être suffisamment compacte pour être intégrée dans un boîtier de petite taille. Une batterie répond à ces critères : il s'agit de la \fbox{\textbf{PICPAL36}} de chez Farnell\footnote{Distributeur de composants électroniques. \href{https://ch.farnell.com/en-CH/panasonic/picpal36/battery-li-ion-1-3ah-3-7v/dp/2819223}{Lien de la batterie.}}. Les dimensions et caractéristiques de cette batterie sont visibles sur les figures \ref{fig:batt}.
+\subsubsection{Choix de la batterie} La batterie doit avoir une capacité d'au moins \textbf{1260 mAh} et être suffisamment compacte pour être intégrée dans un boîtier de petite taille. Une batterie répond à ces critères : il s'agit de la \fbox{\textbf{PICPAL36}} de chez Farnell\footnote{Distributeur de composants électroniques. \href{https://ch.farnell.com/en-CH/panasonic/picpal36/battery-li-ion-1-3ah-3-7v/dp/2819223}{Lien de la batterie.}}. Les dimensions et caractéristiques de cette batterie sont visibles sur les figures \ref{fig:batt}.
 
 \clearpage
 
@@ -254,7 +254,7 @@ En raison de problèmes avec les commandes, une batterie alternative a dû être
 
 
 
-\paragraph{Régulateur de charge} Le choix du régulateur de charge s'est orienté vers un composant déjà utilisé par l'école, dont les caractéristiques et le montage sont bien connus. C'est un composant performant et fréquemment employé. De plus, il est disponible dans le stock de composants de l'école. Il s'agit du \fbox{\textbf{MCP73871T-2CCI/ML}}. Il est configurable et permet la charge des batteries Li-ion et Li-po.
+\subsubsection{Régulateur de charge} Le choix du régulateur de charge s'est orienté vers un composant déjà utilisé par l'école, dont les caractéristiques et le montage sont bien connus. C'est un composant performant et fréquemment employé. De plus, il est disponible dans le stock de composants de l'école. Il s'agit du \fbox{\textbf{MCP73871T-2CCI/ML}}. Il est configurable et permet la charge des batteries Li-ion et Li-po.
 
 \begin{figure}[h]
 	\centering
@@ -270,17 +270,17 @@ En raison de problèmes avec les commandes, une batterie alternative a dû être
 
 Au-delà des 10 heures d'autonomie estimées, il est envisageable, pour maximiser le temps de logging, d'adopter des mécanismes d'économie d'énergie. Ces mécanismes pourraient être :
 
-\paragraph{$\bullet$ Modes de puissance du PIC32} Le microcontrôleur peut basculer entre différents modes de puissance où il réduit à la fois sa consommation et ses fonctionnalités. On pourrait envisager de passer en mode d'énergie restreinte entre les périodes d'enregistrement ou de limiter l'utilisation de certains périphériques.
+\paragraph*{$\bullet$ Modes de puissance du PIC32} Le microcontrôleur peut basculer entre différents modes de puissance où il réduit à la fois sa consommation et ses fonctionnalités. On pourrait envisager de passer en mode d'énergie restreinte entre les périodes d'enregistrement ou de limiter l'utilisation de certains périphériques.
 
-\paragraph{$\bullet$ Modes de puissance du \gls{GNSS}} À l'instar du \gls{mcu}, le composant de navigation dispose de plusieurs modes de fonctionnement qui permettent d'économiser de l'énergie. Un mode particulièrement utile permet de limiter sa cadence de données à 1Hz, étant donné qu'il n'est pas nécessaire qu'il fournisse des informations de localisation aussi fréquemment.
+\paragraph*{$\bullet$ Modes de puissance du \gls{GNSS}} À l'instar du \gls{mcu}, le composant de navigation dispose de plusieurs modes de fonctionnement qui permettent d'économiser de l'énergie. Un mode particulièrement utile permet de limiter sa cadence de données à 1Hz, étant donné qu'il n'est pas nécessaire qu'il fournisse des informations de localisation aussi fréquemment.
 
-\paragraph{$\bullet$ Alimentation du \gls{GNSS}} On pourrait également envisager de ne pas alimenter le \gls{GNSS} lorsqu'il n'est pas en service, afin de supprimer complètement sa consommation entre chaque mesure.
+\paragraph*{$\bullet$ Alimentation du \gls{GNSS}} On pourrait également envisager de ne pas alimenter le \gls{GNSS} lorsqu'il n'est pas en service, afin de supprimer complètement sa consommation entre chaque mesure.
 
-\paragraph{$\bullet$ Modes de puissance \gls{imu}} La centrale inertielle dispose également de différents modes. Ces modes permettent, par exemple, de limiter les mesures à certains axes ou de la mettre en veille. Elle se met d'ailleurs automatiquement en veille après un certain temps entre les mesures. Ces modes peuvent être utilisés efficacement.
+\paragraph*{$\bullet$ Modes de puissance \gls{imu}} La centrale inertielle dispose également de différents modes. Ces modes permettent, par exemple, de limiter les mesures à certains axes ou de la mettre en veille. Elle se met d'ailleurs automatiquement en veille après un certain temps entre les mesures. Ces modes peuvent être utilisés efficacement.
 
-\paragraph{$\circ$ Alimentation de la carte SD} Il est envisageable d'éteindre entièrement la carte SD entre les écritures. Cependant, étant donné que les écritures seront fréquentes, l'intérêt de cette démarche est limité.
+\paragraph*{$\circ$ Alimentation de la carte SD} Il est envisageable d'éteindre entièrement la carte SD entre les écritures. Cependant, étant donné que les écritures seront fréquentes, l'intérêt de cette démarche est limité.
 
-\paragraph{$\bullet$ Mise en veille automatique du système} Si aucun mouvement n'est détecté après un certain délai, il est envisageable que le système s'éteigne entièrement.
+\paragraph*{$\bullet$ Mise en veille automatique du système} Si aucun mouvement n'est détecté après un certain délai, il est envisageable que le système s'éteigne entièrement.
 
 \subsection{Diagramme des états du système} 
 
@@ -340,7 +340,7 @@ La conception du système semble possible, le microcontrôleur s'interface avec 
 	\item \textit{Microcontrôleur}: Requiert au moins 2 UART, 1 SPI, et 1 I2C. Le PIC32MX274F256D est privilégié car il offre divers modes d'économie d'énergie.
 	\item \textit{Centrale inertielle}: Le BNO055 de BOSCH a été choisi, car il offre une variété de mesures avancées et une facilité d'implémentation grâce à la carte Adafruit.
 	\item \textit{GPS/GNSS}: Le CAM-M8C-0 d'ublox a été retenu pour sa facilité d'implémentation et son antenne interne omnidirectionnelle.
-	\item \textit{Carte SD}: Une capacité de 256MB a été choisie à cause des limites du pilote. Une telle carte permettrait d'enregistrer jusqu'à 8,5 heures de données de vol.
+	\item \textit{Carte SD}: Une capacité de 256MB a été choisie à cause des limites du pilote. Une telle carte est amplement suffisante pour enregistrer toutes les données de vol.
 	\item \textit{Batterie, charge, et régulation}: Une capacité de 1253 mAh est nécessaire pour atteindre l'autonomie souhaitée de 10 heures. Une batterie compact de 1600 mAh a été retenue.
 \end{itemize}
 
