@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cm}{/* BNO055 motion interrupt mode */}
+\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{+w}{ }\PYG{n}{bno055\PYGZus{}set\PYGZus{}accel\PYGZus{}any\PYGZus{}motion\PYGZus{}no\PYGZus{}motion\PYGZus{}axis\PYGZus{}enable}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{BNO055\PYGZus{}ACCEL\PYGZus{}ANY\PYGZus{}MOTION\PYGZus{}NO\PYGZus{}MOTION\PYGZus{}X\PYGZus{}AXIS}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{);}
+\PYG{l+m+mi}{2}\PYG{p}{)}\PYG{+w}{ }\PYG{n}{bno055\PYGZus{}set\PYGZus{}accel\PYGZus{}any\PYGZus{}motion\PYGZus{}no\PYGZus{}motion\PYGZus{}axis\PYGZus{}enable}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{BNO055\PYGZus{}ACCEL\PYGZus{}ANY\PYGZus{}MOTION\PYGZus{}NO\PYGZus{}MOTION\PYGZus{}Y\PYGZus{}AXIS}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{);}
+\PYG{l+m+mi}{3}\PYG{p}{)}\PYG{+w}{ }\PYG{n}{bno055\PYGZus{}set\PYGZus{}accel\PYGZus{}any\PYGZus{}motion\PYGZus{}no\PYGZus{}motion\PYGZus{}axis\PYGZus{}enable}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{BNO055\PYGZus{}ACCEL\PYGZus{}ANY\PYGZus{}MOTION\PYGZus{}NO\PYGZus{}MOTION\PYGZus{}Z\PYGZus{}AXIS}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{);}
+
+\PYG{l+m+mi}{4}\PYG{p}{)}\PYG{+w}{ }\PYG{n}{bno055\PYGZus{}set\PYGZus{}accel\PYGZus{}any\PYGZus{}motion\PYGZus{}thres}\PYG{p}{(}\PYG{l+m+mi}{10}\PYG{p}{);}
+\PYG{l+m+mi}{5}\PYG{p}{)}\PYG{+w}{ }\PYG{n}{bno055\PYGZus{}set\PYGZus{}accel\PYGZus{}any\PYGZus{}motion\PYGZus{}durn}\PYG{p}{(}\PYG{l+m+mi}{20}\PYG{p}{);}
+\PYG{l+m+mi}{6}\PYG{p}{)}\PYG{+w}{ }\PYG{n}{bno055\PYGZus{}set\PYGZus{}intr\PYGZus{}accel\PYGZus{}any\PYGZus{}motion}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{);}
+\PYG{l+m+mi}{7}\PYG{p}{)}\PYG{+w}{ }\PYG{n}{bno055\PYGZus{}set\PYGZus{}intr\PYGZus{}mask\PYGZus{}accel\PYGZus{}any\PYGZus{}motion}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{);}\PYG{+w}{	}
+\end{Verbatim}

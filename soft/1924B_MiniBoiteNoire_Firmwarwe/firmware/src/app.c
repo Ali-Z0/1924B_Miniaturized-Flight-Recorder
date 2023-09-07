@@ -603,6 +603,10 @@ static void sys_shutdown( void ) {
             sd_fat_logging_task();
         }
     }
+    /* Set acceleration only operation to save power */
+    bno055_set_operation_mode(BNO055_OPERATION_MODE_ACCONLY);
+    /* set the power mode as LOW POWER*/
+    bno055_set_power_mode(BNO055_POWER_MODE_LOWPOWER);
     // Reset interrupt pin
     bno055_set_intr_rst(1);
     /* turn off the device */

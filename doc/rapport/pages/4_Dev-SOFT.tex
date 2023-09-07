@@ -464,7 +464,7 @@ Bosch propose une librairie\footnote{\href{https://github.com/BoschSensortec/BNO
 			$\star$ \oldstylenums{8} & Programmation de l'interruption du BNO055 pour la détection d'une certaine accélération.
 		\end{tabular}
 		\caption{}
-		\label{LABEL}
+		\label{tab:configIMU}
 	\end{table}
 \end{center}
 \footnotetext{Reset toutes les sources d'interruptions de l'\gls{imu} dans le registre 0x3F bit 6. }
@@ -492,6 +492,46 @@ typedef struct {
 \end{minted}
 
 \subsubsection{Système de détection de mouvements}
+
+La centrale inertielle \textit{BNO055} permet de configurer une interruption pour un certain événement et une certaine durée. Dans cette section, nous décrirons la configuration de cette interruption pour l'enclenchement du système ainsi que la possibilité d'activer/désactiver cette option.
+
+\begin{code}
+\caption{Configuration de l'interruption}
+\label{code:configInt}
+\begin{minted}[breaklines]{c}
+/* BNO055 motion interrupt mode */
+1) bno055_set_accel_any_motion_no_motion_axis_enable (BNO055_ACCEL_ANY_MOTION_NO_MOTION_X_AXIS, 1);
+2) bno055_set_accel_any_motion_no_motion_axis_enable (BNO055_ACCEL_ANY_MOTION_NO_MOTION_Y_AXIS, 1);
+3) bno055_set_accel_any_motion_no_motion_axis_enable (BNO055_ACCEL_ANY_MOTION_NO_MOTION_Z_AXIS, 1);
+
+4) bno055_set_accel_any_motion_thres(10);
+5) bno055_set_accel_any_motion_durn(20);
+6) bno055_set_intr_accel_any_motion(1);
+7) bno055_set_intr_mask_accel_any_motion(1);	
+\end{minted}
+\end{code}
+
+\begin{center}
+	\underline{Description du code}
+	\begin{table}[h]
+		\centering
+		\begin{tabular}{ll}
+			$\star$ \oldstylenums{1} & Activation de l'axe X pour le mode \textit{anymotion}. \\
+			$\star$ \oldstylenums{2} & Activation de l'axe Y pour le mode \textit{anymotion}. \\
+			$\star$ \oldstylenums{3} & Activation de l'axe Z pour le mode \textit{anymotion}. \\
+			$\star$ \oldstylenums{4} & Attribution de la valeur de déclenchement à $78.3 m\textbf{g} = 0.768 m/s^2$. \\
+			$\star$ \oldstylenums{5} & Configuration de la durée à $20ms$. \\
+			$\star$ \oldstylenums{6} & Active l'interruption, accélération. \\
+			$\star$ \oldstylenums{7} & Masque l'interruption. \\
+		\end{tabular}
+		\caption{}
+		\label{tab:configInterrupt}
+	\end{table}
+\end{center}
+
+\paragraph{Gestion de l'interruption} L'interruption est resetée au moment du démarrage du système et lors de sa désactivation.
+
+\paragraph{Mode low power}
 
 \clearpage
 
