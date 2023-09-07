@@ -1,18 +1,21 @@
 from tkinter import *
 from tkinter import ttk
+from tkinter import filedialog
+from tkinter import messagebox
 import serial
 import serial.tools.list_ports
 import datetime
 import threading
 import multiprocessing
 import os
+import csv
 
 #for printing debugging messages in console
 dbg = 0
 
 gRoot = Tk()
 gRoot.config(bg="#26242f")
-gRoot.geometry("639x600")
+gRoot.geometry("820x575")
 gRoot.title("Black Box Connect")
 sty = ttk.Style()
 sty.theme_use("clam")
@@ -24,15 +27,15 @@ gFrame.grid(column=1,row=1, sticky=(W,E))
 
 # Frame for commands
 
-gFrameCmd = ttk.LabelFrame(gRoot,text="List of commands",padding=10, style='TFrame')
-gFrameCmd.grid(column=1,row=3, sticky=(S,E))
+gFrameCmd = ttk.LabelFrame(gRoot,text="List of commands",padding=10, width=130 , style='TFrame')
+gFrameCmd.grid(column=1,row=3, sticky=(N, S, E, W))
 
 
 #Frame for COM messages
 
 gFrame21 = ttk.Frame(gRoot,padding=10, style='TFrame')
-gFrame21.grid(column=1,row=2, sticky=(W))
-#gRoot.resizable(0,0)
+gFrame21.grid(column=1,row=2, sticky=(W, E, N))
+gRoot.resizable(0,0)
 
 
 for x in range(10):
@@ -149,6 +152,8 @@ def serial_connect(com_port,baud_rate):
     #serial_print()
 counter1 = 0;
 
+def SHUTDOWN():
+    ser.write("SHUTDOWN".encode())
 def GCLR():
     ser.write("GCLR".encode())
 def ICLR():
@@ -170,6 +175,15 @@ def serial_close():
     serFlag = 0
     ser.close()
     
+def power_off():
+    global ser
+    global serFlag
+    serFlag = 0
+    ser.close()
+    if messagebox.askokcancel("Quit", "Do you want to quit?"):
+        gRoot.destroy()
+    
+    
 def submit_value():
     if dbg == 1:
         print("selected option: {}".format(com_value_inside.get()))
@@ -177,7 +191,7 @@ def submit_value():
     serial_connect(com_value_inside.get(),baud_value_inside.get())
 
 
-Lb2 = Listbox(gFrame21, width = 100, height=20, xscrollcommand = 1)
+Lb2 = Listbox(gFrame21, width = 130, height=20, xscrollcommand = 1)
 Lb2.grid(column=1, row = 1, sticky = W+E)
 Sb2 = ttk.Scrollbar(gFrame21,orient = 'vertical')
 Sb2.config(command=Lb2.yview)
@@ -193,24 +207,31 @@ def clear_listbox():
 
 
 
-subBtn = ttk.Button(gFrameCmd,text="Données live du GNSS",command = GLIVE, width=20)
+subBtn = ttk.Button(gFrameCmd,text="GNSS live data",command = GLIVE, width=15)
 subBtn.grid(column=1,row=1, sticky = (E))
-subBtn = ttk.Button(gFrameCmd,text="Données live de l'IMU",command = ILIVE, width=20)
+subBtn = ttk.Button(gFrameCmd,text="IMU live data",command = ILIVE, width=15)
 subBtn.grid(column=1,row=2, sticky = (E))
     
-subBtn = ttk.Button(gFrameCmd,text="Obtenir les logs du GNSS",command = GLOG, width=25)
+subBtn = ttk.Button(gFrameCmd,text="Get GNSS logs",command = GLOG, width=20)
 subBtn.grid(column=2,row=1, sticky = (E))
-subBtn = ttk.Button(gFrameCmd,text="Obtenir les logs de l'IMU",command = ILOG, width=25)
+subBtn = ttk.Button(gFrameCmd,text="Get IMU logs",command = ILOG, width=20)
 subBtn.grid(column=2,row=2, sticky = (E))
 
-subBtn = ttk.Button(gFrameCmd,text="Supprimer les logs du GNSS",command = GCLR, width=25)
+subBtn = ttk.Button(gFrameCmd,text="Delete GNSS logs",command = GCLR, width=20)
 subBtn.grid(column=3,row=1, sticky = (E))
-subBtn = ttk.Button(gFrameCmd,text="Supprimer les logs de l'IMU",command = ICLR, width=25)
-subBtn.grid(column=3,row=2, sticky = (E))
+subBtn = ttk.Button(gFrameCmd,text="Delete IMU logs",command = ICLR, width=20)
+subBtn.grid(column=3,row=2, rowspan=2, sticky = (E))
+
+subBtn = ttk.Button(gFrameCmd,text="Configurate BlackBox",command = ICLR, width=24)
+subBtn.grid(column=0,row=1, rowspan=2, sticky = (E))
 
 
-subBtn = ttk.Button(gFrameCmd,text="exit",command = EXIT, style = "W.TButton", underline=TRUE, width=10)
+subBtn = ttk.Button(gFrameCmd,text="Exit",command = EXIT, style = "W.TButton", underline=TRUE, width=10)
 subBtn.grid(column=4,row=1, sticky = (E))
+
+subBtn = ttk.Button(gFrameCmd,text="Shutdown",command = SHUTDOWN, style = "W.TButton", underline=TRUE, width=10)
+subBtn.grid(column=4,row=2, sticky = (E))
+
 
 
 subBtn = ttk.Button(gFrame,text="submit",command = submit_value)
@@ -242,6 +263,50 @@ def donothing():
    filewin = Toplevel(gRoot)
    button = Button(filewin, text="Do nothing button")
    button.pack()
+   
+def writeFile(fileName : str, extension : str):
+    
+    extension = extension.replace("\n", "")
+    fileName = fileName.replace("\n", "")
+    filePath = str("./" + fileName + "." + extension)
+    txtToSave = "".join(str(el) for el in Lb2.get(0, END))  
+    
+    if(extension == "csv"):
+        with open(filePath, 'w', newline='', encoding='utf-8') as f:
+            writer = csv.writer(f)
+            writer.writerow(Lb2.get(0, END))
+        
+    else:
+        file = open(filePath,"w")   
+        file.write(txtToSave)
+    
+       
+    
+def save():
+    filewin = Toplevel(gRoot)
+    filewin.geometry("200x170")
+    Label(filewin, text = "File name : ").pack()
+    
+    today = datetime.datetime.now()
+
+    display_text = StringVar()
+    txt_save = Text(filewin, height=1, width=20)
+    txt_save.pack()
+    txt_save.insert(END, "log_"+today.strftime("%m%d%y_%H%M%S"))
+
+    Label(filewin, text = "Format : ").pack()
+    
+    varList = StringVar(filewin)
+    varList.set("txt")
+    format_menu = OptionMenu(filewin,  varList, "txt", "csv", "xls", "docx", "odf")
+    format_menu.config(width=5)
+    format_menu.pack()
+    
+    Label(filewin, text = "").pack()
+
+    button = Button(filewin, text="Sauvegarder", command=lambda:[writeFile(txt_save.get(1.0, END), varList.get()), filewin.destroy() ], borderwidth=5, underline=TRUE).pack()
+    
+    #Lb2.text
 
 def About_me():
    filewin = Toplevel(gRoot)
@@ -251,35 +316,38 @@ def About_me():
 
 menubar = Menu(gRoot)
 filemenu = Menu(menubar, tearoff=0)
-filemenu.add_command(label="New", command=donothing)
-filemenu.add_command(label="Open", command=donothing)
-filemenu.add_command(label="Save", command=donothing)
-filemenu.add_command(label="Save as...", command=donothing)
-filemenu.add_command(label="Close", command=donothing)
+#filemenu.add_command(label="New", command=donothing)
+#filemenu.add_command(label="Open", command=donothing)
+filemenu.add_command(label="Save", command=save)
+#filemenu.add_command(label="Save as...", command=donothing)
+filemenu.add_command(label="Close", command=power_off)
 
-filemenu.add_separator()
+#filemenu.add_separator()
 
-filemenu.add_command(label="Exit", command=gRoot.quit)
+#filemenu.add_command(label="Exit", command=gRoot.quit)
 menubar.add_cascade(label="File", menu=filemenu)
 editmenu = Menu(menubar, tearoff=0)
 editmenu.add_command(label="Undo", command=donothing)
 
 editmenu.add_separator()
 
+"""
 editmenu.add_command(label="Cut", command=donothing)
 editmenu.add_command(label="Copy", command=donothing)
 editmenu.add_command(label="Paste", command=donothing)
 editmenu.add_command(label="Delete", command=donothing)
 editmenu.add_command(label="Select All", command=donothing)
+"""
 
-menubar.add_cascade(label="Edit", menu=editmenu)
+#menubar.add_cascade(label="Edit", menu=editmenu)
 helpmenu = Menu(menubar, tearoff=0)
-helpmenu.add_command(label="Help Index", command=donothing)
-helpmenu.add_command(label="About...", command=donothing)
-menubar.add_cascade(label="Help", menu=helpmenu)
+#helpmenu.add_command(label="Help Index", command=donothing)
+#helpmenu.add_command(label="About...", command=donothing)
+#menubar.add_cascade(label="Help", menu=helpmenu)
 menubar.add_command(label = "Black Box", command = About_me)
 menubar.add_separator()
-menubar.add_command(label = "Quit", command = gRoot.destroy)
+menubar.add_command(label = "Quit", command = power_off)
 
+gRoot.protocol("WM_DELETE_WINDOW", power_off)
 gRoot.config(menu=menubar)
 gRoot.mainloop()
