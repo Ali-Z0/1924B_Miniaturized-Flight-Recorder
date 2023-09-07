@@ -124,7 +124,7 @@ void stateTimer_callback()
     if ( ( timeData.measCnt[GNSS_idx] % (timeData.measPeriod[GNSS_idx]/10) ) == 0)
         timeData.measTodo[GNSS_idx] = true;
     /* Manage LED if enabled */
-    if((timeData.ledCnt >= LED_PERIOD) && (appData.ledState == true))
+    if((timeData.ledCnt % LED_PERIOD == 0) && (appData.ledState == true))
        LED_BOff();
 }
 
@@ -317,7 +317,7 @@ void APP_Tasks ( void )
             {
                 /* No comm, so no error */
                 bno055_local_data.comres = 0;
-                LED_BOff();
+                //LED_BOff();
             }
             
             /* If error detected : error LED */
@@ -384,7 +384,7 @@ void APP_Tasks ( void )
             /* --- GET GNSS LOGS --- */
             if(pollSerialCmds(USART_ID_1, "glog", "GLOG", "-gl", "-GL")){       
                 // Display GNSS logs
-                sd_fat_readDisplayFile("LOG_GNSS.csv");
+                sd_fat_readDisplayFile("LOG_GNSS.txt");
             }
             
             /* --- GEST IMU LOGS --- */
@@ -396,7 +396,7 @@ void APP_Tasks ( void )
             /* --- DELETE COMMAND --- */
             if(pollSerialCmds(USART_ID_1, "gclr", "GCLR", "-gc", "-GC")){       
                 // Delete file
-                SYS_FS_FileDirectoryRemove("LOG_GNSS.csv");
+                SYS_FS_FileDirectoryRemove("LOG_GNSS.txt");
                 serTransmitString(USART_ID_1, "GNSS LOG DELETED \r\n");
             }
             

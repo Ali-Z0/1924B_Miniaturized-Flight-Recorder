@@ -80,7 +80,7 @@ extern "C" {
 #define T_INTERVAL_IMU_DEFAULT      500UL
 #define LED_STATE_DEFAULT           (uint8_t)1
     
-#define LED_PERIOD                  50
+#define LED_PERIOD                  5
 
 #define G                 9.81
 

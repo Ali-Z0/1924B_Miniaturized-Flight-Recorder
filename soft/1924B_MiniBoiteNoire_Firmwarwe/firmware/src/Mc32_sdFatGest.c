@@ -352,7 +352,7 @@ void sd_GNSS_scheduleWrite (minmea_messages * pGnssData)
     if(appFatData.log_state == APP_IDLE)
     {
         // Prepare file name
-        sprintf(appFatData.fileName, "LOG_GNSS.csv");
+        sprintf(appFatData.fileName, "LOG_GNSS.txt");
         /* Next log_state : write to file */
         appFatData.log_state = APP_WRITE_MEASURE_FILE;
         /* Write the buffer */
