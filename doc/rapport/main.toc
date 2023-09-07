@@ -71,22 +71,23 @@
 \contentsline {paragraph}{\numberline {5.5.3.1}Gestion de l'interruption}{42}{paragraph.5.5.3.1}%
 \contentsline {paragraph}{\numberline {5.5.3.2}Mode low power}{42}{paragraph.5.5.3.2}%
 \contentsline {paragraph}{\numberline {5.5.3.3}Configuration enclenchement automatique}{43}{paragraph.5.5.3.3}%
-\contentsline {subsection}{\numberline {5.6}GNSS}{44}{subsection.5.6}%
-\contentsline {subsubsection}{\numberline {5.6.1}Trames de configurations UBX}{44}{subsubsection.5.6.1}%
-\contentsline {subsection}{\numberline {5.7}Format des données}{44}{subsection.5.7}%
-\contentsline {subsection}{\numberline {5.8}Hiérarchie des fichiers du système}{44}{subsection.5.8}%
+\contentsline {subsection}{\numberline {5.6}Format des données}{44}{subsection.5.6}%
+\contentsline {subsection}{\numberline {5.7}Hiérarchie des fichiers du système}{44}{subsection.5.7}%
 \contentsline {section}{\numberline {6}Validation du design}{45}{section.6}%
 \contentsline {subsection}{\numberline {6.1}Liste de matériel}{45}{subsection.6.1}%
 \contentsline {subsection}{\numberline {6.2}Contrôle des alimentations}{45}{subsection.6.2}%
 \contentsline {paragraph}{\numberline {6.2.0.1}Méthode de mesure}{45}{paragraph.6.2.0.1}%
 \contentsline {paragraph}{\numberline {6.2.0.2}Mesures}{45}{paragraph.6.2.0.2}%
 \contentsline {paragraph}{\numberline {6.2.0.3}Consommations}{45}{paragraph.6.2.0.3}%
-\contentsline {subsection}{\numberline {6.3}Communication UART}{45}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.3}Communication I2C}{45}{subsection.6.3}%
 \contentsline {paragraph}{\numberline {6.3.0.1}Méthode de mesure}{45}{paragraph.6.3.0.1}%
 \contentsline {paragraph}{\numberline {6.3.0.2}Mesures}{45}{paragraph.6.3.0.2}%
-\contentsline {subsection}{\numberline {6.4}Communication SPI, carte SD}{45}{subsection.6.4}%
+\contentsline {subsection}{\numberline {6.4}Communication UART}{45}{subsection.6.4}%
 \contentsline {paragraph}{\numberline {6.4.0.1}Méthode de mesure}{45}{paragraph.6.4.0.1}%
 \contentsline {paragraph}{\numberline {6.4.0.2}Mesures}{45}{paragraph.6.4.0.2}%
+\contentsline {subsection}{\numberline {6.5}Communication SPI, carte SD}{45}{subsection.6.5}%
+\contentsline {paragraph}{\numberline {6.5.0.1}Méthode de mesure}{45}{paragraph.6.5.0.1}%
+\contentsline {paragraph}{\numberline {6.5.0.2}Mesures}{45}{paragraph.6.5.0.2}%
 \contentsline {section}{\numberline {7}Caractéristiques du produit fini}{45}{section.7}%
 \contentsline {section}{\numberline {8}Conclusion}{46}{section.8}%
 \contentsline {section}{\numberline {9}Bibliographie}{47}{section.9}%
