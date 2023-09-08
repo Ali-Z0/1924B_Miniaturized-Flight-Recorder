@@ -218,7 +218,7 @@ void APP_Tasks ( void )
     minmea_messages gnss_nmea_local_data;
     //enum minmea_sentence_id gnss_nmea_msgId = MINMEA_UNKNOWN;
     /* CONFIGURATION */
-    static char charRead[30] = {0};
+    static char charRead[CHAR_READ_BUFFER_SIZE] = {0};
     static uint32_t readCnt = 0;
     static unsigned long oldIntG = 0;
     static unsigned long oldIntI = 0;
@@ -466,26 +466,26 @@ void APP_Tasks ( void )
             /* No inactivity during this mode */
             timeData.inactiveCnt = 0;
             // Get command's characters
-            while(!(DRV_USART0_ReceiverBufferIsEmpty())&&(readCnt < 30)){
+            while(!(DRV_USART0_ReceiverBufferIsEmpty())&&(readCnt < CHAR_READ_BUFFER_SIZE)){
                 charRead[readCnt] = PLIB_USART_ReceiverByteReceive(USART_ID_1);
                 readCnt++;
             }
             // Command 
-            if(readCnt >= 30)
+            if(readCnt >= CHAR_READ_BUFFER_SIZE)
             {
                 /* Reset read counter */
                 readCnt = 0;
                 /* Clear read buffer */
-                memset(charRead,0,strlen(charRead));
+                memset(charRead,0,CHAR_READ_BUFFER_SIZE);
             }
             
             // Detect ENTER (End of command)
-            if(strstr(charRead, "\r\0") != NULL){
+            if(strstr(charRead, "\r") != NULL){
                 // Scan command data
-                sscanf(charRead, "\rINTG:%lu", &timeData.measPeriod[GNSS_idx]);
-                sscanf(charRead, "\rINTI:%lu", &timeData.measPeriod[BNO055_idx]);
-                sscanf(charRead, "\rLEDV:%d", &ledStateTemp);
-                sscanf(charRead, "\rTOFF:%d", &timeData.inactivePeriod);
+                sscanf(charRead, "INTG:%5lu", &timeData.measPeriod[GNSS_idx]);
+                sscanf(charRead, "INTI:%5lu", &timeData.measPeriod[BNO055_idx]);
+                sscanf(charRead, "LEDV:%5d", &ledStateTemp);
+                sscanf(charRead, "TOFF:%1d", &timeData.inactivePeriod);
                 // Cast int into boolean
                 if (ledStateTemp > 0)
                     appData.ledState = true;
@@ -495,7 +495,7 @@ void APP_Tasks ( void )
                 /* Reset read counter */
                 readCnt = 0;
                 /* Clear read buffer */
-                memset(charRead,0,strlen(charRead));
+                memset(charRead,0,CHAR_READ_BUFFER_SIZE);
             }
             // If config value changed
             if((timeData.measPeriod[GNSS_idx] != oldIntG) || (timeData.measPeriod[BNO055_idx] != oldIntI) || (appData.ledState != oldLed)
@@ -518,7 +518,7 @@ void APP_Tasks ( void )
                     serTransmitString(USART_ID_1, "ERROR INACTIVE PERIOD VALUE <= 10 \r\n");
                 }
                 /* Clear read buffer */
-                memset(charRead,0,strlen(charRead));
+                memset(charRead,0,CHAR_READ_BUFFER_SIZE);
                 // Write new config file
                 sd_CFG_Write (timeData.measPeriod[GNSS_idx], timeData.measPeriod[BNO055_idx], appData.ledState, timeData.inactivePeriod, true);
             }
@@ -538,7 +538,7 @@ void APP_Tasks ( void )
                 /* Reset read counter */
                 readCnt = 0;
                 /* Clear read buffer */
-                memset(charRead,0,strlen(charRead));
+                memset(charRead,0,CHAR_READ_BUFFER_SIZE);
             }
             // Manipulate config file
             sd_fat_config_task ( false );

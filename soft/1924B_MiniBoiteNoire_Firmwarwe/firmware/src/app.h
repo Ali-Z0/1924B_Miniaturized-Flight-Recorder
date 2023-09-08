@@ -81,6 +81,8 @@ extern "C" {
 #define LED_STATE_DEFAULT           (uint8_t)1
     
 #define LED_PERIOD                  5
+    
+#define CHAR_READ_BUFFER_SIZE       30
 
 #define G                 9.81
 
