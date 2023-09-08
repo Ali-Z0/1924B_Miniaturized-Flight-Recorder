@@ -77,22 +77,82 @@ Afin de diminuer la consommation lors du mode veille il existe différentes poss
 	\source{Schéma de la \href{https://cdn-learn.adafruit.com/assets/assets/000/092/544/original/sensors_BNO055_STEMMA_sch.png?1593120280}{carte BNO055 d'adafruit }}
 \end{figure}
 
-\noindent\textbf{Permettre de changer de mode plus facilement}
+\noindent\textbf{Permettre de changer de mode plus facilement} Permettre à l'utilisateur de facilement basculer entre le mode "auto-enclenchement" et "enclenchement manuel" permettrait d'éviter des consommations inutiles.
+
 
 
 \subsection{Bus de communications}
-Avec le code implémenté dans le microcontrôleur les différents périphèriques fonctionnement et la communication avec les différents bus sont fonctionnels, c'est pourquoi lors de cet section l'objectif principal est de mesurer la qualité et l'intégrité des signaux plutôt que d'analyser les différents protocoles.
+Avec le code implémenté dans le microcontrôleur, les différents périphériques fonctionnent correctement et la communication avec les différents bus est opérationnelle. C'est pourquoi, dans cette section, l'objectif principal est de mesurer la qualité et l'intégrité des signaux plutôt que d'analyser les différents protocoles.
 
 \subsubsection{Communication I2C} \label{ssec:Comm-I2C}
 \paragraph{Méthode de mesure}
 \paragraph{Mesures}
 
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{../figures/mesures/I2C/Intervale-2s}
+	\caption{Intervale entre deux mesures, config. 2 secondes.}
+	\label{fig:intervale-2s}
+	\source{Auteur}
+\end{figure}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{../figures/mesures/I2C/duree-comm}
+	\caption{Durée d'une mesure.}
+	\label{fig:duree-comm}
+	\source{Auteur}
+\end{figure}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{../figures/mesures/I2C/Tramme-mesure}
+	\caption{Début de tramme d'une mesure.}
+	\label{fig:tramme-mesure}
+	\source{Auteur}
+\end{figure}
+
 \subsubsection{Communication UART} \label{ssec:Comm-UART}
 \paragraph{Méthode de mesure}
 \paragraph{Mesures}
 
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{../figures/mesures/UART/interval-gnss}
+	\caption{Intervale entre les données NMEA.}
+	\label{fig:interval-gnss}
+	\source{Auteur}
+\end{figure}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{../figures/mesures/UART/duree-comm-gnss}
+	\caption{Durée d'une communication avec le GNSS.}
+	\label{fig:duree-comm-gnss}
+	\source{Auteur}
+\end{figure}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{../figures/mesures/UART/message-NMEA-RMC}
+	\caption{Message RMC du protocole NMEA.}
+	\label{fig:message-nmea-rmc}
+	\source{Auteur}
+\end{figure}
+
+
 \subsubsection{Communication SPI, carte SD} \label{ssec:Comm-SPI}
 \paragraph{Méthode de mesure}
 \paragraph{Mesures}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{../figures/mesures/SPI/freq-spi}
+	\caption{Mesure fréquence clock SPI.}
+	\label{fig:freq-spi}
+	\source{Auteur}
+\end{figure}
+
+
 
 \section{Caractéristiques du produit fini} \label{sec:Carac-finis}
