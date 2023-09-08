@@ -2,6 +2,7 @@ from tkinter import *
 from tkinter import ttk
 from tkinter import filedialog
 from tkinter import messagebox
+from  ttkthemes import ThemedStyle
 import serial
 import serial.tools.list_ports
 import datetime
@@ -14,11 +15,16 @@ import csv
 dbg = 0
 
 gRoot = Tk()
-gRoot.config(bg="#26242f")
-gRoot.geometry("815x575")
+gRoot.config(bg="white")
+gRoot.geometry("1080x640")
 gRoot.title("Black Box Connect")
-sty = ttk.Style()
-sty.theme_use("clam")
+
+# sty = ttk.Style()
+# sty.theme_use("clam")
+sty = ThemedStyle(gRoot)
+sty.set_theme('radiance') 
+
+
 gRoot.columnconfigure(0,weight=1)
 gRoot.rowconfigure(0,weight=1)
 #sty.configure("gframe.TFrame",background="white")
@@ -124,6 +130,29 @@ def serial_print():
                 pass
         ser.flush()
         gFrame.after(100,serial_print)
+        
+def config_mode():
+    filewin2 = Toplevel(gRoot)
+    filewin2.geometry("300x200")
+    
+    Label(filewin2, text = "GNSS measure interval : ").grid(column=1, row = 1)
+    txt_tgnss = Text(filewin2, height=1, width=10)
+    txt_tgnss.grid(column=2, row = 1)
+    txt_tgnss.insert(END, "AAA")
+    
+    Label(filewin2, text = "IMU measure interval : ").grid(column=1, row = 1)
+    txt_tgnss = Text(filewin2, height=1, width=10)
+    txt_tgnss.grid(column=2, row = 2)
+    txt_tgnss.insert(END, "AAA")
+    
+    Label(filewin2, text = "IMU measure interval : ").grid(column=1, row = 1)
+    txt_tgnss = Text(filewin2, height=1, width=10)
+    txt_tgnss.grid(column=2, row = 2)
+    txt_tgnss.insert(END, "AAA")
+
+
+    button = ttk.Button(filewin2, text="Sauvegarder", command=lambda:[writeFile(txt_save.get(1.0, END), varList.get()), filewin.destroy() ], underline=TRUE).grid(column=1, row = 4)
+    
 
 
 ser = serial.Serial()
@@ -224,7 +253,7 @@ subBtn.grid(column=3,row=1, sticky = (E))
 subBtn = ttk.Button(gFrameCmd,text="Delete IMU logs",command = ICLR, width=20)
 subBtn.grid(column=3,row=2, rowspan=2, sticky = (E))
 
-subBtn = ttk.Button(gFrameCmd,text="Configurate BlackBox",command = ICLR, width=24)
+subBtn = ttk.Button(gFrameCmd,text="Configurate BlackBox",command = config_mode, width=24)
 subBtn.grid(column=0,row=1, rowspan=2, sticky = (E))
 
 
@@ -300,13 +329,13 @@ def save():
     
     varList = StringVar(filewin)
     varList.set("txt")
-    format_menu = OptionMenu(filewin,  varList, "txt", "csv", "xls", "docx", "odf")
+    format_menu = ttk.OptionMenu(filewin,  varList, "txt", "csv", "xls", "docx", "odf")
     format_menu.config(width=5)
     format_menu.pack()
     
     Label(filewin, text = "").pack()
 
-    button = Button(filewin, text="Sauvegarder", command=lambda:[writeFile(txt_save.get(1.0, END), varList.get()), filewin.destroy() ], borderwidth=5, underline=TRUE).pack()
+    button = ttk.Button(filewin, text="Sauvegarder", command=lambda:[writeFile(txt_save.get(1.0, END), varList.get()), filewin.destroy() ], underline=TRUE).pack()
     
     #Lb2.text
 
