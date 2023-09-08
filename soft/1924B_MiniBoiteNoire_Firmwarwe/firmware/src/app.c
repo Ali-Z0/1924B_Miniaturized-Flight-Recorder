@@ -241,15 +241,22 @@ void APP_Tasks ( void )
             bno055_init_readout();
             BNO055_delay_msek(10);
             
-            bno055_set_intr_mask_accel_any_motion(1);
+            
             /* BNO055 motion interrupt mode */
             bno055_set_accel_any_motion_no_motion_axis_enable(BNO055_ACCEL_ANY_MOTION_NO_MOTION_X_AXIS, BNO055_BIT_ENABLE);
             bno055_set_accel_any_motion_no_motion_axis_enable(BNO055_ACCEL_ANY_MOTION_NO_MOTION_Y_AXIS, BNO055_BIT_ENABLE);
             bno055_set_accel_any_motion_no_motion_axis_enable(BNO055_ACCEL_ANY_MOTION_NO_MOTION_Z_AXIS, BNO055_BIT_ENABLE);
             
-            bno055_set_accel_any_motion_durn(10);
-            //bno055_set_intr_accel_any_motion(1);
-            bno055_set_accel_any_motion_thres(100);
+            bno055_set_accel_any_motion_durn(1);
+            bno055_set_accel_any_motion_thres(25);
+            
+            bno055_set_intr_accel_any_motion(BNO055_BIT_ENABLE);
+            bno055_set_intr_mask_accel_any_motion(BNO055_BIT_ENABLE);
+            bno055_set_intr_accel_no_motion(BNO055_BIT_DISABLE);
+            
+            /*bno055_set_accel_slow_no_motion_enable(0);
+            bno055_set_intr_accel_no_motion(BNO055_BIT_DISABLE);
+            bno055_set_intr_mask_accel_no_motion(BNO055_BIT_DISABLE);*/
             
             /* go to service task */
             appData.state = APP_STATE_CONFIG;
@@ -608,6 +615,7 @@ static void sys_shutdown( void ) {
     bno055_set_operation_mode(BNO055_OPERATION_MODE_ACCONLY);
     /* set the power mode as LOW POWER*/
     bno055_set_power_mode(BNO055_POWER_MODE_LOWPOWER);
+    bno055_set_intr_accel_no_motion(BNO055_BIT_DISABLE);
     // Reset interrupt pin
     bno055_set_intr_rst(1);
     do{
