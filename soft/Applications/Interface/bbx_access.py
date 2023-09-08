@@ -131,29 +131,66 @@ def serial_print():
         ser.flush()
         gFrame.after(100,serial_print)
         
+def CONFIG():
+    ser.write("CONFIG".encode())
+        
+def write_config(tgnss : str, timu : str, toff: str, ledst : str):
+    
+    CINTG = ("\rINTG:"+tgnss.replace("\n", "\r"))
+    ser.write(CINTG.encode())
+    # CINTI = ("\rINTI:"+timu+"\r")
+    # ser.write(CINTI.encode())
+    # CTOFF = ("\rTOFF:"+toff+"\r")
+    # ser.write(CTOFF.encode())
+    
+    # if(ledst == "ON"):
+    #     LEDS = 1
+    # elif(ledst == "OFF"):
+    #     LEDS = 0
+    # else:
+    #     LEDS = 1
+        
+    # CLEDS = ("\rLEDV:"+str(LEDS)+"\r")
+    # ser.write(CLEDS.encode())
+ 
+def EXIT():
+    ser.write("EXIT".encode())
+       
 def config_mode():
     filewin2 = Toplevel(gRoot)
     filewin2.geometry("300x200")
     
-    Label(filewin2, text = "GNSS measure interval : ").grid(column=1, row = 1)
+    Label(filewin2, text = "GNSS measure interval : ", anchor='w').grid(column=1, row = 1)
     txt_tgnss = Text(filewin2, height=1, width=10)
     txt_tgnss.grid(column=2, row = 1)
-    txt_tgnss.insert(END, "AAA")
+    txt_tgnss.insert(END, "5000")
     
-    Label(filewin2, text = "IMU measure interval : ").grid(column=1, row = 1)
-    txt_tgnss = Text(filewin2, height=1, width=10)
-    txt_tgnss.grid(column=2, row = 2)
-    txt_tgnss.insert(END, "AAA")
+    Label(filewin2, text = "IMU measure interval : ", anchor='w').grid(column=1, row = 2)
+    txt_timu = Text(filewin2, height=1, width=10)
+    txt_timu.grid(column=2, row = 2)
+    txt_timu.insert(END, "500")
     
-    Label(filewin2, text = "IMU measure interval : ").grid(column=1, row = 1)
-    txt_tgnss = Text(filewin2, height=1, width=10)
-    txt_tgnss.grid(column=2, row = 2)
-    txt_tgnss.insert(END, "AAA")
+    Label(filewin2, text = "Inactive delay : ",anchor='w').grid(column=1, row = 3)
+    txt_toff = Text(filewin2, height=1, width=10)
+    txt_toff.grid(column=2, row = 3)
+    txt_toff.insert(END, "60")
 
-
-    button = ttk.Button(filewin2, text="Sauvegarder", command=lambda:[writeFile(txt_save.get(1.0, END), varList.get()), filewin.destroy() ], underline=TRUE).grid(column=1, row = 4)
+    ledList = StringVar(filewin2)
+    ledList.set("txt")
+    Label(filewin2, text = "Etat LED de Vie : ",anchor='w').grid(column=1, row = 4)
+    led_menu = ttk.OptionMenu(filewin2,  ledList, "ON", "ON", "OFF")
+    led_menu.config(width=5)
+    led_menu.grid(column=2, row = 4)
     
-
+    
+    Label(filewin2, text = "").grid(column=1, row = 5)
+    _tgnss = txt_tgnss.get(1.0, END)
+    _tium = txt_timu.get(1.0, END)
+    _toff = txt_toff.get(1.0, END)
+    #_leds = led_menu.getdouble(1.0, END)
+    button = ttk.Button(filewin2, text="Send config", command=write_config(_tgnss,_tium, _toff, ledList), underline=TRUE).grid(column=1, row = 6, columnspan=2)
+    button2 = ttk.Button(filewin2, text="Exit", command=lambda:[EXIT(), filewin2.destroy()], underline=TRUE).grid(column=1, row = 7, columnspan=2)
+    filewin2.protocol("WM_DELETE_WINDOW", EXIT())
 
 ser = serial.Serial()
 serFlag = 0
@@ -181,8 +218,6 @@ def serial_connect(com_port,baud_rate):
     #serial_print()
 counter1 = 0;
 
-def CONFIG():
-    ser.write("CONFIG".encode())
 def SHUTDOWN():
     ser.write("SHUTDOWN".encode())
 def GCLR():
@@ -197,8 +232,6 @@ def GLOG():
     ser.write("GLOG".encode())
 def ILOG():
     ser.write("ILOG".encode())
-def EXIT():
-    ser.write("EXIT".encode())
     
 def serial_close():
     global ser
@@ -253,7 +286,7 @@ subBtn.grid(column=3,row=1, sticky = (E))
 subBtn = ttk.Button(gFrameCmd,text="Delete IMU logs",command = ICLR, width=20)
 subBtn.grid(column=3,row=2, rowspan=2, sticky = (E))
 
-subBtn = ttk.Button(gFrameCmd,text="Configurate BlackBox",command = config_mode, width=24)
+subBtn = ttk.Button(gFrameCmd,text="Configurate BlackBox",command = lambda:[config_mode(), CONFIG()], width=24)
 subBtn.grid(column=0,row=1, rowspan=2, sticky = (E))
 
 
@@ -329,7 +362,7 @@ def save():
     
     varList = StringVar(filewin)
     varList.set("txt")
-    format_menu = ttk.OptionMenu(filewin,  varList, "txt", "csv", "xls", "docx", "odf")
+    format_menu = ttk.OptionMenu(filewin,  varList, "txt", "txt", "csv", "xls", "docx", "odf")
     format_menu.config(width=5)
     format_menu.pack()
     
