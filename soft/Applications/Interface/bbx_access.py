@@ -136,11 +136,11 @@ def CONFIG():
         
 def write_config(tgnss : str, timu : str, toff: str, ledst : str):
     
-    CINTG = ("\rINTG:"+tgnss.replace("\n", "\r"))
-    ser.write(CINTG.encode())
-    # CINTI = ("\rINTI:"+timu+"\r")
+    CINTG = "INTG:" + tgnss + "\r\n"
+    # ser.write(CINTG.encode())
+    # CINTI = "INTI:" + timu + "\r\n"
     # ser.write(CINTI.encode())
-    # CTOFF = ("\rTOFF:"+toff+"\r")
+    # CTOFF = "TOFF:" + toff + "\r\n"
     # ser.write(CTOFF.encode())
     
     # if(ledst == "ON"):
@@ -188,7 +188,7 @@ def config_mode():
     _tium = txt_timu.get(1.0, END)
     _toff = txt_toff.get(1.0, END)
     #_leds = led_menu.getdouble(1.0, END)
-    button = ttk.Button(filewin2, text="Send config", command=write_config(_tgnss,_tium, _toff, ledList), underline=TRUE).grid(column=1, row = 6, columnspan=2)
+    button = ttk.Button(filewin2, text="Send config", command=lambda:[write_config(_tgnss,_tium, _toff, ledList)], underline=TRUE).grid(column=1, row = 6, columnspan=2)
     button2 = ttk.Button(filewin2, text="Exit", command=lambda:[EXIT(), filewin2.destroy()], underline=TRUE).grid(column=1, row = 7, columnspan=2)
     filewin2.protocol("WM_DELETE_WINDOW", EXIT())
 
