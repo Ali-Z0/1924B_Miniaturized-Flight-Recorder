@@ -82,17 +82,18 @@
 \contentsline {subsubsection}{\numberline {7.2.1}Méthode de mesure}{45}{subsubsection.7.2.1}%
 \contentsline {subsubsection}{\numberline {7.2.2}Schéma de mesure}{45}{subsubsection.7.2.2}%
 \contentsline {subsubsection}{\numberline {7.2.3}Mesures}{45}{subsubsection.7.2.3}%
+\contentsline {paragraph}{\numberline {7.2.3.1}Proposition de stratégies d'économie d'énergie}{46}{paragraph.7.2.3.1}%
 \contentsline {subsection}{\numberline {7.3}Bus de communications}{46}{subsection.7.3}%
 \contentsline {subsubsection}{\numberline {7.3.1}Communication I2C}{46}{subsubsection.7.3.1}%
 \contentsline {paragraph}{\numberline {7.3.1.1}Méthode de mesure}{46}{paragraph.7.3.1.1}%
 \contentsline {paragraph}{\numberline {7.3.1.2}Mesures}{46}{paragraph.7.3.1.2}%
 \contentsline {subsubsection}{\numberline {7.3.2}Communication UART}{46}{subsubsection.7.3.2}%
 \contentsline {paragraph}{\numberline {7.3.2.1}Méthode de mesure}{46}{paragraph.7.3.2.1}%
-\contentsline {paragraph}{\numberline {7.3.2.2}Mesures}{46}{paragraph.7.3.2.2}%
-\contentsline {subsubsection}{\numberline {7.3.3}Communication SPI, carte SD}{46}{subsubsection.7.3.3}%
-\contentsline {paragraph}{\numberline {7.3.3.1}Méthode de mesure}{46}{paragraph.7.3.3.1}%
-\contentsline {paragraph}{\numberline {7.3.3.2}Mesures}{46}{paragraph.7.3.3.2}%
-\contentsline {section}{\numberline {8}Caractéristiques du produit fini}{46}{section.8}%
-\contentsline {section}{\numberline {9}Conclusion}{47}{section.9}%
-\contentsline {section}{\numberline {10}Bibliographie}{48}{section.10}%
-\contentsline {section}{\numberline {11}Annexes}{49}{section.11}%
+\contentsline {paragraph}{\numberline {7.3.2.2}Mesures}{47}{paragraph.7.3.2.2}%
+\contentsline {subsubsection}{\numberline {7.3.3}Communication SPI, carte SD}{47}{subsubsection.7.3.3}%
+\contentsline {paragraph}{\numberline {7.3.3.1}Méthode de mesure}{47}{paragraph.7.3.3.1}%
+\contentsline {paragraph}{\numberline {7.3.3.2}Mesures}{47}{paragraph.7.3.3.2}%
+\contentsline {section}{\numberline {8}Caractéristiques du produit fini}{47}{section.8}%
+\contentsline {section}{\numberline {9}Conclusion}{48}{section.9}%
+\contentsline {section}{\numberline {10}Bibliographie}{49}{section.10}%
+\contentsline {section}{\numberline {11}Annexes}{50}{section.11}%

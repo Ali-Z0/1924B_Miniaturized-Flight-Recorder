@@ -239,17 +239,18 @@ void APP_Tasks ( void )
             BNO055_delay_msek(500);
             // Init and Measure set
             bno055_init_readout();
+            BNO055_delay_msek(10);
             
-            /* BNO055 motion interrupt mode */
-            bno055_set_accel_any_motion_no_motion_axis_enable(BNO055_ACCEL_ANY_MOTION_NO_MOTION_X_AXIS, 1);
-            bno055_set_accel_any_motion_no_motion_axis_enable(BNO055_ACCEL_ANY_MOTION_NO_MOTION_Y_AXIS, 1);
-            bno055_set_accel_any_motion_no_motion_axis_enable(BNO055_ACCEL_ANY_MOTION_NO_MOTION_Z_AXIS, 1);
-    
-            bno055_set_accel_any_motion_thres(10);
-            bno055_set_accel_any_motion_durn(20);
-            bno055_set_intr_accel_any_motion(1);
             bno055_set_intr_mask_accel_any_motion(1);
-                    
+            /* BNO055 motion interrupt mode */
+            bno055_set_accel_any_motion_no_motion_axis_enable(BNO055_ACCEL_ANY_MOTION_NO_MOTION_X_AXIS, BNO055_BIT_ENABLE);
+            bno055_set_accel_any_motion_no_motion_axis_enable(BNO055_ACCEL_ANY_MOTION_NO_MOTION_Y_AXIS, BNO055_BIT_ENABLE);
+            bno055_set_accel_any_motion_no_motion_axis_enable(BNO055_ACCEL_ANY_MOTION_NO_MOTION_Z_AXIS, BNO055_BIT_ENABLE);
+            
+            bno055_set_accel_any_motion_durn(10);
+            //bno055_set_intr_accel_any_motion(1);
+            bno055_set_accel_any_motion_thres(100);
+            
             /* go to service task */
             appData.state = APP_STATE_CONFIG;
             /* Init ltime_BNO055 counter */
@@ -609,8 +610,10 @@ static void sys_shutdown( void ) {
     bno055_set_power_mode(BNO055_POWER_MODE_LOWPOWER);
     // Reset interrupt pin
     bno055_set_intr_rst(1);
-    /* turn off the device */
-    PWR_HOLDOff();
+    do{
+        /* turn off the device */
+        PWR_HOLDOff();
+    }while(ButtonMFStateGet() == 0);
 }
 
 static void stopLogging (void)

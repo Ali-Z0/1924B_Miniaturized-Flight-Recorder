@@ -20,7 +20,7 @@ L'objectif est de basculer entre les différents modes (veille, logging...) de l
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=.35\linewidth]{../figures/mesures/schema-courant}
+	\includegraphics[width=.32\linewidth]{../figures/mesures/schema-courant}
 	\caption{Schéma de mesure, courant}
 	\label{fig:schema-courant}
 	\source{Auteur}
@@ -30,13 +30,13 @@ L'objectif est de basculer entre les différents modes (veille, logging...) de l
 
 \begin{table}[!h]
 	\centering
-	\resizebox{.8\textwidth}{!}{%
+	\resizebox{.78\textwidth}{!}{%
 		\begin{tabular}{|c|l|l|c|c|}
 			\hline
 			\multicolumn{1}{|l|}{Index} & Etat du système & Condition                      & Courant [mA] & Symbol      \\ \hline
 			[1]                         & Eteint.         & Mode auto-enclenchement OFF.   & 0.02         & $I_{off}$   \\ \hline
 			[2]                         & Veille.         & Est passé par l'état SHUTDOWN. & 4.4          & $I_{sleep}$ \\ \hline
-			[3]                         & Veille brutale. & Pas passé par l'état SHUTDOWN. & 9.56         & $I_{ws}$    \\ \hline
+			[3]                         & Veille brutale.\footnotemark & Pas passé par l'état SHUTDOWN. & 9.56         & $I_{ws}$    \\ \hline
 			[4]                         & Initialisation. & -                              & 90           & $I_{init}$  \\ \hline
 			[5]                         & Logging.        & -                              & 100          & $I_{log}$   \\ \hline
 			[6]                         & Shutdown.       & -                              & 83           & $I_{sh}$    \\ \hline
@@ -47,6 +47,8 @@ L'objectif est de basculer entre les différents modes (veille, logging...) de l
 	\label{tab:mes-cons}
 	\source{Auteur}
 \end{table}
+
+\footnotetext{Lorsque le système a été éteint de façon non-contrôlée (Batterie débranchée).}
 
 Nous pouvons par les mesure de la table \ref{tab:mes-cons} déduire les éléments suivants : 
 
@@ -62,8 +64,24 @@ Capacité de la batterie $C = 1600\;mAh$
 
 Par conséquent, les caractéristiques d'autonomie de la batterie sont suffisantes pour notre application. 
 
+\paragraph{Proposition de stratégies d'économie d'énergie}
+Afin de diminuer la consommation lors du mode veille il existe différentes possibilités :
+
+\noindent\textbf{Débraser la LED de la carte BNO0555 d'adafruit}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.15\linewidth]{../figures/mesures/led-imu}
+	\caption{Ajout}
+	\label{fig:led-imu}
+	\source{Schéma de la \href{https://cdn-learn.adafruit.com/assets/assets/000/092/544/original/sensors_BNO055_STEMMA_sch.png?1593120280}{carte BNO055 d'adafruit }}
+\end{figure}
+
+\noindent\textbf{Permettre de changer de mode plus facilement}
+
+
 \subsection{Bus de communications}
-Avec le code implémenté dans le microcontrôleur les différents périphèriques fonctionnement et la communication avec les différents bus sont fonctionnels, c'est pourquoi lors de cet section l'objectif principal est de  
+Avec le code implémenté dans le microcontrôleur les différents périphèriques fonctionnement et la communication avec les différents bus sont fonctionnels, c'est pourquoi lors de cet section l'objectif principal est de mesurer la qualité et l'intégrité des signaux plutôt que d'analyser les différents protocoles.
 
 \subsubsection{Communication I2C} \label{ssec:Comm-I2C}
 \paragraph{Méthode de mesure}
