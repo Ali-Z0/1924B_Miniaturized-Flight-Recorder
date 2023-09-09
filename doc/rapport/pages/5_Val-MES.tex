@@ -71,11 +71,13 @@ Afin de diminuer la consommation lors du mode veille il existe différentes poss
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[width=0.15\linewidth]{../figures/mesures/led-imu}
-	\caption{Ajout}
+	\includegraphics[width=0.16\linewidth]{../figures/mesures/led-imu}
+	\caption{LED de vie de la carte d'adafruit (2.2V).}
 	\label{fig:led-imu}
 	\source{Schéma de la \href{https://cdn-learn.adafruit.com/assets/assets/000/092/544/original/sensors_BNO055_STEMMA_sch.png?1593120280}{carte BNO055 d'adafruit }}
 \end{figure}
+
+Comme le montre la figure \ref{fig:led-imu}, une LED reste constamment allumée lors de la mise sous tension de la carte de l'\gls{imu}. Elle présente une différence de potentiel de $2.2V$ à ses bornes, entraînant une consommation constante de $0.11mA$. Bien que cette consommation soit faible, elle est inutile. Dans le cadre de ce prototype, la LED n'a pas été débrasée, mais un adhésif a été collé dessus afin de limiter la pollution lumineuse sur la LED d'état qui passe par un guide-lumière.
 
 \noindent\textbf{Permettre de changer de mode plus facilement} Permettre à l'utilisateur de facilement basculer entre le mode "auto-enclenchement" et "enclenchement manuel" permettrait d'éviter des consommations inutiles.
 

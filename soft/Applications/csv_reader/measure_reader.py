@@ -80,12 +80,12 @@ if os.path.exists('MESURES.csv'):
     quater_z.to_csv(r'./Output/csv/quater_z.csv', sep=";", index=False, header=False, line_terminator=None)
 
     
-    fig, ((flag, grav, gyro, mag), (acc, euler, quater, quater)) = plt.subplots(2, 4)
+    fig, ((grav, gyro, mag), (acc, euler, quater)) = plt.subplots(2, 3)
     fig.suptitle('Mesures IMU')
     
-    flag.grid()
-    flag.plot(df['flag'])
-    flag.set_ylabel(r'Flag mesure')
+    #flag.grid()
+    #flag.plot(df['flag'])
+    #flag.set_ylabel(r'Flag mesure')
     
     
     grav.grid()

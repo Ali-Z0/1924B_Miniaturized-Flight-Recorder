@@ -73,27 +73,27 @@
 \contentsline {paragraph}{\numberline {5.5.3.3}Configuration enclenchement automatique}{43}{paragraph.5.5.3.3}%
 \contentsline {subsection}{\numberline {5.6}Format des données}{44}{subsection.5.6}%
 \contentsline {subsubsection}{\numberline {5.6.1}Données de l'IMU}{44}{subsubsection.5.6.1}%
-\contentsline {subsubsection}{\numberline {5.6.2}Données du GNSS}{44}{subsubsection.5.6.2}%
-\contentsline {subsection}{\numberline {5.7}Hiérarchie des fichiers du système}{44}{subsection.5.7}%
-\contentsline {section}{\numberline {6}Développement application interface}{44}{section.6}%
-\contentsline {section}{\numberline {7}Validation du design}{45}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Liste de matériel}{45}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Consommations}{45}{subsection.7.2}%
-\contentsline {subsubsection}{\numberline {7.2.1}Méthode de mesure}{45}{subsubsection.7.2.1}%
-\contentsline {subsubsection}{\numberline {7.2.2}Schéma de mesure}{45}{subsubsection.7.2.2}%
-\contentsline {subsubsection}{\numberline {7.2.3}Mesures}{45}{subsubsection.7.2.3}%
-\contentsline {paragraph}{\numberline {7.2.3.1}Proposition de stratégies d'économie d'énergie}{46}{paragraph.7.2.3.1}%
-\contentsline {subsection}{\numberline {7.3}Bus de communications}{46}{subsection.7.3}%
-\contentsline {subsubsection}{\numberline {7.3.1}Communication I2C}{46}{subsubsection.7.3.1}%
-\contentsline {paragraph}{\numberline {7.3.1.1}Méthode de mesure}{46}{paragraph.7.3.1.1}%
-\contentsline {paragraph}{\numberline {7.3.1.2}Mesures}{46}{figure.caption.92}%
-\contentsline {subsubsection}{\numberline {7.3.2}Communication UART}{46}{subsubsection.7.3.2}%
-\contentsline {paragraph}{\numberline {7.3.2.1}Méthode de mesure}{46}{paragraph.7.3.2.1}%
-\contentsline {paragraph}{\numberline {7.3.2.2}Mesures}{47}{figure.caption.95}%
-\contentsline {subsubsection}{\numberline {7.3.3}Communication SPI, carte SD}{47}{subsubsection.7.3.3}%
-\contentsline {paragraph}{\numberline {7.3.3.1}Méthode de mesure}{47}{paragraph.7.3.3.1}%
-\contentsline {paragraph}{\numberline {7.3.3.2}Mesures}{47}{figure.caption.97}%
-\contentsline {section}{\numberline {8}Caractéristiques du produit fini}{47}{section.8}%
-\contentsline {section}{\numberline {9}Conclusion}{51}{section.9}%
-\contentsline {section}{\numberline {10}Bibliographie}{52}{section.10}%
-\contentsline {section}{\numberline {11}Annexes}{53}{section.11}%
+\contentsline {subsubsection}{\numberline {5.6.2}Données du GNSS}{45}{subsubsection.5.6.2}%
+\contentsline {subsection}{\numberline {5.7}Hiérarchie des fichiers du système}{45}{subsection.5.7}%
+\contentsline {section}{\numberline {6}Développement application interface}{45}{section.6}%
+\contentsline {section}{\numberline {7}Validation du design}{46}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Liste de matériel}{46}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Consommations}{46}{subsection.7.2}%
+\contentsline {subsubsection}{\numberline {7.2.1}Méthode de mesure}{46}{subsubsection.7.2.1}%
+\contentsline {subsubsection}{\numberline {7.2.2}Schéma de mesure}{46}{subsubsection.7.2.2}%
+\contentsline {subsubsection}{\numberline {7.2.3}Mesures}{46}{subsubsection.7.2.3}%
+\contentsline {paragraph}{\numberline {7.2.3.1}Proposition de stratégies d'économie d'énergie}{47}{paragraph.7.2.3.1}%
+\contentsline {subsection}{\numberline {7.3}Bus de communications}{47}{subsection.7.3}%
+\contentsline {subsubsection}{\numberline {7.3.1}Communication I2C}{48}{subsubsection.7.3.1}%
+\contentsline {paragraph}{\numberline {7.3.1.1}Méthode de mesure}{48}{paragraph.7.3.1.1}%
+\contentsline {paragraph}{\numberline {7.3.1.2}Mesures}{48}{figure.caption.95}%
+\contentsline {subsubsection}{\numberline {7.3.2}Communication UART}{48}{subsubsection.7.3.2}%
+\contentsline {paragraph}{\numberline {7.3.2.1}Méthode de mesure}{48}{paragraph.7.3.2.1}%
+\contentsline {paragraph}{\numberline {7.3.2.2}Mesures}{48}{figure.caption.98}%
+\contentsline {subsubsection}{\numberline {7.3.3}Communication SPI, carte SD}{49}{subsubsection.7.3.3}%
+\contentsline {paragraph}{\numberline {7.3.3.1}Méthode de mesure}{49}{paragraph.7.3.3.1}%
+\contentsline {paragraph}{\numberline {7.3.3.2}Mesures}{49}{figure.caption.100}%
+\contentsline {section}{\numberline {8}Caractéristiques du produit fini}{49}{section.8}%
+\contentsline {section}{\numberline {9}Conclusion}{52}{section.9}%
+\contentsline {section}{\numberline {10}Bibliographie}{53}{section.10}%
+\contentsline {section}{\numberline {11}Annexes}{54}{section.11}%

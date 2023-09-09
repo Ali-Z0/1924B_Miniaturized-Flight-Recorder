@@ -563,16 +563,18 @@ Lorsque le système est en mode d'enclenchement automatique, le circuit reste pa
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.7\linewidth]{../figures/code/jumper-config-mode-IMU}
+	\includegraphics[width=0.6\linewidth]{../figures/code/jumper-config-mode-IMU}
 	\caption{Connexions des jumber du BNO055.}
 	\label{fig:jumper-config-mode-imu}
+	\source{Auteur}
 \end{figure}
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.5\linewidth]{../figures/code/config-mode-IMU}
+	\includegraphics[width=0.4\linewidth]{../figures/code/config-mode-IMU}
 	\caption{Emplacement des jumpers sur le \gls{pcb}.}
 	\label{fig:config-mode-imu}
+	\source{Auteur}
 \end{figure}
 
 Sur la figure \ref{fig:config-mode-imu}, les jumpers sont entourés en \textbf{rouge}. Le jumper \textbf{W6} se situe à droite tandis que \textbf{W7} se situe à gauche.
@@ -598,9 +600,35 @@ Les données de la centrale inertielle sont enregistrer dans un fichier \textbf{
 	\source{Auteur}
 \end{figure}
 
+Ayant précédemment développé un script Python, nous pouvons visualiser simplement et rapidement les données de logs inertielles sous forme de courbes, comme sur la figure \ref{fig:mesures}.
 
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\linewidth]{../figures/application/mesures}
+	\caption{Visualisation des données inertielles.}
+	\label{fig:mesures}
+	\source{Auteur}
+\end{figure}
+
+Il est important de souligner que, lors de la prise des mesures présentées à la figure \ref{fig:mesures}, le module était en déplacement. Nous constatons que 3000 mesures ont été effectuées et sur la figure \ref{fig:donbnees-csv} nous pouvons observer que l'intervalle entre les mesures était de 500ms, ce qui indique un enregistrement d'une durée de 25 minutes. Le prototype en l'état actuel ne permet pas de localiser suffisament de sa
 
 \subsubsection{Données du GNSS} 
+
+Les données du \gls{gnss} ont été sauvegardées en format NMEA dans un fichier texte sans modifications. Cela a été fait afin de permettre des analyses plus approfondies lors du développement en important les données sur ordinateur, plutôt que de les analyser directement sur le microcontrôleur. Toutefois, il serait tout à fait possible d'analyser les messages NMEA sur le microcontrôleur et d'enregistrer uniquement les données pertinentes sur la carte SD. Une telle approche permettrait d'économiser de l'espace de stockage sur la carte SD. Néanmoins, comme nous l'avons observé dans la section \ref{sssec:sdCap}, une telle économie ne serait pas nécessaire étant-donné l'importante marge de capacité. 
+
+\paragraph*{Exemple de logs NMEA}
+
+Les données de la figures \ref{fig:donnees-nmea} contiennent différents messages NMEA (colorés en bleus) loggés lors d'un essai.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.6\linewidth]{../figures/code/donnees-nmea}
+	\caption{Données NMEA loggées.}
+	\label{fig:donnees-nmea}
+	\source{Auteur}
+\end{figure}
+
+Sur la figure \ref{fig:donnees-nmea}, nous constatons qu'au moment de la prise de ces logs, aucun satellite n'a été détecté (le message GSV indique \textbf{00}) et que les valeurs reçues n'étaient pas valides (comme le montrent les \textbf{V} colorés en rouge). Il est probable que ce problème de réception soit dû à un plan de masse autour de l'antenne insuffisamment étendu, empêchant un blindage adéquat pour la réception du signal. Pour remédier à ce problème, des tests avec des antennes externes de différents types sont actuellement en cours. Toutefois, dans son état actuel, le prototype est capable de recevoir des données d'heure et de date, et peut se connecter à jusqu'à 4 satellites (maximum observé lors de tests extérieurs).
 
 \subsection{Hiérarchie des fichiers du système}
 
