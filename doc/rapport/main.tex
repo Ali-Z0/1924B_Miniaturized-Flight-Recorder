@@ -24,6 +24,7 @@
 \usepackage{pdfpages}
 \usepackage{caption}
 \usepackage{subcaption}
+\usepackage{float}
 %\usepackage{listings}
 \usepackage{afterpage}
 \usepackage[bottom]{footmisc}
@@ -33,11 +34,37 @@
 
 \usepackage{amsmath}
 % ---- CODE Packages ---
-\usepackage{tcolorbox}
+\usepackage[most]{tcolorbox}
+\tcbset {
+	base/.style={
+		arc=0mm, 
+		bottomtitle=0.5mm,
+		boxrule=0mm,
+		colbacktitle=black!10!white, 
+		coltitle=black, 
+		fonttitle=\bfseries, 
+		left=2.5mm,
+		leftrule=1mm,
+		right=3.5mm,
+		title={#1},
+		toptitle=0.75mm, 
+	}
+}
+
+\definecolor{brandblue}{rgb}{0.34, 0.7, 1}
+\newtcolorbox{mainbox}[1]{
+	colframe=brandblue, 
+	base={#1}
+}
+
+\newtcolorbox{subbox}[1]{
+	colframe=black!30!white,
+	base={#1}
+}
 \usepackage{etoolbox}
 \usepackage[newfloat]{minted}
-\BeforeBeginEnvironment{minted}{\begin{tcolorbox}}%
-\AfterEndEnvironment{minted}{\end{tcolorbox}}%
+\BeforeBeginEnvironment{minted}{\begin{mainbox} }%
+\AfterEndEnvironment{minted}{\end{mainbox}}%
 \newenvironment{code}{\captionsetup{type=listing}}{}
 \SetupFloatingEnvironment{listing}{name=Code Source}
 % ----------------------

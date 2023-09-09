@@ -1,0 +1,62 @@
+graph TD
+    A[Tkinter Widgets]
+    A1[Top-level Windows]
+    A2[Frame Widgets]
+    A3[Basic Widgets]
+    A4[Variable Widgets]
+    A5[Composite Widgets]
+    A6[Dialogs]
+    A7[Advanced Widgets]
+    A8[Special-purpose Widgets]
+
+    A --> A1
+    A --> A2
+    A --> A3
+    A --> A4
+    A --> A5
+    A --> A6
+    A --> A7
+    A --> A8
+
+    A1 --> A1a[Tk]
+    A1 --> A1b[Toplevel]
+
+    A2 --> A2a[Frame]
+    A2 --> A2b[LabelFrame]
+    A2 --> A2c[PanedWindow]
+
+    A3 --> A3a[Label]
+    A3 --> A3b[Button]
+    A3 --> A3c[Entry]
+    A3 --> A3d[Text]
+    A3 --> A3e[Canvas]
+    A3 --> A3f[Message]
+
+    A4 --> A4a[StringVar]
+    A4 --> A4b[IntVar]
+    A4 --> A4c[DoubleVar]
+    A4 --> A4d[BooleanVar]
+
+    A5 --> A5a[Checkbutton]
+    A5 --> A5b[Radiobutton]
+    A5 --> A5c[Listbox]
+    A5 --> A5d[Scale]
+    A5 --> A5e[Scrollbar]
+    A5 --> A5f[OptionMenu]
+    A5 --> A5g[Menu]
+    A5 --> A5h[Menubutton]
+
+    A6 --> A6a[messagebox]
+    A6 --> A6b[simpledialog]
+    A6 --> A6c[filedialog]
+    A6 --> A6d[colorchooser]
+    A6 --> A6e[font]
+
+    A7 --> A7a[Combobox]
+    A7 --> A7b[Notebook]
+    A7 --> A7c[Progressbar]
+    A7 --> A7d[Treeview]
+    A7 --> A7e[Separator]
+    A7 --> A7f[Sizegrip]
+
+    A8 --> A8a[Spinbox]

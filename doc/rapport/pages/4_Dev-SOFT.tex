@@ -88,6 +88,7 @@ Afin de développer le code du décodeur \textbf{NMEA}, la librairie \href{https
 \begin{code}
 \caption{gnss\_posGet\_nmea(...), décodage \textbf{NMEA}.}
 \label{code:posget-nmea}
+\vspace*{-3mm}
 \begin{minted}[breaklines]{c}
 // Get message ID, strict
 *msg_id = minmea_sentence_id(message, true);
@@ -105,6 +106,7 @@ Dans le code \ref{code:posget-nmea}, on fait appel à une fonction qui va masque
 \begin{code}
 \caption{minmea\_parse\_gbs(...), décodage message \textbf{GBS}.}
 \label{code:parse-gbs}
+\vspace*{-3mm}
 \begin{minted}[breaklines]{c}
 bool minmea_parse_gbs(struct minmea_sentence_gbs *frame, const char *sentence)
 {
@@ -139,6 +141,7 @@ Les données spécifique au message \textbf{GBS} sont ensuite stockées dans une
 \begin{code}
 \caption{Structure \textbf{GBS}.}
 \label{code:struct-gbs}
+\vspace*{-3mm}
 \begin{minted}[breaklines]{c}
 struct minmea_sentence_gbs {
 	struct minmea_time time;
@@ -158,6 +161,7 @@ Sachant que plusieurs types de messages peuvent être interceptés, chacune des 
 \begin{code}
 \caption{Structures messages.}
 \label{code:struct-msgs}
+\vspace*{-3mm}
 \begin{minted}[breaklines]{c}
 typedef struct minmea_messages{
 	struct minmea_sentence_gbs gbs;
@@ -235,6 +239,7 @@ $presc = 16\;[-]$ \vspace*{-5pt}
 \begin{code}
 \caption{Interruption \textbf{timer 1}, 1 [$ms$]}
 \label{code:int-t1}
+\vspace*{-3mm}
 \begin{minted}[breaklines]{c}
 void delayTimer_callback(){
 	/* Increment delay timer */
@@ -246,6 +251,7 @@ void delayTimer_callback(){
 \begin{code}
 \caption{Interruption \textbf{timer 2}, 10 [$ms$]}
 \label{code:int-t2}
+\vspace*{-3mm}
 \begin{minted}[breaklines]{c}
 void stateTimer_callback()
 {
@@ -496,6 +502,7 @@ La centrale inertielle \textit{BNO055} permet de configurer une interruption pou
 \begin{code}
 \caption{Configuration de l'interruption}
 \label{code:configInt}
+\vspace*{-3mm}
 \begin{minted}[breaklines]{c}
 /* BNO055 motion interrupt mode */
 1) bno055_set_accel_any_motion_no_motion_axis_enable (BNO055_ACCEL_ANY_MOTION_NO_MOTION_X_AXIS, 1);
@@ -534,6 +541,7 @@ Les valeurs de configuration peuvent êtres définies en tant que constantes pou
 \begin{code}
 \caption{Configuration de l'interruption}
 \label{code:lowPowerBNO}
+\vspace*{-3mm}
 \begin{minted}[breaklines]{c}
 /* Set acceleration only operation, power saving */
 bno055_set_operation_mode(BNO055_OPERATION_MODE_ACCONLY);
@@ -622,17 +630,70 @@ Les données de la figures \ref{fig:donnees-nmea} contiennent différents messag
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[width=0.6\linewidth]{../figures/code/donnees-nmea}
+	\includegraphics[width=0.5\linewidth]{../figures/code/donnees-nmea}
 	\caption{Données NMEA loggées.}
 	\label{fig:donnees-nmea}
 	\source{Auteur}
 \end{figure}
 
-Sur la figure \ref{fig:donnees-nmea}, nous constatons qu'au moment de la prise de ces logs, aucun satellite n'a été détecté (le message GSV indique \textbf{00}) et que les valeurs reçues n'étaient pas valides (comme le montrent les \textbf{V} colorés en rouge). Il est probable que ce problème de réception soit dû à un plan de masse autour de l'antenne insuffisamment étendu, empêchant un blindage adéquat pour la réception du signal. Pour remédier à ce problème, des tests avec des antennes externes de différents types sont actuellement en cours. Toutefois, dans son état actuel, le prototype est capable de recevoir des données d'heure et de date, et peut se connecter à jusqu'à 4 satellites (maximum observé lors de tests extérieurs).
+Sur la figure \ref{fig:donnees-nmea}, nous constatons qu'au moment de la prise de ces logs, aucun satellite n'a été détecté (le message GSV indique \textbf{00}) et que les valeurs reçues n'étaient pas valides (comme le montrent les \textbf{V} colorés en rouge). Il est probable que ce problème de réception soit dû à un plan de masse autour de l'antenne insuffisamment étendu, empêchant un blindage adéquat pour la réception du signal. Pour remédier à ce problème, des tests avec des antennes externes de différents types sont actuellement en cours. Toutefois, dans son état actuel, le prototype est capable de recevoir des données d'heure et de date, et peut se connecter à jusqu'à 4 satellites (maximum observé lors de tests extérieurs. Le prototype pourrait être sujet à de meilleures conditions dans des zones à signaux forts).
 
-\subsection{Hiérarchie des fichiers du système}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=.61\linewidth]{../figures/code/antenna-types}
+	\caption{Types d'antennes.}
+	\label{fig:antenna-types}
+	\source{\href{https://www.fiberglassantennas.com/antenna-types.html}{https://www.fiberglassantennas.com/antenna-types.html}}
+\end{figure}
+
+\clearpage
+
+\subsection{Fonctions des fichiers}
+Dans cette section, nous examinerons les différentes fonctions et variables mises à disposition et utilisées par les différents fichiers des librairies C créées. Pour illustrer cela de manière pratique, nous utiliserons une représentation sous forme de classes.
+
+\subsubsection{Centrale inertielle}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{../figures/code/diagrammes/bno-support-class}
+	\caption{Classe de la librairie de l'\gls{imu}.}
+	\label{fig:bno-support-class}
+	\source{Auteur}
+\end{figure}
+
+\subsubsection{Carte SD}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{../figures/code/diagrammes/sd-card-class}
+	\caption{Callse de la libraire de la carte SD.}
+	\label{fig:sd-card-class}
+	\source{Auteur}
+\end{figure}
+
+\subsubsection{Communication série avec FTDI}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{../figures/code/diagrammes/ser-com-class}
+	\caption{Classe de la librairie communication USART.}
+	\label{fig:ser-com-class}
+	\source{Auteur}
+\end{figure}
+
+\clearpage
 
 \section{Développement application interface}
+
+Étant donné que la boîte noire développée offre plusieurs commandes et permet une communication USB-C avec divers appareils, la création d'une interface graphique est particulièrement adaptée. Cette application facilite l'accès aux données en temps réel et aux logs, et permet également de configurer aisément la boîte noire. Dans cette section, nous décrirons la démarche suivie pour créer cette application.
+
+\subsection{Choix de l'environnement}
+
+Pour développer cette application, le langage de programmation Python a été choisis. Ce langage est particulièrement adapté pour concevoir des applications graphiques grâce à la bibliothèque Tkinter. Il s'agit d'une bibliothèque graphique libre pour Python qui facilite la création d'applications compatibles avec les systèmes d'exploitation les plus populaires auprès du grand public.
+
+TKinter permet d’utiliser des objet/widgets pour facilement mettre en place une interface graphique de façon très intuitive.
+
+
 
 
 
