@@ -237,21 +237,21 @@ bool pollSerialSingleCmd(USART_MODULE_ID usartID, const char * command1)
 bool pollSerialCmds(USART_MODULE_ID usartID, const char * command1, const char * command2, const char * command3,
                        const char * command4)
 {
-    static char charRead[30] = {0};
+    static char charRead[CHAR_READ_BUFFER_SIZE] = {0};
     static uint32_t readCnt = 0;
     
     // Get command's characters
-    while((PLIB_USART_ReceiverDataIsAvailable(usartID))&&(readCnt < 30)){
+    while((PLIB_USART_ReceiverDataIsAvailable(usartID))&&(readCnt < CHAR_READ_BUFFER_SIZE)){
         charRead[readCnt] = PLIB_USART_ReceiverByteReceive(usartID);
         readCnt++;
     }
     // Command 
-    if(readCnt >= 30)
+    if(readCnt >= CHAR_READ_BUFFER_SIZE)
     {
         /* Reset read counter */
         readCnt = 0;
         /* Clear read buffer */
-        memset(charRead,0,strlen(charRead));
+        memset(charRead,0,CHAR_READ_BUFFER_SIZE);
     }
     // Check occurence with commands
     if((strstr(charRead, command1) != NULL) || (strstr(charRead, command2) != NULL)
@@ -259,7 +259,7 @@ bool pollSerialCmds(USART_MODULE_ID usartID, const char * command1, const char *
         /* Reset read counter */
         readCnt = 0;
         /* Clear read buffer */
-        memset(charRead,0,strlen(charRead));
+        memset(charRead,0,CHAR_READ_BUFFER_SIZE);
         /* Command detected */
         return true;
     }

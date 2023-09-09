@@ -484,8 +484,8 @@ void APP_Tasks ( void )
                 // Scan command data
                 sscanf(charRead, "INTG:%5lu", &timeData.measPeriod[GNSS_idx]);
                 sscanf(charRead, "INTI:%5lu", &timeData.measPeriod[BNO055_idx]);
-                sscanf(charRead, "LEDV:%5d", &ledStateTemp);
-                sscanf(charRead, "TOFF:%1d", &timeData.inactivePeriod);
+                sscanf(charRead, "LEDV:%2d", &ledStateTemp);
+                sscanf(charRead, "TOFF:%5d", &timeData.inactivePeriod);
                 // Cast int into boolean
                 if (ledStateTemp > 0)
                     appData.ledState = true;
@@ -533,16 +533,16 @@ void APP_Tasks ( void )
                 || (strstr(charRead, "x") != NULL) || (strstr(charRead, "X") != NULL)) { 
                 /* Command detected */
                 startLogging();
-                /* Reactivate USART2 (used) */
-                PLIB_USART_Enable(USART_ID_2);
-                /* Reset read counter */
-                readCnt = 0;
                 /* Clear read buffer */
                 memset(charRead,0,CHAR_READ_BUFFER_SIZE);
+                /* Reset read counter */
+                readCnt = 0;
+                /* Reactivate USART2 (used) */
+                PLIB_USART_Enable(USART_ID_2);
+                break;
             }
             // Manipulate config file
             sd_fat_config_task ( false );
-            
             break;
             
         case APP_STATE_SHUTDOWN:
