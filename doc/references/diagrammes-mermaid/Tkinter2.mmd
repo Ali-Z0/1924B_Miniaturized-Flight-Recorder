@@ -1,0 +1,63 @@
+%%{init: {'theme': 'forest', 'themeVariables': { 'fontSize': '24px', 'fontFamily': 'Arial'}}}%%
+
+classDiagram
+
+    class Top-levelWindows {
+        -- Tk : Main application window
+        -- Toplevel : Additional windows
+    }
+
+    class FrameWidgets {
+        -- Frame : Container for other widgets
+        -- LabelFrame : Container with label
+        -- PanedWindow : Resizable panes
+    }
+
+    class BasicWidgets {
+        -- Label : Static text or image
+        -- Button : Click to execute command
+        -- Entry : Single-line input
+        -- Text : Multi-line input
+        -- Canvas : Draw shapes or graphics
+        -- Message : Multiline non-editable text
+    }
+
+    class VariableWidgets {
+        -- StringVar : Holds a string
+        -- IntVar : Holds an integer
+        -- DoubleVar : Holds a float
+        -- BooleanVar : Holds a boolean
+    }
+
+    class CompositeWidgets {
+        -- Checkbutton : Options as checkboxes
+        -- Radiobutton : Options as radio buttons
+        -- Listbox : List of items
+        -- Scale : Slide to select value
+        -- Scrollbar : Scrollable widget
+        -- OptionMenu : Dropdown to select option
+        -- Menu : Contains menu items
+        -- Menubutton : Display menus
+    }
+
+    class Dialogs {
+        -- messagebox : Error, warning, info, question
+        -- simpledialog : Get simple inputs
+        -- filedialog : Choose files or dirs
+        -- colorchooser : Choose color
+        -- font : Choose font
+    }
+
+    class AdvancedWidgets {
+        -- Combobox : Dropdown list box
+        -- Notebook : Tabs for panes
+        -- Progressbar : Task's progress
+        -- Treeview : Hierarchical item lists
+        -- Separator : Visual separator
+        -- Sizegrip : Resize grip for windows
+    }
+
+    class Special-purposeWidgets {
+        -- Spinbox : Select from values
+    }
+
