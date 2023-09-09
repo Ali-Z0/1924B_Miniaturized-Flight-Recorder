@@ -1,0 +1,15 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} Setup main window}
+\PYG{n}{gRoot} \PYG{o}{=} \PYG{n}{Tk}\PYG{p}{()}
+\PYG{n}{gRoot}\PYG{o}{.}\PYG{n}{config}\PYG{p}{(}\PYG{n}{bg}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}white\PYGZdq{}}\PYG{p}{)}
+\PYG{n}{gRoot}\PYG{o}{.}\PYG{n}{geometry}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}1080x640\PYGZdq{}}\PYG{p}{)}
+\PYG{n}{gRoot}\PYG{o}{.}\PYG{n}{title}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Black Box Connect\PYGZdq{}}\PYG{p}{)}
+\PYG{c+c1}{\PYGZsh{} Style configuration}
+\PYG{n}{sty} \PYG{o}{=} \PYG{n}{ThemedStyle}\PYG{p}{(}\PYG{n}{gRoot}\PYG{p}{)}
+\PYG{n}{sty}\PYG{o}{.}\PYG{n}{set\PYGZus{}theme}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}radiance\PYGZsq{}}\PYG{p}{)}
+\PYG{c+c1}{\PYGZsh{} Configure main window grid}
+\PYG{n}{gRoot}\PYG{o}{.}\PYG{n}{columnconfigure}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{n}{weight}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{)}
+\PYG{n}{gRoot}\PYG{o}{.}\PYG{n}{rowconfigure}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{n}{weight}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{)}
+\PYG{c+c1}{\PYGZsh{} Create a frame for connection settings}
+\PYG{n}{gFrame} \PYG{o}{=} \PYG{n}{ttk}\PYG{o}{.}\PYG{n}{LabelFrame}\PYG{p}{(}\PYG{n}{gRoot}\PYG{p}{,}\PYG{n}{text}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}Connection Setting\PYGZdq{}}\PYG{p}{,}\PYG{n}{padding}\PYG{o}{=}\PYG{l+m+mi}{10}\PYG{p}{,} \PYG{n}{style}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}TFrame\PYGZsq{}}\PYG{p}{)}
+\end{Verbatim}

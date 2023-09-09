@@ -691,7 +691,65 @@ Dans cette section, nous examinerons les différentes fonctions et variables mis
 
 Pour développer cette application, le langage de programmation Python a été choisis. Ce langage est particulièrement adapté pour concevoir des applications graphiques grâce à la bibliothèque Tkinter. Il s'agit d'une bibliothèque graphique libre pour Python qui facilite la création d'applications compatibles avec les systèmes d'exploitation les plus populaires auprès du grand public.
 
-TKinter permet d’utiliser des objet/widgets pour facilement mettre en place une interface graphique de façon très intuitive.
+TKinter permet d’utiliser des objet/widgets pour facilement mettre en place une interface graphique de façon très intuitive.\vspace*{-4mm}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=.85\linewidth]{../figures/application/tkinter}
+	\caption{Widgets Tkinter.}
+	\label{fig:tkinter}
+	\source{Auteur}
+\end{figure} \vspace*{-4mm}
+
+Le code python complet de l'application est disponible en annexe de ce rapport.
+
+\begin{code}
+\caption{Extrait de code, création de la forme}
+\label{code:pythonExample}
+\vspace*{-3mm}
+\begin{minted}[breaklines]{python}
+# Setup main window
+gRoot = Tk()
+gRoot.config(bg="white")
+gRoot.geometry("1080x640")
+gRoot.title("Black Box Connect")
+# Style configuration
+sty = ThemedStyle(gRoot)
+sty.set_theme('radiance') 
+# Configure main window grid
+gRoot.columnconfigure(0,weight=1)
+gRoot.rowconfigure(0,weight=1)
+# Create a frame for connection settings
+gFrame = ttk.LabelFrame(gRoot,text="Connection Setting",padding=10, style='TFrame')
+\end{minted}
+\end{code}
+
+\clearpage
+
+Comme illustré sur la figure \ref{fig:screenloggnss}, différentes fonctions de l'application sont visibles. Le port de communication série ainsi que le baud rate sont configurables. À la fermeture de l'application, le port se ferme automatiquement. L'application permet d'afficher les données des périphériques en temps réel \textit{LIVE} ou sous forme de \textit{LOGS}. Elle offre également la possibilité de supprimer les fichiers de logs stockés sur la carte SD et de sauvegarder les données reçues dans divers formats tels que "CSV, TXT...", comme le démontre la figure \ref{fig:screesave}. Enfin, la configuration de la boîte noire est accessible via le menu présenté sur la figure \ref{fig:configwindow}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.75\linewidth]{../figures/application/screen_logGnss}
+	\caption{Application, logs \gls{gnss} obtenus.}
+	\label{fig:screenloggnss}
+	\source{Auteur}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=.5\linewidth]{../figures/application/Config_window}
+	\caption{Menu configuration.}
+	\label{fig:configwindow}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.2\linewidth]{../figures/application/scree_save}
+	\caption{Menu de sauvegarde.}
+	\label{fig:screesave}
+	\source{Auteur}
+\end{figure}
 
 
 

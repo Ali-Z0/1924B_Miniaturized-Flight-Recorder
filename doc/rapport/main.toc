@@ -80,24 +80,24 @@
 \contentsline {subsubsection}{\numberline {5.7.3}Communication série avec FTDI}{47}{subsubsection.5.7.3}%
 \contentsline {section}{\numberline {6}Développement application interface}{48}{section.6}%
 \contentsline {subsection}{\numberline {6.1}Choix de l'environnement}{48}{subsection.6.1}%
-\contentsline {section}{\numberline {7}Validation du design}{49}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Liste de matériel}{49}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Consommations}{49}{subsection.7.2}%
-\contentsline {subsubsection}{\numberline {7.2.1}Méthode de mesure}{49}{subsubsection.7.2.1}%
-\contentsline {subsubsection}{\numberline {7.2.2}Schéma de mesure}{49}{subsubsection.7.2.2}%
-\contentsline {subsubsection}{\numberline {7.2.3}Mesures}{49}{subsubsection.7.2.3}%
-\contentsline {paragraph}{\numberline {7.2.3.1}Proposition de stratégies d'économie d'énergie}{50}{paragraph.7.2.3.1}%
-\contentsline {subsection}{\numberline {7.3}Bus de communications}{50}{subsection.7.3}%
-\contentsline {subsubsection}{\numberline {7.3.1}Communication I2C}{51}{subsubsection.7.3.1}%
-\contentsline {paragraph}{\numberline {7.3.1.1}Méthode de mesure}{51}{paragraph.7.3.1.1}%
-\contentsline {paragraph}{\numberline {7.3.1.2}Mesures}{51}{figure.caption.99}%
-\contentsline {subsubsection}{\numberline {7.3.2}Communication UART}{51}{subsubsection.7.3.2}%
-\contentsline {paragraph}{\numberline {7.3.2.1}Méthode de mesure}{51}{paragraph.7.3.2.1}%
-\contentsline {paragraph}{\numberline {7.3.2.2}Mesures}{51}{figure.caption.102}%
-\contentsline {subsubsection}{\numberline {7.3.3}Communication SPI, carte SD}{52}{subsubsection.7.3.3}%
-\contentsline {paragraph}{\numberline {7.3.3.1}Méthode de mesure}{52}{paragraph.7.3.3.1}%
-\contentsline {paragraph}{\numberline {7.3.3.2}Mesures}{52}{figure.caption.104}%
-\contentsline {section}{\numberline {8}Caractéristiques du produit fini}{52}{section.8}%
-\contentsline {section}{\numberline {9}Conclusion}{55}{section.9}%
-\contentsline {section}{\numberline {10}Bibliographie}{56}{section.10}%
-\contentsline {section}{\numberline {11}Annexes}{57}{section.11}%
+\contentsline {section}{\numberline {7}Validation du design}{50}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Liste de matériel}{50}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Consommations}{50}{subsection.7.2}%
+\contentsline {subsubsection}{\numberline {7.2.1}Méthode de mesure}{50}{subsubsection.7.2.1}%
+\contentsline {subsubsection}{\numberline {7.2.2}Schéma de mesure}{50}{subsubsection.7.2.2}%
+\contentsline {subsubsection}{\numberline {7.2.3}Mesures}{50}{subsubsection.7.2.3}%
+\contentsline {paragraph}{\numberline {7.2.3.1}Proposition de stratégies d'économie d'énergie}{51}{paragraph.7.2.3.1}%
+\contentsline {subsection}{\numberline {7.3}Bus de communications}{51}{subsection.7.3}%
+\contentsline {subsubsection}{\numberline {7.3.1}Communication I2C}{52}{subsubsection.7.3.1}%
+\contentsline {paragraph}{\numberline {7.3.1.1}Méthode de mesure}{52}{paragraph.7.3.1.1}%
+\contentsline {paragraph}{\numberline {7.3.1.2}Mesures}{52}{figure.caption.104}%
+\contentsline {subsubsection}{\numberline {7.3.2}Communication UART}{52}{subsubsection.7.3.2}%
+\contentsline {paragraph}{\numberline {7.3.2.1}Méthode de mesure}{52}{paragraph.7.3.2.1}%
+\contentsline {paragraph}{\numberline {7.3.2.2}Mesures}{52}{figure.caption.107}%
+\contentsline {subsubsection}{\numberline {7.3.3}Communication SPI, carte SD}{53}{subsubsection.7.3.3}%
+\contentsline {paragraph}{\numberline {7.3.3.1}Méthode de mesure}{53}{paragraph.7.3.3.1}%
+\contentsline {paragraph}{\numberline {7.3.3.2}Mesures}{53}{figure.caption.109}%
+\contentsline {section}{\numberline {8}Caractéristiques du produit fini}{53}{section.8}%
+\contentsline {section}{\numberline {9}Conclusion}{56}{section.9}%
+\contentsline {section}{\numberline {10}Bibliographie}{57}{section.10}%
+\contentsline {section}{\numberline {11}Annexes}{58}{section.11}%

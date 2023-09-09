@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.8.7)  10 SEP 2023 00:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.8.7)  10 SEP 2023 01:19
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2699,7 +2699,23 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [47 <../figures/code/diagrammes/sd-card-class.pdf> <../figures/code/diagrammes/
-ser-com-class.pdf>]) (./pages/5_Val-MES.tex
+ser-com-class.pdf>]
+<../figures/application/tkinter.pdf, id=1606, 308.15125pt x 117.43875pt>
+File: ../figures/application/tkinter.pdf Graphic file (type pdf)
+<use ../figures/application/tkinter.pdf>
+Package pdftex.def Info: ../figures/application/tkinter.pdf  used on input line
+ 698.
+(pdftex.def)             Requested size: 385.02547pt x 146.74788pt.
+\openout4 = `main.pyg'.
+
+
+(./_minted-main/4655EC9077A32FCEB36A05F57C4243DCCF33289265490CC72470AF6FAFE9A29
+4.pygtex
+LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 
+9.
+ (c:/texlive/2023/texmf-dist/tex/latex/base/ts1cmtt.fd
+File: ts1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
+))
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2710,8 +2726,40 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [48
 
-]
-<../figures/mesures/schema-courant.pdf, id=1612, 567.91666pt x 328.56494pt>
+ <../figures/application/tkinter.pdf>]
+<../figures/application/screen_logGnss.jpg, id=4570, 814.54312pt x 517.18219pt>
+
+File: ../figures/application/screen_logGnss.jpg Graphic file (type jpg)
+<use ../figures/application/screen_logGnss.jpg>
+Package pdftex.def Info: ../figures/application/screen_logGnss.jpg  used on inp
+ut line 733.
+(pdftex.def)             Requested size: 339.72592pt x 215.69986pt.
+<../figures/application/Config_window.jpg, id=4573, 340.27126pt x 182.18062pt>
+File: ../figures/application/Config_window.jpg Graphic file (type jpg)
+<use ../figures/application/Config_window.jpg>
+Package pdftex.def Info: ../figures/application/Config_window.jpg  used on inpu
+t line 741.
+(pdftex.def)             Requested size: 226.48395pt x 121.25977pt.
+<../figures/application/scree_save.jpg, id=4574, 152.06813pt x 152.06813pt>
+File: ../figures/application/scree_save.jpg Graphic file (type jpg)
+<use ../figures/application/scree_save.jpg>
+Package pdftex.def Info: ../figures/application/scree_save.jpg  used on input l
+ine 748.
+(pdftex.def)             Requested size: 90.5922pt x 90.5942pt.
+) (./pages/5_Val-MES.tex
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[49
+
+ <../figures/application/screen_logGnss.JPG> <../figures/application/Config_win
+dow.JPG> <../figures/application/scree_save.JPG>]
+<../figures/mesures/schema-courant.pdf, id=4583, 567.91666pt x 328.56494pt>
 File: ../figures/mesures/schema-courant.pdf Graphic file (type pdf)
 <use ../figures/mesures/schema-courant.pdf>
 Package pdftex.def Info: ../figures/mesures/schema-courant.pdf  used on input l
@@ -2726,13 +2774,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[49
+[50
 
  <../figures/mesures/schema-courant.pdf>]
 
 pdfTeX warning: pdflatex.exe (file ../figures/mesures/led-imu.pdf): PDF inclusi
 on: found PDF version <1.6>, but at most version <1.5> allowed
-<../figures/mesures/led-imu.pdf, id=1639, 268.00125pt x 706.64pt>
+<../figures/mesures/led-imu.pdf, id=4611, 268.00125pt x 706.64pt>
 File: ../figures/mesures/led-imu.pdf Graphic file (type pdf)
 <use ../figures/mesures/led-imu.pdf>
 Package pdftex.def Info: ../figures/mesures/led-imu.pdf  used on input line 74.
@@ -2746,11 +2794,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[50 <../figures/mesures/led-imu.pdf>]
+[51 <../figures/mesures/led-imu.pdf>]
 
 pdfTeX warning: pdflatex.exe (file ../figures/mesures/I2C/Intervale-2s.pdf): PD
 F inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<../figures/mesures/I2C/Intervale-2s.pdf, id=1651, 1284.8pt x 827.09pt>
+<../figures/mesures/I2C/Intervale-2s.pdf, id=4623, 1284.8pt x 827.09pt>
 File: ../figures/mesures/I2C/Intervale-2s.pdf Graphic file (type pdf)
 <use ../figures/mesures/I2C/Intervale-2s.pdf>
 Package pdftex.def Info: ../figures/mesures/I2C/Intervale-2s.pdf  used on input
@@ -2760,7 +2808,7 @@ Package pdftex.def Info: ../figures/mesures/I2C/Intervale-2s.pdf  used on input
 
 pdfTeX warning: pdflatex.exe (file ../figures/mesures/I2C/duree-comm.pdf): PDF 
 inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<../figures/mesures/I2C/duree-comm.pdf, id=1652, 1284.8pt x 827.09pt>
+<../figures/mesures/I2C/duree-comm.pdf, id=4624, 1284.8pt x 827.09pt>
 File: ../figures/mesures/I2C/duree-comm.pdf Graphic file (type pdf)
 <use ../figures/mesures/I2C/duree-comm.pdf>
 Package pdftex.def Info: ../figures/mesures/I2C/duree-comm.pdf  used on input l
@@ -2770,7 +2818,7 @@ ine 103.
 
 pdfTeX warning: pdflatex.exe (file ../figures/mesures/I2C/Tramme-mesure.pdf): P
 DF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<../figures/mesures/I2C/Tramme-mesure.pdf, id=1653, 1284.8pt x 827.09pt>
+<../figures/mesures/I2C/Tramme-mesure.pdf, id=4625, 1284.8pt x 827.09pt>
 File: ../figures/mesures/I2C/Tramme-mesure.pdf Graphic file (type pdf)
 <use ../figures/mesures/I2C/Tramme-mesure.pdf>
 Package pdftex.def Info: ../figures/mesures/I2C/Tramme-mesure.pdf  used on inpu
@@ -2783,7 +2831,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 pdfTeX warning: pdflatex.exe (file ../figures/mesures/UART/interval-gnss.pdf): 
 PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<../figures/mesures/UART/interval-gnss.pdf, id=1654, 1284.8pt x 827.09pt>
+<../figures/mesures/UART/interval-gnss.pdf, id=4626, 1284.8pt x 827.09pt>
 File: ../figures/mesures/UART/interval-gnss.pdf Graphic file (type pdf)
 <use ../figures/mesures/UART/interval-gnss.pdf>
 Package pdftex.def Info: ../figures/mesures/UART/interval-gnss.pdf  used on inp
@@ -2796,7 +2844,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 pdfTeX warning: pdflatex.exe (file ../figures/mesures/UART/duree-comm-gnss.pdf)
 : PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<../figures/mesures/UART/duree-comm-gnss.pdf, id=1655, 1284.8pt x 827.09pt>
+<../figures/mesures/UART/duree-comm-gnss.pdf, id=4627, 1284.8pt x 827.09pt>
 File: ../figures/mesures/UART/duree-comm-gnss.pdf Graphic file (type pdf)
 <use ../figures/mesures/UART/duree-comm-gnss.pdf>
 Package pdftex.def Info: ../figures/mesures/UART/duree-comm-gnss.pdf  used on i
@@ -2809,7 +2857,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 pdfTeX warning: pdflatex.exe (file ../figures/mesures/UART/message-NMEA-RMC.pdf
 ): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<../figures/mesures/UART/message-NMEA-RMC.pdf, id=1656, 1284.8pt x 827.09pt>
+<../figures/mesures/UART/message-NMEA-RMC.pdf, id=4628, 1284.8pt x 827.09pt>
 File: ../figures/mesures/UART/message-NMEA-RMC.pdf Graphic file (type pdf)
 <use ../figures/mesures/UART/message-NMEA-RMC.pdf>
 Package pdftex.def Info: ../figures/mesures/UART/message-NMEA-RMC.pdf  used on 
@@ -2826,12 +2874,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[51 <../figures/mesures/I2C/Intervale-2s.pdf> <../figures/mesures/I2C/duree-com
+[52 <../figures/mesures/I2C/Intervale-2s.pdf> <../figures/mesures/I2C/duree-com
 m.pdf>]
 
 pdfTeX warning: pdflatex.exe (file ../figures/mesures/SPI/freq-spi.pdf): PDF in
 clusion: found PDF version <1.6>, but at most version <1.5> allowed
-<../figures/mesures/SPI/freq-spi.pdf, id=1669, 1284.8pt x 827.09pt>
+<../figures/mesures/SPI/freq-spi.pdf, id=4641, 1284.8pt x 827.09pt>
 File: ../figures/mesures/SPI/freq-spi.pdf Graphic file (type pdf)
 <use ../figures/mesures/SPI/freq-spi.pdf>
 Package pdftex.def Info: ../figures/mesures/SPI/freq-spi.pdf  used on input lin
@@ -2844,7 +2892,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 pdfTeX warning: pdflatex.exe (file ../figures/mesures/SPI/densite-comm.pdf): PD
 F inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<../figures/mesures/SPI/densite-comm.pdf, id=1670, 1284.8pt x 827.09pt>
+<../figures/mesures/SPI/densite-comm.pdf, id=4642, 1284.8pt x 827.09pt>
 File: ../figures/mesures/SPI/densite-comm.pdf Graphic file (type pdf)
 <use ../figures/mesures/SPI/densite-comm.pdf>
 Package pdftex.def Info: ../figures/mesures/SPI/densite-comm.pdf  used on input
@@ -2862,7 +2910,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[52 <../figures/mesures/I2C/Tramme-mesure.pdf> <../figures/mesures/UART/interva
+[53 <../figures/mesures/I2C/Tramme-mesure.pdf> <../figures/mesures/UART/interva
 l-gnss.pdf>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2872,7 +2920,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[53 <../figures/mesures/UART/duree-comm-gnss.pdf> <../figures/mesures/UART/mess
+[54 <../figures/mesures/UART/duree-comm-gnss.pdf> <../figures/mesures/UART/mess
 age-NMEA-RMC.pdf>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2882,7 +2930,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[54 <../figures/mesures/SPI/freq-spi.pdf> <../figures/mesures/SPI/densite-comm.
+[55 <../figures/mesures/SPI/freq-spi.pdf> <../figures/mesures/SPI/densite-comm.
 pdf>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2892,7 +2940,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[55
+[56
 
 ] (./Main.bbl)
 
@@ -2903,7 +2951,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[56]
+[57]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2912,7 +2960,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[57
+[58
 
 ] (./main.aux)
  ***********
@@ -2920,16 +2968,16 @@ LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-03>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: A6E97268801C5312D49F2E43AC4A3ED4;16768.
+(rerunfilecheck)             Checksum: 4966BF701828DBEC87E9B8F3A5D854CE;16769.
 runsystem(del main.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 50742 strings out of 475187
- 1030315 string characters out of 5767784
+ 50831 strings out of 475187
+ 1033917 string characters out of 5767784
  1945248 words of memory out of 5000000
- 70848 multiletter control sequences out of 15000+600000
- 662371 words of font info for 158 fonts, out of 8000000 for 9000
+ 70924 multiletter control sequences out of 15000+600000
+ 662668 words of font info for 159 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  109i,15n,117p,2289b,992s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/fontawesome5/FontAwesome5Free-
@@ -2944,10 +2992,10 @@ live/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2023/texmf-di
 st/fonts/type1/urw/times/utmbi8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/ur
 w/times/utmr8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/times/utmri8a.pf
 b>
-Output written on main.pdf (58 pages, 10782318 bytes).
+Output written on main.pdf (59 pages, 11377650 bytes).
 PDF statistics:
- 1839 PDF objects out of 2073 (max. 8388607)
- 1434 compressed objects within 15 object streams
- 287 named destinations out of 1000 (max. 500000)
- 1313 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 4815 PDF objects out of 5155 (max. 8388607)
+ 3406 compressed objects within 35 object streams
+ 293 named destinations out of 1000 (max. 500000)
+ 1333 words of extra memory for PDF output out of 10000 (max. 10000000)
 
