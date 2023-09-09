@@ -134,46 +134,61 @@ def serial_print():
 def CONFIG():
     ser.write("CONFIG".encode())
         
-def write_config(tgnss : str, timu : str, toff: str, ledst : str):
+def write_intg(intg : str):
+    CINTG = ("INTG:" + intg).replace("\n","\r")
+    ser.write(CINTG.encode())
+
+def write_inti(inti : str):
+    CINTI = ("INTI:" + inti).replace("\n","\r")
+    ser.write(CINTI.encode())
+
+def write_toff(toff : str):
+    CTOFF = ("TOFF:" + toff).replace("\n","\r")
+    ser.write(CTOFF.encode())
     
-    CINTG = "INTG:" + tgnss + "\r\n"
-    # ser.write(CINTG.encode())
-    # CINTI = "INTI:" + timu + "\r\n"
-    # ser.write(CINTI.encode())
-    # CTOFF = "TOFF:" + toff + "\r\n"
-    # ser.write(CTOFF.encode())
-    
-    # if(ledst == "ON"):
-    #     LEDS = 1
-    # elif(ledst == "OFF"):
-    #     LEDS = 0
-    # else:
-    #     LEDS = 1
+def write_leds(leds : str):
+    if (leds == "ON"):
+        CLEDS = "LEDV:1\r"
+    elif (leds == "OFF"):
+        CLEDS = "LEDV:0\r"
+    else:
+        CLEDS = "LEDV:1\r"
         
-    # CLEDS = ("\rLEDV:"+str(LEDS)+"\r")
-    # ser.write(CLEDS.encode())
+    ser.write(CLEDS.encode())
+
+def write_configs(tgnss : str, timu : str, toff: str, ledst : str):
+    
+    CINTG = ("INTG:" + tgnss).replace("\n","\r")
+    ser.write(CINTG.encode())
+    CINTI = ("INTI:" + timu).replace("\n","\r")
+    ser.write(CINTI.encode())
+    CTOFF = ("TOFF:" + toff).replace("\n","\r")
+    ser.write(CTOFF.encode())
  
 def EXIT():
     ser.write("EXIT".encode())
        
 def config_mode():
     filewin2 = Toplevel(gRoot)
-    filewin2.geometry("300x200")
+    filewin2.geometry("450x210")
     
     Label(filewin2, text = "GNSS measure interval : ", anchor='w').grid(column=1, row = 1)
     txt_tgnss = Text(filewin2, height=1, width=10)
     txt_tgnss.grid(column=2, row = 1)
     txt_tgnss.insert(END, "5000")
+    button_intg = ttk.Button(filewin2, text="Send", command=lambda:[write_intg(txt_tgnss.get(1.0, END))]).grid(column=3, row = 1)
     
     Label(filewin2, text = "IMU measure interval : ", anchor='w').grid(column=1, row = 2)
     txt_timu = Text(filewin2, height=1, width=10)
     txt_timu.grid(column=2, row = 2)
     txt_timu.insert(END, "500")
+    button_inti = ttk.Button(filewin2, text="Send", command=lambda:[write_inti(txt_timu.get(1.0, END))]).grid(column=3, row = 2)
     
     Label(filewin2, text = "Inactive delay : ",anchor='w').grid(column=1, row = 3)
     txt_toff = Text(filewin2, height=1, width=10)
     txt_toff.grid(column=2, row = 3)
     txt_toff.insert(END, "60")
+    button_toff = ttk.Button(filewin2, text="Send", command=lambda:[write_toff(txt_toff.get(1.0, END))]).grid(column=3, row = 3)
 
     ledList = StringVar(filewin2)
     ledList.set("txt")
@@ -181,16 +196,12 @@ def config_mode():
     led_menu = ttk.OptionMenu(filewin2,  ledList, "ON", "ON", "OFF")
     led_menu.config(width=5)
     led_menu.grid(column=2, row = 4)
+    button_toff = ttk.Button(filewin2, text="Send", command=lambda:[write_leds(ledList.get())]).grid(column=3, row = 4)
     
     
     Label(filewin2, text = "").grid(column=1, row = 5)
-    _tgnss = txt_tgnss.get(1.0, END)
-    _tium = txt_timu.get(1.0, END)
-    _toff = txt_toff.get(1.0, END)
-    #_leds = led_menu.getdouble(1.0, END)
-    button = ttk.Button(filewin2, text="Send config", command=lambda:[write_config(_tgnss,_tium, _toff, ledList)], underline=TRUE).grid(column=1, row = 6, columnspan=2)
     button2 = ttk.Button(filewin2, text="Exit", command=lambda:[EXIT(), filewin2.destroy()], underline=TRUE).grid(column=1, row = 7, columnspan=2)
-    filewin2.protocol("WM_DELETE_WINDOW", EXIT())
+    #filewin2.protocol("WM_DELETE_WINDOW", EXIT())
 
 ser = serial.Serial()
 serFlag = 0
@@ -286,7 +297,7 @@ subBtn.grid(column=3,row=1, sticky = (E))
 subBtn = ttk.Button(gFrameCmd,text="Delete IMU logs",command = ICLR, width=20)
 subBtn.grid(column=3,row=2, rowspan=2, sticky = (E))
 
-subBtn = ttk.Button(gFrameCmd,text="Configurate BlackBox",command = lambda:[config_mode(), CONFIG()], width=24)
+subBtn = ttk.Button(gFrameCmd,text="Configurate BlackBox",command = lambda:[CONFIG(), config_mode()], width=24)
 subBtn.grid(column=0,row=1, rowspan=2, sticky = (E))
 
 
