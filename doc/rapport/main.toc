@@ -86,13 +86,13 @@
 \contentsline {subsection}{\numberline {7.3}Bus de communications}{46}{subsection.7.3}%
 \contentsline {subsubsection}{\numberline {7.3.1}Communication I2C}{46}{subsubsection.7.3.1}%
 \contentsline {paragraph}{\numberline {7.3.1.1}Méthode de mesure}{46}{paragraph.7.3.1.1}%
-\contentsline {paragraph}{\numberline {7.3.1.2}Mesures}{46}{figure.caption.90}%
+\contentsline {paragraph}{\numberline {7.3.1.2}Mesures}{46}{figure.caption.92}%
 \contentsline {subsubsection}{\numberline {7.3.2}Communication UART}{46}{subsubsection.7.3.2}%
 \contentsline {paragraph}{\numberline {7.3.2.1}Méthode de mesure}{46}{paragraph.7.3.2.1}%
-\contentsline {paragraph}{\numberline {7.3.2.2}Mesures}{47}{figure.caption.93}%
+\contentsline {paragraph}{\numberline {7.3.2.2}Mesures}{47}{figure.caption.95}%
 \contentsline {subsubsection}{\numberline {7.3.3}Communication SPI, carte SD}{47}{subsubsection.7.3.3}%
 \contentsline {paragraph}{\numberline {7.3.3.1}Méthode de mesure}{47}{paragraph.7.3.3.1}%
-\contentsline {paragraph}{\numberline {7.3.3.2}Mesures}{47}{figure.caption.95}%
+\contentsline {paragraph}{\numberline {7.3.3.2}Mesures}{47}{figure.caption.97}%
 \contentsline {section}{\numberline {8}Caractéristiques du produit fini}{47}{section.8}%
 \contentsline {section}{\numberline {9}Conclusion}{51}{section.9}%
 \contentsline {section}{\numberline {10}Bibliographie}{52}{section.10}%

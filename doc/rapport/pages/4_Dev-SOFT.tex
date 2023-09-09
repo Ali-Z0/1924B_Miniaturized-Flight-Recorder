@@ -584,7 +584,21 @@ Sur la figure \ref{fig:config-mode-imu}, les jumpers sont entourés en \textbf{r
 Dans cette section, nous décrirons les formats des données enregistrées sur la carte SD.
 
 \subsubsection{Données de l'IMU} 
-Les données de la centrale inertielle sont enregistrer dans un fichier \textbf{CSV} et suivent un format fixe.
+Les données de la centrale inertielle sont enregistrer dans un fichier \textbf{CSV} et suivent un format fixe :
+
+\textcolor{red}{Flag accélération};\textcolor{blue}{Delta time};\textcolor{orange}{Gravity X;Y;Z};\textcolor{green}{Gyroscope X;Y;Z};\textcolor{purple}{Magnitude X;Y;Z}\textcolor{violet}{Accél. linéaire X;Y;Z};\textcolor{cyan}{Angle Euler H;P;R},\textcolor{brown}{Quaternion W;X;Y;Z}
+
+\paragraph*{Exemple d'un set de données CSV}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\linewidth]{../figures/code/donbnees-csv}
+	\caption{Données CSV.}
+	\label{fig:donbnees-csv}
+	\source{Auteur}
+\end{figure}
+
+
 
 \subsubsection{Données du GNSS} 
 

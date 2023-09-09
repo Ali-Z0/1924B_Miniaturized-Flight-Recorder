@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.8.7)  8 SEP 2023 21:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.8.7)  9 SEP 2023 16:54
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2478,7 +2478,14 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [43
 
  <../figures/code/jumper-config-mode-IMU.pdf> <../figures/code/config-mode-IMU.
-png>]) (./pages/5_Val-MES.tex
+png>]
+<../figures/code/donbnees-csv.pdf, id=1414, 1007.52068pt x 117.3468pt>
+File: ../figures/code/donbnees-csv.pdf Graphic file (type pdf)
+<use ../figures/code/donbnees-csv.pdf>
+Package pdftex.def Info: ../figures/code/donbnees-csv.pdf  used on input line 5
+95.
+(pdftex.def)             Requested size: 452.9679pt x 52.75722pt.
+) (./pages/5_Val-MES.tex
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2489,8 +2496,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [44
 
-]
-<../figures/mesures/schema-courant.pdf, id=1419, 567.91666pt x 328.56494pt>
+ <../figures/code/donbnees-csv.pdf>]
+<../figures/mesures/schema-courant.pdf, id=1437, 567.91666pt x 328.56494pt>
 File: ../figures/mesures/schema-courant.pdf Graphic file (type pdf)
 <use ../figures/mesures/schema-courant.pdf>
 Package pdftex.def Info: ../figures/mesures/schema-courant.pdf  used on input l
@@ -2511,7 +2518,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 pdfTeX warning: pdflatex.exe (file ../figures/mesures/led-imu.pdf): PDF inclusi
 on: found PDF version <1.6>, but at most version <1.5> allowed
-<../figures/mesures/led-imu.pdf, id=1446, 268.00125pt x 706.64pt>
+<../figures/mesures/led-imu.pdf, id=1464, 268.00125pt x 706.64pt>
 File: ../figures/mesures/led-imu.pdf Graphic file (type pdf)
 <use ../figures/mesures/led-imu.pdf>
 Package pdftex.def Info: ../figures/mesures/led-imu.pdf  used on input line 74.
@@ -2521,7 +2528,7 @@ Package pdftex.def Info: ../figures/mesures/led-imu.pdf  used on input line 74.
 
 pdfTeX warning: pdflatex.exe (file ../figures/mesures/I2C/Intervale-2s.pdf): PD
 F inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<../figures/mesures/I2C/Intervale-2s.pdf, id=1449, 1284.8pt x 827.09pt>
+<../figures/mesures/I2C/Intervale-2s.pdf, id=1467, 1284.8pt x 827.09pt>
 File: ../figures/mesures/I2C/Intervale-2s.pdf Graphic file (type pdf)
 <use ../figures/mesures/I2C/Intervale-2s.pdf>
 Package pdftex.def Info: ../figures/mesures/I2C/Intervale-2s.pdf  used on input
@@ -2534,7 +2541,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 pdfTeX warning: pdflatex.exe (file ../figures/mesures/I2C/duree-comm.pdf): PDF 
 inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<../figures/mesures/I2C/duree-comm.pdf, id=1450, 1284.8pt x 827.09pt>
+<../figures/mesures/I2C/duree-comm.pdf, id=1468, 1284.8pt x 827.09pt>
 File: ../figures/mesures/I2C/duree-comm.pdf Graphic file (type pdf)
 <use ../figures/mesures/I2C/duree-comm.pdf>
 Package pdftex.def Info: ../figures/mesures/I2C/duree-comm.pdf  used on input l
@@ -2547,7 +2554,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 pdfTeX warning: pdflatex.exe (file ../figures/mesures/I2C/Tramme-mesure.pdf): P
 DF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<../figures/mesures/I2C/Tramme-mesure.pdf, id=1451, 1284.8pt x 827.09pt>
+<../figures/mesures/I2C/Tramme-mesure.pdf, id=1469, 1284.8pt x 827.09pt>
 File: ../figures/mesures/I2C/Tramme-mesure.pdf Graphic file (type pdf)
 <use ../figures/mesures/I2C/Tramme-mesure.pdf>
 Package pdftex.def Info: ../figures/mesures/I2C/Tramme-mesure.pdf  used on inpu
@@ -2560,7 +2567,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 pdfTeX warning: pdflatex.exe (file ../figures/mesures/UART/interval-gnss.pdf): 
 PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<../figures/mesures/UART/interval-gnss.pdf, id=1452, 1284.8pt x 827.09pt>
+<../figures/mesures/UART/interval-gnss.pdf, id=1470, 1284.8pt x 827.09pt>
 File: ../figures/mesures/UART/interval-gnss.pdf Graphic file (type pdf)
 <use ../figures/mesures/UART/interval-gnss.pdf>
 Package pdftex.def Info: ../figures/mesures/UART/interval-gnss.pdf  used on inp
@@ -2582,7 +2589,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 pdfTeX warning: pdflatex.exe (file ../figures/mesures/UART/duree-comm-gnss.pdf)
 : PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<../figures/mesures/UART/duree-comm-gnss.pdf, id=1461, 1284.8pt x 827.09pt>
+<../figures/mesures/UART/duree-comm-gnss.pdf, id=1479, 1284.8pt x 827.09pt>
 File: ../figures/mesures/UART/duree-comm-gnss.pdf Graphic file (type pdf)
 <use ../figures/mesures/UART/duree-comm-gnss.pdf>
 Package pdftex.def Info: ../figures/mesures/UART/duree-comm-gnss.pdf  used on i
@@ -2595,7 +2602,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 pdfTeX warning: pdflatex.exe (file ../figures/mesures/UART/message-NMEA-RMC.pdf
 ): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<../figures/mesures/UART/message-NMEA-RMC.pdf, id=1462, 1284.8pt x 827.09pt>
+<../figures/mesures/UART/message-NMEA-RMC.pdf, id=1480, 1284.8pt x 827.09pt>
 File: ../figures/mesures/UART/message-NMEA-RMC.pdf Graphic file (type pdf)
 <use ../figures/mesures/UART/message-NMEA-RMC.pdf>
 Package pdftex.def Info: ../figures/mesures/UART/message-NMEA-RMC.pdf  used on 
@@ -2608,7 +2615,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 pdfTeX warning: pdflatex.exe (file ../figures/mesures/SPI/freq-spi.pdf): PDF in
 clusion: found PDF version <1.6>, but at most version <1.5> allowed
-<../figures/mesures/SPI/freq-spi.pdf, id=1463, 1284.8pt x 827.09pt>
+<../figures/mesures/SPI/freq-spi.pdf, id=1481, 1284.8pt x 827.09pt>
 File: ../figures/mesures/SPI/freq-spi.pdf Graphic file (type pdf)
 <use ../figures/mesures/SPI/freq-spi.pdf>
 Package pdftex.def Info: ../figures/mesures/SPI/freq-spi.pdf  used on input lin
@@ -2621,7 +2628,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 pdfTeX warning: pdflatex.exe (file ../figures/mesures/SPI/densite-comm.pdf): PD
 F inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<../figures/mesures/SPI/densite-comm.pdf, id=1464, 1284.8pt x 827.09pt>
+<../figures/mesures/SPI/densite-comm.pdf, id=1482, 1284.8pt x 827.09pt>
 File: ../figures/mesures/SPI/densite-comm.pdf Graphic file (type pdf)
 <use ../figures/mesures/SPI/densite-comm.pdf>
 Package pdftex.def Info: ../figures/mesures/SPI/densite-comm.pdf  used on input
@@ -2707,15 +2714,15 @@ LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-03>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 8F6B4DD216AD1B0E5BD9801A7B15C725;16149.
+(rerunfilecheck)             Checksum: B6D91C310491CDD82C10E04902E8F97A;16149.
 runsystem(del main.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 46046 strings out of 475187
- 912595 string characters out of 5767784
+ 46058 strings out of 475187
+ 913005 string characters out of 5767784
  1945248 words of memory out of 5000000
- 66257 multiletter control sequences out of 15000+600000
+ 66267 multiletter control sequences out of 15000+600000
  662371 words of font info for 158 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  109i,15n,117p,2289b,956s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2731,10 +2738,10 @@ live/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2023/texmf-di
 st/fonts/type1/urw/times/utmbi8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/ur
 w/times/utmr8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/times/utmri8a.pf
 b>
-Output written on main.pdf (54 pages, 10280826 bytes).
+Output written on main.pdf (54 pages, 10290026 bytes).
 PDF statistics:
- 1641 PDF objects out of 1728 (max. 8388607)
- 1332 compressed objects within 14 object streams
- 270 named destinations out of 1000 (max. 500000)
- 1102 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1660 PDF objects out of 1728 (max. 8388607)
+ 1346 compressed objects within 14 object streams
+ 272 named destinations out of 1000 (max. 500000)
+ 1107 words of extra memory for PDF output out of 10000 (max. 10000000)
 
