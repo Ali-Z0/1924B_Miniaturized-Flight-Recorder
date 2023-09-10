@@ -111,11 +111,13 @@
 \contentsline {section}{\numberline {11}Annexes}{64}{section.11}%
 \contentsline {subsection}{\numberline {11.1}Schéma}{65}{subsection.11.1}%
 \contentsline {subsection}{\numberline {11.2}Dessin du boitier}{69}{subsection.11.2}%
-\contentsline {subsection}{\numberline {11.3}Fichiers PCB}{73}{subsection.11.3}%
-\contentsline {subsection}{\numberline {11.4}Code du firmware C}{75}{subsection.11.4}%
-\contentsline {subsection}{\numberline {11.5}Code python du script visualisation CSV}{121}{subsection.11.5}%
-\contentsline {subsection}{\numberline {11.6}Code python de l'application BBX-Connect}{124}{subsection.11.6}%
-\contentsline {subsection}{\numberline {11.7}Manuel d'utilisation}{131}{subsection.11.7}%
-\contentsline {subsection}{\numberline {11.8}Fichier de modification}{132}{subsection.11.8}%
-\contentsline {subsection}{\numberline {11.9}Journal de travail}{133}{subsection.11.9}%
-\contentsline {subsection}{\numberline {11.10}Historique Git}{134}{subsection.11.10}%
+\contentsline {subsection}{\numberline {11.3}Bill Of Materials}{73}{subsection.11.3}%
+\contentsline {subsection}{\numberline {11.4}Fichiers PCB}{74}{subsection.11.4}%
+\contentsline {subsection}{\numberline {11.5}Code du firmware C}{76}{subsection.11.5}%
+\contentsline {subsection}{\numberline {11.6}Code python du script visualisation CSV}{122}{subsection.11.6}%
+\contentsline {subsection}{\numberline {11.7}Code python de l'application BBX-Connect}{125}{subsection.11.7}%
+\contentsline {subsection}{\numberline {11.8}Manuel d'utilisation}{132}{subsection.11.8}%
+\contentsline {subsection}{\numberline {11.9}Fichier de modification}{133}{subsection.11.9}%
+\contentsline {subsection}{\numberline {11.10}PVs des séances}{134}{subsection.11.10}%
+\contentsline {subsection}{\numberline {11.11}Journal de travail}{139}{subsection.11.11}%
+\contentsline {subsection}{\numberline {11.12}Historique Git}{140}{subsection.11.12}%
