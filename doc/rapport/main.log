@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.8.7)  10 SEP 2023 13:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.8.7)  10 SEP 2023 13:42
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2891,21 +2891,21 @@ nput line 175.
 
 pdfTeX warning: pdflatex.exe (file ../figures/mesures/UART/message-NMEA-RMC.pdf
 ): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<../figures/mesures/UART/message-NMEA-RMC.pdf, id=13873, 1284.8pt x 827.09pt>
+<../figures/mesures/UART/message-NMEA-RMC.pdf, id=13874, 1284.8pt x 827.09pt>
 File: ../figures/mesures/UART/message-NMEA-RMC.pdf Graphic file (type pdf)
 <use ../figures/mesures/UART/message-NMEA-RMC.pdf>
 Package pdftex.def Info: ../figures/mesures/UART/message-NMEA-RMC.pdf  used on 
-input line 183.
+input line 185.
 (pdftex.def)             Requested size: 317.07614pt x 204.10909pt.
 
 
 pdfTeX warning: pdflatex.exe (file ../figures/mesures/SPI/freq-spi.pdf): PDF in
 clusion: found PDF version <1.6>, but at most version <1.5> allowed
-<../figures/mesures/SPI/freq-spi.pdf, id=13874, 1284.8pt x 827.09pt>
+<../figures/mesures/SPI/freq-spi.pdf, id=13875, 1284.8pt x 827.09pt>
 File: ../figures/mesures/SPI/freq-spi.pdf Graphic file (type pdf)
 <use ../figures/mesures/SPI/freq-spi.pdf>
 Package pdftex.def Info: ../figures/mesures/SPI/freq-spi.pdf  used on input lin
-e 197.
+e 199.
 (pdftex.def)             Requested size: 317.07614pt x 204.10909pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2920,11 +2920,11 @@ age-NMEA-RMC.pdf>]
 
 pdfTeX warning: pdflatex.exe (file ../figures/mesures/SPI/densite-comm.pdf): PD
 F inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<../figures/mesures/SPI/densite-comm.pdf, id=15060, 1284.8pt x 827.09pt>
+<../figures/mesures/SPI/densite-comm.pdf, id=15061, 1284.8pt x 827.09pt>
 File: ../figures/mesures/SPI/densite-comm.pdf Graphic file (type pdf)
 <use ../figures/mesures/SPI/densite-comm.pdf>
 Package pdftex.def Info: ../figures/mesures/SPI/densite-comm.pdf  used on input
- line 205.
+ line 207.
 (pdftex.def)             Requested size: 317.07614pt x 204.10909pt.
 )
 
@@ -2997,10 +2997,10 @@ live/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2023/texmf-di
 st/fonts/type1/urw/times/utmbi8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/ur
 w/times/utmr8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/times/utmri8a.pf
 b>
-Output written on main.pdf (60 pages, 13101553 bytes).
+Output written on main.pdf (60 pages, 13101663 bytes).
 PDF statistics:
- 15215 PDF objects out of 15390 (max. 8388607)
- 8607 compressed objects within 87 object streams
+ 15216 PDF objects out of 15390 (max. 8388607)
+ 8608 compressed objects within 87 object streams
  299 named destinations out of 1000 (max. 500000)
  1367 words of extra memory for PDF output out of 10000 (max. 10000000)
 
