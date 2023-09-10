@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.8.7)  10 SEP 2023 23:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.8.7)  10 SEP 2023 23:58
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1602,7 +1602,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [5
 
 ]
-<./ETML-ES-LOGO.png, id=670, 200.75pt x 200.75pt>
+<./ETML-ES-LOGO.png, id=676, 200.75pt x 200.75pt>
 File: ./ETML-ES-LOGO.png Graphic file (type png)
 <use ./ETML-ES-LOGO.png>
 Package pdftex.def Info: ./ETML-ES-LOGO.png  used on input line 6.
@@ -1626,7 +1626,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 pdfTeX warning: pdflatex.exe (file ../figures/cdc/schema_principe.pdf): PDF inc
 lusion: found PDF version <1.7>, but at most version <1.5> allowed
-<../figures/cdc/schema_principe.pdf, id=687, 253.90858pt x 270.0489pt>
+<../figures/cdc/schema_principe.pdf, id=692, 253.90858pt x 270.0489pt>
 File: ../figures/cdc/schema_principe.pdf Graphic file (type pdf)
 <use ../figures/cdc/schema_principe.pdf>
 Package pdftex.def Info: ../figures/cdc/schema_principe.pdf  used on input line
@@ -1641,12 +1641,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [7 <../figures/cdc/schema_principe.pdf>]
-<../figures/cdc/planif.png, id=709, 3012.0028pt x 1509.38907pt>
+<../figures/cdc/planif.png, id=714, 3012.0028pt x 1509.38907pt>
 File: ../figures/cdc/planif.png Graphic file (type png)
 <use ../figures/cdc/planif.png>
 Package pdftex.def Info: ../figures/cdc/planif.png  used on input line 80.
 (pdftex.def)             Requested size: 452.9679pt x 226.97438pt.
-<../figures/cdc/planif_theorique.png, id=710, 1383.66937pt x 336.50719pt>
+<../figures/cdc/planif_theorique.png, id=715, 1383.66937pt x 336.50719pt>
 File: ../figures/cdc/planif_theorique.png Graphic file (type png)
 <use ../figures/cdc/planif_theorique.png>
 Package pdftex.def Info: ../figures/cdc/planif_theorique.png  used on input lin
@@ -1668,7 +1668,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 pdfTeX warning: pdflatex.exe (file ../figures/cdc/blocs_grossiers_no_antenna.pd
 f): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<../figures/cdc/blocs_grossiers_no_antenna.pdf, id=721, 824.11888pt x 450.72388
+<../figures/cdc/blocs_grossiers_no_antenna.pdf, id=726, 824.11888pt x 450.72388
 pt>
 File: ../figures/cdc/blocs_grossiers_no_antenna.pdf Graphic file (type pdf)
 <use ../figures/cdc/blocs_grossiers_no_antenna.pdf>
@@ -1689,7 +1689,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 pdfTeX warning: pdflatex.exe (file ../figures/pre_etude/familles_pic32.pdf): PD
 F inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<../figures/pre_etude/familles_pic32.pdf, id=761, 1034.86626pt x 727.71875pt>
+<../figures/pre_etude/familles_pic32.pdf, id=766, 1034.86626pt x 727.71875pt>
 File: ../figures/pre_etude/familles_pic32.pdf Graphic file (type pdf)
 <use ../figures/pre_etude/familles_pic32.pdf>
 Package pdftex.def Info: ../figures/pre_etude/familles_pic32.pdf  used on input
@@ -1699,7 +1699,7 @@ Package pdftex.def Info: ../figures/pre_etude/familles_pic32.pdf  used on input
 
 pdfTeX warning: pdflatex.exe (file ../figures/pre_etude/Carac_PIC32.pdf): PDF i
 nclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<../figures/pre_etude/Carac_PIC32.pdf, id=766, 661.47125pt x 271.0125pt>
+<../figures/pre_etude/Carac_PIC32.pdf, id=771, 661.47125pt x 271.0125pt>
 File: ../figures/pre_etude/Carac_PIC32.pdf Graphic file (type pdf)
 <use ../figures/pre_etude/Carac_PIC32.pdf>
 Package pdftex.def Info: ../figures/pre_etude/Carac_PIC32.pdf  used on input li
@@ -1717,7 +1717,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
  <../figures/pre_etude/familles_pic32.pdf> <../figures/pre_etude/Carac_PIC32.pd
 f>]
-<../figures/pre_etude/BNO055_Adafruit.png, id=779, 338.01282pt x 269.50688pt>
+<../figures/pre_etude/BNO055_Adafruit.png, id=784, 338.01282pt x 269.50688pt>
 File: ../figures/pre_etude/BNO055_Adafruit.png Graphic file (type png)
 <use ../figures/pre_etude/BNO055_Adafruit.png>
 Package pdftex.def Info: ../figures/pre_etude/BNO055_Adafruit.png  used on inpu
@@ -1738,7 +1738,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 pdfTeX warning: pdflatex.exe (file ../figures/pre_etude/img_gnss.pdf): PDF incl
 usion: found PDF version <1.6>, but at most version <1.5> allowed
-<../figures/pre_etude/img_gnss.pdf, id=794, 1035.87pt x 471.7625pt>
+<../figures/pre_etude/img_gnss.pdf, id=799, 1035.87pt x 471.7625pt>
 File: ../figures/pre_etude/img_gnss.pdf Graphic file (type pdf)
 <use ../figures/pre_etude/img_gnss.pdf>
 Package pdftex.def Info: ../figures/pre_etude/img_gnss.pdf  used on input line 
@@ -1748,7 +1748,7 @@ Package pdftex.def Info: ../figures/pre_etude/img_gnss.pdf  used on input line
 
 pdfTeX warning: pdflatex.exe (file ../figures/pre_etude/Comp_GNSS.pdf): PDF inc
 lusion: found PDF version <1.6>, but at most version <1.5> allowed
-<../figures/pre_etude/Comp_GNSS.pdf, id=797, 685.56125pt x 547.04375pt>
+<../figures/pre_etude/Comp_GNSS.pdf, id=802, 685.56125pt x 547.04375pt>
 File: ../figures/pre_etude/Comp_GNSS.pdf Graphic file (type pdf)
 <use ../figures/pre_etude/Comp_GNSS.pdf>
 Package pdftex.def Info: ../figures/pre_etude/Comp_GNSS.pdf  used on input line
@@ -1765,7 +1765,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [12
 
  <../figures/pre_etude/img_gnss.pdf> <../figures/pre_etude/Comp_GNSS.pdf>]
-<../figures/pre_etude/CarteSD_Illustration.png, id=813, 376.40625pt x 376.40625
+<../figures/pre_etude/CarteSD_Illustration.png, id=818, 376.40625pt x 376.40625
 pt>
 File: ../figures/pre_etude/CarteSD_Illustration.png Graphic file (type png)
 <use ../figures/pre_etude/CarteSD_Illustration.png>
@@ -1795,19 +1795,19 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [14
 
 ]
-<../figures/pre_etude/batt.jpg, id=844, 466.75565pt x 108.54782pt>
+<../figures/pre_etude/batt.jpg, id=849, 466.75565pt x 108.54782pt>
 File: ../figures/pre_etude/batt.jpg Graphic file (type jpg)
 <use ../figures/pre_etude/batt.jpg>
 Package pdftex.def Info: ../figures/pre_etude/batt.jpg  used on input line 241.
 
 (pdftex.def)             Requested size: 362.37569pt x 84.27274pt.
-<../figures/pre_etude/batt2.jpg, id=848, 575.30348pt x 206.52652pt>
+<../figures/pre_etude/batt2.jpg, id=853, 575.30348pt x 206.52652pt>
 File: ../figures/pre_etude/batt2.jpg Graphic file (type jpg)
 <use ../figures/pre_etude/batt2.jpg>
 Package pdftex.def Info: ../figures/pre_etude/batt2.jpg  used on input line 251
 .
 (pdftex.def)             Requested size: 362.37569pt x 130.09033pt.
-<../figures/pre_etude/MCP.png, id=851, 481.8pt x 481.8pt>
+<../figures/pre_etude/MCP.png, id=856, 481.8pt x 481.8pt>
 File: ../figures/pre_etude/MCP.png Graphic file (type png)
 <use ../figures/pre_etude/MCP.png>
 Package pdftex.def Info: ../figures/pre_etude/MCP.png  used on input line 263.
@@ -1829,7 +1829,7 @@ re_etude/MCP.png>]
 pdfTeX warning: pdflatex.exe (file ../figures/pre_etude/Diagramme_Etat_Preetude
 .pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowe
 d
-<../figures/pre_etude/Diagramme_Etat_Preetude.pdf, id=866, 392.42609pt x 139.48
+<../figures/pre_etude/Diagramme_Etat_Preetude.pdf, id=871, 392.42609pt x 139.48
 11pt>
 File: ../figures/pre_etude/Diagramme_Etat_Preetude.pdf Graphic file (type pdf)
 <use ../figures/pre_etude/Diagramme_Etat_Preetude.pdf>
@@ -1858,7 +1858,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [17
 
 ]
-<../figures/etude/sch/BLOCS.pdf, id=916, 841.87822pt x 354.91997pt>
+<../figures/etude/sch/BLOCS.pdf, id=921, 841.87822pt x 354.91997pt>
 File: ../figures/etude/sch/BLOCS.pdf Graphic file (type pdf)
 <use ../figures/etude/sch/BLOCS.pdf>
 Package pdftex.def Info: ../figures/etude/sch/BLOCS.pdf  used on input line 12.
@@ -1874,18 +1874,18 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [18 <../figures/etude/sch/BLOCS.pdf>]
-<../figures/etude/sch/MCU.pdf, id=949, 1142.67099pt x 559.89162pt>
+<../figures/etude/sch/MCU.pdf, id=954, 1142.67099pt x 559.89162pt>
 File: ../figures/etude/sch/MCU.pdf Graphic file (type pdf)
 <use ../figures/etude/sch/MCU.pdf>
 Package pdftex.def Info: ../figures/etude/sch/MCU.pdf  used on input line 57.
 (pdftex.def)             Requested size: 271.7835pt x 133.16359pt.
-<../figures/etude/sch/MCU-HARMONY.jpg, id=950, 3129.6925pt x 3087.535pt>
+<../figures/etude/sch/MCU-HARMONY.jpg, id=955, 3129.6925pt x 3087.535pt>
 File: ../figures/etude/sch/MCU-HARMONY.jpg Graphic file (type jpg)
 <use ../figures/etude/sch/MCU-HARMONY.jpg>
 Package pdftex.def Info: ../figures/etude/sch/MCU-HARMONY.jpg  used on input li
 ne 64.
 (pdftex.def)             Requested size: 135.89174pt x 134.03343pt.
-<../figures/etude/sch/Prog-Reset.pdf, id=956, 719.62761pt x 384.99596pt>
+<../figures/etude/sch/Prog-Reset.pdf, id=961, 719.62761pt x 384.99596pt>
 File: ../figures/etude/sch/Prog-Reset.pdf Graphic file (type pdf)
 <use ../figures/etude/sch/Prog-Reset.pdf>
 Package pdftex.def Info: ../figures/etude/sch/Prog-Reset.pdf  used on input lin
@@ -1908,12 +1908,12 @@ res/etude/sch/Prog-Reset.pdf
 pdfTeX warning: pdflatex.exe (file ../figures/etude/sch/Prog-Reset.pdf): PDF in
 clusion: multiple pdfs with page group included in a single page
 >]
-<../figures/etude/DIM-LED.jpg, id=992, 240.28352pt x 91.13852pt>
+<../figures/etude/DIM-LED.jpg, id=997, 240.28352pt x 91.13852pt>
 File: ../figures/etude/DIM-LED.jpg Graphic file (type jpg)
 <use ../figures/etude/DIM-LED.jpg>
 Package pdftex.def Info: ../figures/etude/DIM-LED.jpg  used on input line 95.
 (pdftex.def)             Requested size: 407.66833pt x 154.62747pt.
-<../figures/etude/sch/LED-Vie.pdf, id=997, 278.54219pt x 380.32445pt>
+<../figures/etude/sch/LED-Vie.pdf, id=1002, 278.54219pt x 380.32445pt>
 File: ../figures/etude/sch/LED-Vie.pdf Graphic file (type pdf)
 <use ../figures/etude/sch/LED-Vie.pdf>
 Package pdftex.def Info: ../figures/etude/sch/LED-Vie.pdf  used on input line 1
@@ -1931,18 +1931,18 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [20
 
  <../figures/etude/DIM-LED.jpg> <../figures/etude/sch/LED-Vie.pdf>]
-<../figures/etude/sch/Carte-SD.pdf, id=1027, 837.20837pt x 559.04955pt>
+<../figures/etude/sch/Carte-SD.pdf, id=1032, 837.20837pt x 559.04955pt>
 File: ../figures/etude/sch/Carte-SD.pdf Graphic file (type pdf)
 <use ../figures/etude/sch/Carte-SD.pdf>
 Package pdftex.def Info: ../figures/etude/sch/Carte-SD.pdf  used on input line 
 127.
 (pdftex.def)             Requested size: 226.48395pt x 151.23543pt.
-<../figures/etude/sch/IMU.pdf, id=1029, 760.6415pt x 484.96129pt>
+<../figures/etude/sch/IMU.pdf, id=1034, 760.6415pt x 484.96129pt>
 File: ../figures/etude/sch/IMU.pdf Graphic file (type pdf)
 <use ../figures/etude/sch/IMU.pdf>
 Package pdftex.def Info: ../figures/etude/sch/IMU.pdf  used on input line 140.
 (pdftex.def)             Requested size: 226.48395pt x 144.40172pt.
-<../figures/etude/sch/GNSS.pdf, id=1032, 754.2922pt x 428.08203pt>
+<../figures/etude/sch/GNSS.pdf, id=1037, 754.2922pt x 428.08203pt>
 File: ../figures/etude/sch/GNSS.pdf Graphic file (type pdf)
 <use ../figures/etude/sch/GNSS.pdf>
 Package pdftex.def Info: ../figures/etude/sch/GNSS.pdf  used on input line 152.
@@ -1964,7 +1964,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 pdfTeX warning: pdflatex.exe (file ../figures/etude/sch/IMU.pdf): PDF inclusion
 : multiple pdfs with page group included in a single page
 >]
-<../figures/etude/sch/USB-FTDI.pdf, id=1086, 827.58318pt x 492.61261pt>
+<../figures/etude/sch/USB-FTDI.pdf, id=1091, 827.58318pt x 492.61261pt>
 File: ../figures/etude/sch/USB-FTDI.pdf Graphic file (type pdf)
 <use ../figures/etude/sch/USB-FTDI.pdf>
 Package pdftex.def Info: ../figures/etude/sch/USB-FTDI.pdf  used on input line 
@@ -1984,7 +1984,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 pdfTeX warning: pdflatex.exe (file ../figures/etude/sch/USB-FTDI.pdf): PDF incl
 usion: multiple pdfs with page group included in a single page
 >]
-<../figures/etude/sch/CHRG-BAT.pdf, id=1127, 746.1822pt x 390.93103pt>
+<../figures/etude/sch/CHRG-BAT.pdf, id=1132, 746.1822pt x 390.93103pt>
 File: ../figures/etude/sch/CHRG-BAT.pdf Graphic file (type pdf)
 <use ../figures/etude/sch/CHRG-BAT.pdf>
 Package pdftex.def Info: ../figures/etude/sch/CHRG-BAT.pdf  used on input line 
@@ -2002,7 +2002,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [23
 
  <../figures/etude/sch/CHRG-BAT.pdf>]
-<../figures/etude/sch/ON-OFF.pdf, id=1149, 1132.85208pt x 392.95232pt>
+<../figures/etude/sch/ON-OFF.pdf, id=1154, 1132.85208pt x 392.95232pt>
 File: ../figures/etude/sch/ON-OFF.pdf Graphic file (type pdf)
 <use ../figures/etude/sch/ON-OFF.pdf>
 Package pdftex.def Info: ../figures/etude/sch/ON-OFF.pdf  used on input line 21
@@ -2037,7 +2037,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 pdfTeX warning: pdflatex.exe (file ../figures/dev-pcb/boitier-dim.pdf): PDF inc
 lusion: found PDF version <1.6>, but at most version <1.5> allowed
-<../figures/dev-pcb/boitier-dim.pdf, id=1193, 5731.4125pt x 3732.94624pt>
+<../figures/dev-pcb/boitier-dim.pdf, id=1198, 5731.4125pt x 3732.94624pt>
 File: ../figures/dev-pcb/boitier-dim.pdf Graphic file (type pdf)
 <use ../figures/dev-pcb/boitier-dim.pdf>
 Package pdftex.def Info: ../figures/dev-pcb/boitier-dim.pdf  used on input line
@@ -2047,7 +2047,7 @@ Package pdftex.def Info: ../figures/dev-pcb/boitier-dim.pdf  used on input line
 
 pdfTeX warning: pdflatex.exe (file ../figures/dev-pcb/boitier-dims-pcb.pdf): PD
 F inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<../figures/dev-pcb/boitier-dims-pcb.pdf, id=1194, 4785.88pt x 6226.26125pt>
+<../figures/dev-pcb/boitier-dims-pcb.pdf, id=1199, 4785.88pt x 6226.26125pt>
 File: ../figures/dev-pcb/boitier-dims-pcb.pdf Graphic file (type pdf)
 <use ../figures/dev-pcb/boitier-dims-pcb.pdf>
 Package pdftex.def Info: ../figures/dev-pcb/boitier-dims-pcb.pdf  used on input
@@ -2065,25 +2065,25 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
  <../figures/dev-pcb/boitier-dim.pdf, page is rotated 90 degrees> <../figures/d
 ev-pcb/boitier-dims-pcb.pdf>]
-<../figures/dev-pcb/PCB-Dims.jpg, id=1216, 541.0614pt x 289.5618pt>
+<../figures/dev-pcb/PCB-Dims.jpg, id=1221, 541.0614pt x 289.5618pt>
 File: ../figures/dev-pcb/PCB-Dims.jpg Graphic file (type jpg)
 <use ../figures/dev-pcb/PCB-Dims.jpg>
 Package pdftex.def Info: ../figures/dev-pcb/PCB-Dims.jpg  used on input line 61
 .
 (pdftex.def)             Requested size: 375.96417pt x 201.21614pt.
-<../figures/dev-pcb/3d-view3.png, id=1221, 354.32375pt x 709.65125pt>
+<../figures/dev-pcb/3d-view3.png, id=1226, 354.32375pt x 709.65125pt>
 File: ../figures/dev-pcb/3d-view3.png Graphic file (type png)
 <use ../figures/dev-pcb/3d-view3.png>
 Package pdftex.def Info: ../figures/dev-pcb/3d-view3.png  used on input line 77
 .
 (pdftex.def)             Requested size: 108.71478pt x 217.7373pt.
-<../figures/dev-pcb/3d-view2.png, id=1222, 368.1253pt x 384.6872pt>
+<../figures/dev-pcb/3d-view2.png, id=1227, 368.1253pt x 384.6872pt>
 File: ../figures/dev-pcb/3d-view2.png Graphic file (type png)
 <use ../figures/dev-pcb/3d-view2.png>
 Package pdftex.def Info: ../figures/dev-pcb/3d-view2.png  used on input line 84
 .
 (pdftex.def)             Requested size: 149.48022pt x 156.20834pt.
-<../figures/dev-pcb/3d-view1.png, id=1223, 581.17125pt x 243.15843pt>
+<../figures/dev-pcb/3d-view1.png, id=1228, 581.17125pt x 243.15843pt>
 File: ../figures/dev-pcb/3d-view1.png Graphic file (type png)
 <use ../figures/dev-pcb/3d-view1.png>
 Package pdftex.def Info: ../figures/dev-pcb/3d-view1.png  used on input line 91
@@ -2116,7 +2116,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 pdfTeX warning: pdflatex.exe (file ../figures/dev-pcb/Couches-layout.pdf): PDF 
 inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<../figures/dev-pcb/Couches-layout.pdf, id=1246, 4552.44098pt x 2532.29535pt>
+<../figures/dev-pcb/Couches-layout.pdf, id=1251, 4552.44098pt x 2532.29535pt>
 File: ../figures/dev-pcb/Couches-layout.pdf Graphic file (type pdf)
 <use ../figures/dev-pcb/Couches-layout.pdf>
 Package pdftex.def Info: ../figures/dev-pcb/Couches-layout.pdf  used on input l
@@ -2144,7 +2144,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [30
 
 ]
-<../figures/code/Protocols.jpg, id=1276, 1300.1072pt x 223.58531pt>
+<../figures/code/Protocols.jpg, id=1281, 1300.1072pt x 223.58531pt>
 File: ../figures/code/Protocols.jpg Graphic file (type jpg)
 <use ../figures/code/Protocols.jpg>
 Package pdftex.def Info: ../figures/code/Protocols.jpg  used on input line 14.
@@ -2158,7 +2158,7 @@ Overfull \hbox (17.62482pt too wide) in paragraph at lines 24--25
 
 pdfTeX warning: pdflatex.exe (file ../figures/code/Default-messages.pdf): PDF i
 nclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<../figures/code/Default-messages.pdf, id=1282, 1734.48pt x 772.8875pt>
+<../figures/code/Default-messages.pdf, id=1287, 1734.48pt x 772.8875pt>
 File: ../figures/code/Default-messages.pdf Graphic file (type pdf)
 <use ../figures/code/Default-messages.pdf>
 Package pdftex.def Info: ../figures/code/Default-messages.pdf  used on input li
@@ -2173,7 +2173,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [31 <../figures/code/Protocols.JPG> <../figures/code/Default-messages.pdf>]
-<../figures/code/Messages-NMEA.jpg, id=1298, 1084.05pt x 619.56468pt>
+<../figures/code/Messages-NMEA.jpg, id=1303, 1084.05pt x 619.56468pt>
 File: ../figures/code/Messages-NMEA.jpg Graphic file (type jpg)
 <use ../figures/code/Messages-NMEA.jpg>
 Package pdftex.def Info: ../figures/code/Messages-NMEA.jpg  used on input line 
@@ -2189,13 +2189,13 @@ Package epstopdf Info: Source file: <../figures/code/map-localisation.eps>
 erted-to.pdf ../figures/code/map-localisation.eps>
 (epstopdf)             \includegraphics on input line 61.
 Package epstopdf Info: Output file is already uptodate.
-<./map-localisation-eps-converted-to.pdf, id=1304, 1251.67625pt x 426.59375pt>
+<./map-localisation-eps-converted-to.pdf, id=1309, 1251.67625pt x 426.59375pt>
 File: ./map-localisation-eps-converted-to.pdf Graphic file (type pdf)
 <use ./map-localisation-eps-converted-to.pdf>
 Package pdftex.def Info: ./map-localisation-eps-converted-to.pdf  used on input
  line 61.
 (pdftex.def)             Requested size: 339.72592pt x 115.7807pt.
-<../figures/code/parsed-nmea.jpg, id=1310, 1013.28563pt x 133.24782pt>
+<../figures/code/parsed-nmea.jpg, id=1315, 1013.28563pt x 133.24782pt>
 File: ../figures/code/parsed-nmea.jpg Graphic file (type jpg)
 <use ../figures/code/parsed-nmea.jpg>
 Package pdftex.def Info: ../figures/code/parsed-nmea.jpg  used on input line 71
@@ -2277,7 +2277,7 @@ Package epstopdf Info: Source file: <../figures/code/périphériques.eps>
 rted-to.pdf ../figures/code/périphériques.eps>
 (epstopdf)             \includegraphics on input line 190.
 Package epstopdf Info: Output file is already uptodate.
-<./périphériques-eps-converted-to.pdf, id=1340, 290.08376pt x 63.23625pt>
+<./périphériques-eps-converted-to.pdf, id=1345, 290.08376pt x 63.23625pt>
 File: ./périphériques-eps-converted-to.pdf Graphic file (type pdf)
 <use ./périphériques-eps-converted-to.pdf>
 Package pdftex.def Info: ./périphériques-eps-converted-to.pdf  used on input 
@@ -2298,7 +2298,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 pdfTeX warning: pdflatex.exe (file ../figures/code/harmony/timers.pdf): PDF inc
 lusion: found PDF version <1.6>, but at most version <1.5> allowed
-<../figures/code/harmony/timers.pdf, id=1353, 1590.94376pt x 2104.86375pt>
+<../figures/code/harmony/timers.pdf, id=1358, 1590.94376pt x 2104.86375pt>
 File: ../figures/code/harmony/timers.pdf Graphic file (type pdf)
 <use ../figures/code/harmony/timers.pdf>
 Package pdftex.def Info: ../figures/code/harmony/timers.pdf  used on input line
@@ -2344,7 +2344,7 @@ Overfull \hbox (10.72035pt too wide) in paragraph at lines 296--302
 
 pdfTeX warning: pdflatex.exe (file ../figures/code/harmony/SD-card.pdf): PDF in
 clusion: found PDF version <1.6>, but at most version <1.5> allowed
-<../figures/code/harmony/SD-card.pdf, id=1374, 273.02pt x 271.0125pt>
+<../figures/code/harmony/SD-card.pdf, id=1379, 273.02pt x 271.0125pt>
 File: ../figures/code/harmony/SD-card.pdf Graphic file (type pdf)
 <use ../figures/code/harmony/SD-card.pdf>
 Package pdftex.def Info: ../figures/code/harmony/SD-card.pdf  used on input lin
@@ -2354,7 +2354,7 @@ e 315.
 
 pdfTeX warning: pdflatex.exe (file ../figures/code/harmony/SD-card-spi.pdf): PD
 F inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<../figures/code/harmony/SD-card-spi.pdf, id=1375, 1349.04pt x 1437.37pt>
+<../figures/code/harmony/SD-card-spi.pdf, id=1380, 1349.04pt x 1437.37pt>
 File: ../figures/code/harmony/SD-card-spi.pdf Graphic file (type pdf)
 <use ../figures/code/harmony/SD-card-spi.pdf>
 Package pdftex.def Info: ../figures/code/harmony/SD-card-spi.pdf  used on input
@@ -2372,7 +2372,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
  <../figures/code/harmony/SD-card.pdf> <../figures/code/harmony/SD-card-spi.pdf
 >]
-<../figures/code/diagrammes/state_app.pdf, id=1393, 590.205pt x 362.35374pt>
+<../figures/code/diagrammes/state_app.pdf, id=1398, 590.205pt x 362.35374pt>
 File: ../figures/code/diagrammes/state_app.pdf Graphic file (type pdf)
 <use ../figures/code/diagrammes/state_app.pdf>
 Package pdftex.def Info: ../figures/code/diagrammes/state_app.pdf  used on inpu
@@ -2393,7 +2393,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 pdfTeX warning: pdflatex.exe (file ../figures/code/diagrammes/sequence-app.pdf)
 : PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<../figures/code/diagrammes/sequence-app.pdf, id=1424, 597.55246pt x 845.07724p
+<../figures/code/diagrammes/sequence-app.pdf, id=1430, 597.55246pt x 845.07724p
 t>
 File: ../figures/code/diagrammes/sequence-app.pdf Graphic file (type pdf)
 <use ../figures/code/diagrammes/sequence-app.pdf>
@@ -2415,7 +2415,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 pdfTeX warning: pdflatex.exe (file ../figures/code/diagrammes/logging-flowchart
 .pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowe
 d
-<../figures/code/diagrammes/logging-flowchart.pdf, id=1433, 597.55246pt x 845.0
+<../figures/code/diagrammes/logging-flowchart.pdf, id=1438, 597.55246pt x 845.0
 7724pt>
 File: ../figures/code/diagrammes/logging-flowchart.pdf Graphic file (type pdf)
 <use ../figures/code/diagrammes/logging-flowchart.pdf>
@@ -2442,7 +2442,7 @@ uve dans l'�tat \T1/ptm/b/n/12 APP_STATE_CONFIG\T1/ptm/m/n/12 ,
 
 pdfTeX warning: pdflatex.exe (file ../figures/code/diagrammes/sd-card-Init.pdf)
 : PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<../figures/code/diagrammes/sd-card-Init.pdf, id=1443, 593.32965pt x 518.37163p
+<../figures/code/diagrammes/sd-card-Init.pdf, id=1448, 593.32965pt x 518.37163p
 t>
 File: ../figures/code/diagrammes/sd-card-Init.pdf Graphic file (type pdf)
 <use ../figures/code/diagrammes/sd-card-Init.pdf>
@@ -2463,7 +2463,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 pdfTeX warning: pdflatex.exe (file ../figures/code/diagrammes/sd-card-logging.p
 df): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<../figures/code/diagrammes/sd-card-logging.pdf, id=1472, 592.2737pt x 528.9290
+<../figures/code/diagrammes/sd-card-logging.pdf, id=1477, 592.2737pt x 528.9290
 8pt>
 File: ../figures/code/diagrammes/sd-card-logging.pdf Graphic file (type pdf)
 <use ../figures/code/diagrammes/sd-card-logging.pdf>
@@ -2474,7 +2474,7 @@ n input line 432.
 
 pdfTeX warning: pdflatex.exe (file ../figures/code/Illustration-SD-per.pdf): PD
 F inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<../figures/code/Illustration-SD-per.pdf, id=1473, 231.8512pt x 106.92648pt>
+<../figures/code/Illustration-SD-per.pdf, id=1478, 231.8512pt x 106.92648pt>
 File: ../figures/code/Illustration-SD-per.pdf Graphic file (type pdf)
 <use ../figures/code/Illustration-SD-per.pdf>
 Package pdftex.def Info: ../figures/code/Illustration-SD-per.pdf  used on input
@@ -2576,13 +2576,13 @@ Overfull \hbox (41.59299pt too wide) in paragraph at lines 567--572
 [][] 
  []
 
-<../figures/code/jumper-config-mode-IMU.pdf, id=1531, 829.0975pt x 335.2525pt>
+<../figures/code/jumper-config-mode-IMU.pdf, id=1536, 829.0975pt x 335.2525pt>
 File: ../figures/code/jumper-config-mode-IMU.pdf Graphic file (type pdf)
 <use ../figures/code/jumper-config-mode-IMU.pdf>
 Package pdftex.def Info: ../figures/code/jumper-config-mode-IMU.pdf  used on in
 put line 575.
 (pdftex.def)             Requested size: 271.7835pt x 109.89702pt.
-<../figures/code/config-mode-IMU.png, id=1532, 478.78876pt x 410.2828pt>
+<../figures/code/config-mode-IMU.png, id=1537, 478.78876pt x 410.2828pt>
 File: ../figures/code/config-mode-IMU.png Graphic file (type png)
 <use ../figures/code/config-mode-IMU.png>
 Package pdftex.def Info: ../figures/code/config-mode-IMU.png  used on input lin
@@ -2600,13 +2600,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
  <../figures/code/jumper-config-mode-IMU.pdf> <../figures/code/config-mode-IMU.
 png>]
-<../figures/code/donbnees-csv.pdf, id=1551, 1007.52068pt x 117.3468pt>
+<../figures/code/donbnees-csv.pdf, id=1556, 1007.52068pt x 117.3468pt>
 File: ../figures/code/donbnees-csv.pdf Graphic file (type pdf)
 <use ../figures/code/donbnees-csv.pdf>
 Package pdftex.def Info: ../figures/code/donbnees-csv.pdf  used on input line 6
 06.
 (pdftex.def)             Requested size: 452.9679pt x 52.75722pt.
-<../figures/application/mesures.pdf, id=1553, 1387.58403pt x 755.9442pt>
+<../figures/application/mesures.pdf, id=1558, 1387.58403pt x 755.9442pt>
 File: ../figures/application/mesures.pdf Graphic file (type pdf)
 <use ../figures/application/mesures.pdf>
 Package pdftex.def Info: ../figures/application/mesures.pdf  used on input line
@@ -2629,7 +2629,7 @@ Overfull \hbox (3.35205pt too wide) in paragraph at lines 630--631
 es [][]47[][] contiennent dif-f�-rents mes-sages NMEA
  []
 
-<../figures/code/donnees-nmea.pdf, id=1640, 384.4637pt x 169.10834pt>
+<../figures/code/donnees-nmea.pdf, id=1645, 384.4637pt x 169.10834pt>
 File: ../figures/code/donnees-nmea.pdf Graphic file (type pdf)
 <use ../figures/code/donnees-nmea.pdf>
 Package pdftex.def Info: ../figures/code/donnees-nmea.pdf  used on input line 6
@@ -2639,7 +2639,7 @@ Package pdftex.def Info: ../figures/code/donnees-nmea.pdf  used on input line 6
 
 pdfTeX warning: pdflatex.exe (file ../figures/code/antenna-types.pdf): PDF incl
 usion: found PDF version <1.6>, but at most version <1.5> allowed
-<../figures/code/antenna-types.pdf, id=1642, 878.28125pt x 408.52625pt>
+<../figures/code/antenna-types.pdf, id=1647, 878.28125pt x 408.52625pt>
 File: ../figures/code/antenna-types.pdf Graphic file (type pdf)
 <use ../figures/code/antenna-types.pdf>
 Package pdftex.def Info: ../figures/code/antenna-types.pdf  used on input line 
@@ -2658,7 +2658,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 pdfTeX warning: pdflatex.exe (file ../figures/code/diagrammes/bno-support-class
 .pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowe
 d
-<../figures/code/diagrammes/bno-support-class.pdf, id=1662, 569.04698pt x 459.2
+<../figures/code/diagrammes/bno-support-class.pdf, id=1667, 569.04698pt x 459.2
 4976pt>
 File: ../figures/code/diagrammes/bno-support-class.pdf Graphic file (type pdf)
 <use ../figures/code/diagrammes/bno-support-class.pdf>
@@ -2669,7 +2669,7 @@ Package pdftex.def Info: ../figures/code/diagrammes/bno-support-class.pdf  used
 
 pdfTeX warning: pdflatex.exe (file ../figures/code/diagrammes/sd-card-class.pdf
 ): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<../figures/code/diagrammes/sd-card-class.pdf, id=1665, 597.55246pt x 446.58041
+<../figures/code/diagrammes/sd-card-class.pdf, id=1670, 597.55246pt x 446.58041
 pt>
 File: ../figures/code/diagrammes/sd-card-class.pdf Graphic file (type pdf)
 <use ../figures/code/diagrammes/sd-card-class.pdf>
@@ -2690,7 +2690,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 pdfTeX warning: pdflatex.exe (file ../figures/code/diagrammes/ser-com-class.pdf
 ): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<../figures/code/diagrammes/ser-com-class.pdf, id=1675, 596.4965pt x 254.43456p
+<../figures/code/diagrammes/ser-com-class.pdf, id=1680, 596.4965pt x 254.43456p
 t>
 File: ../figures/code/diagrammes/ser-com-class.pdf Graphic file (type pdf)
 <use ../figures/code/diagrammes/ser-com-class.pdf>
@@ -2707,7 +2707,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [49 <../figures/code/diagrammes/sd-card-class.pdf> <../figures/code/diagrammes/
 ser-com-class.pdf>]
-<../figures/application/tkinter.pdf, id=1688, 308.15125pt x 117.43875pt>
+<../figures/application/tkinter.pdf, id=1693, 308.15125pt x 117.43875pt>
 File: ../figures/application/tkinter.pdf Graphic file (type pdf)
 <use ../figures/application/tkinter.pdf>
 Package pdftex.def Info: ../figures/application/tkinter.pdf  used on input line
@@ -2734,20 +2734,20 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [50
 
  <../figures/application/tkinter.pdf>]
-<../figures/application/screen_logGnss.jpg, id=4652, 814.54312pt x 517.18219pt>
+<../figures/application/screen_logGnss.jpg, id=4657, 814.54312pt x 517.18219pt>
 
 File: ../figures/application/screen_logGnss.jpg Graphic file (type jpg)
 <use ../figures/application/screen_logGnss.jpg>
 Package pdftex.def Info: ../figures/application/screen_logGnss.jpg  used on inp
 ut line 731.
 (pdftex.def)             Requested size: 339.72592pt x 215.69986pt.
-<../figures/application/Config_window.jpg, id=4655, 340.27126pt x 182.18062pt>
+<../figures/application/Config_window.jpg, id=4660, 340.27126pt x 182.18062pt>
 File: ../figures/application/Config_window.jpg Graphic file (type jpg)
 <use ../figures/application/Config_window.jpg>
 Package pdftex.def Info: ../figures/application/Config_window.jpg  used on inpu
 t line 739.
 (pdftex.def)             Requested size: 226.48395pt x 121.25977pt.
-<../figures/application/scree_save.jpg, id=4656, 152.06813pt x 152.06813pt>
+<../figures/application/scree_save.jpg, id=4661, 152.06813pt x 152.06813pt>
 File: ../figures/application/scree_save.jpg Graphic file (type jpg)
 <use ../figures/application/scree_save.jpg>
 Package pdftex.def Info: ../figures/application/scree_save.jpg  used on input l
@@ -2766,7 +2766,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
  <../figures/application/screen_logGnss.JPG> <../figures/application/Config_win
 dow.JPG> <../figures/application/scree_save.JPG>]
-<../figures/mesures/schema-courant.pdf, id=4665, 567.91666pt x 328.56494pt>
+<../figures/mesures/schema-courant.pdf, id=4670, 567.91666pt x 328.56494pt>
 File: ../figures/mesures/schema-courant.pdf Graphic file (type pdf)
 <use ../figures/mesures/schema-courant.pdf>
 Package pdftex.def Info: ../figures/mesures/schema-courant.pdf  used on input l
@@ -2787,7 +2787,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 pdfTeX warning: pdflatex.exe (file ../figures/mesures/led-imu.pdf): PDF inclusi
 on: found PDF version <1.6>, but at most version <1.5> allowed
-<../figures/mesures/led-imu.pdf, id=4692, 268.00125pt x 706.64pt>
+<../figures/mesures/led-imu.pdf, id=4697, 268.00125pt x 706.64pt>
 File: ../figures/mesures/led-imu.pdf Graphic file (type pdf)
 <use ../figures/mesures/led-imu.pdf>
 Package pdftex.def Info: ../figures/mesures/led-imu.pdf  used on input line 75.
@@ -2802,14 +2802,14 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [53 <../figures/mesures/led-imu.pdf>]
-<../figures/mesures/I2C/Schema-mesure-i2c.pdf, id=4706, 142.13168pt x 76.654pt>
+<../figures/mesures/I2C/Schema-mesure-i2c.pdf, id=4711, 142.13168pt x 76.654pt>
 
 File: ../figures/mesures/I2C/Schema-mesure-i2c.pdf Graphic file (type pdf)
 <use ../figures/mesures/I2C/Schema-mesure-i2c.pdf>
 Package pdftex.def Info: ../figures/mesures/I2C/Schema-mesure-i2c.pdf  used on 
 input line 102.
 (pdftex.def)             Requested size: 181.18439pt x 97.7191pt.
-<../figures/mesures/I2C/Intervale-2s.pdf, id=4708, 1284.8pt x 828.09375pt>
+<../figures/mesures/I2C/Intervale-2s.pdf, id=4713, 1284.8pt x 828.09375pt>
 File: ../figures/mesures/I2C/Intervale-2s.pdf Graphic file (type pdf)
 <use ../figures/mesures/I2C/Intervale-2s.pdf>
 Package pdftex.def Info: ../figures/mesures/I2C/Intervale-2s.pdf  used on input
@@ -2830,7 +2830,7 @@ rvale-2s.pdf
 pdfTeX warning: pdflatex.exe (file ../figures/mesures/I2C/Intervale-2s.pdf): PD
 F inclusion: multiple pdfs with page group included in a single page
 >]
-<../figures/mesures/I2C/duree-comm.pdf, id=5824, 1284.8pt x 828.09375pt>
+<../figures/mesures/I2C/duree-comm.pdf, id=5829, 1284.8pt x 828.09375pt>
 File: ../figures/mesures/I2C/duree-comm.pdf Graphic file (type pdf)
 <use ../figures/mesures/I2C/duree-comm.pdf>
 Package pdftex.def Info: ../figures/mesures/I2C/duree-comm.pdf  used on input l
@@ -2840,7 +2840,7 @@ ine 126.
 
 pdfTeX warning: pdflatex.exe (file ../figures/mesures/I2C/Tramme-mesure.pdf): P
 DF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<../figures/mesures/I2C/Tramme-mesure.pdf, id=5827, 1284.8pt x 827.09pt>
+<../figures/mesures/I2C/Tramme-mesure.pdf, id=5832, 1284.8pt x 827.09pt>
 File: ../figures/mesures/I2C/Tramme-mesure.pdf Graphic file (type pdf)
 <use ../figures/mesures/I2C/Tramme-mesure.pdf>
 Package pdftex.def Info: ../figures/mesures/I2C/Tramme-mesure.pdf  used on inpu
@@ -2856,7 +2856,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [55 <../figures/mesures/I2C/duree-comm.pdf> <../figures/mesures/I2C/Tramme-mesu
 re.pdf>]
-<../figures/mesures/UART/scheam-mesure-uart-gnss.pdf, id=12739, 140.88332pt x 7
+<../figures/mesures/UART/scheam-mesure-uart-gnss.pdf, id=12744, 140.88332pt x 7
 7.43454pt>
 File: ../figures/mesures/UART/scheam-mesure-uart-gnss.pdf Graphic file (type pd
 f)
@@ -2864,7 +2864,7 @@ f)
 Package pdftex.def Info: ../figures/mesures/UART/scheam-mesure-uart-gnss.pdf  u
 sed on input line 152.
 (pdftex.def)             Requested size: 181.18439pt x 99.59084pt.
-<../figures/mesures/UART/interval-gnss.pdf, id=12744, 1284.8pt x 828.09375pt>
+<../figures/mesures/UART/interval-gnss.pdf, id=12749, 1284.8pt x 828.09375pt>
 File: ../figures/mesures/UART/interval-gnss.pdf Graphic file (type pdf)
 <use ../figures/mesures/UART/interval-gnss.pdf>
 Package pdftex.def Info: ../figures/mesures/UART/interval-gnss.pdf  used on inp
@@ -2887,7 +2887,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 pdfTeX warning: pdflatex.exe (file ../figures/mesures/UART/interval-gnss.pdf): 
 PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<../figures/mesures/UART/duree-comm-gnss.pdf, id=13938, 1284.8pt x 828.09375pt>
+<../figures/mesures/UART/duree-comm-gnss.pdf, id=13943, 1284.8pt x 828.09375pt>
 
 File: ../figures/mesures/UART/duree-comm-gnss.pdf Graphic file (type pdf)
 <use ../figures/mesures/UART/duree-comm-gnss.pdf>
@@ -2898,7 +2898,7 @@ nput line 176.
 
 pdfTeX warning: pdflatex.exe (file ../figures/mesures/UART/message-NMEA-RMC.pdf
 ): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<../figures/mesures/UART/message-NMEA-RMC.pdf, id=13941, 1284.8pt x 827.09pt>
+<../figures/mesures/UART/message-NMEA-RMC.pdf, id=13946, 1284.8pt x 827.09pt>
 File: ../figures/mesures/UART/message-NMEA-RMC.pdf Graphic file (type pdf)
 <use ../figures/mesures/UART/message-NMEA-RMC.pdf>
 Package pdftex.def Info: ../figures/mesures/UART/message-NMEA-RMC.pdf  used on 
@@ -2921,7 +2921,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [57 <../figures/mesures/UART/duree-comm-gnss.pdf> <../figures/mesures/UART/mess
 age-NMEA-RMC.pdf>]
-<../figures/mesures/UART-FTDI/Schema-mesure-FTDI.pdf, id=15133, 176.66pt x 85.3
+<../figures/mesures/UART-FTDI/Schema-mesure-FTDI.pdf, id=15138, 176.66pt x 85.3
 1876pt>
 File: ../figures/mesures/UART-FTDI/Schema-mesure-FTDI.pdf Graphic file (type pd
 f)
@@ -2929,7 +2929,7 @@ f)
 Package pdftex.def Info: ../figures/mesures/UART-FTDI/Schema-mesure-FTDI.pdf  u
 sed on input line 206.
 (pdftex.def)             Requested size: 181.18439pt x 87.50433pt.
-<../figures/mesures/UART-FTDI/comm-uart2-config.pdf, id=15136, 1285.80376pt x 8
+<../figures/mesures/UART-FTDI/comm-uart2-config.pdf, id=15141, 1285.80376pt x 8
 28.09375pt>
 File: ../figures/mesures/UART-FTDI/comm-uart2-config.pdf Graphic file (type pdf
 )
@@ -2955,7 +2955,7 @@ pdfTeX warning: pdflatex.exe (file ../figures/mesures/UART-FTDI/comm-uart2-conf
 ig.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 
 >]
-<../figures/mesures/UART-FTDI/comm-uart-ecartLog.pdf, id=19737, 1285.80376pt x 
+<../figures/mesures/UART-FTDI/comm-uart-ecartLog.pdf, id=19742, 1285.80376pt x 
 828.09375pt>
 File: ../figures/mesures/UART-FTDI/comm-uart-ecartLog.pdf Graphic file (type pd
 f)
@@ -2963,7 +2963,7 @@ f)
 Package pdftex.def Info: ../figures/mesures/UART-FTDI/comm-uart-ecartLog.pdf  u
 sed on input line 230.
 (pdftex.def)             Requested size: 317.07614pt x 204.20517pt.
-<../figures/mesures/SPI/Schema-mesure-spi.pdf, id=19740, 169.7638pt x 91.38065p
+<../figures/mesures/SPI/Schema-mesure-spi.pdf, id=19745, 169.7638pt x 91.38065p
 t>
 File: ../figures/mesures/SPI/Schema-mesure-spi.pdf Graphic file (type pdf)
 <use ../figures/mesures/SPI/Schema-mesure-spi.pdf>
@@ -2990,7 +2990,7 @@ pdfTeX warning: pdflatex.exe (file ../figures/mesures/SPI/Schema-mesure-spi.pdf
 
 pdfTeX warning: pdflatex.exe (file ../figures/mesures/SPI/densite-comm.pdf): PD
 F inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<../figures/mesures/SPI/densite-comm.pdf, id=23080, 1284.8pt x 827.09pt>
+<../figures/mesures/SPI/densite-comm.pdf, id=23085, 1284.8pt x 827.09pt>
 File: ../figures/mesures/SPI/densite-comm.pdf Graphic file (type pdf)
 <use ../figures/mesures/SPI/densite-comm.pdf>
 Package pdftex.def Info: ../figures/mesures/SPI/densite-comm.pdf  used on input
@@ -3000,7 +3000,7 @@ Package pdftex.def Info: ../figures/mesures/SPI/densite-comm.pdf  used on input
 
 pdfTeX warning: pdflatex.exe (file ../figures/mesures/SPI/freq-spi-12.pdf): PDF
  inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<../figures/mesures/SPI/freq-spi-12.pdf, id=23083, 1284.8pt x 827.09pt>
+<../figures/mesures/SPI/freq-spi-12.pdf, id=23088, 1284.8pt x 827.09pt>
 File: ../figures/mesures/SPI/freq-spi-12.pdf Graphic file (type pdf)
 <use ../figures/mesures/SPI/freq-spi-12.pdf>
 Package pdftex.def Info: ../figures/mesures/SPI/freq-spi-12.pdf  used on input 
@@ -3054,7 +3054,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [63]
-<../annexes/Schematic-Prints.pdf, id=23127, 1119.18124pt x 801.99625pt>
+<../annexes/Schematic-Prints.pdf, id=23132, 1119.18124pt x 801.99625pt>
 File: ../annexes/Schematic-Prints.pdf Graphic file (type pdf)
 <use ../annexes/Schematic-Prints.pdf>
 Package pdftex.def Info: ../annexes/Schematic-Prints.pdf  used on input line 16
@@ -3065,7 +3065,7 @@ File: ../annexes/Schematic-Prints.pdf Graphic file (type pdf)
 Package pdftex.def Info: ../annexes/Schematic-Prints.pdf  used on input line 16
 7.
 (pdftex.def)             Requested size: 1119.17851pt x 801.99428pt.
-<../annexes/Schematic-Prints.pdf, id=23130, page=1, 1119.18124pt x 801.99625pt>
+<../annexes/Schematic-Prints.pdf, id=23135, page=1, 1119.18124pt x 801.99625pt>
 
 File: ../annexes/Schematic-Prints.pdf Graphic file (type pdf)
 <use ../annexes/Schematic-Prints.pdf, page 1>
@@ -3124,7 +3124,7 @@ File: ../annexes/Schematic-Prints.pdf Graphic file (type pdf)
 Package pdftex.def Info: ../annexes/Schematic-Prints.pdf  used on input line 16
 8.
 (pdftex.def)             Requested size: 1119.17851pt x 801.99428pt.
-<../annexes/Schematic-Prints.pdf, id=23164, page=2, 1119.18124pt x 801.99625pt>
+<../annexes/Schematic-Prints.pdf, id=23169, page=2, 1119.18124pt x 801.99625pt>
 
 File: ../annexes/Schematic-Prints.pdf Graphic file (type pdf)
 <use ../annexes/Schematic-Prints.pdf, page 2>
@@ -3161,7 +3161,7 @@ Package pdftex.def Info: ../annexes/Schematic-Prints.pdf , page2 used on input
 line 168.
 (pdftex.def)             Requested size: 895.34622pt x 641.59785pt.
 [66 <../annexes/Schematic-Prints.PDF>]
-<../annexes/Schematic-Prints.pdf, id=23197, page=3, 1119.18124pt x 801.99625pt>
+<../annexes/Schematic-Prints.pdf, id=23202, page=3, 1119.18124pt x 801.99625pt>
 
 File: ../annexes/Schematic-Prints.pdf Graphic file (type pdf)
 <use ../annexes/Schematic-Prints.pdf, page 3>
@@ -3188,7 +3188,7 @@ Package pdftex.def Info: ../annexes/Schematic-Prints.pdf , page3 used on input
 line 168.
 (pdftex.def)             Requested size: 895.34622pt x 641.59785pt.
 [67 <../annexes/Schematic-Prints.PDF>]
-<../annexes/Schematic-Prints.pdf, id=23217, page=4, 1119.18124pt x 801.99625pt>
+<../annexes/Schematic-Prints.pdf, id=23222, page=4, 1119.18124pt x 801.99625pt>
 
 File: ../annexes/Schematic-Prints.pdf Graphic file (type pdf)
 <use ../annexes/Schematic-Prints.pdf, page 4>
@@ -3218,7 +3218,7 @@ line 168.
 
 pdfTeX warning: pdflatex.exe (file ../annexes/Dessin-boitier.pdf): PDF inclusio
 n: found PDF version <1.7>, but at most version <1.5> allowed
-<../annexes/Dessin-boitier.pdf, id=23234, 1194.98447pt x 845.07724pt>
+<../annexes/Dessin-boitier.pdf, id=23239, 1194.98447pt x 845.07724pt>
 File: ../annexes/Dessin-boitier.pdf Graphic file (type pdf)
 <use ../annexes/Dessin-boitier.pdf>
 Package pdftex.def Info: ../annexes/Dessin-boitier.pdf  used on input line 170.
@@ -3241,7 +3241,7 @@ n: found PDF version <1.7>, but at most version <1.5> allowed
 
 pdfTeX warning: pdflatex.exe (file ../annexes/Dessin-boitier.pdf): PDF inclusio
 n: found PDF version <1.7>, but at most version <1.5> allowed
-<../annexes/Dessin-boitier.pdf, id=23237, page=1, 1194.98447pt x 845.07724pt>
+<../annexes/Dessin-boitier.pdf, id=23242, page=1, 1194.98447pt x 845.07724pt>
 File: ../annexes/Dessin-boitier.pdf Graphic file (type pdf)
 <use ../annexes/Dessin-boitier.pdf, page 1>
 Package pdftex.def Info: ../annexes/Dessin-boitier.pdf , page1 used on input li
@@ -3298,7 +3298,7 @@ n: found PDF version <1.7>, but at most version <1.5> allowed
 
 pdfTeX warning: pdflatex.exe (file ../annexes/Dessin-boitier.pdf): PDF inclusio
 n: found PDF version <1.7>, but at most version <1.5> allowed
-<../annexes/Dessin-boitier.pdf, id=23271, page=2, 1195.10492pt x 845.07718pt>
+<../annexes/Dessin-boitier.pdf, id=23276, page=2, 1195.10492pt x 845.07718pt>
 File: ../annexes/Dessin-boitier.pdf Graphic file (type pdf)
 <use ../annexes/Dessin-boitier.pdf, page 2>
 Package pdftex.def Info: ../annexes/Dessin-boitier.pdf , page2 used on input li
@@ -3336,7 +3336,7 @@ ne 171.
 
 pdfTeX warning: pdflatex.exe (file ../annexes/Dessin-boitier.pdf): PDF inclusio
 n: found PDF version <1.7>, but at most version <1.5> allowed
-<../annexes/Dessin-boitier.pdf, id=23289, page=3, 1195.10492pt x 845.07718pt>
+<../annexes/Dessin-boitier.pdf, id=23294, page=3, 1195.10492pt x 845.07718pt>
 File: ../annexes/Dessin-boitier.pdf Graphic file (type pdf)
 <use ../annexes/Dessin-boitier.pdf, page 3>
 Package pdftex.def Info: ../annexes/Dessin-boitier.pdf , page3 used on input li
@@ -3364,7 +3364,7 @@ ne 171.
 
 pdfTeX warning: pdflatex.exe (file ../annexes/Dessin-boitier.pdf): PDF inclusio
 n: found PDF version <1.7>, but at most version <1.5> allowed
-<../annexes/Dessin-boitier.pdf, id=23299, page=4, 1195.10492pt x 845.07718pt>
+<../annexes/Dessin-boitier.pdf, id=23304, page=4, 1195.10492pt x 845.07718pt>
 File: ../annexes/Dessin-boitier.pdf Graphic file (type pdf)
 <use ../annexes/Dessin-boitier.pdf, page 4>
 Package pdftex.def Info: ../annexes/Dessin-boitier.pdf , page4 used on input li
@@ -3389,7 +3389,7 @@ Package pdftex.def Info: ../annexes/Dessin-boitier.pdf , page4 used on input li
 ne 171.
 (pdftex.def)             Requested size: 956.08525pt x 676.06267pt.
 [72 <../annexes/Dessin-boitier.pdf, page is rotated 270 degrees>]
-<../annexes/PCB Top-Bottom Assy Dwgs.pdf, id=23310, 451.6875pt x 713.66624pt>
+<../annexes/PCB Top-Bottom Assy Dwgs.pdf, id=23315, 451.6875pt x 713.66624pt>
 File: ../annexes/PCB Top-Bottom Assy Dwgs.pdf Graphic file (type pdf)
 <use ../annexes/PCB Top-Bottom Assy Dwgs.pdf>
 Package pdftex.def Info: ../annexes/PCB Top-Bottom Assy Dwgs.pdf  used on input
@@ -3400,7 +3400,7 @@ File: ../annexes/PCB Top-Bottom Assy Dwgs.pdf Graphic file (type pdf)
 Package pdftex.def Info: ../annexes/PCB Top-Bottom Assy Dwgs.pdf  used on input
  line 173.
 (pdftex.def)             Requested size: 451.68639pt x 713.66449pt.
-<../annexes/PCB Top-Bottom Assy Dwgs.pdf, id=23313, page=1, 451.6875pt x 713.66
+<../annexes/PCB Top-Bottom Assy Dwgs.pdf, id=23318, page=1, 451.6875pt x 713.66
 624pt>
 File: ../annexes/PCB Top-Bottom Assy Dwgs.pdf Graphic file (type pdf)
 <use ../annexes/PCB Top-Bottom Assy Dwgs.pdf, page 1>
@@ -3447,7 +3447,7 @@ File: ../annexes/PCB Top-Bottom Assy Dwgs.pdf Graphic file (type pdf)
 Package pdftex.def Info: ../annexes/PCB Top-Bottom Assy Dwgs.pdf  used on input
  line 174.
 (pdftex.def)             Requested size: 451.68639pt x 713.66449pt.
-<../annexes/PCB Top-Bottom Assy Dwgs.pdf, id=23332, page=2, 451.6875pt x 713.66
+<../annexes/PCB Top-Bottom Assy Dwgs.pdf, id=23337, page=2, 451.6875pt x 713.66
 624pt>
 File: ../annexes/PCB Top-Bottom Assy Dwgs.pdf Graphic file (type pdf)
 <use ../annexes/PCB Top-Bottom Assy Dwgs.pdf, page 2>
@@ -3487,7 +3487,7 @@ n input line 174.
 
 pdfTeX warning: pdflatex.exe (file ../annexes/code/_Code_complet.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<../annexes/code/_Code_complet.pdf, id=23347, 597.55246pt x 845.07724pt>
+<../annexes/code/_Code_complet.pdf, id=23352, 597.55246pt x 845.07724pt>
 File: ../annexes/code/_Code_complet.pdf Graphic file (type pdf)
 <use ../annexes/code/_Code_complet.pdf>
 Package pdftex.def Info: ../annexes/code/_Code_complet.pdf  used on input line 
@@ -3510,7 +3510,7 @@ usion: found PDF version <1.7>, but at most version <1.5> allowed
 
 pdfTeX warning: pdflatex.exe (file ../annexes/code/_Code_complet.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<../annexes/code/_Code_complet.pdf, id=23350, page=1, 597.55246pt x 845.07724pt
+<../annexes/code/_Code_complet.pdf, id=23355, page=1, 597.55246pt x 845.07724pt
 >
 File: ../annexes/code/_Code_complet.pdf Graphic file (type pdf)
 <use ../annexes/code/_Code_complet.pdf, page 1>
@@ -3568,7 +3568,7 @@ usion: found PDF version <1.7>, but at most version <1.5> allowed
 
 pdfTeX warning: pdflatex.exe (file ../annexes/code/_Code_complet.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<../annexes/code/_Code_complet.pdf, id=23367, page=2, 597.55246pt x 845.07724pt
+<../annexes/code/_Code_complet.pdf, id=23372, page=2, 597.55246pt x 845.07724pt
 >
 File: ../annexes/code/_Code_complet.pdf Graphic file (type pdf)
 <use ../annexes/code/_Code_complet.pdf, page 2>
@@ -3607,7 +3607,7 @@ t line 177.
 
 pdfTeX warning: pdflatex.exe (file ../annexes/code/_Code_complet.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<../annexes/code/_Code_complet.pdf, id=23381, page=3, 597.55246pt x 845.07724pt
+<../annexes/code/_Code_complet.pdf, id=23386, page=3, 597.55246pt x 845.07724pt
 >
 File: ../annexes/code/_Code_complet.pdf Graphic file (type pdf)
 <use ../annexes/code/_Code_complet.pdf, page 3>
@@ -3636,7 +3636,7 @@ t line 177.
 
 pdfTeX warning: pdflatex.exe (file ../annexes/code/_Code_complet.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<../annexes/code/_Code_complet.pdf, id=23387, page=4, 597.55246pt x 845.07724pt
+<../annexes/code/_Code_complet.pdf, id=23392, page=4, 597.55246pt x 845.07724pt
 >
 File: ../annexes/code/_Code_complet.pdf Graphic file (type pdf)
 <use ../annexes/code/_Code_complet.pdf, page 4>
@@ -3665,7 +3665,7 @@ t line 177.
 
 pdfTeX warning: pdflatex.exe (file ../annexes/code/_Code_complet.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<../annexes/code/_Code_complet.pdf, id=23394, page=5, 597.55246pt x 845.07724pt
+<../annexes/code/_Code_complet.pdf, id=23399, page=5, 597.55246pt x 845.07724pt
 >
 File: ../annexes/code/_Code_complet.pdf Graphic file (type pdf)
 <use ../annexes/code/_Code_complet.pdf, page 5>
@@ -3694,7 +3694,7 @@ t line 177.
 
 pdfTeX warning: pdflatex.exe (file ../annexes/code/_Code_complet.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<../annexes/code/_Code_complet.pdf, id=23400, page=6, 597.55246pt x 845.07724pt
+<../annexes/code/_Code_complet.pdf, id=23406, page=6, 597.55246pt x 845.07724pt
 >
 File: ../annexes/code/_Code_complet.pdf Graphic file (type pdf)
 <use ../annexes/code/_Code_complet.pdf, page 6>
@@ -3723,7 +3723,7 @@ t line 177.
 
 pdfTeX warning: pdflatex.exe (file ../annexes/code/_Code_complet.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<../annexes/code/_Code_complet.pdf, id=23407, page=7, 597.55246pt x 845.07724pt
+<../annexes/code/_Code_complet.pdf, id=23412, page=7, 597.55246pt x 845.07724pt
 >
 File: ../annexes/code/_Code_complet.pdf Graphic file (type pdf)
 <use ../annexes/code/_Code_complet.pdf, page 7>
@@ -3752,7 +3752,7 @@ t line 177.
 
 pdfTeX warning: pdflatex.exe (file ../annexes/code/_Code_complet.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<../annexes/code/_Code_complet.pdf, id=23413, page=8, 597.55246pt x 845.07724pt
+<../annexes/code/_Code_complet.pdf, id=23418, page=8, 597.55246pt x 845.07724pt
 >
 File: ../annexes/code/_Code_complet.pdf Graphic file (type pdf)
 <use ../annexes/code/_Code_complet.pdf, page 8>
@@ -3781,7 +3781,7 @@ t line 177.
 
 pdfTeX warning: pdflatex.exe (file ../annexes/code/_Code_complet.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<../annexes/code/_Code_complet.pdf, id=23419, page=9, 597.55246pt x 845.07724pt
+<../annexes/code/_Code_complet.pdf, id=23424, page=9, 597.55246pt x 845.07724pt
 >
 File: ../annexes/code/_Code_complet.pdf Graphic file (type pdf)
 <use ../annexes/code/_Code_complet.pdf, page 9>
@@ -3810,7 +3810,7 @@ t line 177.
 
 pdfTeX warning: pdflatex.exe (file ../annexes/code/_Code_complet.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<../annexes/code/_Code_complet.pdf, id=23425, page=10, 597.55246pt x 845.07724p
+<../annexes/code/_Code_complet.pdf, id=23430, page=10, 597.55246pt x 845.07724p
 t>
 File: ../annexes/code/_Code_complet.pdf Graphic file (type pdf)
 <use ../annexes/code/_Code_complet.pdf, page 10>
@@ -3839,7 +3839,7 @@ ut line 177.
 
 pdfTeX warning: pdflatex.exe (file ../annexes/code/_Code_complet.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<../annexes/code/_Code_complet.pdf, id=23432, page=11, 597.55246pt x 845.07724p
+<../annexes/code/_Code_complet.pdf, id=23437, page=11, 597.55246pt x 845.07724p
 t>
 File: ../annexes/code/_Code_complet.pdf Graphic file (type pdf)
 <use ../annexes/code/_Code_complet.pdf, page 11>
@@ -3868,7 +3868,7 @@ ut line 177.
 
 pdfTeX warning: pdflatex.exe (file ../annexes/code/_Code_complet.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<../annexes/code/_Code_complet.pdf, id=23454, page=12, 597.55246pt x 845.07724p
+<../annexes/code/_Code_complet.pdf, id=23459, page=12, 597.55246pt x 845.07724p
 t>
 File: ../annexes/code/_Code_complet.pdf Graphic file (type pdf)
 <use ../annexes/code/_Code_complet.pdf, page 12>
@@ -3897,7 +3897,7 @@ ut line 177.
 
 pdfTeX warning: pdflatex.exe (file ../annexes/code/_Code_complet.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<../annexes/code/_Code_complet.pdf, id=23460, page=13, 597.55246pt x 845.07724p
+<../annexes/code/_Code_complet.pdf, id=23465, page=13, 597.55246pt x 845.07724p
 t>
 File: ../annexes/code/_Code_complet.pdf Graphic file (type pdf)
 <use ../annexes/code/_Code_complet.pdf, page 13>
@@ -3926,7 +3926,7 @@ ut line 177.
 
 pdfTeX warning: pdflatex.exe (file ../annexes/code/_Code_complet.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<../annexes/code/_Code_complet.pdf, id=23466, page=14, 597.55246pt x 845.07724p
+<../annexes/code/_Code_complet.pdf, id=23471, page=14, 597.55246pt x 845.07724p
 t>
 File: ../annexes/code/_Code_complet.pdf Graphic file (type pdf)
 <use ../annexes/code/_Code_complet.pdf, page 14>
@@ -3955,7 +3955,7 @@ ut line 177.
 
 pdfTeX warning: pdflatex.exe (file ../annexes/code/_Code_complet.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<../annexes/code/_Code_complet.pdf, id=23472, page=15, 597.55246pt x 845.07724p
+<../annexes/code/_Code_complet.pdf, id=23477, page=15, 597.55246pt x 845.07724p
 t>
 File: ../annexes/code/_Code_complet.pdf Graphic file (type pdf)
 <use ../annexes/code/_Code_complet.pdf, page 15>
@@ -3984,7 +3984,7 @@ ut line 177.
 
 pdfTeX warning: pdflatex.exe (file ../annexes/code/_Code_complet.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<../annexes/code/_Code_complet.pdf, id=23494, page=16, 597.55246pt x 845.07724p
+<../annexes/code/_Code_complet.pdf, id=23499, page=16, 597.55246pt x 845.07724p
 t>
 File: ../annexes/code/_Code_complet.pdf Graphic file (type pdf)
 <use ../annexes/code/_Code_complet.pdf, page 16>
@@ -4013,7 +4013,7 @@ ut line 177.
 
 pdfTeX warning: pdflatex.exe (file ../annexes/code/_Code_complet.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<../annexes/code/_Code_complet.pdf, id=23501, page=17, 597.55246pt x 845.07724p
+<../annexes/code/_Code_complet.pdf, id=23506, page=17, 597.55246pt x 845.07724p
 t>
 File: ../annexes/code/_Code_complet.pdf Graphic file (type pdf)
 <use ../annexes/code/_Code_complet.pdf, page 17>
@@ -4042,7 +4042,7 @@ ut line 177.
 
 pdfTeX warning: pdflatex.exe (file ../annexes/code/_Code_complet.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<../annexes/code/_Code_complet.pdf, id=23507, page=18, 597.55246pt x 845.07724p
+<../annexes/code/_Code_complet.pdf, id=23512, page=18, 597.55246pt x 845.07724p
 t>
 File: ../annexes/code/_Code_complet.pdf Graphic file (type pdf)
 <use ../annexes/code/_Code_complet.pdf, page 18>
@@ -4071,7 +4071,7 @@ ut line 177.
 
 pdfTeX warning: pdflatex.exe (file ../annexes/code/_Code_complet.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<../annexes/code/_Code_complet.pdf, id=23529, page=19, 597.55246pt x 845.07724p
+<../annexes/code/_Code_complet.pdf, id=23534, page=19, 597.55246pt x 845.07724p
 t>
 File: ../annexes/code/_Code_complet.pdf Graphic file (type pdf)
 <use ../annexes/code/_Code_complet.pdf, page 19>
@@ -4100,7 +4100,7 @@ ut line 177.
 
 pdfTeX warning: pdflatex.exe (file ../annexes/code/_Code_complet.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<../annexes/code/_Code_complet.pdf, id=23535, page=20, 597.55246pt x 845.07724p
+<../annexes/code/_Code_complet.pdf, id=23540, page=20, 597.55246pt x 845.07724p
 t>
 File: ../annexes/code/_Code_complet.pdf Graphic file (type pdf)
 <use ../annexes/code/_Code_complet.pdf, page 20>
@@ -4129,7 +4129,7 @@ ut line 177.
 
 pdfTeX warning: pdflatex.exe (file ../annexes/code/_Code_complet.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<../annexes/code/_Code_complet.pdf, id=23541, page=21, 597.55246pt x 845.07724p
+<../annexes/code/_Code_complet.pdf, id=23546, page=21, 597.55246pt x 845.07724p
 t>
 File: ../annexes/code/_Code_complet.pdf Graphic file (type pdf)
 <use ../annexes/code/_Code_complet.pdf, page 21>
@@ -4158,7 +4158,7 @@ ut line 177.
 
 pdfTeX warning: pdflatex.exe (file ../annexes/code/_Code_complet.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<../annexes/code/_Code_complet.pdf, id=23547, page=22, 597.55246pt x 845.07724p
+<../annexes/code/_Code_complet.pdf, id=23553, page=22, 597.55246pt x 845.07724p
 t>
 File: ../annexes/code/_Code_complet.pdf Graphic file (type pdf)
 <use ../annexes/code/_Code_complet.pdf, page 22>
@@ -4187,7 +4187,7 @@ ut line 177.
 
 pdfTeX warning: pdflatex.exe (file ../annexes/code/_Code_complet.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<../annexes/code/_Code_complet.pdf, id=23555, page=23, 597.55246pt x 845.07724p
+<../annexes/code/_Code_complet.pdf, id=23560, page=23, 597.55246pt x 845.07724p
 t>
 File: ../annexes/code/_Code_complet.pdf Graphic file (type pdf)
 <use ../annexes/code/_Code_complet.pdf, page 23>
@@ -4216,7 +4216,7 @@ ut line 177.
 
 pdfTeX warning: pdflatex.exe (file ../annexes/code/_Code_complet.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<../annexes/code/_Code_complet.pdf, id=23561, page=24, 597.55246pt x 845.07724p
+<../annexes/code/_Code_complet.pdf, id=23566, page=24, 597.55246pt x 845.07724p
 t>
 File: ../annexes/code/_Code_complet.pdf Graphic file (type pdf)
 <use ../annexes/code/_Code_complet.pdf, page 24>
@@ -4245,7 +4245,7 @@ ut line 177.
 
 pdfTeX warning: pdflatex.exe (file ../annexes/code/_Code_complet.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<../annexes/code/_Code_complet.pdf, id=23567, page=25, 597.55246pt x 845.07724p
+<../annexes/code/_Code_complet.pdf, id=23572, page=25, 597.55246pt x 845.07724p
 t>
 File: ../annexes/code/_Code_complet.pdf Graphic file (type pdf)
 <use ../annexes/code/_Code_complet.pdf, page 25>
@@ -4274,7 +4274,7 @@ ut line 177.
 
 pdfTeX warning: pdflatex.exe (file ../annexes/code/_Code_complet.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<../annexes/code/_Code_complet.pdf, id=23573, page=26, 597.55246pt x 845.07724p
+<../annexes/code/_Code_complet.pdf, id=23578, page=26, 597.55246pt x 845.07724p
 t>
 File: ../annexes/code/_Code_complet.pdf Graphic file (type pdf)
 <use ../annexes/code/_Code_complet.pdf, page 26>
@@ -4303,7 +4303,7 @@ ut line 177.
 
 pdfTeX warning: pdflatex.exe (file ../annexes/code/_Code_complet.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<../annexes/code/_Code_complet.pdf, id=23579, page=27, 597.55246pt x 845.07724p
+<../annexes/code/_Code_complet.pdf, id=23584, page=27, 597.55246pt x 845.07724p
 t>
 File: ../annexes/code/_Code_complet.pdf Graphic file (type pdf)
 <use ../annexes/code/_Code_complet.pdf, page 27>
@@ -4332,7 +4332,7 @@ ut line 177.
 
 pdfTeX warning: pdflatex.exe (file ../annexes/code/_Code_complet.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<../annexes/code/_Code_complet.pdf, id=23601, page=28, 597.55246pt x 845.07724p
+<../annexes/code/_Code_complet.pdf, id=23606, page=28, 597.55246pt x 845.07724p
 t>
 File: ../annexes/code/_Code_complet.pdf Graphic file (type pdf)
 <use ../annexes/code/_Code_complet.pdf, page 28>
@@ -4361,7 +4361,7 @@ ut line 177.
 
 pdfTeX warning: pdflatex.exe (file ../annexes/code/_Code_complet.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<../annexes/code/_Code_complet.pdf, id=23608, page=29, 597.55246pt x 845.07724p
+<../annexes/code/_Code_complet.pdf, id=23613, page=29, 597.55246pt x 845.07724p
 t>
 File: ../annexes/code/_Code_complet.pdf Graphic file (type pdf)
 <use ../annexes/code/_Code_complet.pdf, page 29>
@@ -4390,7 +4390,7 @@ ut line 177.
 
 pdfTeX warning: pdflatex.exe (file ../annexes/code/_Code_complet.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<../annexes/code/_Code_complet.pdf, id=23614, page=30, 597.55246pt x 845.07724p
+<../annexes/code/_Code_complet.pdf, id=23619, page=30, 597.55246pt x 845.07724p
 t>
 File: ../annexes/code/_Code_complet.pdf Graphic file (type pdf)
 <use ../annexes/code/_Code_complet.pdf, page 30>
@@ -4419,7 +4419,7 @@ ut line 177.
 
 pdfTeX warning: pdflatex.exe (file ../annexes/code/_Code_complet.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<../annexes/code/_Code_complet.pdf, id=23620, page=31, 597.55246pt x 845.07724p
+<../annexes/code/_Code_complet.pdf, id=23625, page=31, 597.55246pt x 845.07724p
 t>
 File: ../annexes/code/_Code_complet.pdf Graphic file (type pdf)
 <use ../annexes/code/_Code_complet.pdf, page 31>
@@ -4448,7 +4448,7 @@ ut line 177.
 
 pdfTeX warning: pdflatex.exe (file ../annexes/code/_Code_complet.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<../annexes/code/_Code_complet.pdf, id=23642, page=32, 597.55246pt x 845.07724p
+<../annexes/code/_Code_complet.pdf, id=23647, page=32, 597.55246pt x 845.07724p
 t>
 File: ../annexes/code/_Code_complet.pdf Graphic file (type pdf)
 <use ../annexes/code/_Code_complet.pdf, page 32>
@@ -4477,7 +4477,7 @@ ut line 177.
 
 pdfTeX warning: pdflatex.exe (file ../annexes/code/_Code_complet.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<../annexes/code/_Code_complet.pdf, id=23648, page=33, 597.55246pt x 845.07724p
+<../annexes/code/_Code_complet.pdf, id=23653, page=33, 597.55246pt x 845.07724p
 t>
 File: ../annexes/code/_Code_complet.pdf Graphic file (type pdf)
 <use ../annexes/code/_Code_complet.pdf, page 33>
@@ -4506,7 +4506,7 @@ ut line 177.
 
 pdfTeX warning: pdflatex.exe (file ../annexes/code/_Code_complet.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<../annexes/code/_Code_complet.pdf, id=23654, page=34, 597.55246pt x 845.07724p
+<../annexes/code/_Code_complet.pdf, id=23659, page=34, 597.55246pt x 845.07724p
 t>
 File: ../annexes/code/_Code_complet.pdf Graphic file (type pdf)
 <use ../annexes/code/_Code_complet.pdf, page 34>
@@ -4535,7 +4535,7 @@ ut line 177.
 
 pdfTeX warning: pdflatex.exe (file ../annexes/code/_Code_complet.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<../annexes/code/_Code_complet.pdf, id=23661, page=35, 597.55246pt x 845.07724p
+<../annexes/code/_Code_complet.pdf, id=23666, page=35, 597.55246pt x 845.07724p
 t>
 File: ../annexes/code/_Code_complet.pdf Graphic file (type pdf)
 <use ../annexes/code/_Code_complet.pdf, page 35>
@@ -4564,7 +4564,7 @@ ut line 177.
 
 pdfTeX warning: pdflatex.exe (file ../annexes/code/_Code_complet.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<../annexes/code/_Code_complet.pdf, id=23667, page=36, 597.55246pt x 845.07724p
+<../annexes/code/_Code_complet.pdf, id=23672, page=36, 597.55246pt x 845.07724p
 t>
 File: ../annexes/code/_Code_complet.pdf Graphic file (type pdf)
 <use ../annexes/code/_Code_complet.pdf, page 36>
@@ -4593,7 +4593,7 @@ ut line 177.
 
 pdfTeX warning: pdflatex.exe (file ../annexes/code/_Code_complet.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<../annexes/code/_Code_complet.pdf, id=23673, page=37, 597.55246pt x 845.07724p
+<../annexes/code/_Code_complet.pdf, id=23678, page=37, 597.55246pt x 845.07724p
 t>
 File: ../annexes/code/_Code_complet.pdf Graphic file (type pdf)
 <use ../annexes/code/_Code_complet.pdf, page 37>
@@ -4622,7 +4622,7 @@ ut line 177.
 
 pdfTeX warning: pdflatex.exe (file ../annexes/code/_Code_complet.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<../annexes/code/_Code_complet.pdf, id=23679, page=38, 597.55246pt x 845.07724p
+<../annexes/code/_Code_complet.pdf, id=23684, page=38, 597.55246pt x 845.07724p
 t>
 File: ../annexes/code/_Code_complet.pdf Graphic file (type pdf)
 <use ../annexes/code/_Code_complet.pdf, page 38>
@@ -4651,7 +4651,7 @@ ut line 177.
 
 pdfTeX warning: pdflatex.exe (file ../annexes/code/_Code_complet.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<../annexes/code/_Code_complet.pdf, id=23685, page=39, 597.55246pt x 845.07724p
+<../annexes/code/_Code_complet.pdf, id=23690, page=39, 597.55246pt x 845.07724p
 t>
 File: ../annexes/code/_Code_complet.pdf Graphic file (type pdf)
 <use ../annexes/code/_Code_complet.pdf, page 39>
@@ -4680,7 +4680,7 @@ ut line 177.
 
 pdfTeX warning: pdflatex.exe (file ../annexes/code/_Code_complet.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<../annexes/code/_Code_complet.pdf, id=23708, page=40, 597.55246pt x 845.07724p
+<../annexes/code/_Code_complet.pdf, id=23713, page=40, 597.55246pt x 845.07724p
 t>
 File: ../annexes/code/_Code_complet.pdf Graphic file (type pdf)
 <use ../annexes/code/_Code_complet.pdf, page 40>
@@ -4709,7 +4709,7 @@ ut line 177.
 
 pdfTeX warning: pdflatex.exe (file ../annexes/code/_Code_complet.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<../annexes/code/_Code_complet.pdf, id=23715, page=41, 597.55246pt x 845.07724p
+<../annexes/code/_Code_complet.pdf, id=23720, page=41, 597.55246pt x 845.07724p
 t>
 File: ../annexes/code/_Code_complet.pdf Graphic file (type pdf)
 <use ../annexes/code/_Code_complet.pdf, page 41>
@@ -4738,7 +4738,7 @@ ut line 177.
 
 pdfTeX warning: pdflatex.exe (file ../annexes/code/_Code_complet.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<../annexes/code/_Code_complet.pdf, id=23737, page=42, 597.55246pt x 845.07724p
+<../annexes/code/_Code_complet.pdf, id=23742, page=42, 597.55246pt x 845.07724p
 t>
 File: ../annexes/code/_Code_complet.pdf Graphic file (type pdf)
 <use ../annexes/code/_Code_complet.pdf, page 42>
@@ -4767,7 +4767,7 @@ ut line 177.
 
 pdfTeX warning: pdflatex.exe (file ../annexes/code/_Code_complet.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<../annexes/code/_Code_complet.pdf, id=23743, page=43, 597.55246pt x 845.07724p
+<../annexes/code/_Code_complet.pdf, id=23748, page=43, 597.55246pt x 845.07724p
 t>
 File: ../annexes/code/_Code_complet.pdf Graphic file (type pdf)
 <use ../annexes/code/_Code_complet.pdf, page 43>
@@ -4796,7 +4796,7 @@ ut line 177.
 
 pdfTeX warning: pdflatex.exe (file ../annexes/code/_Code_complet.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<../annexes/code/_Code_complet.pdf, id=23749, page=44, 597.55246pt x 845.07724p
+<../annexes/code/_Code_complet.pdf, id=23754, page=44, 597.55246pt x 845.07724p
 t>
 File: ../annexes/code/_Code_complet.pdf Graphic file (type pdf)
 <use ../annexes/code/_Code_complet.pdf, page 44>
@@ -4825,7 +4825,7 @@ ut line 177.
 
 pdfTeX warning: pdflatex.exe (file ../annexes/code/_Code_complet.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<../annexes/code/_Code_complet.pdf, id=23755, page=45, 597.55246pt x 845.07724p
+<../annexes/code/_Code_complet.pdf, id=23760, page=45, 597.55246pt x 845.07724p
 t>
 File: ../annexes/code/_Code_complet.pdf Graphic file (type pdf)
 <use ../annexes/code/_Code_complet.pdf, page 45>
@@ -4854,7 +4854,7 @@ ut line 177.
 
 pdfTeX warning: pdflatex.exe (file ../annexes/code/_Code_complet.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<../annexes/code/_Code_complet.pdf, id=23777, page=46, 597.55246pt x 845.07724p
+<../annexes/code/_Code_complet.pdf, id=23782, page=46, 597.55246pt x 845.07724p
 t>
 File: ../annexes/code/_Code_complet.pdf Graphic file (type pdf)
 <use ../annexes/code/_Code_complet.pdf, page 46>
@@ -4883,7 +4883,7 @@ ut line 177.
 
 pdfTeX warning: pdflatex.exe (file ../annexes/Script-import-csv.pdf): PDF inclu
 sion: found PDF version <1.7>, but at most version <1.5> allowed
-<../annexes/Script-import-csv.pdf, id=23784, 597.55246pt x 845.07724pt>
+<../annexes/Script-import-csv.pdf, id=23789, 597.55246pt x 845.07724pt>
 File: ../annexes/Script-import-csv.pdf Graphic file (type pdf)
 <use ../annexes/Script-import-csv.pdf>
 Package pdftex.def Info: ../annexes/Script-import-csv.pdf  used on input line 1
@@ -4906,7 +4906,7 @@ sion: found PDF version <1.7>, but at most version <1.5> allowed
 
 pdfTeX warning: pdflatex.exe (file ../annexes/Script-import-csv.pdf): PDF inclu
 sion: found PDF version <1.7>, but at most version <1.5> allowed
-<../annexes/Script-import-csv.pdf, id=23787, page=1, 597.55246pt x 845.07724pt>
+<../annexes/Script-import-csv.pdf, id=23792, page=1, 597.55246pt x 845.07724pt>
 
 File: ../annexes/Script-import-csv.pdf Graphic file (type pdf)
 <use ../annexes/Script-import-csv.pdf, page 1>
@@ -4964,7 +4964,7 @@ sion: found PDF version <1.7>, but at most version <1.5> allowed
 
 pdfTeX warning: pdflatex.exe (file ../annexes/Script-import-csv.pdf): PDF inclu
 sion: found PDF version <1.7>, but at most version <1.5> allowed
-<../annexes/Script-import-csv.pdf, id=23812, page=2, 597.55246pt x 845.07724pt>
+<../annexes/Script-import-csv.pdf, id=23817, page=2, 597.55246pt x 845.07724pt>
 
 File: ../annexes/Script-import-csv.pdf Graphic file (type pdf)
 <use ../annexes/Script-import-csv.pdf, page 2>
@@ -5003,7 +5003,7 @@ Package pdftex.def Info: ../annexes/Script-import-csv.pdf , page2 used on input
 
 pdfTeX warning: pdflatex.exe (file ../annexes/Script-import-csv.pdf): PDF inclu
 sion: found PDF version <1.7>, but at most version <1.5> allowed
-<../annexes/Script-import-csv.pdf, id=23818, page=3, 597.55246pt x 845.07724pt>
+<../annexes/Script-import-csv.pdf, id=23823, page=3, 597.55246pt x 845.07724pt>
 
 File: ../annexes/Script-import-csv.pdf Graphic file (type pdf)
 <use ../annexes/Script-import-csv.pdf, page 3>
@@ -5032,11 +5032,11 @@ Package pdftex.def Info: ../annexes/Script-import-csv.pdf , page3 used on input
 
 pdfTeX warning: pdflatex.exe (file ../annexes/application_python.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<../annexes/application_python.pdf, id=23824, 597.55246pt x 845.07724pt>
+<../annexes/application_python.pdf, id=23829, 597.55246pt x 845.07724pt>
 File: ../annexes/application_python.pdf Graphic file (type pdf)
 <use ../annexes/application_python.pdf>
 Package pdftex.def Info: ../annexes/application_python.pdf  used on input line 
-183.
+182.
 (pdftex.def)             Requested size: 597.551pt x 845.07518pt.
 
 
@@ -5045,7 +5045,7 @@ usion: found PDF version <1.7>, but at most version <1.5> allowed
 File: ../annexes/application_python.pdf Graphic file (type pdf)
 <use ../annexes/application_python.pdf>
 Package pdftex.def Info: ../annexes/application_python.pdf  used on input line 
-183.
+182.
 (pdftex.def)             Requested size: 597.551pt x 845.07518pt.
 
 
@@ -5055,27 +5055,27 @@ usion: found PDF version <1.7>, but at most version <1.5> allowed
 
 pdfTeX warning: pdflatex.exe (file ../annexes/application_python.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<../annexes/application_python.pdf, id=23827, page=1, 597.55246pt x 845.07724pt
+<../annexes/application_python.pdf, id=23832, page=1, 597.55246pt x 845.07724pt
 >
 File: ../annexes/application_python.pdf Graphic file (type pdf)
 <use ../annexes/application_python.pdf, page 1>
 Package pdftex.def Info: ../annexes/application_python.pdf , page1 used on inpu
-t line 183.
+t line 182.
 (pdftex.def)             Requested size: 597.551pt x 845.07518pt.
 File: ../annexes/application_python.pdf Graphic file (type pdf)
 <use ../annexes/application_python.pdf, page 1>
 Package pdftex.def Info: ../annexes/application_python.pdf , page1 used on inpu
-t line 183.
+t line 182.
 (pdftex.def)             Requested size: 478.04262pt x 676.06271pt.
 File: ../annexes/application_python.pdf Graphic file (type pdf)
 <use ../annexes/application_python.pdf, page 1>
 Package pdftex.def Info: ../annexes/application_python.pdf , page1 used on inpu
-t line 183.
+t line 182.
 (pdftex.def)             Requested size: 478.04262pt x 676.06271pt.
 File: ../annexes/application_python.pdf Graphic file (type pdf)
 <use ../annexes/application_python.pdf, page 1>
 Package pdftex.def Info: ../annexes/application_python.pdf , page1 used on inpu
-t line 183.
+t line 182.
 (pdftex.def)             Requested size: 478.04262pt x 676.06271pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -5088,13 +5088,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 File: ../annexes/application_python.pdf Graphic file (type pdf)
 <use ../annexes/application_python.pdf, page 1>
 Package pdftex.def Info: ../annexes/application_python.pdf , page1 used on inpu
-t line 183.
+t line 182.
 (pdftex.def)             Requested size: 478.04262pt x 676.06271pt.
 [124 <../annexes/application_python.pdf>]
 File: ../annexes/application_python.pdf Graphic file (type pdf)
 <use ../annexes/application_python.pdf>
 Package pdftex.def Info: ../annexes/application_python.pdf  used on input line 
-184.
+183.
 (pdftex.def)             Requested size: 597.551pt x 845.07518pt.
 
 
@@ -5103,7 +5103,7 @@ usion: found PDF version <1.7>, but at most version <1.5> allowed
 File: ../annexes/application_python.pdf Graphic file (type pdf)
 <use ../annexes/application_python.pdf>
 Package pdftex.def Info: ../annexes/application_python.pdf  used on input line 
-184.
+183.
 (pdftex.def)             Requested size: 597.551pt x 845.07518pt.
 
 
@@ -5113,27 +5113,27 @@ usion: found PDF version <1.7>, but at most version <1.5> allowed
 
 pdfTeX warning: pdflatex.exe (file ../annexes/application_python.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<../annexes/application_python.pdf, id=23853, page=2, 597.55246pt x 845.07724pt
+<../annexes/application_python.pdf, id=23858, page=2, 597.55246pt x 845.07724pt
 >
 File: ../annexes/application_python.pdf Graphic file (type pdf)
 <use ../annexes/application_python.pdf, page 2>
 Package pdftex.def Info: ../annexes/application_python.pdf , page2 used on inpu
-t line 184.
+t line 183.
 (pdftex.def)             Requested size: 597.551pt x 845.07518pt.
 File: ../annexes/application_python.pdf Graphic file (type pdf)
 <use ../annexes/application_python.pdf, page 2>
 Package pdftex.def Info: ../annexes/application_python.pdf , page2 used on inpu
-t line 184.
+t line 183.
 (pdftex.def)             Requested size: 478.04262pt x 676.06271pt.
 File: ../annexes/application_python.pdf Graphic file (type pdf)
 <use ../annexes/application_python.pdf, page 2>
 Package pdftex.def Info: ../annexes/application_python.pdf , page2 used on inpu
-t line 184.
+t line 183.
 (pdftex.def)             Requested size: 478.04262pt x 676.06271pt.
 File: ../annexes/application_python.pdf Graphic file (type pdf)
 <use ../annexes/application_python.pdf, page 2>
 Package pdftex.def Info: ../annexes/application_python.pdf , page2 used on inpu
-t line 184.
+t line 183.
 (pdftex.def)             Requested size: 478.04262pt x 676.06271pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -5146,23 +5146,23 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 File: ../annexes/application_python.pdf Graphic file (type pdf)
 <use ../annexes/application_python.pdf, page 2>
 Package pdftex.def Info: ../annexes/application_python.pdf , page2 used on inpu
-t line 184.
+t line 183.
 (pdftex.def)             Requested size: 478.04262pt x 676.06271pt.
 [125 <../annexes/application_python.pdf>]
 
 pdfTeX warning: pdflatex.exe (file ../annexes/application_python.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<../annexes/application_python.pdf, id=23859, page=3, 597.55246pt x 845.07724pt
+<../annexes/application_python.pdf, id=23864, page=3, 597.55246pt x 845.07724pt
 >
 File: ../annexes/application_python.pdf Graphic file (type pdf)
 <use ../annexes/application_python.pdf, page 3>
 Package pdftex.def Info: ../annexes/application_python.pdf , page3 used on inpu
-t line 184.
+t line 183.
 (pdftex.def)             Requested size: 478.04262pt x 676.06271pt.
 File: ../annexes/application_python.pdf Graphic file (type pdf)
 <use ../annexes/application_python.pdf, page 3>
 Package pdftex.def Info: ../annexes/application_python.pdf , page3 used on inpu
-t line 184.
+t line 183.
 (pdftex.def)             Requested size: 478.04262pt x 676.06271pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -5175,23 +5175,23 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 File: ../annexes/application_python.pdf Graphic file (type pdf)
 <use ../annexes/application_python.pdf, page 3>
 Package pdftex.def Info: ../annexes/application_python.pdf , page3 used on inpu
-t line 184.
+t line 183.
 (pdftex.def)             Requested size: 478.04262pt x 676.06271pt.
 [126 <../annexes/application_python.pdf>]
 
 pdfTeX warning: pdflatex.exe (file ../annexes/application_python.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<../annexes/application_python.pdf, id=23866, page=4, 597.55246pt x 845.07724pt
+<../annexes/application_python.pdf, id=23871, page=4, 597.55246pt x 845.07724pt
 >
 File: ../annexes/application_python.pdf Graphic file (type pdf)
 <use ../annexes/application_python.pdf, page 4>
 Package pdftex.def Info: ../annexes/application_python.pdf , page4 used on inpu
-t line 184.
+t line 183.
 (pdftex.def)             Requested size: 478.04262pt x 676.06271pt.
 File: ../annexes/application_python.pdf Graphic file (type pdf)
 <use ../annexes/application_python.pdf, page 4>
 Package pdftex.def Info: ../annexes/application_python.pdf , page4 used on inpu
-t line 184.
+t line 183.
 (pdftex.def)             Requested size: 478.04262pt x 676.06271pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -5204,23 +5204,23 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 File: ../annexes/application_python.pdf Graphic file (type pdf)
 <use ../annexes/application_python.pdf, page 4>
 Package pdftex.def Info: ../annexes/application_python.pdf , page4 used on inpu
-t line 184.
+t line 183.
 (pdftex.def)             Requested size: 478.04262pt x 676.06271pt.
 [127 <../annexes/application_python.pdf>]
 
 pdfTeX warning: pdflatex.exe (file ../annexes/application_python.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<../annexes/application_python.pdf, id=23872, page=5, 597.55246pt x 845.07724pt
+<../annexes/application_python.pdf, id=23877, page=5, 597.55246pt x 845.07724pt
 >
 File: ../annexes/application_python.pdf Graphic file (type pdf)
 <use ../annexes/application_python.pdf, page 5>
 Package pdftex.def Info: ../annexes/application_python.pdf , page5 used on inpu
-t line 184.
+t line 183.
 (pdftex.def)             Requested size: 478.04262pt x 676.06271pt.
 File: ../annexes/application_python.pdf Graphic file (type pdf)
 <use ../annexes/application_python.pdf, page 5>
 Package pdftex.def Info: ../annexes/application_python.pdf , page5 used on inpu
-t line 184.
+t line 183.
 (pdftex.def)             Requested size: 478.04262pt x 676.06271pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -5233,23 +5233,23 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 File: ../annexes/application_python.pdf Graphic file (type pdf)
 <use ../annexes/application_python.pdf, page 5>
 Package pdftex.def Info: ../annexes/application_python.pdf , page5 used on inpu
-t line 184.
+t line 183.
 (pdftex.def)             Requested size: 478.04262pt x 676.06271pt.
 [128 <../annexes/application_python.pdf>]
 
 pdfTeX warning: pdflatex.exe (file ../annexes/application_python.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<../annexes/application_python.pdf, id=23878, page=6, 597.55246pt x 845.07724pt
+<../annexes/application_python.pdf, id=23883, page=6, 597.55246pt x 845.07724pt
 >
 File: ../annexes/application_python.pdf Graphic file (type pdf)
 <use ../annexes/application_python.pdf, page 6>
 Package pdftex.def Info: ../annexes/application_python.pdf , page6 used on inpu
-t line 184.
+t line 183.
 (pdftex.def)             Requested size: 478.04262pt x 676.06271pt.
 File: ../annexes/application_python.pdf Graphic file (type pdf)
 <use ../annexes/application_python.pdf, page 6>
 Package pdftex.def Info: ../annexes/application_python.pdf , page6 used on inpu
-t line 184.
+t line 183.
 (pdftex.def)             Requested size: 478.04262pt x 676.06271pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -5262,23 +5262,23 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 File: ../annexes/application_python.pdf Graphic file (type pdf)
 <use ../annexes/application_python.pdf, page 6>
 Package pdftex.def Info: ../annexes/application_python.pdf , page6 used on inpu
-t line 184.
+t line 183.
 (pdftex.def)             Requested size: 478.04262pt x 676.06271pt.
 [129 <../annexes/application_python.pdf>]
 
 pdfTeX warning: pdflatex.exe (file ../annexes/application_python.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<../annexes/application_python.pdf, id=23884, page=7, 597.55246pt x 845.07724pt
+<../annexes/application_python.pdf, id=23889, page=7, 597.55246pt x 845.07724pt
 >
 File: ../annexes/application_python.pdf Graphic file (type pdf)
 <use ../annexes/application_python.pdf, page 7>
 Package pdftex.def Info: ../annexes/application_python.pdf , page7 used on inpu
-t line 184.
+t line 183.
 (pdftex.def)             Requested size: 478.04262pt x 676.06271pt.
 File: ../annexes/application_python.pdf Graphic file (type pdf)
 <use ../annexes/application_python.pdf, page 7>
 Package pdftex.def Info: ../annexes/application_python.pdf , page7 used on inpu
-t line 184.
+t line 183.
 (pdftex.def)             Requested size: 478.04262pt x 676.06271pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -5291,23 +5291,82 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 File: ../annexes/application_python.pdf Graphic file (type pdf)
 <use ../annexes/application_python.pdf, page 7>
 Package pdftex.def Info: ../annexes/application_python.pdf , page7 used on inpu
-t line 184.
+t line 183.
 (pdftex.def)             Requested size: 478.04262pt x 676.06271pt.
-[130 <../annexes/application_python.pdf>] (./main.aux)
+[130 <../annexes/application_python.pdf>]
+
+pdfTeX warning: pdflatex.exe (file ../annexes/journal.pdf): PDF inclusion: foun
+d PDF version <1.7>, but at most version <1.5> allowed
+<../annexes/journal.pdf, id=23895, 406.46254pt x 728.46452pt>
+File: ../annexes/journal.pdf Graphic file (type pdf)
+<use ../annexes/journal.pdf>
+Package pdftex.def Info: ../annexes/journal.pdf  used on input line 185.
+(pdftex.def)             Requested size: 406.46153pt x 728.46275pt.
+
+
+pdfTeX warning: pdflatex.exe (file ../annexes/journal.pdf): PDF inclusion: foun
+d PDF version <1.7>, but at most version <1.5> allowed
+File: ../annexes/journal.pdf Graphic file (type pdf)
+<use ../annexes/journal.pdf>
+Package pdftex.def Info: ../annexes/journal.pdf  used on input line 185.
+(pdftex.def)             Requested size: 406.46153pt x 728.46275pt.
+
+
+pdfTeX warning: pdflatex.exe (file ../annexes/journal.pdf): PDF inclusion: foun
+d PDF version <1.7>, but at most version <1.5> allowed
+
+
+pdfTeX warning: pdflatex.exe (file ../annexes/journal.pdf): PDF inclusion: foun
+d PDF version <1.7>, but at most version <1.5> allowed
+<../annexes/journal.pdf, id=23898, page=1, 406.46254pt x 728.46452pt>
+File: ../annexes/journal.pdf Graphic file (type pdf)
+<use ../annexes/journal.pdf, page 1>
+Package pdftex.def Info: ../annexes/journal.pdf , page1 used on input line 185.
+
+(pdftex.def)             Requested size: 406.46153pt x 728.46275pt.
+File: ../annexes/journal.pdf Graphic file (type pdf)
+<use ../annexes/journal.pdf, page 1>
+Package pdftex.def Info: ../annexes/journal.pdf , page1 used on input line 185.
+
+(pdftex.def)             Requested size: 325.17046pt x 582.77242pt.
+File: ../annexes/journal.pdf Graphic file (type pdf)
+<use ../annexes/journal.pdf, page 1>
+Package pdftex.def Info: ../annexes/journal.pdf , page1 used on input line 185.
+
+(pdftex.def)             Requested size: 325.17046pt x 582.77242pt.
+File: ../annexes/journal.pdf Graphic file (type pdf)
+<use ../annexes/journal.pdf, page 1>
+Package pdftex.def Info: ../annexes/journal.pdf , page1 used on input line 185.
+
+(pdftex.def)             Requested size: 325.17046pt x 582.77242pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+File: ../annexes/journal.pdf Graphic file (type pdf)
+<use ../annexes/journal.pdf, page 1>
+Package pdftex.def Info: ../annexes/journal.pdf , page1 used on input line 185.
+
+(pdftex.def)             Requested size: 325.17046pt x 582.77242pt.
+[131 <../annexes/journal.pdf>] (./main.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-03>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 41D8A58020746D22611BE2C124DB7FC8;19350.
+(rerunfilecheck)             Checksum: 47A453CCEE064265A885B312E5BC4333;19520.
 runsystem(del main.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 51260 strings out of 475187
- 1050820 string characters out of 5767784
+ 51276 strings out of 475187
+ 1051281 string characters out of 5767784
  1945248 words of memory out of 5000000
- 71260 multiletter control sequences out of 15000+600000
+ 71274 multiletter control sequences out of 15000+600000
  662668 words of font info for 159 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  109i,18n,117p,2289b,992s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -5323,10 +5382,10 @@ live/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2023/texmf-di
 st/fonts/type1/urw/times/utmbi8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/ur
 w/times/utmr8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/times/utmri8a.pf
 b>
-Output written on main.pdf (131 pages, 17320424 bytes).
+Output written on main.pdf (132 pages, 17715689 bytes).
 PDF statistics:
- 24038 PDF objects out of 26593 (max. 8388607)
- 14500 compressed objects within 145 object streams
- 386 named destinations out of 1000 (max. 500000)
- 1955 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 24080 PDF objects out of 26593 (max. 8388607)
+ 14529 compressed objects within 146 object streams
+ 388 named destinations out of 1000 (max. 500000)
+ 1983 words of extra memory for PDF output out of 10000 (max. 10000000)
 

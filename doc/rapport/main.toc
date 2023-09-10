@@ -112,6 +112,7 @@
 \contentsline {subsection}{\numberline {11.1}Schéma}{65}{subsection.11.1}%
 \contentsline {subsection}{\numberline {11.2}Dessin du boitier}{69}{subsection.11.2}%
 \contentsline {subsection}{\numberline {11.3}Fichiers PCB}{73}{subsection.11.3}%
-\contentsline {subsection}{\numberline {11.4}Code du firmware}{75}{subsection.11.4}%
+\contentsline {subsection}{\numberline {11.4}Code du firmware C}{75}{subsection.11.4}%
 \contentsline {subsection}{\numberline {11.5}Code python du script visualisation CSV}{121}{subsection.11.5}%
 \contentsline {subsection}{\numberline {11.6}Code python de l'application BBX-Connect}{124}{subsection.11.6}%
+\contentsline {subsection}{\numberline {11.7}Journal de travail}{131}{subsection.11.7}%
