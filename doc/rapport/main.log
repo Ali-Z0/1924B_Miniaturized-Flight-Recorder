@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.8.7)  10 SEP 2023 01:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.8.7)  10 SEP 2023 13:39
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1602,7 +1602,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [5
 
 ]
-<./ETML-ES-LOGO.png, id=600, 200.75pt x 200.75pt>
+<./ETML-ES-LOGO.png, id=615, 200.75pt x 200.75pt>
 File: ./ETML-ES-LOGO.png Graphic file (type png)
 <use ./ETML-ES-LOGO.png>
 Package pdftex.def Info: ./ETML-ES-LOGO.png  used on input line 6.
@@ -1626,7 +1626,7 @@ Overfull \hbox (2.28003pt too wide) in paragraph at lines 19--42
 
 pdfTeX warning: pdflatex.exe (file ../figures/cdc/schema_principe.pdf): PDF inc
 lusion: found PDF version <1.7>, but at most version <1.5> allowed
-<../figures/cdc/schema_principe.pdf, id=609, 253.90858pt x 270.0489pt>
+<../figures/cdc/schema_principe.pdf, id=624, 253.90858pt x 270.0489pt>
 File: ../figures/cdc/schema_principe.pdf Graphic file (type pdf)
 <use ../figures/cdc/schema_principe.pdf>
 Package pdftex.def Info: ../figures/cdc/schema_principe.pdf  used on input line
@@ -1652,12 +1652,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [7 <../figures/cdc/schema_principe.pdf>]
-<../figures/cdc/planif.png, id=639, 3012.0028pt x 1509.38907pt>
+<../figures/cdc/planif.png, id=654, 3012.0028pt x 1509.38907pt>
 File: ../figures/cdc/planif.png Graphic file (type png)
 <use ../figures/cdc/planif.png>
 Package pdftex.def Info: ../figures/cdc/planif.png  used on input line 80.
 (pdftex.def)             Requested size: 452.9679pt x 226.97438pt.
-<../figures/cdc/planif_theorique.png, id=640, 1383.66937pt x 336.50719pt>
+<../figures/cdc/planif_theorique.png, id=655, 1383.66937pt x 336.50719pt>
 File: ../figures/cdc/planif_theorique.png Graphic file (type png)
 <use ../figures/cdc/planif_theorique.png>
 Package pdftex.def Info: ../figures/cdc/planif_theorique.png  used on input lin
@@ -1679,7 +1679,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 pdfTeX warning: pdflatex.exe (file ../figures/cdc/blocs_grossiers_no_antenna.pd
 f): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<../figures/cdc/blocs_grossiers_no_antenna.pdf, id=651, 824.11888pt x 450.72388
+<../figures/cdc/blocs_grossiers_no_antenna.pdf, id=667, 824.11888pt x 450.72388
 pt>
 File: ../figures/cdc/blocs_grossiers_no_antenna.pdf Graphic file (type pdf)
 <use ../figures/cdc/blocs_grossiers_no_antenna.pdf>
@@ -1700,7 +1700,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 pdfTeX warning: pdflatex.exe (file ../figures/pre_etude/familles_pic32.pdf): PD
 F inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<../figures/pre_etude/familles_pic32.pdf, id=692, 1034.86626pt x 727.71875pt>
+<../figures/pre_etude/familles_pic32.pdf, id=707, 1034.86626pt x 727.71875pt>
 File: ../figures/pre_etude/familles_pic32.pdf Graphic file (type pdf)
 <use ../figures/pre_etude/familles_pic32.pdf>
 Package pdftex.def Info: ../figures/pre_etude/familles_pic32.pdf  used on input
@@ -1710,7 +1710,7 @@ Package pdftex.def Info: ../figures/pre_etude/familles_pic32.pdf  used on input
 
 pdfTeX warning: pdflatex.exe (file ../figures/pre_etude/Carac_PIC32.pdf): PDF i
 nclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<../figures/pre_etude/Carac_PIC32.pdf, id=697, 661.47125pt x 271.0125pt>
+<../figures/pre_etude/Carac_PIC32.pdf, id=712, 661.47125pt x 271.0125pt>
 File: ../figures/pre_etude/Carac_PIC32.pdf Graphic file (type pdf)
 <use ../figures/pre_etude/Carac_PIC32.pdf>
 Package pdftex.def Info: ../figures/pre_etude/Carac_PIC32.pdf  used on input li
@@ -1728,7 +1728,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
  <../figures/pre_etude/familles_pic32.pdf> <../figures/pre_etude/Carac_PIC32.pd
 f>]
-<../figures/pre_etude/BNO055_Adafruit.png, id=710, 338.01282pt x 269.50688pt>
+<../figures/pre_etude/BNO055_Adafruit.png, id=725, 338.01282pt x 269.50688pt>
 File: ../figures/pre_etude/BNO055_Adafruit.png Graphic file (type png)
 <use ../figures/pre_etude/BNO055_Adafruit.png>
 Package pdftex.def Info: ../figures/pre_etude/BNO055_Adafruit.png  used on inpu
@@ -1749,7 +1749,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 pdfTeX warning: pdflatex.exe (file ../figures/pre_etude/img_gnss.pdf): PDF incl
 usion: found PDF version <1.6>, but at most version <1.5> allowed
-<../figures/pre_etude/img_gnss.pdf, id=725, 1035.87pt x 471.7625pt>
+<../figures/pre_etude/img_gnss.pdf, id=740, 1035.87pt x 471.7625pt>
 File: ../figures/pre_etude/img_gnss.pdf Graphic file (type pdf)
 <use ../figures/pre_etude/img_gnss.pdf>
 Package pdftex.def Info: ../figures/pre_etude/img_gnss.pdf  used on input line 
@@ -1759,7 +1759,7 @@ Package pdftex.def Info: ../figures/pre_etude/img_gnss.pdf  used on input line
 
 pdfTeX warning: pdflatex.exe (file ../figures/pre_etude/Comp_GNSS.pdf): PDF inc
 lusion: found PDF version <1.6>, but at most version <1.5> allowed
-<../figures/pre_etude/Comp_GNSS.pdf, id=728, 685.56125pt x 547.04375pt>
+<../figures/pre_etude/Comp_GNSS.pdf, id=743, 685.56125pt x 547.04375pt>
 File: ../figures/pre_etude/Comp_GNSS.pdf Graphic file (type pdf)
 <use ../figures/pre_etude/Comp_GNSS.pdf>
 Package pdftex.def Info: ../figures/pre_etude/Comp_GNSS.pdf  used on input line
@@ -1776,7 +1776,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [12
 
  <../figures/pre_etude/img_gnss.pdf> <../figures/pre_etude/Comp_GNSS.pdf>]
-<../figures/pre_etude/CarteSD_Illustration.png, id=743, 376.40625pt x 376.40625
+<../figures/pre_etude/CarteSD_Illustration.png, id=758, 376.40625pt x 376.40625
 pt>
 File: ../figures/pre_etude/CarteSD_Illustration.png Graphic file (type png)
 <use ../figures/pre_etude/CarteSD_Illustration.png>
@@ -1806,19 +1806,19 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [14
 
 ]
-<../figures/pre_etude/batt.jpg, id=774, 466.75565pt x 108.54782pt>
+<../figures/pre_etude/batt.jpg, id=790, 466.75565pt x 108.54782pt>
 File: ../figures/pre_etude/batt.jpg Graphic file (type jpg)
 <use ../figures/pre_etude/batt.jpg>
 Package pdftex.def Info: ../figures/pre_etude/batt.jpg  used on input line 240.
 
 (pdftex.def)             Requested size: 362.37569pt x 84.27274pt.
-<../figures/pre_etude/batt2.jpg, id=776, 575.30348pt x 206.52652pt>
+<../figures/pre_etude/batt2.jpg, id=792, 575.30348pt x 206.52652pt>
 File: ../figures/pre_etude/batt2.jpg Graphic file (type jpg)
 <use ../figures/pre_etude/batt2.jpg>
 Package pdftex.def Info: ../figures/pre_etude/batt2.jpg  used on input line 250
 .
 (pdftex.def)             Requested size: 362.37569pt x 130.09033pt.
-<../figures/pre_etude/MCP.png, id=777, 481.8pt x 481.8pt>
+<../figures/pre_etude/MCP.png, id=793, 481.8pt x 481.8pt>
 File: ../figures/pre_etude/MCP.png Graphic file (type png)
 <use ../figures/pre_etude/MCP.png>
 Package pdftex.def Info: ../figures/pre_etude/MCP.png  used on input line 261.
@@ -1840,7 +1840,7 @@ re_etude/MCP.png>]
 pdfTeX warning: pdflatex.exe (file ../figures/pre_etude/Diagramme_Etat_Preetude
 .pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowe
 d
-<../figures/pre_etude/Diagramme_Etat_Preetude.pdf, id=793, 392.42609pt x 139.48
+<../figures/pre_etude/Diagramme_Etat_Preetude.pdf, id=808, 392.42609pt x 139.48
 11pt>
 File: ../figures/pre_etude/Diagramme_Etat_Preetude.pdf Graphic file (type pdf)
 <use ../figures/pre_etude/Diagramme_Etat_Preetude.pdf>
@@ -1869,7 +1869,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [17
 
 ]
-<../figures/etude/sch/BLOCS.pdf, id=843, 841.87822pt x 354.91997pt>
+<../figures/etude/sch/BLOCS.pdf, id=858, 841.87822pt x 354.91997pt>
 File: ../figures/etude/sch/BLOCS.pdf Graphic file (type pdf)
 <use ../figures/etude/sch/BLOCS.pdf>
 Package pdftex.def Info: ../figures/etude/sch/BLOCS.pdf  used on input line 11.
@@ -1885,18 +1885,18 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [18 <../figures/etude/sch/BLOCS.pdf>]
-<../figures/etude/sch/MCU.pdf, id=875, 1142.67099pt x 559.89162pt>
+<../figures/etude/sch/MCU.pdf, id=890, 1142.67099pt x 559.89162pt>
 File: ../figures/etude/sch/MCU.pdf Graphic file (type pdf)
 <use ../figures/etude/sch/MCU.pdf>
 Package pdftex.def Info: ../figures/etude/sch/MCU.pdf  used on input line 56.
 (pdftex.def)             Requested size: 271.7835pt x 133.16359pt.
-<../figures/etude/sch/MCU-HARMONY.jpg, id=876, 3129.6925pt x 3087.535pt>
+<../figures/etude/sch/MCU-HARMONY.jpg, id=891, 3129.6925pt x 3087.535pt>
 File: ../figures/etude/sch/MCU-HARMONY.jpg Graphic file (type jpg)
 <use ../figures/etude/sch/MCU-HARMONY.jpg>
 Package pdftex.def Info: ../figures/etude/sch/MCU-HARMONY.jpg  used on input li
 ne 63.
 (pdftex.def)             Requested size: 135.89174pt x 134.03343pt.
-<../figures/etude/sch/Prog-Reset.pdf, id=882, 719.62761pt x 384.99596pt>
+<../figures/etude/sch/Prog-Reset.pdf, id=897, 719.62761pt x 384.99596pt>
 File: ../figures/etude/sch/Prog-Reset.pdf Graphic file (type pdf)
 <use ../figures/etude/sch/Prog-Reset.pdf>
 Package pdftex.def Info: ../figures/etude/sch/Prog-Reset.pdf  used on input lin
@@ -1919,12 +1919,12 @@ res/etude/sch/Prog-Reset.pdf
 pdfTeX warning: pdflatex.exe (file ../figures/etude/sch/Prog-Reset.pdf): PDF in
 clusion: multiple pdfs with page group included in a single page
 >]
-<../figures/etude/DIM-LED.jpg, id=919, 240.28352pt x 91.13852pt>
+<../figures/etude/DIM-LED.jpg, id=934, 240.28352pt x 91.13852pt>
 File: ../figures/etude/DIM-LED.jpg Graphic file (type jpg)
 <use ../figures/etude/DIM-LED.jpg>
 Package pdftex.def Info: ../figures/etude/DIM-LED.jpg  used on input line 94.
 (pdftex.def)             Requested size: 407.66833pt x 154.62747pt.
-<../figures/etude/sch/LED-Vie.pdf, id=924, 278.54219pt x 380.32445pt>
+<../figures/etude/sch/LED-Vie.pdf, id=939, 278.54219pt x 380.32445pt>
 File: ../figures/etude/sch/LED-Vie.pdf Graphic file (type pdf)
 <use ../figures/etude/sch/LED-Vie.pdf>
 Package pdftex.def Info: ../figures/etude/sch/LED-Vie.pdf  used on input line 1
@@ -1942,18 +1942,18 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [20
 
  <../figures/etude/DIM-LED.jpg> <../figures/etude/sch/LED-Vie.pdf>]
-<../figures/etude/sch/Carte-SD.pdf, id=954, 837.20837pt x 559.04955pt>
+<../figures/etude/sch/Carte-SD.pdf, id=969, 837.20837pt x 559.04955pt>
 File: ../figures/etude/sch/Carte-SD.pdf Graphic file (type pdf)
 <use ../figures/etude/sch/Carte-SD.pdf>
 Package pdftex.def Info: ../figures/etude/sch/Carte-SD.pdf  used on input line 
 126.
 (pdftex.def)             Requested size: 226.48395pt x 151.23543pt.
-<../figures/etude/sch/IMU.pdf, id=956, 760.6415pt x 484.96129pt>
+<../figures/etude/sch/IMU.pdf, id=971, 760.6415pt x 484.96129pt>
 File: ../figures/etude/sch/IMU.pdf Graphic file (type pdf)
 <use ../figures/etude/sch/IMU.pdf>
 Package pdftex.def Info: ../figures/etude/sch/IMU.pdf  used on input line 139.
 (pdftex.def)             Requested size: 226.48395pt x 144.40172pt.
-<../figures/etude/sch/GNSS.pdf, id=959, 754.2922pt x 428.08203pt>
+<../figures/etude/sch/GNSS.pdf, id=974, 754.2922pt x 428.08203pt>
 File: ../figures/etude/sch/GNSS.pdf Graphic file (type pdf)
 <use ../figures/etude/sch/GNSS.pdf>
 Package pdftex.def Info: ../figures/etude/sch/GNSS.pdf  used on input line 151.
@@ -1975,7 +1975,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 pdfTeX warning: pdflatex.exe (file ../figures/etude/sch/IMU.pdf): PDF inclusion
 : multiple pdfs with page group included in a single page
 >]
-<../figures/etude/sch/USB-FTDI.pdf, id=1012, 827.58318pt x 492.61261pt>
+<../figures/etude/sch/USB-FTDI.pdf, id=1027, 827.58318pt x 492.61261pt>
 File: ../figures/etude/sch/USB-FTDI.pdf Graphic file (type pdf)
 <use ../figures/etude/sch/USB-FTDI.pdf>
 Package pdftex.def Info: ../figures/etude/sch/USB-FTDI.pdf  used on input line 
@@ -1995,7 +1995,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 pdfTeX warning: pdflatex.exe (file ../figures/etude/sch/USB-FTDI.pdf): PDF incl
 usion: multiple pdfs with page group included in a single page
 >]
-<../figures/etude/sch/CHRG-BAT.pdf, id=1054, 746.1822pt x 390.93103pt>
+<../figures/etude/sch/CHRG-BAT.pdf, id=1069, 746.1822pt x 390.93103pt>
 File: ../figures/etude/sch/CHRG-BAT.pdf Graphic file (type pdf)
 <use ../figures/etude/sch/CHRG-BAT.pdf>
 Package pdftex.def Info: ../figures/etude/sch/CHRG-BAT.pdf  used on input line 
@@ -2013,7 +2013,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [23
 
  <../figures/etude/sch/CHRG-BAT.pdf>]
-<../figures/etude/sch/ON-OFF.pdf, id=1076, 1132.85208pt x 392.95232pt>
+<../figures/etude/sch/ON-OFF.pdf, id=1091, 1132.85208pt x 392.95232pt>
 File: ../figures/etude/sch/ON-OFF.pdf Graphic file (type pdf)
 <use ../figures/etude/sch/ON-OFF.pdf>
 Package pdftex.def Info: ../figures/etude/sch/ON-OFF.pdf  used on input line 21
@@ -2039,7 +2039,7 @@ res/etude/sch/ON-OFF.pdf>]
 
 pdfTeX warning: pdflatex.exe (file ../figures/dev-pcb/boitier-dim.pdf): PDF inc
 lusion: found PDF version <1.6>, but at most version <1.5> allowed
-<../figures/dev-pcb/boitier-dim.pdf, id=1115, 5731.4125pt x 3732.94624pt>
+<../figures/dev-pcb/boitier-dim.pdf, id=1130, 5731.4125pt x 3732.94624pt>
 File: ../figures/dev-pcb/boitier-dim.pdf Graphic file (type pdf)
 <use ../figures/dev-pcb/boitier-dim.pdf>
 Package pdftex.def Info: ../figures/dev-pcb/boitier-dim.pdf  used on input line
@@ -2049,7 +2049,7 @@ Package pdftex.def Info: ../figures/dev-pcb/boitier-dim.pdf  used on input line
 
 pdfTeX warning: pdflatex.exe (file ../figures/dev-pcb/boitier-dims-pcb.pdf): PD
 F inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<../figures/dev-pcb/boitier-dims-pcb.pdf, id=1116, 4785.88pt x 6226.26125pt>
+<../figures/dev-pcb/boitier-dims-pcb.pdf, id=1131, 4785.88pt x 6226.26125pt>
 File: ../figures/dev-pcb/boitier-dims-pcb.pdf Graphic file (type pdf)
 <use ../figures/dev-pcb/boitier-dims-pcb.pdf>
 Package pdftex.def Info: ../figures/dev-pcb/boitier-dims-pcb.pdf  used on input
@@ -2067,25 +2067,25 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
  <../figures/dev-pcb/boitier-dim.pdf, page is rotated 90 degrees> <../figures/d
 ev-pcb/boitier-dims-pcb.pdf>]
-<../figures/dev-pcb/PCB-Dims.jpg, id=1138, 541.0614pt x 289.5618pt>
+<../figures/dev-pcb/PCB-Dims.jpg, id=1153, 541.0614pt x 289.5618pt>
 File: ../figures/dev-pcb/PCB-Dims.jpg Graphic file (type jpg)
 <use ../figures/dev-pcb/PCB-Dims.jpg>
 Package pdftex.def Info: ../figures/dev-pcb/PCB-Dims.jpg  used on input line 60
 .
 (pdftex.def)             Requested size: 375.96417pt x 201.21614pt.
-<../figures/dev-pcb/3d-view3.png, id=1143, 354.32375pt x 709.65125pt>
+<../figures/dev-pcb/3d-view3.png, id=1158, 354.32375pt x 709.65125pt>
 File: ../figures/dev-pcb/3d-view3.png Graphic file (type png)
 <use ../figures/dev-pcb/3d-view3.png>
 Package pdftex.def Info: ../figures/dev-pcb/3d-view3.png  used on input line 76
 .
 (pdftex.def)             Requested size: 108.71478pt x 217.7373pt.
-<../figures/dev-pcb/3d-view2.png, id=1144, 368.1253pt x 384.6872pt>
+<../figures/dev-pcb/3d-view2.png, id=1159, 368.1253pt x 384.6872pt>
 File: ../figures/dev-pcb/3d-view2.png Graphic file (type png)
 <use ../figures/dev-pcb/3d-view2.png>
 Package pdftex.def Info: ../figures/dev-pcb/3d-view2.png  used on input line 83
 .
 (pdftex.def)             Requested size: 149.48022pt x 156.20834pt.
-<../figures/dev-pcb/3d-view1.png, id=1145, 581.17125pt x 243.15843pt>
+<../figures/dev-pcb/3d-view1.png, id=1160, 581.17125pt x 243.15843pt>
 File: ../figures/dev-pcb/3d-view1.png Graphic file (type png)
 <use ../figures/dev-pcb/3d-view1.png>
 Package pdftex.def Info: ../figures/dev-pcb/3d-view1.png  used on input line 90
@@ -2118,7 +2118,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 pdfTeX warning: pdflatex.exe (file ../figures/dev-pcb/Couches-layout.pdf): PDF 
 inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<../figures/dev-pcb/Couches-layout.pdf, id=1169, 4552.44098pt x 2532.29535pt>
+<../figures/dev-pcb/Couches-layout.pdf, id=1184, 4552.44098pt x 2532.29535pt>
 File: ../figures/dev-pcb/Couches-layout.pdf Graphic file (type pdf)
 <use ../figures/dev-pcb/Couches-layout.pdf>
 Package pdftex.def Info: ../figures/dev-pcb/Couches-layout.pdf  used on input l
@@ -2135,7 +2135,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [28
 
  <../figures/dev-pcb/Couches-layout.pdf>]) (./pages/4_Dev-SOFT.tex
-<../figures/code/Protocols.jpg, id=1194, 1300.1072pt x 223.58531pt>
+<../figures/code/Protocols.jpg, id=1209, 1300.1072pt x 223.58531pt>
 File: ../figures/code/Protocols.jpg Graphic file (type jpg)
 <use ../figures/code/Protocols.jpg>
 Package pdftex.def Info: ../figures/code/Protocols.jpg  used on input line 13.
@@ -2149,7 +2149,7 @@ Overfull \hbox (17.62482pt too wide) in paragraph at lines 23--24
 
 pdfTeX warning: pdflatex.exe (file ../figures/code/Default-messages.pdf): PDF i
 nclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<../figures/code/Default-messages.pdf, id=1200, 1734.48pt x 772.8875pt>
+<../figures/code/Default-messages.pdf, id=1215, 1734.48pt x 772.8875pt>
 File: ../figures/code/Default-messages.pdf Graphic file (type pdf)
 <use ../figures/code/Default-messages.pdf>
 Package pdftex.def Info: ../figures/code/Default-messages.pdf  used on input li
@@ -2166,7 +2166,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [29
 
  <../figures/code/Protocols.JPG> <../figures/code/Default-messages.pdf>]
-<../figures/code/Messages-NMEA.jpg, id=1216, 1084.05pt x 619.56468pt>
+<../figures/code/Messages-NMEA.jpg, id=1231, 1084.05pt x 619.56468pt>
 File: ../figures/code/Messages-NMEA.jpg Graphic file (type jpg)
 <use ../figures/code/Messages-NMEA.jpg>
 Package pdftex.def Info: ../figures/code/Messages-NMEA.jpg  used on input line 
@@ -2182,13 +2182,13 @@ Package epstopdf Info: Source file: <../figures/code/map-localisation.eps>
 erted-to.pdf ../figures/code/map-localisation.eps>
 (epstopdf)             \includegraphics on input line 60.
 Package epstopdf Info: Output file is already uptodate.
-<./map-localisation-eps-converted-to.pdf, id=1222, 1251.67625pt x 426.59375pt>
+<./map-localisation-eps-converted-to.pdf, id=1237, 1251.67625pt x 426.59375pt>
 File: ./map-localisation-eps-converted-to.pdf Graphic file (type pdf)
 <use ./map-localisation-eps-converted-to.pdf>
 Package pdftex.def Info: ./map-localisation-eps-converted-to.pdf  used on input
  line 60.
 (pdftex.def)             Requested size: 339.72592pt x 115.7807pt.
-<../figures/code/parsed-nmea.jpg, id=1228, 1013.28563pt x 133.24782pt>
+<../figures/code/parsed-nmea.jpg, id=1243, 1013.28563pt x 133.24782pt>
 File: ../figures/code/parsed-nmea.jpg Graphic file (type jpg)
 <use ../figures/code/parsed-nmea.jpg>
 Package pdftex.def Info: ../figures/code/parsed-nmea.jpg  used on input line 70
@@ -2270,7 +2270,7 @@ Package epstopdf Info: Source file: <../figures/code/périphériques.eps>
 rted-to.pdf ../figures/code/périphériques.eps>
 (epstopdf)             \includegraphics on input line 189.
 Package epstopdf Info: Output file is already uptodate.
-<./périphériques-eps-converted-to.pdf, id=1258, 290.08376pt x 63.23625pt>
+<./périphériques-eps-converted-to.pdf, id=1273, 290.08376pt x 63.23625pt>
 File: ./périphériques-eps-converted-to.pdf Graphic file (type pdf)
 <use ./périphériques-eps-converted-to.pdf>
 Package pdftex.def Info: ./périphériques-eps-converted-to.pdf  used on input 
@@ -2291,7 +2291,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 pdfTeX warning: pdflatex.exe (file ../figures/code/harmony/timers.pdf): PDF inc
 lusion: found PDF version <1.6>, but at most version <1.5> allowed
-<../figures/code/harmony/timers.pdf, id=1271, 1590.94376pt x 2104.86375pt>
+<../figures/code/harmony/timers.pdf, id=1286, 1590.94376pt x 2104.86375pt>
 File: ../figures/code/harmony/timers.pdf Graphic file (type pdf)
 <use ../figures/code/harmony/timers.pdf>
 Package pdftex.def Info: ../figures/code/harmony/timers.pdf  used on input line
@@ -2337,7 +2337,7 @@ Overfull \hbox (10.72035pt too wide) in paragraph at lines 295--301
 
 pdfTeX warning: pdflatex.exe (file ../figures/code/harmony/SD-card.pdf): PDF in
 clusion: found PDF version <1.6>, but at most version <1.5> allowed
-<../figures/code/harmony/SD-card.pdf, id=1292, 1264.725pt x 1180.41pt>
+<../figures/code/harmony/SD-card.pdf, id=1307, 1264.725pt x 1180.41pt>
 File: ../figures/code/harmony/SD-card.pdf Graphic file (type pdf)
 <use ../figures/code/harmony/SD-card.pdf>
 Package pdftex.def Info: ../figures/code/harmony/SD-card.pdf  used on input lin
@@ -2347,7 +2347,7 @@ e 314.
 
 pdfTeX warning: pdflatex.exe (file ../figures/code/harmony/SD-card-spi.pdf): PD
 F inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<../figures/code/harmony/SD-card-spi.pdf, id=1293, 1349.04pt x 1437.37pt>
+<../figures/code/harmony/SD-card-spi.pdf, id=1308, 1349.04pt x 1437.37pt>
 File: ../figures/code/harmony/SD-card-spi.pdf Graphic file (type pdf)
 <use ../figures/code/harmony/SD-card-spi.pdf>
 Package pdftex.def Info: ../figures/code/harmony/SD-card-spi.pdf  used on input
@@ -2365,7 +2365,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
  <../figures/code/harmony/SD-card.pdf> <../figures/code/harmony/SD-card-spi.pdf
 >]
-<../figures/code/diagrammes/state_app.pdf, id=1311, 590.205pt x 362.35374pt>
+<../figures/code/diagrammes/state_app.pdf, id=1326, 590.205pt x 362.35374pt>
 File: ../figures/code/diagrammes/state_app.pdf Graphic file (type pdf)
 <use ../figures/code/diagrammes/state_app.pdf>
 Package pdftex.def Info: ../figures/code/diagrammes/state_app.pdf  used on inpu
@@ -2386,7 +2386,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 pdfTeX warning: pdflatex.exe (file ../figures/code/diagrammes/sequence-app.pdf)
 : PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<../figures/code/diagrammes/sequence-app.pdf, id=1343, 597.55246pt x 845.07724p
+<../figures/code/diagrammes/sequence-app.pdf, id=1358, 597.55246pt x 845.07724p
 t>
 File: ../figures/code/diagrammes/sequence-app.pdf Graphic file (type pdf)
 <use ../figures/code/diagrammes/sequence-app.pdf>
@@ -2408,7 +2408,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 pdfTeX warning: pdflatex.exe (file ../figures/code/diagrammes/logging-flowchart
 .pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowe
 d
-<../figures/code/diagrammes/logging-flowchart.pdf, id=1351, 597.55246pt x 845.0
+<../figures/code/diagrammes/logging-flowchart.pdf, id=1366, 597.55246pt x 845.0
 7724pt>
 File: ../figures/code/diagrammes/logging-flowchart.pdf Graphic file (type pdf)
 <use ../figures/code/diagrammes/logging-flowchart.pdf>
@@ -2435,7 +2435,7 @@ uve dans l'�tat \T1/ptm/b/n/12 APP_STATE_CONFIG\T1/ptm/m/n/12 ,
 
 pdfTeX warning: pdflatex.exe (file ../figures/code/diagrammes/sd-card-Init.pdf)
 : PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<../figures/code/diagrammes/sd-card-Init.pdf, id=1361, 593.32965pt x 518.37163p
+<../figures/code/diagrammes/sd-card-Init.pdf, id=1376, 593.32965pt x 518.37163p
 t>
 File: ../figures/code/diagrammes/sd-card-Init.pdf Graphic file (type pdf)
 <use ../figures/code/diagrammes/sd-card-Init.pdf>
@@ -2456,7 +2456,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 pdfTeX warning: pdflatex.exe (file ../figures/code/diagrammes/sd-card-logging.p
 df): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<../figures/code/diagrammes/sd-card-logging.pdf, id=1390, 592.2737pt x 528.9290
+<../figures/code/diagrammes/sd-card-logging.pdf, id=1405, 592.2737pt x 528.9290
 8pt>
 File: ../figures/code/diagrammes/sd-card-logging.pdf Graphic file (type pdf)
 <use ../figures/code/diagrammes/sd-card-logging.pdf>
@@ -2467,7 +2467,7 @@ n input line 431.
 
 pdfTeX warning: pdflatex.exe (file ../figures/code/Illustration-SD-per.pdf): PD
 F inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<../figures/code/Illustration-SD-per.pdf, id=1391, 231.8512pt x 106.92648pt>
+<../figures/code/Illustration-SD-per.pdf, id=1406, 231.8512pt x 106.92648pt>
 File: ../figures/code/Illustration-SD-per.pdf Graphic file (type pdf)
 <use ../figures/code/Illustration-SD-per.pdf>
 Package pdftex.def Info: ../figures/code/Illustration-SD-per.pdf  used on input
@@ -2569,13 +2569,13 @@ Overfull \hbox (41.59299pt too wide) in paragraph at lines 566--571
 [][] 
  []
 
-<../figures/code/jumper-config-mode-IMU.pdf, id=1450, 829.0975pt x 335.2525pt>
+<../figures/code/jumper-config-mode-IMU.pdf, id=1465, 829.0975pt x 335.2525pt>
 File: ../figures/code/jumper-config-mode-IMU.pdf Graphic file (type pdf)
 <use ../figures/code/jumper-config-mode-IMU.pdf>
 Package pdftex.def Info: ../figures/code/jumper-config-mode-IMU.pdf  used on in
 put line 574.
 (pdftex.def)             Requested size: 271.7835pt x 109.89702pt.
-<../figures/code/config-mode-IMU.png, id=1451, 478.78876pt x 410.2828pt>
+<../figures/code/config-mode-IMU.png, id=1466, 478.78876pt x 410.2828pt>
 File: ../figures/code/config-mode-IMU.png Graphic file (type png)
 <use ../figures/code/config-mode-IMU.png>
 Package pdftex.def Info: ../figures/code/config-mode-IMU.png  used on input lin
@@ -2593,13 +2593,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
  <../figures/code/jumper-config-mode-IMU.pdf> <../figures/code/config-mode-IMU.
 png>]
-<../figures/code/donbnees-csv.pdf, id=1470, 1007.52068pt x 117.3468pt>
+<../figures/code/donbnees-csv.pdf, id=1485, 1007.52068pt x 117.3468pt>
 File: ../figures/code/donbnees-csv.pdf Graphic file (type pdf)
 <use ../figures/code/donbnees-csv.pdf>
 Package pdftex.def Info: ../figures/code/donbnees-csv.pdf  used on input line 6
 05.
 (pdftex.def)             Requested size: 452.9679pt x 52.75722pt.
-<../figures/application/mesures.pdf, id=1472, 1387.58403pt x 755.9442pt>
+<../figures/application/mesures.pdf, id=1487, 1387.58403pt x 755.9442pt>
 File: ../figures/application/mesures.pdf Graphic file (type pdf)
 <use ../figures/application/mesures.pdf>
 Package pdftex.def Info: ../figures/application/mesures.pdf  used on input line
@@ -2622,7 +2622,7 @@ Overfull \hbox (3.35205pt too wide) in paragraph at lines 629--630
 es [][]47[][] contiennent dif-f�-rents mes-sages NMEA
  []
 
-<../figures/code/donnees-nmea.pdf, id=1558, 384.4637pt x 169.10834pt>
+<../figures/code/donnees-nmea.pdf, id=1573, 384.4637pt x 169.10834pt>
 File: ../figures/code/donnees-nmea.pdf Graphic file (type pdf)
 <use ../figures/code/donnees-nmea.pdf>
 Package pdftex.def Info: ../figures/code/donnees-nmea.pdf  used on input line 6
@@ -2632,7 +2632,7 @@ Package pdftex.def Info: ../figures/code/donnees-nmea.pdf  used on input line 6
 
 pdfTeX warning: pdflatex.exe (file ../figures/code/antenna-types.pdf): PDF incl
 usion: found PDF version <1.6>, but at most version <1.5> allowed
-<../figures/code/antenna-types.pdf, id=1560, 878.28125pt x 408.52625pt>
+<../figures/code/antenna-types.pdf, id=1575, 878.28125pt x 408.52625pt>
 File: ../figures/code/antenna-types.pdf Graphic file (type pdf)
 <use ../figures/code/antenna-types.pdf>
 Package pdftex.def Info: ../figures/code/antenna-types.pdf  used on input line 
@@ -2651,18 +2651,18 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 pdfTeX warning: pdflatex.exe (file ../figures/code/diagrammes/bno-support-class
 .pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowe
 d
-<../figures/code/diagrammes/bno-support-class.pdf, id=1580, 569.04698pt x 459.2
+<../figures/code/diagrammes/bno-support-class.pdf, id=1595, 569.04698pt x 459.2
 4976pt>
 File: ../figures/code/diagrammes/bno-support-class.pdf Graphic file (type pdf)
 <use ../figures/code/diagrammes/bno-support-class.pdf>
 Package pdftex.def Info: ../figures/code/diagrammes/bno-support-class.pdf  used
  on input line 658.
-(pdftex.def)             Requested size: 452.9679pt x 365.57132pt.
+(pdftex.def)             Requested size: 271.7835pt x 219.3442pt.
 
 
 pdfTeX warning: pdflatex.exe (file ../figures/code/diagrammes/sd-card-class.pdf
 ): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<../figures/code/diagrammes/sd-card-class.pdf, id=1583, 597.55246pt x 446.58041
+<../figures/code/diagrammes/sd-card-class.pdf, id=1598, 597.55246pt x 446.58041
 pt>
 File: ../figures/code/diagrammes/sd-card-class.pdf Graphic file (type pdf)
 <use ../figures/code/diagrammes/sd-card-class.pdf>
@@ -2683,7 +2683,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 pdfTeX warning: pdflatex.exe (file ../figures/code/diagrammes/ser-com-class.pdf
 ): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<../figures/code/diagrammes/ser-com-class.pdf, id=1592, 596.4965pt x 254.43456p
+<../figures/code/diagrammes/ser-com-class.pdf, id=1608, 596.4965pt x 254.43456p
 t>
 File: ../figures/code/diagrammes/ser-com-class.pdf Graphic file (type pdf)
 <use ../figures/code/diagrammes/ser-com-class.pdf>
@@ -2700,16 +2700,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [47 <../figures/code/diagrammes/sd-card-class.pdf> <../figures/code/diagrammes/
 ser-com-class.pdf>]
-<../figures/application/tkinter.pdf, id=1606, 308.15125pt x 117.43875pt>
+<../figures/application/tkinter.pdf, id=1621, 308.15125pt x 117.43875pt>
 File: ../figures/application/tkinter.pdf Graphic file (type pdf)
 <use ../figures/application/tkinter.pdf>
 Package pdftex.def Info: ../figures/application/tkinter.pdf  used on input line
  698.
-(pdftex.def)             Requested size: 385.02547pt x 146.74788pt.
+(pdftex.def)             Requested size: 407.66833pt x 155.37799pt.
 \openout4 = `main.pyg'.
 
 
-(./_minted-main/4655EC9077A32FCEB36A05F57C4243DCCF33289265490CC72470AF6FAFE9A29
+(./_minted-main/FD45B0A09E3F5FF815871001E2A56334CF33289265490CC72470AF6FAFE9A29
 4.pygtex
 LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 
 9.
@@ -2727,24 +2727,24 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [48
 
  <../figures/application/tkinter.pdf>]
-<../figures/application/screen_logGnss.jpg, id=4570, 814.54312pt x 517.18219pt>
+<../figures/application/screen_logGnss.jpg, id=4585, 814.54312pt x 517.18219pt>
 
 File: ../figures/application/screen_logGnss.jpg Graphic file (type jpg)
 <use ../figures/application/screen_logGnss.jpg>
 Package pdftex.def Info: ../figures/application/screen_logGnss.jpg  used on inp
-ut line 733.
+ut line 728.
 (pdftex.def)             Requested size: 339.72592pt x 215.69986pt.
-<../figures/application/Config_window.jpg, id=4573, 340.27126pt x 182.18062pt>
+<../figures/application/Config_window.jpg, id=4588, 340.27126pt x 182.18062pt>
 File: ../figures/application/Config_window.jpg Graphic file (type jpg)
 <use ../figures/application/Config_window.jpg>
 Package pdftex.def Info: ../figures/application/Config_window.jpg  used on inpu
-t line 741.
+t line 736.
 (pdftex.def)             Requested size: 226.48395pt x 121.25977pt.
-<../figures/application/scree_save.jpg, id=4574, 152.06813pt x 152.06813pt>
+<../figures/application/scree_save.jpg, id=4589, 152.06813pt x 152.06813pt>
 File: ../figures/application/scree_save.jpg Graphic file (type jpg)
 <use ../figures/application/scree_save.jpg>
 Package pdftex.def Info: ../figures/application/scree_save.jpg  used on input l
-ine 748.
+ine 743.
 (pdftex.def)             Requested size: 90.5922pt x 90.5942pt.
 ) (./pages/5_Val-MES.tex
 
@@ -2759,7 +2759,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
  <../figures/application/screen_logGnss.JPG> <../figures/application/Config_win
 dow.JPG> <../figures/application/scree_save.JPG>]
-<../figures/mesures/schema-courant.pdf, id=4583, 567.91666pt x 328.56494pt>
+<../figures/mesures/schema-courant.pdf, id=4598, 567.91666pt x 328.56494pt>
 File: ../figures/mesures/schema-courant.pdf Graphic file (type pdf)
 <use ../figures/mesures/schema-courant.pdf>
 Package pdftex.def Info: ../figures/mesures/schema-courant.pdf  used on input l
@@ -2780,7 +2780,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 pdfTeX warning: pdflatex.exe (file ../figures/mesures/led-imu.pdf): PDF inclusi
 on: found PDF version <1.6>, but at most version <1.5> allowed
-<../figures/mesures/led-imu.pdf, id=4611, 268.00125pt x 706.64pt>
+<../figures/mesures/led-imu.pdf, id=4626, 268.00125pt x 706.64pt>
 File: ../figures/mesures/led-imu.pdf Graphic file (type pdf)
 <use ../figures/mesures/led-imu.pdf>
 Package pdftex.def Info: ../figures/mesures/led-imu.pdf  used on input line 74.
@@ -2795,76 +2795,19 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [51 <../figures/mesures/led-imu.pdf>]
+<../figures/mesures/I2C/Schema-mesure-i2c.pdf, id=4640, 142.13168pt x 76.654pt>
 
-pdfTeX warning: pdflatex.exe (file ../figures/mesures/I2C/Intervale-2s.pdf): PD
-F inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<../figures/mesures/I2C/Intervale-2s.pdf, id=4623, 1284.8pt x 827.09pt>
+File: ../figures/mesures/I2C/Schema-mesure-i2c.pdf Graphic file (type pdf)
+<use ../figures/mesures/I2C/Schema-mesure-i2c.pdf>
+Package pdftex.def Info: ../figures/mesures/I2C/Schema-mesure-i2c.pdf  used on 
+input line 101.
+(pdftex.def)             Requested size: 181.18439pt x 97.7191pt.
+<../figures/mesures/I2C/Intervale-2s.pdf, id=4642, 1284.8pt x 828.09375pt>
 File: ../figures/mesures/I2C/Intervale-2s.pdf Graphic file (type pdf)
 <use ../figures/mesures/I2C/Intervale-2s.pdf>
 Package pdftex.def Info: ../figures/mesures/I2C/Intervale-2s.pdf  used on input
- line 95.
-(pdftex.def)             Requested size: 317.07614pt x 204.10909pt.
-
-
-pdfTeX warning: pdflatex.exe (file ../figures/mesures/I2C/duree-comm.pdf): PDF 
-inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<../figures/mesures/I2C/duree-comm.pdf, id=4624, 1284.8pt x 827.09pt>
-File: ../figures/mesures/I2C/duree-comm.pdf Graphic file (type pdf)
-<use ../figures/mesures/I2C/duree-comm.pdf>
-Package pdftex.def Info: ../figures/mesures/I2C/duree-comm.pdf  used on input l
-ine 103.
-(pdftex.def)             Requested size: 317.07614pt x 204.10909pt.
-
-
-pdfTeX warning: pdflatex.exe (file ../figures/mesures/I2C/Tramme-mesure.pdf): P
-DF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<../figures/mesures/I2C/Tramme-mesure.pdf, id=4625, 1284.8pt x 827.09pt>
-File: ../figures/mesures/I2C/Tramme-mesure.pdf Graphic file (type pdf)
-<use ../figures/mesures/I2C/Tramme-mesure.pdf>
-Package pdftex.def Info: ../figures/mesures/I2C/Tramme-mesure.pdf  used on inpu
-t line 111.
-(pdftex.def)             Requested size: 317.07614pt x 204.10909pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-
-pdfTeX warning: pdflatex.exe (file ../figures/mesures/UART/interval-gnss.pdf): 
-PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<../figures/mesures/UART/interval-gnss.pdf, id=4626, 1284.8pt x 827.09pt>
-File: ../figures/mesures/UART/interval-gnss.pdf Graphic file (type pdf)
-<use ../figures/mesures/UART/interval-gnss.pdf>
-Package pdftex.def Info: ../figures/mesures/UART/interval-gnss.pdf  used on inp
-ut line 123.
-(pdftex.def)             Requested size: 317.07614pt x 204.10909pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-
-pdfTeX warning: pdflatex.exe (file ../figures/mesures/UART/duree-comm-gnss.pdf)
-: PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<../figures/mesures/UART/duree-comm-gnss.pdf, id=4627, 1284.8pt x 827.09pt>
-File: ../figures/mesures/UART/duree-comm-gnss.pdf Graphic file (type pdf)
-<use ../figures/mesures/UART/duree-comm-gnss.pdf>
-Package pdftex.def Info: ../figures/mesures/UART/duree-comm-gnss.pdf  used on i
-nput line 131.
-(pdftex.def)             Requested size: 317.07614pt x 204.10909pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-
-pdfTeX warning: pdflatex.exe (file ../figures/mesures/UART/message-NMEA-RMC.pdf
-): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<../figures/mesures/UART/message-NMEA-RMC.pdf, id=4628, 1284.8pt x 827.09pt>
-File: ../figures/mesures/UART/message-NMEA-RMC.pdf Graphic file (type pdf)
-<use ../figures/mesures/UART/message-NMEA-RMC.pdf>
-Package pdftex.def Info: ../figures/mesures/UART/message-NMEA-RMC.pdf  used on 
-input line 139.
-(pdftex.def)             Requested size: 317.07614pt x 204.10909pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+ line 113.
+(pdftex.def)             Requested size: 317.07614pt x 204.3568pt.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2874,33 +2817,115 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[52 <../figures/mesures/I2C/Intervale-2s.pdf> <../figures/mesures/I2C/duree-com
-m.pdf>]
+[52 <../figures/mesures/I2C/Schema-mesure-i2c.pdf> <../figures/mesures/I2C/Inte
+rvale-2s.pdf
+
+pdfTeX warning: pdflatex.exe (file ../figures/mesures/I2C/Intervale-2s.pdf): PD
+F inclusion: multiple pdfs with page group included in a single page
+>]
+<../figures/mesures/I2C/duree-comm.pdf, id=5756, 1284.8pt x 828.09375pt>
+File: ../figures/mesures/I2C/duree-comm.pdf Graphic file (type pdf)
+<use ../figures/mesures/I2C/duree-comm.pdf>
+Package pdftex.def Info: ../figures/mesures/I2C/duree-comm.pdf  used on input l
+ine 125.
+(pdftex.def)             Requested size: 317.07614pt x 204.3568pt.
+
+
+pdfTeX warning: pdflatex.exe (file ../figures/mesures/I2C/Tramme-mesure.pdf): P
+DF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
+<../figures/mesures/I2C/Tramme-mesure.pdf, id=5759, 1284.8pt x 827.09pt>
+File: ../figures/mesures/I2C/Tramme-mesure.pdf Graphic file (type pdf)
+<use ../figures/mesures/I2C/Tramme-mesure.pdf>
+Package pdftex.def Info: ../figures/mesures/I2C/Tramme-mesure.pdf  used on inpu
+t line 135.
+(pdftex.def)             Requested size: 317.07614pt x 204.10909pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[53 <../figures/mesures/I2C/duree-comm.pdf> <../figures/mesures/I2C/Tramme-mesu
+re.pdf>]
+<../figures/mesures/UART/scheam-mesure-uart-gnss.pdf, id=12672, 140.88332pt x 7
+7.43454pt>
+File: ../figures/mesures/UART/scheam-mesure-uart-gnss.pdf Graphic file (type pd
+f)
+<use ../figures/mesures/UART/scheam-mesure-uart-gnss.pdf>
+Package pdftex.def Info: ../figures/mesures/UART/scheam-mesure-uart-gnss.pdf  u
+sed on input line 151.
+(pdftex.def)             Requested size: 181.18439pt x 99.59084pt.
+<../figures/mesures/UART/interval-gnss.pdf, id=12677, 1284.8pt x 828.09375pt>
+File: ../figures/mesures/UART/interval-gnss.pdf Graphic file (type pdf)
+<use ../figures/mesures/UART/interval-gnss.pdf>
+Package pdftex.def Info: ../figures/mesures/UART/interval-gnss.pdf  used on inp
+ut line 164.
+(pdftex.def)             Requested size: 317.07614pt x 204.3568pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[54
+
+ <../figures/mesures/UART/scheam-mesure-uart-gnss.pdf> <../figures/mesures/UART
+/interval-gnss.pdf
+
+pdfTeX warning: pdflatex.exe (file ../figures/mesures/UART/interval-gnss.pdf): 
+PDF inclusion: multiple pdfs with page group included in a single page
+>]
+<../figures/mesures/UART/duree-comm-gnss.pdf, id=13872, 1284.8pt x 828.09375pt>
+
+File: ../figures/mesures/UART/duree-comm-gnss.pdf Graphic file (type pdf)
+<use ../figures/mesures/UART/duree-comm-gnss.pdf>
+Package pdftex.def Info: ../figures/mesures/UART/duree-comm-gnss.pdf  used on i
+nput line 175.
+(pdftex.def)             Requested size: 317.07614pt x 204.3568pt.
+
+
+pdfTeX warning: pdflatex.exe (file ../figures/mesures/UART/message-NMEA-RMC.pdf
+): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
+<../figures/mesures/UART/message-NMEA-RMC.pdf, id=13873, 1284.8pt x 827.09pt>
+File: ../figures/mesures/UART/message-NMEA-RMC.pdf Graphic file (type pdf)
+<use ../figures/mesures/UART/message-NMEA-RMC.pdf>
+Package pdftex.def Info: ../figures/mesures/UART/message-NMEA-RMC.pdf  used on 
+input line 183.
+(pdftex.def)             Requested size: 317.07614pt x 204.10909pt.
+
 
 pdfTeX warning: pdflatex.exe (file ../figures/mesures/SPI/freq-spi.pdf): PDF in
 clusion: found PDF version <1.6>, but at most version <1.5> allowed
-<../figures/mesures/SPI/freq-spi.pdf, id=4641, 1284.8pt x 827.09pt>
+<../figures/mesures/SPI/freq-spi.pdf, id=13874, 1284.8pt x 827.09pt>
 File: ../figures/mesures/SPI/freq-spi.pdf Graphic file (type pdf)
 <use ../figures/mesures/SPI/freq-spi.pdf>
 Package pdftex.def Info: ../figures/mesures/SPI/freq-spi.pdf  used on input lin
-e 152.
+e 197.
 (pdftex.def)             Requested size: 317.07614pt x 204.10909pt.
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
 
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
+[55 <../figures/mesures/UART/duree-comm-gnss.pdf> <../figures/mesures/UART/mess
+age-NMEA-RMC.pdf>]
 
 pdfTeX warning: pdflatex.exe (file ../figures/mesures/SPI/densite-comm.pdf): PD
 F inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<../figures/mesures/SPI/densite-comm.pdf, id=4642, 1284.8pt x 827.09pt>
+<../figures/mesures/SPI/densite-comm.pdf, id=15060, 1284.8pt x 827.09pt>
 File: ../figures/mesures/SPI/densite-comm.pdf Graphic file (type pdf)
 <use ../figures/mesures/SPI/densite-comm.pdf>
 Package pdftex.def Info: ../figures/mesures/SPI/densite-comm.pdf  used on input
- line 160.
+ line 205.
 (pdftex.def)             Requested size: 317.07614pt x 204.10909pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 )
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2910,27 +2935,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[53 <../figures/mesures/I2C/Tramme-mesure.pdf> <../figures/mesures/UART/interva
-l-gnss.pdf>]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[54 <../figures/mesures/UART/duree-comm-gnss.pdf> <../figures/mesures/UART/mess
-age-NMEA-RMC.pdf>]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[55 <../figures/mesures/SPI/freq-spi.pdf> <../figures/mesures/SPI/densite-comm.
+[56 <../figures/mesures/SPI/freq-spi.pdf> <../figures/mesures/SPI/densite-comm.
 pdf>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2940,7 +2945,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[56
+[57
 
 ] (./Main.bbl)
 
@@ -2951,7 +2956,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[57]
+[58]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2960,7 +2965,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[58
+[59
 
 ] (./main.aux)
  ***********
@@ -2968,15 +2973,15 @@ LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-03>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 4966BF701828DBEC87E9B8F3A5D854CE;16769.
+(rerunfilecheck)             Checksum: FA3A7939FC6438DF71B74D7DCA90256B;17278.
 runsystem(del main.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 50831 strings out of 475187
- 1033917 string characters out of 5767784
+ 50861 strings out of 475187
+ 1035139 string characters out of 5767784
  1945248 words of memory out of 5000000
- 70924 multiletter control sequences out of 15000+600000
+ 70948 multiletter control sequences out of 15000+600000
  662668 words of font info for 159 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  109i,15n,117p,2289b,992s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2992,10 +2997,10 @@ live/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2023/texmf-di
 st/fonts/type1/urw/times/utmbi8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/ur
 w/times/utmr8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/times/utmri8a.pf
 b>
-Output written on main.pdf (59 pages, 11377650 bytes).
+Output written on main.pdf (60 pages, 13101553 bytes).
 PDF statistics:
- 4815 PDF objects out of 5155 (max. 8388607)
- 3406 compressed objects within 35 object streams
- 293 named destinations out of 1000 (max. 500000)
- 1333 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 15215 PDF objects out of 15390 (max. 8388607)
+ 8607 compressed objects within 87 object streams
+ 299 named destinations out of 1000 (max. 500000)
+ 1367 words of extra memory for PDF output out of 10000 (max. 10000000)
 

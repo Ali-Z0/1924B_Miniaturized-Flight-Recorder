@@ -87,38 +87,79 @@ Comme le montre la figure \ref{fig:led-imu}, une LED reste constamment allumée 
 Avec le code implémenté dans le microcontrôleur, les différents périphériques fonctionnent correctement et la communication avec les différents bus est opérationnelle. C'est pourquoi, dans cette section, l'objectif principal est de mesurer la qualité et l'intégrité des signaux plutôt que d'analyser les différents protocoles.
 
 \subsubsection{Communication I2C} \label{ssec:Comm-I2C}
-\paragraph{Méthode de mesure}
-\paragraph{Mesures}
+La communication I2C s'effectue entre la centrale inertielle BNO055 et le microcontrôleur. Par ce bus, les configurations du registre de l'\gls{imu} ainsi que les données inertielles mesurées, en fonction de ces configurations, sont transmises. Comme nous avons pu le voir précédemment, cette communication est effective et les données sont cohérentes. Dans ce contexte, nous examinerons si l'intervalle entre les mesures est respecté, la durée de ces mesures, ainsi que la qualité des signaux I2C.
 
-\begin{figure}[!h]
+
+\paragraph{Méthode de mesure}
+La boîte noire a été configurée pour transmettre et enregistrer des données inertielles à intervalles de 2 secondes. De plus, les mesures ont été prises pendant la transmission des données inertielles, et non lors de la configuration. Enfin, les trames ont été décodées automatiquement par l'oscilloscope grâce à sa fonction "Protocol".
+
+\paragraph{Schéma de mesure} Le schéma de mesure est présenté sur la figure \ref{fig:schema-mesure-i2c}.
+
+
+\begin{figure}[H]
 	\centering
-	\includegraphics[width=0.7\linewidth]{../figures/mesures/I2C/Intervale-2s}
+	\includegraphics[width=0.4\linewidth]{../figures/mesures/I2C/Schema-mesure-i2c}
+	\caption{Schéma de mesure, mesures I2C.}
+	\label{fig:schema-mesure-i2c}
+	\source{Auteur}
+\end{figure}
+
+\paragraph{Mesures}
+Comme le montre la figure \ref{fig:intervale-2s}, il y a un délai de $1.98$ secondes entre l'envoi de deux sets de données de la centrale inertielle.
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.7\linewidth]{../figures/mesures/I2C/Intervale-2s}
 	\caption{Intervale entre deux mesures, config. 2 secondes.}
 	\label{fig:intervale-2s}
 	\source{Auteur}
 \end{figure}
 
-\begin{figure}[!h]
+Malgré la légère différence sur la figure \ref{fig:intervale-2s} de $20ms$, probablement due à une imprécision de mesure, nous pouvons conclure que l'intervalle entre les mesures respecte bien la configuration établie, même après modifications de celle-ci.
+
+Sur la figure \ref{fig:duree-comm}, nous observons la durée d'une trame de mesures qui englobe toutes les données mentionnées dans la section \ref{sssec:IMU-data}. La durée de transmission d'un set de mesure est de $2.274ms$. Compte tenu que le bus est configuré en mode "fast" à $400 kbit/s$, cela suggère qu'environ $\sim910$ bits ont été transmis, ce qui explique la densité des données rendant la figure peu lisible.
+
+\begin{figure}[H]
 	\centering
-	\includegraphics[width=0.7\linewidth]{../figures/mesures/I2C/duree-comm}
+	\includegraphics[width=.7\linewidth]{../figures/mesures/I2C/duree-comm}
 	\caption{Durée d'une mesure.}
 	\label{fig:duree-comm}
 	\source{Auteur}
 \end{figure}
 
-\begin{figure}[!h]
+Sur la figure \ref{fig:tramme-mesure}, nous observons le début d'une communication avec l'\gls{imu}. Le premier byte (\textbf{0x28}) correspond à l'adresse du BNO055. Ensuite, le registre \textbf{0x28} est adressé : il s'agit du registre contenant les données \textbf{LSB} de l'accélération linéaire. Les flancs des bits transmis semblent suffisamment nettes et peu parasités pour une bonne communication.
+
+\begin{figure}[H]
 	\centering
-	\includegraphics[width=0.7\linewidth]{../figures/mesures/I2C/Tramme-mesure}
+	\includegraphics[width=.7\linewidth]{../figures/mesures/I2C/Tramme-mesure}
 	\caption{Début de tramme d'une mesure.}
 	\label{fig:tramme-mesure}
 	\source{Auteur}
 \end{figure}
 
-\subsubsection{Communication UART} \label{ssec:Comm-UART}
-\paragraph{Méthode de mesure}
-\paragraph{Mesures}
+\clearpage
 
-\begin{figure}[!h]
+\subsubsection{Communication UART GNSS} \label{ssec:Comm-UART}
+Dans cette section, nous analyserons les différentes caractéristiques de la communication UART entre le microcontrôleur et le module \gls{gnss}.
+
+\paragraph{Méthode de mesure} Pour réaliser ces mesures, le système a été activé et le \gls{gnss} a été configuré par défaut à une fréquence de \textbf{1Hz}.
+
+\paragraph{Schéma de mesure} Le schéma de mesure est présenté sur la figure \ref{fig:scheam-mesure-uart-gnss}, nous nous intéressants ici, qu'au message envoyés par le GNSS dans sa configuration par défaut. 
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.4\linewidth]{../figures/mesures/UART/scheam-mesure-uart-gnss}
+	\caption{Schéma de mesure \gls{gnss}.}
+	\label{fig:scheam-mesure-uart-gnss}
+	\source{Auteur}
+\end{figure}
+
+
+
+\paragraph{Mesures}
+Sur la figure \ref{fig:interval-gnss}, nous observons l'intervalle entre les messages GNSS. Effectivement, cet intervalle est de $1s$, offrant ainsi suffisamment de temps au \gls{mcu} pour traiter ces données, que ce soit pour les afficher sur un terminal ou les enregistrer sur la carte SD.
+
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=0.7\linewidth]{../figures/mesures/UART/interval-gnss}
 	\caption{Intervale entre les données NMEA.}
@@ -126,7 +167,10 @@ Avec le code implémenté dans le microcontrôleur, les différents périphériq
 	\source{Auteur}
 \end{figure}
 
-\begin{figure}[!h]
+Sur la figure \ref{fig:duree-comm-gnss}, nous constatons que la durée d'envoi des messages \textbf{NMEA} est de $234.4 ms$. Sachant que l'intervalle entre les transmissions est de $1s$, cela laisse une fenêtre de $756ms$ au \gls{mcu} pour traiter ces données. Cette période est largement suffisante pour la transmission des données via le second UART (opérant au même baud rate) ou vers la carte SD, dont la fréquence est nettement supérieure ($10MHz$). Si nous considérons la durée des transmissions de l'\gls{imu}, qui est de $2.274ms$, nous estimons qu'environ $400ms$ des $756ms$ disponibles sont utilisés pour traiter les données. Cette marge pourrait être encore diminuée si la fréquence d'enregistrement du \gls{gnss} était baissée. Ainsi, nous pourrions envisager d'obtenir jusqu'à $\sim155$ mesures d'\gls{imu} dans l'intervalle donné.
+
+
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=0.7\linewidth]{../figures/mesures/UART/duree-comm-gnss}
 	\caption{Durée d'une communication avec le GNSS.}
@@ -134,7 +178,7 @@ Avec le code implémenté dans le microcontrôleur, les différents périphériq
 	\source{Auteur}
 \end{figure}
 
-\begin{figure}[!h]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=0.7\linewidth]{../figures/mesures/UART/message-NMEA-RMC}
 	\caption{Message RMC du protocole NMEA.}
@@ -145,9 +189,10 @@ Avec le code implémenté dans le microcontrôleur, les différents périphériq
 
 \subsubsection{Communication SPI, carte SD} \label{ssec:Comm-SPI}
 \paragraph{Méthode de mesure}
+\paragraph{Schéma de mesure} Le schéma de mesure est présenté sur la figure
 \paragraph{Mesures}
 
-\begin{figure}[!h]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=0.7\linewidth]{../figures/mesures/SPI/freq-spi}
 	\caption{Mesure fréquence clock SPI.}
@@ -155,7 +200,7 @@ Avec le code implémenté dans le microcontrôleur, les différents périphériq
 	\source{Auteur}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=0.7\linewidth]{../figures/mesures/SPI/densite-comm}
 	\caption{Densité de la communication SPI.}

@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} Setup main window}
+\PYG{n}{gRoot} \PYG{o}{=} \PYG{n}{Tk}\PYG{p}{()}
+\PYG{n}{gRoot}\PYG{o}{.}\PYG{n}{config}\PYG{p}{(}\PYG{n}{bg}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}white\PYGZdq{}}\PYG{p}{)}
+\PYG{n}{gRoot}\PYG{o}{.}\PYG{n}{geometry}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}1080x640\PYGZdq{}}\PYG{p}{)}
+\PYG{n}{gRoot}\PYG{o}{.}\PYG{n}{title}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Black Box Connect\PYGZdq{}}\PYG{p}{)}
+\PYG{c+c1}{\PYGZsh{} Style configuration}
+\PYG{n}{sty} \PYG{o}{=} \PYG{n}{ThemedStyle}\PYG{p}{(}\PYG{n}{gRoot}\PYG{p}{)}
+\PYG{n}{sty}\PYG{o}{.}\PYG{n}{set\PYGZus{}theme}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}radiance\PYGZsq{}}\PYG{p}{)}
+\end{Verbatim}
