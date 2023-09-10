@@ -1,3 +1,4 @@
+\newpage
 \clearpage
 
 \section{Validation du design} \label{sec:Validation-design}
@@ -77,7 +78,7 @@ Afin de diminuer la consommation lors du mode veille il existe différentes poss
 	\source{Schéma de la \href{https://cdn-learn.adafruit.com/assets/assets/000/092/544/original/sensors_BNO055_STEMMA_sch.png?1593120280}{carte BNO055 d'adafruit }}
 \end{figure}
 
-Comme le montre la figure \ref{fig:led-imu}, une LED reste constamment allumée lors de la mise sous tension de la carte de l'\gls{imu}. Elle présente une différence de potentiel de $2.2V$ à ses bornes, entraînant une consommation constante de $0.11mA$. Bien que cette consommation soit faible, elle est inutile. Dans le cadre de ce prototype, la LED n'a pas été débrasée, mais un adhésif a été collé dessus afin de limiter la pollution lumineuse sur la LED d'état qui passe par un guide-lumière.
+Comme le montre la figure \ref{fig:led-imu}, une LED reste constamment allumée lors de la mise sous tension de la carte de l'\gls{imu}. Elle présente une différence de potentiel de $2.2V$ à ses bornes, entraînant une consommation constante de \underline{$0.11mA$}. Bien que cette consommation soit faible, elle est inutile. Dans le cadre de ce prototype, la LED n'a pas été débrasée, mais un adhésif a été collé dessus afin de limiter la pollution lumineuse sur la LED d'état qui passe par un guide-lumière.
 
 \noindent\textbf{Permettre de changer de mode plus facilement} Permettre à l'utilisateur de facilement basculer entre le mode "auto-enclenchement" et "enclenchement manuel" permettrait d'éviter des consommations inutiles.
 
@@ -105,7 +106,7 @@ La boîte noire a été configurée pour transmettre et enregistrer des données
 \end{figure}
 
 \paragraph{Mesures}
-Comme le montre la figure \ref{fig:intervale-2s}, il y a un délai de $1.98$ secondes entre l'envoi de deux sets de données de la centrale inertielle.
+Comme le montre la figure \ref{fig:intervale-2s}, il y a un délai de \underline{$1.98$} secondes entre l'envoi de deux sets de données de la centrale inertielle.
 
 
 \begin{figure}[H]
@@ -118,7 +119,7 @@ Comme le montre la figure \ref{fig:intervale-2s}, il y a un délai de $1.98$ sec
 
 Malgré la légère différence sur la figure \ref{fig:intervale-2s} de $20ms$, probablement due à une imprécision de mesure, nous pouvons conclure que l'intervalle entre les mesures respecte bien la configuration établie, même après modifications de celle-ci.
 
-Sur la figure \ref{fig:duree-comm}, nous observons la durée d'une trame de mesures qui englobe toutes les données mentionnées dans la section \ref{sssec:IMU-data}. La durée de transmission d'un set de mesure est de $2.274ms$. Compte tenu que le bus est configuré en mode "fast" à $400 kbit/s$, cela suggère qu'environ $\sim910$ bits ont été transmis, ce qui explique la densité des données rendant la figure peu lisible.
+Sur la figure \ref{fig:duree-comm}, nous observons la durée d'une trame de mesures qui englobe toutes les données mentionnées dans la section \ref{sssec:IMU-data}. La durée de transmission d'un set de mesure est de \underline{$2.274ms$}. Compte tenu que le bus est configuré en mode "fast" à $400 kbit/s$, cela suggère qu'environ $\sim910$ bits ont été transmis, ce qui explique la densité des données rendant la figure peu lisible.
 
 \begin{figure}[H]
 	\centering
@@ -157,7 +158,7 @@ Dans cette section, nous analyserons les différentes caractéristiques de la co
 
 
 \paragraph{Mesures}
-Sur la figure \ref{fig:interval-gnss}, nous observons l'intervalle entre les messages GNSS. Effectivement, cet intervalle est de $1s$, offrant ainsi suffisamment de temps au \gls{mcu} pour traiter ces données, que ce soit pour les afficher sur un terminal ou les enregistrer sur la carte SD.
+Sur la figure \ref{fig:interval-gnss}, nous observons l'intervalle entre les messages GNSS. Effectivement, cet intervalle est de \underline{$1s$}, offrant ainsi suffisamment de temps au \gls{mcu} pour traiter ces données, que ce soit pour les afficher sur un terminal ou les enregistrer sur la carte SD.
 
 \begin{figure}[H]
 	\centering
@@ -167,7 +168,7 @@ Sur la figure \ref{fig:interval-gnss}, nous observons l'intervalle entre les mes
 	\source{Auteur}
 \end{figure}
 
-Sur la figure \ref{fig:duree-comm-gnss}, nous constatons que la durée d'envoi des messages \textbf{NMEA} est de $234.4 ms$. Sachant que l'intervalle entre les transmissions est de $1s$, cela laisse une fenêtre de $756ms$ au \gls{mcu} pour traiter ces données. Cette période est largement suffisante pour la transmission des données via le second UART (opérant au même baud rate) ou vers la carte SD, dont la fréquence est nettement supérieure ($10MHz$). Si nous considérons la durée des transmissions de l'\gls{imu}, qui est de $2.274ms$, nous estimons avec une marge qu'environ $\sim400ms$ des $756ms$ disponibles sont utilisés pour traiter les données. Ce temps de traitement pourrait être encore diminuée si la fréquence d'enregistrement du \gls{gnss} était baissée. Ainsi, nous pourrions envisager d'obtenir jusqu'à $\sim155$ mesures d'\gls{imu} dans l'intervalle donné.
+Sur la figure \ref{fig:duree-comm-gnss}, nous constatons que la durée d'envoi des messages \textbf{NMEA} est de \underline{$234.4 ms$}. Sachant que l'intervalle entre les transmissions est de \underline{$1s$}, cela laisse une fenêtre de $756ms$ au \gls{mcu} pour traiter ces données. Cette période est largement suffisante pour la transmission des données via le second UART (opérant au même baud rate) ou vers la carte SD, dont la fréquence est nettement supérieure ($10MHz$). Si nous considérons la durée des transmissions de l'\gls{imu}, qui est de \underline{$2.274ms$}, nous estimons avec une marge qu'environ $\sim400ms$ des $756ms$ disponibles sont utilisés pour traiter les données. Ce temps de traitement pourrait être encore diminuée si la fréquence d'enregistrement du \gls{gnss} était baissée. Ainsi, nous pourrions envisager d'obtenir jusqu'à $\sim155$ mesures d'\gls{imu} dans l'intervalle donné.
 
 
 \begin{figure}[H]
@@ -193,10 +194,72 @@ Nous observons sur la figure \ref{fig:message-nmea-rmc} le message décodé par 
 
 \clearpage
 
+\subsubsection{Communication UART2 FTDI} \label{ssec:Comm-UART2}
+Dans cette section, nous examinerons les trames de communication sur l'UART 2, établies entre le \gls{mcu} et le \gls{FTDI}, qui sert de bus d'interface entre la boîte noire et un appareil externe.
+
+\paragraph{Méthode de mesure} Ces mesures ont été effectuées pendant une communication entre la boîte noire et un ordinateur fixe, en utilisant l'application développée dans la section \ref{sec:devApp}.
+
+
+\paragraph{Schéma de mesure} Le schéma de mesure est présenté sur figure \ref{fig:schema-mesure-ftdi} : 
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=.4\linewidth]{../figures/mesures/UART-FTDI/Schema-mesure-FTDI}
+	\caption{Schéma de mesure UART2.}
+	\label{fig:schema-mesure-ftdi}
+	\source{Auteur}
+\end{figure}
+
+\paragraph{Mesures} Sur la figure \ref{fig:comm-uart2-config}, une communication est visible. Il s'agit d'une commande de configuration envoyée par l'application pour modifier le temps entre l'écriture des mesures \gls{gnss} à 5 secondes. Nous pouvons distinguer l'envoi de la commande "\textbf{INTG:5000}" et, \underline{$120\micro s$} après, la réception de la réponse de la boîte noire. Cela démontre une réactivité rapide du système dans le mode \textbf{CONFIG}.
+
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{../figures/mesures/UART-FTDI/comm-uart2-config}
+	\caption{Trames configuration.}
+	\label{fig:comm-uart2-config}
+	\source{Auteur}
+\end{figure}
+
+\clearpage
+
+Sur la figure \ref{fig:comm-uart-ecartlog}, nous observons le temps de réaction du système suite à une commande demandant l'obtention des LOGS de l'\gls{imu}. L'intervalle entre cette demande et la réponse du système en mode \textbf{LOGGING} est de \underline{$2.7ms$}, ce qui est plus élevé que la figure \ref{fig:comm-uart2-config}, sachant que le système à plus d'éléments à gérer lors de ce mode.
+
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{../figures/mesures/UART-FTDI/comm-uart-ecartLog}
+	\caption{Réaction commande durant \textbf{LOGGING}.}
+	\label{fig:comm-uart-ecartlog}
+	\source{Auteur}
+\end{figure}
+
+
+
 \subsubsection{Communication SPI, carte SD} \label{ssec:Comm-SPI}
-\paragraph{Méthode de mesure}
-\paragraph{Schéma de mesure} Le schéma de mesure est présenté sur la figure
-\paragraph{Mesures}
+Dans cette section, nous examinerons la communication SPI entre le \gls{mcu} et la carte SD.
+
+\paragraph{Méthode de mesure} Étant donné la complexité de la communication SPI pour la gestion du système de fichiers FAT, notre objectif ici n'est pas d'analyser le protocole en lui-même, mais plutôt d'observer les signaux électriques lors du logging.
+
+\paragraph{Schéma de mesure} Le schéma de mesure est visible sur la figure \ref{fig:schema-mesure-spi} :
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.5\linewidth]{../figures/mesures/SPI/Schema-mesure-spi}
+	\caption{Schéma de mesure SPI.}
+	\label{fig:schema-mesure-spi}
+	\source{Auteur}
+\end{figure}
+
+\clearpage
+
+\paragraph{Mesures} Sur la figure \ref{fig:densite-comm}, nous pouvons constater que la communication SPI est dense et constante durant le 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{../figures/mesures/SPI/densite-comm}
+	\caption{Densité de la communication SPI.}
+	\label{fig:densite-comm}
+	\source{Auteur}
+\end{figure}
 
 \begin{figure}[H]
 	\centering
@@ -206,13 +269,7 @@ Nous observons sur la figure \ref{fig:message-nmea-rmc} le message décodé par 
 	\source{Auteur}
 \end{figure}
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.7\linewidth]{../figures/mesures/SPI/densite-comm}
-	\caption{Densité de la communication SPI.}
-	\label{fig:densite-comm}
-	\source{Auteur}
-\end{figure}
+
 
 
 

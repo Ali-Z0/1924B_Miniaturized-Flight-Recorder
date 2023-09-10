@@ -1,6 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{delayTimer\PYGZus{}callback}\PYG{p}{()\PYGZob{}}
-\PYG{+w}{	}\PYG{c+cm}{/* Increment delay timer */}
-\PYG{+w}{	}\PYG{n}{timeData}\PYG{p}{.}\PYG{n}{delayCnt}\PYG{+w}{ }\PYG{o}{++}\PYG{p}{;}
-\PYG{p}{\PYGZcb{}}
-\end{Verbatim}

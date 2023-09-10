@@ -1,0 +1,16 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{typedef}\PYG{+w}{ }\PYG{k}{struct}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{	}\PYG{n}{s32}\PYG{+w}{ }\PYG{n}{comres}\PYG{p}{;}
+\PYG{+w}{	}\PYG{k+kt}{bool}\PYG{+w}{ }\PYG{n}{flagMeasReady}\PYG{p}{;}
+\PYG{+w}{	}\PYG{k+kt}{uint8\PYGZus{}t}\PYG{+w}{ }\PYG{n}{flagImportantMeas}\PYG{p}{;}
+\PYG{+w}{	}\PYG{k}{struct}\PYG{+w}{ }\PYG{n+nc}{bno055\PYGZus{}gravity\PYGZus{}double\PYGZus{}t}\PYG{+w}{ }\PYG{n}{gravity}\PYG{p}{;}
+\PYG{+w}{	}\PYG{k}{struct}\PYG{+w}{ }\PYG{n+nc}{bno055\PYGZus{}linear\PYGZus{}accel\PYGZus{}double\PYGZus{}t}\PYG{+w}{ }\PYG{n}{linear\PYGZus{}accel}\PYG{p}{;}
+\PYG{+w}{	}\PYG{k}{struct}\PYG{+w}{ }\PYG{n+nc}{bno055\PYGZus{}euler\PYGZus{}double\PYGZus{}t}\PYG{+w}{ }\PYG{n}{euler}\PYG{p}{;}
+\PYG{+w}{	}\PYG{k}{struct}\PYG{+w}{ }\PYG{n+nc}{bno055\PYGZus{}gyro\PYGZus{}double\PYGZus{}t}\PYG{+w}{ }\PYG{n}{gyro}\PYG{p}{;}
+\PYG{+w}{	}\PYG{k}{struct}\PYG{+w}{ }\PYG{n+nc}{bno055\PYGZus{}mag\PYGZus{}double\PYGZus{}t}\PYG{+w}{ }\PYG{n}{mag}\PYG{p}{;}
+\PYG{+w}{	}\PYG{k}{struct}\PYG{+w}{ }\PYG{n+nc}{bno055\PYGZus{}quaternion\PYGZus{}t}\PYG{+w}{ }\PYG{n}{quaternion}\PYG{p}{;}
+\PYG{+w}{	}\PYG{k+kt}{unsigned}\PYG{+w}{ }\PYG{k+kt}{long}\PYG{+w}{ }\PYG{n}{time}\PYG{p}{;}
+\PYG{+w}{	}\PYG{k+kt}{unsigned}\PYG{+w}{ }\PYG{k+kt}{long}\PYG{+w}{ }\PYG{n}{l\PYGZus{}time}\PYG{p}{;}
+\PYG{+w}{	}\PYG{k+kt}{uint16\PYGZus{}t}\PYG{+w}{ }\PYG{n}{d\PYGZus{}time}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}\PYG{n}{s\PYGZus{}bno055\PYGZus{}data}\PYG{p}{;}
+\end{Verbatim}

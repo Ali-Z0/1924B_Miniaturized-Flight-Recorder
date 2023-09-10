@@ -1,8 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-\PYG{c+cm}{/* Set acceleration only operation, power saving */}
-\PYG{n}{bno055\PYGZus{}set\PYGZus{}operation\PYGZus{}mode}\PYG{p}{(}\PYG{n}{BNO055\PYGZus{}OPERATION\PYGZus{}MODE\PYGZus{}ACCONLY}\PYG{p}{);}
-\PYG{c+cm}{/* set the power mode to LOW POWER */}
-\PYG{n}{bno055\PYGZus{}set\PYGZus{}power\PYGZus{}mode}\PYG{p}{(}\PYG{n}{BNO055\PYGZus{}POWER\PYGZus{}MODE\PYGZus{}LOWPOWER}\PYG{p}{);}
-\PYG{c+cm}{/* Reset interrupt pin */}
-\PYG{n}{bno055\PYGZus{}set\PYGZus{}intr\PYGZus{}rst}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{);}\PYG{+w}{	}
-\end{Verbatim}
