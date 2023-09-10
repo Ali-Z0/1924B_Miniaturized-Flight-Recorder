@@ -5,40 +5,40 @@
 		\centering
 		\includegraphics[width=.4\textwidth,left,]{./ETML-ES-LOGO.png}
 	\end{minipage}
-	
-	\hfill
 	\begin{minipage}{0.7\textwidth}
-		\raggedleft
+		%\raggedleft
 		\LARGE \textbf{Boîte noire miniaturisée\\ 2023, 1942B}
 	\end{minipage}
 \end{figure}
 
 
 % ---- DESCRIPTION ----
-\section{Cahier des charges}
-\noindent
-\begin{minipage}[t]{.5\textwidth} %
-	\subsection{Introduction}
-	Ce projet vise à stocker les données de mesures et de localisation d'un avion en utilisant une centrale inertielle et un GPS/GNSS. En combinant ces technologies, nous pouvons enregistrer des informations précises sur les caractéristiques du vol et la trajectoire de l'avion. En cas d'accident, ces enregistrements permettent de déterminer les causes potentielles. En somme, ce système de collecte et de stockage de données fournit une compréhension approfondie des vols et des données essentielles. Le cahier des charges détaillé est disponible en annexe.
-\end{minipage} %
-\begin{minipage}[t]{.5\textwidth} %
-	\raggedleft
-	\subsection{Aperçu}
-	\begin{itemize}
-		\item[•]	Sauvegarde des données inertielles chaque 500ms par défaut.
-		\item[•]	Sauvegarde des données de localisation chaque 5'000ms par défaut.
-		\item[•]	Possibilité de configurer les temps de sauvegarde.
-		\item[•]	Résistance aux chocs.
-		\item[•]	Bonne autonomie / Low power.
-		\item[•]	\Gls{gps}
-		\item[•]	\Gls{gnss}.
-		\item[•]	\Gls{timestamp} par satellite.
-		\item[•]	\gls{centrale inertielle} :
-		\subitem- 	Accéléromètre 3-axes. 
-		\subitem-	Gyroscope 3-axes.
-		\item[•] Charge, lecture et config. par USB-C.
-	\end{itemize}
-\end{minipage}
+\section{Introduction}
+Les enregistreurs de données de vol, communément appelés "boîtes noires", sont essentiels dans l'aviation contemporaine. Ils jouent un rôle crucial dans la sécurité aérienne et la compréhension des phénomènes aéronautiques en capturant de manière inaltérable des informations vitales. Ces données sont précieuses pour l'investigation d'incidents ou d'accidents aériens, permettant une reconstitution précise des événements à bord des aéronefs. Les boîtes noires sont ainsi des outils indispensables pour détecter des anomalies, des dysfonctionnements, voire des défaillances techniques, contribuant ainsi à renforcer la sécurité dans le secteur aéronautique.
+
+
+
+Une boîte noire comprend deux principaux enregistreurs conçus pour résister aux conditions extrêmes : l'enregistreur de la voix du cockpit (CVR), qui enregistre les communications du cockpit, et l'enregistreur de données de vol (FDR), chargé de collecter divers paramètres techniques de l'aéronef. Ces paramètres englobent la vitesse de l'aéronef, son altitude, son orientation, les données des moteurs, les paramètres aérodynamiques, les données de navigation, les commandes du pilote, les transmissions radio, les données environnementales, et bien d'autres éléments essentiels.
+
+
+
+Dans ce cadre, le présent projet a pour objectif la collecte et le stockage des données de mesures et de localisation d'un aéronef au moyen d'une centrale inertielle et d'un système de positionnement GPS/GNSS. Par le biais de la conjonction de ces technologies, il est envisageable d'enregistrer des données d'une précision remarquable concernant les paramètres du vol et la trajectoire empruntée par l'aéronef. En cas de survenue d'un incident, ces enregistrements jouent un rôle déterminant en permettant d'établir les causes potentielles. Pour une analyse approfondie des spécifications techniques, veuillez consulter le cahier des charges complet disponible en annexe.
+
+\subsection{Aperçu}
+\begin{itemize}
+	\item[•]	Sauvegarde des données inertielles chaque 500ms par défaut.
+	\item[•]	Sauvegarde des données de localisation chaque 5'000ms par défaut.
+	\item[•]	Possibilité de configurer les temps de sauvegarde.
+	\item[•]	Résistance aux chocs.
+	\item[•]	Bonne autonomie / Low power.
+	\item[•]	\Gls{gps}
+	\item[•]	\Gls{gnss}.
+	\item[•]	\Gls{timestamp} par satellite.
+	\item[•]	\gls{centrale inertielle} :
+	\subitem- 	Accéléromètre 3-axes. 
+	\subitem-	Gyroscope 3-axes.
+	\item[•] Charge, lecture et config. par USB-C.
+\end{itemize}
 
 % ---- TACHES ----
 \subsection{Tâches à réaliser}
@@ -62,7 +62,7 @@ Développement et intégration d’un PCB avec capteurs et logging sur carte SD 
 % ---- SChema de principe ----
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.6\linewidth]{../figures/cdc/schema_principe}
+	\includegraphics[width=0.4\linewidth]{../figures/cdc/schema_principe}
 	\caption{Schéma de principe.}
 	\source{Auteur}
 	\label{fig:schemaprincipe}

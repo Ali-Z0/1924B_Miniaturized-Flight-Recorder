@@ -144,7 +144,11 @@
 
 \section{Conclusion}
 
+Ce rapport a présenté en détail le développement d'une mini boîte noire destinée à collecter et stocker des données de vol d'aéronefs en utilisant une centrale inertielle et un système de positionnement \gls{gps}/\gls{gnss}. Le projet a débuté par une phase de pré-étude visant à comprendre le fonctionnement du système et à choisir les composants et les technologies appropriés, notamment le microcontrôleur, la centrale inertielle, le \gls{gnss}, et la carte SD. Ensuite, le développement du schéma électronique a été abordé, détaillant la connectivité du microcontrôleur, des périphériques tels que la carte SD, la centrale inertielle, et le module USB-FTDI, ainsi que les alimentations et le système de charge de la batterie. La conception du circuit-imprimé a été décrite, mettant l'accent sur les aspects mécaniques, le placement des composants, l'assemblage, et la liste des matériaux.
 
+La phase de développement du firmware a été exposée, couvrant les protocoles du \gls{gnss}, la configuration des périphériques, l'application principale gérant les commandes USB-UART et l'état de logging, ainsi que la gestion des données de la carte SD, de la centrale inertielle, et des communications série avec le \gls{FTDI}. L'interface utilisateur de l'application a été brièvement décrite, ainsi que les critères de validation du design, incluant la consommation d'énergie, les bus de communication I2C-\gls{imu}, UART-\gls{gnss}, UART-\gls{FTDI} et SPI pour la carte SD.
+
+Ce projet témoigne de l'importance des boîtes noires dans l'aviation,  représentant un exemple concret de l'application de technologies avancées pour améliorer la sécurité aérienne et la compréhension des incidents aéronautiques. L'objectif de stocker des données de mesures a été atteint avec succès, et ce projet ouvre des perspectives passionnantes pour le développement futur de systèmes similaires.
 
 \newpage
 \nocite{*}

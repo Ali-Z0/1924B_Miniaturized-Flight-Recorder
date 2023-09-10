@@ -251,7 +251,7 @@ Dans cette section, nous examinerons la communication SPI entre le \gls{mcu} et 
 
 \clearpage
 
-\paragraph{Mesures} Sur la figure \ref{fig:densite-comm}, nous pouvons constater que la communication SPI est dense et constante durant le 
+\paragraph{Mesures} Sur la figure \ref{fig:densite-comm}, nous observons que la communication SPI est dense et maintenue de manière constante pendant la phase de logging. De cette manière, le périphérique de stockage demeure associé au \gls{mcu} et, lors des écritures, les transmissions se densifient.
 
 \begin{figure}[H]
 	\centering
@@ -261,16 +261,16 @@ Dans cette section, nous examinerons la communication SPI entre le \gls{mcu} et 
 	\source{Auteur}
 \end{figure}
 
+Sur la figure \ref{fig:freq-spi}, nous observons le signal d'horloge du bus SPI avec une échelle de temps plus petite. En mesurant le signal \textbf{SCK} sur le canal \textbf{CH1}, nous déterminons une fréquence de \underline{$12.0192MHz$}, ce qui correspond à la fréquence configurée dans \gls{harmony}.
+
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.7\linewidth]{../figures/mesures/SPI/freq-spi}
+	\includegraphics[width=0.7\linewidth]{../figures/mesures/SPI/freq-spi-12}
 	\caption{Mesure fréquence clock SPI.}
 	\label{fig:freq-spi}
 	\source{Auteur}
 \end{figure}
 
-
-
-
+\clearpage
 
 \section{Caractéristiques du produit fini} \label{sec:Carac-finis}
