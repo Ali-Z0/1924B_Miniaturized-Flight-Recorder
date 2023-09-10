@@ -167,7 +167,7 @@ Sur la figure \ref{fig:interval-gnss}, nous observons l'intervalle entre les mes
 	\source{Auteur}
 \end{figure}
 
-Sur la figure \ref{fig:duree-comm-gnss}, nous constatons que la durée d'envoi des messages \textbf{NMEA} est de $234.4 ms$. Sachant que l'intervalle entre les transmissions est de $1s$, cela laisse une fenêtre de $756ms$ au \gls{mcu} pour traiter ces données. Cette période est largement suffisante pour la transmission des données via le second UART (opérant au même baud rate) ou vers la carte SD, dont la fréquence est nettement supérieure ($10MHz$). Si nous considérons la durée des transmissions de l'\gls{imu}, qui est de $2.274ms$, nous estimons qu'environ $400ms$ des $756ms$ disponibles sont utilisés pour traiter les données. Cette marge pourrait être encore diminuée si la fréquence d'enregistrement du \gls{gnss} était baissée. Ainsi, nous pourrions envisager d'obtenir jusqu'à $\sim155$ mesures d'\gls{imu} dans l'intervalle donné.
+Sur la figure \ref{fig:duree-comm-gnss}, nous constatons que la durée d'envoi des messages \textbf{NMEA} est de $234.4 ms$. Sachant que l'intervalle entre les transmissions est de $1s$, cela laisse une fenêtre de $756ms$ au \gls{mcu} pour traiter ces données. Cette période est largement suffisante pour la transmission des données via le second UART (opérant au même baud rate) ou vers la carte SD, dont la fréquence est nettement supérieure ($10MHz$). Si nous considérons la durée des transmissions de l'\gls{imu}, qui est de $2.274ms$, nous estimons avec une marge qu'environ $\sim400ms$ des $756ms$ disponibles sont utilisés pour traiter les données. Ce temps de traitement pourrait être encore diminuée si la fréquence d'enregistrement du \gls{gnss} était baissée. Ainsi, nous pourrions envisager d'obtenir jusqu'à $\sim155$ mesures d'\gls{imu} dans l'intervalle donné.
 
 
 \begin{figure}[H]
@@ -178,7 +178,8 @@ Sur la figure \ref{fig:duree-comm-gnss}, nous constatons que la durée d'envoi d
 	\source{Auteur}
 \end{figure}
 
-La figure \ref{fig:message-nmea-rmc} présente le décodage d'une trame \textbf{NMEA}, il s'agit d'un message \textbf{RMC}.
+La figure \ref{fig:message-nmea-rmc} illustre le décodage d'une trame \textbf{NMEA} correspondant à un message \textbf{RMC}. Les données de ce message sont similaires à celles présentées dans la section \ref{sssec:GNSS-data}. Les signaux présentent une bonne intégrité et sont correctement interprétés par le microcontrôleur. Ils sont ensuite retransmis à la carte SD et au second UART avec justesse.
+
 
 \begin{figure}[H]
 	\centering
@@ -188,6 +189,9 @@ La figure \ref{fig:message-nmea-rmc} présente le décodage d'une trame \textbf{
 	\source{Auteur}
 \end{figure}
 
+Nous observons sur la figure \ref{fig:message-nmea-rmc} le message décodé par l'oscilloscope \hyperref[ssec:Liste-materiel]{\textbf{P1}} : \textbf{\$GN\textcolor{blue}{RMC},,\textcolor{red}{V},,,,,,,,,N*}
+
+\clearpage
 
 \subsubsection{Communication SPI, carte SD} \label{ssec:Comm-SPI}
 \paragraph{Méthode de mesure}
