@@ -80,6 +80,7 @@
 \contentsline {subsubsection}{\numberline {5.7.3}Communication série avec FTDI}{47}{subsubsection.5.7.3}%
 \contentsline {section}{\numberline {6}Développement application interface}{48}{section.6}%
 \contentsline {subsection}{\numberline {6.1}Choix de l'environnement}{48}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Présentation de l'interface}{48}{subsection.6.2}%
 \contentsline {section}{\numberline {7}Validation du design}{50}{section.7}%
 \contentsline {subsection}{\numberline {7.1}Liste de matériel}{50}{subsection.7.1}%
 \contentsline {subsection}{\numberline {7.2}Consommations}{50}{subsection.7.2}%
