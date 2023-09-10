@@ -2,16 +2,11 @@
 /** Descriptive File Name
 
   @Company
-    Company Name
+    ETML-ES
 
   @File Name
-    filename.c
+    mc32_serComm.c
 
-  @Summary
-    Brief description of the file.
-
-  @Description
-    Describe the purpose of this file.
  */
 /* ************************************************************************** */
 
