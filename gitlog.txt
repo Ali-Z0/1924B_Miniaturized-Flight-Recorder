@@ -1,0 +1,197 @@
+*  Hash: 1863346 Date: 16 minutes ago  Message: Ajout annexes 
+*  Hash: 93494da Date: Sun 23:53  Message: Ajout des annexes 
+*  Hash: 9ff8d8d Date: Sun 23:06  Message: Avancement du rapport 
+*  Hash: db8b0bf Date: Sun 22:09  Message: Avancement du rapport 
+*  Hash: e3d494e Date: Sun 19:07  Message: Avancement du rapport 
+*  Hash: ed28c10 Date: Sun 16:03  Message: Avancement du rapport 
+*  Hash: 0a7c525 Date: Sun 14:24  Message: Avancement du rapport 
+*  Hash: dc97597 Date: Sun 13:43  Message: Avancement du rapport 
+*  Hash: 78787a1 Date: Sun 13:40  Message: Avancement du rapport 
+*  Hash: 18f766b Date: Sun 01:53  Message: Script 
+*  Hash: 9211e87 Date: Sun 01:20  Message: Avancement du rapport 
+*  Hash: cee2d4d Date: Sun 00:45  Message: Figures 
+*  Hash: 835ef45 Date: Sun 00:33  Message: figures 
+*  Hash: 6539110 Date: Sun 00:22  Message: Avancement documentation 
+*  Hash: 4405073 Date: Sat 22:01  Message: Avancement rapport 
+*  Hash: 855206c Date: Sat 16:58  Message: Avancement général 
+*  Hash: 9b91614 Date: Sat 15:58  Message: Application exe 
+*    Hash: 4249be3 Date: Sat 15:40  Message: Merge branch 'main' of https://github.com/Ali-Z0/1924B_MiniBoiteNoire 
+|\  
+| *  Hash: 4934d72 Date: Sat 15:39  Message: Application fonctionnelle 
+* |  Hash: 112aa72 Date: Sat 15:40  Message: Correction bugs firmware 
+|/  
+*    Hash: fbb37b3 Date: Fri 22:49  Message: Merge branch 'main' of https://github.com/Ali-Z0/1924B_MiniBoiteNoire 
+|\  
+| *  Hash: d93b949 Date: Fri 22:48  Message: Avancement application 
+* |  Hash: 5b74cb8 Date: Fri 22:48  Message: Avancement firmware 
+|/  
+*  Hash: ced8357 Date: Fri 21:07  Message: Mesures 
+*  Hash: 424d490 Date: Fri 20:24  Message: Avancement, mesures 
+*  Hash: 0e6feee Date: Fri 19:04  Message: Correction bug 
+*  Hash: 10cdd93 Date: Fri 17:39  Message: Avancement général 
+*  Hash: c35439d Date: Fri 14:13  Message: Avancement du rapport 
+*  Hash: c5373de Date: Fri 12:12  Message: Avancement de l'application 
+*  Hash: c9fa7c9 Date: Fri 09:59  Message: Avancement de l'appli 
+*  Hash: a821972 Date: Fri 00:41  Message: Logo 
+*  Hash: c966425 Date: Fri 00:09  Message: Avancement du code Application 
+*  Hash: a216c0b Date: Thu 18:00  Message: Application interface 
+*  Hash: e09d329 Date: Thu 16:06  Message: Création application 
+*  Hash: e173112 Date: Thu 15:15  Message: Avancement du rapport 
+*  Hash: 66019f3 Date: Thu 14:52  Message: Avancement du rapport 
+*  Hash: 4a200cf Date: Thu 12:38  Message: Avancement du rapport 
+*  Hash: dbc451a Date: Thu 11:56  Message: Avancement du rapport 
+*  Hash: 1b6fccd Date: Thu 10:08  Message: Avancement du rapport 
+*  Hash: 1551c8e Date: Wed Sep 6 15:41  Message: Avancement du rapport + code 
+*  Hash: 81d48bc Date: Wed Sep 6 15:07  Message: Avancement de la documentation 
+*  Hash: 2f20d37 Date: Wed Sep 6 12:08  Message: Rédaction rapport 
+*    Hash: 8c9bca2 Date: Wed Sep 6 10:56  Message: Merge branch 'main' of https://github.com/Ali-Z0/1924B_MiniBoiteNoire 
+|\  
+| *  Hash: 76bd77f Date: Wed Sep 6 10:56  Message: Update figures to PDF 
+* |  Hash: 0125579 Date: Wed Sep 6 10:56  Message: Rapport 
+|/  
+*  Hash: f9600ec Date: Wed Sep 6 10:23  Message: Update figures 
+*  Hash: cbe6936 Date: Wed Sep 6 10:14  Message: Update figures 
+*  Hash: 214c0db Date: Wed Sep 6 09:57  Message: Avancement rapport 
+*  Hash: eb50fa2 Date: Tue Sep 5 19:10  Message: Avancement général 
+*  Hash: b433a41 Date: Tue Sep 5 14:43  Message: Avancement général 
+*  Hash: 8a7a22c Date: Mon Sep 4 18:17  Message: Update private.xml 
+*  Hash: c905470 Date: Mon Sep 4 17:05  Message: Firmware 
+*  Hash: 2974952 Date: Mon Sep 4 12:02  Message: Avancement firmware 
+*  Hash: e8dc851 Date: Sun Sep 3 18:48  Message: Avancement documentation 
+*  Hash: 7dacff4 Date: Fri Sep 1 16:59  Message: Avancement général 
+*  Hash: 5efbdde Date: Thu Aug 31 18:14  Message: Avancement du firmware 
+*  Hash: f538b2a Date: Thu Aug 31 16:10  Message: Update private.xml 
+*  Hash: 1bbd408 Date: Thu Aug 31 16:09  Message: Avancement du firmware 
+*  Hash: 521bb0c Date: Thu Aug 31 14:51  Message: Avancement firmware 
+*  Hash: 5980b22 Date: Thu Aug 31 13:51  Message: Avancement du firmware 
+*  Hash: a7bb343 Date: Wed Aug 30 16:25  Message: Avancement firmware 
+*  Hash: 5c69b42 Date: Wed Aug 30 15:32  Message: Avancement du firmware 
+*  Hash: 0ddcb77 Date: Wed Aug 30 14:53  Message: Avancement du code 
+*  Hash: 767754c Date: Wed Aug 30 00:22  Message: Correction rapport 
+*  Hash: 537aa60 Date: Tue Aug 29 16:51  Message: Avancement du firmware 
+*  Hash: 6c7dc25 Date: Tue Aug 29 12:29  Message: Avancement du code + journal 
+*  Hash: c555a9b Date: Tue Aug 29 10:32  Message: Code SD config + LOG Imu 
+*  Hash: a1ab3e0 Date: Mon Aug 28 17:57  Message: Firmware 
+*    Hash: e21f9c6 Date: Mon Aug 28 09:28  Message: Merge branch 'main' of https://github.com/Ali-Z0/1924B_MiniBoiteNoire 
+|\  
+| *  Hash: 1c6f604 Date: Sat Aug 26 20:19  Message: Config PC portable Harmony 
+| *  Hash: f3dbc6b Date: Sat Aug 26 19:37  Message: Correction rapport LaTex 
+* |  Hash: e311dd6 Date: Mon Aug 28 09:28  Message: Code 
+|/  
+*  Hash: 2b45827 Date: Fri Aug 25 15:30  Message: Firmware + doc 
+*  Hash: cab630d Date: Thu Aug 24 15:52  Message: Avancement 
+*  Hash: a4154f1 Date: Thu Aug 24 11:55  Message: Avancement général 
+*  Hash: ac25f65 Date: Wed Aug 23 16:41  Message: Update private.xml 
+*  Hash: 257a5fe Date: Wed Aug 23 16:40  Message: Update Journal.xlsx 
+*  Hash: d30f091 Date: Wed Aug 23 16:40  Message: Avancement général 
+*  Hash: 7854e5f Date: Wed Aug 23 13:21  Message: Avancement rapport 
+*  Hash: 540ac0f Date: Tue Aug 22 16:51  Message: Modification noms de fichiers 
+*  Hash: 1e2c2ce Date: Tue Aug 22 16:50  Message: Grand avancement du code 
+*  Hash: 27d3df1 Date: Tue Aug 22 14:41  Message: Avancement du code 
+*  Hash: 9e1a007 Date: Tue Aug 22 14:15  Message: Avancement code 
+*  Hash: ed4c301 Date: Tue Aug 22 14:05  Message: Avancement du code 
+*  Hash: 3dd5c0c Date: Tue Aug 22 11:52  Message: Delete commandes_en_cours.xlsx 
+*  Hash: 6ccd178 Date: Tue Aug 22 11:44  Message: BOM tracking 
+*  Hash: 4eed0aa Date: Tue Aug 22 11:38  Message: Avancement du code 
+*  Hash: 745d3ef Date: Mon Aug 21 16:46  Message: Avancement du rapport 
+*  Hash: 1e18895 Date: Mon Aug 21 16:01  Message: Avancement rapport + lib 
+*  Hash: 71c3c26 Date: Mon Aug 21 15:15  Message: Avancement du rapport 
+*  Hash: 34eda52 Date: Mon Aug 21 11:29  Message: Avancement du rapport 
+*  Hash: 8ce79da Date: Fri Aug 18 17:48  Message: Update private.xml 
+*  Hash: 2cf4ab2 Date: Fri Aug 18 17:12  Message: Code et procès-verbal 
+*  Hash: 9c30618 Date: Fri Aug 18 13:36  Message: Code 
+*  Hash: 1122752 Date: Thu Aug 17 17:45  Message: Avancement du code 
+*  Hash: 91defdc Date: Thu Aug 17 15:21  Message: Code 
+*  Hash: 9e63157 Date: Thu Aug 17 12:24  Message: Rapport 
+*  Hash: 36cdf2e Date: Thu Aug 17 12:04  Message: Rapport 
+*  Hash: 411f9bf Date: Thu Aug 17 11:22  Message: Avancement général 
+*  Hash: 5ea9ed9 Date: Wed Aug 16 16:18  Message: Avancement général 
+*  Hash: a016e92 Date: Wed Aug 16 15:30  Message: Compression des PDFs 
+*  Hash: e7881cd Date: Wed Aug 16 15:24  Message: Sauvegarde des tableaux 
+*  Hash: 70eca9d Date: Wed Aug 16 15:21  Message: Rapport 
+*  Hash: 91d3fcf Date: Wed Aug 16 12:42  Message: Documentation 
+*  Hash: cd709a0 Date: Wed Aug 16 11:44  Message: Avancement général 
+*  Hash: 9030100 Date: Wed Aug 16 09:31  Message: Update 1924B_MiniBoiteNoire.PrjPcb 
+*  Hash: 0fdb728 Date: Tue Aug 15 17:09  Message: Update Modif_0.txt 
+*  Hash: f06605b Date: Tue Aug 15 16:54  Message: PCB 
+*  Hash: 1f01294 Date: Tue Aug 15 16:34  Message: PCB V1 
+*  Hash: b3502f7 Date: Tue Aug 15 16:14  Message: Avancement général 
+*  Hash: 36bbb0e Date: Tue Aug 15 14:14  Message: Avancement général 
+*  Hash: c849827 Date: Tue Aug 15 12:42  Message: PCB 
+*  Hash: 7327ae1 Date: Tue Aug 15 11:36  Message: PCB V0 
+*  Hash: 8563e26 Date: Tue Aug 15 11:00  Message: PCB 
+*  Hash: 1ab313f Date: Mon Aug 14 19:31  Message: PCB 
+*  Hash: 5581b30 Date: Mon Aug 14 19:16  Message: PCB 
+*  Hash: 631e011 Date: Mon Aug 14 18:48  Message: PCB 
+*  Hash: 4e8ce3c Date: Mon Aug 14 18:02  Message: PCB 
+*  Hash: 3b51a8a Date: Mon Aug 14 16:59  Message: PCB 
+*  Hash: 9c91ffb Date: Mon Aug 14 16:21  Message: PCB 
+*  Hash: a59d122 Date: Mon Aug 14 15:18  Message: PCB 
+*  Hash: d45ad30 Date: Mon Aug 14 13:02  Message: Correction rapport 
+*  Hash: 5a61a42 Date: Mon Aug 14 12:36  Message: Correction du schéma 
+*  Hash: 5499bba Date: Mon Aug 14 12:04  Message: Avancement général 
+*  Hash: 6c218b2 Date: Sat Aug 12 20:35  Message: PCB 
+*  Hash: e5104a7 Date: Fri Aug 11 16:23  Message: PCB 
+*  Hash: b93abb5 Date: Fri Aug 11 15:24  Message: Documentation 
+*  Hash: 8252f46 Date: Fri Aug 11 14:47  Message: Documentation 
+*  Hash: b00869f Date: Fri Aug 11 12:58  Message: Update 2_Dev-SCH.tex 
+*  Hash: aad7dad Date: Fri Aug 11 12:57  Message: Documentation 
+*  Hash: acc1483 Date: Fri Aug 11 12:23  Message: Avancement général 
+*  Hash: 3d6168e Date: Thu Aug 10 16:36  Message: Documentation 
+*  Hash: e66d7c3 Date: Thu Aug 10 16:01  Message: Documentation 
+*  Hash: 24248f6 Date: Thu Aug 10 14:24  Message: Avancement général 
+*  Hash: 89b8a7c Date: Thu Aug 10 11:57  Message: PCB 
+*  Hash: 6787c43 Date: Thu Aug 10 11:56  Message: Schéma 
+*  Hash: 41f357b Date: Thu Aug 10 11:29  Message: PCB 
+*  Hash: 5104180 Date: Thu Aug 10 11:26  Message: Schéma 
+*  Hash: 6e16383 Date: Thu Aug 10 11:17  Message: Schéma 
+*  Hash: 12cfb5f Date: Thu Aug 10 10:35  Message: Schéma + libraires 
+*  Hash: 823c84b Date: Thu Aug 10 09:37  Message: Schéma 
+*  Hash: 1711600 Date: Thu Aug 10 09:28  Message: Schéma 
+*  Hash: dd76c2f Date: Thu Aug 10 09:08  Message: Schéma 
+*  Hash: 70a5930 Date: Thu Aug 10 08:19  Message: Entête schématique 
+*  Hash: 4fd79ec Date: Thu Aug 10 08:04  Message: MAJ Journal 
+*  Hash: d27b544 Date: Thu Aug 10 00:31  Message: Schéma 
+*  Hash: 0a1d50b Date: Wed Aug 9 17:33  Message: Update Makefile-genesis.properties 
+*  Hash: 5029691 Date: Wed Aug 9 17:32  Message: Schéma 
+*  Hash: ca45043 Date: Wed Aug 9 17:22  Message: Schéma + statut commande 
+*  Hash: 1277701 Date: Wed Aug 9 16:56  Message: Schéma + Firmware 
+*  Hash: 3197ad7 Date: Wed Aug 9 15:42  Message: Rapport 
+*  Hash: 4d4cd5c Date: Wed Aug 9 15:37  Message: Rapport 
+*  Hash: d0902b9 Date: Wed Aug 9 12:44  Message: Rapport 
+*  Hash: f390033 Date: Wed Aug 9 10:30  Message: Documentation 
+*  Hash: 61639d1 Date: Tue Aug 8 17:48  Message: Documentation 
+*  Hash: e4c1a7a Date: Tue Aug 8 16:35  Message: Rapport 
+*  Hash: 9494d5d Date: Tue Aug 8 15:13  Message: Rapport 
+*  Hash: 7d23504 Date: Tue Aug 8 14:42  Message: Documentation 
+*  Hash: 86f6b39 Date: Tue Aug 8 14:25  Message: Documentation 
+*  Hash: 01018fc Date: Tue Aug 8 12:09  Message: Documentation 
+*  Hash: 067fae3 Date: Tue Aug 8 11:20  Message: Documentation 
+*  Hash: c493449 Date: Tue Aug 8 10:04  Message: Rapport 
+*  Hash: 53a15da Date: Tue Aug 8 08:58  Message: Documentation 
+*  Hash: a3ae637 Date: Mon Aug 7 16:36  Message: Documentation 
+*  Hash: d55507a Date: Mon Aug 7 15:56  Message: Documentation 
+*  Hash: 58c88b8 Date: Mon Aug 7 14:00  Message: Planification 
+*  Hash: d8351ea Date: Mon Aug 7 12:05  Message: Journal, gantt, CDC 
+*  Hash: 5a18f53 Date: Sun Aug 6 16:44  Message: Config MHC 
+*  Hash: 7cd26fd Date: Mon Jul 17 16:07  Message: Create private.xml 
+*  Hash: e6047af Date: Mon Jul 17 16:07  Message: Code, schéma 
+*  Hash: 14e9ba4 Date: Mon Jul 17 14:22  Message: Schema, rapport 
+*  Hash: 0e29052 Date: Mon Jul 17 13:42  Message: Schèma, documentation 
+*  Hash: 82cd406 Date: Mon Jul 17 12:51  Message: Update schèma 
+*  Hash: f0685ae Date: Mon Jul 10 20:56  Message: Diagramme de gantt 
+*  Hash: e93c339 Date: Mon Jul 10 20:41  Message: Rapport + schema bloc 
+*  Hash: 05df94d Date: Mon Jul 10 19:02  Message: Avancement Schema basique 
+*  Hash: b1447ee Date: Thu Jul 6 15:29  Message: Update schema 
+*  Hash: 057314d Date: Thu Jul 6 15:10  Message: 3d 
+*  Hash: 9b998a6 Date: Tue Jul 4 17:46  Message: Creation projet Altium 
+*  Hash: cb99481 Date: Tue Jul 4 16:56  Message: Create Minimal_pinout.png 
+*  Hash: 5020408 Date: Tue Jul 4 16:52  Message: Datasheets 
+*  Hash: 17962db Date: Tue Jul 4 14:56  Message: 3d models 
+*  Hash: 59c981c Date: Tue Jul 4 14:27  Message: Structure rapport + datasheets 
+*  Hash: 86f7de9 Date: Mon Jul 3 17:12  Message: Redaction base du rapport 
+*  Hash: f87012c Date: Mon Jul 3 14:38  Message: Structure 
+*  Hash: 7f5fcb0 Date: Sat Jul 1 16:33  Message: Initial files 
+*  Hash: e3a00fb Date: Sat Jul 1 15:20  Message: Create PATH.txt 
+*  Hash: c06df08 Date: Sat Jul 1 15:18  Message: Initial files 
+*  Hash: 1f86e49 Date: Sat Jul 1 15:13  Message: Initial commit 
