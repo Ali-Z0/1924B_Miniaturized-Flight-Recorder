@@ -104,7 +104,8 @@
 \contentsline {paragraph}{\numberline {7.3.4.1}Méthode de mesure}{59}{paragraph.7.3.4.1}%
 \contentsline {paragraph}{\numberline {7.3.4.2}Schéma de mesure}{59}{paragraph.7.3.4.2}%
 \contentsline {paragraph}{\numberline {7.3.4.3}Mesures}{60}{paragraph.7.3.4.3}%
-\contentsline {section}{\numberline {8}Caractéristiques du produit fini}{61}{section.8}%
+\contentsline {section}{\numberline {8}Caractéristiques du prototype final}{61}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Modification et amélioration}{61}{subsection.8.1}%
 \contentsline {section}{\numberline {9}Conclusion}{62}{section.9}%
 \contentsline {section}{\numberline {10}Bibliographie}{63}{section.10}%
 \contentsline {section}{\numberline {11}Annexes}{64}{section.11}%

@@ -273,4 +273,44 @@ Sur la figure \ref{fig:freq-spi}, nous observons le signal d'horloge du bus SPI 
 
 \clearpage
 
-\section{Caractéristiques du produit fini} \label{sec:Carac-finis}
+\section{Caractéristiques du prototype final} \label{sec:Carac-finis}
+
+La table \ref{tab:my-table} présente les caractéristiques finales du prototype basées sur le hardware actuel.
+
+\begin{table}[h]
+	\centering
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{|c|cc|}
+			\hline
+			Caractéristique                                                                       & \multicolumn{2}{c|}{Attribut}               \\ \hline
+			Axes de mesures                                                                       & \multicolumn{1}{c|}{9}       & [axes]       \\ \hline
+			Mesures \gls{imu} & \multicolumn{2}{c|}{\begin{tabular}[c]{@{}c@{}}Temps, Gravité, Gyro, Magnitude,\\ Accél. linaire, Angle de Euler, Quaternions\end{tabular}} \\ \hline
+			\begin{tabular}[c]{@{}c@{}}Intervalles mesure \gls{gnss}\\ (par défaut)\end{tabular}  & \multicolumn{1}{c|}{5000}    & [ms]         \\ \hline
+			\begin{tabular}[c]{@{}c@{}}Intervalles mesure \gls{imu}\\ (par défaut)\end{tabular}   & \multicolumn{1}{c|}{500}     & [ms]         \\ \hline
+			Capacité carte SD                                                                     & \multicolumn{1}{c|}{256}     & [MB]         \\ \hline
+			Nombre de mesures possibles                                                           & \multicolumn{2}{c|}{$1.11*10^6$}            \\ \hline
+			Vitesse \gls{mcu}                                                                     & \multicolumn{1}{c|}{72}      & [MHz]        \\ \hline
+			Capacité batterie                                                                     & \multicolumn{1}{c|}{1600}    & [mAh]        \\ \hline
+			Autonomie logging                                                                     & \multicolumn{1}{c|}{16}      & [h]          \\ \hline
+			Autonomie veille                                                                      & \multicolumn{1}{c|}{2}       & [semaines]   \\ \hline
+			Interface                                                                             & \multicolumn{2}{c|}{USB et LED RGB}         \\ \hline
+			Communications                                                                        & \multicolumn{2}{c|}{I2C, SPI, UART(2), USB} \\ \hline
+			Vitesse SPI                                                                           & \multicolumn{1}{c|}{12}      & [MHz]        \\ \hline
+			Vitesse UART 1 et 2                                                                   & \multicolumn{1}{c|}{9600}    & [Bd]         \\ \hline
+			Détection accélération > 2G                                                           & \multicolumn{2}{c|}{Oui}                    \\ \hline
+			Données satellites                                                                    & \multicolumn{2}{c|}{Date et heure}          \\ \hline
+			\begin{tabular}[c]{@{}c@{}}Compensation température\\ (Mesures \gls{imu})\end{tabular} & \multicolumn{2}{c|}{Oui}                    \\ \hline
+			Enclenchement automatique                                                             & \multicolumn{2}{c|}{Oui}                    \\ \hline
+			Système d'économie d'énergie                                                          & \multicolumn{2}{c|}{Oui}                    \\ \hline
+			Application software développée                                                       & \multicolumn{2}{c|}{Oui, "BBX-Connect"}     \\ \hline
+		\end{tabular}%
+	}
+	\caption{Caractéristiques finales.}
+	\label{tab:my-table}
+	\source{Auteur}
+\end{table}
+
+\subsection{Modification et amélioration}
+
+Dans l'état actuel, tel que décrit dans la section \ref{sssec:GNSS-data}, le \gls{gnss} présente un problème de réception satellite. Pour pallier ce problème, un connecteur \textbf{MHF1} a été ajouté sur le circuit imprimé afin de permettre le raccordement d'antennes externes. Des tests sont en cours et un autre type d'antenne est en attente de livraison. Pour résoudre ce souci dans les versions antérieures, il est conseillé d'étendre le plan de masse autour du CAM-M8C-0 ou d'implémenter correctement un connecteur pour une antenne externe.
+
