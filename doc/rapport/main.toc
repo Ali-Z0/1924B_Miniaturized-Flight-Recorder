@@ -115,6 +115,7 @@
 \contentsline {subsection}{\numberline {11.4}Code du firmware C}{75}{subsection.11.4}%
 \contentsline {subsection}{\numberline {11.5}Code python du script visualisation CSV}{121}{subsection.11.5}%
 \contentsline {subsection}{\numberline {11.6}Code python de l'application BBX-Connect}{124}{subsection.11.6}%
-\contentsline {subsection}{\numberline {11.7}Fichier de modification}{131}{subsection.11.7}%
-\contentsline {subsection}{\numberline {11.8}Journal de travail}{132}{subsection.11.8}%
-\contentsline {subsection}{\numberline {11.9}Historique Git}{133}{subsection.11.9}%
+\contentsline {subsection}{\numberline {11.7}Manuel d'utilisation}{131}{subsection.11.7}%
+\contentsline {subsection}{\numberline {11.8}Fichier de modification}{132}{subsection.11.8}%
+\contentsline {subsection}{\numberline {11.9}Journal de travail}{133}{subsection.11.9}%
+\contentsline {subsection}{\numberline {11.10}Historique Git}{134}{subsection.11.10}%
