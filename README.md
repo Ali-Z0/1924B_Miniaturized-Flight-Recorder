@@ -1,6 +1,5 @@
-# 2221_LocalisationSousMarine
-> Projet de localisation d'un module sous-marin.
-> Démonstration [ici](https://www.example.com). <!-- If you have the project hosted somewhere, include the link here. -->
+# 1924B - Mini Boite Noire
+> SYSTÈME D’ENREGISTREMENT DE TRAJECTOIRES DE VOL
 
 ## Table of Contents
 * [Information générales](#information-générales)
