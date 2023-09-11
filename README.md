@@ -52,7 +52,7 @@ La carte éléctronique doit être assemblée en considération des fichiers de 
 
 
 ## Utilisation
-Il faut flâcher le code firmware par le bias de MPLAB-X avec harmony sur le microcontroleur du PCB produit, pour ce faire, il y a un connecteur de programmation BERG. Une fois le code flashé, le module sous-marin peut être utilisé et sous condition qu'une carte SD est insérée, les données de déplacements y seront sauvegardé en format CSV.
+Il faut flâcher le code firmware par le bias de MPLAB-X avec harmony sur le microcontroleur du PCB produit, pour ce faire, il y a un connecteur de programmation BERG. Une fois le code flashé, la boîte noire peut être utilisée et sous la condition qu'une carte SD est insérée, les données de déplacements y seront sauvegardé en format CSV.
 
 
 ## Statut du projet
