@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.15.0 (TeX Live 2022)  (format=lualatex 2022.12.8)  14 SEP 2023 10:34
+This is LuaHBTeX, Version 1.15.0 (TeX Live 2022)  (format=lualatex 2022.12.8)  25 SEP 2023 14:31
  restricted system commands enabled.
 **1924B_MiniBoiteNoire-Presentation.tex
 (./1924B_MiniBoiteNoire-Presentation.tex
@@ -1162,90 +1162,7 @@ Grid set 16 x 16 = 22.7622pt x 17.07166pt
 \TP@oy=\dimen339
 \TP@tbargs=\toks51
 TextBlockOrigin set to 0pt x 0pt
-)
-luaotfload | db : Reload initiated (formats: otf,ttf,ttc); reason: Font "helvet"
- not found.
-luaotfload | resolve : sequence of 3 lookups yielded nothing appropriate.
-
-! Package fontspec Error: The font "helvet" cannot be found.
-
-For immediate help type H <return>.
- ...                                              
-                                                  
-l.17 
-   
-
-A font might not be found for many reasons.
- Check the spelling, where the font is installed etc. etc.
-
- When in doubt, ask someone for help!
-
-
-luaotfload | resolve : sequence of 3 lookups yielded nothing appropriate.
-luaotfload | aux : no font with id 0
-luaotfload | aux : no font with id 0
-luaotfload | resolve : sequence of 3 lookups yielded nothing appropriate.
-luaotfload | resolve : sequence of 3 lookups yielded nothing appropriate.
-
-Package fontspec Info: Could not resolve font "helvet/BI" (it probably doesn't
-(fontspec)             exist).
-
-luaotfload | resolve : sequence of 3 lookups yielded nothing appropriate.
-luaotfload | resolve : sequence of 3 lookups yielded nothing appropriate.
-
-Package fontspec Info: Could not resolve font "helvet/B" (it probably doesn't
-(fontspec)             exist).
-
-luaotfload | resolve : sequence of 3 lookups yielded nothing appropriate.
-luaotfload | resolve : sequence of 3 lookups yielded nothing appropriate.
-
-Package fontspec Info: Could not resolve font "helvet/I" (it probably doesn't
-(fontspec)             exist).
-
-luaotfload | resolve : sequence of 3 lookups yielded nothing appropriate.
-
-! Package fontspec Error: The font "helvet" cannot be found.
-
-For immediate help type H <return>.
- ...                                              
-                                                  
-l.17 
-   
-
-A font might not be found for many reasons.
- Check the spelling, where the font is installed etc. etc.
-
- When in doubt, ask someone for help!
-
-
-luaotfload | resolve : sequence of 3 lookups yielded nothing appropriate.
-
-! Package fontspec Error: The font "helvet" cannot be found.
-
-For immediate help type H <return>.
- ...                                              
-                                                  
-l.17 
-   
-
-A font might not be found for many reasons.
- Check the spelling, where the font is installed etc. etc.
-
- When in doubt, ask someone for help!
-
-
-
-Package fontspec Info: Font family 'helvet(0)' created for font 'helvet' with
-(fontspec)             options [Ligatures=TeX].
-(fontspec)              
-(fontspec)              This font family consists of the following NFSS
-(fontspec)             series/shapes:
-(fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->"helvet:mode=node;language=dflt;+tlig;"
-(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
-
-(./1924B_MiniBoiteNoire-Presentation.aux)
+) (./1924B_MiniBoiteNoire-Presentation.aux)
 \openout1 = 1924B_MiniBoiteNoire-Presentation.aux
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
@@ -1353,7 +1270,7 @@ LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 \symnumbers=\mathgroup6
 \sympureletters=\mathgroup7
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/helvet(0)/m/n on input line 25.
+(Font)                  OT1/cmss/m/n --> TU/lmr/m/n on input line 25.
 LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 25.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
 (Font)                  OT1/cmr/bx/n --> TU/FiraSansLight(0)/b/n on input line 
@@ -1387,7 +1304,7 @@ LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
 (Font)                  TU/FiraSansLight(0)/m/it --> TU/FiraSansLight(0)/b/it o
 n input line 25.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/cmss/b/n --> TU/helvet(0)/b/n on input line 25.
+(Font)                  OT1/cmss/b/n --> TU/lmr/b/n on input line 25.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
 (Font)                  TU/FiraSansLight(0)/b/n --> TU/FiraSansLight(0)/b/n on 
 input line 25.
@@ -1531,11 +1448,82 @@ tlig;+tnum;+smcp;"
 
  [8
 
-] [9
+]
+warning  (file ../figures/pre_etude/Carac_PIC32.pdf) (pdf inclusion): PDF inclus
+ion: found PDF version '1.6', but at most version '1.5' allowed
+<../figures/pre_etude/Carac_PIC32.pdf, id=130, 661.47125pt x 271.0125pt>
+File: ../figures/pre_etude/Carac_PIC32.pdf Graphic file (type pdf)
+<use ../figures/pre_etude/Carac_PIC32.pdf>
+Package luatex.def Info: ../figures/pre_etude/Carac_PIC32.pdf  used on input li
+ne 110.
+(luatex.def)             Requested size: 215.10196pt x 88.12764pt.
+[9
 
-] [10
+<../figures/pre_etude/Carac_PIC32.pdf>]
+<../figures/pre_etude/BNO055_Adafruit.png, id=138, 338.01282pt x 269.50688pt>
+File: ../figures/pre_etude/BNO055_Adafruit.png Graphic file (type png)
+<use ../figures/pre_etude/BNO055_Adafruit.png>
+Package luatex.def Info: ../figures/pre_etude/BNO055_Adafruit.png  used on inpu
+t line 131.
+(luatex.def)             Requested size: 76.82246pt x 61.25328pt.
+ [10
 
-] [11
+<../figures/pre_etude/BNO055_Adafruit.png>]
+warning  (file ../figures/pre_etude/img_gnss_crp.pdf) (pdf inclusion): PDF inclu
+sion: found PDF version '1.6', but at most version '1.5' allowed
+<../figures/pre_etude/img_gnss_crp.pdf, id=148, 453.19313pt x 458.37248pt>
+File: ../figures/pre_etude/img_gnss_crp.pdf Graphic file (type pdf)
+<use ../figures/pre_etude/img_gnss_crp.pdf>
+Package luatex.def Info: ../figures/pre_etude/img_gnss_crp.pdf  used on input l
+ine 145.
+(luatex.def)             Requested size: 76.82246pt x 77.69847pt.
+
+warning  (file ../figures/pre_etude/carac_GNSS.pdf) (pdf inclusion): PDF inclusi
+on: found PDF version '1.6', but at most version '1.5' allowed
+<../figures/pre_etude/carac_GNSS.pdf, id=149, 1853.92625pt x 634.37pt>
+File: ../figures/pre_etude/carac_GNSS.pdf Graphic file (type pdf)
+<use ../figures/pre_etude/carac_GNSS.pdf>
+Package luatex.def Info: ../figures/pre_etude/carac_GNSS.pdf  used on input lin
+e 145.
+(luatex.def)             Requested size: 276.559pt x 94.62868pt.
+
+Overfull \vbox (18.28484pt too high) detected at line 145
+ []
+
+[11
+
+<../figures/pre_etude/img_gnss_crp.pdf><../figures/pre_etude/carac_GNSS.pdf>]
+Overfull \hbox (8.73137pt too wide) detected at line 171
+\TU/FiraSansLight(0)/m/it/10.95 S[] \OT1/cmss/m/n/10.95 = [] \OMS/cmsy/m/n/10.9
+5  \TU/FiraSansLight(0)/m/it/10.95 T[] \OT1/cmss/m/n/10.95 = [] \OMS/cmsy/m/n/
+10.95  \TU/FiraSansLight(0)/m/n/10.95 900 \OT1/cmss/m/n/10.95 = \TU/FiraSansLi
+ght(0)/m/n/10.95 46[]800 \OT1/cmss/m/n/10.95 [\TU/FiraSansLight(0)/m/it/10.95 By
+tes\OT1/cmss/m/n/10.95 ] = \TU/FiraSansLight(0)/m/n/10.95 49\OML/cmm/m/it/10.95
+ :\TU/FiraSansLight(0)/m/n/10.95 8 \OT1/cmss/m/n/10.95 [\TU/FiraSansLight(0)/m/
+it/10.95 KB\OT1/cmss/m/n/10.95 ]
+ []
+
+
+Overfull \hbox (21.01903pt too wide) detected at line 171
+\TU/FiraSansLight(0)/m/it/10.95 T[] \OT1/cmss/m/n/10.95 = [] = [] =\OMS/cmsy/m/
+n/10.95  \TU/FiraSansLight(0)/m/n/10.95 82[]051 \TU/FiraSansLight(0)/m/it/10.9
+5 Minutes \OT1/cmss/m/n/10.95 =\OMS/cmsy/m/n/10.95  \TU/FiraSansLight(0)/m/n/1
+0.95 1368 \TU/FiraSansLight(0)/m/it/10.95 H\OML/cmm/m/it/10.95 :
+ []
+
+
+Overfull \vbox (9.52748pt too high) detected at line 171
+ []
+
+[12
+
+] [13
+
+] [14
+
+] [15
+
+] [16
 
 ]
 \tf@nav=\write6
@@ -1547,31 +1535,35 @@ tlig;+tnum;+smcp;"
 \tf@snm=\write8
 
 \openout8 = 1924B_MiniBoiteNoire-Presentation.snm
-
-(./1924B_MiniBoiteNoire-Presentation.aux)
+ (./1924B_MiniBoiteNoire-Presentation.aux)
 Package rerunfilecheck Info: File `1924B_MiniBoiteNoire-Presentation.out' has n
 ot changed.
 (rerunfilecheck)             Checksum: C959D8C8555B951F309575D72136CD0D;290.
 )
 
 Here is how much of LuaTeX's memory you used:
- 30998 strings out of 477247
+ 31091 strings out of 477247
  125031,1144653 words of node,token memory allocated
- 1586 words of node memory still in use:
-   14 hlist, 6 vlist, 2 rule, 1 disc, 1 local_par, 30 glue, 5 kern, 10 penalty, 
-13 glyph, 244 attribute, 71 glue_spec, 37 attribute_list, 4 write, 5 pdf_colorst
+ 1947 words of node memory still in use:
+   14 hlist, 6 vlist, 2 rule, 1 disc, 1 local_par, 45 glue, 5 kern, 10 penalty, 
+13 glyph, 356 attribute, 71 glue_spec, 53 attribute_list, 4 write, 5 pdf_colorst
 ack nodes
-   avail lists: 1:3,2:1628,3:193,4:203,5:187,6:36,7:1163,8:14,9:283,10:9,11:98
- 50723 multiletter control sequences out of 65536+600000
- 72 fonts using 11561083 bytes
+   avail lists: 1:3,2:2473,3:193,4:204,5:259,6:36,7:1832,8:65,9:562,10:9,11:122
+ 50777 multiletter control sequences out of 65536+600000
+ 72 fonts using 11560107 bytes
  128i,13n,131p,1919b,778s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2022/texmf-dist/fonts/opentype/public/fira/FiraSans-LightItalic.otf>
 <c:/texlive/2022/texmf-dist/fonts/opentype/public/fira/FiraSans-Light.otf><c:/te
-xlive/2022/texmf-dist/fonts/opentype/public/fira/FiraSans-Regular.otf>
-Output written on 1924B_MiniBoiteNoire-Presentation.pdf (11 pages, 204495 bytes)
+xlive/2022/texmf-dist/fonts/opentype/public/fira/FiraSans-Regular.otf><c:/texliv
+e/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2022/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb><c:/texlive/2022/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmsy8.pfb>
+Output written on 1924B_MiniBoiteNoire-Presentation.pdf (16 pages, 930154 bytes)
 .
 
-PDF statistics: 166 PDF objects out of 1000 (max. 8388607)
- 118 compressed objects within 2 object streams
- 29 named destinations out of 1000 (max. 131072)
+PDF statistics: 230 PDF objects out of 1000 (max. 8388607)
+ 164 compressed objects within 2 object streams
+ 41 named destinations out of 1000 (max. 131072)
  40 words of extra memory for PDF output out of 10000 (max. 100000000)
 
