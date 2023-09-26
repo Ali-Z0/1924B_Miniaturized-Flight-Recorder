@@ -1,25 +1,25 @@
 \documentclass{beamer}
 
 % Thème
-\usetheme{metropolis} % Un thème moderne
-\usecolortheme{dove} % Couleurs épurées
+\usetheme{metropolis} 
+\usecolortheme{dove} 
 
-% Paquets supplémentaires
+% Paquets
 \usepackage{graphicx}
 \usepackage{booktabs}
 \usepackage[french]{babel}
-
-% Required package
 \usepackage[absolute,overlay]{textpos}
-
 \usepackage{fontspec}
-%\setmainfont{helvetica}
+
+% Polices
+\setsansfont{Fira Sans}
+\setmonofont{Fira Code}
 
 % Informations sur la présentation
 \title{1924B Mini Boîte Noire}
 \subtitle{Enregistreur de données de vol}
 \author{Ali Zoubir}
-\institute{\textbf{ETML-\textcolor{red}{ES}}}
+\institute{ETML-\textcolor{red}{ES}}
 \date{\today}
 
 \begin{document}
@@ -180,7 +180,7 @@
 				Carte-SD & ~100 & [mA] & Max. \\
 				Carte-SD & ~60 & [mA] & Moyenne \\
 				IMU & 12.3 & [mA] & Typ. \\
-				GNSs & 71 & [mA] & Max. \\
+				GNSS & 71 & [mA] & Max. \\
 				GNSS & 29 & [mA] & Typ. \\
 				\hline
 				Totale max & \underline{207.3} & [mA] & Max. \\
@@ -193,6 +193,96 @@
 	\end{center}
 	Temps minimum avec tolérance désiré : $10h \Rightarrow$ $\min\sim1300mAh$
 \end{frame}
+
+\begin{frame}{Synthèse pré-étude}
+	\textbf{Choix des composants et technologies:}
+	\begin{itemize}
+		\item \textit{\textbf{Microcontrôleur}}: PIC32MX274F256D privilégié, 2 UART, 1 SPI, 1 I2C, économie d'énergie.
+		\item \textit{\textbf{Centrale inertielle}}: BNO055 de BOSCH, mesures avancées, facile à implémenter.
+		\item \textit{\textbf{GPS/GNSS}}: CAM-M8C-0 d'ublox, antenne interne omnidirectionnelle, facile à implémenter.
+		\item \textit{\textbf{Carte SD}}: Capacité de 256MB, suffisante pour données de vol.
+		\item \textit{\textbf{Batterie}}: Nécessité de 1253 mAh pour autonomie minimale.
+	\end{itemize}
+\end{frame}
+
+\section{Développement schématique}
+
+\begin{frame}{Blocs du systèmes}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=1\linewidth]{../figures/etude/sch/BLOCS}
+		\caption{Blocs du système.}
+		\label{fig:blocs}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{MCU - Microcontrôleur}
+	\begin{figure}[h]
+		\centering
+			\includegraphics[width=1\linewidth]{../figures/etude/sch/MCU}
+		\caption{Connexions du microcontrôleur}
+		\label{fig:mcu}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Peripherals - Carte SD}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=.9\linewidth]{../figures/etude/sch/Carte-SD}
+		\caption{Branchement carte SD.}
+		\label{fig:carte-sd}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Peripherals - Centrale inertielle}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=.9\linewidth]{../figures/etude/sch/IMU}
+		\caption{Schéma centrale inertielle.}
+		\label{fig:imu}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Peripherals - GNSS}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=.9\linewidth]{../figures/etude/sch/GNSS}
+		\caption{Schéma du GNSS.}
+		\label{fig:gnss}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Peripherals - USB-FTDI}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=.9\linewidth]{../figures/etude/sch/USB-FTDI}
+		\caption{Schéma connecteur USB et FTDI.}
+		\label{fig:usb-ftdi}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Power - Chargeur de batterie}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=.9\linewidth]{../figures/etude/sch/CHRG-BAT}
+		\caption{Schéma chargeur de batterie.}
+		\label{fig:chrg-bat}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Power - Enclenchement}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=.9\linewidth]{../figures/etude/sch/ON-OFF}
+		\caption{Schéma allumage du système.}
+		\label{fig:on-off}
+	\end{figure}
+\end{frame}
+
+\section{Développement du PCB}
+
+\section{Développement du firmware}
+
 
 \section{Conclusion}
 \begin{frame}{Conclusion}

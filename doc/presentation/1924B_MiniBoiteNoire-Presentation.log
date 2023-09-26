@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.15.0 (TeX Live 2022)  (format=lualatex 2022.12.8)  25 SEP 2023 14:31
+This is LuaHBTeX, Version 1.15.0 (TeX Live 2022)  (format=lualatex 2022.12.8)  26 SEP 2023 14:35
  restricted system commands enabled.
 **1924B_MiniBoiteNoire-Presentation.tex
 (./1924B_MiniBoiteNoire-Presentation.tex
@@ -1162,7 +1162,72 @@ Grid set 16 x 16 = 22.7622pt x 17.07166pt
 \TP@oy=\dimen339
 \TP@tbargs=\toks51
 TextBlockOrigin set to 0pt x 0pt
-) (./1924B_MiniBoiteNoire-Presentation.aux)
+)
+
+Package fontspec Info: Font family 'FiraSans(0)' created for font 'Fira Sans'
+(fontspec)             with options [Ligatures=TeX].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"FiraSans:mode=node;script=latn;language=dflt;+tlig;"
+
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
+(fontspec)             <->"FiraSans:mode=node;script=latn;language=dflt;+tlig;+
+smcp;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"FiraSans/B:mode=node;script=latn;language=dflt;+tlig
+;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
+(fontspec)             <->"FiraSans/B:mode=node;script=latn;language=dflt;+tlig
+;+smcp;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->"FiraSans/I:mode=node;script=latn;language=dflt;+tlig
+;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+(fontspec)             <->"FiraSans/I:mode=node;script=latn;language=dflt;+tlig
+;+smcp;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->"FiraSans/BI:mode=node;script=latn;language=dflt;+tli
+g;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
+(fontspec)             <->"FiraSans/BI:mode=node;script=latn;language=dflt;+tli
+g;+smcp;"
+
+
+Package fontspec Info: Could not resolve font "FiraCode/BI" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: Could not resolve font "FiraCode/B" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: Could not resolve font "FiraCode/I" (it probably
+(fontspec)             doesn't exist).
+
+luaotfload | aux : font no 53 (nil) does not define feature smcp for script latn
+ with language dflt
+
+Package fontspec Info: Font family 'FiraCode(0)' created for font 'Fira Code'
+(fontspec)             with options
+(fontspec)             [WordSpace={1,0,0},HyphenChar=None,PunctuationSpace=Word
+Space].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"FiraCode:mode=node;script=latn;language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
+(fontspec)             =0\fontdimen 3\font \fontdimen 4\font =0\fontdimen
+(fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+
+ (./1924B_MiniBoiteNoire-Presentation.aux)
 \openout1 = 1924B_MiniBoiteNoire-Presentation.aux
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
@@ -1273,49 +1338,44 @@ LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
 (Font)                  OT1/cmss/m/n --> TU/lmr/m/n on input line 25.
 LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 25.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/FiraSansLight(0)/b/n on input line 
-25.
+(Font)                  OT1/cmr/bx/n --> TU/FiraSans(0)/b/n on input line 25.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/FiraSansLight(0)/b/n on input line 
-25.
+(Font)                  OT1/cmr/bx/n --> TU/FiraSans(0)/b/n on input line 25.
 LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 25.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/FiraSansLight(0)/m/n on input line 
-25.
+(Font)                  OT1/cmss/m/n --> TU/FiraSans(0)/m/n on input line 25.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/FiraSansLight(0)/m/n on input line
- 25.
+(Font)                  OT1/cmss/bx/n --> TU/FiraSans(0)/m/n on input line 25.
 LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 25.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/FiraSansLight(0)/m/it on input line
- 25.
+(Font)                  OT1/cmr/m/it --> TU/FiraSans(0)/m/it on input line 25.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> TU/FiraSansLight(0)/m/it on input lin
-e 25.
+(Font)                  OT1/cmr/bx/it --> TU/FiraSans(0)/m/it on input line 25.
+
 LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 25.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/FiraMono(0)/m/n on input line 25.
+(Font)                  OT1/cmtt/m/n --> TU/FiraCode(0)/m/n on input line 25.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/FiraMono(0)/m/n on input line 25.
+(Font)                  OT1/cmtt/m/n --> TU/FiraCode(0)/m/n on input line 25.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  TU/FiraSansLight(0)/m/n --> TU/FiraSansLight(0)/b/n on 
-input line 25.
+(Font)                  TU/FiraSans(0)/m/n --> TU/FiraSans(0)/b/n on input line
+ 25.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  TU/FiraSansLight(0)/m/it --> TU/FiraSansLight(0)/b/it o
-n input line 25.
+(Font)                  TU/FiraSans(0)/m/it --> TU/FiraSans(0)/b/it on input li
+ne 25.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
 (Font)                  OT1/cmss/b/n --> TU/lmr/b/n on input line 25.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  TU/FiraSansLight(0)/b/n --> TU/FiraSansLight(0)/b/n on 
-input line 25.
+(Font)                  TU/FiraSans(0)/b/n --> TU/FiraSans(0)/b/n on input line
+ 25.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  TU/FiraSansLight(0)/m/n --> TU/FiraSansLight(0)/b/n on 
-input line 25.
+(Font)                  TU/FiraSans(0)/m/n --> TU/FiraSans(0)/b/n on input line
+ 25.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  TU/FiraSansLight(0)/m/it --> TU/FiraSansLight(0)/b/it o
-n input line 25.
+(Font)                  TU/FiraSans(0)/m/it --> TU/FiraSans(0)/b/it on input li
+ne 25.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  TU/FiraMono(0)/m/n --> TU/FiraMono(0)/b/n on input line
+(Font)                  TU/FiraCode(0)/m/n --> TU/FiraCode(0)/b/n on input line
  25.
 
 (c:/texlive/2022/texmf-dist/tex/latex/translator/translator-basic-dictionary-En
@@ -1344,12 +1404,12 @@ Dictionary: translator-theorem-dictionary, Language: English
 )
 LaTeX Info: Redefining \up on input line 25.
  (./1924B_MiniBoiteNoire-Presentation.nav)
-<../figures/AMPA.pdf, id=25, 4701.565pt x 3385.64874pt>
+<../figures/AMPA.pdf, id=37, 4701.565pt x 3385.64874pt>
 File: ../figures/AMPA.pdf Graphic file (type pdf)
 <use ../figures/AMPA.pdf>
 Package luatex.def Info: ../figures/AMPA.pdf  used on input line 35.
 (luatex.def)             Requested size: 56.9055pt x 40.96698pt.
-<../figures/ETML-ES.pdf, id=26, 200.75pt x 200.75pt>
+<../figures/ETML-ES.pdf, id=38, 200.75pt x 200.75pt>
 File: ../figures/ETML-ES.pdf Graphic file (type pdf)
 <use ../figures/ETML-ES.pdf>
 Package luatex.def Info: ../figures/ETML-ES.pdf  used on input line 35.
@@ -1378,7 +1438,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [3
 
 ]
-<../figures/boite-noire.pdf, id=57, 4445.60875pt x 4526.9125pt>
+<../figures/boite-noire.pdf, id=75, 4445.60875pt x 4526.9125pt>
 File: ../figures/boite-noire.pdf Graphic file (type pdf)
 <use ../figures/boite-noire.pdf>
 Package luatex.def Info: ../figures/boite-noire.pdf  used on input line 58.
@@ -1388,7 +1448,7 @@ Package luatex.def Info: ../figures/boite-noire.pdf  used on input line 58.
 <../figures/boite-noire.pdf>]
 warning  (file ../figures/cdc/schema_principe.pdf) (pdf inclusion): PDF inclusio
 n: found PDF version '1.7', but at most version '1.5' allowed
-<../figures/cdc/schema_principe.pdf, id=66, 253.90858pt x 270.0489pt>
+<../figures/cdc/schema_principe.pdf, id=84, 253.90858pt x 270.0489pt>
 File: ../figures/cdc/schema_principe.pdf Graphic file (type pdf)
 <use ../figures/cdc/schema_principe.pdf>
 Package luatex.def Info: ../figures/cdc/schema_principe.pdf  used on input line
@@ -1401,8 +1461,8 @@ Package luatex.def Info: ../figures/cdc/schema_principe.pdf  used on input line
 ]
 warning  (file ../figures/cdc/blocs_grossiers_no_antenna.pdf) (pdf inclusion): P
 DF inclusion: found PDF version '1.7', but at most version '1.5' allowed
-<../figures/cdc/blocs_grossiers_no_antenna.pdf, id=92, 824.11888pt x 450.72388p
-t>
+<../figures/cdc/blocs_grossiers_no_antenna.pdf, id=110, 824.11888pt x 450.72388
+pt>
 File: ../figures/cdc/blocs_grossiers_no_antenna.pdf Graphic file (type pdf)
 <use ../figures/cdc/blocs_grossiers_no_antenna.pdf>
 Package luatex.def Info: ../figures/cdc/blocs_grossiers_no_antenna.pdf  used on
@@ -1412,46 +1472,43 @@ Package luatex.def Info: ../figures/cdc/blocs_grossiers_no_antenna.pdf  used on
 
 <../figures/cdc/blocs_grossiers_no_antenna.pdf>]
 
-Package fontspec Info: Font family 'FiraSansLight(1)' created for font 'Fira
-(fontspec)             Sans Light' with options
-(fontspec)             [Ligatures=TeX,ItalicFont={Fira Sans Light
-(fontspec)             Italic},BoldFont={Fira Sans},BoldItalicFont={Fira Sans
-(fontspec)             Italic},Numbers={Monospaced}].
+Package fontspec Info: Font family 'FiraSans(1)' created for font 'Fira Sans'
+(fontspec)             with options [Ligatures=TeX,Numbers={Monospaced}].
 (fontspec)              
 (fontspec)              This font family consists of the following NFSS
 (fontspec)             series/shapes:
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->"FiraSansLight:mode=node;script=latn;language=dflt;+t
-lig;+tnum;"
-(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
-(fontspec)             <->"FiraSansLight:mode=node;script=latn;language=dflt;+t
-lig;+tnum;+smcp;"
-(fontspec)             - 'bold' (b/n) with NFSS spec.:
 (fontspec)             <->"FiraSans:mode=node;script=latn;language=dflt;+tlig;+
 tnum;"
-(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
 (fontspec)             <->"FiraSans:mode=node;script=latn;language=dflt;+tlig;+
 tnum;+smcp;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"FiraSans/B:mode=node;script=latn;language=dflt;+tlig
+;+tnum;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
+(fontspec)             <->"FiraSans/B:mode=node;script=latn;language=dflt;+tlig
+;+tnum;+smcp;"
 (fontspec)             - 'italic' (m/it) with NFSS spec.:
-(fontspec)             <->"FiraSansLightItalic:mode=node;script=latn;language=d
-flt;+tlig;+tnum;"
+(fontspec)             <->"FiraSans/I:mode=node;script=latn;language=dflt;+tlig
+;+tnum;"
 (fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
-(fontspec)             <->"FiraSansLightItalic:mode=node;script=latn;language=d
-flt;+tlig;+tnum;+smcp;"
+(fontspec)             <->"FiraSans/I:mode=node;script=latn;language=dflt;+tlig
+;+tnum;+smcp;"
 (fontspec)             - 'bold italic' (b/it) with NFSS spec.:
-(fontspec)             <->"FiraSansItalic:mode=node;script=latn;language=dflt;+
-tlig;+tnum;"
+(fontspec)             <->"FiraSans/BI:mode=node;script=latn;language=dflt;+tli
+g;+tnum;"
 (fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
-(fontspec)             <->"FiraSansItalic:mode=node;script=latn;language=dflt;+
-tlig;+tnum;+smcp;"
+(fontspec)             <->"FiraSans/BI:mode=node;script=latn;language=dflt;+tli
+g;+tnum;+smcp;"
 
  [8
 
 ]
 warning  (file ../figures/pre_etude/Carac_PIC32.pdf) (pdf inclusion): PDF inclus
 ion: found PDF version '1.6', but at most version '1.5' allowed
-<../figures/pre_etude/Carac_PIC32.pdf, id=130, 661.47125pt x 271.0125pt>
+<../figures/pre_etude/Carac_PIC32.pdf, id=148, 661.47125pt x 271.0125pt>
 File: ../figures/pre_etude/Carac_PIC32.pdf Graphic file (type pdf)
 <use ../figures/pre_etude/Carac_PIC32.pdf>
 Package luatex.def Info: ../figures/pre_etude/Carac_PIC32.pdf  used on input li
@@ -1460,7 +1517,7 @@ ne 110.
 [9
 
 <../figures/pre_etude/Carac_PIC32.pdf>]
-<../figures/pre_etude/BNO055_Adafruit.png, id=138, 338.01282pt x 269.50688pt>
+<../figures/pre_etude/BNO055_Adafruit.png, id=156, 338.01282pt x 269.50688pt>
 File: ../figures/pre_etude/BNO055_Adafruit.png Graphic file (type png)
 <use ../figures/pre_etude/BNO055_Adafruit.png>
 Package luatex.def Info: ../figures/pre_etude/BNO055_Adafruit.png  used on inpu
@@ -1471,7 +1528,7 @@ t line 131.
 <../figures/pre_etude/BNO055_Adafruit.png>]
 warning  (file ../figures/pre_etude/img_gnss_crp.pdf) (pdf inclusion): PDF inclu
 sion: found PDF version '1.6', but at most version '1.5' allowed
-<../figures/pre_etude/img_gnss_crp.pdf, id=148, 453.19313pt x 458.37248pt>
+<../figures/pre_etude/img_gnss_crp.pdf, id=167, 453.19313pt x 458.37248pt>
 File: ../figures/pre_etude/img_gnss_crp.pdf Graphic file (type pdf)
 <use ../figures/pre_etude/img_gnss_crp.pdf>
 Package luatex.def Info: ../figures/pre_etude/img_gnss_crp.pdf  used on input l
@@ -1480,50 +1537,138 @@ ine 145.
 
 warning  (file ../figures/pre_etude/carac_GNSS.pdf) (pdf inclusion): PDF inclusi
 on: found PDF version '1.6', but at most version '1.5' allowed
-<../figures/pre_etude/carac_GNSS.pdf, id=149, 1853.92625pt x 634.37pt>
+<../figures/pre_etude/carac_GNSS.pdf, id=168, 1853.92625pt x 634.37pt>
 File: ../figures/pre_etude/carac_GNSS.pdf Graphic file (type pdf)
 <use ../figures/pre_etude/carac_GNSS.pdf>
 Package luatex.def Info: ../figures/pre_etude/carac_GNSS.pdf  used on input lin
 e 145.
 (luatex.def)             Requested size: 276.559pt x 94.62868pt.
 
-Overfull \vbox (18.28484pt too high) detected at line 145
+Overfull \vbox (18.62282pt too high) detected at line 145
  []
 
 [11
 
 <../figures/pre_etude/img_gnss_crp.pdf><../figures/pre_etude/carac_GNSS.pdf>]
-Overfull \hbox (8.73137pt too wide) detected at line 171
-\TU/FiraSansLight(0)/m/it/10.95 S[] \OT1/cmss/m/n/10.95 = [] \OMS/cmsy/m/n/10.9
-5  \TU/FiraSansLight(0)/m/it/10.95 T[] \OT1/cmss/m/n/10.95 = [] \OMS/cmsy/m/n/
-10.95  \TU/FiraSansLight(0)/m/n/10.95 900 \OT1/cmss/m/n/10.95 = \TU/FiraSansLi
-ght(0)/m/n/10.95 46[]800 \OT1/cmss/m/n/10.95 [\TU/FiraSansLight(0)/m/it/10.95 By
-tes\OT1/cmss/m/n/10.95 ] = \TU/FiraSansLight(0)/m/n/10.95 49\OML/cmm/m/it/10.95
- :\TU/FiraSansLight(0)/m/n/10.95 8 \OT1/cmss/m/n/10.95 [\TU/FiraSansLight(0)/m/
-it/10.95 KB\OT1/cmss/m/n/10.95 ]
+Overfull \hbox (12.0714pt too wide) detected at line 171
+\TU/FiraSans(0)/m/it/10.95 S[] \OT1/cmss/m/n/10.95 = [] \OMS/cmsy/m/n/10.95  \
+TU/FiraSans(0)/m/it/10.95 T[] \OT1/cmss/m/n/10.95 = [] \OMS/cmsy/m/n/10.95  \T
+U/FiraSans(0)/m/n/10.95 900 \OT1/cmss/m/n/10.95 = \TU/FiraSans(0)/m/n/10.95 46[
+]800 \OT1/cmss/m/n/10.95 [\TU/FiraSans(0)/m/it/10.95 Bytes\OT1/cmss/m/n/10.95 ] = \TU/FiraSans(0)/m/n/10.95 49\OML/cmm/m/it/10.95 :\TU/FiraSans(0)/m/n/10.95 8 \OT1/cmss/m/n/10.95 [\TU/FiraSans(0)/m/it/10.95 KB\OT1/cmss/m/n/10.95 ]
  []
 
 
-Overfull \hbox (21.01903pt too wide) detected at line 171
-\TU/FiraSansLight(0)/m/it/10.95 T[] \OT1/cmss/m/n/10.95 = [] = [] =\OMS/cmsy/m/
-n/10.95  \TU/FiraSansLight(0)/m/n/10.95 82[]051 \TU/FiraSansLight(0)/m/it/10.9
-5 Minutes \OT1/cmss/m/n/10.95 =\OMS/cmsy/m/n/10.95  \TU/FiraSansLight(0)/m/n/1
-0.95 1368 \TU/FiraSansLight(0)/m/it/10.95 H\OML/cmm/m/it/10.95 :
+Overfull \hbox (24.51282pt too wide) detected at line 171
+\TU/FiraSans(0)/m/it/10.95 T[] \OT1/cmss/m/n/10.95 = [] = [] =\OMS/cmsy/m/n/10.
+95  \TU/FiraSans(0)/m/n/10.95 82[]051 \TU/FiraSans(0)/m/it/10.95 Minutes \OT1/
+cmss/m/n/10.95 =\OMS/cmsy/m/n/10.95  \TU/FiraSans(0)/m/n/10.95 1368 \TU/FiraSa
+ns(0)/m/it/10.95 H\OML/cmm/m/it/10.95 :
  []
 
 
-Overfull \vbox (9.52748pt too high) detected at line 171
+Overfull \vbox (9.4496pt too high) detected at line 171
  []
 
 [12
 
-] [13
+]
+Overfull \vbox (0.45949pt too high) detected at line 195
+ []
+
+[13
 
 ] [14
 
 ] [15
 
-] [16
+]
+<../figures/etude/sch/BLOCS.pdf, id=206, 841.87825pt x 354.91998pt>
+File: ../figures/etude/sch/BLOCS.pdf Graphic file (type pdf)
+<use ../figures/etude/sch/BLOCS.pdf>
+Package luatex.def Info: ../figures/etude/sch/BLOCS.pdf  used on input line 217
+.
+(luatex.def)             Requested size: 307.28987pt x 129.54742pt.
+ [16
+
+<../figures/etude/sch/BLOCS.pdf>]
+<../figures/etude/sch/MCU.pdf, id=222, 1142.67094pt x 559.89163pt>
+File: ../figures/etude/sch/MCU.pdf Graphic file (type pdf)
+<use ../figures/etude/sch/MCU.pdf>
+Package luatex.def Info: ../figures/etude/sch/MCU.pdf  used on input line 226.
+(luatex.def)             Requested size: 307.28987pt x 150.56618pt.
+ [17
+
+<../figures/etude/sch/MCU.pdf>]
+<../figures/etude/sch/Carte-SD.pdf, id=241, 837.20836pt x 559.04955pt>
+File: ../figures/etude/sch/Carte-SD.pdf Graphic file (type pdf)
+<use ../figures/etude/sch/Carte-SD.pdf>
+Package luatex.def Info: ../figures/etude/sch/Carte-SD.pdf  used on input line 
+235.
+(luatex.def)             Requested size: 276.559pt x 184.67458pt.
+
+Overfull \vbox (16.49525pt too high) detected at line 235
+ []
+
+[18
+
+<../figures/etude/sch/Carte-SD.pdf>]
+<../figures/etude/sch/IMU.pdf, id=266, 760.64146pt x 484.96129pt>
+File: ../figures/etude/sch/IMU.pdf Graphic file (type pdf)
+<use ../figures/etude/sch/IMU.pdf>
+Package luatex.def Info: ../figures/etude/sch/IMU.pdf  used on input line 244.
+(luatex.def)             Requested size: 276.559pt x 176.3249pt.
+
+Overfull \vbox (8.14558pt too high) detected at line 244
+ []
+
+[19
+
+<../figures/etude/sch/IMU.pdf>]
+<../figures/etude/sch/GNSS.pdf, id=291, 754.29222pt x 428.08203pt>
+File: ../figures/etude/sch/GNSS.pdf Graphic file (type pdf)
+<use ../figures/etude/sch/GNSS.pdf>
+Package luatex.def Info: ../figures/etude/sch/GNSS.pdf  used on input line 253.
+
+(luatex.def)             Requested size: 276.559pt x 156.95082pt.
+ [20
+
+<../figures/etude/sch/GNSS.pdf>]
+<../figures/etude/sch/USB-FTDI.pdf, id=317, 827.58316pt x 492.61261pt>
+File: ../figures/etude/sch/USB-FTDI.pdf Graphic file (type pdf)
+<use ../figures/etude/sch/USB-FTDI.pdf>
+Package luatex.def Info: ../figures/etude/sch/USB-FTDI.pdf  used on input line 
+262.
+(luatex.def)             Requested size: 276.559pt x 164.62222pt.
+ [21
+
+<../figures/etude/sch/USB-FTDI.pdf>]
+<../figures/etude/sch/CHRG-BAT.pdf, id=337, 746.1822pt x 390.93103pt>
+File: ../figures/etude/sch/CHRG-BAT.pdf Graphic file (type pdf)
+<use ../figures/etude/sch/CHRG-BAT.pdf>
+Package luatex.def Info: ../figures/etude/sch/CHRG-BAT.pdf  used on input line 
+271.
+(luatex.def)             Requested size: 276.559pt x 144.89275pt.
+ [22
+
+<../figures/etude/sch/CHRG-BAT.pdf>]
+<../figures/etude/sch/ON-OFF.pdf, id=356, 1132.8521pt x 392.95233pt>
+File: ../figures/etude/sch/ON-OFF.pdf Graphic file (type pdf)
+<use ../figures/etude/sch/ON-OFF.pdf>
+Package luatex.def Info: ../figures/etude/sch/ON-OFF.pdf  used on input line 28
+0.
+(luatex.def)             Requested size: 276.559pt x 95.92938pt.
+
+[23
+
+<../figures/etude/sch/ON-OFF.pdf>] [24
+
+] [25
+
+] [26
+
+] [27
+
+] [28
 
 ]
 \tf@nav=\write6
@@ -1535,35 +1680,38 @@ Overfull \vbox (9.52748pt too high) detected at line 171
 \tf@snm=\write8
 
 \openout8 = 1924B_MiniBoiteNoire-Presentation.snm
- (./1924B_MiniBoiteNoire-Presentation.aux)
+
+(./1924B_MiniBoiteNoire-Presentation.aux)
 Package rerunfilecheck Info: File `1924B_MiniBoiteNoire-Presentation.out' has n
 ot changed.
-(rerunfilecheck)             Checksum: C959D8C8555B951F309575D72136CD0D;290.
+(rerunfilecheck)             Checksum: 470C9B56C45B78C4BDA0579A19AAB08B;796.
 )
 
 Here is how much of LuaTeX's memory you used:
- 31091 strings out of 477247
+ 31320 strings out of 477247
  125031,1144653 words of node,token memory allocated
- 1947 words of node memory still in use:
-   14 hlist, 6 vlist, 2 rule, 1 disc, 1 local_par, 45 glue, 5 kern, 10 penalty, 
-13 glyph, 356 attribute, 71 glue_spec, 53 attribute_list, 4 write, 5 pdf_colorst
+ 2269 words of node memory still in use:
+   14 hlist, 6 vlist, 2 rule, 1 disc, 1 local_par, 59 glue, 5 kern, 10 penalty, 
+13 glyph, 454 attribute, 71 glue_spec, 67 attribute_list, 4 write, 5 pdf_colorst
 ack nodes
-   avail lists: 1:3,2:2473,3:193,4:204,5:259,6:36,7:1832,8:65,9:562,10:9,11:122
- 50777 multiletter control sequences out of 65536+600000
- 72 fonts using 11560107 bytes
- 128i,13n,131p,1919b,778s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2022/texmf-dist/fonts/opentype/public/fira/FiraSans-LightItalic.otf>
-<c:/texlive/2022/texmf-dist/fonts/opentype/public/fira/FiraSans-Light.otf><c:/te
-xlive/2022/texmf-dist/fonts/opentype/public/fira/FiraSans-Regular.otf><c:/texliv
-e/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2022/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb><c:/texlive/2022/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmsy8.pfb>
-Output written on 1924B_MiniBoiteNoire-Presentation.pdf (16 pages, 930154 bytes)
-.
+   avail lists: 1:3,2:2361,3:193,4:207,5:329,6:36,7:1827,8:65,9:562,10:10,11:155
 
-PDF statistics: 230 PDF objects out of 1000 (max. 8388607)
- 164 compressed objects within 2 object streams
- 41 named destinations out of 1000 (max. 131072)
- 40 words of extra memory for PDF output out of 10000 (max. 100000000)
+ 50923 multiletter control sequences out of 65536+600000
+ 86 fonts using 15624515 bytes
+ 128i,13n,131p,1899b,778s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2022/texmf-dist/fonts/opentype/public/fira/FiraSans-BoldItalic.otf><
+c:/texlive/2022/texmf-dist/fonts/opentype/public/fira/FiraSans-Italic.otf><c:/te
+xlive/2022/texmf-dist/fonts/opentype/public/fira/FiraSans-Regular.otf><c:/texliv
+e/2022/texmf-dist/fonts/opentype/public/fira/FiraSans-Bold.otf><c:/texlive/2022/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2022/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmss10.pfb><c:/texlive/2022/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmsy8.pfb>
+Output written on 1924B_MiniBoiteNoire-Presentation.pdf (28 pages, 1251607 bytes
+).
+
+PDF statistics: 455 PDF objects out of 1000 (max. 8388607)
+ 325 compressed objects within 4 object streams
+ 76 named destinations out of 1000 (max. 131072)
+ 64 words of extra memory for PDF output out of 10000 (max. 100000000)
 

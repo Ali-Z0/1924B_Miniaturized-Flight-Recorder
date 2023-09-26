@@ -3,3 +3,11 @@
 \beamer@slide {fig:schbloc}{7}
 \beamer@slide {fig:caracgnss}{11}
 \beamer@slide {tab:consommateur}{13}
+\beamer@slide {fig:blocs}{16}
+\beamer@slide {fig:mcu}{17}
+\beamer@slide {fig:carte-sd}{18}
+\beamer@slide {fig:imu}{19}
+\beamer@slide {fig:gnss}{20}
+\beamer@slide {fig:usb-ftdi}{21}
+\beamer@slide {fig:chrg-bat}{22}
+\beamer@slide {fig:on-off}{23}
