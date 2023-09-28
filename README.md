@@ -31,9 +31,7 @@ This project aims to collect and store flight data measurements and location of 
 • Global Positioning System (GPS).
 • Global Navigation Satellite Systems (GNSS).
 • Satellite timestamp.
-• Inertial Unit:
-  - 3-axis Accelerometer.
-  - 3-axis Gyroscope.
+• Inertial Unit
 • Charging, reading, and configuration via USB-C.
 
 ## Configuration
