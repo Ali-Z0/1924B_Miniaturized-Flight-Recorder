@@ -1,5 +1,5 @@
 # 1924B - Mini Black Box
-> FLIGHT PATH RECORDING SYSTEM
+> FLIGHT RECORDING SYSTEM
 
 ## Table of Contents
 * [General Information](#general-information)
