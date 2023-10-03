@@ -11,3 +11,15 @@
 \beamer@slide {fig:usb-ftdi}{21}
 \beamer@slide {fig:chrg-bat}{22}
 \beamer@slide {fig:on-off}{23}
+\beamer@slide {fig:pcb-dims}{26}
+\beamer@slide {fig:3d-1}{27}
+\beamer@slide {sub@fig:3d-1}{27}
+\beamer@slide {fig:3d-2}{27}
+\beamer@slide {sub@fig:3d-2}{27}
+\beamer@slide {fig:3d-3}{27}
+\beamer@slide {sub@fig:3d-3}{27}
+\beamer@slide {fig:MechAssembly}{27}
+\beamer@slide {fig:couches-layout}{28}
+\beamer@slide {fig:protocolsGNSS}{30}
+\beamer@slide {fig:messages-nmea}{30}
+\beamer@slide {tab:Usarts}{31}

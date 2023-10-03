@@ -10,6 +10,8 @@
 \usepackage[french]{babel}
 \usepackage[absolute,overlay]{textpos}
 \usepackage{fontspec}
+\usepackage{caption}
+\usepackage{subcaption}
 
 % Polices
 \setsansfont{Fira Sans}
@@ -281,8 +283,109 @@
 
 \section{Développement du PCB}
 
+\begin{frame}{Choix du boîtier}
+	\begin{figure}[h]
+		\centering
+		\begin{subfigure}[b]{0.6\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{../figures/dev-pcb/boitier-dim}
+		\end{subfigure}
+		\hfill
+		\begin{subfigure}[b]{0.35\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{../figures/dev-pcb/boitier-dims-pcb}
+		\end{subfigure}
+		\caption{Dimensions du SIC5-9-3B TAKACHI.}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Placement des composants}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=.83\linewidth]{../figures/dev-pcb/PCB-Dims.jpg}
+		\caption{Placement des composant et dimensions de la carte.}
+		\label{fig:pcb-dims}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Intégration}
+	\begin{figure}[!h]
+		\centering
+		\begin{subfigure}[b]{0.24\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{../figures/dev-pcb/3d-view3}
+			\caption{Vue 3D, 1}
+			\label{fig:3d-1}
+		\end{subfigure}
+		\hfill
+		\begin{subfigure}[b]{0.33\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{../figures/dev-pcb/3d-view2}
+			\caption{Vue 3D, 2}
+			\label{fig:3d-2}
+		\end{subfigure}
+		\hfill
+		\begin{subfigure}[b]{0.36\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{../figures/dev-pcb/3d-view1}
+			\caption{Vue 3D, 3}
+			\label{fig:3d-3}
+		\end{subfigure}
+		\caption{Vues 3d de l'assemblage.}
+		\label{fig:MechAssembly}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Routage}
+	\begin{figure}[!h]
+		\centering
+		\includegraphics[width=.9\linewidth]{../figures/dev-pcb/Couches-layout}
+		\caption{Routage des différentes couches.}
+		\label{fig:couches-layout}
+	\end{figure}
+\end{frame}
+
 \section{Développement du firmware}
 
+\begin{frame}{Messages NMEA}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=.8\linewidth]{../figures/code/Protocols}
+		\caption{Protocoles disponibles.}
+		\label{fig:protocolsGNSS}
+	\end{figure} 
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.7\linewidth]{../figures/code/Messages-NMEA}
+		\caption{Messages NMEA.}
+		\label{fig:messages-nmea}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Périphériques configurés}
+	\begin{table}[h]
+		\begin{tabular}{lll}
+			\textbf{Timer 1} & sert pour les attentes bloquantes précises. & 1 [$ms$] \\
+			\textbf{Timer 2} & gère les délais entre les mesures et l'affichage des LEDs. & 10 [$ms$] \\
+		\end{tabular} 
+	\end{table}
+	
+	\begin{center}
+		\underline{Configuration des UARTs}
+		\begin{table}[h]
+			\centering
+			\begin{tabular}{llllll}
+				ID du BUS & Utilité & Baudrate & Interruption & Trame & Parité \\ 
+				\hline
+				UART ID1 & Réceptions commandes USB & 9600 & Priorité 1 & 8bits + 1stop & Non \\
+				UART ID2 & Communication avec le GNSS & 9600 & Non & 8bits + 1stop & Non \\
+			\end{tabular}
+			\caption{}
+			\label{tab:Usarts}
+		\end{table}
+	\end{center}
+	
+\end{frame}
 
 \section{Conclusion}
 \begin{frame}{Conclusion}
