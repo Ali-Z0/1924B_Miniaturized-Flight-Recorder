@@ -1,64 +1,47 @@
-# 1924B - Mini Boite Noire
-> SYSTÈME D’ENREGISTREMENT DE TRAJECTOIRES DE VOL
+# 1924B - Mini Black Box
+> FLIGHT RECORDING SYSTEM
 
 ## Table of Contents
-* [Information générales](#information-générales)
-* [Technologies utilisées](#technologies-utilisées)
-* [Fonctionnalités](#fonctionnalités)
+* [General Information](#general-information)
+* [Technologies Used](#technologies-used)
+* [Features](#features)
 * [Configuration](#configuration)
-* [Utilisation](#utilisation)
-* [Statut du projet](#statut-du-projet)
-* [Améliorations](#améliorations)
+* [Usage](#usage)
+* [Project Status](#project-status)
+* [Improvements](#improvements)
 * [Contact](#contact)
 <!-- * [License](#license) -->
 
-
-## Information générales
-le présent projet a pour objectif la collecte et le stockage des données de
-mesures et de localisation d’un aéronef au moyen d’une centrale inertielle et d’un système
-de positionnement GPS/GNSS. Par le biais de la conjonction de ces technologies, il est envisageable
-d’enregistrer des données d’une précision remarquable concernant les paramètres du vol
-et la trajectoire empruntée par l’aéronef. En cas de survenue d’un incident, ces enregistrements
-jouent un rôle déterminant en permettant d’établir les causes potentielles. Pour une analyse
-approfondie des spécifications techniques, veuillez consulter le cahier des charges complet disponible
-en annexe.
+## General Information
+This project aims to collect and store flight data measurements and location of an aircraft using an inertial unit and a GPS/GNSS positioning system. By combining these technologies, it's possible to record data with remarkable accuracy regarding flight parameters and the aircraft's trajectory. In the event of an incident, these recordings play a crucial role in determining potential causes. For an in-depth analysis of technical specifications, please refer to the complete specification book available in the appendix.
 <!-- You don't have to answer all the questions - just the ones relevant to your project. -->
 
-
-## Technologies utilisées
+## Technologies Used
 - MPLAB Harmony v2_06
-- Microcontrôleur - PIC32MX274F256D
-- Centrale inertielle - Bosch BNO055
+- Microcontroller - PIC32MX274F256D
+- Inertial Unit - Bosch BNO055
 - GNSS - CAM-M8C-0
 
-
-## Fonctionnalités
-• Sauvegarde des données inertielles chaque 500ms par défaut.
-• Sauvegarde des données de localisation chaque 5’000ms par défaut.
-• Possibilité de configurer les temps de sauvegarde.
-• Résistance aux chocs.
-• Bonne autonomie / Low power.
-• Global Positioning System. (GPS)
-• Global navigation satellite systems. (GNSS).
-• Timestamp par satellite.
-• Centrale inertielle :
-- Accéléromètre 3-axes.
-- Gyroscope 3-axes.
-• Charge, lecture et config. par USB-C.
-
+## Features
+• Save inertial data every 500ms by default.
+• Save location data every 5,000ms by default.
+• Option to configure save times.
+• Shock resistant.
+• Good battery life / Low power.
+• Global Positioning System (GPS).
+• Global Navigation Satellite Systems (GNSS).
+• Satellite timestamp.
+• Inertial Unit.
+• Charging, reading, and configuration via USB-C.
 
 ## Configuration
-La carte éléctronique doit être assemblée en considération des fichiers de fabrication et de la BOM (Bill of materials). Le firmware doit ensuite être implémenté dans microcntrôleur PIC et une carte SD doit être insérée, afin de lire les données de déplacement.
+The electronic board must be assembled according to the manufacturing files and the BOM (Bill of Materials). The firmware must then be implemented in the PIC microcontroller, and an SD card must be inserted to read the movement data.
 
+## Usage
+You need to flash the firmware code through MPLAB-X with harmony on the produced PCB's microcontroller. To do this, there's a BERG programming connector. Once the code is flashed, the black box can be used, and provided an SD card is inserted, movement data will be saved in CSV format.
 
-## Utilisation
-Il faut flâcher le code firmware par le bias de MPLAB-X avec harmony sur le microcontroleur du PCB produit, pour ce faire, il y a un connecteur de programmation BERG. Une fois le code flashé, la boîte noire peut être utilisée et sous la condition qu'une carte SD est insérée, les données de déplacements y seront sauvegardé en format CSV.
-
-
-## Statut du projet
-Le projet est complété mais des améliorations peuvent toujours avoir lieu.
-
+## Project Status
+The project is completed, but improvements can still be made.
 
 ## Contact
-Créer par Ali Zoubir : ali.zoubir@etml-es.ch
-
+Created by Ali Zoubir: ali.zoubir@etml-es.ch
