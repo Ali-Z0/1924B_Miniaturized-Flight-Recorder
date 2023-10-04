@@ -20,6 +20,10 @@
 \beamer@slide {sub@fig:3d-3}{27}
 \beamer@slide {fig:MechAssembly}{27}
 \beamer@slide {fig:couches-layout}{28}
-\beamer@slide {fig:protocolsGNSS}{30}
-\beamer@slide {fig:messages-nmea}{30}
-\beamer@slide {tab:Usarts}{31}
+\beamer@slide {tab:Usarts}{30}
+\beamer@slide {fig:stateapp}{31}
+\beamer@slide {fig:sequence-app}{32}
+\beamer@slide {fig:pdfresizer}{33}
+\beamer@slide {fig:illustration-sd-per}{34}
+\beamer@slide {fig:sd-card-init}{35}
+\beamer@slide {fig:sd-card-logging}{36}

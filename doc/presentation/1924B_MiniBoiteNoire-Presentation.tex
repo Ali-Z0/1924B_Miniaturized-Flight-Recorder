@@ -347,44 +347,96 @@
 
 \section{Développement du firmware}
 
-\begin{frame}{Messages NMEA}
-	\begin{figure}[h]
-		\centering
-		\includegraphics[width=.8\linewidth]{../figures/code/Protocols}
-		\caption{Protocoles disponibles.}
-		\label{fig:protocolsGNSS}
-	\end{figure} 
-	\begin{figure}[h]
-		\centering
-		\includegraphics[width=0.7\linewidth]{../figures/code/Messages-NMEA}
-		\caption{Messages NMEA.}
-		\label{fig:messages-nmea}
-	\end{figure}
-\end{frame}
 
-\begin{frame}{Périphériques configurés}
+\begin{frame}{Configuration des périphériques}
 	\begin{table}[h]
-		\begin{tabular}{lll}
+		\resizebox{1\textwidth}{!}{\begin{tabular}{lll}
+			ID du timer & Description & Période \\
+			\hline
 			\textbf{Timer 1} & sert pour les attentes bloquantes précises. & 1 [$ms$] \\
 			\textbf{Timer 2} & gère les délais entre les mesures et l'affichage des LEDs. & 10 [$ms$] \\
-		\end{tabular} 
+		\end{tabular}}
 	\end{table}
 	
 	\begin{center}
-		\underline{Configuration des UARTs}
 		\begin{table}[h]
 			\centering
-			\begin{tabular}{llllll}
-				ID du BUS & Utilité & Baudrate & Interruption & Trame & Parité \\ 
+			\resizebox{1\textwidth}{!}{\begin{tabular}{llllll}
+				ID du BUS & Utilité & Fréquence & Interruption & Trame & Parité \\ 
 				\hline
-				UART ID1 & Réceptions commandes USB & 9600 & Priorité 1 & 8bits + 1stop & Non \\
-				UART ID2 & Communication avec le GNSS & 9600 & Non & 8bits + 1stop & Non \\
-			\end{tabular}
+				\textbf{UART ID1} & Réceptions commandes USB. & 9600 [Baud] & Priorité 1 & 8bits + 1stop & Non \\
+				\textbf{UART ID2} & Communication avec le GNSS. & 9600 [Baud] & Non & 8bits + 1stop & Non \\
+				\textbf{SPI} & Communication avec la carte SD en FAT32. & 12'000 [MHz] & Priorité 1 & - & - \\
+				\textbf{I2C} & Communication avec la centrale inertielle. & 400 [kbit/s] & & & \\
+			\end{tabular}}
 			\caption{}
 			\label{tab:Usarts}
 		\end{table}
 	\end{center}
-	
+\end{frame}
+
+%\begin{frame}{Messages NMEA}
+%	\begin{figure}[h]
+%		\centering
+%		\includegraphics[width=.8\linewidth]{../figures/code/Protocols}
+%		\caption{Protocoles disponibles.}
+%		\label{fig:protocolsGNSS}
+%	\end{figure} 
+%	\begin{figure}[h]
+%		\centering
+%		\includegraphics[width=0.7\linewidth]{../figures/code/Messages-NMEA}
+%		\caption{Messages NMEA.}
+%		\label{fig:messages-nmea}
+%	\end{figure}
+%\end{frame}
+
+\begin{frame}{Diagramme application principale}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=1\linewidth]{../figures/code/diagrammes/state_app}
+		\caption{Diagramme d'état principal.}
+		\label{fig:stateapp}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Diagramme de séquence principale}
+	\begin{figure}[!h]
+		\centering
+		\includegraphics[height=.9\textheight]{../figures/code/diagrammes/sequence-app}
+		\label{fig:sequence-app}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Flowchart Logging}
+	\begin{figure}[!h]
+		\centering
+		\includegraphics[height=.9\textheight]{../figures/code/diagrammes/logging-flowchart}
+		\label{fig:pdfresizer}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Carte SD}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.6\linewidth]{../figures/code/Illustration-SD-per}
+		\label{fig:illustration-sd-per}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Machine d'état carte SD - Initialisation}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[height=.9\textheight]{../figures/code/diagrammes/sd-card-Init}
+		\label{fig:sd-card-init}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Machine d'état carte SD - Logging}
+\begin{figure}[h]
+	\centering
+	\includegraphics[height=.9\textheight]{../figures/code/diagrammes/sd-card-logging}
+	\label{fig:sd-card-logging}
+\end{figure}
 \end{frame}
 
 \section{Conclusion}
