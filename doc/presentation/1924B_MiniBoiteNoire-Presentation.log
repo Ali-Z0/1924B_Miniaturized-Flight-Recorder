@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.15.0 (TeX Live 2022)  (format=lualatex 2022.12.8)  4 OCT 2023 11:26
+This is LuaHBTeX, Version 1.15.0 (TeX Live 2022)  (format=lualatex 2022.12.8)  5 OCT 2023 11:32
  restricted system commands enabled.
 **1924B_MiniBoiteNoire-Presentation.tex
 (./1924B_MiniBoiteNoire-Presentation.tex
@@ -1569,7 +1569,7 @@ Package luatex.def Info: ../figures/pre_etude/carac_GNSS.pdf  used on input lin
 e 147.
 (luatex.def)             Requested size: 276.559pt x 94.62868pt.
 
-Overfull \vbox (14.5628pt too high) detected at line 147
+Overfull \vbox (14.9628pt too high) detected at line 147
  []
 
 [11
@@ -1591,13 +1591,13 @@ ns(0)/m/it/10.95 H\OML/cmm/m/it/10.95 :
  []
 
 
-Overfull \vbox (9.4496pt too high) detected at line 173
+Overfull \vbox (9.8496pt too high) detected at line 173
  []
 
 [12
 
 ]
-Overfull \vbox (5.2894pt too high) detected at line 197
+Overfull \vbox (5.68939pt too high) detected at line 197
  []
 
 [13
@@ -1631,7 +1631,7 @@ Package luatex.def Info: ../figures/etude/sch/Carte-SD.pdf  used on input line
 237.
 (luatex.def)             Requested size: 276.559pt x 184.67458pt.
 
-Overfull \vbox (12.43524pt too high) detected at line 237
+Overfull \vbox (12.83524pt too high) detected at line 237
  []
 
 [18
@@ -1643,7 +1643,7 @@ File: ../figures/etude/sch/IMU.pdf Graphic file (type pdf)
 Package luatex.def Info: ../figures/etude/sch/IMU.pdf  used on input line 246.
 (luatex.def)             Requested size: 276.559pt x 176.3249pt.
 
-Overfull \vbox (4.08557pt too high) detected at line 246
+Overfull \vbox (4.48557pt too high) detected at line 246
  []
 
 [19
@@ -1736,7 +1736,7 @@ Package luatex.def Info: ../figures/dev-pcb/3d-view1.png  used on input line 33
 7.
 (luatex.def)             Requested size: 110.62453pt x 46.2822pt.
 
-Overfull \vbox (1.12067pt too high) detected at line 337
+Overfull \vbox (1.52066pt too high) detected at line 337
  []
 
 [27
@@ -1765,7 +1765,7 @@ Package luatex.def Info: ../figures/code/diagrammes/state_app.pdf  used on inpu
 t line 400.
 (luatex.def)             Requested size: 307.28987pt x 188.66278pt.
 
-Overfull \vbox (16.42345pt too high) detected at line 400
+Overfull \vbox (16.82344pt too high) detected at line 400
  []
 
 [31
@@ -1781,7 +1781,7 @@ Package luatex.def Info: ../figures/code/diagrammes/sequence-app.pdf  used on i
 nput line 408.
 (luatex.def)             Requested size: 153.67316pt x 217.33466pt.
 
-Overfull \vbox (17.29541pt too high) detected at line 408
+Overfull \vbox (17.6954pt too high) detected at line 408
  []
 
 [32
@@ -1797,7 +1797,7 @@ Package luatex.def Info: ../figures/code/diagrammes/logging-flowchart.pdf  used
  on input line 416.
 (luatex.def)             Requested size: 153.67316pt x 217.33466pt.
 
-Overfull \vbox (17.29541pt too high) detected at line 416
+Overfull \vbox (17.6954pt too high) detected at line 416
  []
 
 [33
@@ -1824,7 +1824,7 @@ Package luatex.def Info: ../figures/code/diagrammes/sd-card-Init.pdf  used on i
 nput line 432.
 (luatex.def)             Requested size: 248.76219pt x 217.33466pt.
 
-Overfull \vbox (17.29541pt too high) detected at line 432
+Overfull \vbox (17.6954pt too high) detected at line 432
  []
 
 [35
@@ -1840,16 +1840,77 @@ Package luatex.def Info: ../figures/code/diagrammes/sd-card-logging.pdf  used o
 n input line 440.
 (luatex.def)             Requested size: 243.35796pt x 217.33466pt.
 
-Overfull \vbox (17.29541pt too high) detected at line 440
+Overfull \vbox (17.6954pt too high) detected at line 440
  []
 
 [36
 
-<../figures/code/diagrammes/sd-card-logging.pdf>] [37
+<../figures/code/diagrammes/sd-card-logging.pdf>]
+<../figures/presentation/micro-sd-card-illustration-material-3-svgrepo-com.pdf,
+ id=557, 602.25pt x 602.25pt>
+File: ../figures/presentation/micro-sd-card-illustration-material-3-svgrepo-com
+.pdf Graphic file (type pdf)
+<use ../figures/presentation/micro-sd-card-illustration-material-3-svgrepo-com.
+pdf>
+Package luatex.def Info: ../figures/presentation/micro-sd-card-illustration-mat
+erial-3-svgrepo-com.pdf  used on input line 451.
+(luatex.def)             Requested size: 92.1879pt x 92.1807pt.
+<../figures/presentation/Fichiers-mesures.jpg, id=558, 3212.0pt x 521.95pt>
+File: ../figures/presentation/Fichiers-mesures.jpg Graphic file (type jpg)
+<use ../figures/presentation/Fichiers-mesures.jpg>
+Package luatex.def Info: ../figures/presentation/Fichiers-mesures.jpg  used on 
+input line 451.
+(luatex.def)             Requested size: 276.559pt x 44.9346pt.
+ [37
 
-] [38
+<../figures/presentation/micro-sd-card-illustration-material-3-svgrepo-com.pdf><
+../figures/presentation/Fichiers-mesures.jpg>]
+<../figures/code/donbnees-csv.pdf, id=564, 1007.5207pt x 117.34682pt>
+File: ../figures/code/donbnees-csv.pdf Graphic file (type pdf)
+<use ../figures/code/donbnees-csv.pdf>
+Package luatex.def Info: ../figures/code/donbnees-csv.pdf  used on input line 4
+62.
+(luatex.def)             Requested size: 307.28987pt x 35.78983pt.
+<../figures/application/mesures.pdf, id=565, 1387.584pt x 755.9442pt>
+File: ../figures/application/mesures.pdf Graphic file (type pdf)
+<use ../figures/application/mesures.pdf>
+Package luatex.def Info: ../figures/application/mesures.pdf  used on input line
+ 462.
+(luatex.def)             Requested size: 307.28987pt x 167.40404pt.
 
-] [39
+Overfull \vbox (18.0296pt too high) detected at line 462
+ []
+
+[38
+
+<../figures/code/donbnees-csv.pdf><../figures/application/mesures.pdf>]
+<../figures/presentation/donnees-NMEA.pdf, id=646, 1310.45248pt x 403.7104pt>
+File: ../figures/presentation/donnees-NMEA.pdf Graphic file (type pdf)
+<use ../figures/presentation/donnees-NMEA.pdf>
+Package luatex.def Info: ../figures/presentation/donnees-NMEA.pdf  used on inpu
+t line 475.
+(luatex.def)             Requested size: 276.559pt x 85.1944pt.
+
+warning  (file ../figures/presentation/Map.pdf) (pdf inclusion): PDF inclusion: 
+found PDF version '1.7', but at most version '1.5' allowed
+<../figures/presentation/Map.pdf, id=647, 595.44057pt x 382.17982pt>
+File: ../figures/presentation/Map.pdf Graphic file (type pdf)
+<use ../figures/presentation/Map.pdf>
+Package luatex.def Info: ../figures/presentation/Map.pdf  used on input line 47
+5.
+(luatex.def)             Requested size: 153.64493pt x 98.61212pt.
+
+Overfull \vbox (5.44225pt too high) detected at line 475
+ []
+
+[39
+
+<../figures/presentation/donnees-NMEA.pdf><../figures/presentation/Map.pdf>] [4
+0
+
+] [41
+
+] [42
 
 ]
 \tf@nav=\write6
@@ -1861,25 +1922,24 @@ Overfull \vbox (17.29541pt too high) detected at line 440
 \tf@snm=\write8
 
 \openout8 = 1924B_MiniBoiteNoire-Presentation.snm
-
-(./1924B_MiniBoiteNoire-Presentation.aux)
+ (./1924B_MiniBoiteNoire-Presentation.aux)
 Package rerunfilecheck Info: File `1924B_MiniBoiteNoire-Presentation.out' has n
 ot changed.
 (rerunfilecheck)             Checksum: 470C9B56C45B78C4BDA0579A19AAB08B;796.
 )
 
 Here is how much of LuaTeX's memory you used:
- 32990 strings out of 477247
+ 33120 strings out of 477247
  125031,1144653 words of node,token memory allocated
  1901 words of node memory still in use:
    14 hlist, 6 vlist, 2 rule, 1 disc, 1 local_par, 43 glue, 5 kern, 10 penalty, 
 13 glyph, 342 attribute, 71 glue_spec, 51 attribute_list, 4 write, 5 pdf_colorst
 ack nodes
-   avail lists: 1:2,2:2513,3:276,4:237,5:329,6:46,7:2618,8:65,9:562,10:10,11:155
+   avail lists: 1:2,2:3409,3:363,4:279,5:335,6:49,7:2669,8:65,9:598,10:10,11:155
 
- 52443 multiletter control sequences out of 65536+600000
+ 52525 multiletter control sequences out of 65536+600000
  89 fonts using 16594295 bytes
- 128i,13n,131p,1899b,778s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 128i,13n,131p,1923b,776s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2022/texmf-dist/fonts/opentype/public/fira/FiraSans-BoldItalic.otf><
 c:/texlive/2022/texmf-dist/fonts/opentype/public/fira/FiraSans-Italic.otf><c:/te
 xlive/2022/texmf-dist/fonts/opentype/public/fira/FiraSans-Regular.otf><c:/texliv
@@ -1888,11 +1948,11 @@ texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2022/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmss10.pfb><c:/texlive/2022/texmf-dist/fonts/typ
 e1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/
 amsfonts/cm/cmsy8.pfb>
-Output written on 1924B_MiniBoiteNoire-Presentation.pdf (39 pages, 3406039 bytes
+Output written on 1924B_MiniBoiteNoire-Presentation.pdf (42 pages, 4176194 bytes
 ).
 
-PDF statistics: 620 PDF objects out of 1000 (max. 8388607)
- 419 compressed objects within 5 object streams
- 114 named destinations out of 1000 (max. 131072)
+PDF statistics: 734 PDF objects out of 1000 (max. 8388607)
+ 464 compressed objects within 5 object streams
+ 120 named destinations out of 1000 (max. 131072)
  64 words of extra memory for PDF output out of 10000 (max. 100000000)
 
