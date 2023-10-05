@@ -4,4 +4,5 @@
 \beamer@sectionintoc {3}{Développement schématique}{15}{0}{3}
 \beamer@sectionintoc {4}{Développement du PCB}{24}{0}{4}
 \beamer@sectionintoc {5}{Développement du firmware}{29}{0}{5}
-\beamer@sectionintoc {6}{Conclusion}{40}{0}{6}
+\beamer@sectionintoc {6}{Validation du design}{41}{0}{6}
+\beamer@sectionintoc {7}{Conclusion}{42}{0}{7}
