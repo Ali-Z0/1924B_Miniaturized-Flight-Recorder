@@ -93,22 +93,32 @@
 \headcommand {\beamer@framepages {39}{39}}
 \headcommand {\slideentry {5}{0}{12}{40/40}{}{0}}
 \headcommand {\beamer@framepages {40}{40}}
-\headcommand {\beamer@sectionpages {29}{40}}
-\headcommand {\beamer@subsectionpages {29}{40}}
-\headcommand {\sectionentry {6}{Validation du design}{41}{Validation du design}{0}}
-\headcommand {\slideentry {6}{0}{1}{41/41}{}{0}}
+\headcommand {\slideentry {5}{0}{13}{41/41}{}{0}}
 \headcommand {\beamer@framepages {41}{41}}
-\headcommand {\beamer@sectionpages {41}{41}}
-\headcommand {\beamer@subsectionpages {41}{41}}
-\headcommand {\sectionentry {7}{Conclusion}{42}{Conclusion}{0}}
-\headcommand {\slideentry {7}{0}{1}{42/42}{}{0}}
+\headcommand {\beamer@sectionpages {29}{41}}
+\headcommand {\beamer@subsectionpages {29}{41}}
+\headcommand {\sectionentry {6}{Validation du design}{42}{Validation du design}{0}}
+\headcommand {\slideentry {6}{0}{1}{42/42}{}{0}}
 \headcommand {\beamer@framepages {42}{42}}
-\headcommand {\slideentry {7}{0}{2}{43/43}{}{0}}
+\headcommand {\slideentry {6}{0}{2}{43/43}{}{0}}
 \headcommand {\beamer@framepages {43}{43}}
-\headcommand {\slideentry {7}{0}{3}{44/44}{}{0}}
+\headcommand {\slideentry {6}{0}{3}{44/44}{}{0}}
 \headcommand {\beamer@framepages {44}{44}}
-\headcommand {\beamer@partpages {1}{44}}
-\headcommand {\beamer@subsectionpages {42}{44}}
-\headcommand {\beamer@sectionpages {42}{44}}
-\headcommand {\beamer@documentpages {44}}
-\headcommand {\gdef \inserttotalframenumber {36}}
+\headcommand {\slideentry {6}{0}{4}{45/45}{}{0}}
+\headcommand {\beamer@framepages {45}{45}}
+\headcommand {\slideentry {6}{0}{5}{46/46}{}{0}}
+\headcommand {\beamer@framepages {46}{46}}
+\headcommand {\beamer@sectionpages {42}{46}}
+\headcommand {\beamer@subsectionpages {42}{46}}
+\headcommand {\sectionentry {7}{Conclusion}{47}{Conclusion}{0}}
+\headcommand {\slideentry {7}{0}{1}{47/47}{}{0}}
+\headcommand {\beamer@framepages {47}{47}}
+\headcommand {\slideentry {7}{0}{2}{48/48}{}{0}}
+\headcommand {\beamer@framepages {48}{48}}
+\headcommand {\slideentry {7}{0}{3}{49/49}{}{0}}
+\headcommand {\beamer@framepages {49}{49}}
+\headcommand {\beamer@partpages {1}{49}}
+\headcommand {\beamer@subsectionpages {47}{49}}
+\headcommand {\beamer@sectionpages {47}{49}}
+\headcommand {\beamer@documentpages {49}}
+\headcommand {\gdef \inserttotalframenumber {41}}

@@ -12,6 +12,7 @@
 \usepackage{fontspec}
 \usepackage{caption}
 \usepackage{subcaption}
+\usepackage[export]{adjustbox}
 
 % Polices
 \setsansfont{Fira Sans}
@@ -479,12 +480,115 @@
 	\end{figure}
 \end{frame}
 
+\begin{frame}{Application}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=.9\linewidth]{../figures/application/screen_logGnss}
+	\end{figure}
+\end{frame}
+
 
 \section{Validation du design}
 
+\begin{frame}{Modifications effectuées}
+	Ajout d'un connecteur MHF1 et antenne externe flexible "strip" indépendante du plan de masse.
+	
+	\begin{figure}
+		\centering
+		\begin{subfigure}[b]{0.3\textwidth}
+			\centering
+			\includegraphics[width=1\linewidth, center]{../figures/presentation/modif}
+		\end{subfigure}
+		\hfill
+		\begin{subfigure}[b]{0.3\textwidth}
+			\centering
+			\includegraphics[width=1\linewidth, center]{../figures/presentation/MFG_CONMHF1-SMD-G-T}
+		\end{subfigure}
+		\hfill
+		\begin{subfigure}[b]{0.3\textwidth}
+			\centering
+			\includegraphics[width=1\linewidth, center]{../figures/presentation/antenne-flex}
+		\end{subfigure}
+		\hfill
+	\end{figure}	
+\end{frame}
+
+\begin{frame}{Consommations}
+	\begin{table}[!h]
+		\centering
+		\resizebox{1\textwidth}{!}{%
+			\begin{tabular}{|c|l|l|c|c|}
+				\hline
+				\multicolumn{1}{|l|}{Index} & Etat du système & Condition                      & Courant [mA] & Symbol      \\ \hline
+				[1]                         & Eteint.         & Mode auto-enclenchement OFF.   & 0.02         & $I_{off}$   \\ \hline
+				[2]                         & Veille.         & Est passé par l'état SHUTDOWN. & 4.4          & $I_{sleep}$ \\ \hline
+				[3]                         & Veille brutale.\footnotemark & Pas passé par l'état SHUTDOWN. & 9.56         & $I_{ws}$    \\ \hline
+				[4]                         & Initialisation. & -                              & 90           & $I_{init}$  \\ \hline
+				[5]                         & Logging.        & -                              & 100          & $I_{log}$   \\ \hline
+				[6]                         & Shutdown.       & -                              & 83           & $I_{sh}$    \\ \hline
+				[7]                         & Communication.  & USB branché.                   & 0            & $I_{usb}$   \\ \hline
+			\end{tabular}%
+		}
+	\caption{Mesure des consommations}
+	\label{tab:mes-cons}
+	\end{table}
+	\resizebox{1\textwidth}{!}{\begin{tabular}{llll}
+		$\bullet$ & Temps de logging &  (Table \ref{tab:mes-cons}-[5]) : & $T_l = \frac{C}{I_{log}} = 16h$. \\
+		$\bullet$ & Temps épuisement batterie en veille & (Table \ref{tab:mes-cons}-[2]) : & $T_l = \frac{C}{I_{sleep}} = 364h = 15J$. \\
+		$\bullet$ & Temps épuisement en veille brutale & (Table \ref{tab:mes-cons}-[3]) : & $T_l = \frac{C}{I_{ws}} = 167h = 7J$. \\
+	\end{tabular}}
+	
+\end{frame}
+
+\begin{frame}{Bus de communications}
+	\resizebox{1\textwidth}{!}{\begin{tabular}{lllll}
+		$\bullet$ & I2C & Temps set de mesure IMU & $2.275$ & $[ms]$ \\
+		$\bullet$ & UART1 & Temps set de mesure GNSS & $234.4$ & $[ms]$\\
+		$\bullet$ & UART1 & Intervalle entre messages NMEA & $1$ & $[s]$\\
+		$\bullet$ & UART2 & Temps réaction cmd en mode CONFIG & $120$ & $[\mu s]$\\
+		$\bullet$ & UART2 & Temps réaction cmd en mode LOG. & $2.7$ & $[ms]$\\
+		$\bullet$ & SPI & Mesure fréquence carte SD & $12.0192$ & $[MHz]$\\
+	\end{tabular}}
+\end{frame}
+
+\begin{frame}{Caractéristiques finales}
+	\begin{table}[h]
+		\centering
+		\resizebox{.65\textwidth}{!}{%
+			\begin{tabular}{|c|cc|}
+				\hline
+				Caractéristique                                                                       & \multicolumn{2}{c|}{Attribut}               \\ \hline
+				Axes de mesures                                                                       & \multicolumn{1}{c|}{9}       & [axes]       \\ \hline
+				Mesures IMU & \multicolumn{2}{c|}{\begin{tabular}[c]{@{}c@{}}Temps, Gravité, Gyro, Magnitude,\\ Accél. linaire, Angle de Euler, Quaternions\end{tabular}} \\ \hline
+				\begin{tabular}[c]{@{}c@{}}Intervalles mesure GNSS\\ (par défaut)\end{tabular}  & \multicolumn{1}{c|}{5000}    & [ms]         \\ \hline
+				\begin{tabular}[c]{@{}c@{}}Intervalles mesure IMU\\ (par défaut)\end{tabular}   & \multicolumn{1}{c|}{500}     & [ms]         \\ \hline
+				Capacité carte SD                                                                     & \multicolumn{1}{c|}{256}     & [MB]         \\ \hline
+				Nombre de mesures possibles                                                           & \multicolumn{2}{c|}{$1.11*10^6$}            \\ \hline
+				Vitesse MCU                                                                     & \multicolumn{1}{c|}{72}      & [MHz]        \\ \hline
+				Capacité batterie                                                                     & \multicolumn{1}{c|}{1600}    & [mAh]        \\ \hline
+				Autonomie logging                                                                     & \multicolumn{1}{c|}{16}      & [h]          \\ \hline
+				Autonomie veille                                                                      & \multicolumn{1}{c|}{2}       & [semaines]   \\ \hline
+				Interface                                                                             & \multicolumn{2}{c|}{USB et LED RGB}         \\ \hline
+				Communications                                                                        & \multicolumn{2}{c|}{I2C, SPI, UART(2), USB} \\ \hline
+				Vitesse SPI                                                                           & \multicolumn{1}{c|}{12}      & [MHz]        \\ \hline
+				Vitesse UART 1 et 2                                                                   & \multicolumn{1}{c|}{9600}    & [Bd]         \\ \hline
+				Détection accélération > 2G                                                           & \multicolumn{2}{c|}{Oui}                    \\ \hline
+				Données satellites                                                                    & \multicolumn{2}{c|}{Date et heure}          \\ \hline
+				\begin{tabular}[c]{@{}c@{}}Compensation température\\ (Mesures IMU)\end{tabular} & \multicolumn{2}{c|}{Oui}                    \\ \hline
+				Enclenchement automatique                                                             & \multicolumn{2}{c|}{Oui}                    \\ \hline
+				Système d'économie d'énergie                                                          & \multicolumn{2}{c|}{Oui}                    \\ \hline
+				Application software développée                                                       & \multicolumn{2}{c|}{Oui, "BBX-Connect"}     \\ \hline
+			\end{tabular}%
+		}
+	\end{table}
+\end{frame}
+
 \section{Conclusion}
 \begin{frame}{Conclusion}
-	Résumons ce que nous avons appris.
+		\begin{figure}[h]
+		\centering
+		\includegraphics[width=.65\linewidth]{../figures/boite-noire}
+	\end{figure}
 \end{frame}
 
 \begin{frame}[standout]

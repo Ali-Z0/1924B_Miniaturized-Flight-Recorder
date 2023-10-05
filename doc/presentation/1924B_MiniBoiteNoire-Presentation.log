@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.15.0 (TeX Live 2022)  (format=lualatex 2022.12.8)  5 OCT 2023 11:49
+This is LuaHBTeX, Version 1.15.0 (TeX Live 2022)  (format=lualatex 2022.12.8)  5 OCT 2023 16:18
  restricted system commands enabled.
 **1924B_MiniBoiteNoire-Presentation.tex
 (./1924B_MiniBoiteNoire-Presentation.tex
@@ -1193,6 +1193,62 @@ Package: subcaption 2022/01/07 v1.5 Sub-captions (AR)
 \c@subfigure=\count371
 \c@subtable=\count372
 )
+(c:/texlive/2022/texmf-dist/tex/latex/adjustbox/adjustbox.sty
+Package: adjustbox 2022/10/17 v1.3a Adjusting TeX boxes (trim, clip, ...)
+
+(c:/texlive/2022/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
+
+(c:/texlive/2022/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(c:/texlive/2022/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks52
+\XKV@tempa@toks=\toks53
+)
+\XKV@depth=\count373
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+(c:/texlive/2022/texmf-dist/tex/latex/adjustbox/adjcalc.sty
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
+-ends (calc, etex, pgfmath)
+)
+(c:/texlive/2022/texmf-dist/tex/latex/adjustbox/trimclip.sty
+Package: trimclip 2020/08/19 v1.2 Trim and clip general TeX material
+
+(c:/texlive/2022/texmf-dist/tex/latex/collectbox/collectbox.sty
+Package: collectbox 2022/10/17 v0.4c Collect macro arguments as boxes
+\collectedbox=\box84
+)
+\tc@llx=\dimen348
+\tc@lly=\dimen349
+\tc@urx=\dimen350
+\tc@ury=\dimen351
+
+(c:/texlive/2022/texmf-dist/tex/latex/adjustbox/tc-pgf.def
+File: tc-pgf.def 2019/01/04 v2.2 trimclip fall-back clipping driver using PGF
+)
+Package trimclip Info: No clipping driver 'tc-luatex.def' available.
+(trimclip)             Using fall-back PGF driver.
+)
+\adjbox@Width=\dimen352
+\adjbox@Height=\dimen353
+\adjbox@Depth=\dimen354
+\adjbox@Totalheight=\dimen355
+\adjbox@pwidth=\dimen356
+\adjbox@pheight=\dimen357
+\adjbox@pdepth=\dimen358
+\adjbox@ptotalheight=\dimen359
+
+(c:/texlive/2022/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
+Package: ifoddpage 2022/10/18 v1.2 Conditionals for odd/even page detection
+\c@checkoddpage=\count374
+)
+(c:/texlive/2022/texmf-dist/tex/latex/varwidth/varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box85
+\sift@deathcycles=\count375
+\@vwid@loff=\dimen360
+\@vwid@roff=\dimen361
+))
 
 Package fontspec Info: Font family 'FiraSans(0)' created for font 'Fira Sans'
 (fontspec)             with options [Ligatures=TeX].
@@ -1261,32 +1317,32 @@ Space].
 (./1924B_MiniBoiteNoire-Presentation.aux)
 \openout1 = 1924B_MiniBoiteNoire-Presentation.aux
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 27.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 28.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 2
-7.
+8.
 
 (c:/texlive/2022/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: luatex
@@ -1324,17 +1380,17 @@ LaTeX Font Info:    ... okay on input line 27.
 
 (c:/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count373
-\scratchdimen=\dimen348
-\scratchbox=\box84
-\nofMPsegments=\count374
-\nofMParguments=\count375
-\everyMPshowfont=\toks52
-\MPscratchCnt=\count376
-\MPscratchDim=\dimen349
-\MPnumerator=\count377
-\makeMPintoPDFobject=\count378
-\everyMPtoPDFconversion=\toks53
+\scratchcounter=\count376
+\scratchdimen=\dimen362
+\scratchbox=\box86
+\nofMPsegments=\count377
+\nofMParguments=\count378
+\everyMPshowfont=\toks54
+\MPscratchCnt=\count379
+\MPscratchDim=\dimen363
+\MPnumerator=\count380
+\makeMPintoPDFobject=\count381
+\everyMPtoPDFconversion=\toks55
 ) (c:/texlive/2022/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -1344,7 +1400,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring OFF on input line 27.
+Package hyperref Info: Link coloring OFF on input line 28.
 
 (./1924B_MiniBoiteNoire-Presentation.out)
 (./1924B_MiniBoiteNoire-Presentation.out)
@@ -1352,54 +1408,54 @@ Package hyperref Info: Link coloring OFF on input line 27.
 
 \openout5 = 1924B_MiniBoiteNoire-Presentation.out
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 27.
+(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 28.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 27.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 28.
 \symnumbers=\mathgroup6
 \sympureletters=\mathgroup7
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmr/m/n on input line 27.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 27.
+(Font)                  OT1/cmss/m/n --> TU/lmr/m/n on input line 28.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 28.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/FiraSans(0)/b/n on input line 27.
+(Font)                  OT1/cmr/bx/n --> TU/FiraSans(0)/b/n on input line 28.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/FiraSans(0)/b/n on input line 27.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 27.
+(Font)                  OT1/cmr/bx/n --> TU/FiraSans(0)/b/n on input line 28.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 28.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/FiraSans(0)/m/n on input line 27.
+(Font)                  OT1/cmss/m/n --> TU/FiraSans(0)/m/n on input line 28.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/FiraSans(0)/m/n on input line 27.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 27.
+(Font)                  OT1/cmss/bx/n --> TU/FiraSans(0)/m/n on input line 28.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 28.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/FiraSans(0)/m/it on input line 27.
+(Font)                  OT1/cmr/m/it --> TU/FiraSans(0)/m/it on input line 28.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> TU/FiraSans(0)/m/it on input line 27.
+(Font)                  OT1/cmr/bx/it --> TU/FiraSans(0)/m/it on input line 28.
 
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 27.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 28.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/FiraCode(0)/m/n on input line 27.
+(Font)                  OT1/cmtt/m/n --> TU/FiraCode(0)/m/n on input line 28.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/FiraCode(0)/m/n on input line 27.
+(Font)                  OT1/cmtt/m/n --> TU/FiraCode(0)/m/n on input line 28.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
 (Font)                  TU/FiraSans(0)/m/n --> TU/FiraSans(0)/b/n on input line
- 27.
+ 28.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
 (Font)                  TU/FiraSans(0)/m/it --> TU/FiraSans(0)/b/it on input li
-ne 27.
+ne 28.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/cmss/b/n --> TU/lmr/b/n on input line 27.
+(Font)                  OT1/cmss/b/n --> TU/lmr/b/n on input line 28.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
 (Font)                  TU/FiraSans(0)/b/n --> TU/FiraSans(0)/b/n on input line
- 27.
+ 28.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
 (Font)                  TU/FiraSans(0)/m/n --> TU/FiraSans(0)/b/n on input line
- 27.
+ 28.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  TU/FiraSans(0)/m/it --> TU/FiraSans(0)/b/it on input li
-ne 27.
+ne 28.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  TU/FiraCode(0)/m/n --> TU/FiraCode(0)/b/n on input line
- 27.
+ 28.
 
 (c:/texlive/2022/texmf-dist/tex/latex/translator/translator-basic-dictionary-En
 glish.dict
@@ -1425,22 +1481,22 @@ Dictionary: translator-numbers-dictionary, Language: English
 English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
-LaTeX Info: Redefining \up on input line 27.
+LaTeX Info: Redefining \up on input line 28.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
  (./1924B_MiniBoiteNoire-Presentation.nav)
-<../figures/AMPA.pdf, id=37, 4701.565pt x 3385.64874pt>
+<../figures/AMPA.pdf, id=41, 4701.565pt x 3385.64874pt>
 File: ../figures/AMPA.pdf Graphic file (type pdf)
 <use ../figures/AMPA.pdf>
-Package luatex.def Info: ../figures/AMPA.pdf  used on input line 37.
+Package luatex.def Info: ../figures/AMPA.pdf  used on input line 38.
 (luatex.def)             Requested size: 56.9055pt x 40.96698pt.
-<../figures/ETML-ES.pdf, id=38, 200.75pt x 200.75pt>
+<../figures/ETML-ES.pdf, id=42, 200.75pt x 200.75pt>
 File: ../figures/ETML-ES.pdf Graphic file (type pdf)
 <use ../figures/ETML-ES.pdf>
-Package luatex.def Info: ../figures/ETML-ES.pdf  used on input line 37.
+Package luatex.def Info: ../figures/ETML-ES.pdf  used on input line 38.
 (luatex.def)             Requested size: 56.9055pt x 56.90495pt.
 
-Overfull \vbox (15.63992pt too high) detected at line 37
+Overfull \vbox (15.63992pt too high) detected at line 38
  []
 
 [1
@@ -1450,12 +1506,12 @@ df><../figures/ETML-ES.pdf>] (./1924B_MiniBoiteNoire-Presentation.toc)
 [2
 
 ]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 43.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 44.
 
  (c:/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 43.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 44.
 
 
 (c:/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -1463,21 +1519,21 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [3
 
 ]
-<../figures/boite-noire.pdf, id=75, 4445.60875pt x 4526.9125pt>
+<../figures/boite-noire.pdf, id=81, 4445.60875pt x 4526.9125pt>
 File: ../figures/boite-noire.pdf Graphic file (type pdf)
 <use ../figures/boite-noire.pdf>
-Package luatex.def Info: ../figures/boite-noire.pdf  used on input line 60.
+Package luatex.def Info: ../figures/boite-noire.pdf  used on input line 61.
 (luatex.def)             Requested size: 113.81102pt x 115.83882pt.
  [4
 
 <../figures/boite-noire.pdf>]
 warning  (file ../figures/cdc/schema_principe.pdf) (pdf inclusion): PDF inclusio
 n: found PDF version '1.7', but at most version '1.5' allowed
-<../figures/cdc/schema_principe.pdf, id=84, 253.90858pt x 270.0489pt>
+<../figures/cdc/schema_principe.pdf, id=90, 253.90858pt x 270.0489pt>
 File: ../figures/cdc/schema_principe.pdf Graphic file (type pdf)
 <use ../figures/cdc/schema_principe.pdf>
 Package luatex.def Info: ../figures/cdc/schema_principe.pdf  used on input line
- 82.
+ 83.
 (luatex.def)             Requested size: 128.0374pt x 136.17377pt.
 [5
 
@@ -1486,12 +1542,12 @@ Package luatex.def Info: ../figures/cdc/schema_principe.pdf  used on input line
 ]
 warning  (file ../figures/cdc/blocs_grossiers_no_antenna.pdf) (pdf inclusion): P
 DF inclusion: found PDF version '1.7', but at most version '1.5' allowed
-<../figures/cdc/blocs_grossiers_no_antenna.pdf, id=110, 824.11888pt x 450.72388
+<../figures/cdc/blocs_grossiers_no_antenna.pdf, id=116, 824.11888pt x 450.72388
 pt>
 File: ../figures/cdc/blocs_grossiers_no_antenna.pdf Graphic file (type pdf)
 <use ../figures/cdc/blocs_grossiers_no_antenna.pdf>
 Package luatex.def Info: ../figures/cdc/blocs_grossiers_no_antenna.pdf  used on
- input line 92.
+ input line 93.
 (luatex.def)             Requested size: 307.28987pt x 168.06506pt.
 [7
 
@@ -1533,49 +1589,49 @@ g;+tnum;+smcp;"
 ]
 warning  (file ../figures/pre_etude/Carac_PIC32.pdf) (pdf inclusion): PDF inclus
 ion: found PDF version '1.6', but at most version '1.5' allowed
-<../figures/pre_etude/Carac_PIC32.pdf, id=148, 661.47125pt x 271.0125pt>
+<../figures/pre_etude/Carac_PIC32.pdf, id=154, 661.47125pt x 271.0125pt>
 File: ../figures/pre_etude/Carac_PIC32.pdf Graphic file (type pdf)
 <use ../figures/pre_etude/Carac_PIC32.pdf>
 Package luatex.def Info: ../figures/pre_etude/Carac_PIC32.pdf  used on input li
-ne 112.
+ne 113.
 (luatex.def)             Requested size: 215.10196pt x 88.12764pt.
 [9
 
 <../figures/pre_etude/Carac_PIC32.pdf>]
-<../figures/pre_etude/BNO055_Adafruit.png, id=156, 338.01282pt x 269.50688pt>
+<../figures/pre_etude/BNO055_Adafruit.png, id=162, 338.01282pt x 269.50688pt>
 File: ../figures/pre_etude/BNO055_Adafruit.png Graphic file (type png)
 <use ../figures/pre_etude/BNO055_Adafruit.png>
 Package luatex.def Info: ../figures/pre_etude/BNO055_Adafruit.png  used on inpu
-t line 133.
+t line 134.
 (luatex.def)             Requested size: 76.82246pt x 61.25328pt.
  [10
 
 <../figures/pre_etude/BNO055_Adafruit.png>]
 warning  (file ../figures/pre_etude/img_gnss_crp.pdf) (pdf inclusion): PDF inclu
 sion: found PDF version '1.6', but at most version '1.5' allowed
-<../figures/pre_etude/img_gnss_crp.pdf, id=167, 453.19313pt x 458.37248pt>
+<../figures/pre_etude/img_gnss_crp.pdf, id=173, 453.19313pt x 458.37248pt>
 File: ../figures/pre_etude/img_gnss_crp.pdf Graphic file (type pdf)
 <use ../figures/pre_etude/img_gnss_crp.pdf>
 Package luatex.def Info: ../figures/pre_etude/img_gnss_crp.pdf  used on input l
-ine 147.
+ine 148.
 (luatex.def)             Requested size: 76.82246pt x 77.69847pt.
 
 warning  (file ../figures/pre_etude/carac_GNSS.pdf) (pdf inclusion): PDF inclusi
 on: found PDF version '1.6', but at most version '1.5' allowed
-<../figures/pre_etude/carac_GNSS.pdf, id=168, 1853.92625pt x 634.37pt>
+<../figures/pre_etude/carac_GNSS.pdf, id=174, 1853.92625pt x 634.37pt>
 File: ../figures/pre_etude/carac_GNSS.pdf Graphic file (type pdf)
 <use ../figures/pre_etude/carac_GNSS.pdf>
 Package luatex.def Info: ../figures/pre_etude/carac_GNSS.pdf  used on input lin
-e 147.
+e 148.
 (luatex.def)             Requested size: 276.559pt x 94.62868pt.
 
-Overfull \vbox (14.9628pt too high) detected at line 147
+Overfull \vbox (14.9628pt too high) detected at line 148
  []
 
 [11
 
 <../figures/pre_etude/img_gnss_crp.pdf><../figures/pre_etude/carac_GNSS.pdf>]
-Overfull \hbox (12.0714pt too wide) detected at line 173
+Overfull \hbox (12.0714pt too wide) detected at line 174
 \TU/FiraSans(0)/m/it/10.95 S[] \OT1/cmss/m/n/10.95 = [] \OMS/cmsy/m/n/10.95  \
 TU/FiraSans(0)/m/it/10.95 T[] \OT1/cmss/m/n/10.95 = [] \OMS/cmsy/m/n/10.95  \T
 U/FiraSans(0)/m/n/10.95 900 \OT1/cmss/m/n/10.95 = \TU/FiraSans(0)/m/n/10.95 46[
@@ -1583,7 +1639,7 @@ U/FiraSans(0)/m/n/10.95 900 \OT1/cmss/m/n/10.95 = \TU/FiraSans(0)/m/n/10.95 46[
  []
 
 
-Overfull \hbox (24.51282pt too wide) detected at line 173
+Overfull \hbox (24.51282pt too wide) detected at line 174
 \TU/FiraSans(0)/m/it/10.95 T[] \OT1/cmss/m/n/10.95 = [] = [] =\OMS/cmsy/m/n/10.
 95  \TU/FiraSans(0)/m/n/10.95 82[]051 \TU/FiraSans(0)/m/it/10.95 Minutes \OT1/
 cmss/m/n/10.95 =\OMS/cmsy/m/n/10.95  \TU/FiraSans(0)/m/n/10.95 1368 \TU/FiraSa
@@ -1591,13 +1647,13 @@ ns(0)/m/it/10.95 H\OML/cmm/m/it/10.95 :
  []
 
 
-Overfull \vbox (9.8496pt too high) detected at line 173
+Overfull \vbox (9.8496pt too high) detected at line 174
  []
 
 [12
 
 ]
-Overfull \vbox (5.68939pt too high) detected at line 197
+Overfull \vbox (5.68939pt too high) detected at line 198
  []
 
 [13
@@ -1607,80 +1663,80 @@ Overfull \vbox (5.68939pt too high) detected at line 197
 ] [15
 
 ]
-<../figures/etude/sch/BLOCS.pdf, id=206, 841.87825pt x 354.91998pt>
+<../figures/etude/sch/BLOCS.pdf, id=212, 841.87825pt x 354.91998pt>
 File: ../figures/etude/sch/BLOCS.pdf Graphic file (type pdf)
 <use ../figures/etude/sch/BLOCS.pdf>
-Package luatex.def Info: ../figures/etude/sch/BLOCS.pdf  used on input line 219
+Package luatex.def Info: ../figures/etude/sch/BLOCS.pdf  used on input line 220
 .
 (luatex.def)             Requested size: 307.28987pt x 129.54742pt.
  [16
 
 <../figures/etude/sch/BLOCS.pdf>]
-<../figures/etude/sch/MCU.pdf, id=222, 1142.67094pt x 559.89163pt>
+<../figures/etude/sch/MCU.pdf, id=228, 1142.67094pt x 559.89163pt>
 File: ../figures/etude/sch/MCU.pdf Graphic file (type pdf)
 <use ../figures/etude/sch/MCU.pdf>
-Package luatex.def Info: ../figures/etude/sch/MCU.pdf  used on input line 228.
+Package luatex.def Info: ../figures/etude/sch/MCU.pdf  used on input line 229.
 (luatex.def)             Requested size: 307.28987pt x 150.56618pt.
  [17
 
 <../figures/etude/sch/MCU.pdf>]
-<../figures/etude/sch/Carte-SD.pdf, id=241, 837.20836pt x 559.04955pt>
+<../figures/etude/sch/Carte-SD.pdf, id=247, 837.20836pt x 559.04955pt>
 File: ../figures/etude/sch/Carte-SD.pdf Graphic file (type pdf)
 <use ../figures/etude/sch/Carte-SD.pdf>
 Package luatex.def Info: ../figures/etude/sch/Carte-SD.pdf  used on input line 
-237.
+238.
 (luatex.def)             Requested size: 276.559pt x 184.67458pt.
 
-Overfull \vbox (12.83524pt too high) detected at line 237
+Overfull \vbox (12.83524pt too high) detected at line 238
  []
 
 [18
 
 <../figures/etude/sch/Carte-SD.pdf>]
-<../figures/etude/sch/IMU.pdf, id=266, 760.64146pt x 484.96129pt>
+<../figures/etude/sch/IMU.pdf, id=272, 760.64146pt x 484.96129pt>
 File: ../figures/etude/sch/IMU.pdf Graphic file (type pdf)
 <use ../figures/etude/sch/IMU.pdf>
-Package luatex.def Info: ../figures/etude/sch/IMU.pdf  used on input line 246.
+Package luatex.def Info: ../figures/etude/sch/IMU.pdf  used on input line 247.
 (luatex.def)             Requested size: 276.559pt x 176.3249pt.
 
-Overfull \vbox (4.48557pt too high) detected at line 246
+Overfull \vbox (4.48557pt too high) detected at line 247
  []
 
 [19
 
 <../figures/etude/sch/IMU.pdf>]
-<../figures/etude/sch/GNSS.pdf, id=291, 754.29222pt x 428.08203pt>
+<../figures/etude/sch/GNSS.pdf, id=297, 754.29222pt x 428.08203pt>
 File: ../figures/etude/sch/GNSS.pdf Graphic file (type pdf)
 <use ../figures/etude/sch/GNSS.pdf>
-Package luatex.def Info: ../figures/etude/sch/GNSS.pdf  used on input line 255.
+Package luatex.def Info: ../figures/etude/sch/GNSS.pdf  used on input line 256.
 
 (luatex.def)             Requested size: 276.559pt x 156.95082pt.
  [20
 
 <../figures/etude/sch/GNSS.pdf>]
-<../figures/etude/sch/USB-FTDI.pdf, id=317, 827.58316pt x 492.61261pt>
+<../figures/etude/sch/USB-FTDI.pdf, id=323, 827.58316pt x 492.61261pt>
 File: ../figures/etude/sch/USB-FTDI.pdf Graphic file (type pdf)
 <use ../figures/etude/sch/USB-FTDI.pdf>
 Package luatex.def Info: ../figures/etude/sch/USB-FTDI.pdf  used on input line 
-264.
+265.
 (luatex.def)             Requested size: 276.559pt x 164.62222pt.
  [21
 
 <../figures/etude/sch/USB-FTDI.pdf>]
-<../figures/etude/sch/CHRG-BAT.pdf, id=337, 746.1822pt x 390.93103pt>
+<../figures/etude/sch/CHRG-BAT.pdf, id=343, 746.1822pt x 390.93103pt>
 File: ../figures/etude/sch/CHRG-BAT.pdf Graphic file (type pdf)
 <use ../figures/etude/sch/CHRG-BAT.pdf>
 Package luatex.def Info: ../figures/etude/sch/CHRG-BAT.pdf  used on input line 
-273.
+274.
 (luatex.def)             Requested size: 276.559pt x 144.89275pt.
  [22
 
 <../figures/etude/sch/CHRG-BAT.pdf>]
-<../figures/etude/sch/ON-OFF.pdf, id=356, 1132.8521pt x 392.95233pt>
+<../figures/etude/sch/ON-OFF.pdf, id=362, 1132.8521pt x 392.95233pt>
 File: ../figures/etude/sch/ON-OFF.pdf Graphic file (type pdf)
 <use ../figures/etude/sch/ON-OFF.pdf>
 Package luatex.def Info: ../figures/etude/sch/ON-OFF.pdf  used on input line 28
-2.
+3.
 (luatex.def)             Requested size: 276.559pt x 95.92938pt.
 
 [23
@@ -1690,53 +1746,53 @@ Package luatex.def Info: ../figures/etude/sch/ON-OFF.pdf  used on input line 28
 ]
 warning  (file ../figures/dev-pcb/boitier-dim.pdf) (pdf inclusion): PDF inclusio
 n: found PDF version '1.6', but at most version '1.5' allowed
-<../figures/dev-pcb/boitier-dim.pdf, id=387, 5731.4125pt x 3732.94624pt>
+<../figures/dev-pcb/boitier-dim.pdf, id=393, 5731.4125pt x 3732.94624pt>
 File: ../figures/dev-pcb/boitier-dim.pdf Graphic file (type pdf)
 <use ../figures/dev-pcb/boitier-dim.pdf>
 Package luatex.def Info: ../figures/dev-pcb/boitier-dim.pdf  used on input line
- 300.
+ 301.
 (luatex.def)             Requested size: 184.3758pt x 120.07188pt.
 
 warning  (file ../figures/dev-pcb/boitier-dims-pcb.pdf) (pdf inclusion): PDF inc
 lusion: found PDF version '1.6', but at most version '1.5' allowed
-<../figures/dev-pcb/boitier-dims-pcb.pdf, id=388, 4785.88pt x 6226.26125pt>
+<../figures/dev-pcb/boitier-dims-pcb.pdf, id=394, 4785.88pt x 6226.26125pt>
 File: ../figures/dev-pcb/boitier-dims-pcb.pdf Graphic file (type pdf)
 <use ../figures/dev-pcb/boitier-dims-pcb.pdf>
 Package luatex.def Info: ../figures/dev-pcb/boitier-dims-pcb.pdf  used on input
- line 300.
+ line 301.
 (luatex.def)             Requested size: 107.55333pt x 139.84732pt.
 [25
 
 <../figures/dev-pcb/boitier-dim.pdf><../figures/dev-pcb/boitier-dims-pcb.pdf>]
-<../figures/dev-pcb/PCB-Dims.jpg, id=398, 541.0614pt x 289.5618pt>
+<../figures/dev-pcb/PCB-Dims.jpg, id=404, 541.0614pt x 289.5618pt>
 File: ../figures/dev-pcb/PCB-Dims.jpg Graphic file (type jpg)
 <use ../figures/dev-pcb/PCB-Dims.jpg>
-Package luatex.def Info: ../figures/dev-pcb/PCB-Dims.jpg  used on input line 30
-9.
+Package luatex.def Info: ../figures/dev-pcb/PCB-Dims.jpg  used on input line 31
+0.
 (luatex.def)             Requested size: 255.05115pt x 136.49612pt.
  [26
 
 <../figures/dev-pcb/PCB-Dims.jpg>]
-<../figures/dev-pcb/3d-view3.png, id=405, 354.32375pt x 709.65125pt>
+<../figures/dev-pcb/3d-view3.png, id=411, 354.32375pt x 709.65125pt>
 File: ../figures/dev-pcb/3d-view3.png Graphic file (type png)
 <use ../figures/dev-pcb/3d-view3.png>
 Package luatex.def Info: ../figures/dev-pcb/3d-view3.png  used on input line 33
-7.
+8.
 (luatex.def)             Requested size: 73.75125pt x 147.71008pt.
-<../figures/dev-pcb/3d-view2.png, id=406, 368.1253pt x 384.6872pt>
+<../figures/dev-pcb/3d-view2.png, id=412, 368.1253pt x 384.6872pt>
 File: ../figures/dev-pcb/3d-view2.png Graphic file (type png)
 <use ../figures/dev-pcb/3d-view2.png>
 Package luatex.def Info: ../figures/dev-pcb/3d-view2.png  used on input line 33
-7.
+8.
 (luatex.def)             Requested size: 101.40622pt x 105.96832pt.
-<../figures/dev-pcb/3d-view1.png, id=407, 581.17125pt x 243.15843pt>
+<../figures/dev-pcb/3d-view1.png, id=413, 581.17125pt x 243.15843pt>
 File: ../figures/dev-pcb/3d-view1.png Graphic file (type png)
 <use ../figures/dev-pcb/3d-view1.png>
 Package luatex.def Info: ../figures/dev-pcb/3d-view1.png  used on input line 33
-7.
+8.
 (luatex.def)             Requested size: 110.62453pt x 46.2822pt.
 
-Overfull \vbox (1.52066pt too high) detected at line 337
+Overfull \vbox (1.52066pt too high) detected at line 338
  []
 
 [27
@@ -1745,11 +1801,11 @@ Overfull \vbox (1.52066pt too high) detected at line 337
 v-pcb/3d-view1.png>]
 warning  (file ../figures/dev-pcb/Couches-layout.pdf) (pdf inclusion): PDF inclu
 sion: found PDF version '1.6', but at most version '1.5' allowed
-<../figures/dev-pcb/Couches-layout.pdf, id=423, 4552.44095pt x 2532.29527pt>
+<../figures/dev-pcb/Couches-layout.pdf, id=429, 4552.44095pt x 2532.29527pt>
 File: ../figures/dev-pcb/Couches-layout.pdf Graphic file (type pdf)
 <use ../figures/dev-pcb/Couches-layout.pdf>
 Package luatex.def Info: ../figures/dev-pcb/Couches-layout.pdf  used on input l
-ine 346.
+ine 347.
 (luatex.def)             Requested size: 276.559pt x 153.82451pt.
 [28
 
@@ -1758,14 +1814,14 @@ ine 346.
 ] [30
 
 ]
-<../figures/code/diagrammes/state_app.pdf, id=454, 590.205pt x 362.35374pt>
+<../figures/code/diagrammes/state_app.pdf, id=460, 590.205pt x 362.35374pt>
 File: ../figures/code/diagrammes/state_app.pdf Graphic file (type pdf)
 <use ../figures/code/diagrammes/state_app.pdf>
 Package luatex.def Info: ../figures/code/diagrammes/state_app.pdf  used on inpu
-t line 400.
+t line 401.
 (luatex.def)             Requested size: 307.28987pt x 188.66278pt.
 
-Overfull \vbox (16.82344pt too high) detected at line 400
+Overfull \vbox (16.82344pt too high) detected at line 401
  []
 
 [31
@@ -1773,15 +1829,15 @@ Overfull \vbox (16.82344pt too high) detected at line 400
 <../figures/code/diagrammes/state_app.pdf>]
 warning  (file ../figures/code/diagrammes/sequence-app.pdf) (pdf inclusion): PDF
  inclusion: found PDF version '1.7', but at most version '1.5' allowed
-<../figures/code/diagrammes/sequence-app.pdf, id=479, 597.55246pt x 845.07724pt
+<../figures/code/diagrammes/sequence-app.pdf, id=485, 597.55246pt x 845.07724pt
 >
 File: ../figures/code/diagrammes/sequence-app.pdf Graphic file (type pdf)
 <use ../figures/code/diagrammes/sequence-app.pdf>
 Package luatex.def Info: ../figures/code/diagrammes/sequence-app.pdf  used on i
-nput line 408.
+nput line 409.
 (luatex.def)             Requested size: 153.67316pt x 217.33466pt.
 
-Overfull \vbox (17.6954pt too high) detected at line 408
+Overfull \vbox (17.6954pt too high) detected at line 409
  []
 
 [32
@@ -1789,15 +1845,15 @@ Overfull \vbox (17.6954pt too high) detected at line 408
 <../figures/code/diagrammes/sequence-app.pdf>]
 warning  (file ../figures/code/diagrammes/logging-flowchart.pdf) (pdf inclusion)
 : PDF inclusion: found PDF version '1.7', but at most version '1.5' allowed
-<../figures/code/diagrammes/logging-flowchart.pdf, id=486, 597.55246pt x 845.07
+<../figures/code/diagrammes/logging-flowchart.pdf, id=492, 597.55246pt x 845.07
 724pt>
 File: ../figures/code/diagrammes/logging-flowchart.pdf Graphic file (type pdf)
 <use ../figures/code/diagrammes/logging-flowchart.pdf>
 Package luatex.def Info: ../figures/code/diagrammes/logging-flowchart.pdf  used
- on input line 416.
+ on input line 417.
 (luatex.def)             Requested size: 153.67316pt x 217.33466pt.
 
-Overfull \vbox (17.6954pt too high) detected at line 416
+Overfull \vbox (17.6954pt too high) detected at line 417
  []
 
 [33
@@ -1805,26 +1861,26 @@ Overfull \vbox (17.6954pt too high) detected at line 416
 <../figures/code/diagrammes/logging-flowchart.pdf>]
 warning  (file ../figures/code/Illustration-SD-per.pdf) (pdf inclusion): PDF inc
 lusion: found PDF version '1.7', but at most version '1.5' allowed
-<../figures/code/Illustration-SD-per.pdf, id=493, 231.8512pt x 106.92648pt>
+<../figures/code/Illustration-SD-per.pdf, id=499, 231.8512pt x 106.92648pt>
 File: ../figures/code/Illustration-SD-per.pdf Graphic file (type pdf)
 <use ../figures/code/Illustration-SD-per.pdf>
 Package luatex.def Info: ../figures/code/Illustration-SD-per.pdf  used on input
- line 424.
+ line 425.
 (luatex.def)             Requested size: 184.3758pt x 85.03387pt.
 [34
 
 <../figures/code/Illustration-SD-per.pdf>]
 warning  (file ../figures/code/diagrammes/sd-card-Init.pdf) (pdf inclusion): PDF
  inclusion: found PDF version '1.7', but at most version '1.5' allowed
-<../figures/code/diagrammes/sd-card-Init.pdf, id=509, 593.32967pt x 518.37163pt
+<../figures/code/diagrammes/sd-card-Init.pdf, id=515, 593.32967pt x 518.37163pt
 >
 File: ../figures/code/diagrammes/sd-card-Init.pdf Graphic file (type pdf)
 <use ../figures/code/diagrammes/sd-card-Init.pdf>
 Package luatex.def Info: ../figures/code/diagrammes/sd-card-Init.pdf  used on i
-nput line 432.
+nput line 433.
 (luatex.def)             Requested size: 248.76219pt x 217.33466pt.
 
-Overfull \vbox (17.6954pt too high) detected at line 432
+Overfull \vbox (17.6954pt too high) detected at line 433
  []
 
 [35
@@ -1832,95 +1888,181 @@ Overfull \vbox (17.6954pt too high) detected at line 432
 <../figures/code/diagrammes/sd-card-Init.pdf>]
 warning  (file ../figures/code/diagrammes/sd-card-logging.pdf) (pdf inclusion): 
 PDF inclusion: found PDF version '1.7', but at most version '1.5' allowed
-<../figures/code/diagrammes/sd-card-logging.pdf, id=535, 592.27373pt x 528.9290
+<../figures/code/diagrammes/sd-card-logging.pdf, id=541, 592.27373pt x 528.9290
 8pt>
 File: ../figures/code/diagrammes/sd-card-logging.pdf Graphic file (type pdf)
 <use ../figures/code/diagrammes/sd-card-logging.pdf>
 Package luatex.def Info: ../figures/code/diagrammes/sd-card-logging.pdf  used o
-n input line 440.
+n input line 441.
 (luatex.def)             Requested size: 243.35796pt x 217.33466pt.
 
-Overfull \vbox (17.6954pt too high) detected at line 440
+Overfull \vbox (17.6954pt too high) detected at line 441
  []
 
 [36
 
 <../figures/code/diagrammes/sd-card-logging.pdf>]
 <../figures/presentation/micro-sd-card-illustration-material-3-svgrepo-com.pdf,
- id=557, 602.25pt x 602.25pt>
+ id=563, 602.25pt x 602.25pt>
 File: ../figures/presentation/micro-sd-card-illustration-material-3-svgrepo-com
 .pdf Graphic file (type pdf)
 <use ../figures/presentation/micro-sd-card-illustration-material-3-svgrepo-com.
 pdf>
 Package luatex.def Info: ../figures/presentation/micro-sd-card-illustration-mat
-erial-3-svgrepo-com.pdf  used on input line 451.
+erial-3-svgrepo-com.pdf  used on input line 452.
 (luatex.def)             Requested size: 92.1879pt x 92.1807pt.
-<../figures/presentation/Fichiers-mesures.jpg, id=558, 3212.0pt x 521.95pt>
+<../figures/presentation/Fichiers-mesures.jpg, id=564, 3212.0pt x 521.95pt>
 File: ../figures/presentation/Fichiers-mesures.jpg Graphic file (type jpg)
 <use ../figures/presentation/Fichiers-mesures.jpg>
 Package luatex.def Info: ../figures/presentation/Fichiers-mesures.jpg  used on 
-input line 451.
+input line 452.
 (luatex.def)             Requested size: 276.559pt x 44.9346pt.
  [37
 
 <../figures/presentation/micro-sd-card-illustration-material-3-svgrepo-com.pdf><
 ../figures/presentation/Fichiers-mesures.jpg>]
-<../figures/code/donbnees-csv.pdf, id=564, 1007.5207pt x 117.34682pt>
+<../figures/code/donbnees-csv.pdf, id=570, 1007.5207pt x 117.34682pt>
 File: ../figures/code/donbnees-csv.pdf Graphic file (type pdf)
 <use ../figures/code/donbnees-csv.pdf>
 Package luatex.def Info: ../figures/code/donbnees-csv.pdf  used on input line 4
-62.
+63.
 (luatex.def)             Requested size: 307.28987pt x 35.78983pt.
-<../figures/application/mesures.pdf, id=565, 1387.584pt x 755.9442pt>
+<../figures/application/mesures.pdf, id=571, 1387.584pt x 755.9442pt>
 File: ../figures/application/mesures.pdf Graphic file (type pdf)
 <use ../figures/application/mesures.pdf>
 Package luatex.def Info: ../figures/application/mesures.pdf  used on input line
- 462.
+ 463.
 (luatex.def)             Requested size: 307.28987pt x 167.40404pt.
 
-Overfull \vbox (18.0296pt too high) detected at line 462
+Overfull \vbox (18.0296pt too high) detected at line 463
  []
 
 [38
 
 <../figures/code/donbnees-csv.pdf><../figures/application/mesures.pdf>]
-<../figures/presentation/donnees-NMEA.pdf, id=646, 1310.45248pt x 403.7104pt>
+<../figures/presentation/donnees-NMEA.pdf, id=652, 1310.45248pt x 403.7104pt>
 File: ../figures/presentation/donnees-NMEA.pdf Graphic file (type pdf)
 <use ../figures/presentation/donnees-NMEA.pdf>
 Package luatex.def Info: ../figures/presentation/donnees-NMEA.pdf  used on inpu
-t line 473.
+t line 474.
 (luatex.def)             Requested size: 276.559pt x 85.1944pt.
 
 warning  (file ../figures/presentation/Map.pdf) (pdf inclusion): PDF inclusion: 
 found PDF version '1.7', but at most version '1.5' allowed
-<../figures/presentation/Map.pdf, id=647, 595.44057pt x 382.17982pt>
+<../figures/presentation/Map.pdf, id=653, 595.44057pt x 382.17982pt>
 File: ../figures/presentation/Map.pdf Graphic file (type pdf)
 <use ../figures/presentation/Map.pdf>
 Package luatex.def Info: ../figures/presentation/Map.pdf  used on input line 47
-3.
+4.
 (luatex.def)             Requested size: 153.64493pt x 98.61212pt.
 
-Overfull \vbox (5.44225pt too high) detected at line 473
+Overfull \vbox (5.44225pt too high) detected at line 474
  []
 
 [39
 
 <../figures/presentation/donnees-NMEA.pdf><../figures/presentation/Map.pdf>]
-<../figures/presentation/config.pdf, id=670, 509.04535pt x 140.22603pt>
+<../figures/presentation/config.pdf, id=677, 509.04535pt x 140.22603pt>
 File: ../figures/presentation/config.pdf Graphic file (type pdf)
 <use ../figures/presentation/config.pdf>
 Package luatex.def Info: ../figures/presentation/config.pdf  used on input line
- 480.
+ 481.
 (luatex.def)             Requested size: 215.10196pt x 59.25398pt.
 [40
 
-<../figures/presentation/config.pdf>] [41
+<../figures/presentation/config.pdf>]
+<../figures/application/screen_logGnss.jpg, id=689, 814.54312pt x 517.18219pt>
+File: ../figures/application/screen_logGnss.jpg Graphic file (type jpg)
+<use ../figures/application/screen_logGnss.jpg>
+Package luatex.def Info: ../figures/application/screen_logGnss.jpg  used on inp
+ut line 488.
+(luatex.def)             Requested size: 276.559pt x 175.59497pt.
+ [41
 
-] [42
+<../figures/application/screen_logGnss.JPG>] [42
 
-] [43
+]
+<../figures/presentation/modif.pdf, id=702, 1124.2pt x 854.19125pt>
+File: ../figures/presentation/modif.pdf Graphic file (type pdf)
+<use ../figures/presentation/modif.pdf>
+Package luatex.def Info: ../figures/presentation/modif.pdf  used on input line 
+514.
+(luatex.def)             Requested size: 92.1879pt x 70.04413pt.
+<../figures/presentation/MFG_CONMHF1-SMD-G-T.pdf, id=703, 642.4pt x 642.4pt>
+File: ../figures/presentation/MFG_CONMHF1-SMD-G-T.pdf Graphic file (type pdf)
+<use ../figures/presentation/MFG_CONMHF1-SMD-G-T.pdf>
+Package luatex.def Info: ../figures/presentation/MFG_CONMHF1-SMD-G-T.pdf  used 
+on input line 514.
+(luatex.def)             Requested size: 92.1879pt x 92.18008pt.
+<../figures/presentation/antenne-flex.pdf, id=704, 6088.7475pt x 4474.7175pt>
+File: ../figures/presentation/antenne-flex.pdf Graphic file (type pdf)
+<use ../figures/presentation/antenne-flex.pdf>
+Package luatex.def Info: ../figures/presentation/antenne-flex.pdf  used on inpu
+t line 514.
+(luatex.def)             Requested size: 92.1879pt x 67.73236pt.
+ [43
 
-] [44
+<../figures/presentation/modif.pdf><../figures/presentation/MFG_CONMHF1-SMD-G-T.
+pdf><../figures/presentation/antenne-flex.pdf>] [44
+
+]
+[45
+
+]
+
+Package fontspec Info: Font family 'FiraSans(2)' created for font 'Fira Sans'
+(fontspec)             with options
+(fontspec)             [Ligatures=TeX,Numbers={Monospaced},Numbers={Monospaced}
+].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"FiraSans:mode=node;script=latn;language=dflt;+tlig;+
+tnum;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
+(fontspec)             <->"FiraSans:mode=node;script=latn;language=dflt;+tlig;+
+tnum;+smcp;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"FiraSans/B:mode=node;script=latn;language=dflt;+tlig
+;+tnum;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
+(fontspec)             <->"FiraSans/B:mode=node;script=latn;language=dflt;+tlig
+;+tnum;+smcp;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->"FiraSans/I:mode=node;script=latn;language=dflt;+tlig
+;+tnum;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+(fontspec)             <->"FiraSans/I:mode=node;script=latn;language=dflt;+tlig
+;+tnum;+smcp;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->"FiraSans/BI:mode=node;script=latn;language=dflt;+tli
+g;+tnum;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
+(fontspec)             <->"FiraSans/BI:mode=node;script=latn;language=dflt;+tli
+g;+tnum;+smcp;"
+
+
+Overfull \vbox (4.4505pt too high) detected at line 584
+ []
+
+[46
+
+] [47
+
+]
+File: ../figures/boite-noire.pdf Graphic file (type pdf)
+<use ../figures/boite-noire.pdf>
+Package luatex.def Info: ../figures/boite-noire.pdf  used on input line 592.
+(luatex.def)             Requested size: 199.73653pt x 203.3569pt.
+
+Overfull \vbox (3.71765pt too high) detected at line 592
+ []
+
+[48
+
+] [49
 
 ]
 \tf@nav=\write6
@@ -1932,32 +2074,24 @@ Package luatex.def Info: ../figures/presentation/config.pdf  used on input line
 \tf@snm=\write8
 
 \openout8 = 1924B_MiniBoiteNoire-Presentation.snm
-
-(./1924B_MiniBoiteNoire-Presentation.aux)
-
-Package rerunfilecheck Warning: File `1924B_MiniBoiteNoire-Presentation.out' ha
-s changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `1924B_MiniBoiteNoire-Presentation.o
-ut':
-(rerunfilecheck)             Before: 470C9B56C45B78C4BDA0579A19AAB08B;796
-(rerunfilecheck)             After:  78F961A035839C1863500C47AFDB7473;945.
+ (./1924B_MiniBoiteNoire-Presentation.aux)
+Package rerunfilecheck Info: File `1924B_MiniBoiteNoire-Presentation.out' has n
+ot changed.
+(rerunfilecheck)             Checksum: 78F961A035839C1863500C47AFDB7473;945.
 )
 
 Here is how much of LuaTeX's memory you used:
- 33141 strings out of 477247
+ 34418 strings out of 477247
  125031,1144653 words of node,token memory allocated
- 1901 words of node memory still in use:
-   14 hlist, 6 vlist, 2 rule, 1 disc, 1 local_par, 43 glue, 5 kern, 10 penalty, 
-13 glyph, 342 attribute, 71 glue_spec, 51 attribute_list, 4 write, 5 pdf_colorst
+ 1991 words of node memory still in use:
+   14 hlist, 6 vlist, 2 rule, 1 disc, 1 local_par, 49 glue, 5 kern, 10 penalty, 
+13 glyph, 363 attribute, 71 glue_spec, 54 attribute_list, 4 write, 5 pdf_colorst
 ack nodes
-   avail lists: 1:2,2:3409,3:363,4:279,5:335,6:49,7:2669,8:65,9:598,10:10,11:155
-
- 52535 multiletter control sequences out of 65536+600000
- 89 fonts using 16594295 bytes
- 128i,13n,131p,1923b,776s stack positions out of 10000i,1000n,20000p,200000b,200000s
+   avail lists: 1:1,2:3889,3:363,4:279,5:515,6:49,7:4277,8:65,9:1063,10:10,11:26
+3
+ 53681 multiletter control sequences out of 65536+600000
+ 89 fonts using 16601859 bytes
+ 128i,14n,131p,1923b,877s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2022/texmf-dist/fonts/opentype/public/fira/FiraSans-BoldItalic.otf><
 c:/texlive/2022/texmf-dist/fonts/opentype/public/fira/FiraSans-Italic.otf><c:/te
 xlive/2022/texmf-dist/fonts/opentype/public/fira/FiraSans-Regular.otf><c:/texliv
@@ -1966,11 +2100,11 @@ texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2022/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmss10.pfb><c:/texlive/2022/texmf-dist/fonts/typ
 e1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/
 amsfonts/cm/cmsy8.pfb>
-Output written on 1924B_MiniBoiteNoire-Presentation.pdf (44 pages, 4184552 bytes
+Output written on 1924B_MiniBoiteNoire-Presentation.pdf (49 pages, 4390820 bytes
 ).
 
-PDF statistics: 754 PDF objects out of 1000 (max. 8388607)
- 479 compressed objects within 5 object streams
- 125 named destinations out of 1000 (max. 131072)
- 64 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 800 PDF objects out of 1000 (max. 8388607)
+ 515 compressed objects within 6 object streams
+ 136 named destinations out of 1000 (max. 131072)
+ 72 words of extra memory for PDF output out of 10000 (max. 100000000)
 
