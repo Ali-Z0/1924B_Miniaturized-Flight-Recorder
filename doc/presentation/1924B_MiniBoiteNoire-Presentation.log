@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.15.0 (TeX Live 2022)  (format=lualatex 2022.12.8)  5 OCT 2023 16:29
+This is LuaHBTeX, Version 1.15.0 (TeX Live 2022)  (format=lualatex 2022.12.8)  5 OCT 2023 18:34
  restricted system commands enabled.
 **1924B_MiniBoiteNoire-Presentation.tex
 (./1924B_MiniBoiteNoire-Presentation.tex
@@ -2052,17 +2052,18 @@ Overfull \vbox (4.4505pt too high) detected at line 584
 ] [47
 
 ]
-File: ../figures/boite-noire.pdf Graphic file (type pdf)
-<use ../figures/boite-noire.pdf>
-Package luatex.def Info: ../figures/boite-noire.pdf  used on input line 602.
-(luatex.def)             Requested size: 85.35826pt x 86.8964pt.
-<../figures/presentation/CDC.pdf, id=742, 1763.58875pt x 829.0975pt>
+<../figures/presentation/CDC.pdf, id=742, 2072.73395pt x 933.95801pt>
 File: ../figures/presentation/CDC.pdf Graphic file (type pdf)
 <use ../figures/presentation/CDC.pdf>
-Package luatex.def Info: ../figures/presentation/CDC.pdf  used on input line 60
+Package luatex.def Info: ../figures/presentation/CDC.pdf  used on input line 59
 2.
-(luatex.def)             Requested size: 256.0748pt x 120.38684pt.
- [48
+(luatex.def)             Requested size: 331.87361pt x 149.53609pt.
+
+Overfull \hbox (24.58374pt too wide) in paragraph at lines 592--592
+ [] 
+ []
+
+[48
 
 <../figures/presentation/CDC.pdf>] [49
 
@@ -2084,7 +2085,7 @@ ot changed.
 )
 
 Here is how much of LuaTeX's memory you used:
- 34430 strings out of 477247
+ 34424 strings out of 477247
  125031,1144653 words of node,token memory allocated
  1991 words of node memory still in use:
    14 hlist, 6 vlist, 2 rule, 1 disc, 1 local_par, 49 glue, 5 kern, 10 penalty, 
@@ -2103,11 +2104,11 @@ texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2022/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmss10.pfb><c:/texlive/2022/texmf-dist/fonts/typ
 e1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/
 amsfonts/cm/cmsy8.pfb>
-Output written on 1924B_MiniBoiteNoire-Presentation.pdf (49 pages, 4613211 bytes
+Output written on 1924B_MiniBoiteNoire-Presentation.pdf (49 pages, 4406260 bytes
 ).
 
-PDF statistics: 803 PDF objects out of 1000 (max. 8388607)
- 517 compressed objects within 6 object streams
+PDF statistics: 814 PDF objects out of 1000 (max. 8388607)
+ 524 compressed objects within 6 object streams
  136 named destinations out of 1000 (max. 131072)
  72 words of extra memory for PDF output out of 10000 (max. 100000000)
 
