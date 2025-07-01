@@ -23,16 +23,16 @@ This project aims to collect and store flight data measurements and location of 
 - GNSS - CAM-M8C-0
 
 ## Features
-• Save inertial data every 500ms by default.
-• Save location data every 5,000ms by default.
-• Option to configure save times.
-• Shock resistant.
-• Good battery life / Low power.
-• Global Positioning System (GPS).
-• Global Navigation Satellite Systems (GNSS).
-• Satellite timestamp.
-• Inertial Unit.
-• Charging, reading, and configuration via USB-C.
+- Save inertial data every 500ms by default.
+- Save location data every 5,000ms by default.
+- Option to configure save times.
+- Shock resistant.
+- Good battery life / Low power.
+- Global Positioning System (GPS).
+- Global Navigation Satellite Systems (GNSS).
+- Satellite timestamp.
+- Inertial Unit.
+- Charging, reading, and configuration via USB-C.
 
 ## Configuration
 The electronic board must be assembled according to the manufacturing files and the BOM (Bill of Materials). The firmware must then be implemented in the PIC microcontroller, and an SD card must be inserted to read the movement data.
