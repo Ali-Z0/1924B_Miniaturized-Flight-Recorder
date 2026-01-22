@@ -1,6 +1,10 @@
 # 1924B - Mini Black Box
 > FLIGHT RECORDING SYSTEM
 
+[![Boitier PCB](doc/figures/dev-pcb/3d-view2.png)](doc/figures/dev_pcb/3d-view2.png)
+
+[![Dimensions PCB](doc/figures/dev-pcb/PCB-Dims.jpg)](doc/figures/dev_pcb/PCB-Dims.jpg)
+
 ## Table of Contents
 * [General Information](#general-information)
 * [Technologies Used](#technologies-used)
@@ -14,7 +18,11 @@
 
 ## General Information
 This project aims to collect and store flight data measurements and location of an aircraft using an inertial unit and a GPS/GNSS positioning system. By combining these technologies, it's possible to record data with remarkable accuracy regarding flight parameters and the aircraft's trajectory. In the event of an incident, these recordings play a crucial role in determining potential causes. For an in-depth analysis of technical specifications, please refer to the complete specification book available in the appendix.
-<!-- You don't have to answer all the questions - just the ones relevant to your project. -->
+
+[![Blocs grossiers (sans antenne)](doc/figures/cdc/blocs_grossiers_no_antenna_page-0001.jpg)](doc/figures/cdc/blocs_grossiers_no_antenna_page-0001.jpg)
+
+[![Schéma de principe](doc/figures/cdc/schema_principe_page-0001.jpg)](doc/figures/cdc/schema_principe_page-0001.jpg)
+
 
 ## Technologies Used
 - MPLAB Harmony v2_06
